@@ -9,3 +9,5 @@ Unrolled - 6
 Piplelined - 7
           
 in the main file we have changed the saving of the result directly to the output instead of the accumulator
+
+Operators are a and b and operands is the output
