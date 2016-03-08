@@ -1,0 +1,1133 @@
+
+# Program: Catapult University Version
+# Version: 2011a.126
+#    File: Nlview netlist
+
+module new "addition:core" "orig"
+load port {clk} input -attr xrf 672 -attr oid 1 -attr vt d -attr @path {/addition/addition:core/clk}
+load port {en} input -attr xrf 673 -attr oid 2 -attr vt d -attr @path {/addition/addition:core/en}
+load port {arst_n} input -attr xrf 674 -attr oid 3 -attr vt d -attr @path {/addition/addition:core/arst_n}
+load portBus {input_a:rsc:mgc_in_wire.d(7:0)} input 8 {input_a:rsc:mgc_in_wire.d(7)} {input_a:rsc:mgc_in_wire.d(6)} {input_a:rsc:mgc_in_wire.d(5)} {input_a:rsc:mgc_in_wire.d(4)} {input_a:rsc:mgc_in_wire.d(3)} {input_a:rsc:mgc_in_wire.d(2)} {input_a:rsc:mgc_in_wire.d(1)} {input_a:rsc:mgc_in_wire.d(0)} -attr xrf 675 -attr oid 4 -attr vt d -attr @path {/addition/addition:core/input_a:rsc:mgc_in_wire.d}
+load portBus {input_b:rsc:mgc_in_wire.d(7:0)} input 8 {input_b:rsc:mgc_in_wire.d(7)} {input_b:rsc:mgc_in_wire.d(6)} {input_b:rsc:mgc_in_wire.d(5)} {input_b:rsc:mgc_in_wire.d(4)} {input_b:rsc:mgc_in_wire.d(3)} {input_b:rsc:mgc_in_wire.d(2)} {input_b:rsc:mgc_in_wire.d(1)} {input_b:rsc:mgc_in_wire.d(0)} -attr xrf 676 -attr oid 5 -attr vt d -attr @path {/addition/addition:core/input_b:rsc:mgc_in_wire.d}
+load portBus {output:rsc:mgc_out_stdreg.d(39:0)} output 40 {output:rsc:mgc_out_stdreg.d(39)} {output:rsc:mgc_out_stdreg.d(38)} {output:rsc:mgc_out_stdreg.d(37)} {output:rsc:mgc_out_stdreg.d(36)} {output:rsc:mgc_out_stdreg.d(35)} {output:rsc:mgc_out_stdreg.d(34)} {output:rsc:mgc_out_stdreg.d(33)} {output:rsc:mgc_out_stdreg.d(32)} {output:rsc:mgc_out_stdreg.d(31)} {output:rsc:mgc_out_stdreg.d(30)} {output:rsc:mgc_out_stdreg.d(29)} {output:rsc:mgc_out_stdreg.d(28)} {output:rsc:mgc_out_stdreg.d(27)} {output:rsc:mgc_out_stdreg.d(26)} {output:rsc:mgc_out_stdreg.d(25)} {output:rsc:mgc_out_stdreg.d(24)} {output:rsc:mgc_out_stdreg.d(23)} {output:rsc:mgc_out_stdreg.d(22)} {output:rsc:mgc_out_stdreg.d(21)} {output:rsc:mgc_out_stdreg.d(20)} {output:rsc:mgc_out_stdreg.d(19)} {output:rsc:mgc_out_stdreg.d(18)} {output:rsc:mgc_out_stdreg.d(17)} {output:rsc:mgc_out_stdreg.d(16)} {output:rsc:mgc_out_stdreg.d(15)} {output:rsc:mgc_out_stdreg.d(14)} {output:rsc:mgc_out_stdreg.d(13)} {output:rsc:mgc_out_stdreg.d(12)} {output:rsc:mgc_out_stdreg.d(11)} {output:rsc:mgc_out_stdreg.d(10)} {output:rsc:mgc_out_stdreg.d(9)} {output:rsc:mgc_out_stdreg.d(8)} {output:rsc:mgc_out_stdreg.d(7)} {output:rsc:mgc_out_stdreg.d(6)} {output:rsc:mgc_out_stdreg.d(5)} {output:rsc:mgc_out_stdreg.d(4)} {output:rsc:mgc_out_stdreg.d(3)} {output:rsc:mgc_out_stdreg.d(2)} {output:rsc:mgc_out_stdreg.d(1)} {output:rsc:mgc_out_stdreg.d(0)} -attr xrf 677 -attr oid 6 -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load symbol "not(1)" "INTERFACE" INV boxcolor 0 \
+     portBus {A(0:0)} input 1 {A(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load symbol "or(4,1)" "INTERFACE" OR boxcolor 0 \
+     portBus {A0(0:0)} input 1 {A0(0)} \
+     portBus {A1(0:0)} input 1 {A1(0)} \
+     portBus {A2(0:0)} input 1 {A2(0)} \
+     portBus {A3(0:0)} input 1 {A3(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load symbol "mux(2,8)" "INTERFACE" MUX boxcolor 0 \
+     portBus {A0(7:0)} input 8 {A0(7)} {A0(6)} {A0(5)} {A0(4)} {A0(3)} {A0(2)} {A0(1)} {A0(0)} \
+     portBus {A1(7:0)} input 8 {A1(7)} {A1(6)} {A1(5)} {A1(4)} {A1(3)} {A1(2)} {A1(1)} {A1(0)} \
+     portBus {S(0:0)} input.top 1 {S(0)} \
+     portBus {Z(7:0)} output 8 {Z(7)} {Z(6)} {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "reg(8,1,1,-1,0)" "INTERFACE" GEN boxcolor 1 \
+     portBus {D(7:0)} input 8 {D(7)} {D(6)} {D(5)} {D(4)} {D(3)} {D(2)} {D(1)} {D(0)} \
+     portBus {DRa(7:0)} input 8 {DRa(7)} {DRa(6)} {DRa(5)} {DRa(4)} {DRa(3)} {DRa(2)} {DRa(1)} {DRa(0)} \
+     port {clk} input.clk \
+     portBus {en(0:0)} input 1 {en(0)} \
+     portBus {Ra(0:0)} input 1 {Ra(0)} \
+     portBus {Z(7:0)} output 8 {Z(7)} {Z(6)} {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "or(3,1)" "INTERFACE" OR boxcolor 0 \
+     portBus {A0(0:0)} input 1 {A0(0)} \
+     portBus {A1(0:0)} input 1 {A1(0)} \
+     portBus {A2(0:0)} input 1 {A2(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load symbol "or(2,1)" "INTERFACE" OR boxcolor 0 \
+     portBus {A0(0:0)} input 1 {A0(0)} \
+     portBus {A1(0:0)} input 1 {A1(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load symbol "reg(3,1,1,-1,0)" "INTERFACE" GEN boxcolor 1 \
+     portBus {D(2:0)} input 3 {D(2)} {D(1)} {D(0)} \
+     portBus {DRa(2:0)} input 3 {DRa(2)} {DRa(1)} {DRa(0)} \
+     port {clk} input.clk \
+     portBus {en(0:0)} input 1 {en(0)} \
+     portBus {Ra(0:0)} input 1 {Ra(0)} \
+     portBus {Z(2:0)} output 3 {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "add(3,-1,2,0,3)" "INTERFACE" RTL(+) boxcolor 0 \
+     portBus {A(2:0)} input 3 {A(2)} {A(1)} {A(0)} \
+     portBus {B(1:0)} input 2 {B(1)} {B(0)} \
+     portBus {Z(2:0)} output 3 {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "reg(1,1,1,-1,0)" "INTERFACE" GEN boxcolor 1 \
+     portBus {D(0:0)} input 1 {D(0)} \
+     portBus {DRa(0:0)} input 1 {DRa(0)} \
+     port {clk} input.clk \
+     portBus {en(0:0)} input 1 {en(0)} \
+     portBus {Ra(0:0)} input 1 {Ra(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load symbol "add(8,-1,8,-1,8)" "INTERFACE" RTL(+) boxcolor 0 \
+     portBus {A(7:0)} input 8 {A(7)} {A(6)} {A(5)} {A(4)} {A(3)} {A(2)} {A(1)} {A(0)} \
+     portBus {B(7:0)} input 8 {B(7)} {B(6)} {B(5)} {B(4)} {B(3)} {B(2)} {B(1)} {B(0)} \
+     portBus {Z(7:0)} output 8 {Z(7)} {Z(6)} {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "and(2,3)" "INTERFACE" AND boxcolor 0 \
+     portBus {A0(2:0)} input 3 {A0(2)} {A0(1)} {A0(0)} \
+     portBus {A1(2:0)} input 3 {A1(2)} {A1(1)} {A1(0)} \
+     portBus {Z(2:0)} output 3 {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "add(3,-1,1,0,3)" "INTERFACE" RTL(+) boxcolor 0 \
+     portBus {A(2:0)} input 3 {A(2)} {A(1)} {A(0)} \
+     portBus {B(0:0)} input 1 {B(0)} \
+     portBus {Z(2:0)} output 3 {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "and(2,1)" "INTERFACE" AND boxcolor 0 \
+     portBus {A0(0:0)} input 1 {A0(0)} \
+     portBus {A1(0:0)} input 1 {A1(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load net {MAC:acc#5.tmp(0)} -attr vt d
+load net {MAC:acc#5.tmp(1)} -attr vt d
+load net {MAC:acc#5.tmp(2)} -attr vt d
+load netBundle {MAC:acc#5.tmp} 3 {MAC:acc#5.tmp(0)} {MAC:acc#5.tmp(1)} {MAC:acc#5.tmp(2)} -attr xrf 678 -attr oid 7 -attr vt d -attr @path {/addition/addition:core/MAC:acc#5.tmp}
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(0)} -attr vt d
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(1)} -attr vt d
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(2)} -attr vt d
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(3)} -attr vt d
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(4)} -attr vt d
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(5)} -attr vt d
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(6)} -attr vt d
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(7)} -attr vt d
+load netBundle {io_read(output:rsc.d).sdt.sg4.lpi.dfm} 8 {io_read(output:rsc.d).sdt.sg4.lpi.dfm(0)} {io_read(output:rsc.d).sdt.sg4.lpi.dfm(1)} {io_read(output:rsc.d).sdt.sg4.lpi.dfm(2)} {io_read(output:rsc.d).sdt.sg4.lpi.dfm(3)} {io_read(output:rsc.d).sdt.sg4.lpi.dfm(4)} {io_read(output:rsc.d).sdt.sg4.lpi.dfm(5)} {io_read(output:rsc.d).sdt.sg4.lpi.dfm(6)} {io_read(output:rsc.d).sdt.sg4.lpi.dfm(7)} -attr xrf 679 -attr oid 8 -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg4.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(0)} -attr vt d
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(1)} -attr vt d
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(2)} -attr vt d
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(3)} -attr vt d
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(4)} -attr vt d
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(5)} -attr vt d
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(6)} -attr vt d
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(7)} -attr vt d
+load netBundle {io_read(output:rsc.d).sdt.sg3.lpi.dfm} 8 {io_read(output:rsc.d).sdt.sg3.lpi.dfm(0)} {io_read(output:rsc.d).sdt.sg3.lpi.dfm(1)} {io_read(output:rsc.d).sdt.sg3.lpi.dfm(2)} {io_read(output:rsc.d).sdt.sg3.lpi.dfm(3)} {io_read(output:rsc.d).sdt.sg3.lpi.dfm(4)} {io_read(output:rsc.d).sdt.sg3.lpi.dfm(5)} {io_read(output:rsc.d).sdt.sg3.lpi.dfm(6)} {io_read(output:rsc.d).sdt.sg3.lpi.dfm(7)} -attr xrf 680 -attr oid 9 -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg3.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(0)} -attr vt d
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(1)} -attr vt d
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(2)} -attr vt d
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(3)} -attr vt d
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(4)} -attr vt d
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(5)} -attr vt d
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(6)} -attr vt d
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(7)} -attr vt d
+load netBundle {io_read(output:rsc.d).sdt.sg2.lpi.dfm} 8 {io_read(output:rsc.d).sdt.sg2.lpi.dfm(0)} {io_read(output:rsc.d).sdt.sg2.lpi.dfm(1)} {io_read(output:rsc.d).sdt.sg2.lpi.dfm(2)} {io_read(output:rsc.d).sdt.sg2.lpi.dfm(3)} {io_read(output:rsc.d).sdt.sg2.lpi.dfm(4)} {io_read(output:rsc.d).sdt.sg2.lpi.dfm(5)} {io_read(output:rsc.d).sdt.sg2.lpi.dfm(6)} {io_read(output:rsc.d).sdt.sg2.lpi.dfm(7)} -attr xrf 681 -attr oid 10 -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg2.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(0)} -attr vt d
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(1)} -attr vt d
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(2)} -attr vt d
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(3)} -attr vt d
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(4)} -attr vt d
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(5)} -attr vt d
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(6)} -attr vt d
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(7)} -attr vt d
+load netBundle {io_read(output:rsc.d).sdt.sg1.lpi.dfm} 8 {io_read(output:rsc.d).sdt.sg1.lpi.dfm(0)} {io_read(output:rsc.d).sdt.sg1.lpi.dfm(1)} {io_read(output:rsc.d).sdt.sg1.lpi.dfm(2)} {io_read(output:rsc.d).sdt.sg1.lpi.dfm(3)} {io_read(output:rsc.d).sdt.sg1.lpi.dfm(4)} {io_read(output:rsc.d).sdt.sg1.lpi.dfm(5)} {io_read(output:rsc.d).sdt.sg1.lpi.dfm(6)} {io_read(output:rsc.d).sdt.sg1.lpi.dfm(7)} -attr xrf 682 -attr oid 11 -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg1.lpi.dfm}
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(0)} -attr vt d
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(1)} -attr vt d
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(2)} -attr vt d
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(3)} -attr vt d
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(4)} -attr vt d
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(5)} -attr vt d
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(6)} -attr vt d
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(7)} -attr vt d
+load netBundle {io_read(output:rsc.d).sdt#1.lpi.dfm} 8 {io_read(output:rsc.d).sdt#1.lpi.dfm(0)} {io_read(output:rsc.d).sdt#1.lpi.dfm(1)} {io_read(output:rsc.d).sdt#1.lpi.dfm(2)} {io_read(output:rsc.d).sdt#1.lpi.dfm(3)} {io_read(output:rsc.d).sdt#1.lpi.dfm(4)} {io_read(output:rsc.d).sdt#1.lpi.dfm(5)} {io_read(output:rsc.d).sdt#1.lpi.dfm(6)} {io_read(output:rsc.d).sdt#1.lpi.dfm(7)} -attr xrf 683 -attr oid 12 -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt#1.lpi.dfm}
+load net {i#1.sva#1(0)} -attr vt d
+load net {i#1.sva#1(1)} -attr vt d
+load net {i#1.sva#1(2)} -attr vt d
+load netBundle {i#1.sva#1} 3 {i#1.sva#1(0)} {i#1.sva#1(1)} {i#1.sva#1(2)} -attr xrf 684 -attr oid 13 -attr vt d -attr @path {/addition/addition:core/i#1.sva#1}
+load net {MAC:acc#3.cmx.sva(0)} -attr vt d
+load net {MAC:acc#3.cmx.sva(1)} -attr vt d
+load net {MAC:acc#3.cmx.sva(2)} -attr vt d
+load net {MAC:acc#3.cmx.sva(3)} -attr vt d
+load net {MAC:acc#3.cmx.sva(4)} -attr vt d
+load net {MAC:acc#3.cmx.sva(5)} -attr vt d
+load net {MAC:acc#3.cmx.sva(6)} -attr vt d
+load net {MAC:acc#3.cmx.sva(7)} -attr vt d
+load netBundle {MAC:acc#3.cmx.sva} 8 {MAC:acc#3.cmx.sva(0)} {MAC:acc#3.cmx.sva(1)} {MAC:acc#3.cmx.sva(2)} {MAC:acc#3.cmx.sva(3)} {MAC:acc#3.cmx.sva(4)} {MAC:acc#3.cmx.sva(5)} {MAC:acc#3.cmx.sva(6)} {MAC:acc#3.cmx.sva(7)} -attr xrf 685 -attr oid 14 -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {mux.itm(0)} -attr vt d
+load net {mux.itm(1)} -attr vt d
+load net {mux.itm(2)} -attr vt d
+load net {mux.itm(3)} -attr vt d
+load net {mux.itm(4)} -attr vt d
+load net {mux.itm(5)} -attr vt d
+load net {mux.itm(6)} -attr vt d
+load net {mux.itm(7)} -attr vt d
+load netBundle {mux.itm} 8 {mux.itm(0)} {mux.itm(1)} {mux.itm(2)} {mux.itm(3)} {mux.itm(4)} {mux.itm(5)} {mux.itm(6)} {mux.itm(7)} -attr xrf 686 -attr oid 15 -attr vt d -attr @path {/addition/addition:core/mux.itm}
+load net {mux#1.itm(0)} -attr vt d
+load net {mux#1.itm(1)} -attr vt d
+load net {mux#1.itm(2)} -attr vt d
+load net {mux#1.itm(3)} -attr vt d
+load net {mux#1.itm(4)} -attr vt d
+load net {mux#1.itm(5)} -attr vt d
+load net {mux#1.itm(6)} -attr vt d
+load net {mux#1.itm(7)} -attr vt d
+load netBundle {mux#1.itm} 8 {mux#1.itm(0)} {mux#1.itm(1)} {mux#1.itm(2)} {mux#1.itm(3)} {mux#1.itm(4)} {mux#1.itm(5)} {mux#1.itm(6)} {mux#1.itm(7)} -attr xrf 687 -attr oid 16 -attr vt d -attr @path {/addition/addition:core/mux#1.itm}
+load net {mux#2.itm(0)} -attr vt d
+load net {mux#2.itm(1)} -attr vt d
+load net {mux#2.itm(2)} -attr vt d
+load net {mux#2.itm(3)} -attr vt d
+load net {mux#2.itm(4)} -attr vt d
+load net {mux#2.itm(5)} -attr vt d
+load net {mux#2.itm(6)} -attr vt d
+load net {mux#2.itm(7)} -attr vt d
+load netBundle {mux#2.itm} 8 {mux#2.itm(0)} {mux#2.itm(1)} {mux#2.itm(2)} {mux#2.itm(3)} {mux#2.itm(4)} {mux#2.itm(5)} {mux#2.itm(6)} {mux#2.itm(7)} -attr xrf 688 -attr oid 17 -attr vt d -attr @path {/addition/addition:core/mux#2.itm}
+load net {mux#3.itm(0)} -attr vt d
+load net {mux#3.itm(1)} -attr vt d
+load net {mux#3.itm(2)} -attr vt d
+load net {mux#3.itm(3)} -attr vt d
+load net {mux#3.itm(4)} -attr vt d
+load net {mux#3.itm(5)} -attr vt d
+load net {mux#3.itm(6)} -attr vt d
+load net {mux#3.itm(7)} -attr vt d
+load netBundle {mux#3.itm} 8 {mux#3.itm(0)} {mux#3.itm(1)} {mux#3.itm(2)} {mux#3.itm(3)} {mux#3.itm(4)} {mux#3.itm(5)} {mux#3.itm(6)} {mux#3.itm(7)} -attr xrf 689 -attr oid 18 -attr vt d -attr @path {/addition/addition:core/mux#3.itm}
+load net {mux#4.itm(0)} -attr vt d
+load net {mux#4.itm(1)} -attr vt d
+load net {mux#4.itm(2)} -attr vt d
+load net {mux#4.itm(3)} -attr vt d
+load net {mux#4.itm(4)} -attr vt d
+load net {mux#4.itm(5)} -attr vt d
+load net {mux#4.itm(6)} -attr vt d
+load net {mux#4.itm(7)} -attr vt d
+load netBundle {mux#4.itm} 8 {mux#4.itm(0)} {mux#4.itm(1)} {mux#4.itm(2)} {mux#4.itm(3)} {mux#4.itm(4)} {mux#4.itm(5)} {mux#4.itm(6)} {mux#4.itm(7)} -attr xrf 690 -attr oid 19 -attr vt d -attr @path {/addition/addition:core/mux#4.itm}
+load net {MAC:and#8.itm(0)} -attr vt d
+load net {MAC:and#8.itm(1)} -attr vt d
+load net {MAC:and#8.itm(2)} -attr vt d
+load netBundle {MAC:and#8.itm} 3 {MAC:and#8.itm(0)} {MAC:and#8.itm(1)} {MAC:and#8.itm(2)} -attr xrf 691 -attr oid 20 -attr vt d -attr @path {/addition/addition:core/MAC:and#8.itm}
+load net {MAC:exs#1.itm(0)} -attr vt d
+load net {MAC:exs#1.itm(1)} -attr vt d
+load net {MAC:exs#1.itm(2)} -attr vt d
+load netBundle {MAC:exs#1.itm} 3 {MAC:exs#1.itm(0)} {MAC:exs#1.itm(1)} {MAC:exs#1.itm(2)} -attr xrf 692 -attr oid 21 -attr vt d -attr @path {/addition/addition:core/MAC:exs#1.itm}
+load net {clk} -attr xrf 693 -attr oid 22
+load net {clk} -port {clk} -attr xrf 694 -attr oid 23
+load net {en} -attr xrf 695 -attr oid 24
+load net {en} -port {en} -attr xrf 696 -attr oid 25
+load net {arst_n} -attr xrf 697 -attr oid 26
+load net {arst_n} -port {arst_n} -attr xrf 698 -attr oid 27
+load net {input_a:rsc:mgc_in_wire.d(0)} -attr vt d
+load net {input_a:rsc:mgc_in_wire.d(1)} -attr vt d
+load net {input_a:rsc:mgc_in_wire.d(2)} -attr vt d
+load net {input_a:rsc:mgc_in_wire.d(3)} -attr vt d
+load net {input_a:rsc:mgc_in_wire.d(4)} -attr vt d
+load net {input_a:rsc:mgc_in_wire.d(5)} -attr vt d
+load net {input_a:rsc:mgc_in_wire.d(6)} -attr vt d
+load net {input_a:rsc:mgc_in_wire.d(7)} -attr vt d
+load netBundle {input_a:rsc:mgc_in_wire.d} 8 {input_a:rsc:mgc_in_wire.d(0)} {input_a:rsc:mgc_in_wire.d(1)} {input_a:rsc:mgc_in_wire.d(2)} {input_a:rsc:mgc_in_wire.d(3)} {input_a:rsc:mgc_in_wire.d(4)} {input_a:rsc:mgc_in_wire.d(5)} {input_a:rsc:mgc_in_wire.d(6)} {input_a:rsc:mgc_in_wire.d(7)} -attr xrf 699 -attr oid 28 -attr vt d -attr @path {/addition/addition:core/input_a:rsc:mgc_in_wire.d}
+load net {input_a:rsc:mgc_in_wire.d(0)} -port {input_a:rsc:mgc_in_wire.d(0)} -attr vt d
+load net {input_a:rsc:mgc_in_wire.d(1)} -port {input_a:rsc:mgc_in_wire.d(1)} -attr vt d
+load net {input_a:rsc:mgc_in_wire.d(2)} -port {input_a:rsc:mgc_in_wire.d(2)} -attr vt d
+load net {input_a:rsc:mgc_in_wire.d(3)} -port {input_a:rsc:mgc_in_wire.d(3)} -attr vt d
+load net {input_a:rsc:mgc_in_wire.d(4)} -port {input_a:rsc:mgc_in_wire.d(4)} -attr vt d
+load net {input_a:rsc:mgc_in_wire.d(5)} -port {input_a:rsc:mgc_in_wire.d(5)} -attr vt d
+load net {input_a:rsc:mgc_in_wire.d(6)} -port {input_a:rsc:mgc_in_wire.d(6)} -attr vt d
+load net {input_a:rsc:mgc_in_wire.d(7)} -port {input_a:rsc:mgc_in_wire.d(7)} -attr vt d
+load netBundle {input_a:rsc:mgc_in_wire.d} 8 {input_a:rsc:mgc_in_wire.d(0)} {input_a:rsc:mgc_in_wire.d(1)} {input_a:rsc:mgc_in_wire.d(2)} {input_a:rsc:mgc_in_wire.d(3)} {input_a:rsc:mgc_in_wire.d(4)} {input_a:rsc:mgc_in_wire.d(5)} {input_a:rsc:mgc_in_wire.d(6)} {input_a:rsc:mgc_in_wire.d(7)} -attr xrf 700 -attr oid 29 -attr vt d -attr @path {/addition/addition:core/input_a:rsc:mgc_in_wire.d}
+load net {input_b:rsc:mgc_in_wire.d(0)} -attr vt d
+load net {input_b:rsc:mgc_in_wire.d(1)} -attr vt d
+load net {input_b:rsc:mgc_in_wire.d(2)} -attr vt d
+load net {input_b:rsc:mgc_in_wire.d(3)} -attr vt d
+load net {input_b:rsc:mgc_in_wire.d(4)} -attr vt d
+load net {input_b:rsc:mgc_in_wire.d(5)} -attr vt d
+load net {input_b:rsc:mgc_in_wire.d(6)} -attr vt d
+load net {input_b:rsc:mgc_in_wire.d(7)} -attr vt d
+load netBundle {input_b:rsc:mgc_in_wire.d} 8 {input_b:rsc:mgc_in_wire.d(0)} {input_b:rsc:mgc_in_wire.d(1)} {input_b:rsc:mgc_in_wire.d(2)} {input_b:rsc:mgc_in_wire.d(3)} {input_b:rsc:mgc_in_wire.d(4)} {input_b:rsc:mgc_in_wire.d(5)} {input_b:rsc:mgc_in_wire.d(6)} {input_b:rsc:mgc_in_wire.d(7)} -attr xrf 701 -attr oid 30 -attr vt d -attr @path {/addition/addition:core/input_b:rsc:mgc_in_wire.d}
+load net {input_b:rsc:mgc_in_wire.d(0)} -port {input_b:rsc:mgc_in_wire.d(0)} -attr vt d
+load net {input_b:rsc:mgc_in_wire.d(1)} -port {input_b:rsc:mgc_in_wire.d(1)} -attr vt d
+load net {input_b:rsc:mgc_in_wire.d(2)} -port {input_b:rsc:mgc_in_wire.d(2)} -attr vt d
+load net {input_b:rsc:mgc_in_wire.d(3)} -port {input_b:rsc:mgc_in_wire.d(3)} -attr vt d
+load net {input_b:rsc:mgc_in_wire.d(4)} -port {input_b:rsc:mgc_in_wire.d(4)} -attr vt d
+load net {input_b:rsc:mgc_in_wire.d(5)} -port {input_b:rsc:mgc_in_wire.d(5)} -attr vt d
+load net {input_b:rsc:mgc_in_wire.d(6)} -port {input_b:rsc:mgc_in_wire.d(6)} -attr vt d
+load net {input_b:rsc:mgc_in_wire.d(7)} -port {input_b:rsc:mgc_in_wire.d(7)} -attr vt d
+load netBundle {input_b:rsc:mgc_in_wire.d} 8 {input_b:rsc:mgc_in_wire.d(0)} {input_b:rsc:mgc_in_wire.d(1)} {input_b:rsc:mgc_in_wire.d(2)} {input_b:rsc:mgc_in_wire.d(3)} {input_b:rsc:mgc_in_wire.d(4)} {input_b:rsc:mgc_in_wire.d(5)} {input_b:rsc:mgc_in_wire.d(6)} {input_b:rsc:mgc_in_wire.d(7)} -attr xrf 702 -attr oid 31 -attr vt d -attr @path {/addition/addition:core/input_b:rsc:mgc_in_wire.d}
+load net {output:rsc:mgc_out_stdreg.d(0)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(1)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(2)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(3)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(4)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(5)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(6)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(7)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(8)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(9)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(10)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(11)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(12)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(13)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(14)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(15)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(16)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(17)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(18)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(19)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(20)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(21)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(22)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(23)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(24)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(25)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(26)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(27)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(28)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(29)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(30)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(31)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(32)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(33)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(34)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(35)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(36)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(37)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(38)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d(39)} -attr vt d
+load netBundle {output:rsc:mgc_out_stdreg.d} 40 {output:rsc:mgc_out_stdreg.d(0)} {output:rsc:mgc_out_stdreg.d(1)} {output:rsc:mgc_out_stdreg.d(2)} {output:rsc:mgc_out_stdreg.d(3)} {output:rsc:mgc_out_stdreg.d(4)} {output:rsc:mgc_out_stdreg.d(5)} {output:rsc:mgc_out_stdreg.d(6)} {output:rsc:mgc_out_stdreg.d(7)} {output:rsc:mgc_out_stdreg.d(8)} {output:rsc:mgc_out_stdreg.d(9)} {output:rsc:mgc_out_stdreg.d(10)} {output:rsc:mgc_out_stdreg.d(11)} {output:rsc:mgc_out_stdreg.d(12)} {output:rsc:mgc_out_stdreg.d(13)} {output:rsc:mgc_out_stdreg.d(14)} {output:rsc:mgc_out_stdreg.d(15)} {output:rsc:mgc_out_stdreg.d(16)} {output:rsc:mgc_out_stdreg.d(17)} {output:rsc:mgc_out_stdreg.d(18)} {output:rsc:mgc_out_stdreg.d(19)} {output:rsc:mgc_out_stdreg.d(20)} {output:rsc:mgc_out_stdreg.d(21)} {output:rsc:mgc_out_stdreg.d(22)} {output:rsc:mgc_out_stdreg.d(23)} {output:rsc:mgc_out_stdreg.d(24)} {output:rsc:mgc_out_stdreg.d(25)} {output:rsc:mgc_out_stdreg.d(26)} {output:rsc:mgc_out_stdreg.d(27)} {output:rsc:mgc_out_stdreg.d(28)} {output:rsc:mgc_out_stdreg.d(29)} {output:rsc:mgc_out_stdreg.d(30)} {output:rsc:mgc_out_stdreg.d(31)} {output:rsc:mgc_out_stdreg.d(32)} {output:rsc:mgc_out_stdreg.d(33)} {output:rsc:mgc_out_stdreg.d(34)} {output:rsc:mgc_out_stdreg.d(35)} {output:rsc:mgc_out_stdreg.d(36)} {output:rsc:mgc_out_stdreg.d(37)} {output:rsc:mgc_out_stdreg.d(38)} {output:rsc:mgc_out_stdreg.d(39)} -attr xrf 703 -attr oid 32 -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(0)} -port {output:rsc:mgc_out_stdreg.d(0)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(1)} -port {output:rsc:mgc_out_stdreg.d(1)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(2)} -port {output:rsc:mgc_out_stdreg.d(2)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(3)} -port {output:rsc:mgc_out_stdreg.d(3)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(4)} -port {output:rsc:mgc_out_stdreg.d(4)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(5)} -port {output:rsc:mgc_out_stdreg.d(5)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(6)} -port {output:rsc:mgc_out_stdreg.d(6)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(7)} -port {output:rsc:mgc_out_stdreg.d(7)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(0)} -port {output:rsc:mgc_out_stdreg.d(8)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(1)} -port {output:rsc:mgc_out_stdreg.d(9)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(2)} -port {output:rsc:mgc_out_stdreg.d(10)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(3)} -port {output:rsc:mgc_out_stdreg.d(11)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(4)} -port {output:rsc:mgc_out_stdreg.d(12)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(5)} -port {output:rsc:mgc_out_stdreg.d(13)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(6)} -port {output:rsc:mgc_out_stdreg.d(14)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(7)} -port {output:rsc:mgc_out_stdreg.d(15)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(0)} -port {output:rsc:mgc_out_stdreg.d(16)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(1)} -port {output:rsc:mgc_out_stdreg.d(17)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(2)} -port {output:rsc:mgc_out_stdreg.d(18)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(3)} -port {output:rsc:mgc_out_stdreg.d(19)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(4)} -port {output:rsc:mgc_out_stdreg.d(20)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(5)} -port {output:rsc:mgc_out_stdreg.d(21)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(6)} -port {output:rsc:mgc_out_stdreg.d(22)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(7)} -port {output:rsc:mgc_out_stdreg.d(23)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(0)} -port {output:rsc:mgc_out_stdreg.d(24)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(1)} -port {output:rsc:mgc_out_stdreg.d(25)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(2)} -port {output:rsc:mgc_out_stdreg.d(26)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(3)} -port {output:rsc:mgc_out_stdreg.d(27)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(4)} -port {output:rsc:mgc_out_stdreg.d(28)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(5)} -port {output:rsc:mgc_out_stdreg.d(29)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(6)} -port {output:rsc:mgc_out_stdreg.d(30)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(7)} -port {output:rsc:mgc_out_stdreg.d(31)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(0)} -port {output:rsc:mgc_out_stdreg.d(32)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(1)} -port {output:rsc:mgc_out_stdreg.d(33)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(2)} -port {output:rsc:mgc_out_stdreg.d(34)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(3)} -port {output:rsc:mgc_out_stdreg.d(35)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(4)} -port {output:rsc:mgc_out_stdreg.d(36)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(5)} -port {output:rsc:mgc_out_stdreg.d(37)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(6)} -port {output:rsc:mgc_out_stdreg.d(38)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(7)} -port {output:rsc:mgc_out_stdreg.d(39)} -attr vt d -attr @path {/addition/addition:core/output:rsc:mgc_out_stdreg.d}
+load inst "not" "not(1)" "INTERFACE" -attr @path {/addition/addition:core/not} -attr area 0.001000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_not(1)"
+load net {i#1.sva#1(2)} -pin  "not" {A(0)} -attr @path {/addition/addition:core/slc(i#1.sva#1)#3.itm}
+load net {not.itm} -pin  "not" {Z(0)} -attr @path {/addition/addition:core/not.itm}
+load inst "or#4" "or(4,1)" "INTERFACE" -attr @path {/addition/addition:core/or#4} -attr area 1.380120 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_or(1,4)"
+load net {and.dcpl#1} -pin  "or#4" {A0(0)} -attr @path {/addition/addition:core/and.dcpl#1}
+load net {exit:MAC.lpi} -pin  "or#4" {A1(0)} -attr @path {/addition/addition:core/exit:MAC.lpi}
+load net {and.dcpl} -pin  "or#4" {A2(0)} -attr @path {/addition/addition:core/and.dcpl}
+load net {not.itm} -pin  "or#4" {A3(0)} -attr @path {/addition/addition:core/not.itm}
+load net {or#4.itm} -pin  "or#4" {Z(0)} -attr @path {/addition/addition:core/or#4.itm}
+load inst "mux" "mux(2,8)" "INTERFACE" -attr xrf 704 -attr oid 33 -attr vt d -attr @path {/addition/addition:core/mux} -attr area 7.356384 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_mux(8,1,2)"
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(0)} -pin  "mux" {A0(0)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg4.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(1)} -pin  "mux" {A0(1)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg4.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(2)} -pin  "mux" {A0(2)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg4.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(3)} -pin  "mux" {A0(3)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg4.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(4)} -pin  "mux" {A0(4)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg4.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(5)} -pin  "mux" {A0(5)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg4.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(6)} -pin  "mux" {A0(6)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg4.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(7)} -pin  "mux" {A0(7)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg4.lpi.dfm}
+load net {MAC:acc#3.cmx.sva(0)} -pin  "mux" {A1(0)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(1)} -pin  "mux" {A1(1)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(2)} -pin  "mux" {A1(2)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(3)} -pin  "mux" {A1(3)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(4)} -pin  "mux" {A1(4)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(5)} -pin  "mux" {A1(5)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(6)} -pin  "mux" {A1(6)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(7)} -pin  "mux" {A1(7)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {or#4.itm} -pin  "mux" {S(0)} -attr @path {/addition/addition:core/or#4.itm}
+load net {mux.itm(0)} -pin  "mux" {Z(0)} -attr vt d -attr @path {/addition/addition:core/mux.itm}
+load net {mux.itm(1)} -pin  "mux" {Z(1)} -attr vt d -attr @path {/addition/addition:core/mux.itm}
+load net {mux.itm(2)} -pin  "mux" {Z(2)} -attr vt d -attr @path {/addition/addition:core/mux.itm}
+load net {mux.itm(3)} -pin  "mux" {Z(3)} -attr vt d -attr @path {/addition/addition:core/mux.itm}
+load net {mux.itm(4)} -pin  "mux" {Z(4)} -attr vt d -attr @path {/addition/addition:core/mux.itm}
+load net {mux.itm(5)} -pin  "mux" {Z(5)} -attr vt d -attr @path {/addition/addition:core/mux.itm}
+load net {mux.itm(6)} -pin  "mux" {Z(6)} -attr vt d -attr @path {/addition/addition:core/mux.itm}
+load net {mux.itm(7)} -pin  "mux" {Z(7)} -attr vt d -attr @path {/addition/addition:core/mux.itm}
+load inst "reg(io_read(output:rsc.d).sdt.sg4.lpi.dfm)" "reg(8,1,1,-1,0)" "INTERFACE" -attr xrf 705 -attr oid 34 -attr vt d -attr @path {/addition/addition:core/reg(io_read(output:rsc.d).sdt.sg4.lpi.dfm)}
+load net {mux.itm(0)} -pin  "reg(io_read(output:rsc.d).sdt.sg4.lpi.dfm)" {D(0)} -attr vt d -attr @path {/addition/addition:core/mux.itm}
+load net {mux.itm(1)} -pin  "reg(io_read(output:rsc.d).sdt.sg4.lpi.dfm)" {D(1)} -attr vt d -attr @path {/addition/addition:core/mux.itm}
+load net {mux.itm(2)} -pin  "reg(io_read(output:rsc.d).sdt.sg4.lpi.dfm)" {D(2)} -attr vt d -attr @path {/addition/addition:core/mux.itm}
+load net {mux.itm(3)} -pin  "reg(io_read(output:rsc.d).sdt.sg4.lpi.dfm)" {D(3)} -attr vt d -attr @path {/addition/addition:core/mux.itm}
+load net {mux.itm(4)} -pin  "reg(io_read(output:rsc.d).sdt.sg4.lpi.dfm)" {D(4)} -attr vt d -attr @path {/addition/addition:core/mux.itm}
+load net {mux.itm(5)} -pin  "reg(io_read(output:rsc.d).sdt.sg4.lpi.dfm)" {D(5)} -attr vt d -attr @path {/addition/addition:core/mux.itm}
+load net {mux.itm(6)} -pin  "reg(io_read(output:rsc.d).sdt.sg4.lpi.dfm)" {D(6)} -attr vt d -attr @path {/addition/addition:core/mux.itm}
+load net {mux.itm(7)} -pin  "reg(io_read(output:rsc.d).sdt.sg4.lpi.dfm)" {D(7)} -attr vt d -attr @path {/addition/addition:core/mux.itm}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg4.lpi.dfm)" {DRa(0)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg4.lpi.dfm)" {DRa(1)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg4.lpi.dfm)" {DRa(2)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg4.lpi.dfm)" {DRa(3)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg4.lpi.dfm)" {DRa(4)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg4.lpi.dfm)" {DRa(5)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg4.lpi.dfm)" {DRa(6)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg4.lpi.dfm)" {DRa(7)} -attr @path {/addition/addition:core/C0_8}
+load net {clk} -pin  "reg(io_read(output:rsc.d).sdt.sg4.lpi.dfm)" {clk} -attr xrf 706 -attr oid 35 -attr @path {/addition/addition:core/clk}
+load net {en} -pin  "reg(io_read(output:rsc.d).sdt.sg4.lpi.dfm)" {en(0)} -attr @path {/addition/addition:core/en}
+load net {arst_n} -pin  "reg(io_read(output:rsc.d).sdt.sg4.lpi.dfm)" {Ra(0)} -attr @path {/addition/addition:core/arst_n}
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(0)} -pin  "reg(io_read(output:rsc.d).sdt.sg4.lpi.dfm)" {Z(0)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg4.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(1)} -pin  "reg(io_read(output:rsc.d).sdt.sg4.lpi.dfm)" {Z(1)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg4.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(2)} -pin  "reg(io_read(output:rsc.d).sdt.sg4.lpi.dfm)" {Z(2)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg4.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(3)} -pin  "reg(io_read(output:rsc.d).sdt.sg4.lpi.dfm)" {Z(3)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg4.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(4)} -pin  "reg(io_read(output:rsc.d).sdt.sg4.lpi.dfm)" {Z(4)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg4.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(5)} -pin  "reg(io_read(output:rsc.d).sdt.sg4.lpi.dfm)" {Z(5)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg4.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(6)} -pin  "reg(io_read(output:rsc.d).sdt.sg4.lpi.dfm)" {Z(6)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg4.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg4.lpi.dfm(7)} -pin  "reg(io_read(output:rsc.d).sdt.sg4.lpi.dfm)" {Z(7)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg4.lpi.dfm}
+load inst "not#8" "not(1)" "INTERFACE" -attr @path {/addition/addition:core/not#8} -attr area 0.001000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_not(1)"
+load net {i#1.sva#1(0)} -pin  "not#8" {A(0)} -attr @path {/addition/addition:core/slc(i#1.sva#1)#7.itm}
+load net {not#8.itm} -pin  "not#8" {Z(0)} -attr @path {/addition/addition:core/not#8.itm}
+load inst "not#6" "not(1)" "INTERFACE" -attr @path {/addition/addition:core/not#6} -attr area 0.001000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_not(1)"
+load net {i#1.sva#1(1)} -pin  "not#6" {A(0)} -attr @path {/addition/addition:core/slc(i#1.sva#1)#6.itm}
+load net {not#6.itm} -pin  "not#6" {Z(0)} -attr @path {/addition/addition:core/not#6.itm}
+load inst "or#8" "or(4,1)" "INTERFACE" -attr @path {/addition/addition:core/or#8} -attr area 1.380120 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_or(1,4)"
+load net {or.dcpl#7} -pin  "or#8" {A0(0)} -attr @path {/addition/addition:core/or.dcpl#7}
+load net {not#8.itm} -pin  "or#8" {A1(0)} -attr @path {/addition/addition:core/not#8.itm}
+load net {exit:MAC.lpi} -pin  "or#8" {A2(0)} -attr @path {/addition/addition:core/exit:MAC.lpi}
+load net {not#6.itm} -pin  "or#8" {A3(0)} -attr @path {/addition/addition:core/not#6.itm}
+load net {or#8.itm} -pin  "or#8" {Z(0)} -attr @path {/addition/addition:core/or#8.itm}
+load inst "mux#1" "mux(2,8)" "INTERFACE" -attr xrf 707 -attr oid 36 -attr vt d -attr @path {/addition/addition:core/mux#1} -attr area 7.356384 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_mux(8,1,2)"
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(0)} -pin  "mux#1" {A0(0)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg3.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(1)} -pin  "mux#1" {A0(1)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg3.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(2)} -pin  "mux#1" {A0(2)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg3.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(3)} -pin  "mux#1" {A0(3)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg3.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(4)} -pin  "mux#1" {A0(4)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg3.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(5)} -pin  "mux#1" {A0(5)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg3.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(6)} -pin  "mux#1" {A0(6)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg3.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(7)} -pin  "mux#1" {A0(7)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg3.lpi.dfm}
+load net {MAC:acc#3.cmx.sva(0)} -pin  "mux#1" {A1(0)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(1)} -pin  "mux#1" {A1(1)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(2)} -pin  "mux#1" {A1(2)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(3)} -pin  "mux#1" {A1(3)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(4)} -pin  "mux#1" {A1(4)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(5)} -pin  "mux#1" {A1(5)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(6)} -pin  "mux#1" {A1(6)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(7)} -pin  "mux#1" {A1(7)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {or#8.itm} -pin  "mux#1" {S(0)} -attr @path {/addition/addition:core/or#8.itm}
+load net {mux#1.itm(0)} -pin  "mux#1" {Z(0)} -attr vt d -attr @path {/addition/addition:core/mux#1.itm}
+load net {mux#1.itm(1)} -pin  "mux#1" {Z(1)} -attr vt d -attr @path {/addition/addition:core/mux#1.itm}
+load net {mux#1.itm(2)} -pin  "mux#1" {Z(2)} -attr vt d -attr @path {/addition/addition:core/mux#1.itm}
+load net {mux#1.itm(3)} -pin  "mux#1" {Z(3)} -attr vt d -attr @path {/addition/addition:core/mux#1.itm}
+load net {mux#1.itm(4)} -pin  "mux#1" {Z(4)} -attr vt d -attr @path {/addition/addition:core/mux#1.itm}
+load net {mux#1.itm(5)} -pin  "mux#1" {Z(5)} -attr vt d -attr @path {/addition/addition:core/mux#1.itm}
+load net {mux#1.itm(6)} -pin  "mux#1" {Z(6)} -attr vt d -attr @path {/addition/addition:core/mux#1.itm}
+load net {mux#1.itm(7)} -pin  "mux#1" {Z(7)} -attr vt d -attr @path {/addition/addition:core/mux#1.itm}
+load inst "reg(io_read(output:rsc.d).sdt.sg3.lpi.dfm)" "reg(8,1,1,-1,0)" "INTERFACE" -attr xrf 708 -attr oid 37 -attr vt d -attr @path {/addition/addition:core/reg(io_read(output:rsc.d).sdt.sg3.lpi.dfm)}
+load net {mux#1.itm(0)} -pin  "reg(io_read(output:rsc.d).sdt.sg3.lpi.dfm)" {D(0)} -attr vt d -attr @path {/addition/addition:core/mux#1.itm}
+load net {mux#1.itm(1)} -pin  "reg(io_read(output:rsc.d).sdt.sg3.lpi.dfm)" {D(1)} -attr vt d -attr @path {/addition/addition:core/mux#1.itm}
+load net {mux#1.itm(2)} -pin  "reg(io_read(output:rsc.d).sdt.sg3.lpi.dfm)" {D(2)} -attr vt d -attr @path {/addition/addition:core/mux#1.itm}
+load net {mux#1.itm(3)} -pin  "reg(io_read(output:rsc.d).sdt.sg3.lpi.dfm)" {D(3)} -attr vt d -attr @path {/addition/addition:core/mux#1.itm}
+load net {mux#1.itm(4)} -pin  "reg(io_read(output:rsc.d).sdt.sg3.lpi.dfm)" {D(4)} -attr vt d -attr @path {/addition/addition:core/mux#1.itm}
+load net {mux#1.itm(5)} -pin  "reg(io_read(output:rsc.d).sdt.sg3.lpi.dfm)" {D(5)} -attr vt d -attr @path {/addition/addition:core/mux#1.itm}
+load net {mux#1.itm(6)} -pin  "reg(io_read(output:rsc.d).sdt.sg3.lpi.dfm)" {D(6)} -attr vt d -attr @path {/addition/addition:core/mux#1.itm}
+load net {mux#1.itm(7)} -pin  "reg(io_read(output:rsc.d).sdt.sg3.lpi.dfm)" {D(7)} -attr vt d -attr @path {/addition/addition:core/mux#1.itm}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg3.lpi.dfm)" {DRa(0)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg3.lpi.dfm)" {DRa(1)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg3.lpi.dfm)" {DRa(2)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg3.lpi.dfm)" {DRa(3)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg3.lpi.dfm)" {DRa(4)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg3.lpi.dfm)" {DRa(5)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg3.lpi.dfm)" {DRa(6)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg3.lpi.dfm)" {DRa(7)} -attr @path {/addition/addition:core/C0_8}
+load net {clk} -pin  "reg(io_read(output:rsc.d).sdt.sg3.lpi.dfm)" {clk} -attr xrf 709 -attr oid 38 -attr @path {/addition/addition:core/clk}
+load net {en} -pin  "reg(io_read(output:rsc.d).sdt.sg3.lpi.dfm)" {en(0)} -attr @path {/addition/addition:core/en}
+load net {arst_n} -pin  "reg(io_read(output:rsc.d).sdt.sg3.lpi.dfm)" {Ra(0)} -attr @path {/addition/addition:core/arst_n}
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(0)} -pin  "reg(io_read(output:rsc.d).sdt.sg3.lpi.dfm)" {Z(0)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg3.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(1)} -pin  "reg(io_read(output:rsc.d).sdt.sg3.lpi.dfm)" {Z(1)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg3.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(2)} -pin  "reg(io_read(output:rsc.d).sdt.sg3.lpi.dfm)" {Z(2)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg3.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(3)} -pin  "reg(io_read(output:rsc.d).sdt.sg3.lpi.dfm)" {Z(3)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg3.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(4)} -pin  "reg(io_read(output:rsc.d).sdt.sg3.lpi.dfm)" {Z(4)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg3.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(5)} -pin  "reg(io_read(output:rsc.d).sdt.sg3.lpi.dfm)" {Z(5)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg3.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(6)} -pin  "reg(io_read(output:rsc.d).sdt.sg3.lpi.dfm)" {Z(6)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg3.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg3.lpi.dfm(7)} -pin  "reg(io_read(output:rsc.d).sdt.sg3.lpi.dfm)" {Z(7)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg3.lpi.dfm}
+load inst "not#2" "not(1)" "INTERFACE" -attr @path {/addition/addition:core/not#2} -attr area 0.001000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_not(1)"
+load net {i#1.sva#1(1)} -pin  "not#2" {A(0)} -attr @path {/addition/addition:core/slc(i#1.sva#1)#1.itm}
+load net {not#2.itm} -pin  "not#2" {Z(0)} -attr @path {/addition/addition:core/not#2.itm}
+load inst "or#11" "or(3,1)" "INTERFACE" -attr @path {/addition/addition:core/or#11} -attr area 1.055476 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_or(1,3)"
+load net {or.dcpl#10} -pin  "or#11" {A0(0)} -attr @path {/addition/addition:core/or.dcpl#10}
+load net {exit:MAC.lpi} -pin  "or#11" {A1(0)} -attr @path {/addition/addition:core/exit:MAC.lpi}
+load net {not#2.itm} -pin  "or#11" {A2(0)} -attr @path {/addition/addition:core/not#2.itm}
+load net {or#11.itm} -pin  "or#11" {Z(0)} -attr @path {/addition/addition:core/or#11.itm}
+load inst "mux#2" "mux(2,8)" "INTERFACE" -attr xrf 710 -attr oid 39 -attr vt d -attr @path {/addition/addition:core/mux#2} -attr area 7.356384 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_mux(8,1,2)"
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(0)} -pin  "mux#2" {A0(0)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg2.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(1)} -pin  "mux#2" {A0(1)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg2.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(2)} -pin  "mux#2" {A0(2)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg2.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(3)} -pin  "mux#2" {A0(3)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg2.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(4)} -pin  "mux#2" {A0(4)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg2.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(5)} -pin  "mux#2" {A0(5)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg2.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(6)} -pin  "mux#2" {A0(6)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg2.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(7)} -pin  "mux#2" {A0(7)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg2.lpi.dfm}
+load net {MAC:acc#3.cmx.sva(0)} -pin  "mux#2" {A1(0)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(1)} -pin  "mux#2" {A1(1)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(2)} -pin  "mux#2" {A1(2)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(3)} -pin  "mux#2" {A1(3)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(4)} -pin  "mux#2" {A1(4)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(5)} -pin  "mux#2" {A1(5)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(6)} -pin  "mux#2" {A1(6)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(7)} -pin  "mux#2" {A1(7)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {or#11.itm} -pin  "mux#2" {S(0)} -attr @path {/addition/addition:core/or#11.itm}
+load net {mux#2.itm(0)} -pin  "mux#2" {Z(0)} -attr vt d -attr @path {/addition/addition:core/mux#2.itm}
+load net {mux#2.itm(1)} -pin  "mux#2" {Z(1)} -attr vt d -attr @path {/addition/addition:core/mux#2.itm}
+load net {mux#2.itm(2)} -pin  "mux#2" {Z(2)} -attr vt d -attr @path {/addition/addition:core/mux#2.itm}
+load net {mux#2.itm(3)} -pin  "mux#2" {Z(3)} -attr vt d -attr @path {/addition/addition:core/mux#2.itm}
+load net {mux#2.itm(4)} -pin  "mux#2" {Z(4)} -attr vt d -attr @path {/addition/addition:core/mux#2.itm}
+load net {mux#2.itm(5)} -pin  "mux#2" {Z(5)} -attr vt d -attr @path {/addition/addition:core/mux#2.itm}
+load net {mux#2.itm(6)} -pin  "mux#2" {Z(6)} -attr vt d -attr @path {/addition/addition:core/mux#2.itm}
+load net {mux#2.itm(7)} -pin  "mux#2" {Z(7)} -attr vt d -attr @path {/addition/addition:core/mux#2.itm}
+load inst "reg(io_read(output:rsc.d).sdt.sg2.lpi.dfm)" "reg(8,1,1,-1,0)" "INTERFACE" -attr xrf 711 -attr oid 40 -attr vt d -attr @path {/addition/addition:core/reg(io_read(output:rsc.d).sdt.sg2.lpi.dfm)}
+load net {mux#2.itm(0)} -pin  "reg(io_read(output:rsc.d).sdt.sg2.lpi.dfm)" {D(0)} -attr vt d -attr @path {/addition/addition:core/mux#2.itm}
+load net {mux#2.itm(1)} -pin  "reg(io_read(output:rsc.d).sdt.sg2.lpi.dfm)" {D(1)} -attr vt d -attr @path {/addition/addition:core/mux#2.itm}
+load net {mux#2.itm(2)} -pin  "reg(io_read(output:rsc.d).sdt.sg2.lpi.dfm)" {D(2)} -attr vt d -attr @path {/addition/addition:core/mux#2.itm}
+load net {mux#2.itm(3)} -pin  "reg(io_read(output:rsc.d).sdt.sg2.lpi.dfm)" {D(3)} -attr vt d -attr @path {/addition/addition:core/mux#2.itm}
+load net {mux#2.itm(4)} -pin  "reg(io_read(output:rsc.d).sdt.sg2.lpi.dfm)" {D(4)} -attr vt d -attr @path {/addition/addition:core/mux#2.itm}
+load net {mux#2.itm(5)} -pin  "reg(io_read(output:rsc.d).sdt.sg2.lpi.dfm)" {D(5)} -attr vt d -attr @path {/addition/addition:core/mux#2.itm}
+load net {mux#2.itm(6)} -pin  "reg(io_read(output:rsc.d).sdt.sg2.lpi.dfm)" {D(6)} -attr vt d -attr @path {/addition/addition:core/mux#2.itm}
+load net {mux#2.itm(7)} -pin  "reg(io_read(output:rsc.d).sdt.sg2.lpi.dfm)" {D(7)} -attr vt d -attr @path {/addition/addition:core/mux#2.itm}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg2.lpi.dfm)" {DRa(0)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg2.lpi.dfm)" {DRa(1)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg2.lpi.dfm)" {DRa(2)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg2.lpi.dfm)" {DRa(3)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg2.lpi.dfm)" {DRa(4)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg2.lpi.dfm)" {DRa(5)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg2.lpi.dfm)" {DRa(6)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg2.lpi.dfm)" {DRa(7)} -attr @path {/addition/addition:core/C0_8}
+load net {clk} -pin  "reg(io_read(output:rsc.d).sdt.sg2.lpi.dfm)" {clk} -attr xrf 712 -attr oid 41 -attr @path {/addition/addition:core/clk}
+load net {en} -pin  "reg(io_read(output:rsc.d).sdt.sg2.lpi.dfm)" {en(0)} -attr @path {/addition/addition:core/en}
+load net {arst_n} -pin  "reg(io_read(output:rsc.d).sdt.sg2.lpi.dfm)" {Ra(0)} -attr @path {/addition/addition:core/arst_n}
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(0)} -pin  "reg(io_read(output:rsc.d).sdt.sg2.lpi.dfm)" {Z(0)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg2.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(1)} -pin  "reg(io_read(output:rsc.d).sdt.sg2.lpi.dfm)" {Z(1)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg2.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(2)} -pin  "reg(io_read(output:rsc.d).sdt.sg2.lpi.dfm)" {Z(2)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg2.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(3)} -pin  "reg(io_read(output:rsc.d).sdt.sg2.lpi.dfm)" {Z(3)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg2.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(4)} -pin  "reg(io_read(output:rsc.d).sdt.sg2.lpi.dfm)" {Z(4)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg2.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(5)} -pin  "reg(io_read(output:rsc.d).sdt.sg2.lpi.dfm)" {Z(5)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg2.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(6)} -pin  "reg(io_read(output:rsc.d).sdt.sg2.lpi.dfm)" {Z(6)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg2.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg2.lpi.dfm(7)} -pin  "reg(io_read(output:rsc.d).sdt.sg2.lpi.dfm)" {Z(7)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg2.lpi.dfm}
+load inst "not#4" "not(1)" "INTERFACE" -attr @path {/addition/addition:core/not#4} -attr area 0.001000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_not(1)"
+load net {i#1.sva#1(0)} -pin  "not#4" {A(0)} -attr @path {/addition/addition:core/slc(i#1.sva#1)#2.itm}
+load net {not#4.itm} -pin  "not#4" {Z(0)} -attr @path {/addition/addition:core/not#4.itm}
+load inst "or#14" "or(3,1)" "INTERFACE" -attr @path {/addition/addition:core/or#14} -attr area 1.055476 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_or(1,3)"
+load net {or.dcpl#7} -pin  "or#14" {A0(0)} -attr @path {/addition/addition:core/or.dcpl#7}
+load net {and.dcpl} -pin  "or#14" {A1(0)} -attr @path {/addition/addition:core/and.dcpl}
+load net {not#4.itm} -pin  "or#14" {A2(0)} -attr @path {/addition/addition:core/not#4.itm}
+load net {or#14.itm} -pin  "or#14" {Z(0)} -attr @path {/addition/addition:core/or#14.itm}
+load inst "mux#3" "mux(2,8)" "INTERFACE" -attr xrf 713 -attr oid 42 -attr vt d -attr @path {/addition/addition:core/mux#3} -attr area 7.356384 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_mux(8,1,2)"
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(0)} -pin  "mux#3" {A0(0)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg1.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(1)} -pin  "mux#3" {A0(1)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg1.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(2)} -pin  "mux#3" {A0(2)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg1.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(3)} -pin  "mux#3" {A0(3)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg1.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(4)} -pin  "mux#3" {A0(4)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg1.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(5)} -pin  "mux#3" {A0(5)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg1.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(6)} -pin  "mux#3" {A0(6)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg1.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(7)} -pin  "mux#3" {A0(7)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg1.lpi.dfm}
+load net {MAC:acc#3.cmx.sva(0)} -pin  "mux#3" {A1(0)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(1)} -pin  "mux#3" {A1(1)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(2)} -pin  "mux#3" {A1(2)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(3)} -pin  "mux#3" {A1(3)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(4)} -pin  "mux#3" {A1(4)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(5)} -pin  "mux#3" {A1(5)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(6)} -pin  "mux#3" {A1(6)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(7)} -pin  "mux#3" {A1(7)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {or#14.itm} -pin  "mux#3" {S(0)} -attr @path {/addition/addition:core/or#14.itm}
+load net {mux#3.itm(0)} -pin  "mux#3" {Z(0)} -attr vt d -attr @path {/addition/addition:core/mux#3.itm}
+load net {mux#3.itm(1)} -pin  "mux#3" {Z(1)} -attr vt d -attr @path {/addition/addition:core/mux#3.itm}
+load net {mux#3.itm(2)} -pin  "mux#3" {Z(2)} -attr vt d -attr @path {/addition/addition:core/mux#3.itm}
+load net {mux#3.itm(3)} -pin  "mux#3" {Z(3)} -attr vt d -attr @path {/addition/addition:core/mux#3.itm}
+load net {mux#3.itm(4)} -pin  "mux#3" {Z(4)} -attr vt d -attr @path {/addition/addition:core/mux#3.itm}
+load net {mux#3.itm(5)} -pin  "mux#3" {Z(5)} -attr vt d -attr @path {/addition/addition:core/mux#3.itm}
+load net {mux#3.itm(6)} -pin  "mux#3" {Z(6)} -attr vt d -attr @path {/addition/addition:core/mux#3.itm}
+load net {mux#3.itm(7)} -pin  "mux#3" {Z(7)} -attr vt d -attr @path {/addition/addition:core/mux#3.itm}
+load inst "reg(io_read(output:rsc.d).sdt.sg1.lpi.dfm)" "reg(8,1,1,-1,0)" "INTERFACE" -attr xrf 714 -attr oid 43 -attr vt d -attr @path {/addition/addition:core/reg(io_read(output:rsc.d).sdt.sg1.lpi.dfm)}
+load net {mux#3.itm(0)} -pin  "reg(io_read(output:rsc.d).sdt.sg1.lpi.dfm)" {D(0)} -attr vt d -attr @path {/addition/addition:core/mux#3.itm}
+load net {mux#3.itm(1)} -pin  "reg(io_read(output:rsc.d).sdt.sg1.lpi.dfm)" {D(1)} -attr vt d -attr @path {/addition/addition:core/mux#3.itm}
+load net {mux#3.itm(2)} -pin  "reg(io_read(output:rsc.d).sdt.sg1.lpi.dfm)" {D(2)} -attr vt d -attr @path {/addition/addition:core/mux#3.itm}
+load net {mux#3.itm(3)} -pin  "reg(io_read(output:rsc.d).sdt.sg1.lpi.dfm)" {D(3)} -attr vt d -attr @path {/addition/addition:core/mux#3.itm}
+load net {mux#3.itm(4)} -pin  "reg(io_read(output:rsc.d).sdt.sg1.lpi.dfm)" {D(4)} -attr vt d -attr @path {/addition/addition:core/mux#3.itm}
+load net {mux#3.itm(5)} -pin  "reg(io_read(output:rsc.d).sdt.sg1.lpi.dfm)" {D(5)} -attr vt d -attr @path {/addition/addition:core/mux#3.itm}
+load net {mux#3.itm(6)} -pin  "reg(io_read(output:rsc.d).sdt.sg1.lpi.dfm)" {D(6)} -attr vt d -attr @path {/addition/addition:core/mux#3.itm}
+load net {mux#3.itm(7)} -pin  "reg(io_read(output:rsc.d).sdt.sg1.lpi.dfm)" {D(7)} -attr vt d -attr @path {/addition/addition:core/mux#3.itm}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg1.lpi.dfm)" {DRa(0)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg1.lpi.dfm)" {DRa(1)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg1.lpi.dfm)" {DRa(2)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg1.lpi.dfm)" {DRa(3)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg1.lpi.dfm)" {DRa(4)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg1.lpi.dfm)" {DRa(5)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg1.lpi.dfm)" {DRa(6)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt.sg1.lpi.dfm)" {DRa(7)} -attr @path {/addition/addition:core/C0_8}
+load net {clk} -pin  "reg(io_read(output:rsc.d).sdt.sg1.lpi.dfm)" {clk} -attr xrf 715 -attr oid 44 -attr @path {/addition/addition:core/clk}
+load net {en} -pin  "reg(io_read(output:rsc.d).sdt.sg1.lpi.dfm)" {en(0)} -attr @path {/addition/addition:core/en}
+load net {arst_n} -pin  "reg(io_read(output:rsc.d).sdt.sg1.lpi.dfm)" {Ra(0)} -attr @path {/addition/addition:core/arst_n}
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(0)} -pin  "reg(io_read(output:rsc.d).sdt.sg1.lpi.dfm)" {Z(0)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg1.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(1)} -pin  "reg(io_read(output:rsc.d).sdt.sg1.lpi.dfm)" {Z(1)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg1.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(2)} -pin  "reg(io_read(output:rsc.d).sdt.sg1.lpi.dfm)" {Z(2)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg1.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(3)} -pin  "reg(io_read(output:rsc.d).sdt.sg1.lpi.dfm)" {Z(3)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg1.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(4)} -pin  "reg(io_read(output:rsc.d).sdt.sg1.lpi.dfm)" {Z(4)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg1.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(5)} -pin  "reg(io_read(output:rsc.d).sdt.sg1.lpi.dfm)" {Z(5)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg1.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(6)} -pin  "reg(io_read(output:rsc.d).sdt.sg1.lpi.dfm)" {Z(6)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg1.lpi.dfm}
+load net {io_read(output:rsc.d).sdt.sg1.lpi.dfm(7)} -pin  "reg(io_read(output:rsc.d).sdt.sg1.lpi.dfm)" {Z(7)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt.sg1.lpi.dfm}
+load inst "or#16" "or(2,1)" "INTERFACE" -attr @path {/addition/addition:core/or#16} -attr area 0.730832 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_or(1,2)"
+load net {or.dcpl#10} -pin  "or#16" {A0(0)} -attr @path {/addition/addition:core/or.dcpl#10}
+load net {and.dcpl} -pin  "or#16" {A1(0)} -attr @path {/addition/addition:core/and.dcpl}
+load net {or#16.itm} -pin  "or#16" {Z(0)} -attr @path {/addition/addition:core/or#16.itm}
+load inst "mux#4" "mux(2,8)" "INTERFACE" -attr xrf 716 -attr oid 45 -attr vt d -attr @path {/addition/addition:core/mux#4} -attr area 7.356384 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_mux(8,1,2)"
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(0)} -pin  "mux#4" {A0(0)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt#1.lpi.dfm}
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(1)} -pin  "mux#4" {A0(1)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt#1.lpi.dfm}
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(2)} -pin  "mux#4" {A0(2)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt#1.lpi.dfm}
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(3)} -pin  "mux#4" {A0(3)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt#1.lpi.dfm}
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(4)} -pin  "mux#4" {A0(4)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt#1.lpi.dfm}
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(5)} -pin  "mux#4" {A0(5)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt#1.lpi.dfm}
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(6)} -pin  "mux#4" {A0(6)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt#1.lpi.dfm}
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(7)} -pin  "mux#4" {A0(7)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt#1.lpi.dfm}
+load net {MAC:acc#3.cmx.sva(0)} -pin  "mux#4" {A1(0)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(1)} -pin  "mux#4" {A1(1)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(2)} -pin  "mux#4" {A1(2)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(3)} -pin  "mux#4" {A1(3)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(4)} -pin  "mux#4" {A1(4)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(5)} -pin  "mux#4" {A1(5)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(6)} -pin  "mux#4" {A1(6)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(7)} -pin  "mux#4" {A1(7)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {or#16.itm} -pin  "mux#4" {S(0)} -attr @path {/addition/addition:core/or#16.itm}
+load net {mux#4.itm(0)} -pin  "mux#4" {Z(0)} -attr vt d -attr @path {/addition/addition:core/mux#4.itm}
+load net {mux#4.itm(1)} -pin  "mux#4" {Z(1)} -attr vt d -attr @path {/addition/addition:core/mux#4.itm}
+load net {mux#4.itm(2)} -pin  "mux#4" {Z(2)} -attr vt d -attr @path {/addition/addition:core/mux#4.itm}
+load net {mux#4.itm(3)} -pin  "mux#4" {Z(3)} -attr vt d -attr @path {/addition/addition:core/mux#4.itm}
+load net {mux#4.itm(4)} -pin  "mux#4" {Z(4)} -attr vt d -attr @path {/addition/addition:core/mux#4.itm}
+load net {mux#4.itm(5)} -pin  "mux#4" {Z(5)} -attr vt d -attr @path {/addition/addition:core/mux#4.itm}
+load net {mux#4.itm(6)} -pin  "mux#4" {Z(6)} -attr vt d -attr @path {/addition/addition:core/mux#4.itm}
+load net {mux#4.itm(7)} -pin  "mux#4" {Z(7)} -attr vt d -attr @path {/addition/addition:core/mux#4.itm}
+load inst "reg(io_read(output:rsc.d).sdt#1.lpi.dfm)" "reg(8,1,1,-1,0)" "INTERFACE" -attr xrf 717 -attr oid 46 -attr vt d -attr @path {/addition/addition:core/reg(io_read(output:rsc.d).sdt#1.lpi.dfm)}
+load net {mux#4.itm(0)} -pin  "reg(io_read(output:rsc.d).sdt#1.lpi.dfm)" {D(0)} -attr vt d -attr @path {/addition/addition:core/mux#4.itm}
+load net {mux#4.itm(1)} -pin  "reg(io_read(output:rsc.d).sdt#1.lpi.dfm)" {D(1)} -attr vt d -attr @path {/addition/addition:core/mux#4.itm}
+load net {mux#4.itm(2)} -pin  "reg(io_read(output:rsc.d).sdt#1.lpi.dfm)" {D(2)} -attr vt d -attr @path {/addition/addition:core/mux#4.itm}
+load net {mux#4.itm(3)} -pin  "reg(io_read(output:rsc.d).sdt#1.lpi.dfm)" {D(3)} -attr vt d -attr @path {/addition/addition:core/mux#4.itm}
+load net {mux#4.itm(4)} -pin  "reg(io_read(output:rsc.d).sdt#1.lpi.dfm)" {D(4)} -attr vt d -attr @path {/addition/addition:core/mux#4.itm}
+load net {mux#4.itm(5)} -pin  "reg(io_read(output:rsc.d).sdt#1.lpi.dfm)" {D(5)} -attr vt d -attr @path {/addition/addition:core/mux#4.itm}
+load net {mux#4.itm(6)} -pin  "reg(io_read(output:rsc.d).sdt#1.lpi.dfm)" {D(6)} -attr vt d -attr @path {/addition/addition:core/mux#4.itm}
+load net {mux#4.itm(7)} -pin  "reg(io_read(output:rsc.d).sdt#1.lpi.dfm)" {D(7)} -attr vt d -attr @path {/addition/addition:core/mux#4.itm}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt#1.lpi.dfm)" {DRa(0)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt#1.lpi.dfm)" {DRa(1)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt#1.lpi.dfm)" {DRa(2)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt#1.lpi.dfm)" {DRa(3)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt#1.lpi.dfm)" {DRa(4)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt#1.lpi.dfm)" {DRa(5)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt#1.lpi.dfm)" {DRa(6)} -attr @path {/addition/addition:core/C0_8}
+load net {GND} -pin  "reg(io_read(output:rsc.d).sdt#1.lpi.dfm)" {DRa(7)} -attr @path {/addition/addition:core/C0_8}
+load net {clk} -pin  "reg(io_read(output:rsc.d).sdt#1.lpi.dfm)" {clk} -attr xrf 718 -attr oid 47 -attr @path {/addition/addition:core/clk}
+load net {en} -pin  "reg(io_read(output:rsc.d).sdt#1.lpi.dfm)" {en(0)} -attr @path {/addition/addition:core/en}
+load net {arst_n} -pin  "reg(io_read(output:rsc.d).sdt#1.lpi.dfm)" {Ra(0)} -attr @path {/addition/addition:core/arst_n}
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(0)} -pin  "reg(io_read(output:rsc.d).sdt#1.lpi.dfm)" {Z(0)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt#1.lpi.dfm}
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(1)} -pin  "reg(io_read(output:rsc.d).sdt#1.lpi.dfm)" {Z(1)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt#1.lpi.dfm}
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(2)} -pin  "reg(io_read(output:rsc.d).sdt#1.lpi.dfm)" {Z(2)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt#1.lpi.dfm}
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(3)} -pin  "reg(io_read(output:rsc.d).sdt#1.lpi.dfm)" {Z(3)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt#1.lpi.dfm}
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(4)} -pin  "reg(io_read(output:rsc.d).sdt#1.lpi.dfm)" {Z(4)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt#1.lpi.dfm}
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(5)} -pin  "reg(io_read(output:rsc.d).sdt#1.lpi.dfm)" {Z(5)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt#1.lpi.dfm}
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(6)} -pin  "reg(io_read(output:rsc.d).sdt#1.lpi.dfm)" {Z(6)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt#1.lpi.dfm}
+load net {io_read(output:rsc.d).sdt#1.lpi.dfm(7)} -pin  "reg(io_read(output:rsc.d).sdt#1.lpi.dfm)" {Z(7)} -attr vt d -attr @path {/addition/addition:core/io_read(output:rsc.d).sdt#1.lpi.dfm}
+load inst "reg(i#1.sva#1)" "reg(3,1,1,-1,0)" "INTERFACE" -attr xrf 719 -attr oid 48 -attr vt dc -attr @path {/addition/addition:core/reg(i#1.sva#1)}
+load net {MAC:acc#5.tmp(0)} -pin  "reg(i#1.sva#1)" {D(0)} -attr vt dc -attr @path {/addition/addition:core/MAC:acc#5.tmp}
+load net {MAC:acc#5.tmp(1)} -pin  "reg(i#1.sva#1)" {D(1)} -attr vt dc -attr @path {/addition/addition:core/MAC:acc#5.tmp}
+load net {MAC:acc#5.tmp(2)} -pin  "reg(i#1.sva#1)" {D(2)} -attr vt dc -attr @path {/addition/addition:core/MAC:acc#5.tmp}
+load net {GND} -pin  "reg(i#1.sva#1)" {DRa(0)} -attr @path {/addition/addition:core/C0_3}
+load net {GND} -pin  "reg(i#1.sva#1)" {DRa(1)} -attr @path {/addition/addition:core/C0_3}
+load net {GND} -pin  "reg(i#1.sva#1)" {DRa(2)} -attr @path {/addition/addition:core/C0_3}
+load net {clk} -pin  "reg(i#1.sva#1)" {clk} -attr xrf 720 -attr oid 49 -attr @path {/addition/addition:core/clk}
+load net {en} -pin  "reg(i#1.sva#1)" {en(0)} -attr @path {/addition/addition:core/en}
+load net {arst_n} -pin  "reg(i#1.sva#1)" {Ra(0)} -attr @path {/addition/addition:core/arst_n}
+load net {i#1.sva#1(0)} -pin  "reg(i#1.sva#1)" {Z(0)} -attr vt dc -attr @path {/addition/addition:core/i#1.sva#1}
+load net {i#1.sva#1(1)} -pin  "reg(i#1.sva#1)" {Z(1)} -attr vt dc -attr @path {/addition/addition:core/i#1.sva#1}
+load net {i#1.sva#1(2)} -pin  "reg(i#1.sva#1)" {Z(2)} -attr vt dc -attr @path {/addition/addition:core/i#1.sva#1}
+load inst "MAC:acc" "add(3,-1,2,0,3)" "INTERFACE" -attr xrf 721 -attr oid 50 -attr vt dc -attr @path {/addition/addition:core/MAC:acc} -attr area 4.306828 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(3,0,2,0,3)"
+load net {MAC:acc#5.tmp(0)} -pin  "MAC:acc" {A(0)} -attr vt dc -attr @path {/addition/addition:core/MAC:acc#5.tmp}
+load net {MAC:acc#5.tmp(1)} -pin  "MAC:acc" {A(1)} -attr vt dc -attr @path {/addition/addition:core/MAC:acc#5.tmp}
+load net {MAC:acc#5.tmp(2)} -pin  "MAC:acc" {A(2)} -attr vt dc -attr @path {/addition/addition:core/MAC:acc#5.tmp}
+load net {PWR} -pin  "MAC:acc" {B(0)} -attr @path {/addition/addition:core/C3_2}
+load net {PWR} -pin  "MAC:acc" {B(1)} -attr @path {/addition/addition:core/C3_2}
+load net {MAC:acc.itm(0)} -pin  "MAC:acc" {Z(0)} -attr vt dc -attr @path {/addition/addition:core/MAC:acc.itm}
+load net {MAC:acc.itm(1)} -pin  "MAC:acc" {Z(1)} -attr vt dc -attr @path {/addition/addition:core/MAC:acc.itm}
+load net {MAC:acc.itm(2)} -pin  "MAC:acc" {Z(2)} -attr vt dc -attr @path {/addition/addition:core/MAC:acc.itm}
+load inst "MAC:not" "not(1)" "INTERFACE" -attr xrf 722 -attr oid 51 -attr vt c -attr @path {/addition/addition:core/MAC:not} -attr area 0.001000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_not(1)"
+load net {MAC:acc.itm(2)} -pin  "MAC:not" {A(0)} -attr vt c -attr @path {/addition/addition:core/MAC:slc.itm}
+load net {MAC:not.itm} -pin  "MAC:not" {Z(0)} -attr vt c -attr @path {/addition/addition:core/MAC:not.itm}
+load inst "reg(exit:MAC.lpi)" "reg(1,1,1,-1,0)" "INTERFACE" -attr xrf 723 -attr oid 52 -attr vt c -attr @path {/addition/addition:core/reg(exit:MAC.lpi)}
+load net {MAC:not.itm} -pin  "reg(exit:MAC.lpi)" {D(0)} -attr vt c -attr @path {/addition/addition:core/MAC:not.itm}
+load net {PWR} -pin  "reg(exit:MAC.lpi)" {DRa(0)} -attr @path {/addition/addition:core/C4_3#4}
+load net {clk} -pin  "reg(exit:MAC.lpi)" {clk} -attr xrf 724 -attr oid 53 -attr @path {/addition/addition:core/clk}
+load net {en} -pin  "reg(exit:MAC.lpi)" {en(0)} -attr @path {/addition/addition:core/en}
+load net {arst_n} -pin  "reg(exit:MAC.lpi)" {Ra(0)} -attr @path {/addition/addition:core/arst_n}
+load net {exit:MAC.lpi} -pin  "reg(exit:MAC.lpi)" {Z(0)} -attr @path {/addition/addition:core/exit:MAC.lpi}
+load inst "MAC:acc#3" "add(8,-1,8,-1,8)" "INTERFACE" -attr xrf 725 -attr oid 54 -attr vt d -attr @path {/addition/addition:core/MAC:acc#3} -attr area 9.258614 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(8,0,8,0,8)"
+load net {input_a:rsc:mgc_in_wire.d(0)} -pin  "MAC:acc#3" {A(0)} -attr vt d -attr @path {/addition/addition:core/input_a:rsc:mgc_in_wire.d}
+load net {input_a:rsc:mgc_in_wire.d(1)} -pin  "MAC:acc#3" {A(1)} -attr vt d -attr @path {/addition/addition:core/input_a:rsc:mgc_in_wire.d}
+load net {input_a:rsc:mgc_in_wire.d(2)} -pin  "MAC:acc#3" {A(2)} -attr vt d -attr @path {/addition/addition:core/input_a:rsc:mgc_in_wire.d}
+load net {input_a:rsc:mgc_in_wire.d(3)} -pin  "MAC:acc#3" {A(3)} -attr vt d -attr @path {/addition/addition:core/input_a:rsc:mgc_in_wire.d}
+load net {input_a:rsc:mgc_in_wire.d(4)} -pin  "MAC:acc#3" {A(4)} -attr vt d -attr @path {/addition/addition:core/input_a:rsc:mgc_in_wire.d}
+load net {input_a:rsc:mgc_in_wire.d(5)} -pin  "MAC:acc#3" {A(5)} -attr vt d -attr @path {/addition/addition:core/input_a:rsc:mgc_in_wire.d}
+load net {input_a:rsc:mgc_in_wire.d(6)} -pin  "MAC:acc#3" {A(6)} -attr vt d -attr @path {/addition/addition:core/input_a:rsc:mgc_in_wire.d}
+load net {input_a:rsc:mgc_in_wire.d(7)} -pin  "MAC:acc#3" {A(7)} -attr vt d -attr @path {/addition/addition:core/input_a:rsc:mgc_in_wire.d}
+load net {input_b:rsc:mgc_in_wire.d(0)} -pin  "MAC:acc#3" {B(0)} -attr vt d -attr @path {/addition/addition:core/input_b:rsc:mgc_in_wire.d}
+load net {input_b:rsc:mgc_in_wire.d(1)} -pin  "MAC:acc#3" {B(1)} -attr vt d -attr @path {/addition/addition:core/input_b:rsc:mgc_in_wire.d}
+load net {input_b:rsc:mgc_in_wire.d(2)} -pin  "MAC:acc#3" {B(2)} -attr vt d -attr @path {/addition/addition:core/input_b:rsc:mgc_in_wire.d}
+load net {input_b:rsc:mgc_in_wire.d(3)} -pin  "MAC:acc#3" {B(3)} -attr vt d -attr @path {/addition/addition:core/input_b:rsc:mgc_in_wire.d}
+load net {input_b:rsc:mgc_in_wire.d(4)} -pin  "MAC:acc#3" {B(4)} -attr vt d -attr @path {/addition/addition:core/input_b:rsc:mgc_in_wire.d}
+load net {input_b:rsc:mgc_in_wire.d(5)} -pin  "MAC:acc#3" {B(5)} -attr vt d -attr @path {/addition/addition:core/input_b:rsc:mgc_in_wire.d}
+load net {input_b:rsc:mgc_in_wire.d(6)} -pin  "MAC:acc#3" {B(6)} -attr vt d -attr @path {/addition/addition:core/input_b:rsc:mgc_in_wire.d}
+load net {input_b:rsc:mgc_in_wire.d(7)} -pin  "MAC:acc#3" {B(7)} -attr vt d -attr @path {/addition/addition:core/input_b:rsc:mgc_in_wire.d}
+load net {MAC:acc#3.cmx.sva(0)} -pin  "MAC:acc#3" {Z(0)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(1)} -pin  "MAC:acc#3" {Z(1)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(2)} -pin  "MAC:acc#3" {Z(2)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(3)} -pin  "MAC:acc#3" {Z(3)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(4)} -pin  "MAC:acc#3" {Z(4)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(5)} -pin  "MAC:acc#3" {Z(5)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(6)} -pin  "MAC:acc#3" {Z(6)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load net {MAC:acc#3.cmx.sva(7)} -pin  "MAC:acc#3" {Z(7)} -attr vt d -attr @path {/addition/addition:core/MAC:acc#3.cmx.sva}
+load inst "MAC:not#4" "not(1)" "INTERFACE" -attr xrf 726 -attr oid 55 -attr @path {/addition/addition:core/MAC:not#4} -attr area 0.001000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_not(1)"
+load net {exit:MAC.lpi} -pin  "MAC:not#4" {A(0)} -attr @path {/addition/addition:core/exit:MAC.lpi}
+load net {MAC:not#4.itm} -pin  "MAC:not#4" {Z(0)} -attr @path {/addition/addition:core/MAC:not#4.itm}
+load inst "MAC:and#8" "and(2,3)" "INTERFACE" -attr xrf 727 -attr oid 56 -attr vt dc -attr @path {/addition/addition:core/MAC:and#8} -attr area 2.189497 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_and(3,2)"
+load net {i#1.sva#1(0)} -pin  "MAC:and#8" {A0(0)} -attr vt dc -attr @path {/addition/addition:core/i#1.sva#1}
+load net {i#1.sva#1(1)} -pin  "MAC:and#8" {A0(1)} -attr vt dc -attr @path {/addition/addition:core/i#1.sva#1}
+load net {i#1.sva#1(2)} -pin  "MAC:and#8" {A0(2)} -attr vt dc -attr @path {/addition/addition:core/i#1.sva#1}
+load net {MAC:not#4.itm} -pin  "MAC:and#8" {A1(0)} -attr vt d -attr @path {/addition/addition:core/MAC:exs#1.itm}
+load net {MAC:not#4.itm} -pin  "MAC:and#8" {A1(1)} -attr vt d -attr @path {/addition/addition:core/MAC:exs#1.itm}
+load net {MAC:not#4.itm} -pin  "MAC:and#8" {A1(2)} -attr vt d -attr @path {/addition/addition:core/MAC:exs#1.itm}
+load net {MAC:and#8.itm(0)} -pin  "MAC:and#8" {Z(0)} -attr vt dc -attr @path {/addition/addition:core/MAC:and#8.itm}
+load net {MAC:and#8.itm(1)} -pin  "MAC:and#8" {Z(1)} -attr vt dc -attr @path {/addition/addition:core/MAC:and#8.itm}
+load net {MAC:and#8.itm(2)} -pin  "MAC:and#8" {Z(2)} -attr vt dc -attr @path {/addition/addition:core/MAC:and#8.itm}
+load inst "MAC:acc#5" "add(3,-1,1,0,3)" "INTERFACE" -attr xrf 728 -attr oid 57 -attr vt dc -attr @path {/addition/addition:core/MAC:acc#5} -attr area 4.000000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(3,0,2,1,3)"
+load net {MAC:and#8.itm(0)} -pin  "MAC:acc#5" {A(0)} -attr vt dc -attr @path {/addition/addition:core/MAC:and#8.itm}
+load net {MAC:and#8.itm(1)} -pin  "MAC:acc#5" {A(1)} -attr vt dc -attr @path {/addition/addition:core/MAC:and#8.itm}
+load net {MAC:and#8.itm(2)} -pin  "MAC:acc#5" {A(2)} -attr vt dc -attr @path {/addition/addition:core/MAC:and#8.itm}
+load net {PWR} -pin  "MAC:acc#5" {B(0)} -attr @path {/addition/addition:core/C1_1}
+load net {MAC:acc#5.tmp(0)} -pin  "MAC:acc#5" {Z(0)} -attr vt dc -attr @path {/addition/addition:core/MAC:acc#5.tmp}
+load net {MAC:acc#5.tmp(1)} -pin  "MAC:acc#5" {Z(1)} -attr vt dc -attr @path {/addition/addition:core/MAC:acc#5.tmp}
+load net {MAC:acc#5.tmp(2)} -pin  "MAC:acc#5" {Z(2)} -attr vt dc -attr @path {/addition/addition:core/MAC:acc#5.tmp}
+load inst "MAC:not#7" "not(1)" "INTERFACE" -attr xrf 729 -attr oid 58 -attr @path {/addition/addition:core/MAC:not#7} -attr area 0.001000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_not(1)"
+load net {exit:MAC.lpi} -pin  "MAC:not#7" {A(0)} -attr @path {/addition/addition:core/exit:MAC.lpi}
+load net {MAC:not#7.itm} -pin  "MAC:not#7" {Z(0)} -attr @path {/addition/addition:core/MAC:not#7.itm}
+load inst "and" "and(2,1)" "INTERFACE" -attr @path {/addition/addition:core/and} -attr area 0.730832 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_and(1,2)"
+load net {MAC:not#7.itm} -pin  "and" {A0(0)} -attr @path {/addition/addition:core/MAC:not#7.itm}
+load net {i#1.sva#1(1)} -pin  "and" {A1(0)} -attr @path {/addition/addition:core/slc(i#1.sva#1)#4.itm}
+load net {and.dcpl} -pin  "and" {Z(0)} -attr @path {/addition/addition:core/and.dcpl}
+load inst "MAC:not#9" "not(1)" "INTERFACE" -attr xrf 730 -attr oid 59 -attr @path {/addition/addition:core/MAC:not#9} -attr area 0.001000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_not(1)"
+load net {exit:MAC.lpi} -pin  "MAC:not#9" {A(0)} -attr @path {/addition/addition:core/exit:MAC.lpi}
+load net {MAC:not#9.itm} -pin  "MAC:not#9" {Z(0)} -attr @path {/addition/addition:core/MAC:not#9.itm}
+load inst "and#1" "and(2,1)" "INTERFACE" -attr @path {/addition/addition:core/and#1} -attr area 0.730832 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_and(1,2)"
+load net {MAC:not#9.itm} -pin  "and#1" {A0(0)} -attr @path {/addition/addition:core/MAC:not#9.itm}
+load net {i#1.sva#1(0)} -pin  "and#1" {A1(0)} -attr @path {/addition/addition:core/slc(i#1.sva#1)#5.itm}
+load net {and.dcpl#1} -pin  "and#1" {Z(0)} -attr @path {/addition/addition:core/and.dcpl#1}
+load inst "MAC:not#6" "not(1)" "INTERFACE" -attr xrf 731 -attr oid 60 -attr @path {/addition/addition:core/MAC:not#6} -attr area 0.001000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_not(1)"
+load net {exit:MAC.lpi} -pin  "MAC:not#6" {A(0)} -attr @path {/addition/addition:core/exit:MAC.lpi}
+load net {MAC:not#6.itm} -pin  "MAC:not#6" {Z(0)} -attr @path {/addition/addition:core/MAC:not#6.itm}
+load inst "and#2" "and(2,1)" "INTERFACE" -attr @path {/addition/addition:core/and#2} -attr area 0.730832 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_and(1,2)"
+load net {MAC:not#6.itm} -pin  "and#2" {A0(0)} -attr @path {/addition/addition:core/MAC:not#6.itm}
+load net {i#1.sva#1(2)} -pin  "and#2" {A1(0)} -attr @path {/addition/addition:core/slc(i#1.sva#1).itm}
+load net {and.dcpl#2} -pin  "and#2" {Z(0)} -attr @path {/addition/addition:core/and.dcpl#2}
+load inst "or#7" "or(2,1)" "INTERFACE" -attr @path {/addition/addition:core/or#7} -attr area 0.730832 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_or(1,2)"
+load net {and.dcpl#2} -pin  "or#7" {A0(0)} -attr @path {/addition/addition:core/and.dcpl#2}
+load net {exit:MAC.lpi} -pin  "or#7" {A1(0)} -attr @path {/addition/addition:core/exit:MAC.lpi}
+load net {or.dcpl#7} -pin  "or#7" {Z(0)} -attr @path {/addition/addition:core/or.dcpl#7}
+load inst "or#10" "or(2,1)" "INTERFACE" -attr @path {/addition/addition:core/or#10} -attr area 0.730832 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_or(1,2)"
+load net {and.dcpl#1} -pin  "or#10" {A0(0)} -attr @path {/addition/addition:core/and.dcpl#1}
+load net {and.dcpl#2} -pin  "or#10" {A1(0)} -attr @path {/addition/addition:core/and.dcpl#2}
+load net {or.dcpl#10} -pin  "or#10" {Z(0)} -attr @path {/addition/addition:core/or.dcpl#10}
+### END MODULE 
+
+module new "addition" "orig"
+load portBus {input_a:rsc.z(7:0)} input 8 {input_a:rsc.z(7)} {input_a:rsc.z(6)} {input_a:rsc.z(5)} {input_a:rsc.z(4)} {input_a:rsc.z(3)} {input_a:rsc.z(2)} {input_a:rsc.z(1)} {input_a:rsc.z(0)} -attr xrf 732 -attr oid 61 -attr vt d -attr @path {/addition/input_a:rsc.z}
+load portBus {input_b:rsc.z(7:0)} input 8 {input_b:rsc.z(7)} {input_b:rsc.z(6)} {input_b:rsc.z(5)} {input_b:rsc.z(4)} {input_b:rsc.z(3)} {input_b:rsc.z(2)} {input_b:rsc.z(1)} {input_b:rsc.z(0)} -attr xrf 733 -attr oid 62 -attr vt d -attr @path {/addition/input_b:rsc.z}
+load portBus {output:rsc.z(39:0)} output 40 {output:rsc.z(39)} {output:rsc.z(38)} {output:rsc.z(37)} {output:rsc.z(36)} {output:rsc.z(35)} {output:rsc.z(34)} {output:rsc.z(33)} {output:rsc.z(32)} {output:rsc.z(31)} {output:rsc.z(30)} {output:rsc.z(29)} {output:rsc.z(28)} {output:rsc.z(27)} {output:rsc.z(26)} {output:rsc.z(25)} {output:rsc.z(24)} {output:rsc.z(23)} {output:rsc.z(22)} {output:rsc.z(21)} {output:rsc.z(20)} {output:rsc.z(19)} {output:rsc.z(18)} {output:rsc.z(17)} {output:rsc.z(16)} {output:rsc.z(15)} {output:rsc.z(14)} {output:rsc.z(13)} {output:rsc.z(12)} {output:rsc.z(11)} {output:rsc.z(10)} {output:rsc.z(9)} {output:rsc.z(8)} {output:rsc.z(7)} {output:rsc.z(6)} {output:rsc.z(5)} {output:rsc.z(4)} {output:rsc.z(3)} {output:rsc.z(2)} {output:rsc.z(1)} {output:rsc.z(0)} -attr xrf 734 -attr oid 63 -attr vt d -attr @path {/addition/output:rsc.z}
+load port {clk} input -attr xrf 735 -attr oid 64 -attr vt d -attr @path {/addition/clk}
+load port {en} input -attr xrf 736 -attr oid 65 -attr vt d -attr @path {/addition/en}
+load port {arst_n} input -attr xrf 737 -attr oid 66 -attr vt d -attr @path {/addition/arst_n}
+load symbol "mgc_ioport.mgc_in_wire(1,8)" "INTERFACE" GEN boxcolor 0 \
+     portBus {d(7:0)} output 8 {d(7)} {d(6)} {d(5)} {d(4)} {d(3)} {d(2)} {d(1)} {d(0)} \
+     portBus {z(7:0)} input 8 {z(7)} {z(6)} {z(5)} {z(4)} {z(3)} {z(2)} {z(1)} {z(0)} \
+
+load symbol "mgc_ioport.mgc_in_wire(2,8)" "INTERFACE" GEN boxcolor 0 \
+     portBus {d(7:0)} output 8 {d(7)} {d(6)} {d(5)} {d(4)} {d(3)} {d(2)} {d(1)} {d(0)} \
+     portBus {z(7:0)} input 8 {z(7)} {z(6)} {z(5)} {z(4)} {z(3)} {z(2)} {z(1)} {z(0)} \
+
+load symbol "mgc_ioport.mgc_out_stdreg(3,40)" "INTERFACE" GEN boxcolor 0 \
+     portBus {d(39:0)} input 40 {d(39)} {d(38)} {d(37)} {d(36)} {d(35)} {d(34)} {d(33)} {d(32)} {d(31)} {d(30)} {d(29)} {d(28)} {d(27)} {d(26)} {d(25)} {d(24)} {d(23)} {d(22)} {d(21)} {d(20)} {d(19)} {d(18)} {d(17)} {d(16)} {d(15)} {d(14)} {d(13)} {d(12)} {d(11)} {d(10)} {d(9)} {d(8)} {d(7)} {d(6)} {d(5)} {d(4)} {d(3)} {d(2)} {d(1)} {d(0)} \
+     portBus {z(39:0)} output 40 {z(39)} {z(38)} {z(37)} {z(36)} {z(35)} {z(34)} {z(33)} {z(32)} {z(31)} {z(30)} {z(29)} {z(28)} {z(27)} {z(26)} {z(25)} {z(24)} {z(23)} {z(22)} {z(21)} {z(20)} {z(19)} {z(18)} {z(17)} {z(16)} {z(15)} {z(14)} {z(13)} {z(12)} {z(11)} {z(10)} {z(9)} {z(8)} {z(7)} {z(6)} {z(5)} {z(4)} {z(3)} {z(2)} {z(1)} {z(0)} \
+
+load symbol "addition:core" "orig" GEN \
+     port {clk#1} input \
+     port {en#1} input \
+     port {arst_n#1} input \
+     portBus {input_a:rsc:mgc_in_wire.d(7:0)} input 8 {input_a:rsc:mgc_in_wire.d(7)} {input_a:rsc:mgc_in_wire.d(6)} {input_a:rsc:mgc_in_wire.d(5)} {input_a:rsc:mgc_in_wire.d(4)} {input_a:rsc:mgc_in_wire.d(3)} {input_a:rsc:mgc_in_wire.d(2)} {input_a:rsc:mgc_in_wire.d(1)} {input_a:rsc:mgc_in_wire.d(0)} \
+     portBus {input_b:rsc:mgc_in_wire.d(7:0)} input 8 {input_b:rsc:mgc_in_wire.d(7)} {input_b:rsc:mgc_in_wire.d(6)} {input_b:rsc:mgc_in_wire.d(5)} {input_b:rsc:mgc_in_wire.d(4)} {input_b:rsc:mgc_in_wire.d(3)} {input_b:rsc:mgc_in_wire.d(2)} {input_b:rsc:mgc_in_wire.d(1)} {input_b:rsc:mgc_in_wire.d(0)} \
+     portBus {output:rsc:mgc_out_stdreg.d(39:0)} output 40 {output:rsc:mgc_out_stdreg.d(39)} {output:rsc:mgc_out_stdreg.d(38)} {output:rsc:mgc_out_stdreg.d(37)} {output:rsc:mgc_out_stdreg.d(36)} {output:rsc:mgc_out_stdreg.d(35)} {output:rsc:mgc_out_stdreg.d(34)} {output:rsc:mgc_out_stdreg.d(33)} {output:rsc:mgc_out_stdreg.d(32)} {output:rsc:mgc_out_stdreg.d(31)} {output:rsc:mgc_out_stdreg.d(30)} {output:rsc:mgc_out_stdreg.d(29)} {output:rsc:mgc_out_stdreg.d(28)} {output:rsc:mgc_out_stdreg.d(27)} {output:rsc:mgc_out_stdreg.d(26)} {output:rsc:mgc_out_stdreg.d(25)} {output:rsc:mgc_out_stdreg.d(24)} {output:rsc:mgc_out_stdreg.d(23)} {output:rsc:mgc_out_stdreg.d(22)} {output:rsc:mgc_out_stdreg.d(21)} {output:rsc:mgc_out_stdreg.d(20)} {output:rsc:mgc_out_stdreg.d(19)} {output:rsc:mgc_out_stdreg.d(18)} {output:rsc:mgc_out_stdreg.d(17)} {output:rsc:mgc_out_stdreg.d(16)} {output:rsc:mgc_out_stdreg.d(15)} {output:rsc:mgc_out_stdreg.d(14)} {output:rsc:mgc_out_stdreg.d(13)} {output:rsc:mgc_out_stdreg.d(12)} {output:rsc:mgc_out_stdreg.d(11)} {output:rsc:mgc_out_stdreg.d(10)} {output:rsc:mgc_out_stdreg.d(9)} {output:rsc:mgc_out_stdreg.d(8)} {output:rsc:mgc_out_stdreg.d(7)} {output:rsc:mgc_out_stdreg.d(6)} {output:rsc:mgc_out_stdreg.d(5)} {output:rsc:mgc_out_stdreg.d(4)} {output:rsc:mgc_out_stdreg.d(3)} {output:rsc:mgc_out_stdreg.d(2)} {output:rsc:mgc_out_stdreg.d(1)} {output:rsc:mgc_out_stdreg.d(0)} \
+
+load net {input_a:rsc:mgc_in_wire.d#1(0)} -attr vt d
+load net {input_a:rsc:mgc_in_wire.d#1(1)} -attr vt d
+load net {input_a:rsc:mgc_in_wire.d#1(2)} -attr vt d
+load net {input_a:rsc:mgc_in_wire.d#1(3)} -attr vt d
+load net {input_a:rsc:mgc_in_wire.d#1(4)} -attr vt d
+load net {input_a:rsc:mgc_in_wire.d#1(5)} -attr vt d
+load net {input_a:rsc:mgc_in_wire.d#1(6)} -attr vt d
+load net {input_a:rsc:mgc_in_wire.d#1(7)} -attr vt d
+load netBundle {input_a:rsc:mgc_in_wire.d#1} 8 {input_a:rsc:mgc_in_wire.d#1(0)} {input_a:rsc:mgc_in_wire.d#1(1)} {input_a:rsc:mgc_in_wire.d#1(2)} {input_a:rsc:mgc_in_wire.d#1(3)} {input_a:rsc:mgc_in_wire.d#1(4)} {input_a:rsc:mgc_in_wire.d#1(5)} {input_a:rsc:mgc_in_wire.d#1(6)} {input_a:rsc:mgc_in_wire.d#1(7)} -attr xrf 738 -attr oid 67 -attr vt d -attr @path {/addition/input_a:rsc:mgc_in_wire.d}
+load net {input_b:rsc:mgc_in_wire.d#1(0)} -attr vt d
+load net {input_b:rsc:mgc_in_wire.d#1(1)} -attr vt d
+load net {input_b:rsc:mgc_in_wire.d#1(2)} -attr vt d
+load net {input_b:rsc:mgc_in_wire.d#1(3)} -attr vt d
+load net {input_b:rsc:mgc_in_wire.d#1(4)} -attr vt d
+load net {input_b:rsc:mgc_in_wire.d#1(5)} -attr vt d
+load net {input_b:rsc:mgc_in_wire.d#1(6)} -attr vt d
+load net {input_b:rsc:mgc_in_wire.d#1(7)} -attr vt d
+load netBundle {input_b:rsc:mgc_in_wire.d#1} 8 {input_b:rsc:mgc_in_wire.d#1(0)} {input_b:rsc:mgc_in_wire.d#1(1)} {input_b:rsc:mgc_in_wire.d#1(2)} {input_b:rsc:mgc_in_wire.d#1(3)} {input_b:rsc:mgc_in_wire.d#1(4)} {input_b:rsc:mgc_in_wire.d#1(5)} {input_b:rsc:mgc_in_wire.d#1(6)} {input_b:rsc:mgc_in_wire.d#1(7)} -attr xrf 739 -attr oid 68 -attr vt d -attr @path {/addition/input_b:rsc:mgc_in_wire.d}
+load net {output:rsc:mgc_out_stdreg.d#1(0)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(1)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(2)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(3)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(4)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(5)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(6)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(7)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(8)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(9)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(10)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(11)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(12)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(13)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(14)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(15)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(16)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(17)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(18)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(19)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(20)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(21)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(22)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(23)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(24)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(25)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(26)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(27)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(28)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(29)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(30)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(31)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(32)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(33)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(34)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(35)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(36)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(37)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(38)} -attr vt d
+load net {output:rsc:mgc_out_stdreg.d#1(39)} -attr vt d
+load netBundle {output:rsc:mgc_out_stdreg.d#1} 40 {output:rsc:mgc_out_stdreg.d#1(0)} {output:rsc:mgc_out_stdreg.d#1(1)} {output:rsc:mgc_out_stdreg.d#1(2)} {output:rsc:mgc_out_stdreg.d#1(3)} {output:rsc:mgc_out_stdreg.d#1(4)} {output:rsc:mgc_out_stdreg.d#1(5)} {output:rsc:mgc_out_stdreg.d#1(6)} {output:rsc:mgc_out_stdreg.d#1(7)} {output:rsc:mgc_out_stdreg.d#1(8)} {output:rsc:mgc_out_stdreg.d#1(9)} {output:rsc:mgc_out_stdreg.d#1(10)} {output:rsc:mgc_out_stdreg.d#1(11)} {output:rsc:mgc_out_stdreg.d#1(12)} {output:rsc:mgc_out_stdreg.d#1(13)} {output:rsc:mgc_out_stdreg.d#1(14)} {output:rsc:mgc_out_stdreg.d#1(15)} {output:rsc:mgc_out_stdreg.d#1(16)} {output:rsc:mgc_out_stdreg.d#1(17)} {output:rsc:mgc_out_stdreg.d#1(18)} {output:rsc:mgc_out_stdreg.d#1(19)} {output:rsc:mgc_out_stdreg.d#1(20)} {output:rsc:mgc_out_stdreg.d#1(21)} {output:rsc:mgc_out_stdreg.d#1(22)} {output:rsc:mgc_out_stdreg.d#1(23)} {output:rsc:mgc_out_stdreg.d#1(24)} {output:rsc:mgc_out_stdreg.d#1(25)} {output:rsc:mgc_out_stdreg.d#1(26)} {output:rsc:mgc_out_stdreg.d#1(27)} {output:rsc:mgc_out_stdreg.d#1(28)} {output:rsc:mgc_out_stdreg.d#1(29)} {output:rsc:mgc_out_stdreg.d#1(30)} {output:rsc:mgc_out_stdreg.d#1(31)} {output:rsc:mgc_out_stdreg.d#1(32)} {output:rsc:mgc_out_stdreg.d#1(33)} {output:rsc:mgc_out_stdreg.d#1(34)} {output:rsc:mgc_out_stdreg.d#1(35)} {output:rsc:mgc_out_stdreg.d#1(36)} {output:rsc:mgc_out_stdreg.d#1(37)} {output:rsc:mgc_out_stdreg.d#1(38)} {output:rsc:mgc_out_stdreg.d#1(39)} -attr xrf 740 -attr oid 69 -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {input_a:rsc.z(0)} -attr vt d
+load net {input_a:rsc.z(1)} -attr vt d
+load net {input_a:rsc.z(2)} -attr vt d
+load net {input_a:rsc.z(3)} -attr vt d
+load net {input_a:rsc.z(4)} -attr vt d
+load net {input_a:rsc.z(5)} -attr vt d
+load net {input_a:rsc.z(6)} -attr vt d
+load net {input_a:rsc.z(7)} -attr vt d
+load netBundle {input_a:rsc.z} 8 {input_a:rsc.z(0)} {input_a:rsc.z(1)} {input_a:rsc.z(2)} {input_a:rsc.z(3)} {input_a:rsc.z(4)} {input_a:rsc.z(5)} {input_a:rsc.z(6)} {input_a:rsc.z(7)} -attr xrf 741 -attr oid 70 -attr vt d -attr @path {/addition/input_a:rsc.z}
+load net {input_a:rsc.z(0)} -port {input_a:rsc.z(0)} -attr vt d
+load net {input_a:rsc.z(1)} -port {input_a:rsc.z(1)} -attr vt d
+load net {input_a:rsc.z(2)} -port {input_a:rsc.z(2)} -attr vt d
+load net {input_a:rsc.z(3)} -port {input_a:rsc.z(3)} -attr vt d
+load net {input_a:rsc.z(4)} -port {input_a:rsc.z(4)} -attr vt d
+load net {input_a:rsc.z(5)} -port {input_a:rsc.z(5)} -attr vt d
+load net {input_a:rsc.z(6)} -port {input_a:rsc.z(6)} -attr vt d
+load net {input_a:rsc.z(7)} -port {input_a:rsc.z(7)} -attr vt d
+load netBundle {input_a:rsc.z} 8 {input_a:rsc.z(0)} {input_a:rsc.z(1)} {input_a:rsc.z(2)} {input_a:rsc.z(3)} {input_a:rsc.z(4)} {input_a:rsc.z(5)} {input_a:rsc.z(6)} {input_a:rsc.z(7)} -attr xrf 742 -attr oid 71 -attr vt d -attr @path {/addition/input_a:rsc.z}
+load net {input_b:rsc.z(0)} -attr vt d
+load net {input_b:rsc.z(1)} -attr vt d
+load net {input_b:rsc.z(2)} -attr vt d
+load net {input_b:rsc.z(3)} -attr vt d
+load net {input_b:rsc.z(4)} -attr vt d
+load net {input_b:rsc.z(5)} -attr vt d
+load net {input_b:rsc.z(6)} -attr vt d
+load net {input_b:rsc.z(7)} -attr vt d
+load netBundle {input_b:rsc.z} 8 {input_b:rsc.z(0)} {input_b:rsc.z(1)} {input_b:rsc.z(2)} {input_b:rsc.z(3)} {input_b:rsc.z(4)} {input_b:rsc.z(5)} {input_b:rsc.z(6)} {input_b:rsc.z(7)} -attr xrf 743 -attr oid 72 -attr vt d -attr @path {/addition/input_b:rsc.z}
+load net {input_b:rsc.z(0)} -port {input_b:rsc.z(0)} -attr vt d
+load net {input_b:rsc.z(1)} -port {input_b:rsc.z(1)} -attr vt d
+load net {input_b:rsc.z(2)} -port {input_b:rsc.z(2)} -attr vt d
+load net {input_b:rsc.z(3)} -port {input_b:rsc.z(3)} -attr vt d
+load net {input_b:rsc.z(4)} -port {input_b:rsc.z(4)} -attr vt d
+load net {input_b:rsc.z(5)} -port {input_b:rsc.z(5)} -attr vt d
+load net {input_b:rsc.z(6)} -port {input_b:rsc.z(6)} -attr vt d
+load net {input_b:rsc.z(7)} -port {input_b:rsc.z(7)} -attr vt d
+load netBundle {input_b:rsc.z} 8 {input_b:rsc.z(0)} {input_b:rsc.z(1)} {input_b:rsc.z(2)} {input_b:rsc.z(3)} {input_b:rsc.z(4)} {input_b:rsc.z(5)} {input_b:rsc.z(6)} {input_b:rsc.z(7)} -attr xrf 744 -attr oid 73 -attr vt d -attr @path {/addition/input_b:rsc.z}
+load net {output:rsc.z(0)} -attr vt d
+load net {output:rsc.z(1)} -attr vt d
+load net {output:rsc.z(2)} -attr vt d
+load net {output:rsc.z(3)} -attr vt d
+load net {output:rsc.z(4)} -attr vt d
+load net {output:rsc.z(5)} -attr vt d
+load net {output:rsc.z(6)} -attr vt d
+load net {output:rsc.z(7)} -attr vt d
+load net {output:rsc.z(8)} -attr vt d
+load net {output:rsc.z(9)} -attr vt d
+load net {output:rsc.z(10)} -attr vt d
+load net {output:rsc.z(11)} -attr vt d
+load net {output:rsc.z(12)} -attr vt d
+load net {output:rsc.z(13)} -attr vt d
+load net {output:rsc.z(14)} -attr vt d
+load net {output:rsc.z(15)} -attr vt d
+load net {output:rsc.z(16)} -attr vt d
+load net {output:rsc.z(17)} -attr vt d
+load net {output:rsc.z(18)} -attr vt d
+load net {output:rsc.z(19)} -attr vt d
+load net {output:rsc.z(20)} -attr vt d
+load net {output:rsc.z(21)} -attr vt d
+load net {output:rsc.z(22)} -attr vt d
+load net {output:rsc.z(23)} -attr vt d
+load net {output:rsc.z(24)} -attr vt d
+load net {output:rsc.z(25)} -attr vt d
+load net {output:rsc.z(26)} -attr vt d
+load net {output:rsc.z(27)} -attr vt d
+load net {output:rsc.z(28)} -attr vt d
+load net {output:rsc.z(29)} -attr vt d
+load net {output:rsc.z(30)} -attr vt d
+load net {output:rsc.z(31)} -attr vt d
+load net {output:rsc.z(32)} -attr vt d
+load net {output:rsc.z(33)} -attr vt d
+load net {output:rsc.z(34)} -attr vt d
+load net {output:rsc.z(35)} -attr vt d
+load net {output:rsc.z(36)} -attr vt d
+load net {output:rsc.z(37)} -attr vt d
+load net {output:rsc.z(38)} -attr vt d
+load net {output:rsc.z(39)} -attr vt d
+load netBundle {output:rsc.z} 40 {output:rsc.z(0)} {output:rsc.z(1)} {output:rsc.z(2)} {output:rsc.z(3)} {output:rsc.z(4)} {output:rsc.z(5)} {output:rsc.z(6)} {output:rsc.z(7)} {output:rsc.z(8)} {output:rsc.z(9)} {output:rsc.z(10)} {output:rsc.z(11)} {output:rsc.z(12)} {output:rsc.z(13)} {output:rsc.z(14)} {output:rsc.z(15)} {output:rsc.z(16)} {output:rsc.z(17)} {output:rsc.z(18)} {output:rsc.z(19)} {output:rsc.z(20)} {output:rsc.z(21)} {output:rsc.z(22)} {output:rsc.z(23)} {output:rsc.z(24)} {output:rsc.z(25)} {output:rsc.z(26)} {output:rsc.z(27)} {output:rsc.z(28)} {output:rsc.z(29)} {output:rsc.z(30)} {output:rsc.z(31)} {output:rsc.z(32)} {output:rsc.z(33)} {output:rsc.z(34)} {output:rsc.z(35)} {output:rsc.z(36)} {output:rsc.z(37)} {output:rsc.z(38)} {output:rsc.z(39)} -attr xrf 745 -attr oid 74 -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(0)} -port {output:rsc.z(0)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(1)} -port {output:rsc.z(1)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(2)} -port {output:rsc.z(2)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(3)} -port {output:rsc.z(3)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(4)} -port {output:rsc.z(4)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(5)} -port {output:rsc.z(5)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(6)} -port {output:rsc.z(6)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(7)} -port {output:rsc.z(7)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(8)} -port {output:rsc.z(8)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(9)} -port {output:rsc.z(9)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(10)} -port {output:rsc.z(10)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(11)} -port {output:rsc.z(11)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(12)} -port {output:rsc.z(12)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(13)} -port {output:rsc.z(13)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(14)} -port {output:rsc.z(14)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(15)} -port {output:rsc.z(15)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(16)} -port {output:rsc.z(16)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(17)} -port {output:rsc.z(17)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(18)} -port {output:rsc.z(18)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(19)} -port {output:rsc.z(19)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(20)} -port {output:rsc.z(20)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(21)} -port {output:rsc.z(21)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(22)} -port {output:rsc.z(22)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(23)} -port {output:rsc.z(23)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(24)} -port {output:rsc.z(24)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(25)} -port {output:rsc.z(25)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(26)} -port {output:rsc.z(26)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(27)} -port {output:rsc.z(27)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(28)} -port {output:rsc.z(28)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(29)} -port {output:rsc.z(29)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(30)} -port {output:rsc.z(30)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(31)} -port {output:rsc.z(31)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(32)} -port {output:rsc.z(32)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(33)} -port {output:rsc.z(33)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(34)} -port {output:rsc.z(34)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(35)} -port {output:rsc.z(35)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(36)} -port {output:rsc.z(36)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(37)} -port {output:rsc.z(37)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(38)} -port {output:rsc.z(38)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(39)} -port {output:rsc.z(39)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {clk} -attr xrf 746 -attr oid 75
+load net {clk} -port {clk} -attr xrf 747 -attr oid 76
+load net {en} -attr xrf 748 -attr oid 77
+load net {en} -port {en} -attr xrf 749 -attr oid 78
+load net {arst_n} -attr xrf 750 -attr oid 79
+load net {arst_n} -port {arst_n} -attr xrf 751 -attr oid 80
+load inst "addition:core:inst" "addition:core" "orig" -attr xrf 752 -attr oid 81 -attr vt dc -attr @path {/addition/addition:core:inst} -attr area 65.803048 -attr delay 1.791333 -attr hier "/addition/addition:core" -pg 1 -lvl 3
+load net {clk} -pin  "addition:core:inst" {clk#1} -attr xrf 753 -attr oid 82 -attr @path {/addition/clk}
+load net {en} -pin  "addition:core:inst" {en#1} -attr xrf 754 -attr oid 83 -attr @path {/addition/en}
+load net {arst_n} -pin  "addition:core:inst" {arst_n#1} -attr xrf 755 -attr oid 84 -attr @path {/addition/arst_n}
+load net {input_a:rsc:mgc_in_wire.d#1(0)} -pin  "addition:core:inst" {input_a:rsc:mgc_in_wire.d(0)} -attr vt dc -attr @path {/addition/input_a:rsc:mgc_in_wire.d}
+load net {input_a:rsc:mgc_in_wire.d#1(1)} -pin  "addition:core:inst" {input_a:rsc:mgc_in_wire.d(1)} -attr vt dc -attr @path {/addition/input_a:rsc:mgc_in_wire.d}
+load net {input_a:rsc:mgc_in_wire.d#1(2)} -pin  "addition:core:inst" {input_a:rsc:mgc_in_wire.d(2)} -attr vt dc -attr @path {/addition/input_a:rsc:mgc_in_wire.d}
+load net {input_a:rsc:mgc_in_wire.d#1(3)} -pin  "addition:core:inst" {input_a:rsc:mgc_in_wire.d(3)} -attr vt dc -attr @path {/addition/input_a:rsc:mgc_in_wire.d}
+load net {input_a:rsc:mgc_in_wire.d#1(4)} -pin  "addition:core:inst" {input_a:rsc:mgc_in_wire.d(4)} -attr vt dc -attr @path {/addition/input_a:rsc:mgc_in_wire.d}
+load net {input_a:rsc:mgc_in_wire.d#1(5)} -pin  "addition:core:inst" {input_a:rsc:mgc_in_wire.d(5)} -attr vt dc -attr @path {/addition/input_a:rsc:mgc_in_wire.d}
+load net {input_a:rsc:mgc_in_wire.d#1(6)} -pin  "addition:core:inst" {input_a:rsc:mgc_in_wire.d(6)} -attr vt dc -attr @path {/addition/input_a:rsc:mgc_in_wire.d}
+load net {input_a:rsc:mgc_in_wire.d#1(7)} -pin  "addition:core:inst" {input_a:rsc:mgc_in_wire.d(7)} -attr vt dc -attr @path {/addition/input_a:rsc:mgc_in_wire.d}
+load net {input_b:rsc:mgc_in_wire.d#1(0)} -pin  "addition:core:inst" {input_b:rsc:mgc_in_wire.d(0)} -attr vt dc -attr @path {/addition/input_b:rsc:mgc_in_wire.d}
+load net {input_b:rsc:mgc_in_wire.d#1(1)} -pin  "addition:core:inst" {input_b:rsc:mgc_in_wire.d(1)} -attr vt dc -attr @path {/addition/input_b:rsc:mgc_in_wire.d}
+load net {input_b:rsc:mgc_in_wire.d#1(2)} -pin  "addition:core:inst" {input_b:rsc:mgc_in_wire.d(2)} -attr vt dc -attr @path {/addition/input_b:rsc:mgc_in_wire.d}
+load net {input_b:rsc:mgc_in_wire.d#1(3)} -pin  "addition:core:inst" {input_b:rsc:mgc_in_wire.d(3)} -attr vt dc -attr @path {/addition/input_b:rsc:mgc_in_wire.d}
+load net {input_b:rsc:mgc_in_wire.d#1(4)} -pin  "addition:core:inst" {input_b:rsc:mgc_in_wire.d(4)} -attr vt dc -attr @path {/addition/input_b:rsc:mgc_in_wire.d}
+load net {input_b:rsc:mgc_in_wire.d#1(5)} -pin  "addition:core:inst" {input_b:rsc:mgc_in_wire.d(5)} -attr vt dc -attr @path {/addition/input_b:rsc:mgc_in_wire.d}
+load net {input_b:rsc:mgc_in_wire.d#1(6)} -pin  "addition:core:inst" {input_b:rsc:mgc_in_wire.d(6)} -attr vt dc -attr @path {/addition/input_b:rsc:mgc_in_wire.d}
+load net {input_b:rsc:mgc_in_wire.d#1(7)} -pin  "addition:core:inst" {input_b:rsc:mgc_in_wire.d(7)} -attr vt dc -attr @path {/addition/input_b:rsc:mgc_in_wire.d}
+load net {output:rsc:mgc_out_stdreg.d#1(0)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(0)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(1)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(1)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(2)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(2)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(3)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(3)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(4)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(4)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(5)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(5)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(6)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(6)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(7)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(7)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(8)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(8)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(9)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(9)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(10)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(10)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(11)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(11)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(12)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(12)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(13)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(13)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(14)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(14)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(15)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(15)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(16)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(16)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(17)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(17)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(18)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(18)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(19)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(19)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(20)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(20)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(21)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(21)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(22)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(22)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(23)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(23)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(24)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(24)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(25)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(25)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(26)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(26)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(27)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(27)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(28)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(28)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(29)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(29)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(30)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(30)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(31)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(31)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(32)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(32)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(33)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(33)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(34)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(34)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(35)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(35)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(36)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(36)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(37)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(37)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(38)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(38)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(39)} -pin  "addition:core:inst" {output:rsc:mgc_out_stdreg.d(39)} -attr vt dc -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load inst "input_a:rsc:mgc_in_wire" "mgc_ioport.mgc_in_wire(1,8)" "INTERFACE" -attr xrf 756 -attr oid 85 -attr vt d -attr @path {/addition/input_a:rsc:mgc_in_wire} -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_ioport.mgc_in_wire(1,8)" -pg 1 -lvl 1
+load net {input_a:rsc:mgc_in_wire.d#1(0)} -pin  "input_a:rsc:mgc_in_wire" {d(0)} -attr vt d -attr @path {/addition/input_a:rsc:mgc_in_wire.d}
+load net {input_a:rsc:mgc_in_wire.d#1(1)} -pin  "input_a:rsc:mgc_in_wire" {d(1)} -attr vt d -attr @path {/addition/input_a:rsc:mgc_in_wire.d}
+load net {input_a:rsc:mgc_in_wire.d#1(2)} -pin  "input_a:rsc:mgc_in_wire" {d(2)} -attr vt d -attr @path {/addition/input_a:rsc:mgc_in_wire.d}
+load net {input_a:rsc:mgc_in_wire.d#1(3)} -pin  "input_a:rsc:mgc_in_wire" {d(3)} -attr vt d -attr @path {/addition/input_a:rsc:mgc_in_wire.d}
+load net {input_a:rsc:mgc_in_wire.d#1(4)} -pin  "input_a:rsc:mgc_in_wire" {d(4)} -attr vt d -attr @path {/addition/input_a:rsc:mgc_in_wire.d}
+load net {input_a:rsc:mgc_in_wire.d#1(5)} -pin  "input_a:rsc:mgc_in_wire" {d(5)} -attr vt d -attr @path {/addition/input_a:rsc:mgc_in_wire.d}
+load net {input_a:rsc:mgc_in_wire.d#1(6)} -pin  "input_a:rsc:mgc_in_wire" {d(6)} -attr vt d -attr @path {/addition/input_a:rsc:mgc_in_wire.d}
+load net {input_a:rsc:mgc_in_wire.d#1(7)} -pin  "input_a:rsc:mgc_in_wire" {d(7)} -attr vt d -attr @path {/addition/input_a:rsc:mgc_in_wire.d}
+load net {input_a:rsc.z(0)} -pin  "input_a:rsc:mgc_in_wire" {z(0)} -attr vt d -attr @path {/addition/input_a:rsc.z}
+load net {input_a:rsc.z(1)} -pin  "input_a:rsc:mgc_in_wire" {z(1)} -attr vt d -attr @path {/addition/input_a:rsc.z}
+load net {input_a:rsc.z(2)} -pin  "input_a:rsc:mgc_in_wire" {z(2)} -attr vt d -attr @path {/addition/input_a:rsc.z}
+load net {input_a:rsc.z(3)} -pin  "input_a:rsc:mgc_in_wire" {z(3)} -attr vt d -attr @path {/addition/input_a:rsc.z}
+load net {input_a:rsc.z(4)} -pin  "input_a:rsc:mgc_in_wire" {z(4)} -attr vt d -attr @path {/addition/input_a:rsc.z}
+load net {input_a:rsc.z(5)} -pin  "input_a:rsc:mgc_in_wire" {z(5)} -attr vt d -attr @path {/addition/input_a:rsc.z}
+load net {input_a:rsc.z(6)} -pin  "input_a:rsc:mgc_in_wire" {z(6)} -attr vt d -attr @path {/addition/input_a:rsc.z}
+load net {input_a:rsc.z(7)} -pin  "input_a:rsc:mgc_in_wire" {z(7)} -attr vt d -attr @path {/addition/input_a:rsc.z}
+load inst "input_b:rsc:mgc_in_wire" "mgc_ioport.mgc_in_wire(2,8)" "INTERFACE" -attr xrf 757 -attr oid 86 -attr vt d -attr @path {/addition/input_b:rsc:mgc_in_wire} -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_ioport.mgc_in_wire(2,8)" -pg 1 -lvl 1
+load net {input_b:rsc:mgc_in_wire.d#1(0)} -pin  "input_b:rsc:mgc_in_wire" {d(0)} -attr vt d -attr @path {/addition/input_b:rsc:mgc_in_wire.d}
+load net {input_b:rsc:mgc_in_wire.d#1(1)} -pin  "input_b:rsc:mgc_in_wire" {d(1)} -attr vt d -attr @path {/addition/input_b:rsc:mgc_in_wire.d}
+load net {input_b:rsc:mgc_in_wire.d#1(2)} -pin  "input_b:rsc:mgc_in_wire" {d(2)} -attr vt d -attr @path {/addition/input_b:rsc:mgc_in_wire.d}
+load net {input_b:rsc:mgc_in_wire.d#1(3)} -pin  "input_b:rsc:mgc_in_wire" {d(3)} -attr vt d -attr @path {/addition/input_b:rsc:mgc_in_wire.d}
+load net {input_b:rsc:mgc_in_wire.d#1(4)} -pin  "input_b:rsc:mgc_in_wire" {d(4)} -attr vt d -attr @path {/addition/input_b:rsc:mgc_in_wire.d}
+load net {input_b:rsc:mgc_in_wire.d#1(5)} -pin  "input_b:rsc:mgc_in_wire" {d(5)} -attr vt d -attr @path {/addition/input_b:rsc:mgc_in_wire.d}
+load net {input_b:rsc:mgc_in_wire.d#1(6)} -pin  "input_b:rsc:mgc_in_wire" {d(6)} -attr vt d -attr @path {/addition/input_b:rsc:mgc_in_wire.d}
+load net {input_b:rsc:mgc_in_wire.d#1(7)} -pin  "input_b:rsc:mgc_in_wire" {d(7)} -attr vt d -attr @path {/addition/input_b:rsc:mgc_in_wire.d}
+load net {input_b:rsc.z(0)} -pin  "input_b:rsc:mgc_in_wire" {z(0)} -attr vt d -attr @path {/addition/input_b:rsc.z}
+load net {input_b:rsc.z(1)} -pin  "input_b:rsc:mgc_in_wire" {z(1)} -attr vt d -attr @path {/addition/input_b:rsc.z}
+load net {input_b:rsc.z(2)} -pin  "input_b:rsc:mgc_in_wire" {z(2)} -attr vt d -attr @path {/addition/input_b:rsc.z}
+load net {input_b:rsc.z(3)} -pin  "input_b:rsc:mgc_in_wire" {z(3)} -attr vt d -attr @path {/addition/input_b:rsc.z}
+load net {input_b:rsc.z(4)} -pin  "input_b:rsc:mgc_in_wire" {z(4)} -attr vt d -attr @path {/addition/input_b:rsc.z}
+load net {input_b:rsc.z(5)} -pin  "input_b:rsc:mgc_in_wire" {z(5)} -attr vt d -attr @path {/addition/input_b:rsc.z}
+load net {input_b:rsc.z(6)} -pin  "input_b:rsc:mgc_in_wire" {z(6)} -attr vt d -attr @path {/addition/input_b:rsc.z}
+load net {input_b:rsc.z(7)} -pin  "input_b:rsc:mgc_in_wire" {z(7)} -attr vt d -attr @path {/addition/input_b:rsc.z}
+load inst "output:rsc:mgc_out_stdreg" "mgc_ioport.mgc_out_stdreg(3,40)" "INTERFACE" -attr xrf 758 -attr oid 87 -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg} -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_ioport.mgc_out_stdreg(3,40)" -pg 1 -lvl 1002
+load net {output:rsc:mgc_out_stdreg.d#1(0)} -pin  "output:rsc:mgc_out_stdreg" {d(0)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(1)} -pin  "output:rsc:mgc_out_stdreg" {d(1)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(2)} -pin  "output:rsc:mgc_out_stdreg" {d(2)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(3)} -pin  "output:rsc:mgc_out_stdreg" {d(3)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(4)} -pin  "output:rsc:mgc_out_stdreg" {d(4)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(5)} -pin  "output:rsc:mgc_out_stdreg" {d(5)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(6)} -pin  "output:rsc:mgc_out_stdreg" {d(6)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(7)} -pin  "output:rsc:mgc_out_stdreg" {d(7)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(8)} -pin  "output:rsc:mgc_out_stdreg" {d(8)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(9)} -pin  "output:rsc:mgc_out_stdreg" {d(9)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(10)} -pin  "output:rsc:mgc_out_stdreg" {d(10)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(11)} -pin  "output:rsc:mgc_out_stdreg" {d(11)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(12)} -pin  "output:rsc:mgc_out_stdreg" {d(12)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(13)} -pin  "output:rsc:mgc_out_stdreg" {d(13)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(14)} -pin  "output:rsc:mgc_out_stdreg" {d(14)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(15)} -pin  "output:rsc:mgc_out_stdreg" {d(15)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(16)} -pin  "output:rsc:mgc_out_stdreg" {d(16)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(17)} -pin  "output:rsc:mgc_out_stdreg" {d(17)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(18)} -pin  "output:rsc:mgc_out_stdreg" {d(18)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(19)} -pin  "output:rsc:mgc_out_stdreg" {d(19)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(20)} -pin  "output:rsc:mgc_out_stdreg" {d(20)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(21)} -pin  "output:rsc:mgc_out_stdreg" {d(21)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(22)} -pin  "output:rsc:mgc_out_stdreg" {d(22)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(23)} -pin  "output:rsc:mgc_out_stdreg" {d(23)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(24)} -pin  "output:rsc:mgc_out_stdreg" {d(24)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(25)} -pin  "output:rsc:mgc_out_stdreg" {d(25)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(26)} -pin  "output:rsc:mgc_out_stdreg" {d(26)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(27)} -pin  "output:rsc:mgc_out_stdreg" {d(27)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(28)} -pin  "output:rsc:mgc_out_stdreg" {d(28)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(29)} -pin  "output:rsc:mgc_out_stdreg" {d(29)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(30)} -pin  "output:rsc:mgc_out_stdreg" {d(30)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(31)} -pin  "output:rsc:mgc_out_stdreg" {d(31)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(32)} -pin  "output:rsc:mgc_out_stdreg" {d(32)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(33)} -pin  "output:rsc:mgc_out_stdreg" {d(33)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(34)} -pin  "output:rsc:mgc_out_stdreg" {d(34)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(35)} -pin  "output:rsc:mgc_out_stdreg" {d(35)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(36)} -pin  "output:rsc:mgc_out_stdreg" {d(36)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(37)} -pin  "output:rsc:mgc_out_stdreg" {d(37)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(38)} -pin  "output:rsc:mgc_out_stdreg" {d(38)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc:mgc_out_stdreg.d#1(39)} -pin  "output:rsc:mgc_out_stdreg" {d(39)} -attr vt d -attr @path {/addition/output:rsc:mgc_out_stdreg.d}
+load net {output:rsc.z(0)} -pin  "output:rsc:mgc_out_stdreg" {z(0)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(1)} -pin  "output:rsc:mgc_out_stdreg" {z(1)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(2)} -pin  "output:rsc:mgc_out_stdreg" {z(2)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(3)} -pin  "output:rsc:mgc_out_stdreg" {z(3)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(4)} -pin  "output:rsc:mgc_out_stdreg" {z(4)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(5)} -pin  "output:rsc:mgc_out_stdreg" {z(5)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(6)} -pin  "output:rsc:mgc_out_stdreg" {z(6)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(7)} -pin  "output:rsc:mgc_out_stdreg" {z(7)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(8)} -pin  "output:rsc:mgc_out_stdreg" {z(8)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(9)} -pin  "output:rsc:mgc_out_stdreg" {z(9)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(10)} -pin  "output:rsc:mgc_out_stdreg" {z(10)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(11)} -pin  "output:rsc:mgc_out_stdreg" {z(11)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(12)} -pin  "output:rsc:mgc_out_stdreg" {z(12)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(13)} -pin  "output:rsc:mgc_out_stdreg" {z(13)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(14)} -pin  "output:rsc:mgc_out_stdreg" {z(14)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(15)} -pin  "output:rsc:mgc_out_stdreg" {z(15)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(16)} -pin  "output:rsc:mgc_out_stdreg" {z(16)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(17)} -pin  "output:rsc:mgc_out_stdreg" {z(17)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(18)} -pin  "output:rsc:mgc_out_stdreg" {z(18)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(19)} -pin  "output:rsc:mgc_out_stdreg" {z(19)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(20)} -pin  "output:rsc:mgc_out_stdreg" {z(20)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(21)} -pin  "output:rsc:mgc_out_stdreg" {z(21)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(22)} -pin  "output:rsc:mgc_out_stdreg" {z(22)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(23)} -pin  "output:rsc:mgc_out_stdreg" {z(23)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(24)} -pin  "output:rsc:mgc_out_stdreg" {z(24)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(25)} -pin  "output:rsc:mgc_out_stdreg" {z(25)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(26)} -pin  "output:rsc:mgc_out_stdreg" {z(26)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(27)} -pin  "output:rsc:mgc_out_stdreg" {z(27)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(28)} -pin  "output:rsc:mgc_out_stdreg" {z(28)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(29)} -pin  "output:rsc:mgc_out_stdreg" {z(29)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(30)} -pin  "output:rsc:mgc_out_stdreg" {z(30)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(31)} -pin  "output:rsc:mgc_out_stdreg" {z(31)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(32)} -pin  "output:rsc:mgc_out_stdreg" {z(32)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(33)} -pin  "output:rsc:mgc_out_stdreg" {z(33)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(34)} -pin  "output:rsc:mgc_out_stdreg" {z(34)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(35)} -pin  "output:rsc:mgc_out_stdreg" {z(35)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(36)} -pin  "output:rsc:mgc_out_stdreg" {z(36)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(37)} -pin  "output:rsc:mgc_out_stdreg" {z(37)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(38)} -pin  "output:rsc:mgc_out_stdreg" {z(38)} -attr vt d -attr @path {/addition/output:rsc.z}
+load net {output:rsc.z(39)} -pin  "output:rsc:mgc_out_stdreg" {z(39)} -attr vt d -attr @path {/addition/output:rsc.z}
+### END MODULE 
+
