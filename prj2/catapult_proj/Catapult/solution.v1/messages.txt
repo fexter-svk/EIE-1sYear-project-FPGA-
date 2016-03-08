@@ -1,0 +1,25 @@
+
+# Messages from "go new"
+
+Creating project directory 'H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\Catapult'. (PRJ-1)
+
+# Messages from "go analyze"
+
+Front End called with arguments: -- {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\vga_blur\blur.c} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\vga_blur\tb_blur.cpp} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\vga_blur\shift_class.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\vga_blur\bmp_io.cpp} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\vga_blur\bmp_io.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\vga_blur\blur.h} (CIN-69)
+Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
+Pragma 'hls_design<top>' detected on routine 'mean_vga' (CIN-6)
+Source file analysis completed (CIN-68)
+Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Completed transformation 'analyze' on solution 'solution.v1': elapsed time 2.64 seconds, memory usage 125908kB, peak memory usage 243656kB (SOL-9)
+$PROJECT_HOME/vga_blur/tb_blur.cpp(262): nested comment is not allowed (CRD-9)
+          detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\vga_blur\tb_blur.cpp"
+$PROJECT_HOME/vga_blur/tb_blur.cpp(263): nested comment is not allowed (CRD-9)
+          detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\vga_blur\tb_blur.cpp"
+$PROJECT_HOME/vga_blur/tb_blur.cpp(264): nested comment is not allowed (CRD-9)
+          detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\vga_blur\tb_blur.cpp"
+$PROJECT_HOME/vga_blur/tb_blur.cpp(265): nested comment is not allowed (CRD-9)
+          detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\vga_blur\tb_blur.cpp"
+$PROJECT_HOME/vga_blur/bmp_io.cpp(1699): variable "garray" is used before its value is set (CRD-549)
+          detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\vga_blur\bmp_io.cpp"
+$PROJECT_HOME/vga_blur/bmp_io.cpp(1700): variable "barray" is used before its value is set (CRD-549)
+          detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\vga_blur\bmp_io.cpp"

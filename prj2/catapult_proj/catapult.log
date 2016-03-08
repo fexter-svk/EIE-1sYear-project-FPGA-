@@ -1,0 +1,27 @@
+//  Catapult University Version 2011a.126 (Production Release) Wed Aug  8 00:52:07 PDT 2012
+//  
+//  Copyright (c) Calypto Design Systems, Inc., 1996-2012, All Rights Reserved.
+//                       UNPUBLISHED, LICENSED SOFTWARE.
+//            CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//          PROPERTY OF CALYPTO DESIGN SYSTEMS OR ITS LICENSORS
+//  
+//  Running on Windows 7 al3515@EEWS104A-002 Service Pack 1 6.01.7601 i686
+//  
+//  Package information: SIFLIBS v17.0_1.1, HLS_PKGS v17.0_1.1, 
+//                       DesignPad v2.78_0.0
+//  
+//  This version may only be used for academic purposes.  Some optimizations 
+//  are disabled, so results obtained from this version may be sub-optimal.
+//  
+//  Start time Tue Mar 08 15:20:32 2016
+# -------------------------------------------------
+# Logging session transcript to file "C:\Users\al3515\AppData\Local\Temp\log849624d9b08.0"
+# Loading options from registry.
+project load H:/FPGA_Project/EIE-1stYear-project-FPGA/prj2/catapult_proj/Catapult
+# Moving session transcript to file "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\catapult.log"
+# Reading component library '$MGC_HOME\pkgs\siflibs\mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+# Reading component library '$MGC_HOME\pkgs\siflibs\stdops.lib' [STDOPS]... (LIB-49)
+# Reading component library '$MGC_HOME\pkgs\siflibs\mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+# Reading component library '$MGC_HOME\pkgs\ccs_altera\Altera_accel_CycloneIII.lib' [Altera_accel_CycloneIII]... (LIB-49)
+# Reading component library '$MGC_HOME\pkgs\siflibs\psr2010a_up2\mgc_Altera-Cyclone-III-6_beh_psr.lib' [mgc_Altera-Cyclone-III-6_beh_psr]... (LIB-49)
+quit -f
