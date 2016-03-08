@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="ise_proj">
+		<CBX_INST_ENTRY INSTANCE_NAME="|ise_proj|dot_product:inst|dot_product_core:dot_product_core_inst|lpm_mult:Mult0" CBX_FILE_NAME="mult_a7t.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

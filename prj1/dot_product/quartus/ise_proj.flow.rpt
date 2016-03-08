@@ -1,0 +1,132 @@
+Flow report for ise_proj
+Tue Mar 08 14:38:49 2016
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------+
+; Flow Summary                                                                          ;
++------------------------------------+--------------------------------------------------+
+; Flow Status                        ; Successful - Tue Mar 08 14:38:44 2016            ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
+; Revision Name                      ; ise_proj                                         ;
+; Top-level Entity Name              ; ise_proj                                         ;
+; Family                             ; Cyclone III                                      ;
+; Device                             ; EP3C16F484C6                                     ;
+; Timing Models                      ; Final                                            ;
+; Total logic elements               ; 53 / 15,408 ( < 1 % )                            ;
+;     Total combinational functions  ; 51 / 15,408 ( < 1 % )                            ;
+;     Dedicated logic registers      ; 20 / 15,408 ( < 1 % )                            ;
+; Total registers                    ; 20                                               ;
+; Total pins                         ; 51 / 347 ( 15 % )                                ;
+; Total virtual pins                 ; 0                                                ;
+; Total memory bits                  ; 0 / 516,096 ( 0 % )                              ;
+; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                                  ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                                    ;
++------------------------------------+--------------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 03/08/2016 14:38:18 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; ise_proj            ;
++-------------------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                       ;
++-------------------------------------+---------------------------------------+---------------+-------------+------------+
+; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id ;
++-------------------------------------+---------------------------------------+---------------+-------------+------------+
+; ALLOW_POWER_UP_DONT_CARE            ; Off                                   ; On            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 260248564477497.145744789708408       ; --            ; --          ; --         ;
+; CYCLONEII_OPTIMIZATION_TECHNIQUE    ; Speed                                 ; Balanced      ; --          ; --         ;
+; ENABLE_ADVANCED_IO_TIMING           ; On                                    ; --            ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --         ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                  ; --            ; --          ; --         ;
+; PARTITION_COLOR                     ; 14622752                              ; --            ; DE0_TOP     ; Top        ;
+; PARTITION_COLOR                     ; 14622752                              ; --            ; DE0_VGA     ; Top        ;
+; PARTITION_COLOR                     ; 14622752                              ; --            ; --          ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; DE0_TOP     ; Top        ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; DE0_VGA     ; Top        ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; --          ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --         ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS  ; Off                                   ; --            ; --          ; eda_palace ;
++-------------------------------------+---------------------------------------+---------------+-------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:09     ; 1.0                     ; 465 MB              ; 00:00:02                           ;
+; Fitter                    ; 00:00:09     ; 1.0                     ; 1080 MB             ; 00:00:06                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 424 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 480 MB              ; 00:00:02                           ;
+; Total                     ; 00:00:24     ; --                      ; --                  ; 00:00:11                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; eews104a-002     ; Windows 7 ; 6.1        ; x86_64         ;
+; Fitter                    ; eews104a-002     ; Windows 7 ; 6.1        ; x86_64         ;
+; Assembler                 ; eews104a-002     ; Windows 7 ; 6.1        ; x86_64         ;
+; TimeQuest Timing Analyzer ; eews104a-002     ; Windows 7 ; 6.1        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off ise_proj -c ise_proj
+quartus_fit --read_settings_files=off --write_settings_files=off ise_proj -c ise_proj
+quartus_asm --read_settings_files=off --write_settings_files=off ise_proj -c ise_proj
+quartus_sta ise_proj -c ise_proj
+
+
+

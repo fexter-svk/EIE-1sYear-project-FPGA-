@@ -1,0 +1,6 @@
+clk 1 std_logic bool
+en 1 std_logic sc_logic
+arst_n 1 std_logic sc_logic
+input_a_rsc_z 8 std_logic_vector sc_lv
+input_b_rsc_z 8 std_logic_vector sc_lv
+output_rsc_z 8 std_logic_vector sc_lv

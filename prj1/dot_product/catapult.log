@@ -1,0 +1,269 @@
+//  Catapult University Version 2011a.126 (Production Release) Wed Aug  8 00:52:07 PDT 2012
+//  
+//  Copyright (c) Calypto Design Systems, Inc., 1996-2012, All Rights Reserved.
+//                       UNPUBLISHED, LICENSED SOFTWARE.
+//            CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//          PROPERTY OF CALYPTO DESIGN SYSTEMS OR ITS LICENSORS
+//  
+//  Running on Windows 7 al3515@EEWS104A-002 Service Pack 1 6.01.7601 i686
+//  
+//  Package information: SIFLIBS v17.0_1.1, HLS_PKGS v17.0_1.1, 
+//                       DesignPad v2.78_0.0
+//  
+//  This version may only be used for academic purposes.  Some optimizations 
+//  are disabled, so results obtained from this version may be sub-optimal.
+//  
+//  Start time Tue Mar 08 14:28:09 2016
+# -------------------------------------------------
+# Logging session transcript to file "C:\Users\al3515\AppData\Local\Temp\log919225f9a10.0"
+# Loading options from registry.
+project new -name dot_product
+solution file add ../dot_product_source/dot_product.cpp
+# /INPUTFILES/1
+solution file add ../dot_product_source/dot_product.h
+# /INPUTFILES/2
+solution file add ../dot_product_source/tb_dot_product.cpp
+# /INPUTFILES/3
+go analyze
+# Creating project directory 'H:\FPGA_Project\EIE-1stYear-project-FPGA\prj1\dot_product\dot_product'. (PRJ-1)
+# Moving session transcript to file "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj1\dot_product\catapult.log"
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Front End called with arguments: -- {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj1\dot_product_source\tb_dot_product.cpp} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj1\dot_product_source\dot_product.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj1\dot_product_source\dot_product.cpp} (CIN-69)
+# Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
+# $PROJECT_HOME/../dot_product_source/dot_product.cpp(26): Pragma 'hls_design<top>' detected on routine 'dot_product' (CIN-6)
+# Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 1.68 seconds, memory usage 145068kB, peak memory usage 218884kB (SOL-9)
+directive set -CLOCKS {clk {-CLOCK_PERIOD 0.0 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 0.000000 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND async -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME en -ENABLE_ACTIVE high}}
+# /CLOCKS {clk {-CLOCK_PERIOD 0.0 -CLOCK_EDGE rising -CLOCK_UNCERTAINTY 0.0 -RESET_SYNC_NAME rst -RESET_ASYNC_NAME arst_n -RESET_KIND async -RESET_SYNC_ACTIVE high -RESET_ASYNC_ACTIVE low -ENABLE_NAME en -ENABLE_ACTIVE high}}
+directive set -DESIGN_HIERARCHY dot_product
+# /DESIGN_HIERARCHY dot_product
+flow package require /SCVerify
+# 2010a.2
+flow run /SCVerify
+directive set -TECHLIBS {{Altera_accel_CycloneIII.lib Altera_accel_CycloneIII} {mgc_Altera-Cyclone-III-6_beh_psr.lib {{mgc_Altera-Cyclone-III-6_beh_psr part EP3C16F484C}}}}
+# /TECHLIBS {{Altera_accel_CycloneIII.lib Altera_accel_CycloneIII} {mgc_Altera-Cyclone-III-6_beh_psr.lib {{mgc_Altera-Cyclone-III-6_beh_psr part EP3C16F484C}}}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 20.0 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 10.00 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND async -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME en -ENABLE_ACTIVE high}}
+# /CLOCKS {clk {-CLOCK_PERIOD 20.0 -CLOCK_EDGE rising -CLOCK_UNCERTAINTY 0.0 -CLOCK_HIGH_TIME 10.0 -RESET_SYNC_NAME rst -RESET_ASYNC_NAME arst_n -RESET_KIND async -RESET_SYNC_ACTIVE high -RESET_ASYNC_ACTIVE low -ENABLE_NAME en -ENABLE_ACTIVE high}}
+go compile
+# Info: Starting transformation 'compile' on solution 'solution.v1' (SOL-8)
+# Reading component library '$MGC_HOME\pkgs\siflibs\mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+# Reading component library '$MGC_HOME\pkgs\siflibs\stdops.lib' [STDOPS]... (LIB-49)
+# Reading component library '$MGC_HOME\pkgs\siflibs\mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+# Reading component library '$MGC_HOME\pkgs\ccs_altera\Altera_accel_CycloneIII.lib' [Altera_accel_CycloneIII]... (LIB-49)
+# Reading component library '$MGC_HOME\pkgs\siflibs\psr2010a_up2\mgc_Altera-Cyclone-III-6_beh_psr.lib' [mgc_Altera-Cyclone-III-6_beh_psr]... (LIB-49)
+# Generating synthesis internal form... (CIN-3)
+# $PROJECT_HOME/../dot_product_source/dot_product.cpp(27): Found top design routine 'dot_product' specified by directive (CIN-52)
+# $PROJECT_HOME/../dot_product_source/dot_product.cpp(27): Synthesizing routine 'dot_product' (CIN-13)
+# $PROJECT_HOME/../dot_product_source/dot_product.cpp(27): Inlining routine 'dot_product' (CIN-14)
+# $PROJECT_HOME/../dot_product_source/dot_product.cpp(27): Optimizing block '/dot_product' ... (CIN-4)
+# $PROJECT_HOME/../dot_product_source/dot_product.cpp(27): Inout port 'input_a' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../dot_product_source/dot_product.cpp(27): Inout port 'input_b' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../dot_product_source/dot_product.cpp(27): Inout port 'output' is only used as an output. (OPT-11)
+# Info: Optimizing partition '/dot_product': (Total ops = 29, Real ops = 7, Vars = 15) (SOL-10)
+# Info: Optimizing partition '/dot_product/core': (Total ops = 29, Real ops = 7, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/dot_product/core': (Total ops = 29, Real ops = 7, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/dot_product': (Total ops = 29, Real ops = 7, Vars = 15) (SOL-10)
+# Info: Optimizing partition '/dot_product': (Total ops = 29, Real ops = 7, Vars = 15) (SOL-10)
+# Info: Optimizing partition '/dot_product/core': (Total ops = 29, Real ops = 7, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/dot_product/core': (Total ops = 16, Real ops = 7, Vars = 6) (SOL-10)
+# Info: Optimizing partition '/dot_product': (Total ops = 16, Real ops = 7, Vars = 9) (SOL-10)
+# Info: Optimizing partition '/dot_product': (Total ops = 16, Real ops = 7, Vars = 9) (SOL-10)
+# Info: Optimizing partition '/dot_product/core': (Total ops = 14, Real ops = 5, Vars = 8) (SOL-10)
+# Info: Optimizing partition '/dot_product/core': (Total ops = 13, Real ops = 5, Vars = 2) (SOL-10)
+# Info: Optimizing partition '/dot_product': (Total ops = 13, Real ops = 5, Vars = 5) (SOL-10)
+# Info: Optimizing partition '/dot_product/core': (Total ops = 13, Real ops = 5, Vars = 2) (SOL-10)
+# Info: Optimizing partition '/dot_product': (Total ops = 13, Real ops = 5, Vars = 5) (SOL-10)
+# Info: Optimizing partition '/dot_product': (Total ops = 13, Real ops = 5, Vars = 5) (SOL-10)
+# Info: Optimizing partition '/dot_product/core': (Total ops = 13, Real ops = 5, Vars = 2) (SOL-10)
+# $PROJECT_HOME/../dot_product_source/dot_product.cpp(31): Loop '/dot_product/core/MAC' iterated at most 5 times. (LOOP-2)
+# Info: Optimizing partition '/dot_product/core': (Total ops = 19, Real ops = 5, Vars = 2) (SOL-10)
+# Info: Optimizing partition '/dot_product/core': (Total ops = 16, Real ops = 5, Vars = 2) (SOL-10)
+# Info: Optimizing partition '/dot_product': (Total ops = 16, Real ops = 5, Vars = 5) (SOL-10)
+# Info: Optimizing partition '/dot_product/core': (Total ops = 14, Real ops = 5, Vars = 3) (SOL-10)
+# Info: Optimizing partition '/dot_product/core': (Total ops = 14, Real ops = 5, Vars = 2) (SOL-10)
+# Info: Optimizing partition '/dot_product': (Total ops = 14, Real ops = 5, Vars = 5) (SOL-10)
+# Info: Optimizing partition '/dot_product/core': (Total ops = 14, Real ops = 5, Vars = 2) (SOL-10)
+# Info: Optimizing partition '/dot_product': (Total ops = 14, Real ops = 5, Vars = 5) (SOL-10)
+# Warning: $PROJECT_HOME/../dot_product_source/dot_product.cpp(27): Variable 'input_a' array size reduced to 5 words (CIN-83)
+# Warning: $PROJECT_HOME/../dot_product_source/dot_product.cpp(27): Variable 'input_b' array size reduced to 5 words (CIN-83)
+# Info: Optimizing partition '/dot_product': (Total ops = 14, Real ops = 5, Vars = 5) (SOL-10)
+# Info: Optimizing partition '/dot_product/core': (Total ops = 14, Real ops = 5, Vars = 2) (SOL-10)
+# Design 'dot_product' was read (SOL-1)
+# Makefile for Original Design + Testbench written to file 'scverify/Verify_orig_cxx_osci.mk'
+# Info: Completed transformation 'compile' on solution 'dot_product.v1': elapsed time 0.69 seconds, memory usage 157848kB, peak memory usage 218884kB (SOL-9)
+directive set /dot_product/input_a -WORD_WIDTH 8
+# /dot_product/input_a/WORD_WIDTH 8
+directive set /dot_product/input_a -STREAM 8
+# /dot_product/input_a/STREAM 8
+directive set /dot_product/input_b -STREAM 8
+# /dot_product/input_b/STREAM 8
+directive set /dot_product/input_b -WORD_WIDTH 8
+# /dot_product/input_b/WORD_WIDTH 8
+options set General BranchOnChange {Never branch}
+# Never branch
+options save
+# Saving options to registry.
+flow run /SCVerify/launch_make ././scverify/Verify_orig_cxx_osci.mk {} SIMTOOL=osci sim
+# Making '././scverify/Verify_orig_cxx_osci.mk SIMTOOL=osci sim'
+#     C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/bin/make -f ././scverify/Verify_orig_cxx_osci.mk SIMTOOL=osci build < "NUL:" (BASIC-15)
+# "============================================"
+# "Creating simulation directory 'scverify\orig_cxx_osci'"
+# mkdir scverify\orig_cxx_osci
+# "============================================"
+# "Compiling C++ file: ../../../dot_product_source/dot_product.cpp"
+# "c:\PROGRA~2\MICROS~4.0\VC\bin\cl.exe" -DCCS_DUT_SYSC -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=dot_product /W3 -DCCS_MISMATCHED_OUTPUTS_ONLY -DDEADLOCK_DETECTION /D"WIN32" /D"_DEBUG" /D"_CONSOLE" /D"NOGDI" /D"_MBCS" /D"_CRT_SECURE_NO_DEPRECATE" /EHsc /RTCs /MTd /FD /W3 /Z7 /vmg /I"C:/Program Files/Microsoft Platform SDK/Include"   /I. /I../.. /I. /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/include /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/include /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/pkgs/hls_pkgs/src /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/pkgs/siflibs /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DSC_USE_STD_STRING  /c /Tp ../../../dot_product_source/dot_product.cpp /Foscverify/orig_cxx_osci/dot_product.cpp.cxxts.obj
+# Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 15.00.30729.01 for 80x86
+# Copyright (C) Microsoft Corporation.  All rights reserved.
+# 
+# dot_product.cpp
+# ../../../dot_product_source/dot_product.cpp(26) : warning C4068: unknown pragma
+# ../../../dot_product_source/dot_product.cpp(31) : warning C4102: 'MAC' : unreferenced label
+# "============================================"
+# "Compiling C++ file: ../../../dot_product_source/tb_dot_product.cpp"
+# "c:\PROGRA~2\MICROS~4.0\VC\bin\cl.exe" -DCCS_DUT_SYSC -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=dot_product /W3 -DCCS_MISMATCHED_OUTPUTS_ONLY -DDEADLOCK_DETECTION /D"WIN32" /D"_DEBUG" /D"_CONSOLE" /D"NOGDI" /D"_MBCS" /D"_CRT_SECURE_NO_DEPRECATE" /EHsc /RTCs /MTd /FD /W3 /Z7 /vmg /I"C:/Program Files/Microsoft Platform SDK/Include"   /I. /I../.. /I. /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/include /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/include /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/pkgs/hls_pkgs/src /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/pkgs/siflibs /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DSC_USE_STD_STRING  /c /Tp ../../../dot_product_source/tb_dot_product.cpp /Foscverify/orig_cxx_osci/tb_dot_product.cpp.cxxts.obj
+# Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 15.00.30729.01 for 80x86
+# Copyright (C) Microsoft Corporation.  All rights reserved.
+# 
+# tb_dot_product.cpp
+# ../../../dot_product_source/tb_dot_product.cpp(39) : warning C4244: '+=' : conversion from 'Slong' to 'int', possible loss of data
+# "============================================"
+# "Linking executable"
+# "c:\PROGRA~2\MICROS~4.0\VC\bin\link.exe" /SUBSYSTEM:CONSOLE /DEBUG /DYNAMICBASE:NO /LIBPATH:C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/lib/Windows_NT/msvc /LIBPATH:C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/lib /LIBPATH:C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/lib/Windows_NT/msvc scverify/orig_cxx_osci/dot_product.cpp.cxxts.obj scverify/orig_cxx_osci/tb_dot_product.cpp.cxxts.obj libsystemc.lib /out:scverify/orig_cxx_osci/scverify_top.exe
+# Microsoft (R) Incremental Linker Version 9.00.30729.01
+# Copyright (C) Microsoft Corporation.  All rights reserved.
+# 
+#     C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/bin/make -f ././scverify/Verify_orig_cxx_osci.mk SIMTOOL=osci sim (BASIC-14)
+# chdir ..\..&                    dot_product\dot_product.v1\scverify\orig_cxx_osci\scverify_top.exe 
+# Inputs: A = 1, B = 5 
+# Inputs: A = 2, B = 4 
+# Inputs: A = 3, B = 3 
+# Inputs: A = 4, B = 2 
+# Inputs: A = 5, B = 1 
+# Design output  : 35 
+# Expected output: 35 
+options set Output OutputVHDL false
+# false
+options set Output OutputVerilog true
+# true
+options save
+# Saving options to registry.
+directive set /dot_product/core/main -PIPELINE_INIT_INTERVAL 1
+# /dot_product/core/main/PIPELINE_INIT_INTERVAL 1
+directive set /dot_product/core/main -DISTRIBUTED_PIPELINE true
+# /dot_product/core/main/DISTRIBUTED_PIPELINE true
+go allocate
+# Info: Starting transformation 'architect' on solution 'dot_product.v1' (SOL-8)
+# $PROJECT_HOME/../dot_product_source/dot_product.cpp(31): Loop '/dot_product/core/MAC' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../dot_product_source/dot_product.cpp(27): Loop '/dot_product/core/main' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../dot_product_source/dot_product.cpp(27): I/O-Port inferred - resource 'input_a:rsc' (from var: input_a) mapped to 'mgc_ioport.mgc_in_wire' (size: 8). (MEM-2)
+# $PROJECT_HOME/../dot_product_source/dot_product.cpp(27): I/O-Port inferred - resource 'input_b:rsc' (from var: input_b) mapped to 'mgc_ioport.mgc_in_wire' (size: 8). (MEM-2)
+# $PROJECT_HOME/../dot_product_source/dot_product.cpp(27): I/O-Port inferred - resource 'output:rsc' (from var: output) mapped to 'mgc_ioport.mgc_out_stdreg' (size: 8). (MEM-2)
+# Info: Optimizing partition '/dot_product': (Total ops = 15, Real ops = 6, Vars = 8) (SOL-10)
+# Info: Optimizing partition '/dot_product/core': (Total ops = 15, Real ops = 6, Vars = 2) (SOL-10)
+# Info: Optimizing partition '/dot_product/core': (Total ops = 15, Real ops = 6, Vars = 2) (SOL-10)
+# Info: Optimizing partition '/dot_product': (Total ops = 15, Real ops = 6, Vars = 8) (SOL-10)
+# Info: Optimizing partition '/dot_product': (Total ops = 13, Real ops = 6, Vars = 8) (SOL-10)
+# Info: Optimizing partition '/dot_product/core': (Total ops = 13, Real ops = 6, Vars = 2) (SOL-10)
+# Info: Optimizing partition '/dot_product': (Total ops = 13, Real ops = 6, Vars = 8) (SOL-10)
+# Info: Optimizing partition '/dot_product/core': (Total ops = 16, Real ops = 6, Vars = 3) (SOL-10)
+# Info: Optimizing partition '/dot_product/core': (Total ops = 15, Real ops = 6, Vars = 3) (SOL-10)
+# Info: Optimizing partition '/dot_product/core': (Total ops = 45, Real ops = 11, Vars = 22) (SOL-10)
+# Info: Optimizing partition '/dot_product/core': (Total ops = 23, Real ops = 10, Vars = 6) (SOL-10)
+# Design 'dot_product' contains '10' real operations. (SOL-11)
+# Info: Completed transformation 'architect' on solution 'dot_product.v1': elapsed time 0.69 seconds, memory usage 159060kB, peak memory usage 218884kB (SOL-9)
+# Info: Starting transformation 'allocate' on solution 'dot_product.v1' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/dot_product/core' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $PROJECT_HOME/../dot_product_source/dot_product.cpp(27): Prescheduled LOOP 'main' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/../dot_product_source/dot_product.cpp(27): Prescheduled SEQUENTIAL 'core' (total length 2 c-steps) (SCHD-8)
+# Info: Initial schedule of SEQUENTIAL 'core': Latency = 5, Area (Datapath, Register, Total) = 356.83, 0.00, 356.83 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Info: Final schedule of SEQUENTIAL 'core': Latency = 5, Area (Datapath, Register, Total) = 356.83, 0.00, 356.83 (CRAAS-12)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Completed transformation 'allocate' on solution 'dot_product.v1': elapsed time 0.06 seconds, memory usage 159360kB, peak memory usage 218884kB (SOL-9)
+go extract
+# Info: Starting transformation 'schedule' on solution 'dot_product.v1' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/dot_product/core' (CRAAS-1)
+# Warning: Cannot build distributed pipeline in process 'core' because of missing handshake for resource 'output:rsc' (SCHD-15)
+# Global signal 'input_a:rsc.z' added to design 'dot_product' for component 'input_a:rsc:mgc_in_wire' (LIB-3)
+# Global signal 'input_b:rsc.z' added to design 'dot_product' for component 'input_b:rsc:mgc_in_wire' (LIB-3)
+# Global signal 'output:rsc.z' added to design 'dot_product' for component 'output:rsc:mgc_out_stdreg' (LIB-3)
+# Info: Optimizing partition '/dot_product': (Total ops = 49, Real ops = 11, Vars = 26) (SOL-10)
+# Info: Optimizing partition '/dot_product/dot_product:core': (Total ops = 36, Real ops = 10, Vars = 16) (SOL-10)
+# Info: Optimizing partition '/dot_product/dot_product:core/core': (Total ops = 30, Real ops = 10, Vars = 10) (SOL-10)
+# Info: Optimizing partition '/dot_product/dot_product:core/core': (Total ops = 17, Real ops = 10, Vars = 4) (SOL-10)
+# Info: Optimizing partition '/dot_product': (Total ops = 35, Real ops = 10, Vars = 19) (SOL-10)
+# Info: Optimizing partition '/dot_product/dot_product:core': (Total ops = 23, Real ops = 10, Vars = 10) (SOL-10)
+# Info: Optimizing partition '/dot_product/dot_product:core/core': (Total ops = 17, Real ops = 10, Vars = 4) (SOL-10)
+# Info: Optimizing partition '/dot_product': (Total ops = 35, Real ops = 10, Vars = 19) (SOL-10)
+# Info: Optimizing partition '/dot_product/dot_product:core': (Total ops = 23, Real ops = 10, Vars = 10) (SOL-10)
+# Report written to file 'cycle.rpt'
+# Netlist written to file 'cycle.v' (NET-4)
+# Error: Streamed resource 'input_a:rsc' must be mapped to an interface synthesis component having an enable handshake signal (i.e. mgc_in_wire_en/mgc_out_stdreg_en).
+# Error: Streamed resource 'input_b:rsc' must be mapped to an interface synthesis component having an enable handshake signal (i.e. mgc_in_wire_en/mgc_out_stdreg_en).
+# Info: Wrote wave database file to H:/FPGA_Project/EIE-1stYear-project-FPGA/prj1/dot_product/dot_product/dot_product.v1/scverify/ccs_wave_signals.dat
+# Makefile for Cycle Verilog output 'cycle.v' vs Untimed C++ written to file 'scverify/Verify_cycle_v_msim.mk'
+# Info: Completed transformation 'schedule' on solution 'dot_product.v1': elapsed time 1.20 seconds, memory usage 163944kB, peak memory usage 218884kB (SOL-9)
+# Info: Starting transformation 'dpfsm' on solution 'dot_product.v1' (SOL-8)
+# Performing FSM extraction... (FSM-1)
+# Info: Optimizing partition '/dot_product': (Total ops = 43, Real ops = 13, Vars = 35) (SOL-10)
+# Info: Optimizing partition '/dot_product/dot_product:core': (Total ops = 31, Real ops = 13, Vars = 26) (SOL-10)
+# Info: Optimizing partition '/dot_product': (Total ops = 43, Real ops = 14, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/dot_product/dot_product:core': (Total ops = 31, Real ops = 14, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/dot_product': (Total ops = 35, Real ops = 14, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/dot_product/dot_product:core': (Total ops = 23, Real ops = 14, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/dot_product': (Total ops = 35, Real ops = 14, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/dot_product/dot_product:core': (Total ops = 23, Real ops = 14, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/dot_product/dot_product:core': (Total ops = 23, Real ops = 14, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/dot_product': (Total ops = 35, Real ops = 14, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/dot_product': (Total ops = 35, Real ops = 14, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/dot_product/dot_product:core': (Total ops = 23, Real ops = 14, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/dot_product': (Total ops = 35, Real ops = 14, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/dot_product/dot_product:core': (Total ops = 23, Real ops = 14, Vars = 12) (SOL-10)
+# Info: Completed transformation 'dpfsm' on solution 'dot_product.v1': elapsed time 0.08 seconds, memory usage 164324kB, peak memory usage 218884kB (SOL-9)
+# Info: Starting transformation 'extract' on solution 'dot_product.v1' (SOL-8)
+# Warning: Reassigned operation MAC:acc:mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(4,0,3,0,4) to mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(3,0,2,0,3) (ASG-1)
+# Info: Optimizing partition '/dot_product': (Total ops = 35, Real ops = 14, Vars = 31) (SOL-10)
+# Info: Optimizing partition '/dot_product/dot_product:core': (Total ops = 23, Real ops = 14, Vars = 22) (SOL-10)
+# Info: Optimizing partition '/dot_product': (Total ops = 36, Real ops = 14, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/dot_product/dot_product:core': (Total ops = 24, Real ops = 14, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/dot_product/dot_product:core': (Total ops = 24, Real ops = 14, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/dot_product': (Total ops = 36, Real ops = 14, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/dot_product': (Total ops = 36, Real ops = 14, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/dot_product/dot_product:core': (Total ops = 24, Real ops = 14, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/dot_product': (Total ops = 36, Real ops = 14, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/dot_product/dot_product:core': (Total ops = 24, Real ops = 14, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/dot_product': (Total ops = 36, Real ops = 14, Vars = 32) (SOL-10)
+# Info: Optimizing partition '/dot_product/dot_product:core': (Total ops = 24, Real ops = 14, Vars = 23) (SOL-10)
+# Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Optimizing partition '/dot_product': (Total ops = 36, Real ops = 14, Vars = 32) (SOL-10)
+# Info: Optimizing partition '/dot_product/dot_product:core': (Total ops = 24, Real ops = 14, Vars = 23) (SOL-10)
+# Info: Optimizing partition '/dot_product': (Total ops = 36, Real ops = 14, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/dot_product/dot_product:core': (Total ops = 24, Real ops = 14, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/dot_product': (Total ops = 36, Real ops = 14, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/dot_product/dot_product:core': (Total ops = 24, Real ops = 14, Vars = 12) (SOL-10)
+# Report written to file 'rtl.rpt'
+# Netlist written to file 'rtl.v' (NET-4)
+# generate concat
+# order file name is: rtl.v_order.txt
+# Add dependent file: ./rtl_mgc_ioport.v
+# Add dependent file: ./rtl_mgc_ioport_v2001.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated file: H:/FPGA_Project/EIE-1stYear-project-FPGA/prj1/dot_product/dot_product/dot_product.v1/concat_rtl.v
+# Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file 'scverify/Verify_rtl_v_msim.mk'
+# Synthesis timing script written to file './scverify/mapped.psrv_timing'
+# IO timing constraints written to synthesis script file
+# Synthesis script written to file 'mapped.psrv'
+# Makefile for Mapped Verilog output 'rtl.v' vs Untimed C++ written to file 'scverify/Verify_mapped_v_msim.mk'
+# Synthesis timing script written to file './scverify/gate.psrv_timing'
+# IO timing constraints written to synthesis script file
+# Synthesis script written to file 'gate.psrv'
+# Makefile for Gate Verilog output 'gate.v' vs Untimed C++ written to file 'scverify/Verify_gate_v_msim.mk'
+# Synthesis timing script written to file './rtl.v.psr_timing'
+# IO timing constraints written to synthesis script file
+# Synthesis script written to file 'rtl.v.psr'
+# Info: Completed transformation 'extract' on solution 'dot_product.v1': elapsed time 2.48 seconds, memory usage 164916kB, peak memory usage 218884kB (SOL-9)
+go instance
+flow run /Schematic/view ./schematic.nlv -state rtl
