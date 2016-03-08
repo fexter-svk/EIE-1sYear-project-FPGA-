@@ -267,3 +267,6 @@ go extract
 # Info: Completed transformation 'extract' on solution 'dot_product.v1': elapsed time 2.48 seconds, memory usage 164916kB, peak memory usage 218884kB (SOL-9)
 go instance
 flow run /Schematic/view ./schematic.nlv -state rtl
+project save
+# Saving project file 'H:/FPGA_Project/EIE-1stYear-project-FPGA/prj1/dot_product/dot_product.ccs'. (PRJ-5)
+quit -f
