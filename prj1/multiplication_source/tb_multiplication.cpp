@@ -43,11 +43,11 @@ CCS_MAIN(int argc, char *argv[])
   for(i = 0; i < VECTOR_LEN; i++) {
     printf ("Inputs: A = %d, B = %d \n", (int)inA[i], (int)inB[i]);
   }
-  printf ("Design output  : \n");
+  printf ("Design output  : ");
   for(i = 0; i < VECTOR_LEN; i++){
-      printf ("%d \n",(int)output[i]);
+      printf ("%d",(int)output[i]);
   }
-  printf ("Expected output: \n");
+  printf ("\n Expected output: ");
   for(i = 0; i < VECTOR_LEN; i++){
       printf ("%d",(int)exp_out[i]);
   }

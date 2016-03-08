@@ -13,22 +13,24 @@
 //  This version may only be used for academic purposes.  Some optimizations 
 //  are disabled, so results obtained from this version may be sub-optimal.
 //  
-//  Start time Tue Mar 08 14:49:38 2016
+//  Start time Tue Mar 08 14:58:55 2016
 # -------------------------------------------------
-# Logging session transcript to file "C:\Users\al3515\AppData\Local\Temp\log5876246accc.0"
+# Logging session transcript to file "C:\Users\al3515\AppData\Local\Temp\log7176d4a630.0"
 # Loading options from registry.
 set_working_dir H:/FPGA_Project/EIE-1stYear-project-FPGA/prj1/multiplication
 solution file add ../multiplication_source/multiplication.cpp
 # /INPUTFILES/1
-solution file add ../multiplication_source/multiplication.h
-# /INPUTFILES/2
 solution file add ../multiplication_source/tb_multiplication.cpp
+# /INPUTFILES/2
+solution file add ../multiplication_source/multiplication.h
 # /INPUTFILES/3
+flow package require /SCVerify
+# 2010a.2
 go analyze
 # Creating project directory 'H:\FPGA_Project\EIE-1stYear-project-FPGA\prj1\multiplication\Catapult'. (PRJ-1)
 # Moving session transcript to file "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj1\multiplication\catapult.log"
 # Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
-# Front End called with arguments: -- {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj1\multiplication_source\tb_multiplication.cpp} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj1\multiplication_source\multiplication.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj1\multiplication_source\multiplication.cpp} (CIN-69)
+# Front End called with arguments: -- {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj1\multiplication_source\multiplication.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj1\multiplication_source\tb_multiplication.cpp} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj1\multiplication_source\multiplication.cpp} (CIN-69)
 # Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
 # Error: $PROJECT_HOME/../multiplication_source/multiplication.cpp(23): $PROJECT_HOME/../multiplication_source/multiplication.cpp(23): could not open source file "addition.h" (CRD-5)
 # Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj1\multiplication_source\multiplication.cpp"
@@ -36,23 +38,393 @@ go analyze
 # Error: go analyze: Failed analyze
 go analyze
 # Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
-# Front End called with arguments: -- {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj1\multiplication_source\tb_multiplication.cpp} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj1\multiplication_source\multiplication.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj1\multiplication_source\multiplication.cpp} (CIN-69)
+# Front End called with arguments: -- {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj1\multiplication_source\multiplication.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj1\multiplication_source\tb_multiplication.cpp} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj1\multiplication_source\multiplication.cpp} (CIN-69)
 # Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
 # Error: $PROJECT_HOME/../multiplication_source/multiplication.cpp(23): $PROJECT_HOME/../multiplication_source/multiplication.cpp(23): could not open source file "addition.h" (CRD-5)
 # Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj1\multiplication_source\multiplication.cpp"
 # Error: Compilation aborted (CIN-5)
 # Error: go analyze: Failed analyze
-solution file add ../multiplication_source/multiplication.cpp
-# /INPUTFILES/1
-solution file add ../multiplication_source/multiplication.h
-# /INPUTFILES/2
-solution file add ../multiplication_source/tb_multiplication.cpp
-# /INPUTFILES/3
 go analyze
 # Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
-# Front End called with arguments: -- {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj1\multiplication_source\tb_multiplication.cpp} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj1\multiplication_source\multiplication.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj1\multiplication_source\multiplication.cpp} (CIN-69)
+# Front End called with arguments: -- {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj1\multiplication_source\multiplication.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj1\multiplication_source\tb_multiplication.cpp} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj1\multiplication_source\multiplication.cpp} (CIN-69)
 # Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
 # Error: $PROJECT_HOME/../multiplication_source/multiplication.cpp(23): $PROJECT_HOME/../multiplication_source/multiplication.cpp(23): could not open source file "addition.h" (CRD-5)
 # Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj1\multiplication_source\multiplication.cpp"
 # Error: Compilation aborted (CIN-5)
 # Error: go analyze: Failed analyze
+# File '$PROJECT_HOME/../multiplication_source/multiplication.cpp' saved
+go analyze
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Front End called with arguments: -- {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj1\multiplication_source\multiplication.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj1\multiplication_source\tb_multiplication.cpp} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj1\multiplication_source\multiplication.cpp} (CIN-69)
+# Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
+# $PROJECT_HOME/../multiplication_source/multiplication.cpp(26): Pragma 'hls_design<top>' detected on routine 'multiplication' (CIN-6)
+# Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 1.70 seconds, memory usage 127840kB, peak memory usage 201748kB (SOL-9)
+directive set -DESIGN_HIERARCHY multiplication
+# /DESIGN_HIERARCHY multiplication
+directive set -CLOCKS {clk {-CLOCK_PERIOD 0.0 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 0.000000 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND async -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME en -ENABLE_ACTIVE high}}
+# /CLOCKS {clk {-CLOCK_PERIOD 0.0 -CLOCK_EDGE rising -CLOCK_UNCERTAINTY 0.0 -RESET_SYNC_NAME rst -RESET_ASYNC_NAME arst_n -RESET_KIND async -RESET_SYNC_ACTIVE high -RESET_ASYNC_ACTIVE low -ENABLE_NAME en -ENABLE_ACTIVE high}}
+directive set -TECHLIBS {{Altera_accel_CycloneIII.lib Altera_accel_CycloneIII} {mgc_Altera-Cyclone-III-6_beh_psr.lib {{mgc_Altera-Cyclone-III-6_beh_psr part EP3C16F484C}}}}
+# /TECHLIBS {{Altera_accel_CycloneIII.lib Altera_accel_CycloneIII} {mgc_Altera-Cyclone-III-6_beh_psr.lib {{mgc_Altera-Cyclone-III-6_beh_psr part EP3C16F484C}}}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 20.0 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 10.00 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND async -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME en -ENABLE_ACTIVE high}}
+# /CLOCKS {clk {-CLOCK_PERIOD 20.0 -CLOCK_EDGE rising -CLOCK_UNCERTAINTY 0.0 -CLOCK_HIGH_TIME 10.0 -RESET_SYNC_NAME rst -RESET_ASYNC_NAME arst_n -RESET_KIND async -RESET_SYNC_ACTIVE high -RESET_ASYNC_ACTIVE low -ENABLE_NAME en -ENABLE_ACTIVE high}}
+go compile
+# Info: Starting transformation 'compile' on solution 'solution.v1' (SOL-8)
+# Reading component library '$MGC_HOME\pkgs\siflibs\mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+# Reading component library '$MGC_HOME\pkgs\siflibs\stdops.lib' [STDOPS]... (LIB-49)
+# Reading component library '$MGC_HOME\pkgs\siflibs\mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+# Reading component library '$MGC_HOME\pkgs\ccs_altera\Altera_accel_CycloneIII.lib' [Altera_accel_CycloneIII]... (LIB-49)
+# Reading component library '$MGC_HOME\pkgs\siflibs\psr2010a_up2\mgc_Altera-Cyclone-III-6_beh_psr.lib' [mgc_Altera-Cyclone-III-6_beh_psr]... (LIB-49)
+# Generating synthesis internal form... (CIN-3)
+# $PROJECT_HOME/../multiplication_source/multiplication.cpp(27): Found top design routine 'multiplication' specified by directive (CIN-52)
+# $PROJECT_HOME/../multiplication_source/multiplication.cpp(27): Synthesizing routine 'multiplication' (CIN-13)
+# $PROJECT_HOME/../multiplication_source/multiplication.cpp(27): Inlining routine 'multiplication' (CIN-14)
+# $PROJECT_HOME/../multiplication_source/multiplication.cpp(27): Optimizing block '/multiplication' ... (CIN-4)
+# $PROJECT_HOME/../multiplication_source/multiplication.cpp(27): Inout port 'input_a' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../multiplication_source/multiplication.cpp(27): Inout port 'input_b' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../multiplication_source/multiplication.cpp(27): Inout port 'output' is only used as an output. (OPT-11)
+# Info: Optimizing partition '/multiplication': (Total ops = 27, Real ops = 7, Vars = 16) (SOL-10)
+# Info: Optimizing partition '/multiplication/core': (Total ops = 27, Real ops = 7, Vars = 13) (SOL-10)
+# Info: Optimizing partition '/multiplication/core': (Total ops = 27, Real ops = 7, Vars = 13) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 27, Real ops = 7, Vars = 16) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 27, Real ops = 7, Vars = 16) (SOL-10)
+# Info: Optimizing partition '/multiplication/core': (Total ops = 27, Real ops = 7, Vars = 13) (SOL-10)
+# Info: Optimizing partition '/multiplication/core': (Total ops = 15, Real ops = 7, Vars = 7) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 15, Real ops = 7, Vars = 10) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 15, Real ops = 7, Vars = 10) (SOL-10)
+# Info: Optimizing partition '/multiplication/core': (Total ops = 12, Real ops = 4, Vars = 10) (SOL-10)
+# Info: Optimizing partition '/multiplication/core': (Total ops = 12, Real ops = 4, Vars = 1) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 12, Real ops = 4, Vars = 4) (SOL-10)
+# Info: Optimizing partition '/multiplication/core': (Total ops = 12, Real ops = 4, Vars = 1) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 12, Real ops = 4, Vars = 4) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 12, Real ops = 4, Vars = 4) (SOL-10)
+# Info: Optimizing partition '/multiplication/core': (Total ops = 12, Real ops = 4, Vars = 1) (SOL-10)
+# $PROJECT_HOME/../multiplication_source/multiplication.cpp(30): Loop '/multiplication/core/MAC' iterated at most 5 times. (LOOP-2)
+# Info: Optimizing partition '/multiplication/core': (Total ops = 19, Real ops = 4, Vars = 1) (SOL-10)
+# Info: Optimizing partition '/multiplication/core': (Total ops = 15, Real ops = 4, Vars = 1) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 15, Real ops = 4, Vars = 4) (SOL-10)
+# Info: Optimizing partition '/multiplication/core': (Total ops = 13, Real ops = 4, Vars = 2) (SOL-10)
+# Info: Optimizing partition '/multiplication/core': (Total ops = 13, Real ops = 4, Vars = 1) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 13, Real ops = 4, Vars = 4) (SOL-10)
+# Info: Optimizing partition '/multiplication/core': (Total ops = 13, Real ops = 4, Vars = 1) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 13, Real ops = 4, Vars = 4) (SOL-10)
+# Warning: $PROJECT_HOME/../multiplication_source/multiplication.cpp(27): Variable 'input_a' array size reduced to 5 words (CIN-83)
+# Warning: $PROJECT_HOME/../multiplication_source/multiplication.cpp(27): Variable 'input_b' array size reduced to 5 words (CIN-83)
+# Warning: $PROJECT_HOME/../multiplication_source/multiplication.cpp(27): Variable 'output' array size reduced to 5 words (CIN-83)
+# Info: Optimizing partition '/multiplication': (Total ops = 13, Real ops = 4, Vars = 4) (SOL-10)
+# Info: Optimizing partition '/multiplication/core': (Total ops = 13, Real ops = 4, Vars = 1) (SOL-10)
+# Design 'multiplication' was read (SOL-1)
+# Makefile for Original Design + Testbench written to file 'scverify/Verify_orig_cxx_osci.mk'
+# Info: Completed transformation 'compile' on solution 'multiplication.v1': elapsed time 0.76 seconds, memory usage 139160kB, peak memory usage 201748kB (SOL-9)
+flow run /SCVerify/launch_make ././scverify/Verify_orig_cxx_osci.mk {} SIMTOOL=osci sim
+# Making '././scverify/Verify_orig_cxx_osci.mk SIMTOOL=osci sim'
+#     C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/bin/make -f ././scverify/Verify_orig_cxx_osci.mk SIMTOOL=osci build < "NUL:" (BASIC-15)
+# "============================================"
+# "Creating simulation directory 'scverify\orig_cxx_osci'"
+# mkdir scverify\orig_cxx_osci
+# "============================================"
+# "Compiling C++ file: ../../../multiplication_source/multiplication.cpp"
+# "c:\PROGRA~2\MICROS~4.0\VC\bin\cl.exe" -DCCS_DUT_SYSC -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=multiplication /W3 -DCCS_MISMATCHED_OUTPUTS_ONLY -DDEADLOCK_DETECTION /D"WIN32" /D"_DEBUG" /D"_CONSOLE" /D"NOGDI" /D"_MBCS" /D"_CRT_SECURE_NO_DEPRECATE" /EHsc /RTCs /MTd /FD /W3 /Z7 /vmg /I"C:/Program Files/Microsoft Platform SDK/Include"   /I. /I../.. /I. /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/include /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/include /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/pkgs/hls_pkgs/src /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/pkgs/siflibs /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DSC_USE_STD_STRING  /c /Tp ../../../multiplication_source/multiplication.cpp /Foscverify/orig_cxx_osci/multiplication.cpp.cxxts.obj
+# Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 15.00.30729.01 for 80x86
+# Copyright (C) Microsoft Corporation.  All rights reserved.
+# 
+# multiplication.cpp
+# ../../../multiplication_source/multiplication.cpp(26) : warning C4068: unknown pragma
+# ../../../multiplication_source/multiplication.cpp(30) : warning C4102: 'MAC' : unreferenced label
+# "============================================"
+# "Compiling C++ file: ../../../multiplication_source/tb_multiplication.cpp"
+# "c:\PROGRA~2\MICROS~4.0\VC\bin\cl.exe" -DCCS_DUT_SYSC -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=multiplication /W3 -DCCS_MISMATCHED_OUTPUTS_ONLY -DDEADLOCK_DETECTION /D"WIN32" /D"_DEBUG" /D"_CONSOLE" /D"NOGDI" /D"_MBCS" /D"_CRT_SECURE_NO_DEPRECATE" /EHsc /RTCs /MTd /FD /W3 /Z7 /vmg /I"C:/Program Files/Microsoft Platform SDK/Include"   /I. /I../.. /I. /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/include /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/include /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/pkgs/hls_pkgs/src /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/pkgs/siflibs /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DSC_USE_STD_STRING  /c /Tp ../../../multiplication_source/tb_multiplication.cpp /Foscverify/orig_cxx_osci/tb_multiplication.cpp.cxxts.obj
+# Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 15.00.30729.01 for 80x86
+# Copyright (C) Microsoft Corporation.  All rights reserved.
+# 
+# tb_multiplication.cpp
+# "============================================"
+# "Linking executable"
+# "c:\PROGRA~2\MICROS~4.0\VC\bin\link.exe" /SUBSYSTEM:CONSOLE /DEBUG /DYNAMICBASE:NO /LIBPATH:C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/lib/Windows_NT/msvc /LIBPATH:C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/lib /LIBPATH:C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/lib/Windows_NT/msvc scverify/orig_cxx_osci/multiplication.cpp.cxxts.obj scverify/orig_cxx_osci/tb_multiplication.cpp.cxxts.obj libsystemc.lib /out:scverify/orig_cxx_osci/scverify_top.exe
+# Microsoft (R) Incremental Linker Version 9.00.30729.01
+# Copyright (C) Microsoft Corporation.  All rights reserved.
+# 
+#     C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/bin/make -f ././scverify/Verify_orig_cxx_osci.mk SIMTOOL=osci sim (BASIC-14)
+# chdir ..\..&                    Catapult\multiplication.v1\scverify\orig_cxx_osci\scverify_top.exe 
+# Inputs: A = 1, B = 5 
+# Inputs: A = 2, B = 4 
+# Inputs: A = 3, B = 3 
+# Inputs: A = 4, B = 2 
+# Inputs: A = 5, B = 1 
+# Design output  : 
+# 5 
+# 8 
+# 9 
+# 8 
+# 5 
+# Expected output: 
+# s: A 
+# File '$PROJECT_HOME/../multiplication_source/tb_multiplication.cpp' saved
+flow run /SCVerify/launch_make ././scverify/Verify_orig_cxx_osci.mk {} SIMTOOL=osci sim
+# Making '././scverify/Verify_orig_cxx_osci.mk SIMTOOL=osci sim'
+#     C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/bin/make -f ././scverify/Verify_orig_cxx_osci.mk SIMTOOL=osci build < "NUL:" (BASIC-15)
+# "============================================"
+# "Compiling C++ file: ../../../multiplication_source/tb_multiplication.cpp"
+# "c:\PROGRA~2\MICROS~4.0\VC\bin\cl.exe" -DCCS_DUT_SYSC -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=multiplication /W3 -DCCS_MISMATCHED_OUTPUTS_ONLY -DDEADLOCK_DETECTION /D"WIN32" /D"_DEBUG" /D"_CONSOLE" /D"NOGDI" /D"_MBCS" /D"_CRT_SECURE_NO_DEPRECATE" /EHsc /RTCs /MTd /FD /W3 /Z7 /vmg /I"C:/Program Files/Microsoft Platform SDK/Include"   /I. /I../.. /I. /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/include /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/include /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/pkgs/hls_pkgs/src /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/pkgs/siflibs /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DSC_USE_STD_STRING  /c /Tp ../../../multiplication_source/tb_multiplication.cpp /Foscverify/orig_cxx_osci/tb_multiplication.cpp.cxxts.obj
+# Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 15.00.30729.01 for 80x86
+# Copyright (C) Microsoft Corporation.  All rights reserved.
+# 
+# tb_multiplication.cpp
+# "============================================"
+# "Linking executable"
+# "c:\PROGRA~2\MICROS~4.0\VC\bin\link.exe" /SUBSYSTEM:CONSOLE /DEBUG /DYNAMICBASE:NO /LIBPATH:C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/lib/Windows_NT/msvc /LIBPATH:C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/lib /LIBPATH:C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/lib/Windows_NT/msvc scverify/orig_cxx_osci/multiplication.cpp.cxxts.obj scverify/orig_cxx_osci/tb_multiplication.cpp.cxxts.obj libsystemc.lib /out:scverify/orig_cxx_osci/scverify_top.exe
+# Microsoft (R) Incremental Linker Version 9.00.30729.01
+# Copyright (C) Microsoft Corporation.  All rights reserved.
+# 
+#     C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/bin/make -f ././scverify/Verify_orig_cxx_osci.mk SIMTOOL=osci sim (BASIC-14)
+# chdir ..\..&                    Catapult\multiplication.v1\scverify\orig_cxx_osci\scverify_top.exe 
+# Inputs: A = 1, B = 5 
+# Inputs: A = 2, B = 4 
+# Inputs: A = 3, B = 3 
+# Inputs: A = 4, B = 2 
+# Inputs: A = 5, B = 1 
+# Design output  : 
+# 58985Expected output: 
+# 58985
+# File '$PROJECT_HOME/../multiplication_source/tb_multiplication.cpp' saved
+flow run /SCVerify/launch_make ././scverify/Verify_orig_cxx_osci.mk {} SIMTOOL=osci sim
+# Making '././scverify/Verify_orig_cxx_osci.mk SIMTOOL=osci sim'
+#     C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/bin/make -f ././scverify/Verify_orig_cxx_osci.mk SIMTOOL=osci build < "NUL:" (BASIC-15)
+# "============================================"
+# "Compiling C++ file: ../../../multiplication_source/tb_multiplication.cpp"
+# "c:\PROGRA~2\MICROS~4.0\VC\bin\cl.exe" -DCCS_DUT_SYSC -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=multiplication /W3 -DCCS_MISMATCHED_OUTPUTS_ONLY -DDEADLOCK_DETECTION /D"WIN32" /D"_DEBUG" /D"_CONSOLE" /D"NOGDI" /D"_MBCS" /D"_CRT_SECURE_NO_DEPRECATE" /EHsc /RTCs /MTd /FD /W3 /Z7 /vmg /I"C:/Program Files/Microsoft Platform SDK/Include"   /I. /I../.. /I. /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/include /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/include /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/pkgs/hls_pkgs/src /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/pkgs/siflibs /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DSC_USE_STD_STRING  /c /Tp ../../../multiplication_source/tb_multiplication.cpp /Foscverify/orig_cxx_osci/tb_multiplication.cpp.cxxts.obj
+# Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 15.00.30729.01 for 80x86
+# Copyright (C) Microsoft Corporation.  All rights reserved.
+# 
+# tb_multiplication.cpp
+# "============================================"
+# "Linking executable"
+# "c:\PROGRA~2\MICROS~4.0\VC\bin\link.exe" /SUBSYSTEM:CONSOLE /DEBUG /DYNAMICBASE:NO /LIBPATH:C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/lib/Windows_NT/msvc /LIBPATH:C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/lib /LIBPATH:C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/lib/Windows_NT/msvc scverify/orig_cxx_osci/multiplication.cpp.cxxts.obj scverify/orig_cxx_osci/tb_multiplication.cpp.cxxts.obj libsystemc.lib /out:scverify/orig_cxx_osci/scverify_top.exe
+# Microsoft (R) Incremental Linker Version 9.00.30729.01
+# Copyright (C) Microsoft Corporation.  All rights reserved.
+# 
+#     C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/bin/make -f ././scverify/Verify_orig_cxx_osci.mk SIMTOOL=osci sim (BASIC-14)
+# chdir ..\..&                    Catapult\multiplication.v1\scverify\orig_cxx_osci\scverify_top.exe 
+# Inputs: A = 1, B = 5 
+# Inputs: A = 2, B = 4 
+# Inputs: A = 3, B = 3 
+# Inputs: A = 4, B = 2 
+# Inputs: A = 5, B = 1 
+# Design output  : 
+# 58985
+# Expected output: 58985
+# File '$PROJECT_HOME/../multiplication_source/tb_multiplication.cpp' saved
+flow run /SCVerify/launch_make ././scverify/Verify_orig_cxx_osci.mk {} SIMTOOL=osci sim
+# Making '././scverify/Verify_orig_cxx_osci.mk SIMTOOL=osci sim'
+#     C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/bin/make -f ././scverify/Verify_orig_cxx_osci.mk SIMTOOL=osci build < "NUL:" (BASIC-15)
+# "============================================"
+# "Compiling C++ file: ../../../multiplication_source/tb_multiplication.cpp"
+# "c:\PROGRA~2\MICROS~4.0\VC\bin\cl.exe" -DCCS_DUT_SYSC -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=multiplication /W3 -DCCS_MISMATCHED_OUTPUTS_ONLY -DDEADLOCK_DETECTION /D"WIN32" /D"_DEBUG" /D"_CONSOLE" /D"NOGDI" /D"_MBCS" /D"_CRT_SECURE_NO_DEPRECATE" /EHsc /RTCs /MTd /FD /W3 /Z7 /vmg /I"C:/Program Files/Microsoft Platform SDK/Include"   /I. /I../.. /I. /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/include /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/include /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/pkgs/hls_pkgs/src /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/pkgs/siflibs /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DSC_USE_STD_STRING  /c /Tp ../../../multiplication_source/tb_multiplication.cpp /Foscverify/orig_cxx_osci/tb_multiplication.cpp.cxxts.obj
+# Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 15.00.30729.01 for 80x86
+# Copyright (C) Microsoft Corporation.  All rights reserved.
+# 
+# tb_multiplication.cpp
+# "============================================"
+# "Linking executable"
+# "c:\PROGRA~2\MICROS~4.0\VC\bin\link.exe" /SUBSYSTEM:CONSOLE /DEBUG /DYNAMICBASE:NO /LIBPATH:C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/lib/Windows_NT/msvc /LIBPATH:C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/lib /LIBPATH:C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/lib/Windows_NT/msvc scverify/orig_cxx_osci/multiplication.cpp.cxxts.obj scverify/orig_cxx_osci/tb_multiplication.cpp.cxxts.obj libsystemc.lib /out:scverify/orig_cxx_osci/scverify_top.exe
+# Microsoft (R) Incremental Linker Version 9.00.30729.01
+# Copyright (C) Microsoft Corporation.  All rights reserved.
+# 
+#     C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/bin/make -f ././scverify/Verify_orig_cxx_osci.mk SIMTOOL=osci sim (BASIC-14)
+# chdir ..\..&                    Catapult\multiplication.v1\scverify\orig_cxx_osci\scverify_top.exe 
+# Inputs: A = 1, B = 5 
+# Inputs: A = 2, B = 4 
+# Inputs: A = 3, B = 3 
+# Inputs: A = 4, B = 2 
+# Inputs: A = 5, B = 1 
+# Design output  : 58985
+# File '$PROJECT_HOME/../multiplication_source/tb_multiplication.cpp' saved
+flow run /SCVerify/launch_make ././scverify/Verify_orig_cxx_osci.mk {} SIMTOOL=osci sim
+# Making '././scverify/Verify_orig_cxx_osci.mk SIMTOOL=osci sim'
+#     C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/bin/make -f ././scverify/Verify_orig_cxx_osci.mk SIMTOOL=osci build < "NUL:" (BASIC-15)
+# "============================================"
+# "Compiling C++ file: ../../../multiplication_source/tb_multiplication.cpp"
+# "c:\PROGRA~2\MICROS~4.0\VC\bin\cl.exe" -DCCS_DUT_SYSC -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=multiplication /W3 -DCCS_MISMATCHED_OUTPUTS_ONLY -DDEADLOCK_DETECTION /D"WIN32" /D"_DEBUG" /D"_CONSOLE" /D"NOGDI" /D"_MBCS" /D"_CRT_SECURE_NO_DEPRECATE" /EHsc /RTCs /MTd /FD /W3 /Z7 /vmg /I"C:/Program Files/Microsoft Platform SDK/Include"   /I. /I../.. /I. /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/include /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/include /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/pkgs/hls_pkgs/src /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/pkgs/siflibs /IC:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DSC_USE_STD_STRING  /c /Tp ../../../multiplication_source/tb_multiplication.cpp /Foscverify/orig_cxx_osci/tb_multiplication.cpp.cxxts.obj
+# Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 15.00.30729.01 for 80x86
+# Copyright (C) Microsoft Corporation.  All rights reserved.
+# 
+# tb_multiplication.cpp
+# "============================================"
+# "Linking executable"
+# "c:\PROGRA~2\MICROS~4.0\VC\bin\link.exe" /SUBSYSTEM:CONSOLE /DEBUG /DYNAMICBASE:NO /LIBPATH:C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/lib/Windows_NT/msvc /LIBPATH:C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/lib /LIBPATH:C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/shared/lib/Windows_NT/msvc scverify/orig_cxx_osci/multiplication.cpp.cxxts.obj scverify/orig_cxx_osci/tb_multiplication.cpp.cxxts.obj libsystemc.lib /out:scverify/orig_cxx_osci/scverify_top.exe
+# Microsoft (R) Incremental Linker Version 9.00.30729.01
+# Copyright (C) Microsoft Corporation.  All rights reserved.
+# 
+#     C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/bin/make -f ././scverify/Verify_orig_cxx_osci.mk SIMTOOL=osci sim (BASIC-14)
+# chdir ..\..&                    Catapult\multiplication.v1\scverify\orig_cxx_osci\scverify_top.exe 
+# Inputs: A = 1, B = 5 
+# Inputs: A = 2, B = 4 
+# Inputs: A = 3, B = 3 
+# Inputs: A = 4, B = 2 
+# Inputs: A = 5, B = 1 
+# Design output  : 58985
+#  Expected output: 58985
+go allocate
+# Info: Starting transformation 'architect' on solution 'multiplication.v1' (SOL-8)
+# $PROJECT_HOME/../multiplication_source/multiplication.cpp(30): Loop '/multiplication/core/MAC' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../multiplication_source/multiplication.cpp(27): Loop '/multiplication/core/main' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../multiplication_source/multiplication.cpp(27): I/O-Port inferred - resource 'input_a:rsc' (from var: input_a) mapped to 'mgc_ioport.mgc_in_wire' (size: 40). (MEM-2)
+# $PROJECT_HOME/../multiplication_source/multiplication.cpp(27): I/O-Port inferred - resource 'input_b:rsc' (from var: input_b) mapped to 'mgc_ioport.mgc_in_wire' (size: 40). (MEM-2)
+# $PROJECT_HOME/../multiplication_source/multiplication.cpp(27): I/O-Port inferred - resource 'output:rsc' (from var: output) mapped to 'mgc_ioport.mgc_out_stdreg' (size: 40). (MEM-2)
+# Info: Optimizing partition '/multiplication': (Total ops = 22, Real ops = 5, Vars = 9) (SOL-10)
+# Info: Optimizing partition '/multiplication/core': (Total ops = 22, Real ops = 5, Vars = 3) (SOL-10)
+# Info: Optimizing partition '/multiplication/core': (Total ops = 22, Real ops = 5, Vars = 3) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 22, Real ops = 5, Vars = 9) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 22, Real ops = 5, Vars = 9) (SOL-10)
+# Info: Optimizing partition '/multiplication/core': (Total ops = 27, Real ops = 5, Vars = 8) (SOL-10)
+# Info: Optimizing partition '/multiplication/core': (Total ops = 22, Real ops = 5, Vars = 7) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 22, Real ops = 5, Vars = 13) (SOL-10)
+# Info: Optimizing partition '/multiplication/core': (Total ops = 95, Real ops = 21, Vars = 48) (SOL-10)
+# Info: Optimizing partition '/multiplication/core': (Total ops = 88, Real ops = 29, Vars = 22) (SOL-10)
+# Design 'multiplication' contains '31' real operations. (SOL-11)
+# Info: Completed transformation 'architect' on solution 'multiplication.v1': elapsed time 0.64 seconds, memory usage 143720kB, peak memory usage 201748kB (SOL-9)
+# Info: Starting transformation 'allocate' on solution 'multiplication.v1' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/multiplication/core' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $PROJECT_HOME/../multiplication_source/multiplication.cpp(30): Prescheduled LOOP 'MAC' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/../multiplication_source/multiplication.cpp(27): Prescheduled LOOP 'main' (1 c-steps) (SCHD-7)
+# $PROJECT_HOME/../multiplication_source/multiplication.cpp(27): Prescheduled SEQUENTIAL 'core' (total length 11 c-steps) (SCHD-8)
+# Info: Initial schedule of SEQUENTIAL 'core': Latency = 9, Area (Datapath, Register, Total) = 453.74, 0.00, 453.74 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Info: Final schedule of SEQUENTIAL 'core': Latency = 9, Area (Datapath, Register, Total) = 453.74, 0.00, 453.74 (CRAAS-12)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Completed transformation 'allocate' on solution 'multiplication.v1': elapsed time 0.13 seconds, memory usage 143720kB, peak memory usage 201748kB (SOL-9)
+go compile
+directive set /multiplication/core/main -PIPELINE_INIT_INTERVAL 1
+# Info: Branching solution 'multiplication.v2' at state 'compile' (PRJ-2)
+# Makefile for Original Design + Testbench written to file 'scverify/Verify_orig_cxx_osci.mk'
+# /multiplication/core/main/PIPELINE_INIT_INTERVAL 1
+directive set /multiplication/core/main -DISTRIBUTED_PIPELINE true
+# /multiplication/core/main/DISTRIBUTED_PIPELINE true
+project save
+# Saving project file 'H:/FPGA_Project/EIE-1stYear-project-FPGA/prj1/multiplication/Catapult.ccs'. (PRJ-5)
+go allocate
+# Info: Starting transformation 'architect' on solution 'multiplication.v2' (SOL-8)
+# $PROJECT_HOME/../multiplication_source/multiplication.cpp(30): Loop '/multiplication/core/MAC' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../multiplication_source/multiplication.cpp(27): Loop '/multiplication/core/main' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../multiplication_source/multiplication.cpp(27): I/O-Port inferred - resource 'input_a:rsc' (from var: input_a) mapped to 'mgc_ioport.mgc_in_wire' (size: 40). (MEM-2)
+# $PROJECT_HOME/../multiplication_source/multiplication.cpp(27): I/O-Port inferred - resource 'input_b:rsc' (from var: input_b) mapped to 'mgc_ioport.mgc_in_wire' (size: 40). (MEM-2)
+# $PROJECT_HOME/../multiplication_source/multiplication.cpp(27): I/O-Port inferred - resource 'output:rsc' (from var: output) mapped to 'mgc_ioport.mgc_out_stdreg' (size: 40). (MEM-2)
+# Info: Optimizing partition '/multiplication': (Total ops = 22, Real ops = 5, Vars = 9) (SOL-10)
+# Info: Optimizing partition '/multiplication/core': (Total ops = 22, Real ops = 5, Vars = 3) (SOL-10)
+# Info: Optimizing partition '/multiplication/core': (Total ops = 22, Real ops = 5, Vars = 3) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 22, Real ops = 5, Vars = 9) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 22, Real ops = 5, Vars = 9) (SOL-10)
+# Info: Optimizing partition '/multiplication/core': (Total ops = 27, Real ops = 5, Vars = 8) (SOL-10)
+# Info: Optimizing partition '/multiplication/core': (Total ops = 22, Real ops = 5, Vars = 7) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 22, Real ops = 5, Vars = 13) (SOL-10)
+# Info: Optimizing partition '/multiplication/core': (Total ops = 25, Real ops = 5, Vars = 8) (SOL-10)
+# Info: Optimizing partition '/multiplication/core': (Total ops = 24, Real ops = 5, Vars = 8) (SOL-10)
+# Info: Optimizing partition '/multiplication/core': (Total ops = 99, Real ops = 25, Vars = 52) (SOL-10)
+# Info: Optimizing partition '/multiplication/core': (Total ops = 83, Real ops = 31, Vars = 20) (SOL-10)
+# Info: Optimizing partition '/multiplication/core': (Total ops = 82, Real ops = 31, Vars = 19) (SOL-10)
+# Design 'multiplication' contains '33' real operations. (SOL-11)
+# Info: Completed transformation 'architect' on solution 'multiplication.v2': elapsed time 0.95 seconds, memory usage 148728kB, peak memory usage 201748kB (SOL-9)
+# Info: Starting transformation 'allocate' on solution 'multiplication.v2' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/multiplication/core' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $PROJECT_HOME/../multiplication_source/multiplication.cpp(27): Prescheduled LOOP 'main' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/../multiplication_source/multiplication.cpp(27): Prescheduled SEQUENTIAL 'core' (total length 2 c-steps) (SCHD-8)
+# Info: Initial schedule of SEQUENTIAL 'core': Latency = 5, Area (Datapath, Register, Total) = 455.93, 0.00, 455.93 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Info: Final schedule of SEQUENTIAL 'core': Latency = 5, Area (Datapath, Register, Total) = 455.93, 0.00, 455.93 (CRAAS-12)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Completed transformation 'allocate' on solution 'multiplication.v2': elapsed time 0.09 seconds, memory usage 148728kB, peak memory usage 201748kB (SOL-9)
+go extract
+# Info: Starting transformation 'schedule' on solution 'multiplication.v2' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/multiplication/core' (CRAAS-1)
+# Warning: Cannot build distributed pipeline in process 'core' because of missing handshake for resource 'output:rsc' (SCHD-15)
+# Global signal 'input_a:rsc.z' added to design 'multiplication' for component 'input_a:rsc:mgc_in_wire' (LIB-3)
+# Global signal 'input_b:rsc.z' added to design 'multiplication' for component 'input_b:rsc:mgc_in_wire' (LIB-3)
+# Global signal 'output:rsc.z' added to design 'multiplication' for component 'output:rsc:mgc_out_stdreg' (LIB-3)
+# Info: Optimizing partition '/multiplication': (Total ops = 105, Real ops = 34, Vars = 40) (SOL-10)
+# Info: Optimizing partition '/multiplication/multiplication:core': (Total ops = 92, Real ops = 33, Vars = 30) (SOL-10)
+# Info: Optimizing partition '/multiplication/multiplication:core/core': (Total ops = 86, Real ops = 33, Vars = 24) (SOL-10)
+# Info: Optimizing partition '/multiplication/multiplication:core/core': (Total ops = 46, Real ops = 24, Vars = 15) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 63, Real ops = 23, Vars = 30) (SOL-10)
+# Info: Optimizing partition '/multiplication/multiplication:core': (Total ops = 51, Real ops = 23, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/multiplication/multiplication:core/core': (Total ops = 45, Real ops = 23, Vars = 15) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 63, Real ops = 23, Vars = 30) (SOL-10)
+# Info: Optimizing partition '/multiplication/multiplication:core': (Total ops = 51, Real ops = 23, Vars = 21) (SOL-10)
+# Report written to file 'cycle.rpt'
+# Netlist written to file 'cycle.v' (NET-4)
+# Info: Wrote wave database file to H:/FPGA_Project/EIE-1stYear-project-FPGA/prj1/multiplication/Catapult/multiplication.v2/scverify/ccs_wave_signals.dat
+# Makefile for Cycle Verilog output 'cycle.v' vs Untimed C++ written to file 'scverify/Verify_cycle_v_msim.mk'
+# Info: Completed transformation 'schedule' on solution 'multiplication.v2': elapsed time 1.29 seconds, memory usage 150328kB, peak memory usage 201748kB (SOL-9)
+# Info: Starting transformation 'dpfsm' on solution 'multiplication.v2' (SOL-8)
+# Performing FSM extraction... (FSM-1)
+# Info: Optimizing partition '/multiplication': (Total ops = 122, Real ops = 47, Vars = 122) (SOL-10)
+# Info: Optimizing partition '/multiplication/multiplication:core': (Total ops = 110, Real ops = 47, Vars = 113) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 86, Real ops = 40, Vars = 35) (SOL-10)
+# Info: Optimizing partition '/multiplication/multiplication:core': (Total ops = 74, Real ops = 40, Vars = 26) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 77, Real ops = 44, Vars = 40) (SOL-10)
+# Info: Optimizing partition '/multiplication/multiplication:core': (Total ops = 65, Real ops = 44, Vars = 31) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 73, Real ops = 40, Vars = 32) (SOL-10)
+# Info: Optimizing partition '/multiplication/multiplication:core': (Total ops = 61, Real ops = 40, Vars = 23) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 73, Real ops = 40, Vars = 32) (SOL-10)
+# Info: Optimizing partition '/multiplication/multiplication:core': (Total ops = 61, Real ops = 40, Vars = 23) (SOL-10)
+# Info: Optimizing partition '/multiplication/multiplication:core': (Total ops = 61, Real ops = 40, Vars = 23) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 73, Real ops = 40, Vars = 32) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 73, Real ops = 40, Vars = 32) (SOL-10)
+# Info: Optimizing partition '/multiplication/multiplication:core': (Total ops = 61, Real ops = 40, Vars = 23) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 73, Real ops = 40, Vars = 32) (SOL-10)
+# Info: Optimizing partition '/multiplication/multiplication:core': (Total ops = 61, Real ops = 40, Vars = 23) (SOL-10)
+# Info: Completed transformation 'dpfsm' on solution 'multiplication.v2': elapsed time 0.11 seconds, memory usage 150328kB, peak memory usage 201748kB (SOL-9)
+# Info: Starting transformation 'extract' on solution 'multiplication.v2' (SOL-8)
+# Warning: Reassigned operation MAC:acc:mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(4,0,3,0,4) to mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(3,0,2,0,3) (ASG-1)
+# Info: Optimizing partition '/multiplication': (Total ops = 83, Real ops = 40, Vars = 79) (SOL-10)
+# Info: Optimizing partition '/multiplication/multiplication:core': (Total ops = 71, Real ops = 40, Vars = 70) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 68, Real ops = 39, Vars = 32) (SOL-10)
+# Info: Optimizing partition '/multiplication/multiplication:core': (Total ops = 56, Real ops = 39, Vars = 23) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 67, Real ops = 38, Vars = 30) (SOL-10)
+# Info: Optimizing partition '/multiplication/multiplication:core': (Total ops = 55, Real ops = 38, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 67, Real ops = 38, Vars = 30) (SOL-10)
+# Info: Optimizing partition '/multiplication/multiplication:core': (Total ops = 55, Real ops = 38, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/multiplication/multiplication:core': (Total ops = 55, Real ops = 38, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 67, Real ops = 38, Vars = 30) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 67, Real ops = 38, Vars = 30) (SOL-10)
+# Info: Optimizing partition '/multiplication/multiplication:core': (Total ops = 55, Real ops = 38, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 67, Real ops = 38, Vars = 30) (SOL-10)
+# Info: Optimizing partition '/multiplication/multiplication:core': (Total ops = 55, Real ops = 38, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 77, Real ops = 38, Vars = 73) (SOL-10)
+# Info: Optimizing partition '/multiplication/multiplication:core': (Total ops = 65, Real ops = 38, Vars = 64) (SOL-10)
+# Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Optimizing partition '/multiplication': (Total ops = 77, Real ops = 38, Vars = 73) (SOL-10)
+# Info: Optimizing partition '/multiplication/multiplication:core': (Total ops = 65, Real ops = 38, Vars = 64) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 67, Real ops = 38, Vars = 30) (SOL-10)
+# Info: Optimizing partition '/multiplication/multiplication:core': (Total ops = 55, Real ops = 38, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/multiplication': (Total ops = 67, Real ops = 38, Vars = 30) (SOL-10)
+# Info: Optimizing partition '/multiplication/multiplication:core': (Total ops = 55, Real ops = 38, Vars = 21) (SOL-10)
+# Report written to file 'rtl.rpt'
+# Netlist written to file 'rtl.v' (NET-4)
+# generate concat
+# order file name is: rtl.v_order.txt
+# Add dependent file: ./rtl_mgc_ioport.v
+# Add dependent file: ./rtl_mgc_ioport_v2001.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated file: H:/FPGA_Project/EIE-1stYear-project-FPGA/prj1/multiplication/Catapult/multiplication.v2/concat_rtl.v
+# Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file 'scverify/Verify_rtl_v_msim.mk'
+# Synthesis timing script written to file './scverify/mapped.psrv_timing'
+# IO timing constraints written to synthesis script file
+# Synthesis script written to file 'mapped.psrv'
+# Makefile for Mapped Verilog output 'rtl.v' vs Untimed C++ written to file 'scverify/Verify_mapped_v_msim.mk'
+# Synthesis timing script written to file './scverify/gate.psrv_timing'
+# IO timing constraints written to synthesis script file
+# Synthesis script written to file 'gate.psrv'
+# Makefile for Gate Verilog output 'gate.v' vs Untimed C++ written to file 'scverify/Verify_gate_v_msim.mk'
+# Synthesis timing script written to file './rtl.v.psr_timing'
+# IO timing constraints written to synthesis script file
+# Synthesis script written to file 'rtl.v.psr'
+# Info: Completed transformation 'extract' on solution 'multiplication.v2': elapsed time 2.70 seconds, memory usage 151436kB, peak memory usage 201748kB (SOL-9)
+project save
+# Saving project file 'H:/FPGA_Project/EIE-1stYear-project-FPGA/prj1/multiplication/Catapult.ccs'. (PRJ-5)
+quit -f
