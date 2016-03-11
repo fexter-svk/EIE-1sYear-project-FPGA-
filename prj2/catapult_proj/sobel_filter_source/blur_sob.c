@@ -49,7 +49,7 @@
 #pragma hls_design top
 void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS])
 {
-    ac_int<16, false> red, green, blue, r[KERNEL_WIDTH], g[KERNEL_WIDTH], b[KERNEL_WIDTH];
+    ac_int<16, false> red, green, blue,grey, r[KERNEL_WIDTH], g[KERNEL_WIDTH], b[KERNEL_WIDTH];
     
 
 // #if 1: use filter
@@ -70,10 +70,17 @@ void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_
 			g[i] = 0;
 			b[i] = 0;
 		}
-	    
+		
+	    red = vin[p].slc<COLOUR_WL>(2*COLOUR_WL);
+        green = vin[p].slc<COLOUR_WL>(COLOUR_WL);
+        blue = vin[p].slc<COLOUR_WL>(0);
+        
+        grey = (red/3 + green/3 + blue/3);
 		// shift input data in the filter fifo
 		regs << vin[p]; // advance the pointer address by the pixel number (testbench/simulation only)
+		
 		// accumulate
+		/*
 		ACC1: for(i = 0; i < KERNEL_WIDTH; i++) {
 			// current line
 			r[0] += (regs[i].slc<COLOUR_WL>(2*COLOUR_WL));
@@ -106,9 +113,10 @@ void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_
 		red /= KERNEL_NUMEL;
 		green /= KERNEL_NUMEL;
 		blue /= KERNEL_NUMEL;
+	    */
 	    
 		// group the RGB components into a single signal
-		vout[p] = ((((ac_int<PIXEL_WL, false>)red) << (2*COLOUR_WL)) | (((ac_int<PIXEL_WL, false>)green) << COLOUR_WL) | (ac_int<PIXEL_WL, false>)blue);
+		vout[p] = ((((ac_int<PIXEL_WL, false>)grey) << (2*COLOUR_WL)) | (((ac_int<PIXEL_WL, false>)grey) << COLOUR_WL) | (ac_int<PIXEL_WL, false>)grey);
 	    
     }
 }

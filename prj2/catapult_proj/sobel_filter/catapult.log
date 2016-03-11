@@ -13,63 +13,23 @@
 //  This version may only be used for academic purposes.  Some optimizations 
 //  are disabled, so results obtained from this version may be sub-optimal.
 //  
-//  Start time Tue Mar 08 15:28:23 2016
+//  Start time Fri Mar 11 15:44:25 2016
 # -------------------------------------------------
-# Logging session transcript to file "C:\Users\al3515\AppData\Local\Temp\log831224a9a40.0"
+# Logging session transcript to file "C:\Users\al3515\AppData\Local\Temp\log6180246a21c.0"
 # Loading options from registry.
-set_working_dir H:/FPGA_Project/EIE-1stYear-project-FPGA/prj2/catapult_proj/sobel_filter
-project new -name sobel_filter
-solution file add ../sobel_filter_source/tb_blur_sob.cpp
-# /INPUTFILES/1
-solution file add ../sobel_filter_source/blur_sob.c
-# /INPUTFILES/2
-solution file add ../sobel_filter_source/blur_sob.h
-# /INPUTFILES/3
-solution file add ../sobel_filter_source/bmp_io_sob.h
-# /INPUTFILES/4
-solution file add ../sobel_filter_source/bmp_io_sob.cpp
-# /INPUTFILES/5
-solution file add ../sobel_filter_source/shift_class_sob.h
-# /INPUTFILES/6
-go analyze
-# Creating project directory 'H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter\sobel_filter'. (PRJ-1)
+project load H:/FPGA_Project/EIE-1stYear-project-FPGA/prj2/catapult_proj/sobel_filter/sobel_filter
 # Moving session transcript to file "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter\catapult.log"
-# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
-# Front End called with arguments: -- {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\shift_class_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp} (CIN-69)
-# Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
-# Error: $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(8): $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(8): could not open source file "bmp_io.h" (CRD-5)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp"
-# Error: Compilation aborted (CIN-5)
-# Error: go analyze: Failed analyze
-go analyze
-# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
-# Front End called with arguments: -- {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\shift_class_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp} (CIN-69)
-# Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
-# Error: $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(8): $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(8): could not open source file "bmp_io.h" (CRD-5)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp"
-# Error: Compilation aborted (CIN-5)
-# Error: go analyze: Failed analyze
-go analyze
-# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
-# Front End called with arguments: -- {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\shift_class_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp} (CIN-69)
-# Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
-# Error: $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(8): $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(8): could not open source file "bmp_io.h" (CRD-5)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp"
-# Error: Compilation aborted (CIN-5)
-# Error: go analyze: Failed analyze
-# File '$PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp' saved
-go analyze
-# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
-# Front End called with arguments: -- {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\shift_class_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp} (CIN-69)
-# Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
-# Warning: $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1699): $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1699): variable "garray" is used before its value is set (CRD-549)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1700): $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1700): variable "barray" is used before its value is set (CRD-549)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp"
-# Error: $PROJECT_HOME/../sobel_filter_source/blur_sob.c(40): $PROJECT_HOME/../sobel_filter_source/blur_sob.c(40): could not open source file "blur.h" (CRD-5)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c"
-# Error: Compilation aborted (CIN-5)
-# Error: go analyze: Failed analyze
+# Reading component library '$MGC_HOME\pkgs\siflibs\mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+# Reading component library '$MGC_HOME\pkgs\siflibs\stdops.lib' [STDOPS]... (LIB-49)
+# Reading component library '$MGC_HOME\pkgs\siflibs\mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+# Reading component library '$MGC_HOME\pkgs\ccs_altera\Altera_accel_CycloneIII.lib' [Altera_accel_CycloneIII]... (LIB-49)
+# Reading component library '$MGC_HOME\pkgs\siflibs\psr2010a_up2\mgc_Altera-Cyclone-III-6_beh_psr.lib' [mgc_Altera-Cyclone-III-6_beh_psr]... (LIB-49)
+# File '$PROJECT_HOME/../sobel_filter_source/blur_sob.c' saved
+# Input file has changed
+go new
+solution file set {$PROJECT_HOME/../sobel_filter_source/blur_sob.c} -updated
+# Info: Branching solution 'solution.v1' at state 'new' (PRJ-2)
+# File '$PROJECT_HOME/../sobel_filter_source/blur_sob.c' saved
 # File '$PROJECT_HOME/../sobel_filter_source/blur_sob.c' saved
 go analyze
 # Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
@@ -79,24 +39,114 @@ go analyze
 # Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp"
 # Warning: $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1700): $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1700): variable "barray" is used before its value is set (CRD-549)
 # Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp"
-# Error: $PROJECT_HOME/../sobel_filter_source/blur_sob.c(40): $PROJECT_HOME/../sobel_filter_source/blur_sob.c(40): could not open source file "blur_sob_sob.h" (CRD-5)
+# Error: $PROJECT_HOME/../sobel_filter_source/blur_sob.c(78): $PROJECT_HOME/../sobel_filter_source/blur_sob.c(78): more than one instance of overloaded function "floor" matches the argument list: (CRD-308)
+# Warning:             function "floor(double)" (from translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c")
+# Warning:             function "floor(float)" (from translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c")
+# Warning:             function "floor(long double)" (from translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c")
+# Warning:             argument types are: (ac_int<19, true>)
 # Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c"
-# Error: Compilation aborted (CIN-5)
-# Error: go analyze: Failed analyze
-# File '$PROJECT_HOME/../sobel_filter_source/blur_sob.c' saved
-go analyze
-# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
-# Front End called with arguments: -- {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\shift_class_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp} (CIN-69)
-# Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
-# Warning: $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1699): $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1699): variable "garray" is used before its value is set (CRD-549)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1700): $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1700): variable "barray" is used before its value is set (CRD-549)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp"
-# Error: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(43): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(43): could not open source file "blur.h" (CRD-5)
+# Error: $PROJECT_HOME/../sobel_filter_source/blur_sob.c(80): $PROJECT_HOME/../sobel_filter_source/blur_sob.c(80): identifier "regs" is undefined (CRD-20)
+# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c"
+# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(262): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(262): nested comment is not allowed (CRD-9)
+# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
+# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(263): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(263): nested comment is not allowed (CRD-9)
+# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
+# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(264): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(264): nested comment is not allowed (CRD-9)
+# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
+# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(265): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(265): nested comment is not allowed (CRD-9)
 # Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
 # Error: Compilation aborted (CIN-5)
 # Error: go analyze: Failed analyze
-# File '$PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp' saved
+# File '$PROJECT_HOME/../sobel_filter_source/blur_sob.c' saved
+go compile
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Front End called with arguments: -- {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\shift_class_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp} (CIN-69)
+# Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
+# Warning: $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1699): $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1699): variable "garray" is used before its value is set (CRD-549)
+# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp"
+# Warning: $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1700): $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1700): variable "barray" is used before its value is set (CRD-549)
+# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp"
+# Error: $PROJECT_HOME/../sobel_filter_source/blur_sob.c(78): $PROJECT_HOME/../sobel_filter_source/blur_sob.c(78): more than one instance of overloaded function "floor" matches the argument list: (CRD-308)
+# Warning:             function "floor(double)" (from translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c")
+# Warning:             function "floor(float)" (from translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c")
+# Warning:             function "floor(long double)" (from translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c")
+# Warning:             argument types are: (ac_int<19, true>)
+# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c"
+# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(262): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(262): nested comment is not allowed (CRD-9)
+# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
+# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(263): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(263): nested comment is not allowed (CRD-9)
+# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
+# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(264): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(264): nested comment is not allowed (CRD-9)
+# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
+# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(265): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(265): nested comment is not allowed (CRD-9)
+# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
+# Error: Compilation aborted (CIN-5)
+# Error: go analyze: Failed analyze
+# File '$PROJECT_HOME/../sobel_filter_source/blur_sob.c' saved
+go compile
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Front End called with arguments: -- {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\shift_class_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp} (CIN-69)
+# Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
+# Warning: $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1699): $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1699): variable "garray" is used before its value is set (CRD-549)
+# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp"
+# Warning: $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1700): $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1700): variable "barray" is used before its value is set (CRD-549)
+# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp"
+# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(262): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(262): nested comment is not allowed (CRD-9)
+# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
+# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(263): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(263): nested comment is not allowed (CRD-9)
+# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
+# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(264): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(264): nested comment is not allowed (CRD-9)
+# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
+# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(265): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(265): nested comment is not allowed (CRD-9)
+# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
+# $PROJECT_HOME/../sobel_filter_source/blur_sob.c(49): Pragma 'hls_design<top>' detected on routine 'mean_vga' (CIN-6)
+# Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 2.98 seconds, memory usage 154452kB, peak memory usage 288120kB (SOL-9)
+# Info: Starting transformation 'compile' on solution 'solution.v1' (SOL-8)
+# Generating synthesis internal form... (CIN-3)
+# $PROJECT_HOME/../sobel_filter_source/blur_sob.c(50): Found top design routine 'mean_vga' specified by directive (CIN-52)
+# $PROJECT_HOME/../sobel_filter_source/blur_sob.c(50): Synthesizing routine 'mean_vga' (CIN-13)
+# $PROJECT_HOME/../sobel_filter_source/blur_sob.c(50): Inlining routine 'mean_vga' (CIN-14)
+# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(13): Inlining member function 'shift_class<ac_int<150, false>, 5>::shift_class' on object 'regs' (CIN-64)
+# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(32): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator<<' on object 'regs' (CIN-64)
+# $PROJECT_HOME/../sobel_filter_source/blur_sob.c(50): Optimizing block '/mean_vga' ... (CIN-4)
+# $PROJECT_HOME/../sobel_filter_source/blur_sob.c(50): Inout port 'vin' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../sobel_filter_source/blur_sob.c(50): Inout port 'vout' is only used as an output. (OPT-11)
+# Info: Optimizing partition '/mean_vga': (Total ops = 378, Real ops = 85, Vars = 94) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 378, Real ops = 85, Vars = 92) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 378, Real ops = 82, Vars = 92) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 378, Real ops = 82, Vars = 94) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 378, Real ops = 82, Vars = 94) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 378, Real ops = 82, Vars = 92) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 316, Real ops = 74, Vars = 65) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 313, Real ops = 74, Vars = 65) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 313, Real ops = 74, Vars = 67) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 313, Real ops = 74, Vars = 67) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 309, Real ops = 72, Vars = 84) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 217, Real ops = 57, Vars = 11) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 217, Real ops = 57, Vars = 13) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 235, Real ops = 48, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 199, Real ops = 54, Vars = 11) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 199, Real ops = 54, Vars = 13) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 199, Real ops = 54, Vars = 11) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 199, Real ops = 54, Vars = 13) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 199, Real ops = 54, Vars = 13) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 199, Real ops = 54, Vars = 11) (SOL-10)
+# $PROJECT_HOME/../sobel_filter_source/blur_sob.c(63): Loop '/mean_vga/core/FRAME' iterated at most 307200 times. (LOOP-2)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 200, Real ops = 53, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 198, Real ops = 53, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 198, Real ops = 53, Vars = 14) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 196, Real ops = 53, Vars = 13) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 196, Real ops = 53, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 196, Real ops = 53, Vars = 14) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 196, Real ops = 53, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 196, Real ops = 53, Vars = 14) (SOL-10)
+# Design 'mean_vga' was read (SOL-1)
+# Input file has changed
+go new
+solution file set {$PROJECT_HOME/../sobel_filter_source/blur_sob.c} -updated
+# Info: Branching solution 'solution.v1' at state 'new' (PRJ-2)
+# Info: Completed transformation 'compile' on solution 'mean_vga.v2': elapsed time 3.98 seconds, memory usage 156856kB, peak memory usage 288120kB (SOL-9)
 go analyze
 # Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
 # Front End called with arguments: -- {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\shift_class_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp} (CIN-69)
@@ -115,209 +165,153 @@ go analyze
 # Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
 # $PROJECT_HOME/../sobel_filter_source/blur_sob.c(49): Pragma 'hls_design<top>' detected on routine 'mean_vga' (CIN-6)
 # Source file analysis completed (CIN-68)
-# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 2.99 seconds, memory usage 150772kB, peak memory usage 280332kB (SOL-9)
-directive set -TECHLIBS {{Altera_accel_CycloneIII.lib Altera_accel_CycloneIII} {mgc_Altera-Cyclone-III-6_beh_psr.lib {{mgc_Altera-Cyclone-III-6_beh_psr part EP3C16F484C}}}}
-# /TECHLIBS {{Altera_accel_CycloneIII.lib Altera_accel_CycloneIII} {mgc_Altera-Cyclone-III-6_beh_psr.lib {{mgc_Altera-Cyclone-III-6_beh_psr part EP3C16F484C}}}}
-directive set -CLOCKS {clk {-CLOCK_PERIOD 37.037037037 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 18.52 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
-# /CLOCKS {clk {-CLOCK_PERIOD 37.037037037 -CLOCK_EDGE rising -CLOCK_UNCERTAINTY 0.0 -CLOCK_HIGH_TIME 18.52 -RESET_SYNC_NAME rst -RESET_ASYNC_NAME arst_n -RESET_KIND sync -RESET_SYNC_ACTIVE high -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
-directive set -CLOCKS {clk {-CLOCK_PERIOD 37.037037037 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 18.52 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND async -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME en -ENABLE_ACTIVE high}}
-# /CLOCKS {clk {-CLOCK_PERIOD 37.037037037 -CLOCK_EDGE rising -CLOCK_UNCERTAINTY 0.0 -CLOCK_HIGH_TIME 18.52 -RESET_SYNC_NAME rst -RESET_ASYNC_NAME arst_n -RESET_KIND async -RESET_SYNC_ACTIVE high -RESET_ASYNC_ACTIVE low -ENABLE_NAME en -ENABLE_ACTIVE high}}
-directive set -DESIGN_HIERARCHY mean_vga
-# /DESIGN_HIERARCHY mean_vga
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 3.04 seconds, memory usage 156616kB, peak memory usage 290320kB (SOL-9)
+directive set -CLOCKS {clk {-CLOCK_PERIOD 20.0 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 10.00 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND async -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME en -ENABLE_ACTIVE high}}
+# /CLOCKS {clk {-CLOCK_PERIOD 20.0 -CLOCK_EDGE rising -CLOCK_UNCERTAINTY 0.0 -CLOCK_HIGH_TIME 10.0 -RESET_SYNC_NAME rst -RESET_ASYNC_NAME arst_n -RESET_KIND async -RESET_SYNC_ACTIVE high -RESET_ASYNC_ACTIVE low -ENABLE_NAME en -ENABLE_ACTIVE high}}
 go compile
 # Info: Starting transformation 'compile' on solution 'solution.v1' (SOL-8)
-# Reading component library '$MGC_HOME\pkgs\siflibs\mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
-# Reading component library '$MGC_HOME\pkgs\siflibs\stdops.lib' [STDOPS]... (LIB-49)
-# Reading component library '$MGC_HOME\pkgs\siflibs\mgc_ioport.lib' [mgc_ioport]... (LIB-49)
-# Reading component library '$MGC_HOME\pkgs\ccs_altera\Altera_accel_CycloneIII.lib' [Altera_accel_CycloneIII]... (LIB-49)
-# Reading component library '$MGC_HOME\pkgs\siflibs\psr2010a_up2\mgc_Altera-Cyclone-III-6_beh_psr.lib' [mgc_Altera-Cyclone-III-6_beh_psr]... (LIB-49)
 # Generating synthesis internal form... (CIN-3)
 # $PROJECT_HOME/../sobel_filter_source/blur_sob.c(50): Found top design routine 'mean_vga' specified by directive (CIN-52)
 # $PROJECT_HOME/../sobel_filter_source/blur_sob.c(50): Synthesizing routine 'mean_vga' (CIN-13)
 # $PROJECT_HOME/../sobel_filter_source/blur_sob.c(50): Inlining routine 'mean_vga' (CIN-14)
 # $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(13): Inlining member function 'shift_class<ac_int<150, false>, 5>::shift_class' on object 'regs' (CIN-64)
 # $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(32): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator<<' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator[]' on object 'regs' (CIN-64)
 # $PROJECT_HOME/../sobel_filter_source/blur_sob.c(50): Optimizing block '/mean_vga' ... (CIN-4)
 # $PROJECT_HOME/../sobel_filter_source/blur_sob.c(50): Inout port 'vin' is only used as an input. (OPT-10)
 # $PROJECT_HOME/../sobel_filter_source/blur_sob.c(50): Inout port 'vout' is only used as an output. (OPT-11)
-# Info: Optimizing partition '/mean_vga': (Total ops = 423, Real ops = 80, Vars = 101) (SOL-10)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 423, Real ops = 80, Vars = 99) (SOL-10)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 423, Real ops = 80, Vars = 99) (SOL-10)
-# Info: Optimizing partition '/mean_vga': (Total ops = 423, Real ops = 80, Vars = 101) (SOL-10)
-# Info: Optimizing partition '/mean_vga': (Total ops = 423, Real ops = 80, Vars = 101) (SOL-10)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 423, Real ops = 80, Vars = 99) (SOL-10)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 382, Real ops = 79, Vars = 82) (SOL-10)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 359, Real ops = 79, Vars = 81) (SOL-10)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 359, Real ops = 79, Vars = 81) (SOL-10)
-# Info: Optimizing partition '/mean_vga': (Total ops = 359, Real ops = 79, Vars = 83) (SOL-10)
-# Info: Optimizing partition '/mean_vga': (Total ops = 359, Real ops = 79, Vars = 83) (SOL-10)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 342, Real ops = 77, Vars = 119) (SOL-10)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 357, Real ops = 74, Vars = 18) (SOL-10)
-# Info: Optimizing partition '/mean_vga': (Total ops = 357, Real ops = 74, Vars = 20) (SOL-10)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 357, Real ops = 74, Vars = 18) (SOL-10)
-# Info: Optimizing partition '/mean_vga': (Total ops = 357, Real ops = 74, Vars = 20) (SOL-10)
-# Info: Optimizing partition '/mean_vga': (Total ops = 357, Real ops = 74, Vars = 20) (SOL-10)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 357, Real ops = 74, Vars = 18) (SOL-10)
-# $PROJECT_HOME/../sobel_filter_source/blur_sob.c(68): Loop '/mean_vga/core/RESET' iterated at most 5 times. (LOOP-2)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(34): Loop '/mean_vga/core/SHIFT' iterated at most 5 times. (LOOP-2)
-# $PROJECT_HOME/../sobel_filter_source/blur_sob.c(77): Loop '/mean_vga/core/ACC1' iterated at most 5 times. (LOOP-2)
-# $PROJECT_HOME/../sobel_filter_source/blur_sob.c(100): Loop '/mean_vga/core/ACC2' iterated at most 5 times. (LOOP-2)
+# Info: Optimizing partition '/mean_vga': (Total ops = 378, Real ops = 85, Vars = 94) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 378, Real ops = 85, Vars = 92) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 378, Real ops = 82, Vars = 92) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 378, Real ops = 82, Vars = 94) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 378, Real ops = 82, Vars = 94) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 378, Real ops = 82, Vars = 92) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 316, Real ops = 74, Vars = 65) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 313, Real ops = 74, Vars = 65) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 313, Real ops = 74, Vars = 67) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 313, Real ops = 74, Vars = 67) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 309, Real ops = 72, Vars = 84) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 217, Real ops = 57, Vars = 11) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 217, Real ops = 57, Vars = 13) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 235, Real ops = 48, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 199, Real ops = 54, Vars = 11) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 199, Real ops = 54, Vars = 13) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 199, Real ops = 54, Vars = 11) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 199, Real ops = 54, Vars = 13) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 199, Real ops = 54, Vars = 13) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 199, Real ops = 54, Vars = 11) (SOL-10)
 # $PROJECT_HOME/../sobel_filter_source/blur_sob.c(63): Loop '/mean_vga/core/FRAME' iterated at most 307200 times. (LOOP-2)
-# $PROJECT_HOME/../sobel_filter_source/blur_sob.c(69): Detected constant initialization of array 'r', optimizing loop 'RESET' (LOOP-12)
-# $PROJECT_HOME/../sobel_filter_source/blur_sob.c(70): Detected constant initialization of array 'g', optimizing loop 'RESET' (LOOP-12)
-# $PROJECT_HOME/../sobel_filter_source/blur_sob.c(71): Detected constant initialization of array 'b', optimizing loop 'RESET' (LOOP-12)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 350, Real ops = 74, Vars = 18) (SOL-10)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 323, Real ops = 70, Vars = 17) (SOL-10)
-# Info: Optimizing partition '/mean_vga': (Total ops = 323, Real ops = 70, Vars = 19) (SOL-10)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 317, Real ops = 70, Vars = 21) (SOL-10)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 317, Real ops = 70, Vars = 17) (SOL-10)
-# Info: Optimizing partition '/mean_vga': (Total ops = 317, Real ops = 70, Vars = 19) (SOL-10)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 317, Real ops = 70, Vars = 17) (SOL-10)
-# Info: Optimizing partition '/mean_vga': (Total ops = 317, Real ops = 70, Vars = 19) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 200, Real ops = 53, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 198, Real ops = 53, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 198, Real ops = 53, Vars = 14) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 196, Real ops = 53, Vars = 13) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 196, Real ops = 53, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 196, Real ops = 53, Vars = 14) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 196, Real ops = 53, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 196, Real ops = 53, Vars = 14) (SOL-10)
 # Design 'mean_vga' was read (SOL-1)
-# Info: Completed transformation 'compile' on solution 'mean_vga.v1': elapsed time 1.73 seconds, memory usage 163692kB, peak memory usage 280332kB (SOL-9)
-directive set /mean_vga/vin -STREAM 150
-# /mean_vga/vin/STREAM 150
-directive set /mean_vga/vout -STREAM 30
-# /mean_vga/vout/STREAM 30
-directive set /mean_vga/core/main -PIPELINE_INIT_INTERVAL 1
-# /mean_vga/core/main/PIPELINE_INIT_INTERVAL 1
-directive set /mean_vga/core/main -DISTRIBUTED_PIPELINE true
-# /mean_vga/core/main/DISTRIBUTED_PIPELINE true
-directive set /mean_vga/core/main/FRAME/SHIFT -UNROLL yes
-# /mean_vga/core/main/FRAME/SHIFT/UNROLL yes
-directive set /mean_vga/core/main/FRAME/ACC1 -UNROLL yes
-# /mean_vga/core/main/FRAME/ACC1/UNROLL yes
-directive set /mean_vga/core/main/FRAME/ACC2 -UNROLL yes
-# /mean_vga/core/main/FRAME/ACC2/UNROLL yes
+# Info: Completed transformation 'compile' on solution 'mean_vga.v3': elapsed time 3.54 seconds, memory usage 165184kB, peak memory usage 290320kB (SOL-9)
 go allocate
-# Info: Starting transformation 'architect' on solution 'mean_vga.v1' (SOL-8)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(34): Loop '/mean_vga/core/SHIFT' is being fully unrolled (5 times). (LOOP-7)
-# $PROJECT_HOME/../sobel_filter_source/blur_sob.c(77): Loop '/mean_vga/core/ACC1' is being fully unrolled (5 times). (LOOP-7)
-# $PROJECT_HOME/../sobel_filter_source/blur_sob.c(100): Loop '/mean_vga/core/ACC2' is being fully unrolled (5 times). (LOOP-7)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 738, Real ops = 175, Vars = 17) (SOL-10)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 531, Real ops = 120, Vars = 14) (SOL-10)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 522, Real ops = 117, Vars = 13) (SOL-10)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 522, Real ops = 117, Vars = 13) (SOL-10)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 516, Real ops = 117, Vars = 85) (SOL-10)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 327, Real ops = 57, Vars = 22) (SOL-10)
+# Info: Starting transformation 'architect' on solution 'mean_vga.v3' (SOL-8)
 # $PROJECT_HOME/../sobel_filter_source/blur_sob.c(63): Loop '/mean_vga/core/FRAME' is left rolled. (LOOP-4)
 # $PROJECT_HOME/../sobel_filter_source/blur_sob.c(50): Loop '/mean_vga/core/main' is left rolled. (LOOP-4)
-# Info: Optimizing partition '/mean_vga': (Total ops = 327, Real ops = 57, Vars = 27) (SOL-10)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 327, Real ops = 57, Vars = 22) (SOL-10)
-# Info: Optimizing partition '/mean_vga': (Total ops = 327, Real ops = 57, Vars = 27) (SOL-10)
 # $PROJECT_HOME/../sobel_filter_source/blur_sob.c(50): I/O-Port inferred - resource 'vin:rsc' (from var: vin) mapped to 'mgc_ioport.mgc_in_wire' (size: 150). (MEM-2)
 # $PROJECT_HOME/../sobel_filter_source/blur_sob.c(50): I/O-Port inferred - resource 'vout:rsc' (from var: vout) mapped to 'mgc_ioport.mgc_out_stdreg' (size: 30). (MEM-2)
-# Info: Optimizing partition '/mean_vga': (Total ops = 327, Real ops = 57, Vars = 27) (SOL-10)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 327, Real ops = 57, Vars = 22) (SOL-10)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 327, Real ops = 57, Vars = 22) (SOL-10)
-# Info: Optimizing partition '/mean_vga': (Total ops = 327, Real ops = 57, Vars = 27) (SOL-10)
-# Info: Optimizing partition '/mean_vga': (Total ops = 324, Real ops = 57, Vars = 43) (SOL-10)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 327, Real ops = 57, Vars = 44) (SOL-10)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 264, Real ops = 45, Vars = 14) (SOL-10)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 264, Real ops = 45, Vars = 14) (SOL-10)
-# Info: Optimizing partition '/mean_vga': (Total ops = 264, Real ops = 45, Vars = 19) (SOL-10)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 264, Real ops = 45, Vars = 14) (SOL-10)
-# Info: Optimizing partition '/mean_vga': (Total ops = 264, Real ops = 45, Vars = 19) (SOL-10)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 267, Real ops = 45, Vars = 15) (SOL-10)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 388, Real ops = 49, Vars = 88) (SOL-10)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 273, Real ops = 47, Vars = 20) (SOL-10)
-# Info: Optimizing partition '/mean_vga/core': (Total ops = 272, Real ops = 47, Vars = 19) (SOL-10)
-# Design 'mean_vga' contains '167' real operations. (SOL-11)
-# Info: Completed transformation 'architect' on solution 'mean_vga.v1': elapsed time 2.62 seconds, memory usage 164632kB, peak memory usage 280332kB (SOL-9)
-# Info: Starting transformation 'allocate' on solution 'mean_vga.v1' (SOL-8)
+# Info: Optimizing partition '/mean_vga': (Total ops = 200, Real ops = 54, Vars = 17) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 200, Real ops = 54, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 193, Real ops = 54, Vars = 10) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 193, Real ops = 54, Vars = 15) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 194, Real ops = 54, Vars = 11) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 194, Real ops = 54, Vars = 10) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 194, Real ops = 54, Vars = 15) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 194, Real ops = 54, Vars = 10) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 194, Real ops = 54, Vars = 15) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 192, Real ops = 54, Vars = 15) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 192, Real ops = 54, Vars = 10) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 192, Real ops = 54, Vars = 15) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 195, Real ops = 54, Vars = 11) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 261, Real ops = 58, Vars = 52) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 198, Real ops = 56, Vars = 13) (SOL-10)
+# Info: Optimizing partition '/mean_vga/core': (Total ops = 197, Real ops = 56, Vars = 12) (SOL-10)
+# Design 'mean_vga' contains '92' real operations. (SOL-11)
+# Info: Completed transformation 'architect' on solution 'mean_vga.v3': elapsed time 3.01 seconds, memory usage 165812kB, peak memory usage 290320kB (SOL-9)
+# Info: Starting transformation 'allocate' on solution 'mean_vga.v3' (SOL-8)
 # Performing concurrent resource allocation and scheduling on '/mean_vga/core' (CRAAS-1)
 # Info: Select qualified components for data operations ... (CRAAS-3)
 # Info: Apply resource constraints on data operations ... (CRAAS-4)
 # $PROJECT_HOME/../sobel_filter_source/blur_sob.c(50): Prescheduled LOOP 'main' (2 c-steps) (SCHD-7)
-# $PROJECT_HOME/../sobel_filter_source/blur_sob.c(50): Prescheduled LOOP 'core:rlp' (0 c-steps) (SCHD-7)
 # $PROJECT_HOME/../sobel_filter_source/blur_sob.c(50): Prescheduled SEQUENTIAL 'core' (total length 2 c-steps) (SCHD-8)
-# Info: Initial schedule of SEQUENTIAL 'core': Latency = 307200, Area (Datapath, Register, Total) = 2286.91, 0.00, 2286.91 (CRAAS-11)
+# Info: Initial schedule of SEQUENTIAL 'core': Latency = 307200, Area (Datapath, Register, Total) = 1295.85, 0.00, 1295.85 (CRAAS-11)
 # At least one feasible schedule exists. (CRAAS-9)
-# Info: Optimized LOOP 'main': Latency = 307200, Area (Datapath, Register, Total) = 2271.55, 0.00, 2271.55 (CRAAS-10)
-# Info: Optimized LOOP 'main': Latency = 307200, Area (Datapath, Register, Total) = 2269.51, 0.00, 2269.51 (CRAAS-10)
-# Info: Final schedule of SEQUENTIAL 'core': Latency = 307200, Area (Datapath, Register, Total) = 2269.51, 0.00, 2269.51 (CRAAS-12)
+# Info: Optimized LOOP 'main': Latency = 307200, Area (Datapath, Register, Total) = 1294.11, 0.00, 1294.11 (CRAAS-10)
+# Info: Optimized LOOP 'main': Latency = 307200, Area (Datapath, Register, Total) = 1276.70, 0.00, 1276.70 (CRAAS-10)
+# Info: Optimized LOOP 'main': Latency = 307200, Area (Datapath, Register, Total) = 1274.66, 0.00, 1274.66 (CRAAS-10)
+# Info: Final schedule of SEQUENTIAL 'core': Latency = 307200, Area (Datapath, Register, Total) = 1274.66, 0.00, 1274.66 (CRAAS-12)
 # Resource allocation and scheduling done. (CRAAS-2)
 # Netlist written to file 'schedule.gnt' (NET-4)
-# Info: Completed transformation 'allocate' on solution 'mean_vga.v1': elapsed time 0.61 seconds, memory usage 165756kB, peak memory usage 280332kB (SOL-9)
+# Info: Completed transformation 'allocate' on solution 'mean_vga.v3': elapsed time 0.42 seconds, memory usage 165992kB, peak memory usage 290320kB (SOL-9)
 go extract
-# Info: Starting transformation 'schedule' on solution 'mean_vga.v1' (SOL-8)
+# Info: Starting transformation 'schedule' on solution 'mean_vga.v3' (SOL-8)
 # Performing concurrent resource allocation and scheduling on '/mean_vga/core' (CRAAS-1)
 # Warning: Cannot build distributed pipeline in process 'core' because of missing handshake for resource 'vout:rsc' (SCHD-15)
 # Global signal 'vin:rsc.z' added to design 'mean_vga' for component 'vin:rsc:mgc_in_wire' (LIB-3)
 # Global signal 'vout:rsc.z' added to design 'mean_vga' for component 'vout:rsc:mgc_out_stdreg' (LIB-3)
-# Info: Optimizing partition '/mean_vga': (Total ops = 476, Real ops = 168, Vars = 95) (SOL-10)
-# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 466, Real ops = 167, Vars = 87) (SOL-10)
-# Info: Optimizing partition '/mean_vga/mean_vga:core/core': (Total ops = 461, Real ops = 167, Vars = 82) (SOL-10)
-# Info: Optimizing partition '/mean_vga/mean_vga:core/core': (Total ops = 391, Real ops = 159, Vars = 33) (SOL-10)
-# Info: Optimizing partition '/mean_vga': (Total ops = 405, Real ops = 159, Vars = 45) (SOL-10)
-# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 396, Real ops = 159, Vars = 38) (SOL-10)
-# Info: Optimizing partition '/mean_vga/mean_vga:core/core': (Total ops = 391, Real ops = 159, Vars = 33) (SOL-10)
-# Info: Optimizing partition '/mean_vga': (Total ops = 405, Real ops = 159, Vars = 45) (SOL-10)
-# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 396, Real ops = 159, Vars = 38) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 363, Real ops = 93, Vars = 28) (SOL-10)
+# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 353, Real ops = 92, Vars = 20) (SOL-10)
+# Info: Optimizing partition '/mean_vga/mean_vga:core/core': (Total ops = 348, Real ops = 92, Vars = 15) (SOL-10)
+# Info: Optimizing partition '/mean_vga/mean_vga:core/core': (Total ops = 312, Real ops = 84, Vars = 9) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 326, Real ops = 84, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 317, Real ops = 84, Vars = 14) (SOL-10)
+# Info: Optimizing partition '/mean_vga/mean_vga:core/core': (Total ops = 312, Real ops = 84, Vars = 9) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 326, Real ops = 84, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 317, Real ops = 84, Vars = 14) (SOL-10)
 # Report written to file 'cycle.rpt'
 # Netlist written to file 'cycle.v' (NET-4)
-# Info: Completed transformation 'schedule' on solution 'mean_vga.v1': elapsed time 1.12 seconds, memory usage 178940kB, peak memory usage 280332kB (SOL-9)
-# Info: Starting transformation 'dpfsm' on solution 'mean_vga.v1' (SOL-8)
+# Info: Completed transformation 'schedule' on solution 'mean_vga.v3': elapsed time 1.20 seconds, memory usage 178576kB, peak memory usage 290320kB (SOL-9)
+# Info: Starting transformation 'dpfsm' on solution 'mean_vga.v3' (SOL-8)
 # Performing FSM extraction... (FSM-1)
-# Info: Optimizing partition '/mean_vga': (Total ops = 657, Real ops = 177, Vars = 321) (SOL-10)
-# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 648, Real ops = 177, Vars = 314) (SOL-10)
-# Info: Optimizing partition '/mean_vga': (Total ops = 789, Real ops = 180, Vars = 44) (SOL-10)
-# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 780, Real ops = 180, Vars = 37) (SOL-10)
-# Info: Optimizing partition '/mean_vga': (Total ops = 415, Real ops = 180, Vars = 45) (SOL-10)
-# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 406, Real ops = 180, Vars = 38) (SOL-10)
-# Info: Optimizing partition '/mean_vga': (Total ops = 415, Real ops = 180, Vars = 45) (SOL-10)
-# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 406, Real ops = 180, Vars = 38) (SOL-10)
-# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 406, Real ops = 180, Vars = 38) (SOL-10)
-# Info: Optimizing partition '/mean_vga': (Total ops = 415, Real ops = 180, Vars = 45) (SOL-10)
-# Info: Optimizing partition '/mean_vga': (Total ops = 415, Real ops = 180, Vars = 45) (SOL-10)
-# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 406, Real ops = 180, Vars = 38) (SOL-10)
-# Info: Optimizing partition '/mean_vga': (Total ops = 415, Real ops = 180, Vars = 45) (SOL-10)
-# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 406, Real ops = 180, Vars = 38) (SOL-10)
-# Info: Completed transformation 'dpfsm' on solution 'mean_vga.v1': elapsed time 0.44 seconds, memory usage 179320kB, peak memory usage 280332kB (SOL-9)
-# Info: Starting transformation 'extract' on solution 'mean_vga.v1' (SOL-8)
-# Warning: Reassigned operation FRAME:acc#13:mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(7,0,6,1,7) to mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(6,0,5,0,6) (ASG-1)
-# Warning: Reassigned operation FRAME:acc#36:mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(7,0,6,1,7) to mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(6,0,5,0,6) (ASG-1)
-# Warning: Reassigned operation FRAME:acc#20:mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(7,0,6,1,7) to mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(6,0,5,0,6) (ASG-1)
-# Warning: Reassigned operation FRAME:acc#57:mgc_Altera-Cyclone-III-6_beh_psr.mgc_add_pipe(16,1,16,0,17,1,1,0,0,0,2,0,0,0) to mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(4,1,3,0,5) (ASG-1)
-# Warning: Reassigned operation FRAME:acc#59:mgc_Altera-Cyclone-III-6_beh_psr.mgc_add_pipe(16,1,16,0,17,1,1,0,0,0,2,0,0,0) to mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(4,1,3,0,5) (ASG-1)
-# Warning: Reassigned operation FRAME:acc#60:mgc_Altera-Cyclone-III-6_beh_psr.mgc_add_pipe(16,1,16,0,17,1,1,0,0,0,2,0,0,0) to mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(4,1,3,0,5) (ASG-1)
-# Info: Optimizing partition '/mean_vga': (Total ops = 415, Real ops = 180, Vars = 412) (SOL-10)
-# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 406, Real ops = 180, Vars = 405) (SOL-10)
-# Info: Optimizing partition '/mean_vga': (Total ops = 415, Real ops = 180, Vars = 45) (SOL-10)
-# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 406, Real ops = 180, Vars = 38) (SOL-10)
-# Info: Optimizing partition '/mean_vga': (Total ops = 415, Real ops = 180, Vars = 45) (SOL-10)
-# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 406, Real ops = 180, Vars = 38) (SOL-10)
-# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 406, Real ops = 180, Vars = 38) (SOL-10)
-# Info: Optimizing partition '/mean_vga': (Total ops = 415, Real ops = 180, Vars = 45) (SOL-10)
-# Info: Optimizing partition '/mean_vga': (Total ops = 415, Real ops = 180, Vars = 45) (SOL-10)
-# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 406, Real ops = 180, Vars = 38) (SOL-10)
-# Info: Optimizing partition '/mean_vga': (Total ops = 415, Real ops = 180, Vars = 45) (SOL-10)
-# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 406, Real ops = 180, Vars = 38) (SOL-10)
-# Info: Optimizing partition '/mean_vga': (Total ops = 415, Real ops = 180, Vars = 412) (SOL-10)
-# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 406, Real ops = 180, Vars = 405) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 392, Real ops = 80, Vars = 221) (SOL-10)
+# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 383, Real ops = 80, Vars = 214) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 618, Real ops = 84, Vars = 20) (SOL-10)
+# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 609, Real ops = 84, Vars = 13) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 329, Real ops = 88, Vars = 25) (SOL-10)
+# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 320, Real ops = 88, Vars = 18) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 326, Real ops = 86, Vars = 22) (SOL-10)
+# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 317, Real ops = 86, Vars = 15) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 326, Real ops = 86, Vars = 22) (SOL-10)
+# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 317, Real ops = 86, Vars = 15) (SOL-10)
+# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 316, Real ops = 85, Vars = 15) (SOL-10)
+# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 317, Real ops = 85, Vars = 14) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 326, Real ops = 85, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 326, Real ops = 85, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 317, Real ops = 85, Vars = 14) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 326, Real ops = 85, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 317, Real ops = 85, Vars = 14) (SOL-10)
+# Info: Completed transformation 'dpfsm' on solution 'mean_vga.v3': elapsed time 0.73 seconds, memory usage 178764kB, peak memory usage 290320kB (SOL-9)
+# Info: Starting transformation 'extract' on solution 'mean_vga.v3' (SOL-8)
+# Warning: Reassigned operation FRAME:acc#4:mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(11,0,11,0,11) to mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(11,0,10,1,11) (ASG-1)
+# Info: Optimizing partition '/mean_vga': (Total ops = 326, Real ops = 85, Vars = 323) (SOL-10)
+# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 317, Real ops = 85, Vars = 316) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 326, Real ops = 85, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 317, Real ops = 85, Vars = 14) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 326, Real ops = 85, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 317, Real ops = 85, Vars = 14) (SOL-10)
+# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 317, Real ops = 85, Vars = 14) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 326, Real ops = 85, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 326, Real ops = 85, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 317, Real ops = 85, Vars = 14) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 326, Real ops = 85, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 317, Real ops = 85, Vars = 14) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 326, Real ops = 85, Vars = 323) (SOL-10)
+# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 317, Real ops = 85, Vars = 316) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 326, Real ops = 85, Vars = 323) (SOL-10)
+# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 317, Real ops = 85, Vars = 316) (SOL-10)
 # Netlist written to file 'schematic.nlv' (NET-4)
-# Info: Optimizing partition '/mean_vga': (Total ops = 415, Real ops = 180, Vars = 412) (SOL-10)
-# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 406, Real ops = 180, Vars = 405) (SOL-10)
-# Info: Optimizing partition '/mean_vga': (Total ops = 415, Real ops = 180, Vars = 45) (SOL-10)
-# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 406, Real ops = 180, Vars = 38) (SOL-10)
-# Info: Optimizing partition '/mean_vga': (Total ops = 415, Real ops = 180, Vars = 45) (SOL-10)
-# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 406, Real ops = 180, Vars = 38) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 326, Real ops = 85, Vars = 323) (SOL-10)
+# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 317, Real ops = 85, Vars = 316) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 323, Real ops = 85, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 314, Real ops = 85, Vars = 14) (SOL-10)
+# Info: Optimizing partition '/mean_vga': (Total ops = 323, Real ops = 85, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 314, Real ops = 85, Vars = 14) (SOL-10)
 # Report written to file 'rtl.rpt'
 # Netlist written to file 'rtl.v' (NET-4)
 # generate concat
@@ -325,13 +319,12 @@ go extract
 # Add dependent file: ./rtl_mgc_ioport.v
 # Add dependent file: ./rtl_mgc_ioport_v2001.v
 # Add dependent file: ./rtl.v
-# Finished writing concatenated file: H:/FPGA_Project/EIE-1stYear-project-FPGA/prj2/catapult_proj/sobel_filter/sobel_filter/mean_vga.v1/concat_rtl.v
+# Finished writing concatenated file: H:/FPGA_Project/EIE-1stYear-project-FPGA/prj2/catapult_proj/sobel_filter/sobel_filter/mean_vga.v3/concat_rtl.v
 # Synthesis timing script written to file './rtl.v.psr_timing'
 # IO timing constraints written to synthesis script file
 # Synthesis script written to file 'rtl.v.psr'
-# Info: Completed transformation 'extract' on solution 'mean_vga.v1': elapsed time 4.93 seconds, memory usage 179320kB, peak memory usage 280332kB (SOL-9)
-project save
-# Saving project file 'H:/FPGA_Project/EIE-1stYear-project-FPGA/prj2/catapult_proj/sobel_filter/sobel_filter.ccs'. (PRJ-5)
+# Info: Completed transformation 'extract' on solution 'mean_vga.v3': elapsed time 3.20 seconds, memory usage 178764kB, peak memory usage 290320kB (SOL-9)
+# File '$PROJECT_HOME/../sobel_filter_source/blur_sob.c' saved
 project save
 # Saving project file 'H:/FPGA_Project/EIE-1stYear-project-FPGA/prj2/catapult_proj/sobel_filter/sobel_filter.ccs'. (PRJ-5)
 quit -f

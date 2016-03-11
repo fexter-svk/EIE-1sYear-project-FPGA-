@@ -212,6 +212,7 @@ Reassigned operation FRAME:acc#57:mgc_Altera-Cyclone-III-6_beh_psr.mgc_add_pipe(
 Reassigned operation FRAME:acc#59:mgc_Altera-Cyclone-III-6_beh_psr.mgc_add_pipe(16,1,16,0,17,1,1,0,0,0,2,0,0,0) to mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(4,1,3,0,5) (ASG-1)
 Reassigned operation FRAME:acc#60:mgc_Altera-Cyclone-III-6_beh_psr.mgc_add_pipe(16,1,16,0,17,1,1,0,0,0,2,0,0,0) to mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(4,1,3,0,5) (ASG-1)
 Netlist written to file 'rtl.v' (NET-4)
+Saving project file 'H:/FPGA_Project/EIE-1stYear-project-FPGA/prj2/catapult_proj/sobel_filter/sobel_filter.ccs'. (PRJ-5)
 Optimizing partition '/mean_vga': (Total ops = 415, Real ops = 180, Vars = 412) (SOL-10)
 Optimizing partition '/mean_vga/mean_vga:core': (Total ops = 406, Real ops = 180, Vars = 405) (SOL-10)
 Optimizing partition '/mean_vga': (Total ops = 415, Real ops = 180, Vars = 45) (SOL-10)
