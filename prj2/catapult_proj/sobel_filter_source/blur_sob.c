@@ -39,6 +39,7 @@
 #include <ac_fixed.h>
 #include "blur_sob.h"
 #include <iostream>
+#include <math.h>
 
 // shift_class: page 119 HLS Blue Book
 #include "shift_class_sob.h" 
@@ -49,7 +50,7 @@
 #pragma hls_design top
 void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS])
 {
-    ac_int<16, false> red, green, blue,grey, r[KERNEL_WIDTH], g[KERNEL_WIDTH], b[KERNEL_WIDTH];
+    ac_int<16, false> red, green, blue, grey, grey1, r[KERNEL_WIDTH], g[KERNEL_WIDTH], b[KERNEL_WIDTH], gr[KERNEL_WIDTH];
     
 
 // #if 1: use filter
@@ -65,58 +66,67 @@ void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_
 		red = 0; 
 		green = 0; 
 		blue = 0;
+		grey = 0;
+		grey1 = 0;
 		RESET: for(i = 0; i < KERNEL_WIDTH; i++) {
 			r[i] = 0;
 			g[i] = 0;
 			b[i] = 0;
+			gr[i] = 0;
 		}
 		
-	    red = vin[p].slc<COLOUR_WL>(2*COLOUR_WL);
-        green = vin[p].slc<COLOUR_WL>(COLOUR_WL);
-        blue = vin[p].slc<COLOUR_WL>(0);
+	    //red = vin[p].slc<COLOUR_WL>(2*COLOUR_WL);
+        //green = vin[p].slc<COLOUR_WL>(COLOUR_WL);
+        //blue = vin[p].slc<COLOUR_WL>(0);
         
-        grey = (red/3 + green/3 + blue/3);
+        //grey = (red/3 + green/3 + blue/3);
 		// shift input data in the filter fifo
 		regs << vin[p]; // advance the pointer address by the pixel number (testbench/simulation only)
 		
 		// accumulate
-		/*
+		
 		ACC1: for(i = 0; i < KERNEL_WIDTH; i++) {
 			// current line
-			r[0] += (regs[i].slc<COLOUR_WL>(2*COLOUR_WL));
-			g[0] += (regs[i].slc<COLOUR_WL>(COLOUR_WL));
-			b[0] += (regs[i].slc<COLOUR_WL>(0));
+			r[0] = (regs[i].slc<COLOUR_WL>(2*COLOUR_WL));
+			g[0] = (regs[i].slc<COLOUR_WL>(COLOUR_WL));
+			b[0] = (regs[i].slc<COLOUR_WL>(0));
+			gr[0] = (r[0] + g[0] + b[0])/3;
+			
 			// the line before ...
-			r[1] += (regs[i].slc<COLOUR_WL>(2*COLOUR_WL + PIXEL_WL));
-			g[1] += (regs[i].slc<COLOUR_WL>(COLOUR_WL + PIXEL_WL));
-			b[1] += (regs[i].slc<COLOUR_WL>(0 + PIXEL_WL));
+			r[1] = (regs[i].slc<COLOUR_WL>(2*COLOUR_WL + PIXEL_WL));
+			g[1] = (regs[i].slc<COLOUR_WL>(COLOUR_WL + PIXEL_WL));
+			b[1] = (regs[i].slc<COLOUR_WL>(0 + PIXEL_WL));
+			gr[1] = (r[1] + g[1] + b[1])/3;
+			
 			// the line before ...
-			r[2] += (regs[i].slc<COLOUR_WL>(2*COLOUR_WL + 2*PIXEL_WL));
-			g[2] += (regs[i].slc<COLOUR_WL>(COLOUR_WL + 2*PIXEL_WL)) ;
-			b[2] += (regs[i].slc<COLOUR_WL>(0 + 2*PIXEL_WL)) ;
-			// the line before ... 
-			r[3] += (regs[i].slc<COLOUR_WL>(2*COLOUR_WL + 3*PIXEL_WL));
-			g[3] += (regs[i].slc<COLOUR_WL>(COLOUR_WL + 3*PIXEL_WL)) ;
-			b[3] += (regs[i].slc<COLOUR_WL>(0 + 3*PIXEL_WL)) ;
-			// the line before ...
-			r[4] += (regs[i].slc<COLOUR_WL>(2*COLOUR_WL + 4*PIXEL_WL));
-			g[4] += (regs[i].slc<COLOUR_WL>(COLOUR_WL + 4*PIXEL_WL)) ;
-			b[4] += (regs[i].slc<COLOUR_WL>(0 + 4*PIXEL_WL)) ;
+			r[2] = (regs[i].slc<COLOUR_WL>(2*COLOUR_WL + 2*PIXEL_WL));
+			g[2] = (regs[i].slc<COLOUR_WL>(COLOUR_WL + 2*PIXEL_WL)) ;
+			b[2] = (regs[i].slc<COLOUR_WL>(0 + 2*PIXEL_WL));
+			gr[2] = (r[2] + g[2] + b[2])/3;
+			
+			if (i == 0){
+		         grey += (gr[0]*-1)+(gr[1]*0)+(gr[2]*1);
+		         grey1 += (gr[0]*-1)+(gr[1]*0)+(gr[2]*1);
+		    }
+		    if (i == 1){
+		         grey += (gr[0]*-2)+(gr[1]*0)+(gr[2]*2);
+		         grey1 += (gr[0]*-1)+(gr[1]*0)+(gr[2]*1);
+		    }
+		    if (i == 2){
+		         grey += (gr[0]*-1)+(gr[1]*0)+(gr[2]*1);
+		         grey1 += (gr[0]*-1)+(gr[1]*0)+(gr[2]*1);
+		    }
 		}
-		// add the accumualted value for all processed lines
-		ACC2: for(i = 0; i < KERNEL_WIDTH; i++) {    
-			red += r[i];
-			green += g[i];
-			blue += b[i];
-		}
+		int val = sqrt(double((grey*grey)+(grey1*grey1)));
+		
 		// normalize result
+		/*
 		red /= KERNEL_NUMEL;
 		green /= KERNEL_NUMEL;
 		blue /= KERNEL_NUMEL;
 	    */
-	    
 		// group the RGB components into a single signal
-		vout[p] = ((((ac_int<PIXEL_WL, false>)grey) << (2*COLOUR_WL)) | (((ac_int<PIXEL_WL, false>)grey) << COLOUR_WL) | (ac_int<PIXEL_WL, false>)grey);
+		vout[p] = ((((ac_int<PIXEL_WL, false>)val) << (2*COLOUR_WL)) | (((ac_int<PIXEL_WL, false>)val) << COLOUR_WL) | (ac_int<PIXEL_WL, false>)val);
 	    
     }
 }

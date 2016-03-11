@@ -32,7 +32,7 @@
 // total number of pixels from screen frame/image read in testbench
 #define NUM_PIXELS (640*480)
 
-#define KERNEL_WIDTH      5
+#define KERNEL_WIDTH      3
 #define KERNEL_NUMEL      (KERNEL_WIDTH * KERNEL_WIDTH)
 #define COLOUR_WL         10
 #define PIXEL_WL          (3 * COLOUR_WL)
