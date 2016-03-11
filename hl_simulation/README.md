@@ -2,7 +2,7 @@
 
 
 ### ver 0.3
--Added an algorithm to detect head, right hand, left hand, waist and torso
+- Added an algorithm to detect head, right hand, left hand, waist and torso
 
 ### ver 0.2
 - Added a function to __Filter out the image__:  (CleanImage(image))
