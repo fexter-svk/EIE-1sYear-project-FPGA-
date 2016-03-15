@@ -1192,8 +1192,8 @@ applicable agreement for further details.
 	(port
 		(pt 0 32)
 		(input)
-		(text "vin_rsc_z[149..0]" (rect 0 0 84 12)(font "Arial" ))
-		(text "vin_rsc_z[149..0]" (rect 21 27 105 39)(font "Arial" ))
+		(text "vin_rsc_z[89..0]" (rect 0 0 79 12)(font "Arial" ))
+		(text "vin_rsc_z[89..0]" (rect 21 27 100 39)(font "Arial" ))
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
@@ -1702,7 +1702,7 @@ applicable agreement for further details.
 	(pt 1704 1160)
 )
 (connector
-	(text "RGB_TAP[149..0]" (rect 1602 1096 1689 1108)(font "Arial" ))
+	(text "RGB_TAP[89..0]" (rect 1602 1096 1683 1108)(font "Arial" ))
 	(pt 1704 1112)
 	(pt 1592 1112)
 	(bus)

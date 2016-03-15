@@ -39,7 +39,7 @@
 #include <ac_fixed.h>
 #include "blur_sob.h"
 #include <iostream>
-#include <math/mgc_ac_math.h>
+#include "math/mgc_ac_math.h"
 
 // shift_class: page 119 HLS Blue Book
 #include "shift_class_sob.h" 
@@ -94,7 +94,7 @@ void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_
 			b[0] = (regs[i].slc<COLOUR_WL>(0));
 			gr[0] = (r[0] + g[0] + b[0])/3;
 			
-			// the line before ...
+			// the line before ... 
 			r[1] = (regs[i].slc<COLOUR_WL>(2*COLOUR_WL + PIXEL_WL));
 			g[1] = (regs[i].slc<COLOUR_WL>(COLOUR_WL + PIXEL_WL));
 			b[1] = (regs[i].slc<COLOUR_WL>(0 + PIXEL_WL));
@@ -127,7 +127,7 @@ void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_
 		         greyx += (gr[0]*1)+(gr[1]*2)+(gr[2]*1);
 		    }
 		}
-		sqrt(double((greyy*greyy)+(greyx*greyx)), val);
+		sqrt(((greyy*greyy)+(greyx*greyx)), val);
 		
 		// normalize result
 		/*
