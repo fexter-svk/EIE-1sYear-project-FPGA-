@@ -5,7 +5,7 @@
 //            CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
 //          PROPERTY OF CALYPTO DESIGN SYSTEMS OR ITS LICENSORS
 //  
-//  Running on Windows 7 al3515@EEWS104A-002 Service Pack 1 6.01.7601 i686
+//  Running on Windows 7 al3515@EEWS104A-006 Service Pack 1 6.01.7601 i686
 //  
 //  Package information: SIFLIBS v17.0_1.1, HLS_PKGS v17.0_1.1, 
 //                       DesignPad v2.78_0.0
@@ -13,9 +13,9 @@
 //  This version may only be used for academic purposes.  Some optimizations 
 //  are disabled, so results obtained from this version may be sub-optimal.
 //  
-//  Start time Fri Mar 11 16:05:23 2016
+//  Start time Tue Mar 15 16:09:53 2016
 # -------------------------------------------------
-# Logging session transcript to file "C:\Users\al3515\AppData\Local\Temp\log11004ca90c4.0"
+# Logging session transcript to file "C:\Users\al3515\AppData\Local\Temp\log6756248a05c.0"
 # Loading options from registry.
 project load H:/FPGA_Project/EIE-1stYear-project-FPGA/prj2/catapult_proj/sobel_filter/sobel_filter
 # Moving session transcript to file "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter\catapult.log"
@@ -24,265 +24,7 @@ project load H:/FPGA_Project/EIE-1stYear-project-FPGA/prj2/catapult_proj/sobel_f
 # Reading component library '$MGC_HOME\pkgs\siflibs\mgc_ioport.lib' [mgc_ioport]... (LIB-49)
 # Reading component library '$MGC_HOME\pkgs\ccs_altera\Altera_accel_CycloneIII.lib' [Altera_accel_CycloneIII]... (LIB-49)
 # Reading component library '$MGC_HOME\pkgs\siflibs\psr2010a_up2\mgc_Altera-Cyclone-III-6_beh_psr.lib' [mgc_Altera-Cyclone-III-6_beh_psr]... (LIB-49)
-# File '$PROJECT_HOME/../sobel_filter_source/blur_sob.h' saved
-# Input file has changed
-go new
-solution file set {$PROJECT_HOME/../sobel_filter_source/blur_sob.h} -updated
-# Info: Branching solution 'solution.v1' at state 'new' (PRJ-2)
-# File '$PROJECT_HOME/../sobel_filter_source/blur_sob.c' saved
-# File '$PROJECT_HOME/../sobel_filter_source/blur_sob.c' saved
-# File '$PROJECT_HOME/../sobel_filter_source/blur_sob.c' saved
-# File '$PROJECT_HOME/../sobel_filter_source/blur_sob.c' saved
-# File '$PROJECT_HOME/../sobel_filter_source/blur_sob.c' saved
-# File '$PROJECT_HOME/../sobel_filter_source/blur_sob.c' saved
-# File '$PROJECT_HOME/../sobel_filter_source/blur_sob.c' saved
-# File '$PROJECT_HOME/../sobel_filter_source/blur_sob.c' saved
-# File '$PROJECT_HOME/../sobel_filter_source/blur_sob.c' saved
-# File '$PROJECT_HOME/../sobel_filter_source/blur_sob.c' saved
-# File '$PROJECT_HOME/../sobel_filter_source/blur_sob.c' saved
-go analyze
-# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
-# Front End called with arguments: -- {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\shift_class_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp} (CIN-69)
-# Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
-# Warning: $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1699): $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1699): variable "garray" is used before its value is set (CRD-549)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1700): $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1700): variable "barray" is used before its value is set (CRD-549)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp"
-# Error: $PROJECT_HOME/../sobel_filter_source/blur_sob.c(69): $PROJECT_HOME/../sobel_filter_source/blur_sob.c(69): identifier "grey1" is undefined (CRD-20)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c"
-# Error: $PROJECT_HOME/../sobel_filter_source/blur_sob.c(119): $PROJECT_HOME/../sobel_filter_source/blur_sob.c(119): identifier "Math" is undefined (CRD-20)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(262): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(262): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(263): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(263): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(264): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(264): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(265): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(265): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# Error: Compilation aborted (CIN-5)
-# Error: go analyze: Failed analyze
-# File '$PROJECT_HOME/../sobel_filter_source/blur_sob.c' saved
-# File '$PROJECT_HOME/../sobel_filter_source/blur_sob.c' saved
-go analyze
-# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
-# Front End called with arguments: -- {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\shift_class_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp} (CIN-69)
-# Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
-# Warning: $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1699): $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1699): variable "garray" is used before its value is set (CRD-549)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1700): $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1700): variable "barray" is used before its value is set (CRD-549)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp"
-# Error: $PROJECT_HOME/../sobel_filter_source/blur_sob.c(119): $PROJECT_HOME/../sobel_filter_source/blur_sob.c(119): more than one instance of overloaded function "sqrt" matches the argument list: (CRD-308)
-# Warning:             function "sqrt(double)" (from translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c")
-# Warning:             function "sqrt(float)" (from translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c")
-# Warning:             function "sqrt(long double)" (from translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c")
-# Warning:             argument types are: (ac_int<33, false>)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(262): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(262): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(263): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(263): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(264): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(264): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(265): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(265): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# Error: Compilation aborted (CIN-5)
-# Error: go analyze: Failed analyze
-# File '$PROJECT_HOME/../sobel_filter_source/blur_sob.c' saved
-go analyze
-# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
-# Front End called with arguments: -- {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\shift_class_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp} (CIN-69)
-# Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
-# Warning: $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1699): $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1699): variable "garray" is used before its value is set (CRD-549)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1700): $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1700): variable "barray" is used before its value is set (CRD-549)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp"
-# Error: $PROJECT_HOME/../sobel_filter_source/blur_sob.c(119): $PROJECT_HOME/../sobel_filter_source/blur_sob.c(119): expression must have class type (CRD-153)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(262): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(262): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(263): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(263): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(264): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(264): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(265): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(265): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# Error: Compilation aborted (CIN-5)
-# Error: go analyze: Failed analyze
-# File '$PROJECT_HOME/../sobel_filter_source/blur_sob.c' saved
-go analyze
-# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
-# Front End called with arguments: -- {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\shift_class_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp} (CIN-69)
-# Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
-# Warning: $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1699): $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1699): variable "garray" is used before its value is set (CRD-549)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1700): $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1700): variable "barray" is used before its value is set (CRD-549)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(262): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(262): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(263): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(263): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(264): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(264): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(265): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(265): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# $PROJECT_HOME/../sobel_filter_source/blur_sob.c(49): Pragma 'hls_design<top>' detected on routine 'mean_vga' (CIN-6)
-# Source file analysis completed (CIN-68)
-# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 3.28 seconds, memory usage 165152kB, peak memory usage 301724kB (SOL-9)
-# Input file has changed
-go new
-solution file set {$PROJECT_HOME/../sobel_filter_source/blur_sob.c} -updated
-# Info: Branching solution 'solution.v2' at state 'new' (PRJ-2)
-go extract
-# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
-# Front End called with arguments: -- {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\shift_class_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp} (CIN-69)
-# Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
-# Warning: $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1699): $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1699): variable "garray" is used before its value is set (CRD-549)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1700): $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1700): variable "barray" is used before its value is set (CRD-549)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(262): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(262): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(263): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(263): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(264): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(264): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(265): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(265): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# $PROJECT_HOME/../sobel_filter_source/blur_sob.c(49): Pragma 'hls_design<top>' detected on routine 'mean_vga' (CIN-6)
-# Source file analysis completed (CIN-68)
-# Info: Completed transformation 'analyze' on solution 'solution.v2': elapsed time 3.24 seconds, memory usage 167944kB, peak memory usage 305228kB (SOL-9)
-# Info: Starting transformation 'compile' on solution 'solution.v2' (SOL-8)
-# Generating synthesis internal form... (CIN-3)
-# $PROJECT_HOME/../sobel_filter_source/blur_sob.c(50): Found top design routine 'mean_vga' specified by directive (CIN-52)
-# $PROJECT_HOME/../sobel_filter_source/blur_sob.c(50): Synthesizing routine 'mean_vga' (CIN-13)
-# $PROJECT_HOME/../sobel_filter_source/blur_sob.c(50): Inlining routine 'mean_vga' (CIN-14)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(13): Inlining member function 'shift_class<ac_int<90, false>, 3>::shift_class' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(32): Inlining member function 'shift_class<ac_int<90, false>, 3>::operator<<' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<90, false>, 3>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<90, false>, 3>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<90, false>, 3>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<90, false>, 3>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<90, false>, 3>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<90, false>, 3>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<90, false>, 3>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<90, false>, 3>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<90, false>, 3>::operator[]' on object 'regs' (CIN-64)
-# Warning: $PROJECT_HOME/../sobel_filter_source/blur_sob.c(119): Conversion to float type may cause simulation mismatch (CIN-65)
-# Error: $PROJECT_HOME/../sobel_filter_source/blur_sob.c(119): No definition for routine 'sqrt' (CIN-16)
-# Error: Compilation aborted (CIN-5)
-# Error: go compile: Failed compile
-# File '$PROJECT_HOME/../sobel_filter_source/blur_sob.c' saved
-# Input file has changed
-go new
-solution file set {$PROJECT_HOME/../sobel_filter_source/blur_sob.c} -updated
-# Info: Branching solution 'solution.v3' at state 'new' (PRJ-2)
-go analyze
-# Info: Starting transformation 'analyze' on solution 'solution.v3' (SOL-8)
-# Front End called with arguments: -- {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\shift_class_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp} (CIN-69)
-# Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
-# Warning: $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1699): $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1699): variable "garray" is used before its value is set (CRD-549)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1700): $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1700): variable "barray" is used before its value is set (CRD-549)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(262): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(262): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(263): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(263): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(264): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(264): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(265): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(265): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# $PROJECT_HOME/../sobel_filter_source/blur_sob.c(50): Pragma 'hls_design<top>' detected on routine 'mean_vga' (CIN-6)
-# Source file analysis completed (CIN-68)
-# Info: Completed transformation 'analyze' on solution 'solution.v3': elapsed time 3.27 seconds, memory usage 170616kB, peak memory usage 308336kB (SOL-9)
 go compile
-# Info: Starting transformation 'compile' on solution 'solution.v3' (SOL-8)
-# Generating synthesis internal form... (CIN-3)
-# $PROJECT_HOME/../sobel_filter_source/blur_sob.c(51): Found top design routine 'mean_vga' specified by directive (CIN-52)
-# $PROJECT_HOME/../sobel_filter_source/blur_sob.c(51): Synthesizing routine 'mean_vga' (CIN-13)
-# $PROJECT_HOME/../sobel_filter_source/blur_sob.c(51): Inlining routine 'mean_vga' (CIN-14)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(13): Inlining member function 'shift_class<ac_int<90, false>, 3>::shift_class' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(32): Inlining member function 'shift_class<ac_int<90, false>, 3>::operator<<' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<90, false>, 3>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<90, false>, 3>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<90, false>, 3>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<90, false>, 3>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<90, false>, 3>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<90, false>, 3>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<90, false>, 3>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<90, false>, 3>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<90, false>, 3>::operator[]' on object 'regs' (CIN-64)
-# Warning: $PROJECT_HOME/../sobel_filter_source/blur_sob.c(120): Conversion to float type may cause simulation mismatch (CIN-65)
-# Error: $PROJECT_HOME/../sobel_filter_source/blur_sob.c(120): No definition for routine 'sqrt' (CIN-16)
-# Error: Compilation aborted (CIN-5)
-# Error: go compile: Failed compile
-# File '$PROJECT_HOME/../sobel_filter_source/blur_sob.c' saved
-go compile
-# Info: Starting transformation 'compile' on solution 'solution.v3' (SOL-8)
-# Generating synthesis internal form... (CIN-3)
-# $PROJECT_HOME/../sobel_filter_source/blur_sob.c(51): Found top design routine 'mean_vga' specified by directive (CIN-52)
-# $PROJECT_HOME/../sobel_filter_source/blur_sob.c(51): Synthesizing routine 'mean_vga' (CIN-13)
-# $PROJECT_HOME/../sobel_filter_source/blur_sob.c(51): Inlining routine 'mean_vga' (CIN-14)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(13): Inlining member function 'shift_class<ac_int<90, false>, 3>::shift_class' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(32): Inlining member function 'shift_class<ac_int<90, false>, 3>::operator<<' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<90, false>, 3>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<90, false>, 3>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<90, false>, 3>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<90, false>, 3>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<90, false>, 3>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<90, false>, 3>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<90, false>, 3>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<90, false>, 3>::operator[]' on object 'regs' (CIN-64)
-# $PROJECT_HOME/../sobel_filter_source/shift_class_sob.h(48): Inlining member function 'shift_class<ac_int<90, false>, 3>::operator[]' on object 'regs' (CIN-64)
-# Warning: $PROJECT_HOME/../sobel_filter_source/blur_sob.c(120): Conversion to float type may cause simulation mismatch (CIN-65)
-# Error: $PROJECT_HOME/../sobel_filter_source/blur_sob.c(120): No definition for routine 'sqrt' (CIN-16)
-# Error: Compilation aborted (CIN-5)
-# Error: go compile: Failed compile
-# Input file has changed
-go new
-solution file set {$PROJECT_HOME/../sobel_filter_source/blur_sob.c} -updated
-# Info: Branching solution 'solution.v4' at state 'new' (PRJ-2)
-go compile
-# Info: Starting transformation 'analyze' on solution 'solution.v4' (SOL-8)
-# Front End called with arguments: -- {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\shift_class_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp} (CIN-69)
-# Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
-# Warning: $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1699): $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1699): variable "garray" is used before its value is set (CRD-549)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1700): $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1700): variable "barray" is used before its value is set (CRD-549)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp"
-# Error: $PROJECT_HOME/../sobel_filter_source/blur_sob.c(120): $PROJECT_HOME/../sobel_filter_source/blur_sob.c(120): identifier "cmath" is undefined (CRD-20)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(262): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(262): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(263): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(263): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(264): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(264): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(265): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(265): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# Error: Compilation aborted (CIN-5)
-# Error: go analyze: Failed analyze
-# File '$PROJECT_HOME/../sobel_filter_source/blur_sob.c' saved
-go compile
-# Info: Starting transformation 'analyze' on solution 'solution.v4' (SOL-8)
-# Front End called with arguments: -- {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\shift_class_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp} (CIN-69)
-# Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
-# Warning: $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1699): $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1699): variable "garray" is used before its value is set (CRD-549)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1700): $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1700): variable "barray" is used before its value is set (CRD-549)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(262): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(262): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(263): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(263): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(264): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(264): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(265): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(265): nested comment is not allowed (CRD-9)
-# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
-# $PROJECT_HOME/../sobel_filter_source/blur_sob.c(50): Pragma 'hls_design<top>' detected on routine 'mean_vga' (CIN-6)
-# Source file analysis completed (CIN-68)
-# Info: Completed transformation 'analyze' on solution 'solution.v4': elapsed time 3.23 seconds, memory usage 179528kB, peak memory usage 318252kB (SOL-9)
 # Info: Starting transformation 'compile' on solution 'solution.v4' (SOL-8)
 # Generating synthesis internal form... (CIN-3)
 # $PROJECT_HOME/../sobel_filter_source/blur_sob.c(51): Found top design routine 'mean_vga' specified by directive (CIN-52)
@@ -303,6 +45,32 @@ go compile
 # Error: $PROJECT_HOME/../sobel_filter_source/blur_sob.c(120): No definition for routine 'sqrt' (CIN-16)
 # Error: Compilation aborted (CIN-5)
 # Error: go compile: Failed compile
+# File '$PROJECT_HOME/../sobel_filter_source/blur_sob.c' saved
+# Input file has changed
+go new
+solution file set {$PROJECT_HOME/../sobel_filter_source/blur_sob.c} -updated
+# Info: Branching solution 'solution.v5' at state 'new' (PRJ-2)
+go compile
+# Info: Starting transformation 'analyze' on solution 'solution.v5' (SOL-8)
+# Front End called with arguments: -- {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\shift_class_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.h} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c} {H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp} (CIN-69)
+# Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
+# Warning: $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1699): $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1699): variable "garray" is used before its value is set (CRD-549)
+# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp"
+# Warning: $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1700): $PROJECT_HOME/../sobel_filter_source/bmp_io_sob.cpp(1700): variable "barray" is used before its value is set (CRD-549)
+# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\bmp_io_sob.cpp"
+# Error: $PROJECT_HOME/../sobel_filter_source/blur_sob.c(130): $PROJECT_HOME/../sobel_filter_source/blur_sob.c(130): no instance of overloaded function "sqrt" matches the argument list (CRD-304)
+# Warning:             argument types are: (double, ac_int<16, false>)
+# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c"
+# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(262): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(262): nested comment is not allowed (CRD-9)
+# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
+# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(263): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(263): nested comment is not allowed (CRD-9)
+# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
+# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(264): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(264): nested comment is not allowed (CRD-9)
+# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
+# Warning: $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(265): $PROJECT_HOME/../sobel_filter_source/tb_blur_sob.cpp(265): nested comment is not allowed (CRD-9)
+# Warning:           detected during compilation of secondary translation unit "H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\tb_blur_sob.cpp"
+# Error: Compilation aborted (CIN-5)
+# Error: go analyze: Failed analyze
 project save
 # Saving project file 'H:/FPGA_Project/EIE-1stYear-project-FPGA/prj2/catapult_proj/sobel_filter/sobel_filter.ccs'. (PRJ-5)
 quit -f

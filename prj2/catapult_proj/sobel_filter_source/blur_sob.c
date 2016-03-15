@@ -39,18 +39,16 @@
 #include <ac_fixed.h>
 #include "blur_sob.h"
 #include <iostream>
-#include <math.h>
+#include <math/mgc_ac_math.h>
 
 // shift_class: page 119 HLS Blue Book
 #include "shift_class_sob.h" 
 
 
-
-
 #pragma hls_design top
 void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS])
 {
-    ac_int<16, false> red, green, blue, grey, grey1, r[KERNEL_WIDTH], g[KERNEL_WIDTH], b[KERNEL_WIDTH], gr[KERNEL_WIDTH];
+    ac_int<16, false> red, green, blue, greyx, greyy, val, r[KERNEL_WIDTH], g[KERNEL_WIDTH], b[KERNEL_WIDTH], gr[KERNEL_WIDTH];
     
 
 // #if 1: use filter
@@ -66,8 +64,8 @@ void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_
 		red = 0; 
 		green = 0; 
 		blue = 0;
-		grey = 0;
-		grey1 = 0;
+		greyx = 0;
+		greyy = 0;
 		RESET: for(i = 0; i < KERNEL_WIDTH; i++) {
 			r[i] = 0;
 			g[i] = 0;
@@ -80,11 +78,15 @@ void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_
         //blue = vin[p].slc<COLOUR_WL>(0);
         
         //grey = (red/3 + green/3 + blue/3);
+		
+		//vin[p].slc<COLOUR_WL>(2*COLOUR_WL) = grey;
+        //vin[p].slc<COLOUR_WL>(COLOUR_WL) = grey;
+        //vin[p].slc<COLOUR_WL>(0) = grey;
+		
 		// shift input data in the filter fifo
 		regs << vin[p]; // advance the pointer address by the pixel number (testbench/simulation only)
 		
 		// accumulate
-		
 		ACC1: for(i = 0; i < KERNEL_WIDTH; i++) {
 			// current line
 			r[0] = (regs[i].slc<COLOUR_WL>(2*COLOUR_WL));
@@ -105,19 +107,27 @@ void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_
 			gr[2] = (r[2] + g[2] + b[2])/3;
 			
 			if (i == 0){
-		         grey += (gr[0]*-1)+(gr[1]*0)+(gr[2]*1);
-		         grey1 += (gr[0]*-1)+(gr[1]*0)+(gr[2]*1);
+		         // greyy -> multiply this column by [-1, 0, 1]
+				 greyy += (gr[0]*-1)+(gr[1]*0)+(gr[2]*1);
+				 
+				 // greyx -> multiply this column by [-1, -2, -1]
+		         greyx += (gr[0]*-1)+(gr[1]*-2)+(gr[2]*-1);
 		    }
 		    if (i == 1){
-		         grey += (gr[0]*-2)+(gr[1]*0)+(gr[2]*2);
-		         grey1 += (gr[0]*-1)+(gr[1]*0)+(gr[2]*1);
+				 // greyy -> multiply this column by [-2, 0, 2]
+				 
+		         greyy += (gr[0]*-2)+(gr[1]*0)+(gr[2]*2);
+				 // greyx -> multiply this column by [0, 0, 0]
+		         greyx += (gr[0]*0)+(gr[1]*0)+(gr[2]*0);
 		    }
 		    if (i == 2){
-		         grey += (gr[0]*-1)+(gr[1]*0)+(gr[2]*1);
-		         grey1 += (gr[0]*-1)+(gr[1]*0)+(gr[2]*1);
+				 // greyy -> multiply this column by [-1, 0, 1]
+		         greyy += (gr[0]*-1)+(gr[1]*0)+(gr[2]*1);
+				  // greyx -> multiply this column by [1, 2, 1]
+		         greyx += (gr[0]*1)+(gr[1]*2)+(gr[2]*1);
 		    }
 		}
-		int val = sqrt(double((grey*grey)+(grey1*grey1)));
+		sqrt(double((greyy*greyy)+(greyx*greyx)), val);
 		
 		// normalize result
 		/*
