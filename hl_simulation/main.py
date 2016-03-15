@@ -48,7 +48,7 @@ def TopPoint(image):
                     x_min = x
     return (x_min, y_min)
 
-def RightPoint(image, top):
+def RightArmPoint(image, top, distance):
     width, height = image.size
     pixels = image.load()
     y_max = 0
@@ -64,31 +64,78 @@ def RightPoint(image, top):
                         x_max = x
     return (x_max, y_max)
 
-def MiddlePoint(image, top):
+def MiddlePoint(image, top, height):
     x_top,y_top = top
     x_middle = x_top
-    y_middle = y_top*3
+    y_middle = y_top + round(height*0.236)
     return (x_middle, y_middle)
 
-def WaistPoint(image, top):
+def WaistPoint(image, top, height):
     x_top,y_top = top
     x_waist = x_top
-    y_waist = y_top*6
+    y_waist = y_top + round(height*0.618)
     return (x_waist, y_waist)
 
-
-def LeftPoint(image, top):
+def LeftArmPoint(image, top, height):
     width, height = image.size
     pixels = image.load()
     y_max = 0
     x_min = width
     x_top,y_top = top
-    for x in range(width):
-        for y in range(height):
+    for x in range(0,x_top):
+        for y in range(0, y_top + round(height*0.618)):
             RGB = pixels[x,y]
             if(RGB[0]==0) and (RGB[1]==0) and (RGB[2]==0):
                 if(x<x_top*6) and (y<y_top*6):
                      if(x<x_min):
+                        y_max = y
+                        x_min = x
+    return (x_min, y_max)
+
+def RightArmPoint(image, top, height):
+    width, height = image.size
+    pixels = image.load()
+    y_max = 0
+    x_min = 0
+    x_top,y_top = top
+    for x in range(x_top, width):
+        for y in range(0, y_top + round(height*0.618)):
+            RGB = pixels[x,y]
+            if(RGB[0]==0) and (RGB[1]==0) and (RGB[2]==0):
+                if(x<x_top*6) and (y<y_top*6):
+                     if(x>x_min):
+                        y_max = y
+                        x_min = x
+    return (x_min, y_max)
+
+def LeftLegPoint(image, top):
+    width, height = image.size
+    pixels = image.load()
+    y_max = 0
+    x_min = width
+    x_top,y_top = top
+    for x in range(width-1,0,-1):
+        for y in range(height-1,0,-1):
+            RGB = pixels[x,y]
+            if(RGB[0]==0) and (RGB[1]==0) and (RGB[2]==0):
+                if(x<x_top*6) and (y>y_top*6):
+                     if(x<x_min):
+                        y_max = y
+                        x_min = x
+    return (x_min, y_max)
+
+def RightLegPoint(image, top):
+    width, height = image.size
+    pixels = image.load()
+    y_max = 0
+    x_min = 0
+    x_top,y_top = top
+    for x in range(width-1,0,-1):
+        for y in range(height-1,0,-1):
+            RGB = pixels[x,y]
+            if(RGB[0]==0) and (RGB[1]==0) and (RGB[2]==0):
+                if(x<x_top*1) and (y>y_top*6):
+                     if(x>x_min):
                         y_max = y
                         x_min = x
     return (x_min, y_max)
@@ -117,32 +164,40 @@ def main():
     body_image = BW(body_image)
     body_image = Find_Edges(body_image)
     body_image = Invert(body_image)
-    new_image = Image.new('RGB', ref_image.size, (255,255,255))
-    # body_image = BW(body_image)
 
     diff = ImageChops.difference(ref_image, body_image)
     diff = Invert(diff)
     diff = CleanImage(diff)
-    #diff = diff.convert('LA')
-    #diff.show()
+
     x_top, y_top = TopPoint(diff)
-    x_right, y_right = RightPoint(diff, (x_top, y_top))
-    x_left, y_left = LeftPoint(diff, (x_top, y_top))
-    x_middle, y_middle = MiddlePoint(diff, (x_top, y_top))
-    x_waist, y_waist = WaistPoint(diff, (x_top, y_top))
+    x_leftLeg, y_leftLeg = LeftLegPoint(diff, (x_top, y_top))
+    x_rightLeg, y_rightLeg = RightLegPoint(diff, (x_top, y_top))
+    height = round((y_rightLeg + y_leftLeg)/2) - y_top
+
+    x_middle, y_middle = MiddlePoint(diff, (x_top, y_top), height)
+    x_waist, y_waist = WaistPoint(diff, (x_top, y_top), height)
+
+
+    x_rightArm, y_rightArm = RightArmPoint(diff, (x_top, y_top), height)
+    x_leftArm, y_leftArm = LeftArmPoint(diff, (x_top, y_top), height)
+
+
 
     drawLine(diff, (x_top, y_top), (x_middle,y_middle))
-    drawLine(diff, (x_middle,y_middle), (x_left, y_left))
-    drawLine(diff, (x_middle,y_middle), (x_right, y_right))
+    drawLine(diff, (x_middle,y_middle), (x_leftArm, y_leftArm))
+    drawLine(diff, (x_middle,y_middle), (x_rightArm, y_rightArm))
     drawLine(diff, (x_middle,y_middle), (x_waist, y_waist))
+    drawLine(diff, (x_waist, y_waist), (x_rightLeg, y_rightLeg))
+    drawLine(diff, (x_waist, y_waist), (x_leftLeg, y_leftLeg))
+
+    drawCircle(diff, (x_rightLeg, y_rightLeg))
+    drawCircle(diff, (x_leftLeg, y_leftLeg))
     drawCircle(diff, (x_top, y_top))
-    drawCircle(diff, (x_right, y_right))
-    drawCircle(diff, (x_left, y_left))
+    drawCircle(diff, (x_rightArm, y_rightArm))
+    drawCircle(diff, (x_leftArm, y_leftArm))
     drawCircle(diff, (x_middle, y_middle))
     drawCircle(diff, (x_waist, y_waist))
     diff.show()
-
-
 
 if __name__=="__main__":
     main()
