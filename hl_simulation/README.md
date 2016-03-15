@@ -1,5 +1,9 @@
 #HL Simulation of body detection
 
+### ver 0.4
+- Added an algorithm to detect right leg, left leg
+- Added an algorithm to infer the position of waist and shoulders according to the statistical data
+- Optimization of algorithms
 
 ### ver 0.3
 - Added an algorithm to detect head, right hand, left hand, waist and torso
