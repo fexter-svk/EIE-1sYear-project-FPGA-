@@ -2,13 +2,13 @@
 EIE First year project at Imperial College London
 
 #Organisation of the github
-  -hl_simulation
+  - hl_simulation
   Contains all higher level programming files on which we will base our final HLS design.
-  -Prj1
+  - Prj1
   Contains dot_product, addition and multiplication examples.
-  -Prj2
+  - Prj2
   Contains sobel filter example.
-  -Student_files_2015_original
+  - Student_files_2015_original
   Contains the original versions of the files given to us.
 
 #Task
