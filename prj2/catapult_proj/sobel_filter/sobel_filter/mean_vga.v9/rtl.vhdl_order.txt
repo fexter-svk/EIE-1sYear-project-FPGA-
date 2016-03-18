@@ -1,4 +1,0 @@
-./rtl_funcs.vhd
-./rtl_mux_pkg.vhdl
-./rtl_mgc_ioport.vhd
-./rtl.vhdl
