@@ -48,8 +48,8 @@
 #pragma hls_design top
 void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS])
 {
-    ac_int<16, false> red, green, blue, greyx, greyy, val, r[KERNEL_WIDTH], g[KERNEL_WIDTH], b[KERNEL_WIDTH], gr[KERNEL_WIDTH];
-    
+    ac_int<16, false> red, green, blue, val, r[KERNEL_WIDTH], g[KERNEL_WIDTH], b[KERNEL_WIDTH];
+    ac_int<16, true> greyx, greyy, gr[KERNEL_WIDTH];
 
 // #if 1: use filter
 // #if 0: copy input to output bypassing filter
@@ -107,27 +107,27 @@ void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_
 			gr[2] = (r[2] + g[2] + b[2])/3;
 			
 			if (i == 0){
-		         // greyy -> multiply this column by [-1, 0, 1]
-				 greyy += (gr[0]*-1)+(gr[1]*0)+(gr[2]*1);
+		         // greyx -> multiply this column by [-1, 0, 1]
+				 greyx += (gr[0]*1)+(gr[1]*0)+(gr[2]*-1);
 				 
-				 // greyx -> multiply this column by [-1, -2, -1]
-		         greyx += (gr[0]*-1)+(gr[1]*-2)+(gr[2]*-1);
+				 // greyy -> multiply this column by [-1, -2, -1]
+		         greyy += (gr[0]*-1)+(gr[1]*-2)+(gr[2]*-1);
 		    }
 		    if (i == 1){
-				 // greyy -> multiply this column by [-2, 0, 2]
-				 
-		         greyy += (gr[0]*-2)+(gr[1]*0)+(gr[2]*2);
-				 // greyx -> multiply this column by [0, 0, 0]
-		         greyx += (gr[0]*0)+(gr[1]*0)+(gr[2]*0);
+				 // greyx -> multiply this column by [-2, 0, 2]
+		         greyx += (gr[0]*2)+(gr[1]*0)+(gr[2]*-2);
+				 // greyy -> multiply this column by [0, 0, 0]
+		         greyy += (gr[0]*0)+(gr[1]*0)+(gr[2]*0);
 		    }
 		    if (i == 2){
-				 // greyy -> multiply this column by [-1, 0, 1]
-		         greyy += (gr[0]*-1)+(gr[1]*0)+(gr[2]*1);
-				  // greyx -> multiply this column by [1, 2, 1]
-		         greyx += (gr[0]*1)+(gr[1]*2)+(gr[2]*1);
+				 // greyx -> multiply this column by [-1, 0, 1]
+		         greyx += (gr[0]*1)+(gr[1]*0)+(gr[2]*-1);
+				  // greyy -> multiply this column by [1, 2, 1]
+		         greyy += (gr[0]*1)+(gr[1]*2)+(gr[2]*1);
 		    }
 		}
-		MUL:sqrt(((greyy*greyy)+(greyx*greyx)), val);
+		
+		MUL:sqrt((ac_int<16,false>)((greyy*greyy)+(greyx*greyx)), val);
 		
 		// normalize result
 		/*

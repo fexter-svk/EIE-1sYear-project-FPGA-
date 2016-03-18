@@ -1,0 +1,21 @@
+
+# Messages from "go new"
+
+Creating project directory 'H:\FPGA_Project\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter\sobel_filter'. (PRJ-1)
+Branching solution 'solution.v1' at state 'new' (PRJ-2)
+Branching solution 'solution.v1' at state 'new' (PRJ-2)
+Completed transformation 'compile' on solution 'mean_vga.v2': elapsed time 3.98 seconds, memory usage 156856kB, peak memory usage 288120kB (SOL-9)
+Branching solution 'solution.v1' at state 'new' (PRJ-2)
+Branching solution 'solution.v2' at state 'new' (PRJ-2)
+Branching solution 'solution.v3' at state 'new' (PRJ-2)
+Branching solution 'solution.v4' at state 'new' (PRJ-2)
+Branching solution 'solution.v5' at state 'new' (PRJ-2)
+Branching solution 'solution.v6' at state 'new' (PRJ-2)
+Branching solution 'solution.v6' at state 'new' (PRJ-2)
+Branching solution 'solution.v6' at state 'new' (PRJ-2)
+Branching solution 'solution.v6' at state 'new' (PRJ-2)
+Branching solution 'solution.v6' at state 'new' (PRJ-2)
+Branching solution 'solution.v6' at state 'new' (PRJ-2)
+Branching solution 'solution.v6' at state 'new' (PRJ-2)
+Branching solution 'solution.v6' at state 'new' (PRJ-2)
+Branching solution 'solution.v6' at state 'new' (PRJ-2)

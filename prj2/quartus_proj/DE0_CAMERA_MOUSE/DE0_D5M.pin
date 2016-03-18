@@ -434,7 +434,7 @@ GPIO_1[22]                   : R11       : bidir  : 3.3-V LVTTL       :         
 GPIO_1[23]                   : R12       : bidir  : 3.3-V LVTTL       :         : 3         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : R13       :        :                   :         : 4         :                
 GPIO_1[19]                   : R14       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-VGA_CLK                      : R15       : output : 3.3-V LVTTL       :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R15       :        :                   :         : 4         :                
 GPIO_1_CLKOUT[0]             : R16       : output : 3.3-V LVTTL       :         : 4         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : R17       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R18       :        :                   :         : 5         :                
@@ -521,7 +521,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : W10       :        :                   :      
 VCCIO3                       : W11       : power  :                   : 3.3V    : 3         :                
 VCCIO4                       : W12       : power  :                   : 3.3V    : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W13       :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : W14       :        :                   :         : 4         :                
+VGA_CLK                      : W14       : output : 3.3-V LVTTL       :         : 4         : N              
 GPIO_1[12]                   : W15       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
 VCCIO4                       : W16       : power  :                   : 3.3V    : 4         :                
 GPIO_1[9]                    : W17       : bidir  : 3.3-V LVTTL       :         : 4         : Y              

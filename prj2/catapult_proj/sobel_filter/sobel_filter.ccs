@@ -15,8 +15,8 @@
 //  
 if {[info script] != {} && [file isdirectory [file rootname [info script]]]} {
   project load [file rootname [info script]] 2011a
-} elseif { [file isdirectory H:/EIE-1stYear-project-FPGA/prj2/catapult_proj/sobel_filter/sobel_filter] } {
-  project load H:/EIE-1stYear-project-FPGA/prj2/catapult_proj/sobel_filter/sobel_filter 2011a
+} elseif { [file isdirectory //icnas2.cc.ic.ac.uk/gsp14/Desktop/EIE-1stYear-project-FPGA/prj2/catapult_proj/sobel_filter/sobel_filter] } {
+  project load //icnas2.cc.ic.ac.uk/gsp14/Desktop/EIE-1stYear-project-FPGA/prj2/catapult_proj/sobel_filter/sobel_filter 2011a
 } else {
   error {unable to locate project directory 'sobel_filter'}
 }

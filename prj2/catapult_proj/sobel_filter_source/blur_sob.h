@@ -30,7 +30,7 @@
 #include <iostream>
 
 // total number of pixels from screen frame/image read in testbench
-#define NUM_PIXELS (640*480)
+#define NUM_PIXELS 1
 
 #define KERNEL_WIDTH      3
 #define KERNEL_NUMEL      (KERNEL_WIDTH * KERNEL_WIDTH)
