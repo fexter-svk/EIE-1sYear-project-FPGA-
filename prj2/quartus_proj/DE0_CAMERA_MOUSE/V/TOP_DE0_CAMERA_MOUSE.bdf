@@ -1039,74 +1039,6 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 1896 456 2040 560)
-	(text "ALTSHIFT_TAPS" (rect 23 1 141 17)(font "Arial" (font_size 10)))
-	(text "fifo_inst2" (rect 8 88 55 100)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "shiftin[WIDTH-1..0]" (rect 0 0 96 12)(font "Arial" ))
-		(text "shiftin[]" (rect 21 25 62 39)(font "Arial" (font_size 8)))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "clken" (rect 0 0 25 12)(font "Arial" ))
-		(text "clken" (rect 21 57 50 71)(font "Arial" (font_size 8)))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "clock" (rect 0 0 25 12)(font "Arial" ))
-		(text "clock" (rect 21 41 50 55)(font "Arial" (font_size 8))(invisible))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "aclr" (rect 24 72 45 86)(font "Arial" (font_size 8)))
-		(text "aclr" (rect 24 72 45 86)(font "Arial" (font_size 8)))
-		(line (pt 0 80)(pt 16 80))
-	)
-	(port
-		(pt 144 32)
-		(output)
-		(text "shiftout[WIDTH-1..0]" (rect -208 0 -105 12)(font "Arial" ))
-		(text "shiftout[]" (rect 82 25 131 39)(font "Arial" (font_size 8)))
-		(line (pt 144 32)(pt 128 32)(line_width 3))
-	)
-	(port
-		(pt 144 48)
-		(output)
-		(text "taps[(WIDTH*NUMBER_OF_TAPS) -1..0]" (rect -208 0 -4 12)(font "Arial" ))
-		(text "taps[]" (rect 97 41 128 55)(font "Arial" (font_size 8)))
-		(line (pt 144 48)(pt 128 48)(line_width 3))
-	)
-	(parameter
-		"NUMBER_OF_TAPS"
-		"5"
-		"Number of output taps, each separated by TAP_DISTANCE clock cycles"
-	)
-	(parameter
-		"TAP_DISTANCE"
-		"800"
-		"Number of shift positions between output taps"
-	)
-	(parameter
-		"WIDTH"
-		"30"
-		"Number of bits for the shiftin input"
-	)
-	(drawing
-		(line (pt 16 56)(pt 24 48))
-		(line (pt 16 40)(pt 24 48))
-		(rectangle (rect 16 16 128 88))
-	)
-	(annotation_block (parameter)(rect 1880 400 2049 456))
-)
-(symbol
 	(rect 1672 848 1960 1024)
 	(text "vga_mouse_square" (rect 5 0 101 12)(font "Arial" ))
 	(text "vga_mouse_catapult_inst" (rect 8 160 134 172)(font "Arial" ))
@@ -1184,6 +1116,74 @@ applicable agreement for further details.
 	(drawing
 		(line (pt 8 8)(pt 24 8))
 	)
+)
+(symbol
+	(rect 1896 456 2040 560)
+	(text "ALTSHIFT_TAPS" (rect 23 1 141 17)(font "Arial" (font_size 10)))
+	(text "fifo_inst2" (rect 8 88 55 100)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "shiftin[WIDTH-1..0]" (rect 0 0 96 12)(font "Arial" ))
+		(text "shiftin[]" (rect 21 25 62 39)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "clken" (rect 0 0 25 12)(font "Arial" ))
+		(text "clken" (rect 21 57 50 71)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clock" (rect 0 0 25 12)(font "Arial" ))
+		(text "clock" (rect 21 41 50 55)(font "Arial" (font_size 8))(invisible))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "aclr" (rect 24 72 45 86)(font "Arial" (font_size 8)))
+		(text "aclr" (rect 24 72 45 86)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 144 32)
+		(output)
+		(text "shiftout[WIDTH-1..0]" (rect -208 0 -105 12)(font "Arial" ))
+		(text "shiftout[]" (rect 82 25 131 39)(font "Arial" (font_size 8)))
+		(line (pt 144 32)(pt 128 32)(line_width 3))
+	)
+	(port
+		(pt 144 48)
+		(output)
+		(text "taps[(WIDTH*NUMBER_OF_TAPS) -1..0]" (rect -208 0 -4 12)(font "Arial" ))
+		(text "taps[]" (rect 97 41 128 55)(font "Arial" (font_size 8)))
+		(line (pt 144 48)(pt 128 48)(line_width 3))
+	)
+	(parameter
+		"NUMBER_OF_TAPS"
+		"3"
+		"Number of output taps, each separated by TAP_DISTANCE clock cycles"
+	)
+	(parameter
+		"TAP_DISTANCE"
+		"800"
+		"Number of shift positions between output taps"
+	)
+	(parameter
+		"WIDTH"
+		"30"
+		"Number of bits for the shiftin input"
+	)
+	(drawing
+		(line (pt 16 56)(pt 24 48))
+		(line (pt 16 40)(pt 24 48))
+		(rectangle (rect 16 16 128 88))
+	)
+	(annotation_block (parameter)(rect 1880 400 2049 456))
 )
 (symbol
 	(rect 1704 1080 1944 1192)
@@ -1611,12 +1611,6 @@ applicable agreement for further details.
 	(pt 1896 536)
 )
 (connector
-	(text "RGB_TAP[149..0]" (rect 2050 488 2137 500)(font "Arial" ))
-	(pt 2040 504)
-	(pt 2152 504)
-	(bus)
-)
-(connector
 	(pt 2152 504)
 	(pt 2104 528)
 	(bus)
@@ -1705,6 +1699,12 @@ applicable agreement for further details.
 	(text "RGB_TAP[89..0]" (rect 1602 1096 1683 1108)(font "Arial" ))
 	(pt 1704 1112)
 	(pt 1592 1112)
+	(bus)
+)
+(connector
+	(text "RGB_TAP[89..0]" (rect 2050 488 2131 500)(font "Arial" ))
+	(pt 2040 504)
+	(pt 2152 504)
 	(bus)
 )
 (junction (pt 1008 944))

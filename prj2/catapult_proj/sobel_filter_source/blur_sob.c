@@ -23,11 +23,11 @@
 // based on the FIR design - page 230 of HLS Blue Book
 ////////////////////////////////////////////////////////////////////////////////
 // Catapult Project options
-// Constraint Editor:
-//  Frequency: 27 MHz
+// Constraint Editor: 
+//  Frequency: 50 MHz
 //  Top design: vga_blur
 //  clk>reset sync: disable; reset async: enable; enable: enable
-// Architecture Constraints:
+// Architecture Constraints: 
 //  interface>vin: wordlength = 150, streaming = 150
 //  interface>vout: wordlength = 30, streaming = 30
 //  core>main: pipeline + distributed + merged
@@ -127,7 +127,7 @@ void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_
 		         greyx += (gr[0]*1)+(gr[1]*2)+(gr[2]*1);
 		    }
 		}
-		sqrt(((greyy*greyy)+(greyx*greyx)), val);
+		MUL:sqrt(((greyy*greyy)+(greyx*greyx)), val);
 		
 		// normalize result
 		/*
