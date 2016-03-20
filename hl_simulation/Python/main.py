@@ -166,26 +166,26 @@ def drawLine(image,coordinates1, coordinates2):
 
 def main():
     ref_image = Image.open("ref5.jpg")
-    ref_image.save('r1.bmp')
+    #ref_image.save('r1.bmp')
     body_image = Image.open("body5.jpg")
-    body_image.save('b1.bmp')
+    #body_image.save('b1.bmp')
 
     ref_image = BW(ref_image)
     ref_image = Find_Edges(ref_image)
     ref_image = Invert(ref_image)
-    ref_image.save('r2_edge.bmp')
+   # ref_image.save('r2_edge.bmp')
 
 
     body_image = BW(body_image)
     body_image = Find_Edges(body_image)
     body_image = Invert(body_image)
-    body_image.save('b2_edge.bmp')
+   # body_image.save('b2_edge.bmp')
 
 
     diff = ImageChops.difference(ref_image, body_image)
     diff = Invert(diff)
     diff = CleanImage(diff)
-    diff.save('d1.bmp')
+    #diff.save('d1.bmp')
 
     x_top, y_top = TopPoint(diff)
     x_leftLeg, y_leftLeg = LeftLegPoint(diff, (x_top, y_top))
@@ -215,8 +215,8 @@ def main():
     drawCircle(diff, (x_leftArm, y_leftArm))
     drawCircle(diff, (x_middle, y_middle))
     drawCircle(diff, (x_waist, y_waist))
-    diff.save('d2.bmp')
-    #diff.show()
+   # diff.save('d2.bmp')
+    diff.show()
 
 if __name__=="__main__":
     main()
