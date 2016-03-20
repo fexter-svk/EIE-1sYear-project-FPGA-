@@ -56,7 +56,7 @@ def TopPoint(image):
         for y in range(height):
             RGB = pixels[x,y]
             if(RGB[0]==0) and (RGB[1]==0) and (RGB[2]==0):
-                if(y<y_min):
+                if(y<y_min) and (10<(checkPixels(image, (x,y)))):
                     y_min = y
                     x_min = x
     return (x_min, y_min)
