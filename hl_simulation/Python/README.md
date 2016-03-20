@@ -15,6 +15,10 @@
 - Calculates the height of the object
 - Infers the position of torso and waist
 - Scopes down the searching range for right and left arms and finds them according to the height
+- 
+#### ver 0.5 (20.3.2016)
+- Added algorithm to pick the best fit point for arms, legs and head. 
+- Bug fixes
 
 #### ver 0.4 (15.3.2016)
 - Added an algorithm to detect right leg, left leg
