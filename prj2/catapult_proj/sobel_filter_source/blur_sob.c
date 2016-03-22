@@ -40,6 +40,18 @@
 #include "blur_sob.h"
 #include <iostream>
 
+const ac_int<8,true> X_MASK[3][3] = {
+    {-1, 0, 1},
+    {-2, 0, 2},
+    {-1, 0, 1}
+};
+
+const ac_int<8,true> Y_MASK[3][3] = {
+    {1, 2, 1},
+    {0, 0, 0},
+    {-1, -2,-1}
+};
+
 // shift_class: page 119 HLS Blue Book
 #include "shift_class_sob.h" 
 
@@ -58,7 +70,7 @@ ac_int<16, false> abs(ac_int<16, true> din){
 void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS])
 {
     ac_int<16, false> val, r[KERNEL_WIDTH], g[KERNEL_WIDTH], b[KERNEL_WIDTH];
-    ac_int<16, true> greyx, greyy, gr[KERNEL_WIDTH];
+    ac_int<16, true> greyx, greyy, gr[KERNEL_WIDTH][KERNEL_WIDTH];
 
 // #if 1: use filter
 // #if 0: copy input to output bypassing filter
@@ -67,41 +79,46 @@ void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_
     // shifts pixels from KERNEL_WIDTH rows and keeps KERNEL_WIDTH columns (KERNEL_WIDTHxKERNEL_WIDTH pixels stored)
     static shift_class<ac_int<PIXEL_WL*KERNEL_WIDTH,false>, KERNEL_WIDTH> regs;
     int  p = 0;
+    int k = 0;
     int i;
 
 	// init
 	greyx = 0;
 	greyy = 0;
-	RESET: for(i = 0; i < KERNEL_WIDTH; i++) {
-		r[i] = 0;
-		g[i] = 0;
-		b[i] = 0;
-		gr[i] = 0;
-	}
 		
 		// shift input data in the filter fifo
 	regs << vin[p]; // advance the pointer address by the pixel number (testbench/simulation only)
 		
 	// accumulate
 	ACC1: for(i = 0; i < KERNEL_WIDTH; i++) {
-			// current line
-		r[0] = (regs[i].slc<COLOUR_WL>(2*COLOUR_WL));
-		g[0] = (regs[i].slc<COLOUR_WL>(COLOUR_WL));
-		b[0] = (regs[i].slc<COLOUR_WL>(0));
-		gr[0] = (r[0] + g[0] + b[0])/3;
-			
-			// the line before ... 
+		k = 0;
+			// first line ...
+		r[0] = (regs[i].slc<COLOUR_WL>(2*COLOUR_WL + 2*PIXEL_WL));
+		g[0] = (regs[i].slc<COLOUR_WL>(COLOUR_WL + 2*PIXEL_WL)) ;
+		b[0] = (regs[i].slc<COLOUR_WL>(0 + 2*PIXEL_WL));
+		gr[i][k] = (r[0] + g[0] + b[0])/3;
+		k++;
+			// second line ... 
 		r[1] = (regs[i].slc<COLOUR_WL>(2*COLOUR_WL + PIXEL_WL));
 		g[1] = (regs[i].slc<COLOUR_WL>(COLOUR_WL + PIXEL_WL));
 		b[1] = (regs[i].slc<COLOUR_WL>(0 + PIXEL_WL));
-		gr[1] = (r[1] + g[1] + b[1])/3;
-			
-			// the line before ...
-		r[2] = (regs[i].slc<COLOUR_WL>(2*COLOUR_WL + 2*PIXEL_WL));
-		g[2] = (regs[i].slc<COLOUR_WL>(COLOUR_WL + 2*PIXEL_WL)) ;
-		b[2] = (regs[i].slc<COLOUR_WL>(0 + 2*PIXEL_WL));
-		gr[2] = (r[2] + g[2] + b[2])/3;
-			
+		gr[i][k]= (r[1] + g[1] + b[1])/3;
+		k++;
+			// current line
+		r[2] = (regs[i].slc<COLOUR_WL>(2*COLOUR_WL));
+		g[2] = (regs[i].slc<COLOUR_WL>(COLOUR_WL));
+		b[2] = (regs[i].slc<COLOUR_WL>(0));
+		gr[i][k] = (r[2] + g[2] + b[2])/3;
+	}
+	
+	// dot product
+	ACC2: for(i = 0; i < KERNEL_WIDTH; i++) {
+	   MAC3: for(k = 0; k < KERNEL_WIDTH; k++){
+	       greyx += gr[i][k]*X_MASK[i][k];
+	       greyy += gr[i][k]*Y_MASK[i][k];
+	   }
+	}
+	/*
 		if (i == 0){
 		     // greyx -> multiply this column by [-1, 0, 1]
 			greyx += (gr[0]*1)+(gr[1]*0)+(gr[2]*-1);
@@ -121,8 +138,9 @@ void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_
 		// greyy -> multiply this column by [1, 2, 1]
 	       greyy += (gr[0]*1)+(gr[1]*2)+(gr[2]*1);
 		}
-		
-		val = abs(greyx) + abs(greyy);
+	*/	
+	val = abs(greyx) + abs(greyy);
+	if (val >= 1023) { val = 1023; }
 		
 		// normalize result
 		/*
@@ -131,8 +149,7 @@ void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_
 		blue /= KERNEL_NUMEL;
 	    */
 		// group the RGB components into a single signal
-		vout[p] = ((((ac_int<PIXEL_WL, false>)val) << (2*COLOUR_WL)) | (((ac_int<PIXEL_WL, false>)val) << COLOUR_WL) | (ac_int<PIXEL_WL, false>)val);
-    }
+	vout[p] = ((((ac_int<PIXEL_WL, false>)val) << (2*COLOUR_WL)) | (((ac_int<PIXEL_WL, false>)val) << COLOUR_WL) | (ac_int<PIXEL_WL, false>)val);
 }
      
      
