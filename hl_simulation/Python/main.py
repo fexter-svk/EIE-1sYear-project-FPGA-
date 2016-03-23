@@ -2,15 +2,16 @@ from __future__ import print_function
 from PIL import Image, ImageChops, ImageFilter, ImageOps, ImageDraw
 
 import string
-
+#Simple black and white converter - filter
 def BW(image):
     image = image.convert('LA')
     return image
-
+#Application of a Sobel filter on the resultant image
 def Find_Edges(image):
     image = image.filter(ImageFilter.FIND_EDGES)
     return image
-
+    
+#Inversion of pixels (pixel by pixel)
 def Invert(image):
     image = image.convert('RGB')
     width,height = image.size
@@ -20,7 +21,9 @@ def Invert(image):
             RGB = pixels[x,y]
             pixels[x,y]=(255-RGB[0], 255-RGB[1], 255-RGB[2])
     return image
-
+    
+#Checks the value of each individual pixel and leaves only plain black pixels if their value RGB<100
+#otherwise they are white
 def CleanImage(image):
     width,height = image.size
     pixels = image.load()
@@ -33,6 +36,8 @@ def CleanImage(image):
                 pixels[x,y]=(255, 255, 255)
 
     return image
+#Calculation of black pixels in an area 5x5 pixels
+#Returns how many pixels are black
 
 def checkPixels(image, coordinates):
     x_ref, y_ref = coordinates
@@ -46,7 +51,7 @@ def checkPixels(image, coordinates):
                 if(RGB[0]==0) and (RGB[1]==0) and (RGB[2]==0):
                     counter+=1
     return counter
-
+#Returns the topmost point black pixel of the picture
 def TopPoint(image):
     width, height = image.size
     pixels = image.load()
@@ -60,7 +65,8 @@ def TopPoint(image):
                     y_min = y
                     x_min = x
     return (x_min, y_min)
-
+    
+#Returns the rightmost pixel with the height of the object restriction
 def RightArmPoint(image, top, distance):
     width, height = image.size
     pixels = image.load()
@@ -76,19 +82,21 @@ def RightArmPoint(image, top, distance):
                         y_max = y
                         x_max = x
     return (x_max, y_max)
-
+#Calculates the middle point of the body 0.236 - proportionality constant of golden ratio
 def MiddlePoint(image, top, height):
     x_top,y_top = top
     x_middle = x_top
     y_middle = y_top + round(height*0.236)
     return (x_middle, y_middle)
-
+    
+#Calculates the waist point of the body
 def WaistPoint(image, top, height):
     x_top,y_top = top
     x_waist = x_top
     y_waist = y_top + round(height*0.518)
     return (x_waist, y_waist)
-
+    
+#Calculation of the leftmost point with the height restriction
 def LeftArmPoint(image, top, height):
     width, height = image.size
     pixels = image.load()
@@ -103,7 +111,8 @@ def LeftArmPoint(image, top, height):
                     y_result = y
                     x_result = x
     return (x_result, y_result)
-
+    
+#Calculation of the rightmost point with the height restriction
 def RightArmPoint(image, top, height):
     width, height = image.size
     pixels = image.load()
@@ -118,7 +127,8 @@ def RightArmPoint(image, top, height):
                     y_result = y
                     x_result = x
     return (x_result, y_result)
-
+    
+#Calculation of the leftmost point at the bottom 
 def LeftLegPoint(image, top):
     width, height = image.size
     pixels = image.load()
@@ -134,7 +144,7 @@ def LeftLegPoint(image, top):
                     x_result = x
     return (x_result, y_result)
 
-
+#Calculation of the rightmost point at the bottom
 def RightLegPoint(image, top):
     width, height = image.size
     pixels = image.load()
