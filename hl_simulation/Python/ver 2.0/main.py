@@ -50,14 +50,32 @@ def checkPixels(image, coordinates):
 def highlightDifferences(image):
     width, height = image.size
     pixels = image.load()
-    x_leftmost = False
-    for x in range(width):
-        for y in range(height):
+    firstDifference = False
+    x_previousValue = 0
+    x_currentLeft = -1
+    x_currentRight = -1
+    for y in range(height):
+        for x in range(width):
             RGB = pixels[x,y]
-            if (RGB[0]==255) and (RGB[1]==255) and (RGB[2]==255) and (checkPixels(image, (x,y))>5) and (x_leftmost!=False):
-                x_leftmost = True
-            if x_leftmost==True:
-                pixels[x,y]=(255,0,0)
+            if (RGB[0]==255) and (RGB[1]==255) and (RGB[2]==255):
+                if x_currentLeft==-1 and firstDifference==False:
+                    x_previousValue = x_currentLeft
+                    x_currentLeft = x
+                    firstDifference = True
+                if x_currentLeft==-1:
+                    x_previousValue = x_currentLeft
+                    x_currentLeft = x
+                else:
+                    x_currentRight = x
+                print
+            if x_currentLeft!=-1 and x_currentRight==-1:
+                for x_target in range(x-5, x+5):
+                    for y_target in range(y-5,y+5):
+                        if (x_target>=0) and (x_target<width) and (y_target>=0) and (y_target<height):
+                            pixels[x_target,y_target]=(255,0,0)
+        x_currentLeft = -1
+        x_currentRight = -1
+    return image
 
 
 
@@ -80,6 +98,7 @@ def main():
 
     diff = ImageChops.difference(ref_image, body_image)
     diff = CleanImage(diff)
+    diff = highlightDifferences(diff)
 
     diff.show()
 
