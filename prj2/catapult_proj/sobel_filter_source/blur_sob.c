@@ -61,7 +61,6 @@ ac_int<16, false> abs(ac_int<16, true> din){
     if(din < 0){
         din = -din;
     }
-    
     ac_int<16, false> tmp = din;
     return tmp;
  }
@@ -78,10 +77,12 @@ void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_
 
     // shifts pixels from KERNEL_WIDTH rows and keeps KERNEL_WIDTH columns (KERNEL_WIDTHxKERNEL_WIDTH pixels stored)
     static shift_class<ac_int<PIXEL_WL*KERNEL_WIDTH,false>, KERNEL_WIDTH> regs;
-    int  p = 0;
+    static int count = 0;
+	
+	int  p = 0;
     int k = 0;
     int i;
-
+	count++;
 	// init
 	greyx = 0;
 	greyy = 0;
@@ -150,6 +151,7 @@ void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_
 	    */
 		// group the RGB components into a single signal
 	vout[p] = ((((ac_int<PIXEL_WL, false>)val) << (2*COLOUR_WL)) | (((ac_int<PIXEL_WL, false>)val) << COLOUR_WL) | (ac_int<PIXEL_WL, false>)val);
+	
 }
      
      

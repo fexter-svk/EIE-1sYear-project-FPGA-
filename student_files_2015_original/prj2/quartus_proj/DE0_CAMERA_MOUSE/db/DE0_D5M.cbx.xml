@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="DE0_D5M">
+		<CBX_INST_ENTRY INSTANCE_NAME="|TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component" CBX_FILE_NAME="dcfifo_v5o1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component" CBX_FILE_NAME="dcfifo_v5o1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|sdram_pll:u6|altpll:altpll_component" CBX_FILE_NAME="altpll_9ee2.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|TOP_DE0_CAMERA_MOUSE|altshift_taps:fifo_inst2" CBX_FILE_NAME="shift_taps_lpm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:altshift_taps_component" CBX_FILE_NAME="shift_taps_rnn.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component" CBX_FILE_NAME="dcfifo_v5o1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component" CBX_FILE_NAME="dcfifo_v5o1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|TOP_DE0_CAMERA_MOUSE|vga_mux:inst10|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_u7e.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
