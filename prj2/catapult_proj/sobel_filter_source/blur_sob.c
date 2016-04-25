@@ -55,8 +55,6 @@ const ac_int<8,true> Y_MASK[3][3] = {
 // shift_class: page 119 HLS Blue Book
 #include "shift_class_sob.h" 
 
-//ac_int<16, false> abs(ac_int<16, true> din);
-
 ac_int<16, false> abs(ac_int<16, true> din){
     if(din < 0){
         din = -din;
@@ -66,7 +64,7 @@ ac_int<16, false> abs(ac_int<16, true> din){
  }
 
 #pragma hls_design top
-void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS])
+void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS], ac_int<16, false> *counter)
 {
     ac_int<16, false> val, r[KERNEL_WIDTH], g[KERNEL_WIDTH], b[KERNEL_WIDTH];
     ac_int<16, true> greyx, greyy, gr[KERNEL_WIDTH][KERNEL_WIDTH];
@@ -120,7 +118,8 @@ void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_
 	   }
 	}
 	/*
-		if (i == 0){
+	
+			if (i == 0){
 		     // greyx -> multiply this column by [-1, 0, 1]
 			greyx += (gr[0]*1)+(gr[1]*0)+(gr[2]*-1);
 				 
@@ -142,22 +141,12 @@ void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_
 	*/	
 	val = abs(greyx) + abs(greyy);
 	if (val >= 1023) { val = 1023; }
-		
-		// normalize result
-		/*
-		red /= KERNEL_NUMEL;
-		green /= KERNEL_NUMEL;
-		blue /= KERNEL_NUMEL;
-	    */
 		// group the RGB components into a single signal
 	vout[p] = ((((ac_int<PIXEL_WL, false>)val) << (2*COLOUR_WL)) | (((ac_int<PIXEL_WL, false>)val) << COLOUR_WL) | (ac_int<PIXEL_WL, false>)val);
+	if (count >= 500){ count = 0;}
+	*counter = count;
 	
 }
-     
-     
-     
-     
-     
      
 #else    
 // display input  (test only)
@@ -172,6 +161,5 @@ void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_
     }
 }
 #endif
-
 
 // end of file

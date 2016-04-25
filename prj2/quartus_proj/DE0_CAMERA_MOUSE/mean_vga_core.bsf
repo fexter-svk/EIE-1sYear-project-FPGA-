@@ -20,7 +20,7 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 384 128)
+	(rect 16 16 392 128)
 	(text "mean_vga_core" (rect 5 0 72 12)(font "Arial" ))
 	(text "inst" (rect 8 96 20 108)(font "Arial" ))
 	(port
@@ -52,13 +52,20 @@ applicable agreement for further details.
 		(line (pt 0 80)(pt 16 80)(line_width 3))
 	)
 	(port
-		(pt 368 32)
+		(pt 376 32)
 		(output)
 		(text "vout_rsc_mgc_out_stdreg_d[29..0]" (rect 0 0 143 12)(font "Arial" ))
-		(text "vout_rsc_mgc_out_stdreg_d[29..0]" (rect 204 27 347 39)(font "Arial" ))
-		(line (pt 368 32)(pt 352 32)(line_width 3))
+		(text "vout_rsc_mgc_out_stdreg_d[29..0]" (rect 212 27 355 39)(font "Arial" ))
+		(line (pt 376 32)(pt 360 32)(line_width 3))
+	)
+	(port
+		(pt 376 48)
+		(output)
+		(text "counter_rsc_mgc_out_stdreg_d[15..0]" (rect 0 0 154 12)(font "Arial" ))
+		(text "counter_rsc_mgc_out_stdreg_d[15..0]" (rect 201 43 355 55)(font "Arial" ))
+		(line (pt 376 48)(pt 360 48)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 352 96)(line_width 1))
+		(rectangle (rect 16 16 360 96)(line_width 1))
 	)
 )
