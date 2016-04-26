@@ -5,6 +5,7 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component" CBX_FILE_NAME="dcfifo_v5o1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|TOP_DE0_CAMERA_MOUSE|mean_vga:inst1|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_2eh.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|TOP_DE0_CAMERA_MOUSE|mean_vga:inst1|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_bfh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|TOP_DE0_CAMERA_MOUSE|top:inst2|processor:DUMMY|lpm_mult:Mult0" CBX_FILE_NAME="mult_dat.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component" CBX_FILE_NAME="dcfifo_v5o1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|TOP_DE0_CAMERA_MOUSE|mean_vga:inst1|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_bfh.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|TOP_DE0_CAMERA_MOUSE|mean_vga:inst1|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_hfh.tdf"/>

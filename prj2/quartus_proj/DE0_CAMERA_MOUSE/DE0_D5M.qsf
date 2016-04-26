@@ -544,6 +544,14 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to UART_RXD
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to UART_RTS
 
 
+set_global_assignment -name VERILOG_FILE music/top.v
+set_global_assignment -name VERILOG_FILE music/spi2dac.v
+set_global_assignment -name VERILOG_FILE music/spi2adc.v
+set_global_assignment -name VERILOG_FILE music/pulse_gen.v
+set_global_assignment -name VERILOG_FILE music/multiple_echo.v
+set_global_assignment -name VERILOG_FILE music/hex_to_7seg.v
+set_global_assignment -name VERILOG_FILE music/FIFO.v
+set_global_assignment -name VERILOG_FILE music/clk_div.v
 set_global_assignment -name VERILOG_FILE "../../../../Desktop/labs/FPGA Lab/FPGA Lab/stopwatch2works/module decode_7segment.v"
 set_global_assignment -name VERILOG_FILE catapult_ip/sobel_filter/rtl.v
 set_global_assignment -name VERILOG_FILE V/ps2.v
