@@ -35,3 +35,12 @@ Branching solution 'solution.v10' at state 'new' (PRJ-2)
 Branching solution 'solution.v11' at state 'new' (PRJ-2)
 Branching solution 'solution.v11' at state 'new' (PRJ-2)
 Branching solution 'solution.v11' at state 'new' (PRJ-2)
+
+# Messages from "go analyze"
+
+Front End called with arguments: -- {H:\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\shift_class_sob.h} {H:\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.h} {H:\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter_source\blur_sob.c} (CIN-69)
+Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
+Pragma 'hls_design<top>' detected on routine 'mean_vga' (CIN-6)
+Source file analysis completed (CIN-68)
+Starting transformation 'analyze' on solution 'solution.v11' (SOL-8)
+Completed transformation 'analyze' on solution 'solution.v11': elapsed time 1.79 seconds, memory usage 293352kB, peak memory usage 372440kB (SOL-9)

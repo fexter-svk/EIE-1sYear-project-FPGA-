@@ -1,6 +1,0 @@
-
-# Messages from "go new"
-
-Creating project directory 'H:\EIE-1stYear-project-FPGA\prj2\catapult_proj\capture-save_edge_image\capture-save_edge_image'. (PRJ-1)
-Branching solution 'solution.v2' at state 'new' (PRJ-2)
-Branching solution 'solution.v2' at state 'new' (PRJ-2)

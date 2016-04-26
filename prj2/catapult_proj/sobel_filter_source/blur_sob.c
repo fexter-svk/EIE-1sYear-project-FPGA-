@@ -38,6 +38,8 @@
 
 #include <ac_fixed.h>
 #include "blur_sob.h"
+#include "stdio.h"
+#include "ac_int.h"
 #include <iostream>
 
 const ac_int<8,true> X_MASK[3][3] = {
@@ -53,7 +55,13 @@ const ac_int<8,true> Y_MASK[3][3] = {
     {-1, -2,-1}
 };
 
+//2-dimensional array to store reference image
+//stored on button press and held persistently by this structure
 ac_int<1,false> MEMREF[640][480];
+
+ac_int<10,false> ARM_COORDS[4];
+
+
 // shift_class: page 119 HLS Blue Book
 #include "shift_class_sob.h" 
 
@@ -64,31 +72,39 @@ ac_int<16, false> abs(ac_int<16, true> din){
     ac_int<16, false> tmp = din;
     return tmp;
  }
+/* 
+void setup(ac_int<10,false> &ARM_COORDS[4]){
+    // processing
+    
+}
+*/
 
 #pragma hls_design top
-void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS], bool wr_en, ac_int<16, false> *counter)
+void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS], ac_int<(COORD_WL+COORD_WL), false> * vga_xy, ac_int<1, false> wr_en)
 {
     ac_int<16, false> val, r[KERNEL_WIDTH], g[KERNEL_WIDTH], b[KERNEL_WIDTH];
     ac_int<16, true> greyx, greyy, gr[KERNEL_WIDTH][KERNEL_WIDTH];
+    ac_int<10, false> vga_x, vga_y; // screen coordinates
+    
+// extract VGA pixel X-Y coordinates
+    
+    vga_x = (*vga_xy).slc<COORD_WL>(0);
+    vga_y = (*vga_xy).slc<COORD_WL>(10);
 
-// #if 1: use filter
-// #if 0: copy input to output bypassing filter
-#if 1
     
     // shifts pixels from KERNEL_WIDTH rows and keeps KERNEL_WIDTH columns (KERNEL_WIDTHxKERNEL_WIDTH pixels stored)
     static shift_class<ac_int<PIXEL_WL*KERNEL_WIDTH,false>, KERNEL_WIDTH> regs;
-    static int count = 0;
 	
-	int  p = 0;
-    int k = 0;
-    int i;
-	count++;
+    ac_int<2,false> k = 0;
+    ac_int<2,false> i;
+    bool set_en;
+    
 	// init
 	greyx = 0;
 	greyy = 0;
 		
 		// shift input data in the filter fifo
-	regs << vin[p]; // advance the pointer address by the pixel number (testbench/simulation only)
+	regs << vin[0]; // advance the pointer address by the pixel number (testbench/simulation only)
 		
 	// greyscale
 	ACC1: for(i = 0; i < KERNEL_WIDTH; i++) {
@@ -119,68 +135,43 @@ void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_
 	       greyy += gr[i][k]*Y_MASK[i][k];
 	   }
 	}
-	
+	// sobel addition
 	val = abs(greyx) + abs(greyy);
+	
+	// black and white the sobel and turn into 1 and 0 for storage
 	ac_int<1,false> bit;
 	if (val >= 512) { 
 	   val = 1023;
 	   bit = 1;
 	}
-	
 	if (val < 512) { 
 	   val = 0;
 	   bit = 0;
 	}
+//writing reference image to memory
+	ac_int<1,false> one = 1;
+	if (wr_en==one){
+	   MEMREF[vga_x][vga_y] = bit;
+	   if (vga_y == 240){
+	       val = 500;   
+	   }
+	}
 	
-	x++;
-	if (x == 640){
-	   x = 0;
-	   y++;    
-    }
-    
-	if (wr_en){
-	   MEMREF[x][y] = bit;
+	if (set_en) {
+// processing for setup- i.e. calibrate position of arms
+	    //setup(&ARM_COORDS[4]);
+	}
+	
+	else { 
+	   // main program
 	   
-	   
+	}    
+	if (vga_x == 300){
+	   val = 500;  
 	}
-	/*
-	
-	if (val == 0){bit = 0;}
-	if (val == 2013){bit = 1;}
-	
-	if (bit == getRefVal(count)){
-		// no difference
-	}
-	else{
-		// new edge
-		
-		// remember the coordinates
-		
-	}
-	
-	*/
-	
 	// group the RGB components into a single signal
-	vout[p] = ((((ac_int<PIXEL_WL, false>)val) << (2*COLOUR_WL)) | (((ac_int<PIXEL_WL, false>)val) << COLOUR_WL) | (ac_int<PIXEL_WL, false>)val);
-	
-	
-	if (count >= 500){ count = 0;}
-	*counter = count;
+	vout[0] = ((((ac_int<PIXEL_WL, false>)val) << (2*COLOUR_WL)) | (((ac_int<PIXEL_WL, false>)val) << COLOUR_WL) | (ac_int<PIXEL_WL, false>)val);
 	
 }
-     
-#else    
-// display input  (test only)
-    FRAME: for(p = 0; p < NUM_PIXELS; p++) {
-        // copy the value of each colour component from the input stream
-        red = vin[p].slc<COLOUR_WL>(2*COLOUR_WL);
-        green = vin[p].slc<COLOUR_WL>(COLOUR_WL);
-        blue = vin[p].slc<COLOUR_WL>(0);
-
-		// combine the 3 color components into 1 signal only
-        vout[p] = ((((ac_int<PIXEL_WL, false>)red) << (2*COLOUR_WL)) | (((ac_int<PIXEL_WL, false>)green) << COLOUR_WL) | (ac_int<PIXEL_WL, false>)blue);   
-    }
-}
-#endif
 
 // end of file
