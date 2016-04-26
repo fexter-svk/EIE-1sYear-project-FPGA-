@@ -33,9 +33,9 @@ applicable agreement for further details.
 	(port
 		(pt 0 48)
 		(input)
-		(text "SW[9..0]" (rect 0 0 36 12)(font "Arial" ))
-		(text "SW[9..0]" (rect 21 43 57 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
+		(text "SW" (rect 0 0 16 12)(font "Arial" ))
+		(text "SW" (rect 21 43 37 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
 	)
 	(port
 		(pt 0 64)

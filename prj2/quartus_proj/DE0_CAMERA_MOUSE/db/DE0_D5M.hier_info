@@ -55,19 +55,20 @@ KEY[0] => DE0_D5M:inst.KEY[0]
 KEY[0] => mean_vga:inst1.arst_n
 KEY[1] => DE0_D5M:inst.KEY[1]
 KEY[2] => DE0_D5M:inst.KEY[2]
-SW9 => DE0_D5M:inst.SW[9]
-SW8 => DE0_D5M:inst.SW[8]
-SW8 => mean_vga:inst1.wr_en_rsc_z
-SW7 => DE0_D5M:inst.SW[7]
-SW6 => DE0_D5M:inst.SW[6]
-SW5 => DE0_D5M:inst.SW[5]
-SW5 => vga_mux:inst10.sel[1]
-SW4 => DE0_D5M:inst.SW[4]
-SW4 => vga_mux:inst10.sel[0]
-SW3 => DE0_D5M:inst.SW[3]
-SW2 => DE0_D5M:inst.SW[2]
-SW1 => DE0_D5M:inst.SW[1]
-SW0 => DE0_D5M:inst.SW[0]
+SW[0] => DE0_D5M:inst.SW[0]
+SW[1] => DE0_D5M:inst.SW[1]
+SW[2] => DE0_D5M:inst.SW[2]
+SW[3] => DE0_D5M:inst.SW[3]
+SW[4] => DE0_D5M:inst.SW[4]
+SW[4] => vga_mux:inst10.sel[0]
+SW[5] => DE0_D5M:inst.SW[5]
+SW[5] => vga_mux:inst10.sel[1]
+SW[6] => DE0_D5M:inst.SW[6]
+SW[7] => DE0_D5M:inst.SW[7]
+SW[8] => DE0_D5M:inst.SW[8]
+SW[8] => mean_vga:inst1.wr_en_rsc_z
+SW[9] => DE0_D5M:inst.SW[9]
+SW[9] => top:inst3.SW
 DRAM_UDQM <= DE0_D5M:inst.DRAM_UDQM
 DRAM_BA_1 <= DE0_D5M:inst.DRAM_BA_1
 DRAM_BA_0 <= DE0_D5M:inst.DRAM_BA_0
@@ -80,32 +81,22 @@ DRAM_CLK <= DE0_D5M:inst.DRAM_CLK
 VGA_CLK <= DE0_D5M:inst.VGA_CLK
 VGA_HS <= DE0_D5M:inst.VGA_HS
 VGA_VS <= DE0_D5M:inst.VGA_VS
-DAC_SDI <= top:inst2.DAC_SDI
-CLOCK_51 => top:inst2.CLOCK_50
-ADC_SDO => top:inst2.ADC_SDO
-SW39 => top:inst2.SW[9]
-SW38 => top:inst2.SW[8]
-SW37 => top:inst2.SW[7]
-SW36 => top:inst2.SW[6]
-SW35 => top:inst2.SW[5]
-SW34 => top:inst2.SW[4]
-SW33 => top:inst2.SW[3]
-SW32 => top:inst2.SW[2]
-SW31 => top:inst2.SW[1]
-SW30 => top:inst2.SW[0]
-volume[0] => top:inst2.volume[0]
-volume[1] => top:inst2.volume[1]
-volume[2] => top:inst2.volume[2]
-volume[3] => top:inst2.volume[3]
-volume[4] => top:inst2.volume[4]
-volume[5] => top:inst2.volume[5]
-volume[6] => top:inst2.volume[6]
-volume[7] => top:inst2.volume[7]
-SCK <= top:inst2.SCK
-DAC_CS <= top:inst2.DAC_CS
-DAC_LD <= top:inst2.DAC_LD
-ADC_SDI <= top:inst2.ADC_SDI
-ADC_CS <= top:inst2.ADC_CS
+DAC_SDI <= top:inst3.DAC_SDI
+CLOCK_51 => top:inst3.CLOCK_50
+ADC_SDO => top:inst3.ADC_SDO
+volume[0] => top:inst3.volume[0]
+volume[1] => top:inst3.volume[1]
+volume[2] => top:inst3.volume[2]
+volume[3] => top:inst3.volume[3]
+volume[4] => top:inst3.volume[4]
+volume[5] => top:inst3.volume[5]
+volume[6] => top:inst3.volume[6]
+volume[7] => top:inst3.volume[7]
+SCK <= top:inst3.SCK
+DAC_CS <= top:inst3.DAC_CS
+DAC_LD <= top:inst3.DAC_LD
+ADC_SDI <= top:inst3.ADC_SDI
+ADC_CS <= top:inst3.ADC_CS
 DRAM_ADDR[0] <= DE0_D5M:inst.DRAM_ADDR[0]
 DRAM_ADDR[1] <= DE0_D5M:inst.DRAM_ADDR[1]
 DRAM_ADDR[2] <= DE0_D5M:inst.DRAM_ADDR[2]
@@ -127,13 +118,13 @@ HEX0[3] <= <GND>
 HEX0[4] <= <GND>
 HEX0[5] <= <GND>
 HEX0[6] <= <GND>
-HEX0_D[0] <= top:inst2.HEX0_D[0]
-HEX0_D[1] <= top:inst2.HEX0_D[1]
-HEX0_D[2] <= top:inst2.HEX0_D[2]
-HEX0_D[3] <= top:inst2.HEX0_D[3]
-HEX0_D[4] <= top:inst2.HEX0_D[4]
-HEX0_D[5] <= top:inst2.HEX0_D[5]
-HEX0_D[6] <= top:inst2.HEX0_D[6]
+HEX0_D[0] <= top:inst3.HEX0_D[0]
+HEX0_D[1] <= top:inst3.HEX0_D[1]
+HEX0_D[2] <= top:inst3.HEX0_D[2]
+HEX0_D[3] <= top:inst3.HEX0_D[3]
+HEX0_D[4] <= top:inst3.HEX0_D[4]
+HEX0_D[5] <= top:inst3.HEX0_D[5]
+HEX0_D[6] <= top:inst3.HEX0_D[6]
 HEX1[0] <= <GND>
 HEX1[1] <= <GND>
 HEX1[2] <= <GND>
@@ -141,13 +132,13 @@ HEX1[3] <= <GND>
 HEX1[4] <= <GND>
 HEX1[5] <= <GND>
 HEX1[6] <= <GND>
-HEX1_D[0] <= top:inst2.HEX1_D[0]
-HEX1_D[1] <= top:inst2.HEX1_D[1]
-HEX1_D[2] <= top:inst2.HEX1_D[2]
-HEX1_D[3] <= top:inst2.HEX1_D[3]
-HEX1_D[4] <= top:inst2.HEX1_D[4]
-HEX1_D[5] <= top:inst2.HEX1_D[5]
-HEX1_D[6] <= top:inst2.HEX1_D[6]
+HEX1_D[0] <= top:inst3.HEX1_D[0]
+HEX1_D[1] <= top:inst3.HEX1_D[1]
+HEX1_D[2] <= top:inst3.HEX1_D[2]
+HEX1_D[3] <= top:inst3.HEX1_D[3]
+HEX1_D[4] <= top:inst3.HEX1_D[4]
+HEX1_D[5] <= top:inst3.HEX1_D[5]
+HEX1_D[6] <= top:inst3.HEX1_D[6]
 HEX2[0] <= <GND>
 HEX2[1] <= <GND>
 HEX2[2] <= <GND>
@@ -155,13 +146,13 @@ HEX2[3] <= <GND>
 HEX2[4] <= <GND>
 HEX2[5] <= <GND>
 HEX2[6] <= <GND>
-HEX2_D[0] <= top:inst2.HEX2_D[0]
-HEX2_D[1] <= top:inst2.HEX2_D[1]
-HEX2_D[2] <= top:inst2.HEX2_D[2]
-HEX2_D[3] <= top:inst2.HEX2_D[3]
-HEX2_D[4] <= top:inst2.HEX2_D[4]
-HEX2_D[5] <= top:inst2.HEX2_D[5]
-HEX2_D[6] <= top:inst2.HEX2_D[6]
+HEX2_D[0] <= top:inst3.HEX2_D[0]
+HEX2_D[1] <= top:inst3.HEX2_D[1]
+HEX2_D[2] <= top:inst3.HEX2_D[2]
+HEX2_D[3] <= top:inst3.HEX2_D[3]
+HEX2_D[4] <= top:inst3.HEX2_D[4]
+HEX2_D[5] <= top:inst3.HEX2_D[5]
+HEX2_D[6] <= top:inst3.HEX2_D[6]
 HEX3[0] <= <GND>
 HEX3[1] <= <GND>
 HEX3[2] <= <GND>
@@ -8311,18 +8302,9 @@ RESET => SD[2].ENA
 RESET => SD[1].ENA
 
 
-|TOP_DE0_CAMERA_MOUSE|top:inst2
+|TOP_DE0_CAMERA_MOUSE|top:inst3
 CLOCK_50 => CLOCK_50.IN5
-SW[0] => ~NO_FANOUT~
-SW[1] => ~NO_FANOUT~
-SW[2] => ~NO_FANOUT~
-SW[3] => ~NO_FANOUT~
-SW[4] => ~NO_FANOUT~
-SW[5] => ~NO_FANOUT~
-SW[6] => ~NO_FANOUT~
-SW[7] => ~NO_FANOUT~
-SW[8] => ~NO_FANOUT~
-SW[9] => SW[9].IN1
+SW => SW.IN1
 HEX0_D[0] <= hex_to_7seg:SEG0.port0
 HEX0_D[1] <= hex_to_7seg:SEG0.port0
 HEX0_D[2] <= hex_to_7seg:SEG0.port0
@@ -8361,7 +8343,7 @@ ADC_CS <= spi2adc:SPI_ADC.adc_cs
 ADC_SDO => ADC_SDO.IN1
 
 
-|TOP_DE0_CAMERA_MOUSE|top:inst2|clk_div:GEN_10K
+|TOP_DE0_CAMERA_MOUSE|top:inst3|clk_div:GEN_10K
 clkin => clkout~reg0.CLK
 clkin => ctr[0].CLK
 clkin => ctr[1].CLK
@@ -8408,7 +8390,7 @@ tc[20] => ctr.DATAB
 clkout <= clkout~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TOP_DE0_CAMERA_MOUSE|top:inst2|pulse_gen:PULSE
+|TOP_DE0_CAMERA_MOUSE|top:inst3|pulse_gen:PULSE
 pulse <= pulse~reg0.DB_MAX_OUTPUT_PORT_TYPE
 in => pulse.DATAB
 in => Selector0.IN1
@@ -8417,7 +8399,7 @@ clk => pulse~reg0.CLK
 clk => state~1.DATAIN
 
 
-|TOP_DE0_CAMERA_MOUSE|top:inst2|spi2dac:SPI_DAC
+|TOP_DE0_CAMERA_MOUSE|top:inst3|spi2dac:SPI_DAC
 sysclk => dac_start.CLK
 sysclk => clk_1MHz.CLK
 sysclk => ctr[0].CLK
@@ -8445,7 +8427,7 @@ dac_sck <= dac_sck.DB_MAX_OUTPUT_PORT_TYPE
 dac_ld <= dac_ld~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TOP_DE0_CAMERA_MOUSE|top:inst2|spi2adc:SPI_ADC
+|TOP_DE0_CAMERA_MOUSE|top:inst3|spi2adc:SPI_ADC
 sysclk => adc_start.CLK
 sysclk => clk_1MHz.CLK
 sysclk => ctr[0].CLK
@@ -8475,7 +8457,7 @@ adc_sck <= adc_sck.DB_MAX_OUTPUT_PORT_TYPE
 sdata_from_adc => shift_reg[0].DATAIN
 
 
-|TOP_DE0_CAMERA_MOUSE|top:inst2|processor:DUMMY
+|TOP_DE0_CAMERA_MOUSE|top:inst3|processor:DUMMY
 sysclk => sysclk.IN1
 data_in[0] => Add0.IN20
 data_in[1] => Add0.IN19
@@ -8488,27 +8470,27 @@ data_in[7] => Add0.IN13
 data_in[8] => Add0.IN12
 data_in[9] => Add0.IN11
 data_valid => data_valid.IN1
-data_out[0] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[1] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[2] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[3] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[4] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[5] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[6] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[7] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[8] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[9] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
-volume[0] => Mult0.IN8
-volume[1] => Mult0.IN7
-volume[2] => Mult0.IN6
-volume[3] => Mult0.IN5
-volume[4] => Mult0.IN4
-volume[5] => Mult0.IN3
-volume[6] => Mult0.IN2
-volume[7] => Mult0.IN1
+data_out[0] <= <GND>
+data_out[1] <= <GND>
+data_out[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[8] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[9] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+volume[0] => ~NO_FANOUT~
+volume[1] => ~NO_FANOUT~
+volume[2] => ~NO_FANOUT~
+volume[3] => ~NO_FANOUT~
+volume[4] => ~NO_FANOUT~
+volume[5] => ~NO_FANOUT~
+volume[6] => ~NO_FANOUT~
+volume[7] => ~NO_FANOUT~
 
 
-|TOP_DE0_CAMERA_MOUSE|top:inst2|processor:DUMMY|pulse_gen:pulse_gen
+|TOP_DE0_CAMERA_MOUSE|top:inst3|processor:DUMMY|pulse_gen:pulse_gen
 pulse <= pulse~reg0.DB_MAX_OUTPUT_PORT_TYPE
 in => pulse.DATAB
 in => Selector0.IN1
@@ -8517,7 +8499,7 @@ clk => pulse~reg0.CLK
 clk => state~1.DATAIN
 
 
-|TOP_DE0_CAMERA_MOUSE|top:inst2|hex_to_7seg:SEG0
+|TOP_DE0_CAMERA_MOUSE|top:inst3|hex_to_7seg:SEG0
 out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
@@ -8531,7 +8513,7 @@ in[2] => Decoder0.IN1
 in[3] => Decoder0.IN0
 
 
-|TOP_DE0_CAMERA_MOUSE|top:inst2|hex_to_7seg:SEG1
+|TOP_DE0_CAMERA_MOUSE|top:inst3|hex_to_7seg:SEG1
 out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
@@ -8545,7 +8527,7 @@ in[2] => Decoder0.IN1
 in[3] => Decoder0.IN0
 
 
-|TOP_DE0_CAMERA_MOUSE|top:inst2|hex_to_7seg:SEG2
+|TOP_DE0_CAMERA_MOUSE|top:inst3|hex_to_7seg:SEG2
 out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE

@@ -33,7 +33,7 @@ module processor (sysclk, data_in, data_valid, data_out,volume);
 	
 	assign y = data_in[9:0] - ADC_OFFSET;		// x is input in 2's complement
 	
-	assign data_out = (y  + DAC_OFFSET) * 4;
+	assign data_out = (y  + DAC_OFFSET) * volume;
 	
 	
 		

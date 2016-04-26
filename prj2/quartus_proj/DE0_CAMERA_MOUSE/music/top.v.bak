@@ -11,7 +11,7 @@ module top (CLOCK_50, SW, HEX0_D, HEX1_D, HEX2_D, volume,
 					ADC_SDI, ADC_CS, ADC_SDO);
 
 	input			CLOCK_50;		// DE0 50MHz system clock
-	input	SW;				// 10 slide switches to specify address to ROM
+	input [9:0]	SW;				// 10 slide switches to specify address to ROM
 	output [6:0] HEX0_D;
 	output [6:0] HEX1_D;
 	output [6:0] HEX2_D;	
@@ -40,7 +40,7 @@ module top (CLOCK_50, SW, HEX0_D, HEX1_D, HEX2_D, volume,
 					
 	spi2adc SPI_ADC (												// perform a A-to-D conversion
 		.sysclk (CLOCK_50), 										// order of parameters do not matter
-		.channel (SW), 
+		.channel (SW[9]), 
 		.start (ld_pulse),
 		.data_from_adc (data_in),
 		.data_valid (data_valid),
