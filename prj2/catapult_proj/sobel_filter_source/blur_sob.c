@@ -140,9 +140,31 @@ void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_
 		}
 	*/	
 	val = abs(greyx) + abs(greyy);
-	if (val >= 1023) { val = 1023; }
-		// group the RGB components into a single signal
+	if (val >= 128) { val = 1023; }
+	if (val < 128) { val = 0; }
+	
+	/*
+	
+	int bit;
+	if (val == 0){bit = 0;}
+	if (val == 2013){bit = 1;}
+	
+	if (bit == getRefVal(count)){
+		// no difference
+	}
+	else{
+		// new edge
+		
+		// remember the coordinates
+		
+	}
+	
+	*/
+	
+	// group the RGB components into a single signal
 	vout[p] = ((((ac_int<PIXEL_WL, false>)val) << (2*COLOUR_WL)) | (((ac_int<PIXEL_WL, false>)val) << COLOUR_WL) | (ac_int<PIXEL_WL, false>)val);
+	
+	
 	if (count >= 500){ count = 0;}
 	*counter = count;
 	

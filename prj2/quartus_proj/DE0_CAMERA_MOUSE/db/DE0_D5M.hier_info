@@ -52,7 +52,7 @@ GPIO_1[31] <> DE0_D5M:inst.GPIO_1[31]
 GPIO_1_CLKIN[0] => DE0_D5M:inst.GPIO_1_CLKIN[0]
 GPIO_1_CLKIN[1] => DE0_D5M:inst.GPIO_1_CLKIN[1]
 KEY[0] => DE0_D5M:inst.KEY[0]
-KEY[0] => mean_vga:inst9.arst_n
+KEY[0] => mean_vga:inst6.arst_n
 KEY[1] => DE0_D5M:inst.KEY[1]
 KEY[2] => DE0_D5M:inst.KEY[2]
 SW[0] => DE0_D5M:inst.SW[0]
@@ -8298,7 +8298,7 @@ display[5] <= display.DB_MAX_OUTPUT_PORT_TYPE
 display[6] <= display.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TOP_DE0_CAMERA_MOUSE|mean_vga:inst9
+|TOP_DE0_CAMERA_MOUSE|mean_vga:inst6
 vin_rsc_z[0] => vin_rsc_z[0].IN1
 vin_rsc_z[1] => vin_rsc_z[1].IN1
 vin_rsc_z[2] => vin_rsc_z[2].IN1
@@ -8440,7 +8440,7 @@ en => en.IN1
 arst_n => arst_n.IN1
 
 
-|TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mgc_in_wire:vin_rsc_mgc_in_wire
+|TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mgc_in_wire:vin_rsc_mgc_in_wire
 d[0] <= z[0].DB_MAX_OUTPUT_PORT_TYPE
 d[1] <= z[1].DB_MAX_OUTPUT_PORT_TYPE
 d[2] <= z[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -8623,7 +8623,7 @@ z[88] => d[88].DATAIN
 z[89] => d[89].DATAIN
 
 
-|TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mgc_out_stdreg:vout_rsc_mgc_out_stdreg
+|TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mgc_out_stdreg:vout_rsc_mgc_out_stdreg
 d[0] => z[0].DATAIN
 d[1] => z[1].DATAIN
 d[2] => z[2].DATAIN
@@ -8686,7 +8686,7 @@ z[28] <= d[28].DB_MAX_OUTPUT_PORT_TYPE
 z[29] <= d[29].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mgc_out_stdreg:counter_rsc_mgc_out_stdreg
+|TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mgc_out_stdreg:counter_rsc_mgc_out_stdreg
 d[0] => z[0].DATAIN
 d[1] => z[1].DATAIN
 d[2] => z[2].DATAIN
@@ -8721,7 +8721,7 @@ z[14] <= d[14].DB_MAX_OUTPUT_PORT_TYPE
 z[15] <= d[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst
+|TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst
 clk => reg_regs_regs_0_sva_cse[0].CLK
 clk => reg_regs_regs_0_sva_cse[1].CLK
 clk => reg_regs_regs_0_sva_cse[2].CLK

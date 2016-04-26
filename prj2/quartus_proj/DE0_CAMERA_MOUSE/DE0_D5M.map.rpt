@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE0_D5M
-Mon Apr 25 13:44:33 2016
+Mon Apr 25 15:40:41 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -88,21 +88,21 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
  80. Parameter Settings for User Entity Instance: DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component
  81. Parameter Settings for User Entity Instance: DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component
  82. Parameter Settings for User Entity Instance: DE0_D5M:inst|I2C_CCD_Config:u8
- 83. Parameter Settings for User Entity Instance: mean_vga:inst9|mgc_in_wire:vin_rsc_mgc_in_wire
- 84. Parameter Settings for User Entity Instance: mean_vga:inst9|mgc_out_stdreg:vout_rsc_mgc_out_stdreg
- 85. Parameter Settings for User Entity Instance: mean_vga:inst9|mgc_out_stdreg:counter_rsc_mgc_out_stdreg
+ 83. Parameter Settings for User Entity Instance: mean_vga:inst6|mgc_in_wire:vin_rsc_mgc_in_wire
+ 84. Parameter Settings for User Entity Instance: mean_vga:inst6|mgc_out_stdreg:vout_rsc_mgc_out_stdreg
+ 85. Parameter Settings for User Entity Instance: mean_vga:inst6|mgc_out_stdreg:counter_rsc_mgc_out_stdreg
  86. Parameter Settings for User Entity Instance: altshift_taps:fifo_inst2
  87. Parameter Settings for User Entity Instance: vga_mux:inst10|LPM_MUX:LPM_MUX_component
- 88. Parameter Settings for Inferred Entity Instance: mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult9
- 89. Parameter Settings for Inferred Entity Instance: mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult5
- 90. Parameter Settings for Inferred Entity Instance: mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4
- 91. Parameter Settings for Inferred Entity Instance: mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult8
- 92. Parameter Settings for Inferred Entity Instance: mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult7
- 93. Parameter Settings for Inferred Entity Instance: mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3
- 94. Parameter Settings for Inferred Entity Instance: mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2
- 95. Parameter Settings for Inferred Entity Instance: mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult1
- 96. Parameter Settings for Inferred Entity Instance: mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult0
- 97. Parameter Settings for Inferred Entity Instance: mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult6
+ 88. Parameter Settings for Inferred Entity Instance: mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult9
+ 89. Parameter Settings for Inferred Entity Instance: mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult5
+ 90. Parameter Settings for Inferred Entity Instance: mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4
+ 91. Parameter Settings for Inferred Entity Instance: mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult8
+ 92. Parameter Settings for Inferred Entity Instance: mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult7
+ 93. Parameter Settings for Inferred Entity Instance: mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3
+ 94. Parameter Settings for Inferred Entity Instance: mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2
+ 95. Parameter Settings for Inferred Entity Instance: mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult1
+ 96. Parameter Settings for Inferred Entity Instance: mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult0
+ 97. Parameter Settings for Inferred Entity Instance: mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult6
  98. altshift_taps Parameter Settings by Entity Instance
  99. altpll Parameter Settings by Entity Instance
 100. dcfifo Parameter Settings by Entity Instance
@@ -147,15 +147,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Apr 25 13:44:33 2016            ;
+; Analysis & Synthesis Status        ; Successful - Mon Apr 25 15:40:40 2016            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; DE0_D5M                                          ;
 ; Top-level Entity Name              ; TOP_DE0_CAMERA_MOUSE                             ;
 ; Family                             ; Cyclone III                                      ;
-; Total logic elements               ; 2,927                                            ;
-;     Total combinational functions  ; 2,359                                            ;
-;     Dedicated logic registers      ; 1,292                                            ;
-; Total registers                    ; 1292                                             ;
+; Total logic elements               ; 2,926                                            ;
+;     Total combinational functions  ; 2,358                                            ;
+;     Dedicated logic registers      ; 1,290                                            ;
+; Total registers                    ; 1290                                             ;
 ; Total pins                         ; 141                                              ;
 ; Total virtual pins                 ; 0                                                ;
 ; Total memory bits                  ; 134,236                                          ;
@@ -368,20 +368,20 @@ applicable agreement for further details.
 +---------------------------------------------+-------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                               ;
 +---------------------------------------------+-------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 2,927                                                                               ;
+; Estimated Total logic elements              ; 2,926                                                                               ;
 ;                                             ;                                                                                     ;
-; Total combinational functions               ; 2359                                                                                ;
+; Total combinational functions               ; 2358                                                                                ;
 ; Logic element usage by number of LUT inputs ;                                                                                     ;
-;     -- 4 input functions                    ; 623                                                                                 ;
+;     -- 4 input functions                    ; 630                                                                                 ;
 ;     -- 3 input functions                    ; 1031                                                                                ;
-;     -- <=2 input functions                  ; 705                                                                                 ;
+;     -- <=2 input functions                  ; 697                                                                                 ;
 ;                                             ;                                                                                     ;
 ; Logic elements by mode                      ;                                                                                     ;
-;     -- normal mode                          ; 1271                                                                                ;
-;     -- arithmetic mode                      ; 1088                                                                                ;
+;     -- normal mode                          ; 1276                                                                                ;
+;     -- arithmetic mode                      ; 1082                                                                                ;
 ;                                             ;                                                                                     ;
-; Total registers                             ; 1292                                                                                ;
-;     -- Dedicated logic registers            ; 1292                                                                                ;
+; Total registers                             ; 1290                                                                                ;
+;     -- Dedicated logic registers            ; 1290                                                                                ;
 ;     -- I/O registers                        ; 0                                                                                   ;
 ;                                             ;                                                                                     ;
 ; I/O pins                                    ; 141                                                                                 ;
@@ -392,7 +392,7 @@ applicable agreement for further details.
 ;                                             ;                                                                                     ;
 ; Maximum fan-out node                        ; DE0_D5M:inst|sdram_pll:u6|altpll:altpll_component|altpll_9ee2:auto_generated|clk[0] ;
 ; Maximum fan-out                             ; 572                                                                                 ;
-; Total fan-out                               ; 14366                                                                               ;
+; Total fan-out                               ; 14369                                                                               ;
 ; Average fan-out                             ; 3.46                                                                                ;
 +---------------------------------------------+-------------------------------------------------------------------------------------+
 
@@ -402,10 +402,10 @@ applicable agreement for further details.
 +-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                  ; Library Name ;
 +-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |TOP_DE0_CAMERA_MOUSE                               ; 2359 (2)          ; 1292 (0)     ; 134236      ; 0            ; 0       ; 0         ; 141  ; 0            ; |TOP_DE0_CAMERA_MOUSE                                                                                                                                                                ; work         ;
-;    |DE0_D5M:inst|                                   ; 1153 (1)          ; 1013 (15)    ; 62416       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst                                                                                                                                                   ; work         ;
+; |TOP_DE0_CAMERA_MOUSE                               ; 2358 (2)          ; 1290 (0)     ; 134236      ; 0            ; 0       ; 0         ; 141  ; 0            ; |TOP_DE0_CAMERA_MOUSE                                                                                                                                                                ; work         ;
+;    |DE0_D5M:inst|                                   ; 1158 (1)          ; 1013 (15)    ; 62416       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst                                                                                                                                                   ; work         ;
 ;       |CCD_Capture:u3|                              ; 40 (40)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|CCD_Capture:u3                                                                                                                                    ; work         ;
-;       |I2C_CCD_Config:u8|                           ; 237 (168)         ; 132 (94)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|I2C_CCD_Config:u8                                                                                                                                 ; work         ;
+;       |I2C_CCD_Config:u8|                           ; 238 (169)         ; 132 (94)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|I2C_CCD_Config:u8                                                                                                                                 ; work         ;
 ;          |I2C_Controller:u0|                        ; 69 (69)           ; 38 (38)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0                                                                                                               ; work         ;
 ;       |RAW2RGB:u4|                                  ; 84 (68)           ; 66 (55)      ; 30672       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|RAW2RGB:u4                                                                                                                                        ; work         ;
 ;          |Line_Buffer:u0|                           ; 16 (0)            ; 11 (0)       ; 30672       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|RAW2RGB:u4|Line_Buffer:u0                                                                                                                         ; work         ;
@@ -415,7 +415,7 @@ applicable agreement for further details.
 ;                   |cntr_cuf:cntr1|                  ; 16 (13)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:altshift_taps_component|shift_taps_rnn:auto_generated|cntr_cuf:cntr1                                      ; work         ;
 ;                      |cmpr_vgc:cmpr4|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:altshift_taps_component|shift_taps_rnn:auto_generated|cntr_cuf:cntr1|cmpr_vgc:cmpr4                       ; work         ;
 ;       |Reset_Delay:u2|                              ; 50 (50)           ; 35 (35)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Reset_Delay:u2                                                                                                                                    ; work         ;
-;       |Sdram_Control_4Port:u7|                      ; 672 (213)         ; 704 (137)    ; 31744       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7                                                                                                                            ; work         ;
+;       |Sdram_Control_4Port:u7|                      ; 676 (214)         ; 704 (137)    ; 31744       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7                                                                                                                            ; work         ;
 ;          |Sdram_FIFO:read_fifo1|                    ; 84 (0)            ; 116 (0)      ; 7680        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1                                                                                                      ; work         ;
 ;             |dcfifo:dcfifo_component|               ; 84 (0)            ; 116 (0)      ; 7680        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component                                                                              ; work         ;
 ;                |dcfifo_v5o1:auto_generated|         ; 84 (15)           ; 116 (30)     ; 7680        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated                                                   ; work         ;
@@ -432,12 +432,12 @@ applicable agreement for further details.
 ;                   |cmpr_e66:wrfull_eq_comp|         ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|cmpr_e66:wrfull_eq_comp                           ; work         ;
 ;                   |dffpipe_oe9:ws_brp|              ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|dffpipe_oe9:ws_brp                                ; work         ;
 ;                   |dffpipe_oe9:ws_bwp|              ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|dffpipe_oe9:ws_bwp                                ; work         ;
-;          |Sdram_FIFO:read_fifo2|                    ; 83 (0)            ; 116 (0)      ; 7680        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2                                                                                                      ; work         ;
-;             |dcfifo:dcfifo_component|               ; 83 (0)            ; 116 (0)      ; 7680        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component                                                                              ; work         ;
-;                |dcfifo_v5o1:auto_generated|         ; 83 (15)           ; 116 (30)     ; 7680        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated                                                   ; work         ;
+;          |Sdram_FIFO:read_fifo2|                    ; 84 (0)            ; 116 (0)      ; 7680        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2                                                                                                      ; work         ;
+;             |dcfifo:dcfifo_component|               ; 84 (0)            ; 116 (0)      ; 7680        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component                                                                              ; work         ;
+;                |dcfifo_v5o1:auto_generated|         ; 84 (15)           ; 116 (30)     ; 7680        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated                                                   ; work         ;
 ;                   |a_gray2bin_tgb:wrptr_g_gray2bin| ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_gray2bin_tgb:wrptr_g_gray2bin                   ; work         ;
 ;                   |a_gray2bin_tgb:ws_dgrp_gray2bin| ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_gray2bin_tgb:ws_dgrp_gray2bin                   ; work         ;
-;                   |a_graycounter_ojc:wrptr_g1p|     ; 20 (20)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_ojc:wrptr_g1p                       ; work         ;
+;                   |a_graycounter_ojc:wrptr_g1p|     ; 21 (21)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_ojc:wrptr_g1p                       ; work         ;
 ;                   |a_graycounter_s57:rdptr_g1p|     ; 19 (19)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p                       ; work         ;
 ;                   |alt_synch_pipe_qld:rs_dgwp|      ; 0 (0)             ; 20 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|alt_synch_pipe_qld:rs_dgwp                        ; work         ;
 ;                      |dffpipe_pe9:dffpipe13|        ; 0 (0)             ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|alt_synch_pipe_qld:rs_dgwp|dffpipe_pe9:dffpipe13  ; work         ;
@@ -448,9 +448,9 @@ applicable agreement for further details.
 ;                   |cmpr_e66:wrfull_eq_comp|         ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|cmpr_e66:wrfull_eq_comp                           ; work         ;
 ;                   |dffpipe_oe9:ws_brp|              ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|dffpipe_oe9:ws_brp                                ; work         ;
 ;                   |dffpipe_oe9:ws_bwp|              ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|dffpipe_oe9:ws_bwp                                ; work         ;
-;          |Sdram_FIFO:write_fifo1|                   ; 84 (0)            ; 116 (0)      ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1                                                                                                     ; work         ;
-;             |dcfifo:dcfifo_component|               ; 84 (0)            ; 116 (0)      ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component                                                                             ; work         ;
-;                |dcfifo_v5o1:auto_generated|         ; 84 (15)           ; 116 (30)     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated                                                  ; work         ;
+;          |Sdram_FIFO:write_fifo1|                   ; 85 (0)            ; 116 (0)      ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1                                                                                                     ; work         ;
+;             |dcfifo:dcfifo_component|               ; 85 (0)            ; 116 (0)      ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component                                                                             ; work         ;
+;                |dcfifo_v5o1:auto_generated|         ; 85 (18)           ; 116 (30)     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated                                                  ; work         ;
 ;                   |a_gray2bin_tgb:rdptr_g_gray2bin| ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_gray2bin_tgb:rdptr_g_gray2bin                  ; work         ;
 ;                   |a_gray2bin_tgb:rs_dgwp_gray2bin| ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_gray2bin_tgb:rs_dgwp_gray2bin                  ; work         ;
 ;                   |a_graycounter_ojc:wrptr_g1p|     ; 19 (19)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_ojc:wrptr_g1p                      ; work         ;
@@ -460,17 +460,17 @@ applicable agreement for further details.
 ;                   |alt_synch_pipe_rld:ws_dgrp|      ; 0 (0)             ; 20 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|alt_synch_pipe_rld:ws_dgrp                       ; work         ;
 ;                      |dffpipe_qe9:dffpipe16|        ; 0 (0)             ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|alt_synch_pipe_rld:ws_dgrp|dffpipe_qe9:dffpipe16 ; work         ;
 ;                   |altsyncram_de51:fifo_ram|        ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|altsyncram_de51:fifo_ram                         ; work         ;
-;                   |cmpr_e66:rdempty_eq_comp|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|cmpr_e66:rdempty_eq_comp                         ; work         ;
+;                   |cmpr_e66:rdempty_eq_comp|        ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|cmpr_e66:rdempty_eq_comp                         ; work         ;
 ;                   |cmpr_e66:wrfull_eq_comp|         ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|cmpr_e66:wrfull_eq_comp                          ; work         ;
 ;                   |dffpipe_oe9:rs_brp|              ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|dffpipe_oe9:rs_brp                               ; work         ;
 ;                   |dffpipe_oe9:rs_bwp|              ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|dffpipe_oe9:rs_bwp                               ; work         ;
-;          |Sdram_FIFO:write_fifo2|                   ; 84 (0)            ; 116 (0)      ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2                                                                                                     ; work         ;
-;             |dcfifo:dcfifo_component|               ; 84 (0)            ; 116 (0)      ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component                                                                             ; work         ;
-;                |dcfifo_v5o1:auto_generated|         ; 84 (15)           ; 116 (30)     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated                                                  ; work         ;
+;          |Sdram_FIFO:write_fifo2|                   ; 85 (0)            ; 116 (0)      ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2                                                                                                     ; work         ;
+;             |dcfifo:dcfifo_component|               ; 85 (0)            ; 116 (0)      ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component                                                                             ; work         ;
+;                |dcfifo_v5o1:auto_generated|         ; 85 (15)           ; 116 (30)     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated                                                  ; work         ;
 ;                   |a_gray2bin_tgb:rdptr_g_gray2bin| ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_gray2bin_tgb:rdptr_g_gray2bin                  ; work         ;
 ;                   |a_gray2bin_tgb:rs_dgwp_gray2bin| ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_gray2bin_tgb:rs_dgwp_gray2bin                  ; work         ;
 ;                   |a_graycounter_ojc:wrptr_g1p|     ; 19 (19)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_ojc:wrptr_g1p                      ; work         ;
-;                   |a_graycounter_s57:rdptr_g1p|     ; 20 (20)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p                      ; work         ;
+;                   |a_graycounter_s57:rdptr_g1p|     ; 21 (21)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p                      ; work         ;
 ;                   |alt_synch_pipe_qld:rs_dgwp|      ; 0 (0)             ; 20 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|alt_synch_pipe_qld:rs_dgwp                       ; work         ;
 ;                      |dffpipe_pe9:dffpipe13|        ; 0 (0)             ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|alt_synch_pipe_qld:rs_dgwp|dffpipe_pe9:dffpipe13 ; work         ;
 ;                   |alt_synch_pipe_rld:ws_dgrp|      ; 0 (0)             ; 20 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|alt_synch_pipe_rld:ws_dgrp                       ; work         ;
@@ -493,40 +493,40 @@ applicable agreement for further details.
 ;             |cmpr_ugc:cmpr4|                        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|altshift_taps:fifo_inst2|shift_taps_jpm:auto_generated|cntr_1tf:cntr1|cmpr_ugc:cmpr4                                                                           ; work         ;
 ;    |decode_7segment:inst2|                          ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|decode_7segment:inst2                                                                                                                                          ; work         ;
 ;    |decode_7segment:inst3|                          ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|decode_7segment:inst3                                                                                                                                          ; work         ;
-;    |mean_vga:inst9|                                 ; 1139 (0)          ; 269 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9                                                                                                                                                 ; work         ;
-;       |mean_vga_core:mean_vga_core_inst|            ; 1139 (1097)       ; 269 (269)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst                                                                                                                ; work         ;
-;          |lpm_mult:Mult0|                           ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult0                                                                                                 ; work         ;
-;             |multcore:mult_core|                    ; 5 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult0|multcore:mult_core                                                                              ; work         ;
-;                |mpar_add:padder|                    ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                              ; work         ;
-;                   |lpm_add_sub:adder[0]|            ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                         ; work         ;
-;                      |add_sub_2eh:auto_generated|   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_2eh:auto_generated              ; work         ;
-;          |lpm_mult:Mult1|                           ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult1                                                                                                 ; work         ;
-;             |multcore:mult_core|                    ; 7 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult1|multcore:mult_core                                                                              ; work         ;
-;                |mpar_add:padder|                    ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder                                                              ; work         ;
-;                   |lpm_add_sub:adder[0]|            ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                         ; work         ;
-;                      |add_sub_bfh:auto_generated|   ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_bfh:auto_generated              ; work         ;
-;          |lpm_mult:Mult2|                           ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2                                                                                                 ; work         ;
-;             |multcore:mult_core|                    ; 5 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2|multcore:mult_core                                                                              ; work         ;
-;                |mpar_add:padder|                    ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder                                                              ; work         ;
-;                   |lpm_add_sub:adder[0]|            ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                         ; work         ;
-;                      |add_sub_2eh:auto_generated|   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_2eh:auto_generated              ; work         ;
-;          |lpm_mult:Mult3|                           ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3                                                                                                 ; work         ;
-;             |multcore:mult_core|                    ; 8 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3|multcore:mult_core                                                                              ; work         ;
-;                |mpar_add:padder|                    ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder                                                              ; work         ;
-;                   |lpm_add_sub:adder[0]|            ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                         ; work         ;
-;                      |add_sub_dfh:auto_generated|   ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_dfh:auto_generated              ; work         ;
-;          |lpm_mult:Mult4|                           ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4                                                                                                 ; work         ;
-;             |multcore:mult_core|                    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4|multcore:mult_core                                                                              ; work         ;
-;          |lpm_mult:Mult5|                           ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult5                                                                                                 ; work         ;
-;             |multcore:mult_core|                    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult5|multcore:mult_core                                                                              ; work         ;
-;          |lpm_mult:Mult6|                           ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult6                                                                                                 ; work         ;
-;             |multcore:mult_core|                    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult6|multcore:mult_core                                                                              ; work         ;
-;          |lpm_mult:Mult7|                           ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult7                                                                                                 ; work         ;
-;             |multcore:mult_core|                    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult7|multcore:mult_core                                                                              ; work         ;
-;          |lpm_mult:Mult8|                           ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult8                                                                                                 ; work         ;
-;             |multcore:mult_core|                    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult8|multcore:mult_core                                                                              ; work         ;
-;          |lpm_mult:Mult9|                           ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult9                                                                                                 ; work         ;
-;             |multcore:mult_core|                    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult9|multcore:mult_core                                                                              ; work         ;
+;    |mean_vga:inst6|                                 ; 1133 (0)          ; 267 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6                                                                                                                                                 ; work         ;
+;       |mean_vga_core:mean_vga_core_inst|            ; 1133 (1090)       ; 267 (267)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst                                                                                                                ; work         ;
+;          |lpm_mult:Mult0|                           ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult0                                                                                                 ; work         ;
+;             |multcore:mult_core|                    ; 5 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult0|multcore:mult_core                                                                              ; work         ;
+;                |mpar_add:padder|                    ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                              ; work         ;
+;                   |lpm_add_sub:adder[0]|            ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                         ; work         ;
+;                      |add_sub_2eh:auto_generated|   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_2eh:auto_generated              ; work         ;
+;          |lpm_mult:Mult1|                           ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult1                                                                                                 ; work         ;
+;             |multcore:mult_core|                    ; 7 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult1|multcore:mult_core                                                                              ; work         ;
+;                |mpar_add:padder|                    ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder                                                              ; work         ;
+;                   |lpm_add_sub:adder[0]|            ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                         ; work         ;
+;                      |add_sub_bfh:auto_generated|   ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_bfh:auto_generated              ; work         ;
+;          |lpm_mult:Mult2|                           ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2                                                                                                 ; work         ;
+;             |multcore:mult_core|                    ; 5 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2|multcore:mult_core                                                                              ; work         ;
+;                |mpar_add:padder|                    ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder                                                              ; work         ;
+;                   |lpm_add_sub:adder[0]|            ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                         ; work         ;
+;                      |add_sub_2eh:auto_generated|   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_2eh:auto_generated              ; work         ;
+;          |lpm_mult:Mult3|                           ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3                                                                                                 ; work         ;
+;             |multcore:mult_core|                    ; 8 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3|multcore:mult_core                                                                              ; work         ;
+;                |mpar_add:padder|                    ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder                                                              ; work         ;
+;                   |lpm_add_sub:adder[0]|            ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                         ; work         ;
+;                      |add_sub_dfh:auto_generated|   ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_dfh:auto_generated              ; work         ;
+;          |lpm_mult:Mult4|                           ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4                                                                                                 ; work         ;
+;             |multcore:mult_core|                    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4|multcore:mult_core                                                                              ; work         ;
+;          |lpm_mult:Mult5|                           ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult5                                                                                                 ; work         ;
+;             |multcore:mult_core|                    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult5|multcore:mult_core                                                                              ; work         ;
+;          |lpm_mult:Mult6|                           ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult6                                                                                                 ; work         ;
+;             |multcore:mult_core|                    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult6|multcore:mult_core                                                                              ; work         ;
+;          |lpm_mult:Mult7|                           ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult7                                                                                                 ; work         ;
+;             |multcore:mult_core|                    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult7|multcore:mult_core                                                                              ; work         ;
+;          |lpm_mult:Mult8|                           ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult8                                                                                                 ; work         ;
+;             |multcore:mult_core|                    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult8|multcore:mult_core                                                                              ; work         ;
+;          |lpm_mult:Mult9|                           ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult9                                                                                                 ; work         ;
+;             |multcore:mult_core|                    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult9|multcore:mult_core                                                                              ; work         ;
 ;    |vga_mux:inst10|                                 ; 36 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|vga_mux:inst10                                                                                                                                                 ; work         ;
 ;       |lpm_mux:LPM_MUX_component|                   ; 36 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|vga_mux:inst10|lpm_mux:LPM_MUX_component                                                                                                                       ; work         ;
 ;          |mux_u7e:auto_generated|                   ; 36 (36)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|vga_mux:inst10|lpm_mux:LPM_MUX_component|mux_u7e:auto_generated                                                                                                ; work         ;
@@ -591,7 +591,7 @@ Encoding Type:  One-Hot
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|rRD2_LENGTH[0..7]                                                                                       ; Stuck at GND due to stuck port data_in                                                    ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|command:command1|CKE                                                                                    ; Stuck at VCC due to stuck port data_in                                                    ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|CKE                                                                                                     ; Stuck at VCC due to stuck port data_in                                                    ;
-; mean_vga:inst9|mean_vga_core:mean_vga_core_inst|counter_rsc_mgc_out_stdreg_d[9..15]                                                         ; Stuck at GND due to stuck port data_in                                                    ;
+; mean_vga:inst6|mean_vga_core:mean_vga_core_inst|counter_rsc_mgc_out_stdreg_d[9..15]                                                         ; Stuck at GND due to stuck port data_in                                                    ;
 ; DE0_D5M:inst|I2C_CCD_Config:u8|mI2C_DATA[31]                                                                                                ; Stuck at VCC due to stuck port data_in                                                    ;
 ; DE0_D5M:inst|I2C_CCD_Config:u8|mI2C_DATA[30]                                                                                                ; Stuck at GND due to stuck port data_in                                                    ;
 ; DE0_D5M:inst|I2C_CCD_Config:u8|mI2C_DATA[27..29]                                                                                            ; Stuck at VCC due to stuck port data_in                                                    ;
@@ -612,10 +612,8 @@ Encoding Type:  One-Hot
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|dffpipe_oe9:rs_brp|dffe12a[9] ; Lost fanout                                                                               ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|dffpipe_oe9:rs_bwp|dffe12a[9] ; Lost fanout                                                                               ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|dffpipe_oe9:rs_brp|dffe12a[9] ; Lost fanout                                                                               ;
-; mean_vga:inst9|mean_vga_core:mean_vga_core_inst|vout_rsc_mgc_out_stdreg_d[9,19]                                                             ; Merged with mean_vga:inst9|mean_vga_core:mean_vga_core_inst|vout_rsc_mgc_out_stdreg_d[29] ;
-; mean_vga:inst9|mean_vga_core:mean_vga_core_inst|vout_rsc_mgc_out_stdreg_d[8,18]                                                             ; Merged with mean_vga:inst9|mean_vga_core:mean_vga_core_inst|vout_rsc_mgc_out_stdreg_d[28] ;
-; mean_vga:inst9|mean_vga_core:mean_vga_core_inst|vout_rsc_mgc_out_stdreg_d[7,17]                                                             ; Merged with mean_vga:inst9|mean_vga_core:mean_vga_core_inst|vout_rsc_mgc_out_stdreg_d[27] ;
-; mean_vga:inst9|mean_vga_core:mean_vga_core_inst|vout_rsc_mgc_out_stdreg_d[6,16]                                                             ; Merged with mean_vga:inst9|mean_vga_core:mean_vga_core_inst|vout_rsc_mgc_out_stdreg_d[26] ;
+; mean_vga:inst6|mean_vga_core:mean_vga_core_inst|vout_rsc_mgc_out_stdreg_d[6..9,26..28]                                                      ; Merged with mean_vga:inst6|mean_vga_core:mean_vga_core_inst|vout_rsc_mgc_out_stdreg_d[29] ;
+; mean_vga:inst6|mean_vga_core:mean_vga_core_inst|vout_rsc_mgc_out_stdreg_d[16..18]                                                           ; Merged with mean_vga:inst6|mean_vga_core:mean_vga_core_inst|vout_rsc_mgc_out_stdreg_d[19] ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|rWR1_ADDR[0..6]                                                                                         ; Merged with DE0_D5M:inst|Sdram_Control_4Port:u7|rWR1_ADDR[7]                              ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|rWR2_ADDR[0..6]                                                                                         ; Merged with DE0_D5M:inst|Sdram_Control_4Port:u7|rWR2_ADDR[7]                              ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|rRD1_ADDR[0..6]                                                                                         ; Merged with DE0_D5M:inst|Sdram_Control_4Port:u7|rRD1_ADDR[7]                              ;
@@ -636,9 +634,9 @@ Encoding Type:  One-Hot
 ; DE0_D5M:inst|I2C_CCD_Config:u8|mSetup_ST~9                                                                                                  ; Lost fanout                                                                               ;
 ; DE0_D5M:inst|I2C_CCD_Config:u8|mSetup_ST~10                                                                                                 ; Lost fanout                                                                               ;
 ; DE0_D5M:inst|CCD_Capture:u3|Y_Cont[1..15]                                                                                                   ; Lost fanout                                                                               ;
-; mean_vga:inst9|mean_vga_core:mean_vga_core_inst|MAC3_mul_7_itm_1[1]                                                                         ; Merged with mean_vga:inst9|mean_vga_core:mean_vga_core_inst|MAC3_mul_7_itm_1[3]           ;
-; mean_vga:inst9|mean_vga_core:mean_vga_core_inst|MAC3_mul_9_itm_1[1]                                                                         ; Merged with mean_vga:inst9|mean_vga_core:mean_vga_core_inst|MAC3_mul_9_itm_1[3]           ;
-; Total Number of Removed Registers = 157                                                                                                     ;                                                                                           ;
+; mean_vga:inst6|mean_vga_core:mean_vga_core_inst|MAC3_mul_7_itm_1[1]                                                                         ; Merged with mean_vga:inst6|mean_vga_core:mean_vga_core_inst|MAC3_mul_7_itm_1[3]           ;
+; mean_vga:inst6|mean_vga_core:mean_vga_core_inst|MAC3_mul_9_itm_1[1]                                                                         ; Merged with mean_vga:inst6|mean_vga_core:mean_vga_core_inst|MAC3_mul_9_itm_1[3]           ;
+; Total Number of Removed Registers = 159                                                                                                     ;                                                                                           ;
 +---------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+
 
 
@@ -677,12 +675,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1292  ;
+; Total registers                              ; 1290  ;
 ; Number of registers using Synchronous Clear  ; 120   ;
 ; Number of registers using Synchronous Load   ; 91    ;
-; Number of registers using Asynchronous Clear ; 968   ;
+; Number of registers using Asynchronous Clear ; 966   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 392   ;
+; Number of registers using Clock Enable       ; 390   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -701,7 +699,7 @@ Encoding Type:  One-Hot
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p|counter5a0  ; 7       ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_ojc:wrptr_g1p|counter8a0  ; 7       ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p|parity6     ; 4       ;
-; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_ojc:wrptr_g1p|counter8a0  ; 6       ;
+; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_ojc:wrptr_g1p|counter8a0  ; 7       ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p|parity6     ; 4       ;
 ; DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD_COUNTER[5]                                                                                       ; 12      ;
 ; DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD_COUNTER[4]                                                                                       ; 13      ;
@@ -710,15 +708,15 @@ Encoding Type:  One-Hot
 ; DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SCLK                                                                                                ; 4       ;
 ; DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SDO                                                                                                 ; 6       ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_ojc:wrptr_g1p|parity9     ; 5       ;
-; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_ojc:wrptr_g1p|parity9     ; 4       ;
+; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_ojc:wrptr_g1p|parity9     ; 5       ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p|counter5a0 ; 7       ;
-; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p|counter5a0 ; 7       ;
+; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p|counter5a0 ; 8       ;
 ; DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD_COUNTER[1]                                                                                       ; 17      ;
 ; DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD_COUNTER[0]                                                                                       ; 20      ;
-; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_ojc:wrptr_g1p|counter8a0 ; 6       ;
+; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_ojc:wrptr_g1p|counter8a0 ; 7       ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p|parity6    ; 4       ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_ojc:wrptr_g1p|counter8a0 ; 6       ;
-; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p|parity6    ; 4       ;
+; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p|parity6    ; 5       ;
 ; DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|END                                                                                                 ; 5       ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_ojc:wrptr_g1p|parity9    ; 4       ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_ojc:wrptr_g1p|parity9    ; 4       ;
@@ -1917,7 +1915,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mean_vga:inst9|mgc_in_wire:vin_rsc_mgc_in_wire ;
+; Parameter Settings for User Entity Instance: mean_vga:inst6|mgc_in_wire:vin_rsc_mgc_in_wire ;
 +----------------+-------+--------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                               ;
 +----------------+-------+--------------------------------------------------------------------+
@@ -1928,7 +1926,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mean_vga:inst9|mgc_out_stdreg:vout_rsc_mgc_out_stdreg ;
+; Parameter Settings for User Entity Instance: mean_vga:inst6|mgc_out_stdreg:vout_rsc_mgc_out_stdreg ;
 +----------------+-------+---------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                      ;
 +----------------+-------+---------------------------------------------------------------------------+
@@ -1939,7 +1937,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mean_vga:inst9|mgc_out_stdreg:counter_rsc_mgc_out_stdreg ;
+; Parameter Settings for User Entity Instance: mean_vga:inst6|mgc_out_stdreg:counter_rsc_mgc_out_stdreg ;
 +----------------+-------+------------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                         ;
 +----------------+-------+------------------------------------------------------------------------------+
@@ -1984,7 +1982,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult9 ;
+; Parameter Settings for Inferred Entity Instance: mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult9 ;
 +------------------------------------------------+-------------+--------------------------------------------------+
 ; Parameter Name                                 ; Value       ; Type                                             ;
 +------------------------------------------------+-------------+--------------------------------------------------+
@@ -2019,7 +2017,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult5 ;
+; Parameter Settings for Inferred Entity Instance: mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult5 ;
 +------------------------------------------------+-------------+--------------------------------------------------+
 ; Parameter Name                                 ; Value       ; Type                                             ;
 +------------------------------------------------+-------------+--------------------------------------------------+
@@ -2054,7 +2052,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4 ;
+; Parameter Settings for Inferred Entity Instance: mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4 ;
 +------------------------------------------------+-------------+--------------------------------------------------+
 ; Parameter Name                                 ; Value       ; Type                                             ;
 +------------------------------------------------+-------------+--------------------------------------------------+
@@ -2089,7 +2087,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult8 ;
+; Parameter Settings for Inferred Entity Instance: mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult8 ;
 +------------------------------------------------+-------------+--------------------------------------------------+
 ; Parameter Name                                 ; Value       ; Type                                             ;
 +------------------------------------------------+-------------+--------------------------------------------------+
@@ -2124,7 +2122,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult7 ;
+; Parameter Settings for Inferred Entity Instance: mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult7 ;
 +------------------------------------------------+-------------+--------------------------------------------------+
 ; Parameter Name                                 ; Value       ; Type                                             ;
 +------------------------------------------------+-------------+--------------------------------------------------+
@@ -2159,7 +2157,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3 ;
+; Parameter Settings for Inferred Entity Instance: mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3 ;
 +------------------------------------------------+-------------+--------------------------------------------------+
 ; Parameter Name                                 ; Value       ; Type                                             ;
 +------------------------------------------------+-------------+--------------------------------------------------+
@@ -2194,7 +2192,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2 ;
+; Parameter Settings for Inferred Entity Instance: mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2 ;
 +------------------------------------------------+-------------+--------------------------------------------------+
 ; Parameter Name                                 ; Value       ; Type                                             ;
 +------------------------------------------------+-------------+--------------------------------------------------+
@@ -2229,7 +2227,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult1 ;
+; Parameter Settings for Inferred Entity Instance: mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult1 ;
 +------------------------------------------------+-------------+--------------------------------------------------+
 ; Parameter Name                                 ; Value       ; Type                                             ;
 +------------------------------------------------+-------------+--------------------------------------------------+
@@ -2264,7 +2262,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult0 ;
+; Parameter Settings for Inferred Entity Instance: mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult0 ;
 +------------------------------------------------+-------------+--------------------------------------------------+
 ; Parameter Name                                 ; Value       ; Type                                             ;
 +------------------------------------------------+-------------+--------------------------------------------------+
@@ -2299,7 +2297,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult6 ;
+; Parameter Settings for Inferred Entity Instance: mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult6 ;
 +------------------------------------------------+-------------+--------------------------------------------------+
 ; Parameter Name                                 ; Value       ; Type                                             ;
 +------------------------------------------------+-------------+--------------------------------------------------+
@@ -2406,7 +2404,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Name                                  ; Value                                                          ;
 +---------------------------------------+----------------------------------------------------------------+
 ; Number of entity instances            ; 10                                                             ;
-; Entity Instance                       ; mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult9 ;
+; Entity Instance                       ; mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult9 ;
 ;     -- LPM_WIDTHA                     ; 2                                                              ;
 ;     -- LPM_WIDTHB                     ; 10                                                             ;
 ;     -- LPM_WIDTHP                     ; 12                                                             ;
@@ -2417,7 +2415,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                           ;
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                                                             ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                                                             ;
-; Entity Instance                       ; mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult5 ;
+; Entity Instance                       ; mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult5 ;
 ;     -- LPM_WIDTHA                     ; 2                                                              ;
 ;     -- LPM_WIDTHB                     ; 8                                                              ;
 ;     -- LPM_WIDTHP                     ; 10                                                             ;
@@ -2428,7 +2426,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                           ;
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                                                             ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                                                             ;
-; Entity Instance                       ; mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4 ;
+; Entity Instance                       ; mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4 ;
 ;     -- LPM_WIDTHA                     ; 8                                                              ;
 ;     -- LPM_WIDTHB                     ; 7                                                              ;
 ;     -- LPM_WIDTHP                     ; 15                                                             ;
@@ -2439,7 +2437,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                           ;
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                                                             ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                                                             ;
-; Entity Instance                       ; mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult8 ;
+; Entity Instance                       ; mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult8 ;
 ;     -- LPM_WIDTHA                     ; 2                                                              ;
 ;     -- LPM_WIDTHB                     ; 8                                                              ;
 ;     -- LPM_WIDTHP                     ; 10                                                             ;
@@ -2450,7 +2448,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                           ;
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                                                             ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                                                             ;
-; Entity Instance                       ; mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult7 ;
+; Entity Instance                       ; mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult7 ;
 ;     -- LPM_WIDTHA                     ; 2                                                              ;
 ;     -- LPM_WIDTHB                     ; 6                                                              ;
 ;     -- LPM_WIDTHP                     ; 8                                                              ;
@@ -2461,7 +2459,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                           ;
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                                                             ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                                                             ;
-; Entity Instance                       ; mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3 ;
+; Entity Instance                       ; mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3 ;
 ;     -- LPM_WIDTHA                     ; 10                                                             ;
 ;     -- LPM_WIDTHB                     ; 9                                                              ;
 ;     -- LPM_WIDTHP                     ; 19                                                             ;
@@ -2472,7 +2470,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                           ;
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                                                             ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                                                             ;
-; Entity Instance                       ; mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2 ;
+; Entity Instance                       ; mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2 ;
 ;     -- LPM_WIDTHA                     ; 6                                                              ;
 ;     -- LPM_WIDTHB                     ; 5                                                              ;
 ;     -- LPM_WIDTHP                     ; 11                                                             ;
@@ -2483,7 +2481,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                           ;
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                                                             ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                                                             ;
-; Entity Instance                       ; mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult1 ;
+; Entity Instance                       ; mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult1 ;
 ;     -- LPM_WIDTHA                     ; 8                                                              ;
 ;     -- LPM_WIDTHB                     ; 7                                                              ;
 ;     -- LPM_WIDTHP                     ; 15                                                             ;
@@ -2494,7 +2492,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                           ;
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                                                             ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                                                             ;
-; Entity Instance                       ; mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult0 ;
+; Entity Instance                       ; mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult0 ;
 ;     -- LPM_WIDTHA                     ; 6                                                              ;
 ;     -- LPM_WIDTHB                     ; 5                                                              ;
 ;     -- LPM_WIDTHP                     ; 11                                                             ;
@@ -2505,7 +2503,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                           ;
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                                                             ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                                                             ;
-; Entity Instance                       ; mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult6 ;
+; Entity Instance                       ; mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult6 ;
 ;     -- LPM_WIDTHA                     ; 2                                                              ;
 ;     -- LPM_WIDTHB                     ; 6                                                              ;
 ;     -- LPM_WIDTHP                     ; 8                                                              ;
@@ -2732,7 +2730,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Mon Apr 25 13:44:07 2016
+    Info: Processing started: Mon Apr 25 15:40:17 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE0_D5M -c DE0_D5M
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file /desktop/labs/fpga lab/fpga lab/stopwatch2works/module decode_7segment.v
@@ -3101,11 +3099,11 @@ Warning (10230): Verilog HDL assignment warning at I2C_Controller.v(70): truncat
 Warning (10230): Verilog HDL assignment warning at I2C_Controller.v(69): truncated value with size 32 to match size of target (1)
 Warning (10230): Verilog HDL assignment warning at I2C_Controller.v(82): truncated value with size 32 to match size of target (7)
 Info (12128): Elaborating entity "decode_7segment" for hierarchy "decode_7segment:inst2"
-Info (12128): Elaborating entity "mean_vga" for hierarchy "mean_vga:inst9"
-Info (12128): Elaborating entity "mgc_in_wire" for hierarchy "mean_vga:inst9|mgc_in_wire:vin_rsc_mgc_in_wire"
-Info (12128): Elaborating entity "mgc_out_stdreg" for hierarchy "mean_vga:inst9|mgc_out_stdreg:vout_rsc_mgc_out_stdreg"
-Info (12128): Elaborating entity "mgc_out_stdreg" for hierarchy "mean_vga:inst9|mgc_out_stdreg:counter_rsc_mgc_out_stdreg"
-Info (12128): Elaborating entity "mean_vga_core" for hierarchy "mean_vga:inst9|mean_vga_core:mean_vga_core_inst"
+Info (12128): Elaborating entity "mean_vga" for hierarchy "mean_vga:inst6"
+Info (12128): Elaborating entity "mgc_in_wire" for hierarchy "mean_vga:inst6|mgc_in_wire:vin_rsc_mgc_in_wire"
+Info (12128): Elaborating entity "mgc_out_stdreg" for hierarchy "mean_vga:inst6|mgc_out_stdreg:vout_rsc_mgc_out_stdreg"
+Info (12128): Elaborating entity "mgc_out_stdreg" for hierarchy "mean_vga:inst6|mgc_out_stdreg:counter_rsc_mgc_out_stdreg"
+Info (12128): Elaborating entity "mean_vga_core" for hierarchy "mean_vga:inst6|mean_vga_core:mean_vga_core_inst"
 Info (12128): Elaborating entity "altshift_taps" for hierarchy "altshift_taps:fifo_inst2"
 Info (12130): Elaborated megafunction instantiation "altshift_taps:fifo_inst2"
 Info (12133): Instantiated megafunction "altshift_taps:fifo_inst2" with the following parameter:
@@ -3142,18 +3140,18 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|altsyncram_de51:fifo_ram|q_b[15]"
         Warning (14320): Synthesized away node "DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|altsyncram_de51:fifo_ram|q_b[15]"
 Info (278001): Inferred 10 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|Mult9"
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|Mult5"
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|Mult4"
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|Mult8"
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|Mult7"
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|Mult3"
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|Mult2"
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|Mult1"
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|Mult0"
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|Mult6"
-Info (12130): Elaborated megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult9"
-Info (12133): Instantiated megafunction "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult9" with the following parameter:
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|Mult9"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|Mult5"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|Mult4"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|Mult8"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|Mult7"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|Mult3"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|Mult2"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|Mult1"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|Mult0"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|Mult6"
+Info (12130): Elaborated megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult9"
+Info (12133): Instantiated megafunction "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult9" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHA" = "2"
     Info (12134): Parameter "LPM_WIDTHB" = "10"
     Info (12134): Parameter "LPM_WIDTHP" = "12"
@@ -3163,11 +3161,11 @@ Info (12133): Instantiated megafunction "mean_vga:inst9|mean_vga_core:mean_vga_c
     Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
-Info (12131): Elaborated megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult9|multcore:mult_core", which is child of megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult9"
-Info (12131): Elaborated megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult9|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult9"
-Info (12131): Elaborated megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult9|altshift:external_latency_ffs", which is child of megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult9"
-Info (12130): Elaborated megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult5"
-Info (12133): Instantiated megafunction "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult5" with the following parameter:
+Info (12131): Elaborated megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult9|multcore:mult_core", which is child of megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult9"
+Info (12131): Elaborated megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult9|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult9"
+Info (12131): Elaborated megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult9|altshift:external_latency_ffs", which is child of megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult9"
+Info (12130): Elaborated megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult5"
+Info (12133): Instantiated megafunction "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult5" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHA" = "2"
     Info (12134): Parameter "LPM_WIDTHB" = "8"
     Info (12134): Parameter "LPM_WIDTHP" = "10"
@@ -3177,11 +3175,11 @@ Info (12133): Instantiated megafunction "mean_vga:inst9|mean_vga_core:mean_vga_c
     Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12131): Elaborated megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult5|multcore:mult_core", which is child of megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult5"
-Info (12131): Elaborated megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult5"
-Info (12131): Elaborated megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult5|altshift:external_latency_ffs", which is child of megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult5"
-Info (12130): Elaborated megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4"
-Info (12133): Instantiated megafunction "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4" with the following parameter:
+Info (12131): Elaborated megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult5|multcore:mult_core", which is child of megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult5"
+Info (12131): Elaborated megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult5"
+Info (12131): Elaborated megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult5|altshift:external_latency_ffs", which is child of megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult5"
+Info (12130): Elaborated megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4"
+Info (12133): Instantiated megafunction "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHA" = "8"
     Info (12134): Parameter "LPM_WIDTHB" = "7"
     Info (12134): Parameter "LPM_WIDTHP" = "15"
@@ -3191,14 +3189,14 @@ Info (12133): Instantiated megafunction "mean_vga:inst9|mean_vga_core:mean_vga_c
     Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12131): Elaborated megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4|multcore:mult_core", which is child of megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4"
-Info (12131): Elaborated megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4"
-Info (12131): Elaborated megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4"
+Info (12131): Elaborated megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4|multcore:mult_core", which is child of megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4"
+Info (12131): Elaborated megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4"
+Info (12131): Elaborated megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4"
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_bfh.tdf
     Info (12023): Found entity 1: add_sub_bfh
-Info (12131): Elaborated megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4|altshift:external_latency_ffs", which is child of megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4"
-Info (12130): Elaborated megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult7"
-Info (12133): Instantiated megafunction "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult7" with the following parameter:
+Info (12131): Elaborated megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4|altshift:external_latency_ffs", which is child of megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4"
+Info (12130): Elaborated megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult7"
+Info (12133): Instantiated megafunction "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult7" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHA" = "2"
     Info (12134): Parameter "LPM_WIDTHB" = "6"
     Info (12134): Parameter "LPM_WIDTHP" = "8"
@@ -3208,11 +3206,11 @@ Info (12133): Instantiated megafunction "mean_vga:inst9|mean_vga_core:mean_vga_c
     Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12131): Elaborated megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult7|multcore:mult_core", which is child of megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult7"
-Info (12131): Elaborated megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult7"
-Info (12131): Elaborated megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult7|altshift:external_latency_ffs", which is child of megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult7"
-Info (12130): Elaborated megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3"
-Info (12133): Instantiated megafunction "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3" with the following parameter:
+Info (12131): Elaborated megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult7|multcore:mult_core", which is child of megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult7"
+Info (12131): Elaborated megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult7"
+Info (12131): Elaborated megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult7|altshift:external_latency_ffs", which is child of megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult7"
+Info (12130): Elaborated megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3"
+Info (12133): Instantiated megafunction "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHA" = "10"
     Info (12134): Parameter "LPM_WIDTHB" = "9"
     Info (12134): Parameter "LPM_WIDTHP" = "19"
@@ -3222,18 +3220,18 @@ Info (12133): Instantiated megafunction "mean_vga:inst9|mean_vga_core:mean_vga_c
     Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
-Info (12131): Elaborated megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3|multcore:mult_core", which is child of megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3"
-Info (12131): Elaborated megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3"
-Info (12131): Elaborated megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3"
+Info (12131): Elaborated megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3|multcore:mult_core", which is child of megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3"
+Info (12131): Elaborated megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3"
+Info (12131): Elaborated megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3"
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_dfh.tdf
     Info (12023): Found entity 1: add_sub_dfh
-Info (12131): Elaborated megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3"
-Info (12131): Elaborated megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3"
+Info (12131): Elaborated megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3"
+Info (12131): Elaborated megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3"
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_hfh.tdf
     Info (12023): Found entity 1: add_sub_hfh
-Info (12131): Elaborated megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3|altshift:external_latency_ffs", which is child of megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3"
-Info (12130): Elaborated megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2"
-Info (12133): Instantiated megafunction "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2" with the following parameter:
+Info (12131): Elaborated megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3|altshift:external_latency_ffs", which is child of megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3"
+Info (12130): Elaborated megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2"
+Info (12133): Instantiated megafunction "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHA" = "6"
     Info (12134): Parameter "LPM_WIDTHB" = "5"
     Info (12134): Parameter "LPM_WIDTHP" = "11"
@@ -3243,12 +3241,12 @@ Info (12133): Instantiated megafunction "mean_vga:inst9|mean_vga_core:mean_vga_c
     Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12131): Elaborated megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2|multcore:mult_core", which is child of megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2"
-Info (12131): Elaborated megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2"
-Info (12131): Elaborated megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2"
+Info (12131): Elaborated megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2|multcore:mult_core", which is child of megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2"
+Info (12131): Elaborated megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2"
+Info (12131): Elaborated megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2"
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_2eh.tdf
     Info (12023): Found entity 1: add_sub_2eh
-Info (12131): Elaborated megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2|altshift:external_latency_ffs", which is child of megafunction instantiation "mean_vga:inst9|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2"
+Info (12131): Elaborated megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2|altshift:external_latency_ffs", which is child of megafunction instantiation "mean_vga:inst6|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2"
 Warning (12241): 10 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
     Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_1[20]" and its non-tri-state driver.
@@ -3324,17 +3322,17 @@ Warning (21074): Design contains 6 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[7]"
     Warning (15610): No output dependent on input pin "SW[6]"
     Warning (15610): No output dependent on input pin "SW[3]"
-Info (21057): Implemented 3279 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3277 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 77 output pins
     Info (21060): Implemented 48 bidirectional pins
-    Info (21061): Implemented 2961 logic cells
+    Info (21061): Implemented 2959 logic cells
     Info (21064): Implemented 176 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 123 warnings
-    Info: Peak virtual memory: 557 megabytes
-    Info: Processing ended: Mon Apr 25 13:44:34 2016
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:13
+    Info: Peak virtual memory: 553 megabytes
+    Info: Processing ended: Mon Apr 25 15:40:41 2016
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:12
 
 
