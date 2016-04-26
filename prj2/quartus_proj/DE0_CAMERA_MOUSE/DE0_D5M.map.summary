@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Mon Apr 25 15:40:40 2016
+Analysis & Synthesis Status : Successful - Tue Apr 26 11:33:26 2016
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
 Revision Name : DE0_D5M
 Top-level Entity Name : TOP_DE0_CAMERA_MOUSE
 Family : Cyclone III
-Total logic elements : 2,926
-    Total combinational functions : 2,358
+Total logic elements : 2,916
+    Total combinational functions : 2,348
     Dedicated logic registers : 1,290
 Total registers : 1290
 Total pins : 141

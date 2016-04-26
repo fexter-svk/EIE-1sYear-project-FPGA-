@@ -46,12 +46,14 @@ const ac_int<8,true> X_MASK[3][3] = {
     {-1, 0, 1}
 };
 
+
 const ac_int<8,true> Y_MASK[3][3] = {
     {1, 2, 1},
     {0, 0, 0},
     {-1, -2,-1}
 };
 
+ac_int<1,false> MEMREF[640][480];
 // shift_class: page 119 HLS Blue Book
 #include "shift_class_sob.h" 
 
@@ -64,7 +66,7 @@ ac_int<16, false> abs(ac_int<16, true> din){
  }
 
 #pragma hls_design top
-void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS], ac_int<16, false> *counter)
+void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS], bool wr_en, ac_int<16, false> *counter)
 {
     ac_int<16, false> val, r[KERNEL_WIDTH], g[KERNEL_WIDTH], b[KERNEL_WIDTH];
     ac_int<16, true> greyx, greyy, gr[KERNEL_WIDTH][KERNEL_WIDTH];
@@ -72,7 +74,7 @@ void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_
 // #if 1: use filter
 // #if 0: copy input to output bypassing filter
 #if 1
-
+    
     // shifts pixels from KERNEL_WIDTH rows and keeps KERNEL_WIDTH columns (KERNEL_WIDTHxKERNEL_WIDTH pixels stored)
     static shift_class<ac_int<PIXEL_WL*KERNEL_WIDTH,false>, KERNEL_WIDTH> regs;
     static int count = 0;
@@ -88,7 +90,7 @@ void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_
 		// shift input data in the filter fifo
 	regs << vin[p]; // advance the pointer address by the pixel number (testbench/simulation only)
 		
-	// accumulate
+	// greyscale
 	ACC1: for(i = 0; i < KERNEL_WIDTH; i++) {
 		k = 0;
 			// first line ...
@@ -111,41 +113,38 @@ void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_
 	}
 	
 	// dot product
-	ACC2: for(i = 0; i < KERNEL_WIDTH; i++) {
-	   MAC3: for(k = 0; k < KERNEL_WIDTH; k++){
+	ACC3: for(i = 0; i < KERNEL_WIDTH; i++) {
+	   MAC2: for(k = 0; k < KERNEL_WIDTH; k++){
 	       greyx += gr[i][k]*X_MASK[i][k];
 	       greyy += gr[i][k]*Y_MASK[i][k];
 	   }
 	}
-	/*
 	
-			if (i == 0){
-		     // greyx -> multiply this column by [-1, 0, 1]
-			greyx += (gr[0]*1)+(gr[1]*0)+(gr[2]*-1);
-				 
-				 // greyy -> multiply this column by [-1, -2, -1]
-		    greyy += (gr[0]*-1)+(gr[1]*-2)+(gr[2]*-1);
-		}
-		 if (i == 1){
-				 // greyx -> multiply this column by [-2, 0, 2]
-            greyx += (gr[0]*2)+(gr[1]*0)+(gr[2]*-2);
-			 // greyy -> multiply this column by [0, 0, 0]
-            greyy += (gr[0]*0)+(gr[1]*0)+(gr[2]*0);
-        }
-		if (i == 2){
-		// greyx -> multiply this column by [-1, 0, 1]
-		   greyx += (gr[0]*1)+(gr[1]*0)+(gr[2]*-1);
-		// greyy -> multiply this column by [1, 2, 1]
-	       greyy += (gr[0]*1)+(gr[1]*2)+(gr[2]*1);
-		}
-	*/	
 	val = abs(greyx) + abs(greyy);
-	if (val >= 128) { val = 1023; }
-	if (val < 128) { val = 0; }
+	ac_int<1,false> bit;
+	if (val >= 512) { 
+	   val = 1023;
+	   bit = 1;
+	}
 	
+	if (val < 512) { 
+	   val = 0;
+	   bit = 0;
+	}
+	
+	x++;
+	if (x == 640){
+	   x = 0;
+	   y++;    
+    }
+    
+	if (wr_en){
+	   MEMREF[x][y] = bit;
+	   
+	   
+	}
 	/*
 	
-	int bit;
 	if (val == 0){bit = 0;}
 	if (val == 2013){bit = 1;}
 	

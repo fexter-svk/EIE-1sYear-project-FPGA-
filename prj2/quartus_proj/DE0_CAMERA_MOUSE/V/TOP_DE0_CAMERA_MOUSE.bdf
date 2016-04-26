@@ -1009,7 +1009,7 @@ applicable agreement for further details.
 (symbol
 	(rect 1464 704 1712 816)
 	(text "mean_vga" (rect 5 0 56 12)(font "Arial" ))
-	(text "inst6" (rect 8 96 31 108)(font "Arial" ))
+	(text "inst9" (rect 8 96 31 108)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)

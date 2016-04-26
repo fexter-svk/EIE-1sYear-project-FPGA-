@@ -36,6 +36,8 @@
 #define KERNEL_NUMEL      (KERNEL_WIDTH * KERNEL_WIDTH)
 #define COLOUR_WL         10
 #define PIXEL_WL          (3 * COLOUR_WL)
+#define X_WIDTH           640
+#define Y_WIDTH           480
 
 #define  COORD_WL          10
 
