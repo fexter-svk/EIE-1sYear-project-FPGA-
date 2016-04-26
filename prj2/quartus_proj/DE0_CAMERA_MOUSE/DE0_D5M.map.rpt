@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE0_D5M
-Tue Apr 26 15:42:42 2016
+Tue Apr 26 16:00:46 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -78,64 +78,67 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
  70. Source assignments for DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|dffpipe_oe9:ws_bwp
  71. Source assignments for DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|alt_synch_pipe_rld:ws_dgrp
  72. Source assignments for DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|alt_synch_pipe_rld:ws_dgrp|dffpipe_qe9:dffpipe16
- 73. Source assignments for altshift_taps:fifo_inst2|shift_taps_jpm:auto_generated|altsyncram_5n81:altsyncram2
- 74. Parameter Settings for User Entity Instance: DE0_D5M:inst|VGA_Controller:u1
- 75. Parameter Settings for User Entity Instance: DE0_D5M:inst|CCD_Capture:u3
- 76. Parameter Settings for User Entity Instance: DE0_D5M:inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:altshift_taps_component
- 77. Parameter Settings for User Entity Instance: DE0_D5M:inst|sdram_pll:u6|altpll:altpll_component
- 78. Parameter Settings for User Entity Instance: DE0_D5M:inst|Sdram_Control_4Port:u7
- 79. Parameter Settings for User Entity Instance: DE0_D5M:inst|Sdram_Control_4Port:u7|control_interface:control1
- 80. Parameter Settings for User Entity Instance: DE0_D5M:inst|Sdram_Control_4Port:u7|command:command1
- 81. Parameter Settings for User Entity Instance: DE0_D5M:inst|Sdram_Control_4Port:u7|sdr_data_path:data_path1
- 82. Parameter Settings for User Entity Instance: DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component
- 83. Parameter Settings for User Entity Instance: DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component
- 84. Parameter Settings for User Entity Instance: DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component
- 85. Parameter Settings for User Entity Instance: DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component
- 86. Parameter Settings for User Entity Instance: DE0_D5M:inst|I2C_CCD_Config:u8
- 87. Parameter Settings for User Entity Instance: top:inst3|clk_div:GEN_10K
- 88. Parameter Settings for User Entity Instance: top:inst3|pulse_gen:PULSE
- 89. Parameter Settings for User Entity Instance: top:inst3|spi2dac:SPI_DAC
- 90. Parameter Settings for User Entity Instance: top:inst3|spi2adc:SPI_ADC
- 91. Parameter Settings for User Entity Instance: top:inst3|processor:DUMMY
- 92. Parameter Settings for User Entity Instance: top:inst3|processor:DUMMY|pulse_gen:pulse_gen
- 93. Parameter Settings for User Entity Instance: vga_mux:inst10|LPM_MUX:LPM_MUX_component
- 94. Parameter Settings for User Entity Instance: mean_vga:inst1|mgc_in_wire:vin_rsc_mgc_in_wire
- 95. Parameter Settings for User Entity Instance: mean_vga:inst1|mgc_out_stdreg:vout_rsc_mgc_out_stdreg
- 96. Parameter Settings for User Entity Instance: mean_vga:inst1|mgc_in_wire:vga_xy_rsc_mgc_in_wire
- 97. Parameter Settings for User Entity Instance: mean_vga:inst1|mgc_in_wire:wr_en_rsc_mgc_in_wire
- 98. Parameter Settings for User Entity Instance: altshift_taps:fifo_inst2
- 99. Parameter Settings for Inferred Entity Instance: mean_vga:inst1|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult9
-100. Parameter Settings for Inferred Entity Instance: mean_vga:inst1|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult5
-101. Parameter Settings for Inferred Entity Instance: mean_vga:inst1|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4
-102. Parameter Settings for Inferred Entity Instance: mean_vga:inst1|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult8
-103. Parameter Settings for Inferred Entity Instance: mean_vga:inst1|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult7
-104. Parameter Settings for Inferred Entity Instance: mean_vga:inst1|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3
-105. Parameter Settings for Inferred Entity Instance: mean_vga:inst1|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2
-106. Parameter Settings for Inferred Entity Instance: mean_vga:inst1|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult1
-107. Parameter Settings for Inferred Entity Instance: mean_vga:inst1|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult0
-108. Parameter Settings for Inferred Entity Instance: mean_vga:inst1|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult6
-109. altshift_taps Parameter Settings by Entity Instance
-110. altpll Parameter Settings by Entity Instance
-111. dcfifo Parameter Settings by Entity Instance
-112. lpm_mult Parameter Settings by Entity Instance
-113. Port Connectivity Checks: "top:inst3|hex_to_7seg:SEG2"
-114. Port Connectivity Checks: "top:inst3|processor:DUMMY|pulse_gen:pulse_gen"
-115. Port Connectivity Checks: "top:inst3|clk_div:GEN_10K"
-116. Port Connectivity Checks: "DE0_D5M:inst|I2C_CCD_Config:u8"
-117. Port Connectivity Checks: "DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2"
-118. Port Connectivity Checks: "DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1"
-119. Port Connectivity Checks: "DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2"
-120. Port Connectivity Checks: "DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1"
-121. Port Connectivity Checks: "DE0_D5M:inst|Sdram_Control_4Port:u7|sdr_data_path:data_path1"
-122. Port Connectivity Checks: "DE0_D5M:inst|Sdram_Control_4Port:u7|control_interface:control1"
-123. Port Connectivity Checks: "DE0_D5M:inst|Sdram_Control_4Port:u7"
-124. Port Connectivity Checks: "DE0_D5M:inst|SEG7_LUT_8:u5"
-125. Port Connectivity Checks: "DE0_D5M:inst|RAW2RGB:u4|Line_Buffer:u0"
-126. Port Connectivity Checks: "DE0_D5M:inst|RAW2RGB:u4"
-127. Port Connectivity Checks: "DE0_D5M:inst|CCD_Capture:u3"
-128. Port Connectivity Checks: "DE0_D5M:inst|VGA_Controller:u1"
-129. Elapsed Time Per Partition
-130. Analysis & Synthesis Messages
+ 73. Source assignments for top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated|a_dpfifo_9m21:dpfifo|altsyncram_s5e1:FIFOram
+ 74. Source assignments for altshift_taps:fifo_inst2|shift_taps_jpm:auto_generated|altsyncram_5n81:altsyncram2
+ 75. Parameter Settings for User Entity Instance: DE0_D5M:inst|VGA_Controller:u1
+ 76. Parameter Settings for User Entity Instance: DE0_D5M:inst|CCD_Capture:u3
+ 77. Parameter Settings for User Entity Instance: DE0_D5M:inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:altshift_taps_component
+ 78. Parameter Settings for User Entity Instance: DE0_D5M:inst|sdram_pll:u6|altpll:altpll_component
+ 79. Parameter Settings for User Entity Instance: DE0_D5M:inst|Sdram_Control_4Port:u7
+ 80. Parameter Settings for User Entity Instance: DE0_D5M:inst|Sdram_Control_4Port:u7|control_interface:control1
+ 81. Parameter Settings for User Entity Instance: DE0_D5M:inst|Sdram_Control_4Port:u7|command:command1
+ 82. Parameter Settings for User Entity Instance: DE0_D5M:inst|Sdram_Control_4Port:u7|sdr_data_path:data_path1
+ 83. Parameter Settings for User Entity Instance: DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component
+ 84. Parameter Settings for User Entity Instance: DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component
+ 85. Parameter Settings for User Entity Instance: DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component
+ 86. Parameter Settings for User Entity Instance: DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component
+ 87. Parameter Settings for User Entity Instance: DE0_D5M:inst|I2C_CCD_Config:u8
+ 88. Parameter Settings for User Entity Instance: top:inst3|clk_div:GEN_10K
+ 89. Parameter Settings for User Entity Instance: top:inst3|pulse_gen:PULSE
+ 90. Parameter Settings for User Entity Instance: top:inst3|spi2dac:SPI_DAC
+ 91. Parameter Settings for User Entity Instance: top:inst3|spi2adc:SPI_ADC
+ 92. Parameter Settings for User Entity Instance: top:inst3|processor:DUMMY
+ 93. Parameter Settings for User Entity Instance: top:inst3|processor:DUMMY|pulse_gen:pulse_gen
+ 94. Parameter Settings for User Entity Instance: top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component
+ 95. Parameter Settings for User Entity Instance: vga_mux:inst10|LPM_MUX:LPM_MUX_component
+ 96. Parameter Settings for User Entity Instance: mean_vga:inst1|mgc_in_wire:vin_rsc_mgc_in_wire
+ 97. Parameter Settings for User Entity Instance: mean_vga:inst1|mgc_out_stdreg:vout_rsc_mgc_out_stdreg
+ 98. Parameter Settings for User Entity Instance: mean_vga:inst1|mgc_in_wire:vga_xy_rsc_mgc_in_wire
+ 99. Parameter Settings for User Entity Instance: mean_vga:inst1|mgc_in_wire:wr_en_rsc_mgc_in_wire
+100. Parameter Settings for User Entity Instance: altshift_taps:fifo_inst2
+101. Parameter Settings for Inferred Entity Instance: mean_vga:inst1|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult9
+102. Parameter Settings for Inferred Entity Instance: mean_vga:inst1|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult5
+103. Parameter Settings for Inferred Entity Instance: mean_vga:inst1|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult4
+104. Parameter Settings for Inferred Entity Instance: mean_vga:inst1|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult8
+105. Parameter Settings for Inferred Entity Instance: mean_vga:inst1|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult7
+106. Parameter Settings for Inferred Entity Instance: mean_vga:inst1|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult3
+107. Parameter Settings for Inferred Entity Instance: mean_vga:inst1|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult2
+108. Parameter Settings for Inferred Entity Instance: mean_vga:inst1|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult1
+109. Parameter Settings for Inferred Entity Instance: mean_vga:inst1|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult0
+110. Parameter Settings for Inferred Entity Instance: mean_vga:inst1|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult6
+111. altshift_taps Parameter Settings by Entity Instance
+112. altpll Parameter Settings by Entity Instance
+113. dcfifo Parameter Settings by Entity Instance
+114. scfifo Parameter Settings by Entity Instance
+115. lpm_mult Parameter Settings by Entity Instance
+116. Port Connectivity Checks: "top:inst3|hex_to_7seg:SEG2"
+117. Port Connectivity Checks: "top:inst3|processor:DUMMY|FIFO:FIFO"
+118. Port Connectivity Checks: "top:inst3|clk_div:GEN_10K"
+119. Port Connectivity Checks: "DE0_D5M:inst|I2C_CCD_Config:u8"
+120. Port Connectivity Checks: "DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2"
+121. Port Connectivity Checks: "DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1"
+122. Port Connectivity Checks: "DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2"
+123. Port Connectivity Checks: "DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1"
+124. Port Connectivity Checks: "DE0_D5M:inst|Sdram_Control_4Port:u7|sdr_data_path:data_path1"
+125. Port Connectivity Checks: "DE0_D5M:inst|Sdram_Control_4Port:u7|control_interface:control1"
+126. Port Connectivity Checks: "DE0_D5M:inst|Sdram_Control_4Port:u7"
+127. Port Connectivity Checks: "DE0_D5M:inst|SEG7_LUT_8:u5"
+128. Port Connectivity Checks: "DE0_D5M:inst|RAW2RGB:u4|Line_Buffer:u0"
+129. Port Connectivity Checks: "DE0_D5M:inst|RAW2RGB:u4"
+130. Port Connectivity Checks: "DE0_D5M:inst|CCD_Capture:u3"
+131. Port Connectivity Checks: "DE0_D5M:inst|VGA_Controller:u1"
+132. Elapsed Time Per Partition
+133. Analysis & Synthesis Messages
 
 
 
@@ -161,18 +164,18 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 26 15:42:42 2016            ;
+; Analysis & Synthesis Status        ; Successful - Tue Apr 26 16:00:46 2016            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; DE0_D5M                                          ;
 ; Top-level Entity Name              ; TOP_DE0_CAMERA_MOUSE                             ;
 ; Family                             ; Cyclone III                                      ;
-; Total logic elements               ; 3,021                                            ;
-;     Total combinational functions  ; 2,441                                            ;
-;     Dedicated logic registers      ; 1,362                                            ;
-; Total registers                    ; 1362                                             ;
-; Total pins                         ; 178                                              ;
+; Total logic elements               ; 3,090                                            ;
+;     Total combinational functions  ; 2,509                                            ;
+;     Dedicated logic registers      ; 1,421                                            ;
+; Total registers                    ; 1421                                             ;
+; Total pins                         ; 139                                              ;
 ; Total virtual pins                 ; 0                                                ;
-; Total memory bits                  ; 134,236                                          ;
+; Total memory bits                  ; 143,452                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                                ;
 ; Total PLLs                         ; 1                                                ;
 +------------------------------------+--------------------------------------------------+
@@ -294,6 +297,7 @@ applicable agreement for further details.
 ; music/pulse_gen.v                         ; yes             ; User Verilog HDL File              ; C:/Workplace/EIE-1stYear-project-FPGA/prj2/quartus_proj/DE0_CAMERA_MOUSE/music/pulse_gen.v                         ;         ;
 ; music/multiple_echo.v                     ; yes             ; User Verilog HDL File              ; C:/Workplace/EIE-1stYear-project-FPGA/prj2/quartus_proj/DE0_CAMERA_MOUSE/music/multiple_echo.v                     ;         ;
 ; music/hex_to_7seg.v                       ; yes             ; User Verilog HDL File              ; C:/Workplace/EIE-1stYear-project-FPGA/prj2/quartus_proj/DE0_CAMERA_MOUSE/music/hex_to_7seg.v                       ;         ;
+; music/FIFO.v                              ; yes             ; User Wizard-Generated File         ; C:/Workplace/EIE-1stYear-project-FPGA/prj2/quartus_proj/DE0_CAMERA_MOUSE/music/FIFO.v                              ;         ;
 ; music/clk_div.v                           ; yes             ; User Verilog HDL File              ; C:/Workplace/EIE-1stYear-project-FPGA/prj2/quartus_proj/DE0_CAMERA_MOUSE/music/clk_div.v                           ;         ;
 ; catapult_ip/sobel_filter/rtl.v            ; yes             ; User Verilog HDL File              ; C:/Workplace/EIE-1stYear-project-FPGA/prj2/quartus_proj/DE0_CAMERA_MOUSE/catapult_ip/sobel_filter/rtl.v            ;         ;
 ; Sdram_Control_4Port/Sdram_Params.h        ; yes             ; User Unspecified File              ; C:/Workplace/EIE-1stYear-project-FPGA/prj2/quartus_proj/DE0_CAMERA_MOUSE/Sdram_Control_4Port/Sdram_Params.h        ;         ;
@@ -351,6 +355,19 @@ applicable agreement for further details.
 ; db/alt_synch_pipe_rld.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/Workplace/EIE-1stYear-project-FPGA/prj2/quartus_proj/DE0_CAMERA_MOUSE/db/alt_synch_pipe_rld.tdf                 ;         ;
 ; db/dffpipe_qe9.tdf                        ; yes             ; Auto-Generated Megafunction        ; C:/Workplace/EIE-1stYear-project-FPGA/prj2/quartus_proj/DE0_CAMERA_MOUSE/db/dffpipe_qe9.tdf                        ;         ;
 ; db/cmpr_e66.tdf                           ; yes             ; Auto-Generated Megafunction        ; C:/Workplace/EIE-1stYear-project-FPGA/prj2/quartus_proj/DE0_CAMERA_MOUSE/db/cmpr_e66.tdf                           ;         ;
+; scfifo.tdf                                ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/scfifo.tdf                                                       ;         ;
+; a_regfifo.inc                             ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_regfifo.inc                                                    ;         ;
+; a_dpfifo.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_dpfifo.inc                                                     ;         ;
+; a_i2fifo.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_i2fifo.inc                                                     ;         ;
+; a_fffifo.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_fffifo.inc                                                     ;         ;
+; a_f2fifo.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_f2fifo.inc                                                     ;         ;
+; db/scfifo_2g21.tdf                        ; yes             ; Auto-Generated Megafunction        ; C:/Workplace/EIE-1stYear-project-FPGA/prj2/quartus_proj/DE0_CAMERA_MOUSE/db/scfifo_2g21.tdf                        ;         ;
+; db/a_dpfifo_9m21.tdf                      ; yes             ; Auto-Generated Megafunction        ; C:/Workplace/EIE-1stYear-project-FPGA/prj2/quartus_proj/DE0_CAMERA_MOUSE/db/a_dpfifo_9m21.tdf                      ;         ;
+; db/altsyncram_s5e1.tdf                    ; yes             ; Auto-Generated Megafunction        ; C:/Workplace/EIE-1stYear-project-FPGA/prj2/quartus_proj/DE0_CAMERA_MOUSE/db/altsyncram_s5e1.tdf                    ;         ;
+; db/cmpr_ls8.tdf                           ; yes             ; Auto-Generated Megafunction        ; C:/Workplace/EIE-1stYear-project-FPGA/prj2/quartus_proj/DE0_CAMERA_MOUSE/db/cmpr_ls8.tdf                           ;         ;
+; db/cntr_p8b.tdf                           ; yes             ; Auto-Generated Megafunction        ; C:/Workplace/EIE-1stYear-project-FPGA/prj2/quartus_proj/DE0_CAMERA_MOUSE/db/cntr_p8b.tdf                           ;         ;
+; db/cntr_da7.tdf                           ; yes             ; Auto-Generated Megafunction        ; C:/Workplace/EIE-1stYear-project-FPGA/prj2/quartus_proj/DE0_CAMERA_MOUSE/db/cntr_da7.tdf                           ;         ;
+; db/cntr_1ab.tdf                           ; yes             ; Auto-Generated Megafunction        ; C:/Workplace/EIE-1stYear-project-FPGA/prj2/quartus_proj/DE0_CAMERA_MOUSE/db/cntr_1ab.tdf                           ;         ;
 ; lpm_mux.tdf                               ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.tdf                                                      ;         ;
 ; muxlut.inc                                ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/muxlut.inc                                                       ;         ;
 ; bypassff.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc                                                     ;         ;
@@ -388,32 +405,32 @@ applicable agreement for further details.
 +---------------------------------------------+-------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                               ;
 +---------------------------------------------+-------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 3,021                                                                               ;
+; Estimated Total logic elements              ; 3,090                                                                               ;
 ;                                             ;                                                                                     ;
-; Total combinational functions               ; 2441                                                                                ;
+; Total combinational functions               ; 2509                                                                                ;
 ; Logic element usage by number of LUT inputs ;                                                                                     ;
-;     -- 4 input functions                    ; 673                                                                                 ;
-;     -- 3 input functions                    ; 1047                                                                                ;
-;     -- <=2 input functions                  ; 721                                                                                 ;
+;     -- 4 input functions                    ; 693                                                                                 ;
+;     -- 3 input functions                    ; 1075                                                                                ;
+;     -- <=2 input functions                  ; 741                                                                                 ;
 ;                                             ;                                                                                     ;
 ; Logic elements by mode                      ;                                                                                     ;
-;     -- normal mode                          ; 1341                                                                                ;
-;     -- arithmetic mode                      ; 1100                                                                                ;
+;     -- normal mode                          ; 1379                                                                                ;
+;     -- arithmetic mode                      ; 1130                                                                                ;
 ;                                             ;                                                                                     ;
-; Total registers                             ; 1362                                                                                ;
-;     -- Dedicated logic registers            ; 1362                                                                                ;
+; Total registers                             ; 1421                                                                                ;
+;     -- Dedicated logic registers            ; 1421                                                                                ;
 ;     -- I/O registers                        ; 0                                                                                   ;
 ;                                             ;                                                                                     ;
-; I/O pins                                    ; 178                                                                                 ;
-; Total memory bits                           ; 134236                                                                              ;
+; I/O pins                                    ; 139                                                                                 ;
+; Total memory bits                           ; 143452                                                                              ;
 ; Embedded Multiplier 9-bit elements          ; 0                                                                                   ;
 ; Total PLLs                                  ; 1                                                                                   ;
 ;     -- PLLs                                 ; 1                                                                                   ;
 ;                                             ;                                                                                     ;
 ; Maximum fan-out node                        ; DE0_D5M:inst|sdram_pll:u6|altpll:altpll_component|altpll_9ee2:auto_generated|clk[0] ;
 ; Maximum fan-out                             ; 572                                                                                 ;
-; Total fan-out                               ; 14845                                                                               ;
-; Average fan-out                             ; 3.39                                                                                ;
+; Total fan-out                               ; 15352                                                                               ;
+; Average fan-out                             ; 3.46                                                                                ;
 +---------------------------------------------+-------------------------------------------------------------------------------------+
 
 
@@ -422,8 +439,8 @@ applicable agreement for further details.
 +-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                  ; Library Name ;
 +-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |TOP_DE0_CAMERA_MOUSE                               ; 2441 (2)          ; 1362 (0)     ; 134236      ; 0            ; 0       ; 0         ; 178  ; 0            ; |TOP_DE0_CAMERA_MOUSE                                                                                                                                                                ; work         ;
-;    |DE0_D5M:inst|                                   ; 1157 (1)          ; 1013 (15)    ; 62416       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst                                                                                                                                                   ; work         ;
+; |TOP_DE0_CAMERA_MOUSE                               ; 2509 (2)          ; 1421 (0)     ; 143452      ; 0            ; 0       ; 0         ; 139  ; 0            ; |TOP_DE0_CAMERA_MOUSE                                                                                                                                                                ; work         ;
+;    |DE0_D5M:inst|                                   ; 1153 (1)          ; 1013 (15)    ; 62416       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst                                                                                                                                                   ; work         ;
 ;       |CCD_Capture:u3|                              ; 40 (40)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|CCD_Capture:u3                                                                                                                                    ; work         ;
 ;       |I2C_CCD_Config:u8|                           ; 237 (168)         ; 132 (94)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|I2C_CCD_Config:u8                                                                                                                                 ; work         ;
 ;          |I2C_Controller:u0|                        ; 69 (69)           ; 38 (38)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0                                                                                                               ; work         ;
@@ -435,7 +452,7 @@ applicable agreement for further details.
 ;                   |cntr_cuf:cntr1|                  ; 16 (13)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:altshift_taps_component|shift_taps_rnn:auto_generated|cntr_cuf:cntr1                                      ; work         ;
 ;                      |cmpr_vgc:cmpr4|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:altshift_taps_component|shift_taps_rnn:auto_generated|cntr_cuf:cntr1|cmpr_vgc:cmpr4                       ; work         ;
 ;       |Reset_Delay:u2|                              ; 50 (50)           ; 35 (35)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Reset_Delay:u2                                                                                                                                    ; work         ;
-;       |Sdram_Control_4Port:u7|                      ; 679 (215)         ; 704 (137)    ; 31744       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7                                                                                                                            ; work         ;
+;       |Sdram_Control_4Port:u7|                      ; 675 (215)         ; 704 (137)    ; 31744       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7                                                                                                                            ; work         ;
 ;          |Sdram_FIFO:read_fifo1|                    ; 84 (0)            ; 116 (0)      ; 7680        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1                                                                                                      ; work         ;
 ;             |dcfifo:dcfifo_component|               ; 84 (0)            ; 116 (0)      ; 7680        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component                                                                              ; work         ;
 ;                |dcfifo_v5o1:auto_generated|         ; 84 (15)           ; 116 (30)     ; 7680        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated                                                   ; work         ;
@@ -468,13 +485,13 @@ applicable agreement for further details.
 ;                   |cmpr_e66:wrfull_eq_comp|         ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|cmpr_e66:wrfull_eq_comp                           ; work         ;
 ;                   |dffpipe_oe9:ws_brp|              ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|dffpipe_oe9:ws_brp                                ; work         ;
 ;                   |dffpipe_oe9:ws_bwp|              ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|dffpipe_oe9:ws_bwp                                ; work         ;
-;          |Sdram_FIFO:write_fifo1|                   ; 88 (0)            ; 116 (0)      ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1                                                                                                     ; work         ;
-;             |dcfifo:dcfifo_component|               ; 88 (0)            ; 116 (0)      ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component                                                                             ; work         ;
-;                |dcfifo_v5o1:auto_generated|         ; 88 (18)           ; 116 (30)     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated                                                  ; work         ;
+;          |Sdram_FIFO:write_fifo1|                   ; 84 (0)            ; 116 (0)      ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1                                                                                                     ; work         ;
+;             |dcfifo:dcfifo_component|               ; 84 (0)            ; 116 (0)      ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component                                                                             ; work         ;
+;                |dcfifo_v5o1:auto_generated|         ; 84 (15)           ; 116 (30)     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated                                                  ; work         ;
 ;                   |a_gray2bin_tgb:rdptr_g_gray2bin| ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_gray2bin_tgb:rdptr_g_gray2bin                  ; work         ;
 ;                   |a_gray2bin_tgb:rs_dgwp_gray2bin| ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_gray2bin_tgb:rs_dgwp_gray2bin                  ; work         ;
 ;                   |a_graycounter_ojc:wrptr_g1p|     ; 19 (19)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_ojc:wrptr_g1p                      ; work         ;
-;                   |a_graycounter_s57:rdptr_g1p|     ; 21 (21)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p                      ; work         ;
+;                   |a_graycounter_s57:rdptr_g1p|     ; 20 (20)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p                      ; work         ;
 ;                   |alt_synch_pipe_qld:rs_dgwp|      ; 0 (0)             ; 20 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|alt_synch_pipe_qld:rs_dgwp                       ; work         ;
 ;                      |dffpipe_pe9:dffpipe13|        ; 0 (0)             ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|alt_synch_pipe_qld:rs_dgwp|dffpipe_pe9:dffpipe13 ; work         ;
 ;                   |alt_synch_pipe_rld:ws_dgrp|      ; 0 (0)             ; 20 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|alt_synch_pipe_rld:ws_dgrp                       ; work         ;
@@ -545,14 +562,24 @@ applicable agreement for further details.
 ;             |multcore:mult_core|                    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst1|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult8|multcore:mult_core                                                                              ; work         ;
 ;          |lpm_mult:Mult9|                           ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst1|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult9                                                                                                 ; work         ;
 ;             |multcore:mult_core|                    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|mean_vga:inst1|mean_vga_core:mean_vga_core_inst|lpm_mult:Mult9|multcore:mult_core                                                                              ; work         ;
-;    |top:inst3|                                      ; 123 (1)           ; 87 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|top:inst3                                                                                                                                                      ; work         ;
+;    |top:inst3|                                      ; 195 (1)           ; 146 (0)      ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|top:inst3                                                                                                                                                      ; work         ;
 ;       |clk_div:GEN_10K|                             ; 43 (43)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|top:inst3|clk_div:GEN_10K                                                                                                                                      ; work         ;
 ;       |hex_to_7seg:SEG0|                            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|top:inst3|hex_to_7seg:SEG0                                                                                                                                     ; work         ;
 ;       |hex_to_7seg:SEG1|                            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|top:inst3|hex_to_7seg:SEG1                                                                                                                                     ; work         ;
 ;       |hex_to_7seg:SEG2|                            ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|top:inst3|hex_to_7seg:SEG2                                                                                                                                     ; work         ;
+;       |processor:DUMMY|                             ; 71 (14)           ; 57 (11)      ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|top:inst3|processor:DUMMY                                                                                                                                      ; work         ;
+;          |FIFO:FIFO|                                ; 55 (0)            ; 44 (0)       ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|top:inst3|processor:DUMMY|FIFO:FIFO                                                                                                                            ; work         ;
+;             |scfifo:scfifo_component|               ; 55 (0)            ; 44 (0)       ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component                                                                                                    ; work         ;
+;                |scfifo_2g21:auto_generated|         ; 55 (0)            ; 44 (0)       ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated                                                                         ; work         ;
+;                   |a_dpfifo_9m21:dpfifo|            ; 55 (26)           ; 44 (15)      ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated|a_dpfifo_9m21:dpfifo                                                    ; work         ;
+;                      |altsyncram_s5e1:FIFOram|      ; 0 (0)             ; 0 (0)        ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated|a_dpfifo_9m21:dpfifo|altsyncram_s5e1:FIFOram                            ; work         ;
+;                      |cntr_1ab:wr_ptr|              ; 10 (10)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated|a_dpfifo_9m21:dpfifo|cntr_1ab:wr_ptr                                    ; work         ;
+;                      |cntr_da7:usedw_counter|       ; 10 (10)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated|a_dpfifo_9m21:dpfifo|cntr_da7:usedw_counter                             ; work         ;
+;                      |cntr_p8b:rd_ptr_msb|          ; 9 (9)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated|a_dpfifo_9m21:dpfifo|cntr_p8b:rd_ptr_msb                                ; work         ;
+;          |pulse_gen:pulse_gen|                      ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|top:inst3|processor:DUMMY|pulse_gen:pulse_gen                                                                                                                  ; work         ;
 ;       |pulse_gen:PULSE|                             ; 1 (1)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|top:inst3|pulse_gen:PULSE                                                                                                                                      ; work         ;
 ;       |spi2adc:SPI_ADC|                             ; 31 (31)           ; 39 (39)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|top:inst3|spi2adc:SPI_ADC                                                                                                                                      ; work         ;
-;       |spi2dac:SPI_DAC|                             ; 30 (30)           ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|top:inst3|spi2dac:SPI_DAC                                                                                                                                      ; work         ;
+;       |spi2dac:SPI_DAC|                             ; 31 (31)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|top:inst3|spi2dac:SPI_DAC                                                                                                                                      ; work         ;
 ;    |vga_mux:inst10|                                 ; 36 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|vga_mux:inst10                                                                                                                                                 ; work         ;
 ;       |lpm_mux:LPM_MUX_component|                   ; 36 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|vga_mux:inst10|lpm_mux:LPM_MUX_component                                                                                                                       ; work         ;
 ;          |mux_u7e:auto_generated|                   ; 36 (36)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|vga_mux:inst10|lpm_mux:LPM_MUX_component|mux_u7e:auto_generated                                                                                                ; work         ;
@@ -571,6 +598,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|altsyncram_de51:fifo_ram|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 512          ; 16           ; 512          ; 16           ; 8192  ; None ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|altsyncram_de51:fifo_ram|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 512          ; 16           ; 512          ; 16           ; 8192  ; None ;
 ; altshift_taps:fifo_inst2|shift_taps_jpm:auto_generated|altsyncram_5n81:altsyncram2|ALTSYNCRAM                                                     ; AUTO ; Simple Dual Port ; 798          ; 90           ; 798          ; 90           ; 71820 ; None ;
+; top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated|a_dpfifo_9m21:dpfifo|altsyncram_s5e1:FIFOram|ALTSYNCRAM    ; AUTO ; Simple Dual Port ; 1024         ; 10           ; 1024         ; 10           ; 10240 ; None ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
 
 
@@ -585,6 +613,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Altera ; FIFO                       ; N/A     ; N/A          ; N/A          ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2  ; C:/Workplace/EIE-1stYear-project-FPGA/prj2/quartus_proj/DE0_CAMERA_MOUSE/Sdram_Control_4Port/Sdram_FIFO.v ;
 ; Altera ; FIFO                       ; N/A     ; N/A          ; N/A          ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1 ; C:/Workplace/EIE-1stYear-project-FPGA/prj2/quartus_proj/DE0_CAMERA_MOUSE/Sdram_Control_4Port/Sdram_FIFO.v ;
 ; Altera ; FIFO                       ; N/A     ; N/A          ; N/A          ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2 ; C:/Workplace/EIE-1stYear-project-FPGA/prj2/quartus_proj/DE0_CAMERA_MOUSE/Sdram_Control_4Port/Sdram_FIFO.v ;
+; Altera ; FIFO                       ; N/A     ; N/A          ; N/A          ; |TOP_DE0_CAMERA_MOUSE|top:inst3|processor:DUMMY|FIFO:FIFO                        ; C:/Workplace/EIE-1stYear-project-FPGA/prj2/quartus_proj/DE0_CAMERA_MOUSE/music/FIFO.v                     ;
 ; Altera ; LPM_MUX                    ; 13.1    ; N/A          ; N/A          ; |TOP_DE0_CAMERA_MOUSE|vga_mux:inst10                                             ; C:/Workplace/EIE-1stYear-project-FPGA/prj2/quartus_proj/DE0_CAMERA_MOUSE/vga_mux.vhd                      ;
 +--------+----------------------------+---------+--------------+--------------+----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+
 
@@ -667,7 +696,6 @@ Encoding Type:  One-Hot
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|command:command1|CKE                                                                                    ; Stuck at VCC due to stuck port data_in                                                    ;
 ; top:inst3|spi2dac:SPI_DAC|shift_reg[1]                                                                                                      ; Stuck at GND due to stuck port data_in                                                    ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|CKE                                                                                                     ; Stuck at VCC due to stuck port data_in                                                    ;
-; top:inst3|spi2dac:SPI_DAC|shift_reg[2,3]                                                                                                    ; Stuck at GND due to stuck port data_in                                                    ;
 ; DE0_D5M:inst|I2C_CCD_Config:u8|mI2C_DATA[31]                                                                                                ; Stuck at VCC due to stuck port data_in                                                    ;
 ; DE0_D5M:inst|I2C_CCD_Config:u8|mI2C_DATA[30]                                                                                                ; Stuck at GND due to stuck port data_in                                                    ;
 ; DE0_D5M:inst|I2C_CCD_Config:u8|mI2C_DATA[27..29]                                                                                            ; Stuck at VCC due to stuck port data_in                                                    ;
@@ -716,7 +744,6 @@ Encoding Type:  One-Hot
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|mLENGTH[8]                                                                                              ; Stuck at VCC due to stuck port data_in                                                    ;
 ; top:inst3|processor:DUMMY|pulse_gen:pulse_gen|state.IN_HIGH                                                                                 ; Lost fanout                                                                               ;
 ; top:inst3|processor:DUMMY|pulse_gen:pulse_gen|state.WAIT_LOW                                                                                ; Lost fanout                                                                               ;
-; top:inst3|processor:DUMMY|pulse_gen:pulse_gen|state.IDLE                                                                                    ; Lost fanout                                                                               ;
 ; top:inst3|pulse_gen:PULSE|state.IN_HIGH                                                                                                     ; Lost fanout                                                                               ;
 ; top:inst3|pulse_gen:PULSE|state.WAIT_LOW                                                                                                    ; Lost fanout                                                                               ;
 ; DE0_D5M:inst|I2C_CCD_Config:u8|mSetup_ST~9                                                                                                  ; Lost fanout                                                                               ;
@@ -724,41 +751,40 @@ Encoding Type:  One-Hot
 ; DE0_D5M:inst|CCD_Capture:u3|Y_Cont[1..15]                                                                                                   ; Lost fanout                                                                               ;
 ; mean_vga:inst1|mean_vga_core:mean_vga_core_inst|MAC2_mul_7_itm_1[1]                                                                         ; Merged with mean_vga:inst1|mean_vga_core:mean_vga_core_inst|MAC2_mul_7_itm_1[3]           ;
 ; mean_vga:inst1|mean_vga_core:mean_vga_core_inst|MAC2_mul_9_itm_1[1]                                                                         ; Merged with mean_vga:inst1|mean_vga_core:mean_vga_core_inst|MAC2_mul_9_itm_1[3]           ;
-; Total Number of Removed Registers = 164                                                                                                     ;                                                                                           ;
+; Total Number of Removed Registers = 161                                                                                                     ;                                                                                           ;
 +---------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                               ;
-+-------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------+
-; Register name                                               ; Reason for Removal        ; Registers Removed due to This Register                                          ;
-+-------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------+
-; DE0_D5M:inst|Sdram_Control_4Port:u7|rWR1_LENGTH[8]          ; Stuck at VCC              ; DE0_D5M:inst|Sdram_Control_4Port:u7|mLENGTH[7],                                 ;
-;                                                             ; due to stuck port data_in ; DE0_D5M:inst|Sdram_Control_4Port:u7|mADDR[7],                                   ;
-;                                                             ;                           ; DE0_D5M:inst|Sdram_Control_4Port:u7|control_interface:control1|SADDR[7],        ;
-;                                                             ;                           ; DE0_D5M:inst|Sdram_Control_4Port:u7|mLENGTH[8]                                  ;
-; top:inst3|spi2dac:SPI_DAC|shift_reg[0]                      ; Stuck at GND              ; top:inst3|spi2dac:SPI_DAC|shift_reg[1], top:inst3|spi2dac:SPI_DAC|shift_reg[2], ;
-;                                                             ; due to stuck port data_in ; top:inst3|spi2dac:SPI_DAC|shift_reg[3]                                          ;
-; DE0_D5M:inst|Sdram_Control_4Port:u7|command:command1|CKE    ; Stuck at VCC              ; DE0_D5M:inst|Sdram_Control_4Port:u7|CKE                                         ;
-;                                                             ; due to stuck port data_in ;                                                                                 ;
-; DE0_D5M:inst|I2C_CCD_Config:u8|mI2C_DATA[31]                ; Stuck at VCC              ; DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[31]                         ;
-;                                                             ; due to stuck port data_in ;                                                                                 ;
-; DE0_D5M:inst|I2C_CCD_Config:u8|mI2C_DATA[30]                ; Stuck at GND              ; DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[30]                         ;
-;                                                             ; due to stuck port data_in ;                                                                                 ;
-; DE0_D5M:inst|I2C_CCD_Config:u8|mI2C_DATA[29]                ; Stuck at VCC              ; DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[29]                         ;
-;                                                             ; due to stuck port data_in ;                                                                                 ;
-; DE0_D5M:inst|I2C_CCD_Config:u8|mI2C_DATA[28]                ; Stuck at VCC              ; DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[28]                         ;
-;                                                             ; due to stuck port data_in ;                                                                                 ;
-; DE0_D5M:inst|I2C_CCD_Config:u8|mI2C_DATA[27]                ; Stuck at VCC              ; DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[27]                         ;
-;                                                             ; due to stuck port data_in ;                                                                                 ;
-; DE0_D5M:inst|I2C_CCD_Config:u8|mI2C_DATA[26]                ; Stuck at GND              ; DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[26]                         ;
-;                                                             ; due to stuck port data_in ;                                                                                 ;
-; DE0_D5M:inst|I2C_CCD_Config:u8|mI2C_DATA[25]                ; Stuck at VCC              ; DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[25]                         ;
-;                                                             ; due to stuck port data_in ;                                                                                 ;
-; DE0_D5M:inst|I2C_CCD_Config:u8|mI2C_DATA[24]                ; Stuck at GND              ; DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[24]                         ;
-;                                                             ; due to stuck port data_in ;                                                                                 ;
-; top:inst3|processor:DUMMY|pulse_gen:pulse_gen|state.IN_HIGH ; Lost Fanouts              ; top:inst3|processor:DUMMY|pulse_gen:pulse_gen|state.IDLE                        ;
-+-------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                     ;
++----------------------------------------------------------+---------------------------+--------------------------------------------------------------------------+
+; Register name                                            ; Reason for Removal        ; Registers Removed due to This Register                                   ;
++----------------------------------------------------------+---------------------------+--------------------------------------------------------------------------+
+; DE0_D5M:inst|Sdram_Control_4Port:u7|rWR1_LENGTH[8]       ; Stuck at VCC              ; DE0_D5M:inst|Sdram_Control_4Port:u7|mLENGTH[7],                          ;
+;                                                          ; due to stuck port data_in ; DE0_D5M:inst|Sdram_Control_4Port:u7|mADDR[7],                            ;
+;                                                          ;                           ; DE0_D5M:inst|Sdram_Control_4Port:u7|control_interface:control1|SADDR[7], ;
+;                                                          ;                           ; DE0_D5M:inst|Sdram_Control_4Port:u7|mLENGTH[8]                           ;
+; top:inst3|spi2dac:SPI_DAC|shift_reg[0]                   ; Stuck at GND              ; top:inst3|spi2dac:SPI_DAC|shift_reg[1]                                   ;
+;                                                          ; due to stuck port data_in ;                                                                          ;
+; DE0_D5M:inst|Sdram_Control_4Port:u7|command:command1|CKE ; Stuck at VCC              ; DE0_D5M:inst|Sdram_Control_4Port:u7|CKE                                  ;
+;                                                          ; due to stuck port data_in ;                                                                          ;
+; DE0_D5M:inst|I2C_CCD_Config:u8|mI2C_DATA[31]             ; Stuck at VCC              ; DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[31]                  ;
+;                                                          ; due to stuck port data_in ;                                                                          ;
+; DE0_D5M:inst|I2C_CCD_Config:u8|mI2C_DATA[30]             ; Stuck at GND              ; DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[30]                  ;
+;                                                          ; due to stuck port data_in ;                                                                          ;
+; DE0_D5M:inst|I2C_CCD_Config:u8|mI2C_DATA[29]             ; Stuck at VCC              ; DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[29]                  ;
+;                                                          ; due to stuck port data_in ;                                                                          ;
+; DE0_D5M:inst|I2C_CCD_Config:u8|mI2C_DATA[28]             ; Stuck at VCC              ; DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[28]                  ;
+;                                                          ; due to stuck port data_in ;                                                                          ;
+; DE0_D5M:inst|I2C_CCD_Config:u8|mI2C_DATA[27]             ; Stuck at VCC              ; DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[27]                  ;
+;                                                          ; due to stuck port data_in ;                                                                          ;
+; DE0_D5M:inst|I2C_CCD_Config:u8|mI2C_DATA[26]             ; Stuck at GND              ; DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[26]                  ;
+;                                                          ; due to stuck port data_in ;                                                                          ;
+; DE0_D5M:inst|I2C_CCD_Config:u8|mI2C_DATA[25]             ; Stuck at VCC              ; DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[25]                  ;
+;                                                          ; due to stuck port data_in ;                                                                          ;
+; DE0_D5M:inst|I2C_CCD_Config:u8|mI2C_DATA[24]             ; Stuck at GND              ; DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[24]                  ;
+;                                                          ; due to stuck port data_in ;                                                                          ;
++----------------------------------------------------------+---------------------------+--------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -766,12 +792,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1362  ;
+; Total registers                              ; 1421  ;
 ; Number of registers using Synchronous Clear  ; 125   ;
-; Number of registers using Synchronous Load   ; 99    ;
+; Number of registers using Synchronous Load   ; 91    ;
 ; Number of registers using Asynchronous Clear ; 951   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 405   ;
+; Number of registers using Clock Enable       ; 435   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -786,8 +812,8 @@ Encoding Type:  One-Hot
 ; DE0_D5M:inst|I2C_CCD_Config:u8|sensor_exposure[9]                                                                                                    ; 4       ;
 ; DE0_D5M:inst|I2C_CCD_Config:u8|sensor_exposure[7]                                                                                                    ; 4       ;
 ; DE0_D5M:inst|I2C_CCD_Config:u8|sensor_exposure[6]                                                                                                    ; 4       ;
-; top:inst3|spi2dac:SPI_DAC|dac_cs                                                                                                                     ; 11      ;
-; top:inst3|spi2adc:SPI_ADC|adc_cs                                                                                                                     ; 7       ;
+; top:inst3|spi2dac:SPI_DAC|dac_cs                                                                                                                     ; 20      ;
+; top:inst3|spi2adc:SPI_ADC|adc_cs                                                                                                                     ; 9       ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p|counter5a0  ; 7       ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p|counter5a0  ; 7       ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_ojc:wrptr_g1p|counter8a0  ; 7       ;
@@ -802,12 +828,12 @@ Encoding Type:  One-Hot
 ; DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SDO                                                                                                 ; 6       ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_ojc:wrptr_g1p|parity9     ; 5       ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_ojc:wrptr_g1p|parity9     ; 5       ;
-; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p|counter5a0 ; 8       ;
+; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p|counter5a0 ; 7       ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p|counter5a0 ; 7       ;
 ; DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD_COUNTER[1]                                                                                       ; 17      ;
 ; DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD_COUNTER[0]                                                                                       ; 20      ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_ojc:wrptr_g1p|counter8a0 ; 6       ;
-; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p|parity6    ; 5       ;
+; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p|parity6    ; 4       ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_ojc:wrptr_g1p|counter8a0 ; 6       ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p|parity6    ; 4       ;
 ; DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|END                                                                                                 ; 5       ;
@@ -817,34 +843,34 @@ Encoding Type:  One-Hot
 +------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------+
-; 3:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|command:command1|SA[6]              ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|control_interface:control1|timer[2] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|command:command1|command_delay[0]   ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|RAW2RGB:u4|mCCD_G[6]                                       ;
-; 4:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|RAW2RGB:u4|mCCD_R[6]                                       ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|I2C_CCD_Config:u8|sensor_exposure[15]                      ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|CCD_Capture:u3|X_Cont[10]                                  ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|CCD_Capture:u3|Y_Cont[6]                                   ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|rRD2_ADDR[20]                       ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|rRD1_ADDR[13]                       ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|rWR2_ADDR[20]                       ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|rWR1_ADDR[9]                        ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|command:command1|rp_shift[1]        ;
-; 5:1                ; 15 bits   ; 45 LEs        ; 30 LEs               ; 15 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|mADDR[22]                           ;
-; 64:1               ; 5 bits    ; 210 LEs       ; 60 LEs               ; 150 LEs                ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|I2C_CCD_Config:u8|mI2C_DATA[3]                             ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|CMD[0]                              ;
-; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|mRD                                 ;
-; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|mWR                                 ;
-; 7:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|ST[2]                               ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD_COUNTER[4]          ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|I2C_CCD_Config:u8|sensor_exposure[9]                       ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|I2C_CCD_Config:u8|Mux12                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------+
+; 3:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|command:command1|SA[6]               ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|control_interface:control1|timer[11] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|command:command1|command_delay[2]    ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|RAW2RGB:u4|mCCD_G[8]                                        ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|RAW2RGB:u4|mCCD_B[2]                                        ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|I2C_CCD_Config:u8|sensor_exposure[3]                        ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|CCD_Capture:u3|X_Cont[13]                                   ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|CCD_Capture:u3|Y_Cont[2]                                    ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|rRD2_ADDR[17]                        ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|rRD1_ADDR[13]                        ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|rWR2_ADDR[12]                        ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|rWR1_ADDR[15]                        ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|command:command1|rp_done             ;
+; 5:1                ; 15 bits   ; 45 LEs        ; 30 LEs               ; 15 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|mADDR[16]                            ;
+; 64:1               ; 5 bits    ; 210 LEs       ; 60 LEs               ; 150 LEs                ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|I2C_CCD_Config:u8|mI2C_DATA[14]                             ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|CMD[1]                               ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|mRD                                  ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|mWR                                  ;
+; 7:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|ST[5]                                ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD_COUNTER[1]           ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|I2C_CCD_Config:u8|sensor_exposure[9]                        ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|I2C_CCD_Config:u8|Mux12                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1354,6 +1380,15 @@ Encoding Type:  One-Hot
 +---------------------------------+-------+------+-------------------------------------------------------------------------------------------------------------------------------------+
 ; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                                                                                   ;
 +---------------------------------+-------+------+-------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated|a_dpfifo_9m21:dpfifo|altsyncram_s5e1:FIFOram ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                           ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                            ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------+
@@ -2083,6 +2118,34 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component ;
++-------------------------+-------------+------------------------------------------------------------------+
+; Parameter Name          ; Value       ; Type                                                             ;
++-------------------------+-------------+------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS       ; ON          ; AUTO_CARRY                                                       ;
+; IGNORE_CARRY_BUFFERS    ; OFF         ; IGNORE_CARRY                                                     ;
+; AUTO_CASCADE_CHAINS     ; ON          ; AUTO_CASCADE                                                     ;
+; IGNORE_CASCADE_BUFFERS  ; OFF         ; IGNORE_CASCADE                                                   ;
+; lpm_width               ; 10          ; Signed Integer                                                   ;
+; LPM_NUMWORDS            ; 1024        ; Signed Integer                                                   ;
+; LPM_WIDTHU              ; 10          ; Signed Integer                                                   ;
+; LPM_SHOWAHEAD           ; OFF         ; Untyped                                                          ;
+; UNDERFLOW_CHECKING      ; ON          ; Untyped                                                          ;
+; OVERFLOW_CHECKING       ; ON          ; Untyped                                                          ;
+; ALLOW_RWCYCLE_WHEN_FULL ; OFF         ; Untyped                                                          ;
+; ADD_RAM_OUTPUT_REGISTER ; ON          ; Untyped                                                          ;
+; ALMOST_FULL_VALUE       ; 0           ; Untyped                                                          ;
+; ALMOST_EMPTY_VALUE      ; 0           ; Untyped                                                          ;
+; USE_EAB                 ; ON          ; Untyped                                                          ;
+; MAXIMIZE_SPEED          ; 5           ; Untyped                                                          ;
+; DEVICE_FAMILY           ; Cyclone III ; Untyped                                                          ;
+; OPTIMIZE_FOR_SPEED      ; 5           ; Untyped                                                          ;
+; CBXI_PARAMETER          ; scfifo_2g21 ; Untyped                                                          ;
++-------------------------+-------------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +---------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: vga_mux:inst10|LPM_MUX:LPM_MUX_component ;
 +------------------------+-------------+------------------------------------------------+
@@ -2578,6 +2641,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------------+------------------------------------------------------------------------------------+
 
 
++------------------------------------------------------------------------------------------+
+; scfifo Parameter Settings by Entity Instance                                             ;
++----------------------------+-------------------------------------------------------------+
+; Name                       ; Value                                                       ;
++----------------------------+-------------------------------------------------------------+
+; Number of entity instances ; 1                                                           ;
+; Entity Instance            ; top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component ;
+;     -- FIFO Type           ; Single Clock                                                ;
+;     -- lpm_width           ; 10                                                          ;
+;     -- LPM_NUMWORDS        ; 1024                                                        ;
+;     -- LPM_SHOWAHEAD       ; OFF                                                         ;
+;     -- USE_EAB             ; ON                                                          ;
++----------------------------+-------------------------------------------------------------+
+
+
 +--------------------------------------------------------------------------------------------------------+
 ; lpm_mult Parameter Settings by Entity Instance                                                         ;
 +---------------------------------------+----------------------------------------------------------------+
@@ -2706,13 +2784,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+--------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "top:inst3|processor:DUMMY|pulse_gen:pulse_gen"                                       ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; pulse ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top:inst3|processor:DUMMY|FIFO:FIFO"                                                ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; q[0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------+
@@ -2942,7 +3020,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Tue Apr 26 15:42:33 2016
+    Info: Processing started: Tue Apr 26 16:00:37 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE0_D5M -c DE0_D5M
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file music/top.v
@@ -3040,11 +3118,6 @@ Info (12021): Found 2 design units, including 2 entities, in source file catapul
     Info (12023): Found entity 1: vga_mouse_square_core
     Info (12023): Found entity 2: vga_mouse_square
 Info (12127): Elaborating entity "TOP_DE0_CAMERA_MOUSE" for the top level hierarchy
-Warning (275043): Pin "HEX0[6..0]" is missing source
-Warning (275043): Pin "HEX1[6..0]" is missing source
-Warning (275043): Pin "HEX2[6..0]" is missing source
-Warning (275043): Pin "HEX3[6..0]" is missing source
-Warning (275043): Pin "LEDG[9..0]" is missing source
 Info (12128): Elaborating entity "DE0_D5M" for hierarchy "DE0_D5M:inst"
 Critical Warning (10169): Verilog HDL warning at DE0_D5M.v(118): the port and data declarations for array port "VGA_R" do not specify the same range for each dimension
 Warning (10359): HDL warning at DE0_D5M.v(166): see declaration for object "VGA_R"
@@ -3335,7 +3408,42 @@ Info (12128): Elaborating entity "pulse_gen" for hierarchy "top:inst3|pulse_gen:
 Info (12128): Elaborating entity "spi2dac" for hierarchy "top:inst3|spi2dac:SPI_DAC"
 Info (12128): Elaborating entity "spi2adc" for hierarchy "top:inst3|spi2adc:SPI_ADC"
 Info (12128): Elaborating entity "processor" for hierarchy "top:inst3|processor:DUMMY"
-Warning (10230): Verilog HDL assignment warning at multiple_echo.v(36): truncated value with size 32 to match size of target (10)
+Info (12128): Elaborating entity "FIFO" for hierarchy "top:inst3|processor:DUMMY|FIFO:FIFO"
+Info (12128): Elaborating entity "scfifo" for hierarchy "top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component"
+Info (12130): Elaborated megafunction instantiation "top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component"
+Info (12133): Instantiated megafunction "top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component" with the following parameter:
+    Info (12134): Parameter "add_ram_output_register" = "ON"
+    Info (12134): Parameter "intended_device_family" = "Cyclone III"
+    Info (12134): Parameter "lpm_numwords" = "1024"
+    Info (12134): Parameter "lpm_showahead" = "OFF"
+    Info (12134): Parameter "lpm_type" = "scfifo"
+    Info (12134): Parameter "lpm_width" = "10"
+    Info (12134): Parameter "lpm_widthu" = "10"
+    Info (12134): Parameter "overflow_checking" = "ON"
+    Info (12134): Parameter "underflow_checking" = "ON"
+    Info (12134): Parameter "use_eab" = "ON"
+Info (12021): Found 1 design units, including 1 entities, in source file db/scfifo_2g21.tdf
+    Info (12023): Found entity 1: scfifo_2g21
+Info (12128): Elaborating entity "scfifo_2g21" for hierarchy "top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_dpfifo_9m21.tdf
+    Info (12023): Found entity 1: a_dpfifo_9m21
+Info (12128): Elaborating entity "a_dpfifo_9m21" for hierarchy "top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated|a_dpfifo_9m21:dpfifo"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_s5e1.tdf
+    Info (12023): Found entity 1: altsyncram_s5e1
+Info (12128): Elaborating entity "altsyncram_s5e1" for hierarchy "top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated|a_dpfifo_9m21:dpfifo|altsyncram_s5e1:FIFOram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_ls8.tdf
+    Info (12023): Found entity 1: cmpr_ls8
+Info (12128): Elaborating entity "cmpr_ls8" for hierarchy "top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated|a_dpfifo_9m21:dpfifo|cmpr_ls8:almost_full_comparer"
+Info (12128): Elaborating entity "cmpr_ls8" for hierarchy "top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated|a_dpfifo_9m21:dpfifo|cmpr_ls8:two_comparison"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_p8b.tdf
+    Info (12023): Found entity 1: cntr_p8b
+Info (12128): Elaborating entity "cntr_p8b" for hierarchy "top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated|a_dpfifo_9m21:dpfifo|cntr_p8b:rd_ptr_msb"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_da7.tdf
+    Info (12023): Found entity 1: cntr_da7
+Info (12128): Elaborating entity "cntr_da7" for hierarchy "top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated|a_dpfifo_9m21:dpfifo|cntr_da7:usedw_counter"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_1ab.tdf
+    Info (12023): Found entity 1: cntr_1ab
+Info (12128): Elaborating entity "cntr_1ab" for hierarchy "top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated|a_dpfifo_9m21:dpfifo|cntr_1ab:wr_ptr"
 Info (12128): Elaborating entity "hex_to_7seg" for hierarchy "top:inst3|hex_to_7seg:SEG0"
 Info (12128): Elaborating entity "vga_mux" for hierarchy "vga_mux:inst10"
 Info (12128): Elaborating entity "LPM_MUX" for hierarchy "vga_mux:inst10|LPM_MUX:LPM_MUX_component"
@@ -3376,6 +3484,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
 Info (12128): Elaborating entity "cmpr_ugc" for hierarchy "altshift_taps:fifo_inst2|shift_taps_jpm:auto_generated|cntr_1tf:cntr1|cmpr_ugc:cmpr4"
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated|a_dpfifo_9m21:dpfifo|altsyncram_s5e1:FIFOram|q_b[0]"
         Warning (14320): Synthesized away node "DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|altsyncram_de51:fifo_ram|q_b[15]"
         Warning (14320): Synthesized away node "DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|altsyncram_de51:fifo_ram|q_b[15]"
 Info (278001): Inferred 10 megafunctions from design logic
@@ -3530,47 +3639,9 @@ Warning (13009): TRI or OPNDRN buffers permanently enabled
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "DRAM_CKE" is stuck at VCC
     Warning (13410): Pin "GPIO_1_CLKOUT[1]" is stuck at GND
-    Warning (13410): Pin "HEX0[6]" is stuck at GND
-    Warning (13410): Pin "HEX0[5]" is stuck at GND
-    Warning (13410): Pin "HEX0[4]" is stuck at GND
-    Warning (13410): Pin "HEX0[3]" is stuck at GND
-    Warning (13410): Pin "HEX0[2]" is stuck at GND
-    Warning (13410): Pin "HEX0[1]" is stuck at GND
-    Warning (13410): Pin "HEX0[0]" is stuck at GND
-    Warning (13410): Pin "HEX1[6]" is stuck at GND
-    Warning (13410): Pin "HEX1[5]" is stuck at GND
-    Warning (13410): Pin "HEX1[4]" is stuck at GND
-    Warning (13410): Pin "HEX1[3]" is stuck at GND
-    Warning (13410): Pin "HEX1[2]" is stuck at GND
-    Warning (13410): Pin "HEX1[1]" is stuck at GND
-    Warning (13410): Pin "HEX1[0]" is stuck at GND
-    Warning (13410): Pin "HEX2[6]" is stuck at GND
-    Warning (13410): Pin "HEX2[5]" is stuck at GND
-    Warning (13410): Pin "HEX2[4]" is stuck at GND
-    Warning (13410): Pin "HEX2[3]" is stuck at GND
-    Warning (13410): Pin "HEX2[2]" is stuck at GND
-    Warning (13410): Pin "HEX2[1]" is stuck at GND
-    Warning (13410): Pin "HEX2[0]" is stuck at GND
     Warning (13410): Pin "HEX2_D[1]" is stuck at GND
-    Warning (13410): Pin "HEX3[6]" is stuck at GND
-    Warning (13410): Pin "HEX3[5]" is stuck at GND
-    Warning (13410): Pin "HEX3[4]" is stuck at GND
-    Warning (13410): Pin "HEX3[3]" is stuck at GND
-    Warning (13410): Pin "HEX3[2]" is stuck at GND
-    Warning (13410): Pin "HEX3[1]" is stuck at GND
-    Warning (13410): Pin "HEX3[0]" is stuck at GND
-    Warning (13410): Pin "LEDG[9]" is stuck at GND
-    Warning (13410): Pin "LEDG[8]" is stuck at GND
-    Warning (13410): Pin "LEDG[7]" is stuck at GND
-    Warning (13410): Pin "LEDG[6]" is stuck at GND
-    Warning (13410): Pin "LEDG[5]" is stuck at GND
-    Warning (13410): Pin "LEDG[4]" is stuck at GND
-    Warning (13410): Pin "LEDG[3]" is stuck at GND
-    Warning (13410): Pin "LEDG[2]" is stuck at GND
-    Warning (13410): Pin "LEDG[1]" is stuck at GND
-    Warning (13410): Pin "LEDG[0]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 32 registers lost all their fanouts during netlist optimizations.
+Info (17049): 31 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 12 input pin(s) that do not drive logic
@@ -3586,17 +3657,17 @@ Warning (21074): Design contains 12 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "volume[2]"
     Warning (15610): No output dependent on input pin "volume[1]"
     Warning (15610): No output dependent on input pin "volume[0]"
-Info (21057): Implemented 3410 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 26 input pins
-    Info (21059): Implemented 104 output pins
+Info (21057): Implemented 3469 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 25 input pins
+    Info (21059): Implemented 66 output pins
     Info (21060): Implemented 48 bidirectional pins
-    Info (21061): Implemented 3055 logic cells
-    Info (21064): Implemented 176 RAM segments
+    Info (21061): Implemented 3144 logic cells
+    Info (21064): Implemented 185 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 154 warnings
-    Info: Peak virtual memory: 549 megabytes
-    Info: Processing ended: Tue Apr 26 15:42:42 2016
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 111 warnings
+    Info: Peak virtual memory: 560 megabytes
+    Info: Processing ended: Tue Apr 26 16:00:46 2016
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Total CPU time (on all processors): 00:00:09
 
 

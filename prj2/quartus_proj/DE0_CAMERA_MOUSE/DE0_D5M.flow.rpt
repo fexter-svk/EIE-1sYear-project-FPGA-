@@ -1,5 +1,5 @@
 Flow report for DE0_D5M
-Tue Apr 26 15:43:05 2016
+Tue Apr 26 16:01:10 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -40,20 +40,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Flow Summary                                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Flow Status                        ; Successful - Tue Apr 26 15:43:01 2016            ;
+; Flow Status                        ; Successful - Tue Apr 26 16:01:06 2016            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; DE0_D5M                                          ;
 ; Top-level Entity Name              ; TOP_DE0_CAMERA_MOUSE                             ;
 ; Family                             ; Cyclone III                                      ;
 ; Device                             ; EP3C16F484C6                                     ;
 ; Timing Models                      ; Final                                            ;
-; Total logic elements               ; 2,823 / 15,408 ( 18 % )                          ;
-;     Total combinational functions  ; 2,442 / 15,408 ( 16 % )                          ;
-;     Dedicated logic registers      ; 1,362 / 15,408 ( 9 % )                           ;
-; Total registers                    ; 1362                                             ;
-; Total pins                         ; 178 / 347 ( 51 % )                               ;
+; Total logic elements               ; 2,890 / 15,408 ( 19 % )                          ;
+;     Total combinational functions  ; 2,510 / 15,408 ( 16 % )                          ;
+;     Dedicated logic registers      ; 1,421 / 15,408 ( 9 % )                           ;
+; Total registers                    ; 1421                                             ;
+; Total pins                         ; 139 / 347 ( 40 % )                               ;
 ; Total virtual pins                 ; 0                                                ;
-; Total memory bits                  ; 134,236 / 516,096 ( 26 % )                       ;
+; Total memory bits                  ; 143,452 / 516,096 ( 28 % )                       ;
 ; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                                  ;
 ; Total PLLs                         ; 1 / 4 ( 25 % )                                   ;
 +------------------------------------+--------------------------------------------------+
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/26/2016 15:42:34 ;
+; Start date & time ; 04/26/2016 16:00:38 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DE0_D5M             ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+----------------------+------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name          ; Section Id ;
 +-------------------------------------+---------------------------------------+---------------+----------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 260248564268247.146168175401172       ; --            ; --                   ; --         ;
+; COMPILER_SIGNATURE_ID               ; 260248564268247.146168283804720       ; --            ; --                   ; --         ;
 ; IP_TOOL_NAME                        ; LPM_MUX                               ; --            ; --                   ; --         ;
 ; IP_TOOL_VERSION                     ; 13.1                                  ; --            ; --                   ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --                   ; --         ;
@@ -83,8 +83,11 @@ applicable agreement for further details.
 ; MISC_FILE                           ; vga_mux.bsf                           ; --            ; --                   ; --         ;
 ; MISC_FILE                           ; vga_mux.cmp                           ; --            ; --                   ; --         ;
 ; PARTITION_COLOR                     ; 14622752                              ; --            ; TOP_DE0_CAMERA_MOUSE ; Top        ;
+; PARTITION_COLOR                     ; 16764057                              ; --            ; top                  ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; TOP_DE0_CAMERA_MOUSE ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; top                  ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; TOP_DE0_CAMERA_MOUSE ; Top        ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; top                  ; Top        ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --                   ; --         ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --                   ; --         ;
 ; SMART_RECOMPILE                     ; On                                    ; Off           ; --                   ; --         ;
@@ -98,11 +101,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:08     ; 1.0                     ; 549 MB              ; 00:00:07                           ;
-; Fitter                    ; 00:00:16     ; 1.4                     ; 1150 MB             ; 00:00:19                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 434 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 530 MB              ; 00:00:03                           ;
-; Total                     ; 00:00:28     ; --                      ; --                  ; 00:00:30                           ;
+; Analysis & Synthesis      ; 00:00:09     ; 1.0                     ; 560 MB              ; 00:00:08                           ;
+; Fitter                    ; 00:00:15     ; 1.4                     ; 1154 MB             ; 00:00:19                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 434 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 531 MB              ; 00:00:03                           ;
+; Total                     ; 00:00:30     ; --                      ; --                  ; 00:00:31                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -580,4 +580,55 @@ set_global_assignment -name QIP_FILE vga_mux.qip
 set_global_assignment -name VERILOG_FILE catapult_ip/mouse/rtl_mgc_ioport_v2001.v
 set_global_assignment -name VERILOG_FILE catapult_ip/mouse/rtl_mgc_ioport.v
 set_global_assignment -name VERILOG_FILE catapult_ip/mouse/rtl.v
+set_location_assignment PIN_F1 -to BUTTON[2]
+set_location_assignment PIN_G3 -to BUTTON[1]
+set_location_assignment PIN_H2 -to BUTTON[0]
+set_location_assignment PIN_U7 -to ADC_SDO
+set_location_assignment PIN_W6 -to ADC_CS
+set_location_assignment PIN_V8 -to ADC_SDI
+set_location_assignment PIN_V5 -to DAC_SDI
+set_location_assignment PIN_V12 -to DAC_CS
+set_location_assignment PIN_W13 -to DAC_LD
+set_location_assignment PIN_W10 -to SCK
+set_location_assignment PIN_E11 -to HEX0_D[0]
+set_location_assignment PIN_F11 -to HEX0_D[1]
+set_location_assignment PIN_H12 -to HEX0_D[2]
+set_location_assignment PIN_H13 -to HEX0_D[3]
+set_location_assignment PIN_G12 -to HEX0_D[4]
+set_location_assignment PIN_F12 -to HEX0_D[5]
+set_location_assignment PIN_F13 -to HEX0_D[6]
+set_location_assignment PIN_A15 -to HEX1_D[6]
+set_location_assignment PIN_E14 -to HEX1_D[5]
+set_location_assignment PIN_B14 -to HEX1_D[4]
+set_location_assignment PIN_A14 -to HEX1_D[3]
+set_location_assignment PIN_C13 -to HEX1_D[2]
+set_location_assignment PIN_B13 -to HEX1_D[1]
+set_location_assignment PIN_A13 -to HEX1_D[0]
+set_location_assignment PIN_F14 -to HEX2_D[6]
+set_location_assignment PIN_B17 -to HEX2_D[5]
+set_location_assignment PIN_A17 -to HEX2_D[4]
+set_location_assignment PIN_E15 -to HEX2_D[3]
+set_location_assignment PIN_B16 -to HEX2_D[2]
+set_location_assignment PIN_A16 -to HEX2_D[1]
+set_location_assignment PIN_D15 -to HEX2_D[0]
+set_location_assignment PIN_G15 -to HEX3_D[6]
+set_location_assignment PIN_D19 -to HEX3_D[5]
+set_location_assignment PIN_C19 -to HEX3_D[4]
+set_location_assignment PIN_B19 -to HEX3_D[3]
+set_location_assignment PIN_A19 -to HEX3_D[2]
+set_location_assignment PIN_F15 -to HEX3_D[1]
+set_location_assignment PIN_B18 -to HEX3_D[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_CS
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_SDI
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_SDO
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DAC_CS
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DAC_LD
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SCK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DAC_SDI
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity top -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity top -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -entity top -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -entity top -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -entity top -section_id "Root Region"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity top -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
