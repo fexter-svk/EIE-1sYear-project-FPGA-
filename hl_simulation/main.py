@@ -1,68 +1,50 @@
 from __future__ import print_function
-from PIL import Image, ImageChops, ImageFilter, ImageOps
+from PIL import Image, ImageChops, ImageFilter, ImageOps, ImageDraw
 
-import string
-
-def BW(image):
-    image = image.convert('LA')
-    return image
-
-def Find_Edges(image):
-    image = image.filter(ImageFilter.FIND_EDGES)
-    return image
-
-def Invert(image):
-    image = image.convert('RGB')
-    width,height = image.size
+#LEFT (YELLOW)
+# R = 207 G = 220 B = 64
+#
+#RIGHT (GREEN)
+# R = 140 G = 225 B = 103
+#
+#
+def mainBlock(image,):
     pixels = image.load()
-    for x in range(width):
-        for y in range(height):
+    width, height = image.size
+    x_right_arm, y_right_arm = (0,0)
+    x_left_arm, y_left_arm = (0,0)
+    for y in range(height):
+        for x in range(width):
             RGB = pixels[x,y]
-            pixels[x,y]=(255-RGB[0], 255-RGB[1], 255-RGB[2])
-    return image
-
-def CleanImage(image):
-    width,height = image.size
-    pixels = image.load()
-    for x in range(width):
-        for y in range(height):
-            RGB = pixels[x,y]
-            if(RGB[0]<100) and (RGB[1]<100) and (RGB[2]<100):
-                pixels[x,y]=(0, 0, 0)
+            if not (((80<=RGB[0]) and (RGB[0]<=145)) and ((150<=RGB[1]) and (RGB[1]<=230)) and ((30<=RGB[2]) and (RGB[2]<=108))):
+                if not (((170<=RGB[0]) and (RGB[0]<=222)) and ((185<=RGB[1]) and (RGB[1]<=235)) and ((49<=RGB[2]) and (RGB[2]<=149))):
+                    pixels[x,y] = (0,0,0)
+                else:
+                    if (x_right_arm==0) and (y_right_arm==0):
+                        x_right_arm = x
+                        y_right_arm = y
+                    #GREEN
             else:
-                pixels[x,y]=(255, 255, 255)
+                if (x_left_arm==0) and (y_left_arm==0):
+                    x_left_arm = x
+                    y_left_arm = y
+                pass
+                #YELLOW
+    if (x_right_arm != 0) and (y_right_arm != 0) and (x_left_arm != 0) and (y_left_arm!=0):
+        volume = abs(round((y_right_arm+y_left_arm/2)-240))
+        volume = volume // 80
+    return (image, volume)
 
-    return image
+
 
 def main():
-    ref_image = Image.open("ref2.jpg")
-    body_image = Image.open("body2.jpg")
-
-    ref_image = BW(ref_image)
-    ref_image = Find_Edges(ref_image)
-    ref_image = Invert(ref_image)
-
-    body_image = BW(body_image)
-    body_image = Find_Edges(body_image)
-    body_image = Invert(body_image)
-    new_image = Image.new('RGB', ref_image.size, (255,255,255))
-    # body_image = BW(body_image)
-
-
-    #body_image = body_image.filter(ImageFilter.FIND_EDGES)
-    diff = ImageChops.difference(ref_image, body_image)
-    diff = Invert(diff)
-    diff = CleanImage(diff)
-    #diff = diff.convert('LA')
-    diff.show()
-
-    #compare(ref_image, body_image)
-
-    #print(ref_image.size())
-    #ref_image.pixels
-
-    #size = ref_image.size
-
+    image = Image.open("ex1.jpg")
+    result = tuple()
+    result = mainBlock(image)
+    result[0].show()
+    print(result[1])
+    x_left_arm, y_left_arm = (0,0)
+    x_right_arm, y_right_arm = (0,0)
 
 
 

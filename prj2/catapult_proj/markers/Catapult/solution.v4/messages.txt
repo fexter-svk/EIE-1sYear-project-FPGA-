@@ -15,3 +15,13 @@ Branching solution 'solution.v3' at state 'new' (PRJ-2)
 Branching solution 'solution.v4' at state 'new' (PRJ-2)
 Branching solution 'solution.v4' at state 'new' (PRJ-2)
 Branching solution 'solution.v4' at state 'new' (PRJ-2)
+Branching solution 'solution.v4' at state 'new' (PRJ-2)
+
+# Messages from "go analyze"
+
+Front End called with arguments: -- {C:\FPGA\EIE-1stYear-project-FPGA\prj2\catapult_proj\markers_source\blur.h} {C:\FPGA\EIE-1stYear-project-FPGA\prj2\catapult_proj\markers_source\blur.c} {C:\FPGA\EIE-1stYear-project-FPGA\prj2\catapult_proj\markers_source\shift_class.h} (CIN-69)
+Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
+Pragma 'hls_design<top>' detected on routine 'markers' (CIN-6)
+Source file analysis completed (CIN-68)
+Starting transformation 'analyze' on solution 'solution.v4' (SOL-8)
+Completed transformation 'analyze' on solution 'solution.v4': elapsed time 1.06 seconds, memory usage 189080kB, peak memory usage 256988kB (SOL-9)

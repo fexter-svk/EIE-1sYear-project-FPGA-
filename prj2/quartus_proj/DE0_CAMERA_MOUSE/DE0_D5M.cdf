@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP3C16F484) Path("C:/Workplace/EIE-1stYear-project-FPGA/prj2/quartus_proj/DE0_CAMERA_MOUSE/") File("DE0_D5M.sof") MfrSpec(OpMask(1));
+		Device PartName(EP3C16F484) Path("C:/FPGA/EIE-1stYear-project-FPGA/prj2/quartus_proj/DE0_CAMERA_MOUSE/") File("DE0_D5M.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

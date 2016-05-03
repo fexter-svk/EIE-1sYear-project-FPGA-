@@ -39,87 +39,38 @@
 #include <ac_fixed.h>
 #include "blur.h"
 #include <iostream>
-
-// shift_class: page 119 HLS Blue Book
+#include "stdio.h"
+#include "ac_int.h"
 #include "shift_class.h" 
 
 
 
 
 #pragma hls_design top
-void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS], ac_int<(COORD_WL+COORD_WL), false> vga_xy, ac_int<10,false> * volume)
+void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS], ac_int<(COORD_WL+COORD_WL), false> vga_xy, ac_int<8,false> * volume)
 {
-    ac_int<16, false> red, green, blue, r[KERNEL_WIDTH], g[KERNEL_WIDTH], b[KERNEL_WIDTH];
+    ac_int<10, false> red, green, blue;
     ac_int<10, false> vga_x, vga_y; // screen coordinates
     
     // extract VGA pixel X-Y coordinates  
     vga_x = (vga_xy).slc<COORD_WL>(0);
     vga_y = (vga_xy).slc<COORD_WL>(10);
-    
-    
-    ac_int<2,false> k = 0;
-    ac_int<2,false> i;
 
-    *volume = 0;
-// #if 1: use filter
-// #if 0: copy input to output bypassing filter
-#if 1
     // shifts pixels from KERNEL_WIDTH rows and keeps KERNEL_WIDTH columns (KERNEL_WIDTHxKERNEL_WIDTH pixels stored)
-    static shift_class<ac_int<PIXEL_WL*KERNEL_WIDTH,false>, KERNEL_WIDTH> regs;
-
-		// shift input data in the filter fifo
-		regs << vin[0]; // advance the pointer address by the pixel number (testbench/simulation only)
-		// accumulate
-		ACC1: for(i = 0; i < KERNEL_WIDTH; i++) {
-			// current line
-			r[0] += (regs[i].slc<COLOUR_WL>(2*COLOUR_WL));
-			g[0] += (regs[i].slc<COLOUR_WL>(COLOUR_WL));
-			b[0] += (regs[i].slc<COLOUR_WL>(0));
-			// the line before ...
-			r[1] += (regs[i].slc<COLOUR_WL>(2*COLOUR_WL + PIXEL_WL));
-			g[1] += (regs[i].slc<COLOUR_WL>(COLOUR_WL + PIXEL_WL));
-			b[1] += (regs[i].slc<COLOUR_WL>(0 + PIXEL_WL));
-			// the line before ...
-			r[2] += (regs[i].slc<COLOUR_WL>(2*COLOUR_WL + 2*PIXEL_WL));
-			g[2] += (regs[i].slc<COLOUR_WL>(COLOUR_WL + 2*PIXEL_WL)) ;
-			b[2] += (regs[i].slc<COLOUR_WL>(0 + 2*PIXEL_WL)) ;
-			// the line before ... 
-		}
-		// add the accumualted value for all processed lines
-		ACC2: for(i = 0; i < KERNEL_WIDTH; i++) {    
-			red += r[i];
-			green += g[i];
-			blue += b[i];
-		}
-		// normalize result
-		red /= KERNEL_NUMEL;
-		green /= KERNEL_NUMEL;
-		blue /= KERNEL_NUMEL;
+    red = vin[0].slc<COLOUR_WL>(2*COLOUR_WL);
+    green = vin[0].slc<COLOUR_WL>(1*COLOUR_WL);
+    blue = vin[0].slc<COLOUR_WL>(0*COLOUR_WL);
+    
+    
+		
+		//adjustment of the volume
+	*volume = 0;
 	    
 		// group the RGB components into a single signal
-		vout[0] = ((((ac_int<PIXEL_WL, false>)red) << (2*COLOUR_WL)) | (((ac_int<PIXEL_WL, false>)green) << COLOUR_WL) | (ac_int<PIXEL_WL, false>)blue);
+	vout[0] = ((((ac_int<PIXEL_WL, false>)red) << (2*COLOUR_WL)) | (((ac_int<PIXEL_WL, false>)green) << COLOUR_WL) | (ac_int<PIXEL_WL, false>)blue);
 	    
     }
-     
-     
-     
-     
-     
-     
-#else    
-/*  display input  (test only)
-    FRAME: for(p = 0; p < NUM_PIXELS; p++) {
-        // copy the value of each colour component from the input stream
-        red = vin[p].slc<COLOUR_WL>(2*COLOUR_WL);
-        green = vin[p].slc<COLOUR_WL>(COLOUR_WL);
-        blue = vin[p].slc<COLOUR_WL>(0);
 
-		// combine the 3 color components into 1 signal only
-        vout[p] = ((((ac_int<PIXEL_WL, false>)red) << (2*COLOUR_WL)) | (((ac_int<PIXEL_WL, false>)green) << COLOUR_WL) | (ac_int<PIXEL_WL, false>)blue);   
-    }
-}
-*/
-#endif
 
 
 // end of file
