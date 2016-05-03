@@ -544,42 +544,6 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to UART_RXD
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to UART_RTS
 
 
-set_global_assignment -name VERILOG_FILE music/top.v
-set_global_assignment -name VERILOG_FILE music/spi2dac.v
-set_global_assignment -name VERILOG_FILE music/spi2adc.v
-set_global_assignment -name VERILOG_FILE music/pulse_gen.v
-set_global_assignment -name VERILOG_FILE music/multiple_echo.v
-set_global_assignment -name VERILOG_FILE music/hex_to_7seg.v
-set_global_assignment -name VERILOG_FILE music/FIFO.v
-set_global_assignment -name VERILOG_FILE music/clk_div.v
-set_global_assignment -name VERILOG_FILE "../../../../Desktop/labs/FPGA Lab/FPGA Lab/stopwatch2works/module decode_7segment.v"
-set_global_assignment -name VERILOG_FILE catapult_ip/sobel_filter/rtl.v
-set_global_assignment -name VERILOG_FILE V/ps2.v
-set_global_assignment -name SOURCE_FILE Sdram_Control_4Port/Sdram_Params.h
-set_global_assignment -name VERILOG_FILE Sdram_Control_4Port/command.v
-set_global_assignment -name VERILOG_FILE Sdram_Control_4Port/control_interface.v
-set_global_assignment -name VERILOG_FILE Sdram_Control_4Port/sdr_data_path.v
-set_global_assignment -name VERILOG_FILE Sdram_Control_4Port/Sdram_Control_4Port.v
-set_global_assignment -name VERILOG_FILE Sdram_Control_4Port/Sdram_FIFO.v
-set_global_assignment -name SOURCE_FILE V/VGA_Param.h
-set_global_assignment -name VERILOG_FILE V/async_receiver.v
-set_global_assignment -name VERILOG_FILE V/CCD_Capture.v
-set_global_assignment -name VERILOG_FILE V/I2C_CCD_Config.v
-set_global_assignment -name VERILOG_FILE V/I2C_Controller.v
-set_global_assignment -name VERILOG_FILE V/Line_Buffer.v
-set_global_assignment -name VERILOG_FILE V/RAW2RGB.v
-set_global_assignment -name VERILOG_FILE V/Reset_Delay.v
-set_global_assignment -name VERILOG_FILE V/sdram_pll.v
-set_global_assignment -name VERILOG_FILE V/SEG7_LUT.v
-set_global_assignment -name VERILOG_FILE V/SEG7_LUT_8.v
-set_global_assignment -name VERILOG_FILE V/VGA_Controller.v
-set_global_assignment -name VERILOG_FILE DE0_D5M.v
-set_global_assignment -name SDC_FILE DE0_D5M.sdc
-set_global_assignment -name BDF_FILE V/TOP_DE0_CAMERA_MOUSE.bdf
-set_global_assignment -name QIP_FILE vga_mux.qip
-set_global_assignment -name VERILOG_FILE catapult_ip/mouse/rtl_mgc_ioport_v2001.v
-set_global_assignment -name VERILOG_FILE catapult_ip/mouse/rtl_mgc_ioport.v
-set_global_assignment -name VERILOG_FILE catapult_ip/mouse/rtl.v
 set_location_assignment PIN_F1 -to BUTTON[2]
 set_location_assignment PIN_G3 -to BUTTON[1]
 set_location_assignment PIN_H2 -to BUTTON[0]
@@ -631,4 +595,40 @@ set_global_assignment -name PARTITION_COLOR 16764057 -entity top -section_id Top
 set_global_assignment -name LL_ROOT_REGION ON -entity top -section_id "Root Region"
 set_global_assignment -name LL_MEMBER_STATE LOCKED -entity top -section_id "Root Region"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity top -section_id Top
+set_global_assignment -name VERILOG_FILE catapult_ip/marker/rtl_mgc_ioport_v2001.v
+set_global_assignment -name VERILOG_FILE catapult_ip/marker/rtl_mgc_ioport.v
+set_global_assignment -name VERILOG_FILE catapult_ip/marker/rtl.v
+set_global_assignment -name VERILOG_FILE music/top.v
+set_global_assignment -name VERILOG_FILE music/spi2dac.v
+set_global_assignment -name VERILOG_FILE music/spi2adc.v
+set_global_assignment -name VERILOG_FILE music/pulse_gen.v
+set_global_assignment -name VERILOG_FILE music/multiple_echo.v
+set_global_assignment -name VERILOG_FILE music/hex_to_7seg.v
+set_global_assignment -name VERILOG_FILE music/FIFO.v
+set_global_assignment -name VERILOG_FILE music/clk_div.v
+set_global_assignment -name VERILOG_FILE "../../../../Desktop/labs/FPGA Lab/FPGA Lab/stopwatch2works/module decode_7segment.v"
+set_global_assignment -name VERILOG_FILE catapult_ip/sobel_filter/rtl.v
+set_global_assignment -name VERILOG_FILE V/ps2.v
+set_global_assignment -name SOURCE_FILE Sdram_Control_4Port/Sdram_Params.h
+set_global_assignment -name VERILOG_FILE Sdram_Control_4Port/command.v
+set_global_assignment -name VERILOG_FILE Sdram_Control_4Port/control_interface.v
+set_global_assignment -name VERILOG_FILE Sdram_Control_4Port/sdr_data_path.v
+set_global_assignment -name VERILOG_FILE Sdram_Control_4Port/Sdram_Control_4Port.v
+set_global_assignment -name VERILOG_FILE Sdram_Control_4Port/Sdram_FIFO.v
+set_global_assignment -name SOURCE_FILE V/VGA_Param.h
+set_global_assignment -name VERILOG_FILE V/async_receiver.v
+set_global_assignment -name VERILOG_FILE V/CCD_Capture.v
+set_global_assignment -name VERILOG_FILE V/I2C_CCD_Config.v
+set_global_assignment -name VERILOG_FILE V/I2C_Controller.v
+set_global_assignment -name VERILOG_FILE V/Line_Buffer.v
+set_global_assignment -name VERILOG_FILE V/RAW2RGB.v
+set_global_assignment -name VERILOG_FILE V/Reset_Delay.v
+set_global_assignment -name VERILOG_FILE V/sdram_pll.v
+set_global_assignment -name VERILOG_FILE V/SEG7_LUT.v
+set_global_assignment -name VERILOG_FILE V/SEG7_LUT_8.v
+set_global_assignment -name VERILOG_FILE V/VGA_Controller.v
+set_global_assignment -name VERILOG_FILE DE0_D5M.v
+set_global_assignment -name SDC_FILE DE0_D5M.sdc
+set_global_assignment -name BDF_FILE V/TOP_DE0_CAMERA_MOUSE.bdf
+set_global_assignment -name QIP_FILE vga_mux.qip
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

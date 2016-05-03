@@ -1,0 +1,17 @@
+
+# Messages from "go new"
+
+Creating project directory 'C:\FPGA\EIE-1stYear-project-FPGA\prj2\catapult_proj\markers\Catapult'. (PRJ-1)
+Branching solution 'solution.v1' at state 'new' (PRJ-2)
+Branching solution 'solution.v1' at state 'new' (PRJ-2)
+Saving project file 'C:/FPGA/EIE-1stYear-project-FPGA/prj2/catapult_proj/markers/Catapult.ccs'. (PRJ-5)
+Branching solution 'solution.v2' at state 'new' (PRJ-2)
+Branching solution 'solution.v2' at state 'new' (PRJ-2)
+Branching solution 'solution.v2' at state 'new' (PRJ-2)
+Branching solution 'solution.v3' at state 'new' (PRJ-2)
+Branching solution 'solution.v3' at state 'new' (PRJ-2)
+Branching solution 'solution.v3' at state 'new' (PRJ-2)
+Branching solution 'solution.v3' at state 'new' (PRJ-2)
+Branching solution 'solution.v4' at state 'new' (PRJ-2)
+Branching solution 'solution.v4' at state 'new' (PRJ-2)
+Branching solution 'solution.v4' at state 'new' (PRJ-2)

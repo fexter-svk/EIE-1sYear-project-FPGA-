@@ -47,39 +47,26 @@
 
 
 #pragma hls_design top
-void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS], ac_int<(COORD_WL+COORD_WL), false> * vga_xy, ac_int<10,false> * volume)
+void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS], ac_int<(COORD_WL+COORD_WL), false> vga_xy, ac_int<10,false> * volume)
 {
     ac_int<16, false> red, green, blue, r[KERNEL_WIDTH], g[KERNEL_WIDTH], b[KERNEL_WIDTH];
     ac_int<10, false> vga_x, vga_y; // screen coordinates
     
-    // extract VGA pixel X-Y coordinates
-    
-    vga_x = (*vga_xy).slc<COORD_WL>(0);
-    vga_y = (*vga_xy).slc<COORD_WL>(10);
+    // extract VGA pixel X-Y coordinates  
+    vga_x = (vga_xy).slc<COORD_WL>(0);
+    vga_y = (vga_xy).slc<COORD_WL>(10);
     
     
     ac_int<2,false> k = 0;
     ac_int<2,false> i;
-    
 
+    *volume = 0;
 // #if 1: use filter
 // #if 0: copy input to output bypassing filter
 #if 1
-
     // shifts pixels from KERNEL_WIDTH rows and keeps KERNEL_WIDTH columns (KERNEL_WIDTHxKERNEL_WIDTH pixels stored)
     static shift_class<ac_int<PIXEL_WL*KERNEL_WIDTH,false>, KERNEL_WIDTH> regs;
 
-    /*FRAME: for(int p = 0; p < NUM_PIXELS; p++) {
-		// init
-		red = 0; 
-		green = 0; 
-		blue = 0;
-		RESET: for(i = 0; i < KERNEL_WIDTH; i++) {
-			r[i] = 0;
-			g[i] = 0;
-			b[i] = 0;
-		}
-	 */   
 		// shift input data in the filter fifo
 		regs << vin[0]; // advance the pointer address by the pixel number (testbench/simulation only)
 		// accumulate
