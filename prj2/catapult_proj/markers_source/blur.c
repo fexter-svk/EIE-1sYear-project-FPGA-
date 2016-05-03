@@ -47,9 +47,15 @@
 
 
 #pragma hls_design top
-void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS], ac_int<10,false> * volume)
+void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS], ac_int<(COORD_WL+COORD_WL), false> * vga_xy, ac_int<10,false> * volume)
 {
     ac_int<16, false> red, green, blue, r[KERNEL_WIDTH], g[KERNEL_WIDTH], b[KERNEL_WIDTH];
+    ac_int<10, false> vga_x, vga_y; // screen coordinates
+    
+    // extract VGA pixel X-Y coordinates
+    
+    vga_x = (*vga_xy).slc<COORD_WL>(0);
+    vga_y = (*vga_xy).slc<COORD_WL>(10);
     
 
 // #if 1: use filter
@@ -60,7 +66,7 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     static shift_class<ac_int<PIXEL_WL*KERNEL_WIDTH,false>, KERNEL_WIDTH> regs;
     int i;
 
-    FRAME: for(int p = 0; p < NUM_PIXELS; p++) {
+    /*FRAME: for(int p = 0; p < NUM_PIXELS; p++) {
 		// init
 		red = 0; 
 		green = 0; 
@@ -70,9 +76,9 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
 			g[i] = 0;
 			b[i] = 0;
 		}
-	    
+	 */   
 		// shift input data in the filter fifo
-		regs << vin[p]; // advance the pointer address by the pixel number (testbench/simulation only)
+		regs << vin[0]; // advance the pointer address by the pixel number (testbench/simulation only)
 		// accumulate
 		ACC1: for(i = 0; i < KERNEL_WIDTH; i++) {
 			// current line
@@ -108,10 +114,9 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
 		blue /= KERNEL_NUMEL;
 	    
 		// group the RGB components into a single signal
-		vout[p] = ((((ac_int<PIXEL_WL, false>)red) << (2*COLOUR_WL)) | (((ac_int<PIXEL_WL, false>)green) << COLOUR_WL) | (ac_int<PIXEL_WL, false>)blue);
+		vout[0] = ((((ac_int<PIXEL_WL, false>)red) << (2*COLOUR_WL)) | (((ac_int<PIXEL_WL, false>)green) << COLOUR_WL) | (ac_int<PIXEL_WL, false>)blue);
 	    
     }
-}
      
      
      
@@ -119,7 +124,7 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
      
      
 #else    
-// display input  (test only)
+/*  display input  (test only)
     FRAME: for(p = 0; p < NUM_PIXELS; p++) {
         // copy the value of each colour component from the input stream
         red = vin[p].slc<COLOUR_WL>(2*COLOUR_WL);
@@ -130,6 +135,7 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
         vout[p] = ((((ac_int<PIXEL_WL, false>)red) << (2*COLOUR_WL)) | (((ac_int<PIXEL_WL, false>)green) << COLOUR_WL) | (ac_int<PIXEL_WL, false>)blue);   
     }
 }
+*/
 #endif
 
 
