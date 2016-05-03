@@ -1,0 +1,133 @@
+Flow report for DE0_D5M
+Tue May 03 14:48:40 2016
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------+
+; Flow Summary                                                                          ;
++------------------------------------+--------------------------------------------------+
+; Flow Status                        ; Successful - Tue May 03 14:48:36 2016            ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
+; Revision Name                      ; DE0_D5M                                          ;
+; Top-level Entity Name              ; TOP_DE0_CAMERA_MOUSE                             ;
+; Family                             ; Cyclone III                                      ;
+; Device                             ; EP3C16F484C6                                     ;
+; Timing Models                      ; Final                                            ;
+; Total logic elements               ; 1,674 / 15,408 ( 11 % )                          ;
+;     Total combinational functions  ; 1,381 / 15,408 ( 9 % )                           ;
+;     Dedicated logic registers      ; 1,174 / 15,408 ( 8 % )                           ;
+; Total registers                    ; 1174                                             ;
+; Total pins                         ; 131 / 347 ( 38 % )                               ;
+; Total virtual pins                 ; 0                                                ;
+; Total memory bits                  ; 81,568 / 516,096 ( 16 % )                        ;
+; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                                  ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                                   ;
++------------------------------------+--------------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 05/03/2016 14:48:14 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; DE0_D5M             ;
++-------------------+---------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                ;
++-------------------------------------+---------------------------------------+---------------+----------------------+------------+
+; Assignment Name                     ; Value                                 ; Default Value ; Entity Name          ; Section Id ;
++-------------------------------------+---------------------------------------+---------------+----------------------+------------+
+; COMPILER_SIGNATURE_ID               ; 260248564268246.146228329401944       ; --            ; --                   ; --         ;
+; IP_TOOL_NAME                        ; LPM_MUX                               ; --            ; --                   ; --         ;
+; IP_TOOL_VERSION                     ; 13.1                                  ; --            ; --                   ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --                   ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --                   ; --         ;
+; MISC_FILE                           ; vga_mux.bsf                           ; --            ; --                   ; --         ;
+; MISC_FILE                           ; vga_mux.cmp                           ; --            ; --                   ; --         ;
+; PARTITION_COLOR                     ; 14622752                              ; --            ; TOP_DE0_CAMERA_MOUSE ; Top        ;
+; PARTITION_COLOR                     ; 16764057                              ; --            ; top                  ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; TOP_DE0_CAMERA_MOUSE ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; top                  ; Top        ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; TOP_DE0_CAMERA_MOUSE ; Top        ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; top                  ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --                   ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --                   ; --         ;
+; SMART_RECOMPILE                     ; On                                    ; Off           ; --                   ; --         ;
+; TOP_LEVEL_ENTITY                    ; TOP_DE0_CAMERA_MOUSE                  ; DE0_D5M       ; --                   ; --         ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS  ; Off                                   ; --            ; --                   ; eda_palace ;
++-------------------------------------+---------------------------------------+---------------+----------------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:07     ; 1.0                     ; 540 MB              ; 00:00:06                           ;
+; Fitter                    ; 00:00:12     ; 1.3                     ; 1129 MB             ; 00:00:14                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 428 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 520 MB              ; 00:00:04                           ;
+; Total                     ; 00:00:23     ; --                      ; --                  ; 00:00:25                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; eews104a-015     ; Windows 7 ; 6.1        ; x86_64         ;
+; Fitter                    ; eews104a-015     ; Windows 7 ; 6.1        ; x86_64         ;
+; Assembler                 ; eews104a-015     ; Windows 7 ; 6.1        ; x86_64         ;
+; TimeQuest Timing Analyzer ; eews104a-015     ; Windows 7 ; 6.1        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off DE0_D5M -c DE0_D5M
+quartus_fit --read_settings_files=off --write_settings_files=off DE0_D5M -c DE0_D5M
+quartus_asm --read_settings_files=off --write_settings_files=off DE0_D5M -c DE0_D5M
+quartus_sta DE0_D5M -c DE0_D5M
+
+
+
