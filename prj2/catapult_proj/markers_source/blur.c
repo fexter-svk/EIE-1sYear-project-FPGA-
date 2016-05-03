@@ -57,6 +57,10 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     vga_x = (*vga_xy).slc<COORD_WL>(0);
     vga_y = (*vga_xy).slc<COORD_WL>(10);
     
+    
+    ac_int<2,false> k = 0;
+    ac_int<2,false> i;
+    
 
 // #if 1: use filter
 // #if 0: copy input to output bypassing filter
@@ -64,7 +68,6 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
 
     // shifts pixels from KERNEL_WIDTH rows and keeps KERNEL_WIDTH columns (KERNEL_WIDTHxKERNEL_WIDTH pixels stored)
     static shift_class<ac_int<PIXEL_WL*KERNEL_WIDTH,false>, KERNEL_WIDTH> regs;
-    int i;
 
     /*FRAME: for(int p = 0; p < NUM_PIXELS; p++) {
 		// init
@@ -94,13 +97,6 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
 			g[2] += (regs[i].slc<COLOUR_WL>(COLOUR_WL + 2*PIXEL_WL)) ;
 			b[2] += (regs[i].slc<COLOUR_WL>(0 + 2*PIXEL_WL)) ;
 			// the line before ... 
-			r[3] += (regs[i].slc<COLOUR_WL>(2*COLOUR_WL + 3*PIXEL_WL));
-			g[3] += (regs[i].slc<COLOUR_WL>(COLOUR_WL + 3*PIXEL_WL)) ;
-			b[3] += (regs[i].slc<COLOUR_WL>(0 + 3*PIXEL_WL)) ;
-			// the line before ...
-			r[4] += (regs[i].slc<COLOUR_WL>(2*COLOUR_WL + 4*PIXEL_WL));
-			g[4] += (regs[i].slc<COLOUR_WL>(COLOUR_WL + 4*PIXEL_WL)) ;
-			b[4] += (regs[i].slc<COLOUR_WL>(0 + 4*PIXEL_WL)) ;
 		}
 		// add the accumualted value for all processed lines
 		ACC2: for(i = 0; i < KERNEL_WIDTH; i++) {    

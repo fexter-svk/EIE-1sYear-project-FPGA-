@@ -45,3 +45,9 @@ directive set -CLOCKS {clk {-CLOCK_PERIOD 20.0 -CLOCK_EDGE rising -CLOCK_UNCERTA
 directive set -TECHLIBS {{Altera_accel_CycloneIII.lib Altera_accel_CycloneIII} {mgc_Altera-Cyclone-III-6_beh_psr.lib {{mgc_Altera-Cyclone-III-6_beh_psr part EP3C40F484C}}}}
 directive set -DESIGN_HIERARCHY markers
 go compile
+directive set /markers/core/ACC2 -UNROLL yes
+directive set /markers/core/ACC1 -UNROLL yes
+directive set /markers/core/SHIFT -UNROLL yes
+directive set /markers/core/main -DISTRIBUTED_PIPELINE true
+directive set /markers/core/main -PIPELINE_INIT_INTERVAL 1
+go architect
