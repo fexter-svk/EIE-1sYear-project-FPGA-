@@ -1,0 +1,217 @@
+//  Catapult University Version 2011a.126 (Production Release) Wed Aug  8 00:52:07 PDT 2012
+//  
+//  Copyright (c) Calypto Design Systems, Inc., 1996-2012, All Rights Reserved.
+//                       UNPUBLISHED, LICENSED SOFTWARE.
+//            CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//          PROPERTY OF CALYPTO DESIGN SYSTEMS OR ITS LICENSORS
+//  
+//  Running on Windows 7 mf2915@EEWS305-026 Service Pack 1 6.01.7601 i686
+//  
+//  Package information: SIFLIBS v17.0_1.1, HLS_PKGS v17.0_1.1, 
+//                       DesignPad v2.78_0.0
+//  
+//  This version may only be used for academic purposes.  Some optimizations 
+//  are disabled, so results obtained from this version may be sub-optimal.
+//  
+//  Start time Tue May 03 09:32:58 2016
+# -------------------------------------------------
+# Logging session transcript to file "C:\Users\mf2915\AppData\Local\Temp\log6536221a878.0"
+# Loading options from registry.
+# Warning: set_working_dir: Directory 'C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Catapult 2011a.126' not writable, using C:/Users/mf2915/AppData/Local/Temp
+project load C:/FPGA/EIE-1stYear-project-FPGA/prj2/catapult_proj/sobel_filter/sobel_filter.ccs
+# Moving session transcript to file "C:\FPGA\EIE-1stYear-project-FPGA\prj2\catapult_proj\sobel_filter\catapult.log"
+# Reading component library '$MGC_HOME\pkgs\siflibs\mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+# Reading component library '$MGC_HOME\pkgs\siflibs\stdops.lib' [STDOPS]... (LIB-49)
+# Reading component library '$MGC_HOME\pkgs\siflibs\mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+# Reading component library '$MGC_HOME\pkgs\ccs_altera\Altera_accel_CycloneIII.lib' [Altera_accel_CycloneIII]... (LIB-49)
+# Reading component library '$MGC_HOME\pkgs\siflibs\psr2010a_up2\mgc_Altera-Cyclone-III-6_beh_psr.lib' [mgc_Altera-Cyclone-III-6_beh_psr]... (LIB-49)
+# File '$PROJECT_HOME/../sobel_filter_source/blur_sob.c' saved
+# Input file has changed
+go new
+solution file set {$PROJECT_HOME/../sobel_filter_source/blur_sob.c} -updated
+# Info: Branching solution 'solution.v12' at state 'new' (PRJ-2)
+project save
+# Saving project file 'C:/FPGA/EIE-1stYear-project-FPGA/prj2/catapult_proj/sobel_filter/sobel_filter.ccs'. (PRJ-5)
+project new -name markers
+set_working_dir C:/FPGA/EIE-1stYear-project-FPGA/prj2/catapult_proj/markers
+solution file add ../markers_source/blur.h
+# /INPUTFILES/1
+solution file add ../markers_source/blur.c
+# /INPUTFILES/2
+solution file add ../markers_source/shift_class.h
+# /INPUTFILES/3
+go analyze
+# Creating project directory 'C:\FPGA\EIE-1stYear-project-FPGA\prj2\catapult_proj\markers\markers'. (PRJ-1)
+# Moving session transcript to file "C:\FPGA\EIE-1stYear-project-FPGA\prj2\catapult_proj\markers\catapult.log"
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Front End called with arguments: -- {C:\FPGA\EIE-1stYear-project-FPGA\prj2\catapult_proj\markers_source\shift_class.h} {C:\FPGA\EIE-1stYear-project-FPGA\prj2\catapult_proj\markers_source\blur.c} {C:\FPGA\EIE-1stYear-project-FPGA\prj2\catapult_proj\markers_source\blur.h} (CIN-69)
+# Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
+# $PROJECT_HOME/../markers_source/blur.c(49): Pragma 'hls_design<top>' detected on routine 'mean_vga' (CIN-6)
+# Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 1.26 seconds, memory usage 265348kB, peak memory usage 353036kB (SOL-9)
+# File '$PROJECT_HOME/../markers_source/blur.c' saved
+# Input file has changed
+go new
+solution file set {$PROJECT_HOME/../markers_source/blur.c} -updated
+# Info: Branching solution 'solution.v2' at state 'new' (PRJ-2)
+# File '$PROJECT_HOME/../markers_source/blur.h' saved
+# File '$PROJECT_HOME/../markers_source/blur.h' saved
+# File '$PROJECT_HOME/../markers_source/blur.c' saved
+# File '$PROJECT_HOME/../markers_source/blur.c' saved
+# File '$PROJECT_HOME/../markers_source/blur.c' saved
+# File '$PROJECT_HOME/../markers_source/blur.c' saved
+# File '$PROJECT_HOME/../markers_source/blur.c' saved
+go analyze
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+# Front End called with arguments: -- {C:\FPGA\EIE-1stYear-project-FPGA\prj2\catapult_proj\markers_source\shift_class.h} {C:\FPGA\EIE-1stYear-project-FPGA\prj2\catapult_proj\markers_source\blur.c} {C:\FPGA\EIE-1stYear-project-FPGA\prj2\catapult_proj\markers_source\blur.h} (CIN-69)
+# Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
+# Error: $PROJECT_HOME/../markers_source/blur.h(43): $PROJECT_HOME/../markers_source/blur.h(43): explicit type is missing ("int" assumed) (CRD-260)
+# Warning:           detected during compilation of secondary translation unit "C:\FPGA\EIE-1stYear-project-FPGA\prj2\catapult_proj\markers_source\blur.c"
+# Error: $PROJECT_HOME/../markers_source/blur.c(50): $PROJECT_HOME/../markers_source/blur.c(50): cannot overload functions distinguished by return type alone (CRD-311)
+# Warning:           detected during compilation of secondary translation unit "C:\FPGA\EIE-1stYear-project-FPGA\prj2\catapult_proj\markers_source\blur.c"
+# Error: $PROJECT_HOME/../markers_source/blur.h(43): $PROJECT_HOME/../markers_source/blur.h(43): explicit type is missing ("int" assumed) (CRD-260)
+# Warning:           detected during compilation of secondary translation unit "C:\FPGA\EIE-1stYear-project-FPGA\prj2\catapult_proj\markers_source\blur.h"
+# Error: Compilation aborted (CIN-5)
+# Error: go analyze: Failed analyze
+# File '$PROJECT_HOME/../markers_source/blur.h' saved
+# File '$PROJECT_HOME/../markers_source/blur.c' saved
+go analyze
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+# Front End called with arguments: -- {C:\FPGA\EIE-1stYear-project-FPGA\prj2\catapult_proj\markers_source\shift_class.h} {C:\FPGA\EIE-1stYear-project-FPGA\prj2\catapult_proj\markers_source\blur.c} {C:\FPGA\EIE-1stYear-project-FPGA\prj2\catapult_proj\markers_source\blur.h} (CIN-69)
+# Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
+# $PROJECT_HOME/../markers_source/blur.c(49): Pragma 'hls_design<top>' detected on routine 'markers' (CIN-6)
+# Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v2': elapsed time 1.19 seconds, memory usage 265504kB, peak memory usage 353036kB (SOL-9)
+# Input file has changed
+go new
+solution file set {$PROJECT_HOME/../markers_source/blur.c} -updated
+# Info: Branching solution 'solution.v3' at state 'new' (PRJ-2)
+go analyze
+# Info: Starting transformation 'analyze' on solution 'solution.v3' (SOL-8)
+# Front End called with arguments: -- {C:\FPGA\EIE-1stYear-project-FPGA\prj2\catapult_proj\markers_source\shift_class.h} {C:\FPGA\EIE-1stYear-project-FPGA\prj2\catapult_proj\markers_source\blur.c} {C:\FPGA\EIE-1stYear-project-FPGA\prj2\catapult_proj\markers_source\blur.h} (CIN-69)
+# Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
+# $PROJECT_HOME/../markers_source/blur.c(49): Pragma 'hls_design<top>' detected on routine 'markers' (CIN-6)
+# Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v3': elapsed time 1.15 seconds, memory usage 265648kB, peak memory usage 353036kB (SOL-9)
+# File '$PROJECT_HOME/../markers_source/blur.h' saved
+# File '$PROJECT_HOME/../markers_source/blur.c' saved
+# Input file has changed
+go new
+solution file set {$PROJECT_HOME/../markers_source/blur.c} -updated
+# Info: Branching solution 'solution.v4' at state 'new' (PRJ-2)
+# Input file has changed
+solution file set {$PROJECT_HOME/../markers_source/blur.h} -updated
+go analyze
+# Info: Starting transformation 'analyze' on solution 'solution.v4' (SOL-8)
+# Front End called with arguments: -- {C:\FPGA\EIE-1stYear-project-FPGA\prj2\catapult_proj\markers_source\shift_class.h} {C:\FPGA\EIE-1stYear-project-FPGA\prj2\catapult_proj\markers_source\blur.c} {C:\FPGA\EIE-1stYear-project-FPGA\prj2\catapult_proj\markers_source\blur.h} (CIN-69)
+# Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
+# $PROJECT_HOME/../markers_source/blur.c(49): Pragma 'hls_design<top>' detected on routine 'markers' (CIN-6)
+# Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v4': elapsed time 1.17 seconds, memory usage 266960kB, peak memory usage 353036kB (SOL-9)
+directive set -TECHLIBS {{Altera_accel_CycloneIII.lib Altera_accel_CycloneIII} {mgc_Altera-Cyclone-III-6_beh_psr.lib {{mgc_Altera-Cyclone-III-6_beh_psr part EP3C40F484C}}}}
+# /TECHLIBS {{Altera_accel_CycloneIII.lib Altera_accel_CycloneIII} {mgc_Altera-Cyclone-III-6_beh_psr.lib {{mgc_Altera-Cyclone-III-6_beh_psr part EP3C40F484C}}}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 20.0 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 10.00 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# /CLOCKS {clk {-CLOCK_PERIOD 20.0 -CLOCK_EDGE rising -CLOCK_UNCERTAINTY 0.0 -CLOCK_HIGH_TIME 10.0 -RESET_SYNC_NAME rst -RESET_ASYNC_NAME arst_n -RESET_KIND sync -RESET_SYNC_ACTIVE high -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 20.0 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 10.00 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND async -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME en -ENABLE_ACTIVE high}}
+# /CLOCKS {clk {-CLOCK_PERIOD 20.0 -CLOCK_EDGE rising -CLOCK_UNCERTAINTY 0.0 -CLOCK_HIGH_TIME 10.0 -RESET_SYNC_NAME rst -RESET_ASYNC_NAME arst_n -RESET_KIND async -RESET_SYNC_ACTIVE high -RESET_ASYNC_ACTIVE low -ENABLE_NAME en -ENABLE_ACTIVE high}}
+directive set -DESIGN_HIERARCHY markers
+# /DESIGN_HIERARCHY markers
+go compile
+# Info: Starting transformation 'compile' on solution 'solution.v4' (SOL-8)
+# Reading component library '$MGC_HOME\pkgs\siflibs\mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+# Reading component library '$MGC_HOME\pkgs\siflibs\stdops.lib' [STDOPS]... (LIB-49)
+# Reading component library '$MGC_HOME\pkgs\siflibs\mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+# Reading component library '$MGC_HOME\pkgs\ccs_altera\Altera_accel_CycloneIII.lib' [Altera_accel_CycloneIII]... (LIB-49)
+# Reading component library '$MGC_HOME\pkgs\siflibs\psr2010a_up2\mgc_Altera-Cyclone-III-6_beh_psr.lib' [mgc_Altera-Cyclone-III-6_beh_psr]... (LIB-49)
+# Generating synthesis internal form... (CIN-3)
+# $PROJECT_HOME/../markers_source/blur.c(50): Found top design routine 'markers' specified by directive (CIN-52)
+# $PROJECT_HOME/../markers_source/blur.c(50): Synthesizing routine 'markers' (CIN-13)
+# $PROJECT_HOME/../markers_source/blur.c(50): Inlining routine 'markers' (CIN-14)
+# $PROJECT_HOME/../markers_source/shift_class.h(13): Inlining member function 'shift_class<ac_int<150, false>, 5>::shift_class' on object 'regs' (CIN-64)
+# $PROJECT_HOME/../markers_source/shift_class.h(32): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator<<' on object 'regs' (CIN-64)
+# $PROJECT_HOME/../markers_source/shift_class.h(48): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator[]' on object 'regs' (CIN-64)
+# $PROJECT_HOME/../markers_source/shift_class.h(48): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator[]' on object 'regs' (CIN-64)
+# $PROJECT_HOME/../markers_source/shift_class.h(48): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator[]' on object 'regs' (CIN-64)
+# $PROJECT_HOME/../markers_source/shift_class.h(48): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator[]' on object 'regs' (CIN-64)
+# $PROJECT_HOME/../markers_source/shift_class.h(48): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator[]' on object 'regs' (CIN-64)
+# $PROJECT_HOME/../markers_source/shift_class.h(48): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator[]' on object 'regs' (CIN-64)
+# $PROJECT_HOME/../markers_source/shift_class.h(48): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator[]' on object 'regs' (CIN-64)
+# $PROJECT_HOME/../markers_source/shift_class.h(48): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator[]' on object 'regs' (CIN-64)
+# $PROJECT_HOME/../markers_source/shift_class.h(48): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator[]' on object 'regs' (CIN-64)
+# $PROJECT_HOME/../markers_source/shift_class.h(48): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator[]' on object 'regs' (CIN-64)
+# $PROJECT_HOME/../markers_source/shift_class.h(48): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator[]' on object 'regs' (CIN-64)
+# $PROJECT_HOME/../markers_source/shift_class.h(48): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator[]' on object 'regs' (CIN-64)
+# $PROJECT_HOME/../markers_source/shift_class.h(48): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator[]' on object 'regs' (CIN-64)
+# $PROJECT_HOME/../markers_source/shift_class.h(48): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator[]' on object 'regs' (CIN-64)
+# $PROJECT_HOME/../markers_source/shift_class.h(48): Inlining member function 'shift_class<ac_int<150, false>, 5>::operator[]' on object 'regs' (CIN-64)
+# $PROJECT_HOME/../markers_source/blur.c(50): Optimizing block '/markers' ... (CIN-4)
+# $PROJECT_HOME/../markers_source/blur.c(50): Inout port 'vin' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../markers_source/blur.c(50): Inout port 'vout' is only used as an output. (OPT-11)
+# $PROJECT_HOME/../markers_source/blur.c(50): Inout port 'volume' is only used as an input. (OPT-10)
+# Warning: $PROJECT_HOME/../markers_source/blur.c(50): Input port 'volume' is never used. (OPT-4)
+# Info: Optimizing partition '/markers': (Total ops = 425, Real ops = 80, Vars = 104) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 425, Real ops = 80, Vars = 101) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 425, Real ops = 80, Vars = 101) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 425, Real ops = 80, Vars = 104) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 425, Real ops = 80, Vars = 104) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 425, Real ops = 80, Vars = 101) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 382, Real ops = 79, Vars = 82) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 359, Real ops = 79, Vars = 81) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 359, Real ops = 79, Vars = 81) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 359, Real ops = 79, Vars = 84) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 359, Real ops = 79, Vars = 84) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 342, Real ops = 77, Vars = 119) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 357, Real ops = 74, Vars = 18) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 357, Real ops = 74, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 357, Real ops = 74, Vars = 18) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 357, Real ops = 74, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 357, Real ops = 74, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 357, Real ops = 74, Vars = 18) (SOL-10)
+# $PROJECT_HOME/../markers_source/blur.c(68): Loop '/markers/core/RESET' iterated at most 5 times. (LOOP-2)
+# $PROJECT_HOME/../markers_source/shift_class.h(34): Loop '/markers/core/SHIFT' iterated at most 5 times. (LOOP-2)
+# $PROJECT_HOME/../markers_source/blur.c(77): Loop '/markers/core/ACC1' iterated at most 5 times. (LOOP-2)
+# $PROJECT_HOME/../markers_source/blur.c(100): Loop '/markers/core/ACC2' iterated at most 5 times. (LOOP-2)
+# $PROJECT_HOME/../markers_source/blur.c(63): Loop '/markers/core/FRAME' iterated at most 307200 times. (LOOP-2)
+# $PROJECT_HOME/../markers_source/blur.c(69): Detected constant initialization of array 'r', optimizing loop 'RESET' (LOOP-12)
+# $PROJECT_HOME/../markers_source/blur.c(70): Detected constant initialization of array 'g', optimizing loop 'RESET' (LOOP-12)
+# $PROJECT_HOME/../markers_source/blur.c(71): Detected constant initialization of array 'b', optimizing loop 'RESET' (LOOP-12)
+# Info: Optimizing partition '/markers/core': (Total ops = 350, Real ops = 74, Vars = 18) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 323, Real ops = 70, Vars = 17) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 323, Real ops = 70, Vars = 20) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 317, Real ops = 70, Vars = 21) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 317, Real ops = 70, Vars = 17) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 317, Real ops = 70, Vars = 20) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 317, Real ops = 70, Vars = 17) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 317, Real ops = 70, Vars = 20) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 317, Real ops = 70, Vars = 20) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 317, Real ops = 70, Vars = 17) (SOL-10)
+# Design 'markers' was read (SOL-1)
+# Info: Completed transformation 'compile' on solution 'markers.v1': elapsed time 2.45 seconds, memory usage 275524kB, peak memory usage 353036kB (SOL-9)
+directive set /markers/core/main -PIPELINE_INIT_INTERVAL 1
+# /markers/core/main/PIPELINE_INIT_INTERVAL 1
+directive set /markers/core/main -DISTRIBUTED_PIPELINE true
+# /markers/core/main/DISTRIBUTED_PIPELINE true
+directive set /markers/core/main/FRAME -PIPELINE_INIT_INTERVAL 1
+# /markers/core/main/FRAME/PIPELINE_INIT_INTERVAL 1
+directive set /markers/core/main/FRAME/SHIFT -UNROLL yes
+# /markers/core/main/FRAME/SHIFT/UNROLL yes
+directive set /markers/core/main/FRAME/ACC1 -UNROLL yes
+# /markers/core/main/FRAME/ACC1/UNROLL yes
+directive set /markers/core/main/FRAME/ACC2 -UNROLL yes
+# /markers/core/main/FRAME/ACC2/UNROLL yes
+directive set /markers/core/main/FRAME -PIPELINE_INIT_INTERVAL 0
+# /markers/core/main/FRAME/PIPELINE_INIT_INTERVAL 0
+directive set /markers/core/main/FRAME -UNROLL yes
+# /markers/core/main/FRAME/UNROLL yes
+go allocate
+# Info: Starting transformation 'architect' on solution 'markers.v1' (SOL-8)
+# $PROJECT_HOME/../markers_source/shift_class.h(34): Loop '/markers/core/SHIFT' is being fully unrolled (5 times). (LOOP-7)
+# $PROJECT_HOME/../markers_source/blur.c(77): Loop '/markers/core/ACC1' is being fully unrolled (5 times). (LOOP-7)
+# $PROJECT_HOME/../markers_source/blur.c(100): Loop '/markers/core/ACC2' is being fully unrolled (5 times). (LOOP-7)
+# Info: Optimizing partition '/markers/core': (Total ops = 738, Real ops = 175, Vars = 17) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 531, Real ops = 120, Vars = 14) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 522, Real ops = 117, Vars = 13) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 522, Real ops = 117, Vars = 13) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 516, Real ops = 117, Vars = 85) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 327, Real ops = 57, Vars = 22) (SOL-10)
+# $PROJECT_HOME/../markers_source/blur.c(63): Loop '/markers/core/FRAME' is being fully unrolled (307200 times). (LOOP-7)

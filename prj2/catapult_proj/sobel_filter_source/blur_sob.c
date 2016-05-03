@@ -57,9 +57,7 @@ const ac_int<8,true> Y_MASK[3][3] = {
 
 //2-dimensional array to store reference image
 //stored on button press and held persistently by this structure
-ac_int<1,false> MEMREF[640][480];
 
-ac_int<10,false> ARM_COORDS[4];
 
 
 // shift_class: page 119 HLS Blue Book
@@ -80,7 +78,7 @@ void setup(ac_int<10,false> &ARM_COORDS[4]){
 */
 
 #pragma hls_design top
-void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS], ac_int<(COORD_WL+COORD_WL), false> * vga_xy, ac_int<1, false> wr_en)
+void mean_vga(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS], ac_int<(COORD_WL+COORD_WL), false> * vga_xy, ac_int<10, false> * volume)
 {
     ac_int<16, false> val, r[KERNEL_WIDTH], g[KERNEL_WIDTH], b[KERNEL_WIDTH];
     ac_int<16, true> greyx, greyy, gr[KERNEL_WIDTH][KERNEL_WIDTH];
