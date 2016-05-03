@@ -49,6 +49,7 @@
 #pragma hls_design top
 void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS], ac_int<(COORD_WL+COORD_WL), false> vga_xy, ac_int<8,false> * volume)
 {
+    ac_int<10, false> red_out, green_out, blue_out;
     ac_int<10, false> red, green, blue;
     ac_int<10, false> vga_x, vga_y; // screen coordinates
     
@@ -61,13 +62,20 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     green = vin[0].slc<COLOUR_WL>(1*COLOUR_WL);
     blue = vin[0].slc<COLOUR_WL>(0*COLOUR_WL);
     
-    
-		
+    if (((80<=red) && (red<=145)) && ((150<=green) && (green<=230)) && ((30<=blue) && (blue<=108))){
+        red_out = 0;
+        green_out = 0;
+        blue_out = 0;
+    } else {        
+        red_out=red;
+        green_out=green;
+        blue_out=blue;
+    }	
 		//adjustment of the volume
 	*volume = 0;
 	    
 		// group the RGB components into a single signal
-	vout[0] = ((((ac_int<PIXEL_WL, false>)red) << (2*COLOUR_WL)) | (((ac_int<PIXEL_WL, false>)green) << COLOUR_WL) | (ac_int<PIXEL_WL, false>)blue);
+	vout[0] = ((((ac_int<PIXEL_WL, false>)red_out) << (2*COLOUR_WL)) | (((ac_int<PIXEL_WL, false>)green_out) << COLOUR_WL) | (ac_int<PIXEL_WL, false>)blue_out);
 	    
     }
 

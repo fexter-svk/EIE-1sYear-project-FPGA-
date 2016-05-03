@@ -1100,7 +1100,7 @@ applicable agreement for further details.
 (symbol
 	(rect 1464 688 1696 832)
 	(text "markers" (rect 5 0 45 12)(font "Arial" ))
-	(text "inst5" (rect 8 128 31 140)(font "Arial" ))
+	(text "inst4" (rect 8 128 31 140)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
