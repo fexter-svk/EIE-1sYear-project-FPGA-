@@ -49,8 +49,10 @@ static ac_int<4,false> acc[2];
 static ac_int<10, false> red_xy[2];
 static ac_int<10, false> blue_xy[2];
 
-static ac_int<10, false> red_xy_previous[2];
-static ac_int<10, false> blue_xy_previous[2];
+
+
+static ac_int<10, false> red_xy_previous[2] = {0,0};
+static ac_int<10, false> blue_xy_previous[2] = {0,0};
 
 #pragma hls_design top
 void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS], ac_int<(COORD_WL+COORD_WL), false> vga_xy, ac_int<8,false> * volume)
@@ -61,16 +63,13 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     ac_int<1, false> detected;
     ac_int<3, false> counter;
     
-    
     // extract VGA pixel X-Y coordinates  
     vga_x = (vga_xy).slc<COORD_WL>(0);
     vga_y = (vga_xy).slc<COORD_WL>(10);
-
     // shifts pixels from KERNEL_WIDTH rows and keeps KERNEL_WIDTH columns (KERNEL_WIDTHxKERNEL_WIDTH pixels stored)
     red = (vin[0].slc<COLOUR_WL>(2*COLOUR_WL))/4;
     green = vin[0].slc<COLOUR_WL>(1*COLOUR_WL)/4;
     blue = vin[0].slc<COLOUR_WL>(0*COLOUR_WL)/4;
-    
     // 
     if ((vga_x % 15) == 0){
         acc[0] = 0; 
@@ -80,11 +79,11 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
         red_xy[0] = 0;
         red_xy[1] = 0;
     }
-    //GREEN marker (left hand)
+    //RED marker (left hand)
     if (((80<=red) && (red<=145)) && ((150<=green) && (green<=230)) && ((30<=blue) && (blue<=108))){
         acc[0]++;
     } else {
-        //YELLOW marker (right hand)
+        //BLUE marker (right hand)
         if (((165<=red) && (red<=222)) && ((185<=green) && (green<=240)) && ((49<=blue) && (blue<=149))){
             acc[1]++;
         }
@@ -97,23 +96,59 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     } 
     if (acc[1] > 7){
         if ((blue_xy[0]==0) && (blue_xy[1]==0)) {
-            
             blue_xy[0] = vga_x;
             blue_xy[1] = vga_y;
         }
-    } 
-    int deltax_red = (vga_x - red_xy[0]);
-    int deltay_red = (vga_y - red_xy[1]);
+    }
+    // RED marker previous value initialisation  
+    if ((red_xy_previous[0]==0) && (red_xy[0]!=0)) {
+        red_xy_previous[0] = red_xy[0];
+        red_xy_previous[1] = red_xy[1];
+    }
+    // RED marker
+    // If the previous value and the current value match to certain distance, rewrite them
+    int deltax_red = (red_xy[0] - red_xy_previous[0]);
+    int deltay_red = (red_xy[1] - red_xy_previous[1]);
     
-    int deltax_blue = (vga_x - blue_xy[0]);
-    int deltay_blue = (vga_y - blue_xy[1]);
+    if ((deltax_red<20) &&(deltax_red>-20)) {
+        red_xy_previous[0] = red_xy[0];
+        red_xy_previous[1] = red_xy[1];
+    }
+    //RED
+    //Calculate the coordinates for the square
+    int deltax_square_red = vga_x - red_xy_previous[0];
+    int deltay_square_red = vga_y - red_xy_previous[1];
     
-    if (((deltax_red > 0)&&(deltax_red < 40)) && ((deltay_red > 0) &&(deltay_red < 40))){
+    //
+    //
+    //
+    //
+    //BLUE marker previous value initialisation 
+    if ((blue_xy_previous[0]==0) && (blue_xy[0]!=0)) {
+        blue_xy_previous[0] = blue_xy[0];
+        blue_xy_previous[1] = blue_xy[1];
+    }
+    // BLUE marker
+    // If the previous value and the current value match to certain distance, rewrite them
+    int deltax_blue = (blue_xy[0] - blue_xy_previous[0]);
+    int deltay_blue = (blue_xy[1] - blue_xy_previous[1]);
+    
+    //BLUE
+    //Calculate the coordinates for the square
+    if ((deltax_blue<20) &&(deltax_blue>-20)) {
+        blue_xy_previous[0] = blue_xy[0];
+        blue_xy_previous[1] = blue_xy[1];
+    }
+    int deltax_square_blue = vga_x - blue_xy_previous[0];
+    int deltay_square_blue = vga_y - blue_xy_previous[1];
+    
+    
+    if (((deltax_square_red > 0)&&(deltax_square_red < 40)) && ((deltay_square_red > 0) &&(deltay_square_red < 40))){
         red_out = 1023;
         green_out = 0;
         blue_out = 0;
     } else {
-        if (((deltax_blue > 0)&&(deltax_blue < 40)) && ((deltay_blue > 0) &&(deltay_blue < 40))) {
+        if (((deltax_square_blue > 0)&&(deltax_square_blue < 40)) && ((deltay_square_blue > 0) &&(deltay_square_blue < 40))) {
             red_out = 0;
             green_out = 0;
             blue_out = 1023;

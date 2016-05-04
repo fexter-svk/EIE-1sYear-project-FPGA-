@@ -1,5 +1,5 @@
 Assembler report for DE0_D5M
-Wed May 04 15:45:57 2016
+Wed May 04 16:42:02 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed May 04 15:45:57 2016 ;
+; Assembler Status      ; Successful - Wed May 04 16:42:02 2016 ;
 ; Revision Name         ; DE0_D5M                               ;
 ; Top-level Entity Name ; TOP_DE0_CAMERA_MOUSE                  ;
 ; Family                ; Cyclone III                           ;
@@ -94,8 +94,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                                                                        ;
 +----------------+------------------------------------------------------------------------------------------------+
 ; Device         ; EP3C16F484C6                                                                                   ;
-; JTAG usercode  ; 0x001D62C7                                                                                     ;
-; Checksum       ; 0x001D62C7                                                                                     ;
+; JTAG usercode  ; 0x001FD092                                                                                     ;
+; Checksum       ; 0x001FD092                                                                                     ;
 +----------------+------------------------------------------------------------------------------------------------+
 
 
@@ -106,7 +106,7 @@ applicable agreement for further details.
 +--------------------+--------------------------------------------------------------------------------------------+
 ; Device             ; EPCS4                                                                                      ;
 ; JTAG usercode      ; 0x00000000                                                                                 ;
-; Checksum           ; 0x05BCED82                                                                                 ;
+; Checksum           ; 0x05BC76E5                                                                                 ;
 ; Compression Ratio  ; 3                                                                                          ;
 +--------------------+--------------------------------------------------------------------------------------------+
 
@@ -117,14 +117,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Wed May 04 15:45:56 2016
+    Info: Processing started: Wed May 04 16:42:00 2016
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off DE0_D5M -c DE0_D5M
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 419 megabytes
-    Info: Processing ended: Wed May 04 15:45:57 2016
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 434 megabytes
+    Info: Processing ended: Wed May 04 16:42:02 2016
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 
