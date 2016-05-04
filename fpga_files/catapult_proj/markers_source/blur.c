@@ -53,6 +53,9 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     ac_int<10, false> red, green, blue;
     ac_int<10, false> vga_x, vga_y; // screen coordinates
     ac_int<10, false> greenMarker_x, greenMarker_y, yellowMarker_x, yellowMarker_y;
+    ac_int<1, false> detected;
+    ac_int<3, false> counter;
+    
     
     // extract VGA pixel X-Y coordinates  
     vga_x = (vga_xy).slc<COORD_WL>(0);
@@ -70,21 +73,35 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
         blue_out=blue*4;
         greenMarker_x = vga_x;
         greenMarker_y = vga_y;
+        detected = 1;
     } else {
         //YELLOW marker (right hand)
-        if (((170<=red) && (red<=222)) && ((185<=green) && (green<=235)) && ((49<=blue) && (blue<=149))){
+        if (((165<=red) && (red<=222)) && ((185<=green) && (green<=240)) && ((49<=blue) && (blue<=149))){
             red_out=red*4;
             green_out=green*4;
             blue_out=blue*4;
             yellowMarker_x = vga_x;
             yellowMarker_y = vga_y;
+            detected = 1;
         } else {        
             red_out = 0;
             green_out = 0;
             blue_out = 0;
+            detected = 0;
         }
     }	
-    
+    ACCUM: for(int i = 0; i<NOISE; i++){
+        counter+=detected;
+    }
+    if (counter<=1) {
+        red_out = 0;
+        green_out = 0;
+        blue_out = 0;
+    } else{
+        red_out=red*4;
+        green_out=green*4;
+        blue_out=blue*4;
+    }
 		//adjustment of the volume
 	*volume = 0;
 	    

@@ -31,14 +31,13 @@
 
 // total number of pixels from screen frame/image read in testbench
 #define NUM_PIXELS 1
-
-#define KERNEL_WIDTH      3
-#define KERNEL_NUMEL      (KERNEL_WIDTH * KERNEL_WIDTH)
+#define NOISE 3
 #define COLOUR_WL         10
 #define PIXEL_WL          (3 * COLOUR_WL)
 
 #define  COORD_WL          10
 
+#define KERNEL_WIDTH 3
 
 void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS], ac_int<(COORD_WL+COORD_WL), false> vga_xy, ac_int<8,false> * volume);
 
