@@ -44,6 +44,7 @@
 #include "shift_class.h" 
 
 
+static ac_int<4,false> acc[2];
 
 
 #pragma hls_design top
@@ -66,46 +67,47 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     green = vin[0].slc<COLOUR_WL>(1*COLOUR_WL)/4;
     blue = vin[0].slc<COLOUR_WL>(0*COLOUR_WL)/4;
     
+    // 
+    if ((vga_x % 20) == 0){acc[0] = 0; acc[1] = 0;}
+    
     //GREEN marker (left hand)
     if (((80<=red) && (red<=145)) && ((150<=green) && (green<=230)) && ((30<=blue) && (blue<=108))){
+        acc[0]++;
+    } else {
+        //YELLOW marker (right hand)
+        if (((165<=red) && (red<=222)) && ((185<=green) && (green<=240)) && ((49<=blue) && (blue<=149))){
+            acc[1]++;
+        }
+    }
+    
+    
+    if (acc[0] > 6){
         red_out=red*4;
         green_out=green*4;
         blue_out=blue*4;
         greenMarker_x = vga_x;
         greenMarker_y = vga_y;
-        detected = 1;
     } else {
-        //YELLOW marker (right hand)
-        if (((165<=red) && (red<=222)) && ((185<=green) && (green<=240)) && ((49<=blue) && (blue<=149))){
-            red_out=red*4;
-            green_out=green*4;
-            blue_out=blue*4;
-            yellowMarker_x = vga_x;
-            yellowMarker_y = vga_y;
-            detected = 1;
-        } else {        
-            red_out = 0;
-            green_out = 0;
-            blue_out = 0;
-            detected = 0;
-        }
-    }	
-    ACCUM: for(int i = 0; i<NOISE; i++){
-        counter+=detected;
-    }
-    if (counter<=1) {
         red_out = 0;
         green_out = 0;
         blue_out = 0;
-    } else{
+    }
+    if (acc[1] > 6){
+        yellowMarker_x = vga_x;
+        yellowMarker_y = vga_y;
         red_out=red*4;
         green_out=green*4;
         blue_out=blue*4;
+    } else {
+        red_out = 0;
+        green_out = 0;
+        blue_out = 0;
     }
-		//adjustment of the volume
+
+//adjustment of the volume
 	*volume = 0;
 	    
-		// group the RGB components into a single signal
+// group the RGB components into a single signal
 	vout[0] = ((((ac_int<PIXEL_WL, false>)red_out) << (2*COLOUR_WL)) | (((ac_int<PIXEL_WL, false>)green_out) << COLOUR_WL) | (ac_int<PIXEL_WL, false>)blue_out);
 	    
     }
