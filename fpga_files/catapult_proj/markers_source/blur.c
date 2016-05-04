@@ -52,25 +52,39 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     ac_int<10, false> red_out, green_out, blue_out;
     ac_int<10, false> red, green, blue;
     ac_int<10, false> vga_x, vga_y; // screen coordinates
+    ac_int<10, false> greenMarker_x, greenMarker_y, yellowMarker_x, yellowMarker_y;
     
     // extract VGA pixel X-Y coordinates  
     vga_x = (vga_xy).slc<COORD_WL>(0);
     vga_y = (vga_xy).slc<COORD_WL>(10);
 
     // shifts pixels from KERNEL_WIDTH rows and keeps KERNEL_WIDTH columns (KERNEL_WIDTHxKERNEL_WIDTH pixels stored)
-    red = vin[0].slc<COLOUR_WL>(2*COLOUR_WL);
-    green = vin[0].slc<COLOUR_WL>(1*COLOUR_WL);
-    blue = vin[0].slc<COLOUR_WL>(0*COLOUR_WL);
+    red = (vin[0].slc<COLOUR_WL>(2*COLOUR_WL))/4;
+    green = vin[0].slc<COLOUR_WL>(1*COLOUR_WL)/4;
+    blue = vin[0].slc<COLOUR_WL>(0*COLOUR_WL)/4;
     
+    //GREEN marker (left hand)
     if (((80<=red) && (red<=145)) && ((150<=green) && (green<=230)) && ((30<=blue) && (blue<=108))){
-        red_out = 0;
-        green_out = 0;
-        blue_out = 0;
-    } else {        
-        red_out=red;
-        green_out=green;
-        blue_out=blue;
+        red_out=red*4;
+        green_out=green*4;
+        blue_out=blue*4;
+        greenMarker_x = vga_x;
+        greenMarker_y = vga_y;
+    } else {
+        //YELLOW marker (right hand)
+        if (((170<=red) && (red<=222)) && ((185<=green) && (green<=235)) && ((49<=blue) && (blue<=149))){
+            red_out=red*4;
+            green_out=green*4;
+            blue_out=blue*4;
+            yellowMarker_x = vga_x;
+            yellowMarker_y = vga_y;
+        } else {        
+            red_out = 0;
+            green_out = 0;
+            blue_out = 0;
+        }
     }	
+    
 		//adjustment of the volume
 	*volume = 0;
 	    

@@ -1,16 +1,16 @@
-Fitter Status : Successful - Tue May 03 15:26:38 2016
+Fitter Status : Successful - Wed May 04 11:41:36 2016
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
 Revision Name : DE0_D5M
 Top-level Entity Name : TOP_DE0_CAMERA_MOUSE
 Family : Cyclone III
 Device : EP3C16F484C6
 Timing Models : Final
-Total logic elements : 1,775 / 15,408 ( 12 % )
-    Total combinational functions : 1,464 / 15,408 ( 10 % )
-    Dedicated logic registers : 1,183 / 15,408 ( 8 % )
-Total registers : 1183
+Total logic elements : 1,786 / 15,408 ( 12 % )
+    Total combinational functions : 1,491 / 15,408 ( 10 % )
+    Dedicated logic registers : 1,179 / 15,408 ( 8 % )
+Total registers : 1179
 Total pins : 131 / 347 ( 38 % )
 Total virtual pins : 0
-Total memory bits : 103,838 / 516,096 ( 20 % )
+Total memory bits : 97,288 / 516,096 ( 19 % )
 Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )
 Total PLLs : 1 / 4 ( 25 % )

@@ -1,0 +1,2040 @@
+
+# Program: Catapult University Version
+# Version: 2011a.126
+#    File: Nlview netlist
+
+module new "markers:core" "orig"
+load portBus {vin(89:0)} input 90 {vin(89)} {vin(88)} {vin(87)} {vin(86)} {vin(85)} {vin(84)} {vin(83)} {vin(82)} {vin(81)} {vin(80)} {vin(79)} {vin(78)} {vin(77)} {vin(76)} {vin(75)} {vin(74)} {vin(73)} {vin(72)} {vin(71)} {vin(70)} {vin(69)} {vin(68)} {vin(67)} {vin(66)} {vin(65)} {vin(64)} {vin(63)} {vin(62)} {vin(61)} {vin(60)} {vin(59)} {vin(58)} {vin(57)} {vin(56)} {vin(55)} {vin(54)} {vin(53)} {vin(52)} {vin(51)} {vin(50)} {vin(49)} {vin(48)} {vin(47)} {vin(46)} {vin(45)} {vin(44)} {vin(43)} {vin(42)} {vin(41)} {vin(40)} {vin(39)} {vin(38)} {vin(37)} {vin(36)} {vin(35)} {vin(34)} {vin(33)} {vin(32)} {vin(31)} {vin(30)} {vin(29)} {vin(28)} {vin(27)} {vin(26)} {vin(25)} {vin(24)} {vin(23)} {vin(22)} {vin(21)} {vin(20)} {vin(19)} {vin(18)} {vin(17)} {vin(16)} {vin(15)} {vin(14)} {vin(13)} {vin(12)} {vin(11)} {vin(10)} {vin(9)} {vin(8)} {vin(7)} {vin(6)} {vin(5)} {vin(4)} {vin(3)} {vin(2)} {vin(1)} {vin(0)} -attr xrf 7897 -attr oid 1 -attr vt d -attr @path {/markers/markers:core/vin}
+load port {clk} input -attr xrf 7898 -attr oid 2 -attr vt d -attr @path {/markers/markers:core/clk}
+load port {en} input -attr xrf 7899 -attr oid 3 -attr vt d -attr @path {/markers/markers:core/en}
+load port {arst_n} input -attr xrf 7900 -attr oid 4 -attr vt d -attr @path {/markers/markers:core/arst_n}
+load portBus {vout:rsc:mgc_out_stdreg.d(29:0)} output 30 {vout:rsc:mgc_out_stdreg.d(29)} {vout:rsc:mgc_out_stdreg.d(28)} {vout:rsc:mgc_out_stdreg.d(27)} {vout:rsc:mgc_out_stdreg.d(26)} {vout:rsc:mgc_out_stdreg.d(25)} {vout:rsc:mgc_out_stdreg.d(24)} {vout:rsc:mgc_out_stdreg.d(23)} {vout:rsc:mgc_out_stdreg.d(22)} {vout:rsc:mgc_out_stdreg.d(21)} {vout:rsc:mgc_out_stdreg.d(20)} {vout:rsc:mgc_out_stdreg.d(19)} {vout:rsc:mgc_out_stdreg.d(18)} {vout:rsc:mgc_out_stdreg.d(17)} {vout:rsc:mgc_out_stdreg.d(16)} {vout:rsc:mgc_out_stdreg.d(15)} {vout:rsc:mgc_out_stdreg.d(14)} {vout:rsc:mgc_out_stdreg.d(13)} {vout:rsc:mgc_out_stdreg.d(12)} {vout:rsc:mgc_out_stdreg.d(11)} {vout:rsc:mgc_out_stdreg.d(10)} {vout:rsc:mgc_out_stdreg.d(9)} {vout:rsc:mgc_out_stdreg.d(8)} {vout:rsc:mgc_out_stdreg.d(7)} {vout:rsc:mgc_out_stdreg.d(6)} {vout:rsc:mgc_out_stdreg.d(5)} {vout:rsc:mgc_out_stdreg.d(4)} {vout:rsc:mgc_out_stdreg.d(3)} {vout:rsc:mgc_out_stdreg.d(2)} {vout:rsc:mgc_out_stdreg.d(1)} {vout:rsc:mgc_out_stdreg.d(0)} -attr xrf 7901 -attr oid 5 -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load symbol "nor(3,1)" "INTERFACE" NOR boxcolor 0 \
+     portBus {A0(0:0)} input 1 {A0(0)} \
+     portBus {A1(0:0)} input 1 {A1(0)} \
+     portBus {A2(0:0)} input 1 {A2(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load symbol "and(2,1)" "INTERFACE" AND boxcolor 0 \
+     portBus {A0(0:0)} input 1 {A0(0)} \
+     portBus {A1(0:0)} input 1 {A1(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load symbol "or(2,1)" "INTERFACE" OR boxcolor 0 \
+     portBus {A0(0:0)} input 1 {A0(0)} \
+     portBus {A1(0:0)} input 1 {A1(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load symbol "mux(2,1)" "INTERFACE" MUX boxcolor 0 \
+     portBus {A0(0:0)} input 1 {A0(0)} \
+     portBus {A1(0:0)} input 1 {A1(0)} \
+     portBus {S(0:0)} input.top 1 {S(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load symbol "reg(1,1,1,-1,0)" "INTERFACE" GEN boxcolor 1 \
+     portBus {D(0:0)} input 1 {D(0)} \
+     portBus {DRa(0:0)} input 1 {DRa(0)} \
+     port {clk} input.clk \
+     portBus {en(0:0)} input 1 {en(0)} \
+     portBus {Ra(0:0)} input 1 {Ra(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load symbol "add(8,0,7,1,9)" "INTERFACE" RTL(+) boxcolor 0 \
+     portBus {A(7:0)} input 8 {A(7)} {A(6)} {A(5)} {A(4)} {A(3)} {A(2)} {A(1)} {A(0)} \
+     portBus {B(6:0)} input 7 {B(6)} {B(5)} {B(4)} {B(3)} {B(2)} {B(1)} {B(0)} \
+     portBus {Z(8:0)} output 9 {Z(8)} {Z(7)} {Z(6)} {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "not(5)" "INTERFACE" INV boxcolor 0 \
+     portBus {A(4:0)} input 5 {A(4)} {A(3)} {A(2)} {A(1)} {A(0)} \
+     portBus {Z(4:0)} output 5 {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "add(5,0,4,1,6)" "INTERFACE" RTL(+) boxcolor 0 \
+     portBus {A(4:0)} input 5 {A(4)} {A(3)} {A(2)} {A(1)} {A(0)} \
+     portBus {B(3:0)} input 4 {B(3)} {B(2)} {B(1)} {B(0)} \
+     portBus {Z(5:0)} output 6 {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "add(8,0,9,-1,9)" "INTERFACE" RTL(+) boxcolor 0 \
+     portBus {A(7:0)} input 8 {A(7)} {A(6)} {A(5)} {A(4)} {A(3)} {A(2)} {A(1)} {A(0)} \
+     portBus {B(8:0)} input 9 {B(8)} {B(7)} {B(6)} {B(5)} {B(4)} {B(3)} {B(2)} {B(1)} {B(0)} \
+     portBus {Z(8:0)} output 9 {Z(8)} {Z(7)} {Z(6)} {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "not(7)" "INTERFACE" INV boxcolor 0 \
+     portBus {A(6:0)} input 7 {A(6)} {A(5)} {A(4)} {A(3)} {A(2)} {A(1)} {A(0)} \
+     portBus {Z(6:0)} output 7 {Z(6)} {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "add(7,0,7,1,8)" "INTERFACE" RTL(+) boxcolor 0 \
+     portBus {A(6:0)} input 7 {A(6)} {A(5)} {A(4)} {A(3)} {A(2)} {A(1)} {A(0)} \
+     portBus {B(6:0)} input 7 {B(6)} {B(5)} {B(4)} {B(3)} {B(2)} {B(1)} {B(0)} \
+     portBus {Z(7:0)} output 8 {Z(7)} {Z(6)} {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "add(7,0,8,-1,8)" "INTERFACE" RTL(+) boxcolor 0 \
+     portBus {A(6:0)} input 7 {A(6)} {A(5)} {A(4)} {A(3)} {A(2)} {A(1)} {A(0)} \
+     portBus {B(7:0)} input 8 {B(7)} {B(6)} {B(5)} {B(4)} {B(3)} {B(2)} {B(1)} {B(0)} \
+     portBus {Z(7:0)} output 8 {Z(7)} {Z(6)} {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "add(7,0,5,1,8)" "INTERFACE" RTL(+) boxcolor 0 \
+     portBus {A(6:0)} input 7 {A(6)} {A(5)} {A(4)} {A(3)} {A(2)} {A(1)} {A(0)} \
+     portBus {B(4:0)} input 5 {B(4)} {B(3)} {B(2)} {B(1)} {B(0)} \
+     portBus {Z(7:0)} output 8 {Z(7)} {Z(6)} {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "or(6,1)" "INTERFACE" OR boxcolor 0 \
+     portBus {A0(0:0)} input 1 {A0(0)} \
+     portBus {A1(0:0)} input 1 {A1(0)} \
+     portBus {A2(0:0)} input 1 {A2(0)} \
+     portBus {A3(0:0)} input 1 {A3(0)} \
+     portBus {A4(0:0)} input 1 {A4(0)} \
+     portBus {A5(0:0)} input 1 {A5(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load symbol "and(2,8)" "INTERFACE" AND boxcolor 0 \
+     portBus {A0(7:0)} input 8 {A0(7)} {A0(6)} {A0(5)} {A0(4)} {A0(3)} {A0(2)} {A0(1)} {A0(0)} \
+     portBus {A1(7:0)} input 8 {A1(7)} {A1(6)} {A1(5)} {A1(4)} {A1(3)} {A1(2)} {A1(1)} {A1(0)} \
+     portBus {Z(7:0)} output 8 {Z(7)} {Z(6)} {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "mux(2,8)" "INTERFACE" MUX boxcolor 0 \
+     portBus {A0(7:0)} input 8 {A0(7)} {A0(6)} {A0(5)} {A0(4)} {A0(3)} {A0(2)} {A0(1)} {A0(0)} \
+     portBus {A1(7:0)} input 8 {A1(7)} {A1(6)} {A1(5)} {A1(4)} {A1(3)} {A1(2)} {A1(1)} {A1(0)} \
+     portBus {S(0:0)} input.top 1 {S(0)} \
+     portBus {Z(7:0)} output 8 {Z(7)} {Z(6)} {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "add(7,-1,7,-1,7)" "INTERFACE" RTL(+) boxcolor 0 \
+     portBus {A(6:0)} input 7 {A(6)} {A(5)} {A(4)} {A(3)} {A(2)} {A(1)} {A(0)} \
+     portBus {B(6:0)} input 7 {B(6)} {B(5)} {B(4)} {B(3)} {B(2)} {B(1)} {B(0)} \
+     portBus {Z(6:0)} output 7 {Z(6)} {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "nor(6,1)" "INTERFACE" NOR boxcolor 0 \
+     portBus {A0(0:0)} input 1 {A0(0)} \
+     portBus {A1(0:0)} input 1 {A1(0)} \
+     portBus {A2(0:0)} input 1 {A2(0)} \
+     portBus {A3(0:0)} input 1 {A3(0)} \
+     portBus {A4(0:0)} input 1 {A4(0)} \
+     portBus {A5(0:0)} input 1 {A5(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load symbol "not(8)" "INTERFACE" INV boxcolor 0 \
+     portBus {A(7:0)} input 8 {A(7)} {A(6)} {A(5)} {A(4)} {A(3)} {A(2)} {A(1)} {A(0)} \
+     portBus {Z(7:0)} output 8 {Z(7)} {Z(6)} {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "add(9,-1,7,0,9)" "INTERFACE" RTL(+) boxcolor 0 \
+     portBus {A(8:0)} input 9 {A(8)} {A(7)} {A(6)} {A(5)} {A(4)} {A(3)} {A(2)} {A(1)} {A(0)} \
+     portBus {B(6:0)} input 7 {B(6)} {B(5)} {B(4)} {B(3)} {B(2)} {B(1)} {B(0)} \
+     portBus {Z(8:0)} output 9 {Z(8)} {Z(7)} {Z(6)} {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "add(7,0,6,1,8)" "INTERFACE" RTL(+) boxcolor 0 \
+     portBus {A(6:0)} input 7 {A(6)} {A(5)} {A(4)} {A(3)} {A(2)} {A(1)} {A(0)} \
+     portBus {B(5:0)} input 6 {B(5)} {B(4)} {B(3)} {B(2)} {B(1)} {B(0)} \
+     portBus {Z(7:0)} output 8 {Z(7)} {Z(6)} {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "add(4,0,4,1,5)" "INTERFACE" RTL(+) boxcolor 0 \
+     portBus {A(3:0)} input 4 {A(3)} {A(2)} {A(1)} {A(0)} \
+     portBus {B(3:0)} input 4 {B(3)} {B(2)} {B(1)} {B(0)} \
+     portBus {Z(4:0)} output 5 {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "or(3,1)" "INTERFACE" OR boxcolor 0 \
+     portBus {A0(0:0)} input 1 {A0(0)} \
+     portBus {A1(0:0)} input 1 {A1(0)} \
+     portBus {A2(0:0)} input 1 {A2(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load symbol "reg(8,1,1,-1,0)" "INTERFACE" GEN boxcolor 1 \
+     portBus {D(7:0)} input 8 {D(7)} {D(6)} {D(5)} {D(4)} {D(3)} {D(2)} {D(1)} {D(0)} \
+     portBus {DRa(7:0)} input 8 {DRa(7)} {DRa(6)} {DRa(5)} {DRa(4)} {DRa(3)} {DRa(2)} {DRa(1)} {DRa(0)} \
+     port {clk} input.clk \
+     portBus {en(0:0)} input 1 {en(0)} \
+     portBus {Ra(0:0)} input 1 {Ra(0)} \
+     portBus {Z(7:0)} output 8 {Z(7)} {Z(6)} {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(0)} -attr vt d
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(1)} -attr vt d
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(2)} -attr vt d
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(3)} -attr vt d
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(4)} -attr vt d
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(5)} -attr vt d
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(6)} -attr vt d
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(7)} -attr vt d
+load netBundle {reg(vout:rsc:mgc_out_stdreg.d).tmp} 8 {reg(vout:rsc:mgc_out_stdreg.d).tmp(0)} {reg(vout:rsc:mgc_out_stdreg.d).tmp(1)} {reg(vout:rsc:mgc_out_stdreg.d).tmp(2)} {reg(vout:rsc:mgc_out_stdreg.d).tmp(3)} {reg(vout:rsc:mgc_out_stdreg.d).tmp(4)} {reg(vout:rsc:mgc_out_stdreg.d).tmp(5)} {reg(vout:rsc:mgc_out_stdreg.d).tmp(6)} {reg(vout:rsc:mgc_out_stdreg.d).tmp(7)} -attr xrf 7902 -attr oid 6 -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(0)} -attr vt d
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(1)} -attr vt d
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(2)} -attr vt d
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(3)} -attr vt d
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(4)} -attr vt d
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(5)} -attr vt d
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(6)} -attr vt d
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(7)} -attr vt d
+load netBundle {reg(vout:rsc:mgc_out_stdreg.d).tmp#1} 8 {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(0)} {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(1)} {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(2)} {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(3)} {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(4)} {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(5)} {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(6)} {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(7)} -attr xrf 7903 -attr oid 7 -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp#1}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(0)} -attr vt d
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(1)} -attr vt d
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(2)} -attr vt d
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(3)} -attr vt d
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(4)} -attr vt d
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(5)} -attr vt d
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(6)} -attr vt d
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(7)} -attr vt d
+load netBundle {reg(vout:rsc:mgc_out_stdreg.d).tmp#2} 8 {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(0)} {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(1)} {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(2)} {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(3)} {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(4)} {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(5)} {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(6)} {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(7)} -attr xrf 7904 -attr oid 8 -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp#2}
+load net {vout:rsc:mgc_out_stdreg.d#1(0)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(1)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(2)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(3)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(4)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(5)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(6)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(7)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(8)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(9)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(10)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(11)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(12)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(13)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(14)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(15)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(16)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(17)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(18)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(19)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(20)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(21)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(22)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(23)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(24)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(25)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(26)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(27)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(28)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(29)} -attr vt d
+load netBundle {vout:rsc:mgc_out_stdreg.d#1} 30 {vout:rsc:mgc_out_stdreg.d#1(0)} {vout:rsc:mgc_out_stdreg.d#1(1)} {vout:rsc:mgc_out_stdreg.d#1(2)} {vout:rsc:mgc_out_stdreg.d#1(3)} {vout:rsc:mgc_out_stdreg.d#1(4)} {vout:rsc:mgc_out_stdreg.d#1(5)} {vout:rsc:mgc_out_stdreg.d#1(6)} {vout:rsc:mgc_out_stdreg.d#1(7)} {vout:rsc:mgc_out_stdreg.d#1(8)} {vout:rsc:mgc_out_stdreg.d#1(9)} {vout:rsc:mgc_out_stdreg.d#1(10)} {vout:rsc:mgc_out_stdreg.d#1(11)} {vout:rsc:mgc_out_stdreg.d#1(12)} {vout:rsc:mgc_out_stdreg.d#1(13)} {vout:rsc:mgc_out_stdreg.d#1(14)} {vout:rsc:mgc_out_stdreg.d#1(15)} {vout:rsc:mgc_out_stdreg.d#1(16)} {vout:rsc:mgc_out_stdreg.d#1(17)} {vout:rsc:mgc_out_stdreg.d#1(18)} {vout:rsc:mgc_out_stdreg.d#1(19)} {vout:rsc:mgc_out_stdreg.d#1(20)} {vout:rsc:mgc_out_stdreg.d#1(21)} {vout:rsc:mgc_out_stdreg.d#1(22)} {vout:rsc:mgc_out_stdreg.d#1(23)} {vout:rsc:mgc_out_stdreg.d#1(24)} {vout:rsc:mgc_out_stdreg.d#1(25)} {vout:rsc:mgc_out_stdreg.d#1(26)} {vout:rsc:mgc_out_stdreg.d#1(27)} {vout:rsc:mgc_out_stdreg.d#1(28)} {vout:rsc:mgc_out_stdreg.d#1(29)} -attr xrf 7905 -attr oid 9 -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d#1}
+load net {slc(vin)#11.itm(0)} -attr vt d
+load net {slc(vin)#11.itm(1)} -attr vt d
+load net {slc(vin)#11.itm(2)} -attr vt d
+load net {slc(vin)#11.itm(3)} -attr vt d
+load net {slc(vin)#11.itm(4)} -attr vt d
+load net {slc(vin)#11.itm(5)} -attr vt d
+load net {slc(vin)#11.itm(6)} -attr vt d
+load net {slc(vin)#11.itm(7)} -attr vt d
+load netBundle {slc(vin)#11.itm} 8 {slc(vin)#11.itm(0)} {slc(vin)#11.itm(1)} {slc(vin)#11.itm(2)} {slc(vin)#11.itm(3)} {slc(vin)#11.itm(4)} {slc(vin)#11.itm(5)} {slc(vin)#11.itm(6)} {slc(vin)#11.itm(7)} -attr xrf 7906 -attr oid 10 -attr vt d -attr @path {/markers/markers:core/slc(vin)#11.itm}
+load net {else:aif#1:aif:not#1.itm(0)} -attr vt d
+load net {else:aif#1:aif:not#1.itm(1)} -attr vt d
+load net {else:aif#1:aif:not#1.itm(2)} -attr vt d
+load net {else:aif#1:aif:not#1.itm(3)} -attr vt d
+load net {else:aif#1:aif:not#1.itm(4)} -attr vt d
+load netBundle {else:aif#1:aif:not#1.itm} 5 {else:aif#1:aif:not#1.itm(0)} {else:aif#1:aif:not#1.itm(1)} {else:aif#1:aif:not#1.itm(2)} {else:aif#1:aif:not#1.itm(3)} {else:aif#1:aif:not#1.itm(4)} -attr xrf 7907 -attr oid 11 -attr vt d -attr @path {/markers/markers:core/else:aif#1:aif:not#1.itm}
+load net {slc(vin)#15.itm(0)} -attr vt d
+load net {slc(vin)#15.itm(1)} -attr vt d
+load net {slc(vin)#15.itm(2)} -attr vt d
+load net {slc(vin)#15.itm(3)} -attr vt d
+load net {slc(vin)#15.itm(4)} -attr vt d
+load netBundle {slc(vin)#15.itm} 5 {slc(vin)#15.itm(0)} {slc(vin)#15.itm(1)} {slc(vin)#15.itm(2)} {slc(vin)#15.itm(3)} {slc(vin)#15.itm(4)} -attr xrf 7908 -attr oid 12 -attr vt d -attr @path {/markers/markers:core/slc(vin)#15.itm}
+load net {slc(vin)#10.itm(0)} -attr vt d
+load net {slc(vin)#10.itm(1)} -attr vt d
+load net {slc(vin)#10.itm(2)} -attr vt d
+load net {slc(vin)#10.itm(3)} -attr vt d
+load net {slc(vin)#10.itm(4)} -attr vt d
+load net {slc(vin)#10.itm(5)} -attr vt d
+load net {slc(vin)#10.itm(6)} -attr vt d
+load net {slc(vin)#10.itm(7)} -attr vt d
+load netBundle {slc(vin)#10.itm} 8 {slc(vin)#10.itm(0)} {slc(vin)#10.itm(1)} {slc(vin)#10.itm(2)} {slc(vin)#10.itm(3)} {slc(vin)#10.itm(4)} {slc(vin)#10.itm(5)} {slc(vin)#10.itm(6)} {slc(vin)#10.itm(7)} -attr xrf 7909 -attr oid 13 -attr vt d -attr @path {/markers/markers:core/slc(vin)#10.itm}
+load net {else:aif:not#1.itm(0)} -attr vt d
+load net {else:aif:not#1.itm(1)} -attr vt d
+load net {else:aif:not#1.itm(2)} -attr vt d
+load net {else:aif:not#1.itm(3)} -attr vt d
+load net {else:aif:not#1.itm(4)} -attr vt d
+load net {else:aif:not#1.itm(5)} -attr vt d
+load net {else:aif:not#1.itm(6)} -attr vt d
+load netBundle {else:aif:not#1.itm} 7 {else:aif:not#1.itm(0)} {else:aif:not#1.itm(1)} {else:aif:not#1.itm(2)} {else:aif:not#1.itm(3)} {else:aif:not#1.itm(4)} {else:aif:not#1.itm(5)} {else:aif:not#1.itm(6)} -attr xrf 7910 -attr oid 14 -attr vt d -attr @path {/markers/markers:core/else:aif:not#1.itm}
+load net {slc(vin)#13.itm(0)} -attr vt d
+load net {slc(vin)#13.itm(1)} -attr vt d
+load net {slc(vin)#13.itm(2)} -attr vt d
+load net {slc(vin)#13.itm(3)} -attr vt d
+load net {slc(vin)#13.itm(4)} -attr vt d
+load net {slc(vin)#13.itm(5)} -attr vt d
+load net {slc(vin)#13.itm(6)} -attr vt d
+load netBundle {slc(vin)#13.itm} 7 {slc(vin)#13.itm(0)} {slc(vin)#13.itm(1)} {slc(vin)#13.itm(2)} {slc(vin)#13.itm(3)} {slc(vin)#13.itm(4)} {slc(vin)#13.itm(5)} {slc(vin)#13.itm(6)} -attr xrf 7911 -attr oid 15 -attr vt d -attr @path {/markers/markers:core/slc(vin)#13.itm}
+load net {slc(vin)#18.itm(0)} -attr vt d
+load net {slc(vin)#18.itm(1)} -attr vt d
+load net {slc(vin)#18.itm(2)} -attr vt d
+load net {slc(vin)#18.itm(3)} -attr vt d
+load net {slc(vin)#18.itm(4)} -attr vt d
+load net {slc(vin)#18.itm(5)} -attr vt d
+load net {slc(vin)#18.itm(6)} -attr vt d
+load netBundle {slc(vin)#18.itm} 7 {slc(vin)#18.itm(0)} {slc(vin)#18.itm(1)} {slc(vin)#18.itm(2)} {slc(vin)#18.itm(3)} {slc(vin)#18.itm(4)} {slc(vin)#18.itm(5)} {slc(vin)#18.itm(6)} -attr xrf 7912 -attr oid 16 -attr vt d -attr @path {/markers/markers:core/slc(vin)#18.itm}
+load net {slc(vin)#22.itm(0)} -attr vt d
+load net {slc(vin)#22.itm(1)} -attr vt d
+load net {slc(vin)#22.itm(2)} -attr vt d
+load net {slc(vin)#22.itm(3)} -attr vt d
+load net {slc(vin)#22.itm(4)} -attr vt d
+load net {slc(vin)#22.itm(5)} -attr vt d
+load net {slc(vin)#22.itm(6)} -attr vt d
+load netBundle {slc(vin)#22.itm} 7 {slc(vin)#22.itm(0)} {slc(vin)#22.itm(1)} {slc(vin)#22.itm(2)} {slc(vin)#22.itm(3)} {slc(vin)#22.itm(4)} {slc(vin)#22.itm(5)} {slc(vin)#22.itm(6)} -attr xrf 7913 -attr oid 17 -attr vt d -attr @path {/markers/markers:core/slc(vin)#22.itm}
+load net {slc(vin)#5.itm(0)} -attr vt d
+load net {slc(vin)#5.itm(1)} -attr vt d
+load net {slc(vin)#5.itm(2)} -attr vt d
+load net {slc(vin)#5.itm(3)} -attr vt d
+load net {slc(vin)#5.itm(4)} -attr vt d
+load net {slc(vin)#5.itm(5)} -attr vt d
+load net {slc(vin)#5.itm(6)} -attr vt d
+load netBundle {slc(vin)#5.itm} 7 {slc(vin)#5.itm(0)} {slc(vin)#5.itm(1)} {slc(vin)#5.itm(2)} {slc(vin)#5.itm(3)} {slc(vin)#5.itm(4)} {slc(vin)#5.itm(5)} {slc(vin)#5.itm(6)} -attr xrf 7914 -attr oid 18 -attr vt d -attr @path {/markers/markers:core/slc(vin)#5.itm}
+load net {mux#2.itm(0)} -attr vt d
+load net {mux#2.itm(1)} -attr vt d
+load net {mux#2.itm(2)} -attr vt d
+load net {mux#2.itm(3)} -attr vt d
+load net {mux#2.itm(4)} -attr vt d
+load net {mux#2.itm(5)} -attr vt d
+load net {mux#2.itm(6)} -attr vt d
+load net {mux#2.itm(7)} -attr vt d
+load netBundle {mux#2.itm} 8 {mux#2.itm(0)} {mux#2.itm(1)} {mux#2.itm(2)} {mux#2.itm(3)} {mux#2.itm(4)} {mux#2.itm(5)} {mux#2.itm(6)} {mux#2.itm(7)} -attr xrf 7915 -attr oid 19 -attr vt d -attr @path {/markers/markers:core/mux#2.itm}
+load net {else:and.itm(0)} -attr vt d
+load net {else:and.itm(1)} -attr vt d
+load net {else:and.itm(2)} -attr vt d
+load net {else:and.itm(3)} -attr vt d
+load net {else:and.itm(4)} -attr vt d
+load net {else:and.itm(5)} -attr vt d
+load net {else:and.itm(6)} -attr vt d
+load net {else:and.itm(7)} -attr vt d
+load netBundle {else:and.itm} 8 {else:and.itm(0)} {else:and.itm(1)} {else:and.itm(2)} {else:and.itm(3)} {else:and.itm(4)} {else:and.itm(5)} {else:and.itm(6)} {else:and.itm(7)} -attr xrf 7916 -attr oid 20 -attr vt d -attr @path {/markers/markers:core/else:and.itm}
+load net {slc(vin)#33.itm(0)} -attr vt d
+load net {slc(vin)#33.itm(1)} -attr vt d
+load net {slc(vin)#33.itm(2)} -attr vt d
+load net {slc(vin)#33.itm(3)} -attr vt d
+load net {slc(vin)#33.itm(4)} -attr vt d
+load net {slc(vin)#33.itm(5)} -attr vt d
+load net {slc(vin)#33.itm(6)} -attr vt d
+load net {slc(vin)#33.itm(7)} -attr vt d
+load netBundle {slc(vin)#33.itm} 8 {slc(vin)#33.itm(0)} {slc(vin)#33.itm(1)} {slc(vin)#33.itm(2)} {slc(vin)#33.itm(3)} {slc(vin)#33.itm(4)} {slc(vin)#33.itm(5)} {slc(vin)#33.itm(6)} {slc(vin)#33.itm(7)} -attr xrf 7917 -attr oid 21 -attr vt d -attr @path {/markers/markers:core/slc(vin)#33.itm}
+load net {exs#2.itm(0)} -attr vt d
+load net {exs#2.itm(1)} -attr vt d
+load net {exs#2.itm(2)} -attr vt d
+load net {exs#2.itm(3)} -attr vt d
+load net {exs#2.itm(4)} -attr vt d
+load net {exs#2.itm(5)} -attr vt d
+load net {exs#2.itm(6)} -attr vt d
+load net {exs#2.itm(7)} -attr vt d
+load netBundle {exs#2.itm} 8 {exs#2.itm(0)} {exs#2.itm(1)} {exs#2.itm(2)} {exs#2.itm(3)} {exs#2.itm(4)} {exs#2.itm(5)} {exs#2.itm(6)} {exs#2.itm(7)} -attr xrf 7918 -attr oid 22 -attr vt d -attr @path {/markers/markers:core/exs#2.itm}
+load net {slc(vin)#30.itm(0)} -attr vt d
+load net {slc(vin)#30.itm(1)} -attr vt d
+load net {slc(vin)#30.itm(2)} -attr vt d
+load net {slc(vin)#30.itm(3)} -attr vt d
+load net {slc(vin)#30.itm(4)} -attr vt d
+load net {slc(vin)#30.itm(5)} -attr vt d
+load net {slc(vin)#30.itm(6)} -attr vt d
+load net {slc(vin)#30.itm(7)} -attr vt d
+load netBundle {slc(vin)#30.itm} 8 {slc(vin)#30.itm(0)} {slc(vin)#30.itm(1)} {slc(vin)#30.itm(2)} {slc(vin)#30.itm(3)} {slc(vin)#30.itm(4)} {slc(vin)#30.itm(5)} {slc(vin)#30.itm(6)} {slc(vin)#30.itm(7)} -attr xrf 7919 -attr oid 23 -attr vt d -attr @path {/markers/markers:core/slc(vin)#30.itm}
+load net {mux#1.itm(0)} -attr vt d
+load net {mux#1.itm(1)} -attr vt d
+load net {mux#1.itm(2)} -attr vt d
+load net {mux#1.itm(3)} -attr vt d
+load net {mux#1.itm(4)} -attr vt d
+load net {mux#1.itm(5)} -attr vt d
+load net {mux#1.itm(6)} -attr vt d
+load net {mux#1.itm(7)} -attr vt d
+load netBundle {mux#1.itm} 8 {mux#1.itm(0)} {mux#1.itm(1)} {mux#1.itm(2)} {mux#1.itm(3)} {mux#1.itm(4)} {mux#1.itm(5)} {mux#1.itm(6)} {mux#1.itm(7)} -attr xrf 7920 -attr oid 24 -attr vt d -attr @path {/markers/markers:core/mux#1.itm}
+load net {else:and#1.itm(0)} -attr vt d
+load net {else:and#1.itm(1)} -attr vt d
+load net {else:and#1.itm(2)} -attr vt d
+load net {else:and#1.itm(3)} -attr vt d
+load net {else:and#1.itm(4)} -attr vt d
+load net {else:and#1.itm(5)} -attr vt d
+load net {else:and#1.itm(6)} -attr vt d
+load net {else:and#1.itm(7)} -attr vt d
+load netBundle {else:and#1.itm} 8 {else:and#1.itm(0)} {else:and#1.itm(1)} {else:and#1.itm(2)} {else:and#1.itm(3)} {else:and#1.itm(4)} {else:and#1.itm(5)} {else:and#1.itm(6)} {else:and#1.itm(7)} -attr xrf 7921 -attr oid 25 -attr vt d -attr @path {/markers/markers:core/else:and#1.itm}
+load net {slc(vin)#34.itm(0)} -attr vt d
+load net {slc(vin)#34.itm(1)} -attr vt d
+load net {slc(vin)#34.itm(2)} -attr vt d
+load net {slc(vin)#34.itm(3)} -attr vt d
+load net {slc(vin)#34.itm(4)} -attr vt d
+load net {slc(vin)#34.itm(5)} -attr vt d
+load net {slc(vin)#34.itm(6)} -attr vt d
+load net {slc(vin)#34.itm(7)} -attr vt d
+load netBundle {slc(vin)#34.itm} 8 {slc(vin)#34.itm(0)} {slc(vin)#34.itm(1)} {slc(vin)#34.itm(2)} {slc(vin)#34.itm(3)} {slc(vin)#34.itm(4)} {slc(vin)#34.itm(5)} {slc(vin)#34.itm(6)} {slc(vin)#34.itm(7)} -attr xrf 7922 -attr oid 26 -attr vt d -attr @path {/markers/markers:core/slc(vin)#34.itm}
+load net {exs#1.itm(0)} -attr vt d
+load net {exs#1.itm(1)} -attr vt d
+load net {exs#1.itm(2)} -attr vt d
+load net {exs#1.itm(3)} -attr vt d
+load net {exs#1.itm(4)} -attr vt d
+load net {exs#1.itm(5)} -attr vt d
+load net {exs#1.itm(6)} -attr vt d
+load net {exs#1.itm(7)} -attr vt d
+load netBundle {exs#1.itm} 8 {exs#1.itm(0)} {exs#1.itm(1)} {exs#1.itm(2)} {exs#1.itm(3)} {exs#1.itm(4)} {exs#1.itm(5)} {exs#1.itm(6)} {exs#1.itm(7)} -attr xrf 7923 -attr oid 27 -attr vt d -attr @path {/markers/markers:core/exs#1.itm}
+load net {slc(vin)#31.itm(0)} -attr vt d
+load net {slc(vin)#31.itm(1)} -attr vt d
+load net {slc(vin)#31.itm(2)} -attr vt d
+load net {slc(vin)#31.itm(3)} -attr vt d
+load net {slc(vin)#31.itm(4)} -attr vt d
+load net {slc(vin)#31.itm(5)} -attr vt d
+load net {slc(vin)#31.itm(6)} -attr vt d
+load net {slc(vin)#31.itm(7)} -attr vt d
+load netBundle {slc(vin)#31.itm} 8 {slc(vin)#31.itm(0)} {slc(vin)#31.itm(1)} {slc(vin)#31.itm(2)} {slc(vin)#31.itm(3)} {slc(vin)#31.itm(4)} {slc(vin)#31.itm(5)} {slc(vin)#31.itm(6)} {slc(vin)#31.itm(7)} -attr xrf 7924 -attr oid 28 -attr vt d -attr @path {/markers/markers:core/slc(vin)#31.itm}
+load net {mux.itm(0)} -attr vt d
+load net {mux.itm(1)} -attr vt d
+load net {mux.itm(2)} -attr vt d
+load net {mux.itm(3)} -attr vt d
+load net {mux.itm(4)} -attr vt d
+load net {mux.itm(5)} -attr vt d
+load net {mux.itm(6)} -attr vt d
+load net {mux.itm(7)} -attr vt d
+load netBundle {mux.itm} 8 {mux.itm(0)} {mux.itm(1)} {mux.itm(2)} {mux.itm(3)} {mux.itm(4)} {mux.itm(5)} {mux.itm(6)} {mux.itm(7)} -attr xrf 7925 -attr oid 29 -attr vt d -attr @path {/markers/markers:core/mux.itm}
+load net {else:and#2.itm(0)} -attr vt d
+load net {else:and#2.itm(1)} -attr vt d
+load net {else:and#2.itm(2)} -attr vt d
+load net {else:and#2.itm(3)} -attr vt d
+load net {else:and#2.itm(4)} -attr vt d
+load net {else:and#2.itm(5)} -attr vt d
+load net {else:and#2.itm(6)} -attr vt d
+load net {else:and#2.itm(7)} -attr vt d
+load netBundle {else:and#2.itm} 8 {else:and#2.itm(0)} {else:and#2.itm(1)} {else:and#2.itm(2)} {else:and#2.itm(3)} {else:and#2.itm(4)} {else:and#2.itm(5)} {else:and#2.itm(6)} {else:and#2.itm(7)} -attr xrf 7926 -attr oid 30 -attr vt d -attr @path {/markers/markers:core/else:and#2.itm}
+load net {slc(vin)#35.itm(0)} -attr vt d
+load net {slc(vin)#35.itm(1)} -attr vt d
+load net {slc(vin)#35.itm(2)} -attr vt d
+load net {slc(vin)#35.itm(3)} -attr vt d
+load net {slc(vin)#35.itm(4)} -attr vt d
+load net {slc(vin)#35.itm(5)} -attr vt d
+load net {slc(vin)#35.itm(6)} -attr vt d
+load net {slc(vin)#35.itm(7)} -attr vt d
+load netBundle {slc(vin)#35.itm} 8 {slc(vin)#35.itm(0)} {slc(vin)#35.itm(1)} {slc(vin)#35.itm(2)} {slc(vin)#35.itm(3)} {slc(vin)#35.itm(4)} {slc(vin)#35.itm(5)} {slc(vin)#35.itm(6)} {slc(vin)#35.itm(7)} -attr xrf 7927 -attr oid 31 -attr vt d -attr @path {/markers/markers:core/slc(vin)#35.itm}
+load net {exs.itm(0)} -attr vt d
+load net {exs.itm(1)} -attr vt d
+load net {exs.itm(2)} -attr vt d
+load net {exs.itm(3)} -attr vt d
+load net {exs.itm(4)} -attr vt d
+load net {exs.itm(5)} -attr vt d
+load net {exs.itm(6)} -attr vt d
+load net {exs.itm(7)} -attr vt d
+load netBundle {exs.itm} 8 {exs.itm(0)} {exs.itm(1)} {exs.itm(2)} {exs.itm(3)} {exs.itm(4)} {exs.itm(5)} {exs.itm(6)} {exs.itm(7)} -attr xrf 7928 -attr oid 32 -attr vt d -attr @path {/markers/markers:core/exs.itm}
+load net {slc(vin)#32.itm(0)} -attr vt d
+load net {slc(vin)#32.itm(1)} -attr vt d
+load net {slc(vin)#32.itm(2)} -attr vt d
+load net {slc(vin)#32.itm(3)} -attr vt d
+load net {slc(vin)#32.itm(4)} -attr vt d
+load net {slc(vin)#32.itm(5)} -attr vt d
+load net {slc(vin)#32.itm(6)} -attr vt d
+load net {slc(vin)#32.itm(7)} -attr vt d
+load netBundle {slc(vin)#32.itm} 8 {slc(vin)#32.itm(0)} {slc(vin)#32.itm(1)} {slc(vin)#32.itm(2)} {slc(vin)#32.itm(3)} {slc(vin)#32.itm(4)} {slc(vin)#32.itm(5)} {slc(vin)#32.itm(6)} {slc(vin)#32.itm(7)} -attr xrf 7929 -attr oid 33 -attr vt d -attr @path {/markers/markers:core/slc(vin)#32.itm}
+load net {conc#23.itm(0)} -attr vt d
+load net {conc#23.itm(1)} -attr vt d
+load net {conc#23.itm(2)} -attr vt d
+load net {conc#23.itm(3)} -attr vt d
+load net {conc#23.itm(4)} -attr vt d
+load net {conc#23.itm(5)} -attr vt d
+load net {conc#23.itm(6)} -attr vt d
+load net {conc#23.itm(7)} -attr vt d
+load netBundle {conc#23.itm} 8 {conc#23.itm(0)} {conc#23.itm(1)} {conc#23.itm(2)} {conc#23.itm(3)} {conc#23.itm(4)} {conc#23.itm(5)} {conc#23.itm(6)} {conc#23.itm(7)} -attr xrf 7930 -attr oid 34 -attr vt d -attr @path {/markers/markers:core/conc#23.itm}
+load net {else:aif#2:aif:not#1.itm(0)} -attr vt d
+load net {else:aif#2:aif:not#1.itm(1)} -attr vt d
+load net {else:aif#2:aif:not#1.itm(2)} -attr vt d
+load net {else:aif#2:aif:not#1.itm(3)} -attr vt d
+load net {else:aif#2:aif:not#1.itm(4)} -attr vt d
+load net {else:aif#2:aif:not#1.itm(5)} -attr vt d
+load net {else:aif#2:aif:not#1.itm(6)} -attr vt d
+load netBundle {else:aif#2:aif:not#1.itm} 7 {else:aif#2:aif:not#1.itm(0)} {else:aif#2:aif:not#1.itm(1)} {else:aif#2:aif:not#1.itm(2)} {else:aif#2:aif:not#1.itm(3)} {else:aif#2:aif:not#1.itm(4)} {else:aif#2:aif:not#1.itm(5)} {else:aif#2:aif:not#1.itm(6)} -attr xrf 7931 -attr oid 35 -attr vt d -attr @path {/markers/markers:core/else:aif#2:aif:not#1.itm}
+load net {slc(vin)#20.itm(0)} -attr vt d
+load net {slc(vin)#20.itm(1)} -attr vt d
+load net {slc(vin)#20.itm(2)} -attr vt d
+load net {slc(vin)#20.itm(3)} -attr vt d
+load net {slc(vin)#20.itm(4)} -attr vt d
+load net {slc(vin)#20.itm(5)} -attr vt d
+load net {slc(vin)#20.itm(6)} -attr vt d
+load netBundle {slc(vin)#20.itm} 7 {slc(vin)#20.itm(0)} {slc(vin)#20.itm(1)} {slc(vin)#20.itm(2)} {slc(vin)#20.itm(3)} {slc(vin)#20.itm(4)} {slc(vin)#20.itm(5)} {slc(vin)#20.itm(6)} -attr xrf 7932 -attr oid 36 -attr vt d -attr @path {/markers/markers:core/slc(vin)#20.itm}
+load net {conc#24.itm(0)} -attr vt d
+load net {conc#24.itm(1)} -attr vt d
+load net {conc#24.itm(2)} -attr vt d
+load net {conc#24.itm(3)} -attr vt d
+load net {conc#24.itm(4)} -attr vt d
+load net {conc#24.itm(5)} -attr vt d
+load net {conc#24.itm(6)} -attr vt d
+load net {conc#24.itm(7)} -attr vt d
+load net {conc#24.itm(8)} -attr vt d
+load netBundle {conc#24.itm} 9 {conc#24.itm(0)} {conc#24.itm(1)} {conc#24.itm(2)} {conc#24.itm(3)} {conc#24.itm(4)} {conc#24.itm(5)} {conc#24.itm(6)} {conc#24.itm(7)} {conc#24.itm(8)} -attr xrf 7933 -attr oid 37 -attr vt d -attr @path {/markers/markers:core/conc#24.itm}
+load net {aif#5:aif:not#1.itm(0)} -attr vt d
+load net {aif#5:aif:not#1.itm(1)} -attr vt d
+load net {aif#5:aif:not#1.itm(2)} -attr vt d
+load net {aif#5:aif:not#1.itm(3)} -attr vt d
+load net {aif#5:aif:not#1.itm(4)} -attr vt d
+load net {aif#5:aif:not#1.itm(5)} -attr vt d
+load net {aif#5:aif:not#1.itm(6)} -attr vt d
+load net {aif#5:aif:not#1.itm(7)} -attr vt d
+load netBundle {aif#5:aif:not#1.itm} 8 {aif#5:aif:not#1.itm(0)} {aif#5:aif:not#1.itm(1)} {aif#5:aif:not#1.itm(2)} {aif#5:aif:not#1.itm(3)} {aif#5:aif:not#1.itm(4)} {aif#5:aif:not#1.itm(5)} {aif#5:aif:not#1.itm(6)} {aif#5:aif:not#1.itm(7)} -attr xrf 7934 -attr oid 38 -attr vt d -attr @path {/markers/markers:core/aif#5:aif:not#1.itm}
+load net {slc(vin)#25.itm(0)} -attr vt d
+load net {slc(vin)#25.itm(1)} -attr vt d
+load net {slc(vin)#25.itm(2)} -attr vt d
+load net {slc(vin)#25.itm(3)} -attr vt d
+load net {slc(vin)#25.itm(4)} -attr vt d
+load net {slc(vin)#25.itm(5)} -attr vt d
+load net {slc(vin)#25.itm(6)} -attr vt d
+load net {slc(vin)#25.itm(7)} -attr vt d
+load netBundle {slc(vin)#25.itm} 8 {slc(vin)#25.itm(0)} {slc(vin)#25.itm(1)} {slc(vin)#25.itm(2)} {slc(vin)#25.itm(3)} {slc(vin)#25.itm(4)} {slc(vin)#25.itm(5)} {slc(vin)#25.itm(6)} {slc(vin)#25.itm(7)} -attr xrf 7935 -attr oid 39 -attr vt d -attr @path {/markers/markers:core/slc(vin)#25.itm}
+load net {aif#1:aif:not#1.itm(0)} -attr vt d
+load net {aif#1:aif:not#1.itm(1)} -attr vt d
+load net {aif#1:aif:not#1.itm(2)} -attr vt d
+load net {aif#1:aif:not#1.itm(3)} -attr vt d
+load net {aif#1:aif:not#1.itm(4)} -attr vt d
+load net {aif#1:aif:not#1.itm(5)} -attr vt d
+load net {aif#1:aif:not#1.itm(6)} -attr vt d
+load netBundle {aif#1:aif:not#1.itm} 7 {aif#1:aif:not#1.itm(0)} {aif#1:aif:not#1.itm(1)} {aif#1:aif:not#1.itm(2)} {aif#1:aif:not#1.itm(3)} {aif#1:aif:not#1.itm(4)} {aif#1:aif:not#1.itm(5)} {aif#1:aif:not#1.itm(6)} -attr xrf 7936 -attr oid 40 -attr vt d -attr @path {/markers/markers:core/aif#1:aif:not#1.itm}
+load net {slc(vin)#6.itm(0)} -attr vt d
+load net {slc(vin)#6.itm(1)} -attr vt d
+load net {slc(vin)#6.itm(2)} -attr vt d
+load net {slc(vin)#6.itm(3)} -attr vt d
+load net {slc(vin)#6.itm(4)} -attr vt d
+load net {slc(vin)#6.itm(5)} -attr vt d
+load net {slc(vin)#6.itm(6)} -attr vt d
+load netBundle {slc(vin)#6.itm} 7 {slc(vin)#6.itm(0)} {slc(vin)#6.itm(1)} {slc(vin)#6.itm(2)} {slc(vin)#6.itm(3)} {slc(vin)#6.itm(4)} {slc(vin)#6.itm(5)} {slc(vin)#6.itm(6)} -attr xrf 7937 -attr oid 41 -attr vt d -attr @path {/markers/markers:core/slc(vin)#6.itm}
+load net {conc#25.itm(0)} -attr vt d
+load net {conc#25.itm(1)} -attr vt d
+load net {conc#25.itm(2)} -attr vt d
+load net {conc#25.itm(3)} -attr vt d
+load net {conc#25.itm(4)} -attr vt d
+load net {conc#25.itm(5)} -attr vt d
+load net {conc#25.itm(6)} -attr vt d
+load net {conc#25.itm(7)} -attr vt d
+load netBundle {conc#25.itm} 8 {conc#25.itm(0)} {conc#25.itm(1)} {conc#25.itm(2)} {conc#25.itm(3)} {conc#25.itm(4)} {conc#25.itm(5)} {conc#25.itm(6)} {conc#25.itm(7)} -attr xrf 7938 -attr oid 42 -attr vt d -attr @path {/markers/markers:core/conc#25.itm}
+load net {aif:not#1.itm(0)} -attr vt d
+load net {aif:not#1.itm(1)} -attr vt d
+load net {aif:not#1.itm(2)} -attr vt d
+load net {aif:not#1.itm(3)} -attr vt d
+load net {aif:not#1.itm(4)} -attr vt d
+load net {aif:not#1.itm(5)} -attr vt d
+load net {aif:not#1.itm(6)} -attr vt d
+load netBundle {aif:not#1.itm} 7 {aif:not#1.itm(0)} {aif:not#1.itm(1)} {aif:not#1.itm(2)} {aif:not#1.itm(3)} {aif:not#1.itm(4)} {aif:not#1.itm(5)} {aif:not#1.itm(6)} -attr xrf 7939 -attr oid 43 -attr vt d -attr @path {/markers/markers:core/aif:not#1.itm}
+load net {slc(vin)#29.itm(0)} -attr vt d
+load net {slc(vin)#29.itm(1)} -attr vt d
+load net {slc(vin)#29.itm(2)} -attr vt d
+load net {slc(vin)#29.itm(3)} -attr vt d
+load net {slc(vin)#29.itm(4)} -attr vt d
+load net {slc(vin)#29.itm(5)} -attr vt d
+load net {slc(vin)#29.itm(6)} -attr vt d
+load netBundle {slc(vin)#29.itm} 7 {slc(vin)#29.itm(0)} {slc(vin)#29.itm(1)} {slc(vin)#29.itm(2)} {slc(vin)#29.itm(3)} {slc(vin)#29.itm(4)} {slc(vin)#29.itm(5)} {slc(vin)#29.itm(6)} -attr xrf 7940 -attr oid 44 -attr vt d -attr @path {/markers/markers:core/slc(vin)#29.itm}
+load net {slc(vin)#3.itm(0)} -attr vt d
+load net {slc(vin)#3.itm(1)} -attr vt d
+load net {slc(vin)#3.itm(2)} -attr vt d
+load net {slc(vin)#3.itm(3)} -attr vt d
+load netBundle {slc(vin)#3.itm} 4 {slc(vin)#3.itm(0)} {slc(vin)#3.itm(1)} {slc(vin)#3.itm(2)} {slc(vin)#3.itm(3)} -attr xrf 7941 -attr oid 45 -attr vt d -attr @path {/markers/markers:core/slc(vin)#3.itm}
+load net {slc(vout:rsc:mgc_out_stdreg.d).itm(0)} -attr vt d
+load net {slc(vout:rsc:mgc_out_stdreg.d).itm(1)} -attr vt d
+load net {slc(vout:rsc:mgc_out_stdreg.d).itm(2)} -attr vt d
+load net {slc(vout:rsc:mgc_out_stdreg.d).itm(3)} -attr vt d
+load net {slc(vout:rsc:mgc_out_stdreg.d).itm(4)} -attr vt d
+load net {slc(vout:rsc:mgc_out_stdreg.d).itm(5)} -attr vt d
+load net {slc(vout:rsc:mgc_out_stdreg.d).itm(6)} -attr vt d
+load net {slc(vout:rsc:mgc_out_stdreg.d).itm(7)} -attr vt d
+load netBundle {slc(vout:rsc:mgc_out_stdreg.d).itm} 8 {slc(vout:rsc:mgc_out_stdreg.d).itm(0)} {slc(vout:rsc:mgc_out_stdreg.d).itm(1)} {slc(vout:rsc:mgc_out_stdreg.d).itm(2)} {slc(vout:rsc:mgc_out_stdreg.d).itm(3)} {slc(vout:rsc:mgc_out_stdreg.d).itm(4)} {slc(vout:rsc:mgc_out_stdreg.d).itm(5)} {slc(vout:rsc:mgc_out_stdreg.d).itm(6)} {slc(vout:rsc:mgc_out_stdreg.d).itm(7)} -attr xrf 7942 -attr oid 46 -attr vt d -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d).itm}
+load net {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(0)} -attr vt d
+load net {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(1)} -attr vt d
+load net {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(2)} -attr vt d
+load net {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(3)} -attr vt d
+load net {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(4)} -attr vt d
+load net {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(5)} -attr vt d
+load net {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(6)} -attr vt d
+load net {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(7)} -attr vt d
+load netBundle {slc(vout:rsc:mgc_out_stdreg.d)#1.itm} 8 {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(0)} {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(1)} {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(2)} {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(3)} {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(4)} {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(5)} {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(6)} {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(7)} -attr xrf 7943 -attr oid 47 -attr vt d -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d)#1.itm}
+load net {slc(vout:rsc:mgc_out_stdreg.d)#2.itm(0)} -attr vt d
+load net {slc(vout:rsc:mgc_out_stdreg.d)#2.itm(1)} -attr vt d
+load net {slc(vout:rsc:mgc_out_stdreg.d)#2.itm(2)} -attr vt d
+load net {slc(vout:rsc:mgc_out_stdreg.d)#2.itm(3)} -attr vt d
+load net {slc(vout:rsc:mgc_out_stdreg.d)#2.itm(4)} -attr vt d
+load net {slc(vout:rsc:mgc_out_stdreg.d)#2.itm(5)} -attr vt d
+load net {slc(vout:rsc:mgc_out_stdreg.d)#2.itm(6)} -attr vt d
+load net {slc(vout:rsc:mgc_out_stdreg.d)#2.itm(7)} -attr vt d
+load netBundle {slc(vout:rsc:mgc_out_stdreg.d)#2.itm} 8 {slc(vout:rsc:mgc_out_stdreg.d)#2.itm(0)} {slc(vout:rsc:mgc_out_stdreg.d)#2.itm(1)} {slc(vout:rsc:mgc_out_stdreg.d)#2.itm(2)} {slc(vout:rsc:mgc_out_stdreg.d)#2.itm(3)} {slc(vout:rsc:mgc_out_stdreg.d)#2.itm(4)} {slc(vout:rsc:mgc_out_stdreg.d)#2.itm(5)} {slc(vout:rsc:mgc_out_stdreg.d)#2.itm(6)} {slc(vout:rsc:mgc_out_stdreg.d)#2.itm(7)} -attr xrf 7944 -attr oid 48 -attr vt d -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d)#2.itm}
+load net {vin(0)} -attr vt d
+load net {vin(1)} -attr vt d
+load net {vin(2)} -attr vt d
+load net {vin(3)} -attr vt d
+load net {vin(4)} -attr vt d
+load net {vin(5)} -attr vt d
+load net {vin(6)} -attr vt d
+load net {vin(7)} -attr vt d
+load net {vin(8)} -attr vt d
+load net {vin(9)} -attr vt d
+load net {vin(10)} -attr vt d
+load net {vin(11)} -attr vt d
+load net {vin(12)} -attr vt d
+load net {vin(13)} -attr vt d
+load net {vin(14)} -attr vt d
+load net {vin(15)} -attr vt d
+load net {vin(16)} -attr vt d
+load net {vin(17)} -attr vt d
+load net {vin(18)} -attr vt d
+load net {vin(19)} -attr vt d
+load net {vin(20)} -attr vt d
+load net {vin(21)} -attr vt d
+load net {vin(22)} -attr vt d
+load net {vin(23)} -attr vt d
+load net {vin(24)} -attr vt d
+load net {vin(25)} -attr vt d
+load net {vin(26)} -attr vt d
+load net {vin(27)} -attr vt d
+load net {vin(28)} -attr vt d
+load net {vin(29)} -attr vt d
+load net {vin(30)} -attr vt d
+load net {vin(31)} -attr vt d
+load net {vin(32)} -attr vt d
+load net {vin(33)} -attr vt d
+load net {vin(34)} -attr vt d
+load net {vin(35)} -attr vt d
+load net {vin(36)} -attr vt d
+load net {vin(37)} -attr vt d
+load net {vin(38)} -attr vt d
+load net {vin(39)} -attr vt d
+load net {vin(40)} -attr vt d
+load net {vin(41)} -attr vt d
+load net {vin(42)} -attr vt d
+load net {vin(43)} -attr vt d
+load net {vin(44)} -attr vt d
+load net {vin(45)} -attr vt d
+load net {vin(46)} -attr vt d
+load net {vin(47)} -attr vt d
+load net {vin(48)} -attr vt d
+load net {vin(49)} -attr vt d
+load net {vin(50)} -attr vt d
+load net {vin(51)} -attr vt d
+load net {vin(52)} -attr vt d
+load net {vin(53)} -attr vt d
+load net {vin(54)} -attr vt d
+load net {vin(55)} -attr vt d
+load net {vin(56)} -attr vt d
+load net {vin(57)} -attr vt d
+load net {vin(58)} -attr vt d
+load net {vin(59)} -attr vt d
+load net {vin(60)} -attr vt d
+load net {vin(61)} -attr vt d
+load net {vin(62)} -attr vt d
+load net {vin(63)} -attr vt d
+load net {vin(64)} -attr vt d
+load net {vin(65)} -attr vt d
+load net {vin(66)} -attr vt d
+load net {vin(67)} -attr vt d
+load net {vin(68)} -attr vt d
+load net {vin(69)} -attr vt d
+load net {vin(70)} -attr vt d
+load net {vin(71)} -attr vt d
+load net {vin(72)} -attr vt d
+load net {vin(73)} -attr vt d
+load net {vin(74)} -attr vt d
+load net {vin(75)} -attr vt d
+load net {vin(76)} -attr vt d
+load net {vin(77)} -attr vt d
+load net {vin(78)} -attr vt d
+load net {vin(79)} -attr vt d
+load net {vin(80)} -attr vt d
+load net {vin(81)} -attr vt d
+load net {vin(82)} -attr vt d
+load net {vin(83)} -attr vt d
+load net {vin(84)} -attr vt d
+load net {vin(85)} -attr vt d
+load net {vin(86)} -attr vt d
+load net {vin(87)} -attr vt d
+load net {vin(88)} -attr vt d
+load net {vin(89)} -attr vt d
+load netBundle {vin} 90 {vin(0)} {vin(1)} {vin(2)} {vin(3)} {vin(4)} {vin(5)} {vin(6)} {vin(7)} {vin(8)} {vin(9)} {vin(10)} {vin(11)} {vin(12)} {vin(13)} {vin(14)} {vin(15)} {vin(16)} {vin(17)} {vin(18)} {vin(19)} {vin(20)} {vin(21)} {vin(22)} {vin(23)} {vin(24)} {vin(25)} {vin(26)} {vin(27)} {vin(28)} {vin(29)} {vin(30)} {vin(31)} {vin(32)} {vin(33)} {vin(34)} {vin(35)} {vin(36)} {vin(37)} {vin(38)} {vin(39)} {vin(40)} {vin(41)} {vin(42)} {vin(43)} {vin(44)} {vin(45)} {vin(46)} {vin(47)} {vin(48)} {vin(49)} {vin(50)} {vin(51)} {vin(52)} {vin(53)} {vin(54)} {vin(55)} {vin(56)} {vin(57)} {vin(58)} {vin(59)} {vin(60)} {vin(61)} {vin(62)} {vin(63)} {vin(64)} {vin(65)} {vin(66)} {vin(67)} {vin(68)} {vin(69)} {vin(70)} {vin(71)} {vin(72)} {vin(73)} {vin(74)} {vin(75)} {vin(76)} {vin(77)} {vin(78)} {vin(79)} {vin(80)} {vin(81)} {vin(82)} {vin(83)} {vin(84)} {vin(85)} {vin(86)} {vin(87)} {vin(88)} {vin(89)} -attr xrf 7945 -attr oid 49 -attr vt d -attr @path {/markers/markers:core/vin}
+load net {vin(0)} -port {vin(0)} -attr vt d
+load net {vin(1)} -port {vin(1)} -attr vt d
+load net {vin(2)} -port {vin(2)} -attr vt d
+load net {vin(3)} -port {vin(3)} -attr vt d
+load net {vin(4)} -port {vin(4)} -attr vt d
+load net {vin(5)} -port {vin(5)} -attr vt d
+load net {vin(6)} -port {vin(6)} -attr vt d
+load net {vin(7)} -port {vin(7)} -attr vt d
+load net {vin(8)} -port {vin(8)} -attr vt d
+load net {vin(9)} -port {vin(9)} -attr vt d
+load net {vin(10)} -port {vin(10)} -attr vt d
+load net {vin(11)} -port {vin(11)} -attr vt d
+load net {vin(12)} -port {vin(12)} -attr vt d
+load net {vin(13)} -port {vin(13)} -attr vt d
+load net {vin(14)} -port {vin(14)} -attr vt d
+load net {vin(15)} -port {vin(15)} -attr vt d
+load net {vin(16)} -port {vin(16)} -attr vt d
+load net {vin(17)} -port {vin(17)} -attr vt d
+load net {vin(18)} -port {vin(18)} -attr vt d
+load net {vin(19)} -port {vin(19)} -attr vt d
+load net {vin(20)} -port {vin(20)} -attr vt d
+load net {vin(21)} -port {vin(21)} -attr vt d
+load net {vin(22)} -port {vin(22)} -attr vt d
+load net {vin(23)} -port {vin(23)} -attr vt d
+load net {vin(24)} -port {vin(24)} -attr vt d
+load net {vin(25)} -port {vin(25)} -attr vt d
+load net {vin(26)} -port {vin(26)} -attr vt d
+load net {vin(27)} -port {vin(27)} -attr vt d
+load net {vin(28)} -port {vin(28)} -attr vt d
+load net {vin(29)} -port {vin(29)} -attr vt d
+load net {vin(30)} -port {vin(30)} -attr vt d
+load net {vin(31)} -port {vin(31)} -attr vt d
+load net {vin(32)} -port {vin(32)} -attr vt d
+load net {vin(33)} -port {vin(33)} -attr vt d
+load net {vin(34)} -port {vin(34)} -attr vt d
+load net {vin(35)} -port {vin(35)} -attr vt d
+load net {vin(36)} -port {vin(36)} -attr vt d
+load net {vin(37)} -port {vin(37)} -attr vt d
+load net {vin(38)} -port {vin(38)} -attr vt d
+load net {vin(39)} -port {vin(39)} -attr vt d
+load net {vin(40)} -port {vin(40)} -attr vt d
+load net {vin(41)} -port {vin(41)} -attr vt d
+load net {vin(42)} -port {vin(42)} -attr vt d
+load net {vin(43)} -port {vin(43)} -attr vt d
+load net {vin(44)} -port {vin(44)} -attr vt d
+load net {vin(45)} -port {vin(45)} -attr vt d
+load net {vin(46)} -port {vin(46)} -attr vt d
+load net {vin(47)} -port {vin(47)} -attr vt d
+load net {vin(48)} -port {vin(48)} -attr vt d
+load net {vin(49)} -port {vin(49)} -attr vt d
+load net {vin(50)} -port {vin(50)} -attr vt d
+load net {vin(51)} -port {vin(51)} -attr vt d
+load net {vin(52)} -port {vin(52)} -attr vt d
+load net {vin(53)} -port {vin(53)} -attr vt d
+load net {vin(54)} -port {vin(54)} -attr vt d
+load net {vin(55)} -port {vin(55)} -attr vt d
+load net {vin(56)} -port {vin(56)} -attr vt d
+load net {vin(57)} -port {vin(57)} -attr vt d
+load net {vin(58)} -port {vin(58)} -attr vt d
+load net {vin(59)} -port {vin(59)} -attr vt d
+load net {vin(60)} -port {vin(60)} -attr vt d
+load net {vin(61)} -port {vin(61)} -attr vt d
+load net {vin(62)} -port {vin(62)} -attr vt d
+load net {vin(63)} -port {vin(63)} -attr vt d
+load net {vin(64)} -port {vin(64)} -attr vt d
+load net {vin(65)} -port {vin(65)} -attr vt d
+load net {vin(66)} -port {vin(66)} -attr vt d
+load net {vin(67)} -port {vin(67)} -attr vt d
+load net {vin(68)} -port {vin(68)} -attr vt d
+load net {vin(69)} -port {vin(69)} -attr vt d
+load net {vin(70)} -port {vin(70)} -attr vt d
+load net {vin(71)} -port {vin(71)} -attr vt d
+load net {vin(72)} -port {vin(72)} -attr vt d
+load net {vin(73)} -port {vin(73)} -attr vt d
+load net {vin(74)} -port {vin(74)} -attr vt d
+load net {vin(75)} -port {vin(75)} -attr vt d
+load net {vin(76)} -port {vin(76)} -attr vt d
+load net {vin(77)} -port {vin(77)} -attr vt d
+load net {vin(78)} -port {vin(78)} -attr vt d
+load net {vin(79)} -port {vin(79)} -attr vt d
+load net {vin(80)} -port {vin(80)} -attr vt d
+load net {vin(81)} -port {vin(81)} -attr vt d
+load net {vin(82)} -port {vin(82)} -attr vt d
+load net {vin(83)} -port {vin(83)} -attr vt d
+load net {vin(84)} -port {vin(84)} -attr vt d
+load net {vin(85)} -port {vin(85)} -attr vt d
+load net {vin(86)} -port {vin(86)} -attr vt d
+load net {vin(87)} -port {vin(87)} -attr vt d
+load net {vin(88)} -port {vin(88)} -attr vt d
+load net {vin(89)} -port {vin(89)} -attr vt d
+load netBundle {vin} 90 {vin(0)} {vin(1)} {vin(2)} {vin(3)} {vin(4)} {vin(5)} {vin(6)} {vin(7)} {vin(8)} {vin(9)} {vin(10)} {vin(11)} {vin(12)} {vin(13)} {vin(14)} {vin(15)} {vin(16)} {vin(17)} {vin(18)} {vin(19)} {vin(20)} {vin(21)} {vin(22)} {vin(23)} {vin(24)} {vin(25)} {vin(26)} {vin(27)} {vin(28)} {vin(29)} {vin(30)} {vin(31)} {vin(32)} {vin(33)} {vin(34)} {vin(35)} {vin(36)} {vin(37)} {vin(38)} {vin(39)} {vin(40)} {vin(41)} {vin(42)} {vin(43)} {vin(44)} {vin(45)} {vin(46)} {vin(47)} {vin(48)} {vin(49)} {vin(50)} {vin(51)} {vin(52)} {vin(53)} {vin(54)} {vin(55)} {vin(56)} {vin(57)} {vin(58)} {vin(59)} {vin(60)} {vin(61)} {vin(62)} {vin(63)} {vin(64)} {vin(65)} {vin(66)} {vin(67)} {vin(68)} {vin(69)} {vin(70)} {vin(71)} {vin(72)} {vin(73)} {vin(74)} {vin(75)} {vin(76)} {vin(77)} {vin(78)} {vin(79)} {vin(80)} {vin(81)} {vin(82)} {vin(83)} {vin(84)} {vin(85)} {vin(86)} {vin(87)} {vin(88)} {vin(89)} -attr xrf 7946 -attr oid 50 -attr vt d -attr @path {/markers/markers:core/vin}
+load net {clk} -attr xrf 7947 -attr oid 51
+load net {clk} -port {clk} -attr xrf 7948 -attr oid 52
+load net {en} -attr xrf 7949 -attr oid 53
+load net {en} -port {en} -attr xrf 7950 -attr oid 54
+load net {arst_n} -attr xrf 7951 -attr oid 55
+load net {arst_n} -port {arst_n} -attr xrf 7952 -attr oid 56
+load net {vout:rsc:mgc_out_stdreg.d(0)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(1)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(2)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(3)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(4)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(5)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(6)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(7)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(8)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(9)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(10)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(11)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(12)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(13)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(14)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(15)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(16)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(17)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(18)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(19)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(20)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(21)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(22)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(23)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(24)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(25)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(26)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(27)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(28)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(29)} -attr vt d
+load netBundle {vout:rsc:mgc_out_stdreg.d} 30 {vout:rsc:mgc_out_stdreg.d(0)} {vout:rsc:mgc_out_stdreg.d(1)} {vout:rsc:mgc_out_stdreg.d(2)} {vout:rsc:mgc_out_stdreg.d(3)} {vout:rsc:mgc_out_stdreg.d(4)} {vout:rsc:mgc_out_stdreg.d(5)} {vout:rsc:mgc_out_stdreg.d(6)} {vout:rsc:mgc_out_stdreg.d(7)} {vout:rsc:mgc_out_stdreg.d(8)} {vout:rsc:mgc_out_stdreg.d(9)} {vout:rsc:mgc_out_stdreg.d(10)} {vout:rsc:mgc_out_stdreg.d(11)} {vout:rsc:mgc_out_stdreg.d(12)} {vout:rsc:mgc_out_stdreg.d(13)} {vout:rsc:mgc_out_stdreg.d(14)} {vout:rsc:mgc_out_stdreg.d(15)} {vout:rsc:mgc_out_stdreg.d(16)} {vout:rsc:mgc_out_stdreg.d(17)} {vout:rsc:mgc_out_stdreg.d(18)} {vout:rsc:mgc_out_stdreg.d(19)} {vout:rsc:mgc_out_stdreg.d(20)} {vout:rsc:mgc_out_stdreg.d(21)} {vout:rsc:mgc_out_stdreg.d(22)} {vout:rsc:mgc_out_stdreg.d(23)} {vout:rsc:mgc_out_stdreg.d(24)} {vout:rsc:mgc_out_stdreg.d(25)} {vout:rsc:mgc_out_stdreg.d(26)} {vout:rsc:mgc_out_stdreg.d(27)} {vout:rsc:mgc_out_stdreg.d(28)} {vout:rsc:mgc_out_stdreg.d(29)} -attr xrf 7953 -attr oid 57 -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {GND} -port {vout:rsc:mgc_out_stdreg.d(0)} -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {GND} -port {vout:rsc:mgc_out_stdreg.d(1)} -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(0)} -port {vout:rsc:mgc_out_stdreg.d(2)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(1)} -port {vout:rsc:mgc_out_stdreg.d(3)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(2)} -port {vout:rsc:mgc_out_stdreg.d(4)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(3)} -port {vout:rsc:mgc_out_stdreg.d(5)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(4)} -port {vout:rsc:mgc_out_stdreg.d(6)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(5)} -port {vout:rsc:mgc_out_stdreg.d(7)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(6)} -port {vout:rsc:mgc_out_stdreg.d(8)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(7)} -port {vout:rsc:mgc_out_stdreg.d(9)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {GND} -port {vout:rsc:mgc_out_stdreg.d(10)} -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {GND} -port {vout:rsc:mgc_out_stdreg.d(11)} -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(0)} -port {vout:rsc:mgc_out_stdreg.d(12)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(1)} -port {vout:rsc:mgc_out_stdreg.d(13)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(2)} -port {vout:rsc:mgc_out_stdreg.d(14)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(3)} -port {vout:rsc:mgc_out_stdreg.d(15)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(4)} -port {vout:rsc:mgc_out_stdreg.d(16)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(5)} -port {vout:rsc:mgc_out_stdreg.d(17)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(6)} -port {vout:rsc:mgc_out_stdreg.d(18)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(7)} -port {vout:rsc:mgc_out_stdreg.d(19)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {GND} -port {vout:rsc:mgc_out_stdreg.d(20)} -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {GND} -port {vout:rsc:mgc_out_stdreg.d(21)} -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(0)} -port {vout:rsc:mgc_out_stdreg.d(22)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(1)} -port {vout:rsc:mgc_out_stdreg.d(23)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(2)} -port {vout:rsc:mgc_out_stdreg.d(24)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(3)} -port {vout:rsc:mgc_out_stdreg.d(25)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(4)} -port {vout:rsc:mgc_out_stdreg.d(26)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(5)} -port {vout:rsc:mgc_out_stdreg.d(27)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(6)} -port {vout:rsc:mgc_out_stdreg.d(28)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(7)} -port {vout:rsc:mgc_out_stdreg.d(29)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {else:if:acc#2(0)} -attr vt d
+load net {else:if:acc#2(1)} -attr vt d
+load net {else:if:acc#2(2)} -attr vt d
+load net {else:if:acc#2(3)} -attr vt d
+load net {else:if:acc#2(4)} -attr vt d
+load net {else:if:acc#2(5)} -attr vt d
+load net {else:if:acc#2(6)} -attr vt d
+load netBundle {else:if:acc#2} 7 {else:if:acc#2(0)} {else:if:acc#2(1)} {else:if:acc#2(2)} {else:if:acc#2(3)} {else:if:acc#2(4)} {else:if:acc#2(5)} {else:if:acc#2(6)} -attr xrf 7954 -attr oid 58 -attr vt d -attr @path {/markers/markers:core/else:if:acc#2}
+load net {if:acc#1(0)} -attr vt d
+load net {if:acc#1(1)} -attr vt d
+load net {if:acc#1(2)} -attr vt d
+load net {if:acc#1(3)} -attr vt d
+load net {if:acc#1(4)} -attr vt d
+load net {if:acc#1(5)} -attr vt d
+load net {if:acc#1(6)} -attr vt d
+load netBundle {if:acc#1} 7 {if:acc#1(0)} {if:acc#1(1)} {if:acc#1(2)} {if:acc#1(3)} {if:acc#1(4)} {if:acc#1(5)} {if:acc#1(6)} -attr xrf 7955 -attr oid 59 -attr vt d -attr @path {/markers/markers:core/if:acc#1}
+load inst "nor#2" "nor(3,1)" "INTERFACE" -attr @path {/markers/markers:core/nor#2} -attr area 1.055476 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_nor(1,3)"
+load net {if:acc.itm(4)} -pin  "nor#2" {A0(0)} -attr @path {/markers/markers:core/slc.itm}
+load net {if:acc#1(6)} -pin  "nor#2" {A1(0)} -attr @path {/markers/markers:core/slc(if:acc#1.itm).itm}
+load net {if:acc#2.itm(7)} -pin  "nor#2" {A2(0)} -attr @path {/markers/markers:core/aif#1:slc.itm}
+load net {nor#2.itm} -pin  "nor#2" {Z(0)} -attr @path {/markers/markers:core/nor#2.itm}
+load inst "nor" "nor(3,1)" "INTERFACE" -attr @path {/markers/markers:core/nor} -attr area 1.055476 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_nor(1,3)"
+load net {aif#1:aif:acc.itm(7)} -pin  "nor" {A0(0)} -attr @path {/markers/markers:core/aif#1:aif:slc.itm}
+load net {if:acc#3.itm(7)} -pin  "nor" {A1(0)} -attr @path {/markers/markers:core/aif#5:slc.itm}
+load net {aif#5:aif:acc.itm(8)} -pin  "nor" {A2(0)} -attr @path {/markers/markers:core/aif#5:aif:slc.itm}
+load net {nor.itm} -pin  "nor" {Z(0)} -attr @path {/markers/markers:core/nor.itm}
+load inst "and#4" "and(2,1)" "INTERFACE" -attr @path {/markers/markers:core/and#4} -attr area 0.730832 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_and(1,2)"
+load net {nor#2.itm} -pin  "and#4" {A0(0)} -attr @path {/markers/markers:core/nor#2.itm}
+load net {nor.itm} -pin  "and#4" {A1(0)} -attr @path {/markers/markers:core/nor.itm}
+load net {and#4.cse} -pin  "and#4" {Z(0)} -attr @path {/markers/markers:core/and#4.cse}
+load inst "or#21" "or(2,1)" "INTERFACE" -attr @path {/markers/markers:core/or#21} -attr area 0.730832 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_or(1,2)"
+load net {and#4.cse} -pin  "or#21" {A0(0)} -attr @path {/markers/markers:core/and#4.cse}
+load net {or#17.cse} -pin  "or#21" {A1(0)} -attr @path {/markers/markers:core/or#17.cse}
+load net {or#21.itm} -pin  "or#21" {Z(0)} -attr @path {/markers/markers:core/or#21.itm}
+load inst "mux#4" "mux(2,1)" "INTERFACE" -attr xrf 7956 -attr oid 60 -attr @path {/markers/markers:core/mux#4} -attr area 0.920423 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_mux(1,1,2)"
+load net {else:aif#2:slc.svs} -pin  "mux#4" {A0(0)} -attr @path {/markers/markers:core/else:aif#2:slc.svs}
+load net {else:aif#2:acc.itm(8)} -pin  "mux#4" {A1(0)} -attr @path {/markers/markers:core/else:aif#2:slc.svs:mx0w0}
+load net {or#21.itm} -pin  "mux#4" {S(0)} -attr @path {/markers/markers:core/or#21.itm}
+load net {mux#4.itm} -pin  "mux#4" {Z(0)} -attr @path {/markers/markers:core/mux#4.itm}
+load inst "reg(else:aif#2:slc.svs)" "reg(1,1,1,-1,0)" "INTERFACE" -attr xrf 7957 -attr oid 61 -attr @path {/markers/markers:core/reg(else:aif#2:slc.svs)}
+load net {mux#4.itm} -pin  "reg(else:aif#2:slc.svs)" {D(0)} -attr @path {/markers/markers:core/mux#4.itm}
+load net {GND} -pin  "reg(else:aif#2:slc.svs)" {DRa(0)} -attr @path {/markers/markers:core/C0_1#2}
+load net {clk} -pin  "reg(else:aif#2:slc.svs)" {clk} -attr xrf 7958 -attr oid 62 -attr @path {/markers/markers:core/clk}
+load net {en} -pin  "reg(else:aif#2:slc.svs)" {en(0)} -attr @path {/markers/markers:core/en}
+load net {arst_n} -pin  "reg(else:aif#2:slc.svs)" {Ra(0)} -attr @path {/markers/markers:core/arst_n}
+load net {else:aif#2:slc.svs} -pin  "reg(else:aif#2:slc.svs)" {Z(0)} -attr @path {/markers/markers:core/else:aif#2:slc.svs}
+load inst "or#24" "or(2,1)" "INTERFACE" -attr @path {/markers/markers:core/or#24} -attr area 0.730832 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_or(1,2)"
+load net {and#4.cse} -pin  "or#24" {A0(0)} -attr @path {/markers/markers:core/and#4.cse}
+load net {or.dcpl#16} -pin  "or#24" {A1(0)} -attr @path {/markers/markers:core/or.dcpl#16}
+load net {or#24.itm} -pin  "or#24" {Z(0)} -attr @path {/markers/markers:core/or#24.itm}
+load inst "mux#6" "mux(2,1)" "INTERFACE" -attr xrf 7959 -attr oid 63 -attr @path {/markers/markers:core/mux#6} -attr area 0.920423 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_mux(1,1,2)"
+load net {else:aif#1:slc.svs} -pin  "mux#6" {A0(0)} -attr @path {/markers/markers:core/else:aif#1:slc.svs}
+load net {else:aif#1:acc.itm(8)} -pin  "mux#6" {A1(0)} -attr @path {/markers/markers:core/else:aif#1:slc#2.itm}
+load net {or#24.itm} -pin  "mux#6" {S(0)} -attr @path {/markers/markers:core/or#24.itm}
+load net {mux#6.itm} -pin  "mux#6" {Z(0)} -attr @path {/markers/markers:core/mux#6.itm}
+load inst "reg(else:aif#1:slc.svs)" "reg(1,1,1,-1,0)" "INTERFACE" -attr xrf 7960 -attr oid 64 -attr @path {/markers/markers:core/reg(else:aif#1:slc.svs)}
+load net {mux#6.itm} -pin  "reg(else:aif#1:slc.svs)" {D(0)} -attr @path {/markers/markers:core/mux#6.itm}
+load net {GND} -pin  "reg(else:aif#1:slc.svs)" {DRa(0)} -attr @path {/markers/markers:core/C0_1#2}
+load net {clk} -pin  "reg(else:aif#1:slc.svs)" {clk} -attr xrf 7961 -attr oid 65 -attr @path {/markers/markers:core/clk}
+load net {en} -pin  "reg(else:aif#1:slc.svs)" {en(0)} -attr @path {/markers/markers:core/en}
+load net {arst_n} -pin  "reg(else:aif#1:slc.svs)" {Ra(0)} -attr @path {/markers/markers:core/arst_n}
+load net {else:aif#1:slc.svs} -pin  "reg(else:aif#1:slc.svs)" {Z(0)} -attr @path {/markers/markers:core/else:aif#1:slc.svs}
+load inst "else:aif#2:acc" "add(8,0,7,1,9)" "INTERFACE" -attr xrf 7962 -attr oid 66 -attr vt d -attr @path {/markers/markers:core/else:aif#2:acc} -attr area 9.000000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(8,0,7,1,9)"
+load net {vin(2)} -pin  "else:aif#2:acc" {A(0)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#11.itm}
+load net {vin(3)} -pin  "else:aif#2:acc" {A(1)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#11.itm}
+load net {vin(4)} -pin  "else:aif#2:acc" {A(2)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#11.itm}
+load net {vin(5)} -pin  "else:aif#2:acc" {A(3)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#11.itm}
+load net {vin(6)} -pin  "else:aif#2:acc" {A(4)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#11.itm}
+load net {vin(7)} -pin  "else:aif#2:acc" {A(5)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#11.itm}
+load net {vin(8)} -pin  "else:aif#2:acc" {A(6)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#11.itm}
+load net {vin(9)} -pin  "else:aif#2:acc" {A(7)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#11.itm}
+load net {PWR} -pin  "else:aif#2:acc" {B(0)} -attr @path {/markers/markers:core/Cn49_7}
+load net {PWR} -pin  "else:aif#2:acc" {B(1)} -attr @path {/markers/markers:core/Cn49_7}
+load net {PWR} -pin  "else:aif#2:acc" {B(2)} -attr @path {/markers/markers:core/Cn49_7}
+load net {PWR} -pin  "else:aif#2:acc" {B(3)} -attr @path {/markers/markers:core/Cn49_7}
+load net {GND} -pin  "else:aif#2:acc" {B(4)} -attr @path {/markers/markers:core/Cn49_7}
+load net {GND} -pin  "else:aif#2:acc" {B(5)} -attr @path {/markers/markers:core/Cn49_7}
+load net {PWR} -pin  "else:aif#2:acc" {B(6)} -attr @path {/markers/markers:core/Cn49_7}
+load net {else:aif#2:acc.itm(0)} -pin  "else:aif#2:acc" {Z(0)} -attr vt d -attr @path {/markers/markers:core/else:aif#2:acc.itm}
+load net {else:aif#2:acc.itm(1)} -pin  "else:aif#2:acc" {Z(1)} -attr vt d -attr @path {/markers/markers:core/else:aif#2:acc.itm}
+load net {else:aif#2:acc.itm(2)} -pin  "else:aif#2:acc" {Z(2)} -attr vt d -attr @path {/markers/markers:core/else:aif#2:acc.itm}
+load net {else:aif#2:acc.itm(3)} -pin  "else:aif#2:acc" {Z(3)} -attr vt d -attr @path {/markers/markers:core/else:aif#2:acc.itm}
+load net {else:aif#2:acc.itm(4)} -pin  "else:aif#2:acc" {Z(4)} -attr vt d -attr @path {/markers/markers:core/else:aif#2:acc.itm}
+load net {else:aif#2:acc.itm(5)} -pin  "else:aif#2:acc" {Z(5)} -attr vt d -attr @path {/markers/markers:core/else:aif#2:acc.itm}
+load net {else:aif#2:acc.itm(6)} -pin  "else:aif#2:acc" {Z(6)} -attr vt d -attr @path {/markers/markers:core/else:aif#2:acc.itm}
+load net {else:aif#2:acc.itm(7)} -pin  "else:aif#2:acc" {Z(7)} -attr vt d -attr @path {/markers/markers:core/else:aif#2:acc.itm}
+load net {else:aif#2:acc.itm(8)} -pin  "else:aif#2:acc" {Z(8)} -attr vt d -attr @path {/markers/markers:core/else:aif#2:acc.itm}
+load inst "else:aif#1:aif:not#1" "not(5)" "INTERFACE" -attr xrf 7963 -attr oid 67 -attr vt d -attr @path {/markers/markers:core/else:aif#1:aif:not#1} -attr area 0.001000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_not(5)"
+load net {vin(14)} -pin  "else:aif#1:aif:not#1" {A(0)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#15.itm}
+load net {vin(15)} -pin  "else:aif#1:aif:not#1" {A(1)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#15.itm}
+load net {vin(16)} -pin  "else:aif#1:aif:not#1" {A(2)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#15.itm}
+load net {vin(17)} -pin  "else:aif#1:aif:not#1" {A(3)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#15.itm}
+load net {vin(18)} -pin  "else:aif#1:aif:not#1" {A(4)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#15.itm}
+load net {else:aif#1:aif:not#1.itm(0)} -pin  "else:aif#1:aif:not#1" {Z(0)} -attr vt d -attr @path {/markers/markers:core/else:aif#1:aif:not#1.itm}
+load net {else:aif#1:aif:not#1.itm(1)} -pin  "else:aif#1:aif:not#1" {Z(1)} -attr vt d -attr @path {/markers/markers:core/else:aif#1:aif:not#1.itm}
+load net {else:aif#1:aif:not#1.itm(2)} -pin  "else:aif#1:aif:not#1" {Z(2)} -attr vt d -attr @path {/markers/markers:core/else:aif#1:aif:not#1.itm}
+load net {else:aif#1:aif:not#1.itm(3)} -pin  "else:aif#1:aif:not#1" {Z(3)} -attr vt d -attr @path {/markers/markers:core/else:aif#1:aif:not#1.itm}
+load net {else:aif#1:aif:not#1.itm(4)} -pin  "else:aif#1:aif:not#1" {Z(4)} -attr vt d -attr @path {/markers/markers:core/else:aif#1:aif:not#1.itm}
+load inst "else:if:acc#1" "add(5,0,4,1,6)" "INTERFACE" -attr xrf 7964 -attr oid 68 -attr vt d -attr @path {/markers/markers:core/else:if:acc#1} -attr area 6.000000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(5,0,4,1,6)"
+load net {else:aif#1:aif:not#1.itm(0)} -pin  "else:if:acc#1" {A(0)} -attr vt d -attr @path {/markers/markers:core/else:aif#1:aif:not#1.itm}
+load net {else:aif#1:aif:not#1.itm(1)} -pin  "else:if:acc#1" {A(1)} -attr vt d -attr @path {/markers/markers:core/else:aif#1:aif:not#1.itm}
+load net {else:aif#1:aif:not#1.itm(2)} -pin  "else:if:acc#1" {A(2)} -attr vt d -attr @path {/markers/markers:core/else:aif#1:aif:not#1.itm}
+load net {else:aif#1:aif:not#1.itm(3)} -pin  "else:if:acc#1" {A(3)} -attr vt d -attr @path {/markers/markers:core/else:aif#1:aif:not#1.itm}
+load net {else:aif#1:aif:not#1.itm(4)} -pin  "else:if:acc#1" {A(4)} -attr vt d -attr @path {/markers/markers:core/else:aif#1:aif:not#1.itm}
+load net {PWR} -pin  "else:if:acc#1" {B(0)} -attr @path {/markers/markers:core/Cn5_4}
+load net {PWR} -pin  "else:if:acc#1" {B(1)} -attr @path {/markers/markers:core/Cn5_4}
+load net {GND} -pin  "else:if:acc#1" {B(2)} -attr @path {/markers/markers:core/Cn5_4}
+load net {PWR} -pin  "else:if:acc#1" {B(3)} -attr @path {/markers/markers:core/Cn5_4}
+load net {else:if:acc#1.itm(0)} -pin  "else:if:acc#1" {Z(0)} -attr vt d -attr @path {/markers/markers:core/else:if:acc#1.itm}
+load net {else:if:acc#1.itm(1)} -pin  "else:if:acc#1" {Z(1)} -attr vt d -attr @path {/markers/markers:core/else:if:acc#1.itm}
+load net {else:if:acc#1.itm(2)} -pin  "else:if:acc#1" {Z(2)} -attr vt d -attr @path {/markers/markers:core/else:if:acc#1.itm}
+load net {else:if:acc#1.itm(3)} -pin  "else:if:acc#1" {Z(3)} -attr vt d -attr @path {/markers/markers:core/else:if:acc#1.itm}
+load net {else:if:acc#1.itm(4)} -pin  "else:if:acc#1" {Z(4)} -attr vt d -attr @path {/markers/markers:core/else:if:acc#1.itm}
+load net {else:if:acc#1.itm(5)} -pin  "else:if:acc#1" {Z(5)} -attr vt d -attr @path {/markers/markers:core/else:if:acc#1.itm}
+load inst "else:aif#1:acc" "add(8,0,9,-1,9)" "INTERFACE" -attr xrf 7965 -attr oid 69 -attr vt d -attr @path {/markers/markers:core/else:aif#1:acc} -attr area 10.253676 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(9,0,8,0,9)"
+load net {vin(12)} -pin  "else:aif#1:acc" {A(0)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#10.itm}
+load net {vin(13)} -pin  "else:aif#1:acc" {A(1)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#10.itm}
+load net {vin(14)} -pin  "else:aif#1:acc" {A(2)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#10.itm}
+load net {vin(15)} -pin  "else:aif#1:acc" {A(3)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#10.itm}
+load net {vin(16)} -pin  "else:aif#1:acc" {A(4)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#10.itm}
+load net {vin(17)} -pin  "else:aif#1:acc" {A(5)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#10.itm}
+load net {vin(18)} -pin  "else:aif#1:acc" {A(6)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#10.itm}
+load net {vin(19)} -pin  "else:aif#1:acc" {A(7)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#10.itm}
+load net {PWR} -pin  "else:aif#1:acc" {B(0)} -attr @path {/markers/markers:core/Cn185_9}
+load net {PWR} -pin  "else:aif#1:acc" {B(1)} -attr @path {/markers/markers:core/Cn185_9}
+load net {PWR} -pin  "else:aif#1:acc" {B(2)} -attr @path {/markers/markers:core/Cn185_9}
+load net {GND} -pin  "else:aif#1:acc" {B(3)} -attr @path {/markers/markers:core/Cn185_9}
+load net {GND} -pin  "else:aif#1:acc" {B(4)} -attr @path {/markers/markers:core/Cn185_9}
+load net {GND} -pin  "else:aif#1:acc" {B(5)} -attr @path {/markers/markers:core/Cn185_9}
+load net {PWR} -pin  "else:aif#1:acc" {B(6)} -attr @path {/markers/markers:core/Cn185_9}
+load net {GND} -pin  "else:aif#1:acc" {B(7)} -attr @path {/markers/markers:core/Cn185_9}
+load net {PWR} -pin  "else:aif#1:acc" {B(8)} -attr @path {/markers/markers:core/Cn185_9}
+load net {else:aif#1:acc.itm(0)} -pin  "else:aif#1:acc" {Z(0)} -attr vt d -attr @path {/markers/markers:core/else:aif#1:acc.itm}
+load net {else:aif#1:acc.itm(1)} -pin  "else:aif#1:acc" {Z(1)} -attr vt d -attr @path {/markers/markers:core/else:aif#1:acc.itm}
+load net {else:aif#1:acc.itm(2)} -pin  "else:aif#1:acc" {Z(2)} -attr vt d -attr @path {/markers/markers:core/else:aif#1:acc.itm}
+load net {else:aif#1:acc.itm(3)} -pin  "else:aif#1:acc" {Z(3)} -attr vt d -attr @path {/markers/markers:core/else:aif#1:acc.itm}
+load net {else:aif#1:acc.itm(4)} -pin  "else:aif#1:acc" {Z(4)} -attr vt d -attr @path {/markers/markers:core/else:aif#1:acc.itm}
+load net {else:aif#1:acc.itm(5)} -pin  "else:aif#1:acc" {Z(5)} -attr vt d -attr @path {/markers/markers:core/else:aif#1:acc.itm}
+load net {else:aif#1:acc.itm(6)} -pin  "else:aif#1:acc" {Z(6)} -attr vt d -attr @path {/markers/markers:core/else:aif#1:acc.itm}
+load net {else:aif#1:acc.itm(7)} -pin  "else:aif#1:acc" {Z(7)} -attr vt d -attr @path {/markers/markers:core/else:aif#1:acc.itm}
+load net {else:aif#1:acc.itm(8)} -pin  "else:aif#1:acc" {Z(8)} -attr vt d -attr @path {/markers/markers:core/else:aif#1:acc.itm}
+load inst "else:aif:not#1" "not(7)" "INTERFACE" -attr xrf 7966 -attr oid 70 -attr vt d -attr @path {/markers/markers:core/else:aif:not#1} -attr area 0.001000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_not(7)"
+load net {vin(22)} -pin  "else:aif:not#1" {A(0)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#13.itm}
+load net {vin(23)} -pin  "else:aif:not#1" {A(1)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#13.itm}
+load net {vin(24)} -pin  "else:aif:not#1" {A(2)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#13.itm}
+load net {vin(25)} -pin  "else:aif:not#1" {A(3)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#13.itm}
+load net {vin(26)} -pin  "else:aif:not#1" {A(4)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#13.itm}
+load net {vin(27)} -pin  "else:aif:not#1" {A(5)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#13.itm}
+load net {vin(28)} -pin  "else:aif:not#1" {A(6)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#13.itm}
+load net {else:aif:not#1.itm(0)} -pin  "else:aif:not#1" {Z(0)} -attr vt d -attr @path {/markers/markers:core/else:aif:not#1.itm}
+load net {else:aif:not#1.itm(1)} -pin  "else:aif:not#1" {Z(1)} -attr vt d -attr @path {/markers/markers:core/else:aif:not#1.itm}
+load net {else:aif:not#1.itm(2)} -pin  "else:aif:not#1" {Z(2)} -attr vt d -attr @path {/markers/markers:core/else:aif:not#1.itm}
+load net {else:aif:not#1.itm(3)} -pin  "else:aif:not#1" {Z(3)} -attr vt d -attr @path {/markers/markers:core/else:aif:not#1.itm}
+load net {else:aif:not#1.itm(4)} -pin  "else:aif:not#1" {Z(4)} -attr vt d -attr @path {/markers/markers:core/else:aif:not#1.itm}
+load net {else:aif:not#1.itm(5)} -pin  "else:aif:not#1" {Z(5)} -attr vt d -attr @path {/markers/markers:core/else:aif:not#1.itm}
+load net {else:aif:not#1.itm(6)} -pin  "else:aif:not#1" {Z(6)} -attr vt d -attr @path {/markers/markers:core/else:aif:not#1.itm}
+load inst "else:aif:acc" "add(7,0,7,1,8)" "INTERFACE" -attr xrf 7967 -attr oid 71 -attr vt d -attr @path {/markers/markers:core/else:aif:acc} -attr area 8.000000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(7,0,7,1,8)"
+load net {else:aif:not#1.itm(0)} -pin  "else:aif:acc" {A(0)} -attr vt d -attr @path {/markers/markers:core/else:aif:not#1.itm}
+load net {else:aif:not#1.itm(1)} -pin  "else:aif:acc" {A(1)} -attr vt d -attr @path {/markers/markers:core/else:aif:not#1.itm}
+load net {else:aif:not#1.itm(2)} -pin  "else:aif:acc" {A(2)} -attr vt d -attr @path {/markers/markers:core/else:aif:not#1.itm}
+load net {else:aif:not#1.itm(3)} -pin  "else:aif:acc" {A(3)} -attr vt d -attr @path {/markers/markers:core/else:aif:not#1.itm}
+load net {else:aif:not#1.itm(4)} -pin  "else:aif:acc" {A(4)} -attr vt d -attr @path {/markers/markers:core/else:aif:not#1.itm}
+load net {else:aif:not#1.itm(5)} -pin  "else:aif:acc" {A(5)} -attr vt d -attr @path {/markers/markers:core/else:aif:not#1.itm}
+load net {else:aif:not#1.itm(6)} -pin  "else:aif:acc" {A(6)} -attr vt d -attr @path {/markers/markers:core/else:aif:not#1.itm}
+load net {PWR} -pin  "else:aif:acc" {B(0)} -attr @path {/markers/markers:core/Cn33_7}
+load net {PWR} -pin  "else:aif:acc" {B(1)} -attr @path {/markers/markers:core/Cn33_7}
+load net {PWR} -pin  "else:aif:acc" {B(2)} -attr @path {/markers/markers:core/Cn33_7}
+load net {PWR} -pin  "else:aif:acc" {B(3)} -attr @path {/markers/markers:core/Cn33_7}
+load net {PWR} -pin  "else:aif:acc" {B(4)} -attr @path {/markers/markers:core/Cn33_7}
+load net {GND} -pin  "else:aif:acc" {B(5)} -attr @path {/markers/markers:core/Cn33_7}
+load net {PWR} -pin  "else:aif:acc" {B(6)} -attr @path {/markers/markers:core/Cn33_7}
+load net {else:aif:acc.itm(0)} -pin  "else:aif:acc" {Z(0)} -attr vt d -attr @path {/markers/markers:core/else:aif:acc.itm}
+load net {else:aif:acc.itm(1)} -pin  "else:aif:acc" {Z(1)} -attr vt d -attr @path {/markers/markers:core/else:aif:acc.itm}
+load net {else:aif:acc.itm(2)} -pin  "else:aif:acc" {Z(2)} -attr vt d -attr @path {/markers/markers:core/else:aif:acc.itm}
+load net {else:aif:acc.itm(3)} -pin  "else:aif:acc" {Z(3)} -attr vt d -attr @path {/markers/markers:core/else:aif:acc.itm}
+load net {else:aif:acc.itm(4)} -pin  "else:aif:acc" {Z(4)} -attr vt d -attr @path {/markers/markers:core/else:aif:acc.itm}
+load net {else:aif:acc.itm(5)} -pin  "else:aif:acc" {Z(5)} -attr vt d -attr @path {/markers/markers:core/else:aif:acc.itm}
+load net {else:aif:acc.itm(6)} -pin  "else:aif:acc" {Z(6)} -attr vt d -attr @path {/markers/markers:core/else:aif:acc.itm}
+load net {else:aif:acc.itm(7)} -pin  "else:aif:acc" {Z(7)} -attr vt d -attr @path {/markers/markers:core/else:aif:acc.itm}
+load inst "else:if:acc" "add(7,0,8,-1,8)" "INTERFACE" -attr xrf 7968 -attr oid 72 -attr vt dc -attr @path {/markers/markers:core/else:if:acc} -attr area 9.258614 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(8,0,8,0,8)"
+load net {vin(23)} -pin  "else:if:acc" {A(0)} -attr vt dc -attr @path {/markers/markers:core/slc(vin)#18.itm}
+load net {vin(24)} -pin  "else:if:acc" {A(1)} -attr vt dc -attr @path {/markers/markers:core/slc(vin)#18.itm}
+load net {vin(25)} -pin  "else:if:acc" {A(2)} -attr vt dc -attr @path {/markers/markers:core/slc(vin)#18.itm}
+load net {vin(26)} -pin  "else:if:acc" {A(3)} -attr vt dc -attr @path {/markers/markers:core/slc(vin)#18.itm}
+load net {vin(27)} -pin  "else:if:acc" {A(4)} -attr vt dc -attr @path {/markers/markers:core/slc(vin)#18.itm}
+load net {vin(28)} -pin  "else:if:acc" {A(5)} -attr vt dc -attr @path {/markers/markers:core/slc(vin)#18.itm}
+load net {vin(29)} -pin  "else:if:acc" {A(6)} -attr vt dc -attr @path {/markers/markers:core/slc(vin)#18.itm}
+load net {PWR} -pin  "else:if:acc" {B(0)} -attr @path {/markers/markers:core/Cn85_8}
+load net {PWR} -pin  "else:if:acc" {B(1)} -attr @path {/markers/markers:core/Cn85_8}
+load net {GND} -pin  "else:if:acc" {B(2)} -attr @path {/markers/markers:core/Cn85_8}
+load net {PWR} -pin  "else:if:acc" {B(3)} -attr @path {/markers/markers:core/Cn85_8}
+load net {GND} -pin  "else:if:acc" {B(4)} -attr @path {/markers/markers:core/Cn85_8}
+load net {PWR} -pin  "else:if:acc" {B(5)} -attr @path {/markers/markers:core/Cn85_8}
+load net {GND} -pin  "else:if:acc" {B(6)} -attr @path {/markers/markers:core/Cn85_8}
+load net {PWR} -pin  "else:if:acc" {B(7)} -attr @path {/markers/markers:core/Cn85_8}
+load net {else:if:acc.itm(0)} -pin  "else:if:acc" {Z(0)} -attr vt dc -attr @path {/markers/markers:core/else:if:acc.itm}
+load net {else:if:acc.itm(1)} -pin  "else:if:acc" {Z(1)} -attr vt dc -attr @path {/markers/markers:core/else:if:acc.itm}
+load net {else:if:acc.itm(2)} -pin  "else:if:acc" {Z(2)} -attr vt dc -attr @path {/markers/markers:core/else:if:acc.itm}
+load net {else:if:acc.itm(3)} -pin  "else:if:acc" {Z(3)} -attr vt dc -attr @path {/markers/markers:core/else:if:acc.itm}
+load net {else:if:acc.itm(4)} -pin  "else:if:acc" {Z(4)} -attr vt dc -attr @path {/markers/markers:core/else:if:acc.itm}
+load net {else:if:acc.itm(5)} -pin  "else:if:acc" {Z(5)} -attr vt dc -attr @path {/markers/markers:core/else:if:acc.itm}
+load net {else:if:acc.itm(6)} -pin  "else:if:acc" {Z(6)} -attr vt dc -attr @path {/markers/markers:core/else:if:acc.itm}
+load net {else:if:acc.itm(7)} -pin  "else:if:acc" {Z(7)} -attr vt dc -attr @path {/markers/markers:core/else:if:acc.itm}
+load inst "if:acc#3" "add(7,0,5,1,8)" "INTERFACE" -attr xrf 7969 -attr oid 73 -attr vt d -attr @path {/markers/markers:core/if:acc#3} -attr area 8.000000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(7,0,7,1,8)"
+load net {vin(3)} -pin  "if:acc#3" {A(0)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#22.itm}
+load net {vin(4)} -pin  "if:acc#3" {A(1)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#22.itm}
+load net {vin(5)} -pin  "if:acc#3" {A(2)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#22.itm}
+load net {vin(6)} -pin  "if:acc#3" {A(3)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#22.itm}
+load net {vin(7)} -pin  "if:acc#3" {A(4)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#22.itm}
+load net {vin(8)} -pin  "if:acc#3" {A(5)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#22.itm}
+load net {vin(9)} -pin  "if:acc#3" {A(6)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#22.itm}
+load net {PWR} -pin  "if:acc#3" {B(0)} -attr @path {/markers/markers:core/Cn15_5}
+load net {GND} -pin  "if:acc#3" {B(1)} -attr @path {/markers/markers:core/Cn15_5}
+load net {GND} -pin  "if:acc#3" {B(2)} -attr @path {/markers/markers:core/Cn15_5}
+load net {GND} -pin  "if:acc#3" {B(3)} -attr @path {/markers/markers:core/Cn15_5}
+load net {PWR} -pin  "if:acc#3" {B(4)} -attr @path {/markers/markers:core/Cn15_5}
+load net {if:acc#3.itm(0)} -pin  "if:acc#3" {Z(0)} -attr vt d -attr @path {/markers/markers:core/if:acc#3.itm}
+load net {if:acc#3.itm(1)} -pin  "if:acc#3" {Z(1)} -attr vt d -attr @path {/markers/markers:core/if:acc#3.itm}
+load net {if:acc#3.itm(2)} -pin  "if:acc#3" {Z(2)} -attr vt d -attr @path {/markers/markers:core/if:acc#3.itm}
+load net {if:acc#3.itm(3)} -pin  "if:acc#3" {Z(3)} -attr vt d -attr @path {/markers/markers:core/if:acc#3.itm}
+load net {if:acc#3.itm(4)} -pin  "if:acc#3" {Z(4)} -attr vt d -attr @path {/markers/markers:core/if:acc#3.itm}
+load net {if:acc#3.itm(5)} -pin  "if:acc#3" {Z(5)} -attr vt d -attr @path {/markers/markers:core/if:acc#3.itm}
+load net {if:acc#3.itm(6)} -pin  "if:acc#3" {Z(6)} -attr vt d -attr @path {/markers/markers:core/if:acc#3.itm}
+load net {if:acc#3.itm(7)} -pin  "if:acc#3" {Z(7)} -attr vt d -attr @path {/markers/markers:core/if:acc#3.itm}
+load inst "if:acc#2" "add(7,0,8,-1,8)" "INTERFACE" -attr xrf 7970 -attr oid 74 -attr vt d -attr @path {/markers/markers:core/if:acc#2} -attr area 9.258614 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(8,0,8,0,8)"
+load net {vin(13)} -pin  "if:acc#2" {A(0)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#5.itm}
+load net {vin(14)} -pin  "if:acc#2" {A(1)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#5.itm}
+load net {vin(15)} -pin  "if:acc#2" {A(2)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#5.itm}
+load net {vin(16)} -pin  "if:acc#2" {A(3)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#5.itm}
+load net {vin(17)} -pin  "if:acc#2" {A(4)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#5.itm}
+load net {vin(18)} -pin  "if:acc#2" {A(5)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#5.itm}
+load net {vin(19)} -pin  "if:acc#2" {A(6)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#5.itm}
+load net {PWR} -pin  "if:acc#2" {B(0)} -attr @path {/markers/markers:core/Cn75_8}
+load net {GND} -pin  "if:acc#2" {B(1)} -attr @path {/markers/markers:core/Cn75_8}
+load net {PWR} -pin  "if:acc#2" {B(2)} -attr @path {/markers/markers:core/Cn75_8}
+load net {GND} -pin  "if:acc#2" {B(3)} -attr @path {/markers/markers:core/Cn75_8}
+load net {PWR} -pin  "if:acc#2" {B(4)} -attr @path {/markers/markers:core/Cn75_8}
+load net {PWR} -pin  "if:acc#2" {B(5)} -attr @path {/markers/markers:core/Cn75_8}
+load net {GND} -pin  "if:acc#2" {B(6)} -attr @path {/markers/markers:core/Cn75_8}
+load net {PWR} -pin  "if:acc#2" {B(7)} -attr @path {/markers/markers:core/Cn75_8}
+load net {if:acc#2.itm(0)} -pin  "if:acc#2" {Z(0)} -attr vt d -attr @path {/markers/markers:core/if:acc#2.itm}
+load net {if:acc#2.itm(1)} -pin  "if:acc#2" {Z(1)} -attr vt d -attr @path {/markers/markers:core/if:acc#2.itm}
+load net {if:acc#2.itm(2)} -pin  "if:acc#2" {Z(2)} -attr vt d -attr @path {/markers/markers:core/if:acc#2.itm}
+load net {if:acc#2.itm(3)} -pin  "if:acc#2" {Z(3)} -attr vt d -attr @path {/markers/markers:core/if:acc#2.itm}
+load net {if:acc#2.itm(4)} -pin  "if:acc#2" {Z(4)} -attr vt d -attr @path {/markers/markers:core/if:acc#2.itm}
+load net {if:acc#2.itm(5)} -pin  "if:acc#2" {Z(5)} -attr vt d -attr @path {/markers/markers:core/if:acc#2.itm}
+load net {if:acc#2.itm(6)} -pin  "if:acc#2" {Z(6)} -attr vt d -attr @path {/markers/markers:core/if:acc#2.itm}
+load net {if:acc#2.itm(7)} -pin  "if:acc#2" {Z(7)} -attr vt d -attr @path {/markers/markers:core/if:acc#2.itm}
+load inst "or#14" "or(6,1)" "INTERFACE" -attr @path {/markers/markers:core/or#14} -attr area 2.029408 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_or(1,6)"
+load net {if:acc.itm(4)} -pin  "or#14" {A0(0)} -attr @path {/markers/markers:core/slc#1.itm}
+load net {if:acc#1(6)} -pin  "or#14" {A1(0)} -attr @path {/markers/markers:core/slc(if:acc#1.itm)#1.itm}
+load net {if:acc#2.itm(7)} -pin  "or#14" {A2(0)} -attr @path {/markers/markers:core/aif#1:slc#1.itm}
+load net {aif#1:aif:acc.itm(7)} -pin  "or#14" {A3(0)} -attr @path {/markers/markers:core/aif#1:aif:slc#1.itm}
+load net {if:acc#3.itm(7)} -pin  "or#14" {A4(0)} -attr @path {/markers/markers:core/aif#5:slc#1.itm}
+load net {aif#5:aif:acc.itm(8)} -pin  "or#14" {A5(0)} -attr @path {/markers/markers:core/aif#5:aif:slc#1.itm}
+load net {or#14.cse} -pin  "or#14" {Z(0)} -attr @path {/markers/markers:core/or#14.cse}
+load inst "else:and" "and(2,8)" "INTERFACE" -attr xrf 7971 -attr oid 75 -attr vt dc -attr @path {/markers/markers:core/else:and} -attr area 5.838659 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_and(8,2)"
+load net {vin(22)} -pin  "else:and" {A0(0)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#33.itm}
+load net {vin(23)} -pin  "else:and" {A0(1)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#33.itm}
+load net {vin(24)} -pin  "else:and" {A0(2)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#33.itm}
+load net {vin(25)} -pin  "else:and" {A0(3)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#33.itm}
+load net {vin(26)} -pin  "else:and" {A0(4)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#33.itm}
+load net {vin(27)} -pin  "else:and" {A0(5)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#33.itm}
+load net {vin(28)} -pin  "else:and" {A0(6)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#33.itm}
+load net {vin(29)} -pin  "else:and" {A0(7)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#33.itm}
+load net {else:if:nor.itm} -pin  "else:and" {A1(0)} -attr vt dc -attr @path {/markers/markers:core/exs#2.itm}
+load net {else:if:nor.itm} -pin  "else:and" {A1(1)} -attr vt dc -attr @path {/markers/markers:core/exs#2.itm}
+load net {else:if:nor.itm} -pin  "else:and" {A1(2)} -attr vt dc -attr @path {/markers/markers:core/exs#2.itm}
+load net {else:if:nor.itm} -pin  "else:and" {A1(3)} -attr vt dc -attr @path {/markers/markers:core/exs#2.itm}
+load net {else:if:nor.itm} -pin  "else:and" {A1(4)} -attr vt dc -attr @path {/markers/markers:core/exs#2.itm}
+load net {else:if:nor.itm} -pin  "else:and" {A1(5)} -attr vt dc -attr @path {/markers/markers:core/exs#2.itm}
+load net {else:if:nor.itm} -pin  "else:and" {A1(6)} -attr vt dc -attr @path {/markers/markers:core/exs#2.itm}
+load net {else:if:nor.itm} -pin  "else:and" {A1(7)} -attr vt dc -attr @path {/markers/markers:core/exs#2.itm}
+load net {else:and.itm(0)} -pin  "else:and" {Z(0)} -attr vt dc -attr @path {/markers/markers:core/else:and.itm}
+load net {else:and.itm(1)} -pin  "else:and" {Z(1)} -attr vt dc -attr @path {/markers/markers:core/else:and.itm}
+load net {else:and.itm(2)} -pin  "else:and" {Z(2)} -attr vt dc -attr @path {/markers/markers:core/else:and.itm}
+load net {else:and.itm(3)} -pin  "else:and" {Z(3)} -attr vt dc -attr @path {/markers/markers:core/else:and.itm}
+load net {else:and.itm(4)} -pin  "else:and" {Z(4)} -attr vt dc -attr @path {/markers/markers:core/else:and.itm}
+load net {else:and.itm(5)} -pin  "else:and" {Z(5)} -attr vt dc -attr @path {/markers/markers:core/else:and.itm}
+load net {else:and.itm(6)} -pin  "else:and" {Z(6)} -attr vt dc -attr @path {/markers/markers:core/else:and.itm}
+load net {else:and.itm(7)} -pin  "else:and" {Z(7)} -attr vt dc -attr @path {/markers/markers:core/else:and.itm}
+load inst "mux#2" "mux(2,8)" "INTERFACE" -attr xrf 7972 -attr oid 76 -attr vt dc -attr @path {/markers/markers:core/mux#2} -attr area 7.356384 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_mux(8,1,2)"
+load net {else:and.itm(0)} -pin  "mux#2" {A0(0)} -attr vt dc -attr @path {/markers/markers:core/else:and.itm}
+load net {else:and.itm(1)} -pin  "mux#2" {A0(1)} -attr vt dc -attr @path {/markers/markers:core/else:and.itm}
+load net {else:and.itm(2)} -pin  "mux#2" {A0(2)} -attr vt dc -attr @path {/markers/markers:core/else:and.itm}
+load net {else:and.itm(3)} -pin  "mux#2" {A0(3)} -attr vt dc -attr @path {/markers/markers:core/else:and.itm}
+load net {else:and.itm(4)} -pin  "mux#2" {A0(4)} -attr vt dc -attr @path {/markers/markers:core/else:and.itm}
+load net {else:and.itm(5)} -pin  "mux#2" {A0(5)} -attr vt dc -attr @path {/markers/markers:core/else:and.itm}
+load net {else:and.itm(6)} -pin  "mux#2" {A0(6)} -attr vt dc -attr @path {/markers/markers:core/else:and.itm}
+load net {else:and.itm(7)} -pin  "mux#2" {A0(7)} -attr vt dc -attr @path {/markers/markers:core/else:and.itm}
+load net {vin(22)} -pin  "mux#2" {A1(0)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#30.itm}
+load net {vin(23)} -pin  "mux#2" {A1(1)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#30.itm}
+load net {vin(24)} -pin  "mux#2" {A1(2)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#30.itm}
+load net {vin(25)} -pin  "mux#2" {A1(3)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#30.itm}
+load net {vin(26)} -pin  "mux#2" {A1(4)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#30.itm}
+load net {vin(27)} -pin  "mux#2" {A1(5)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#30.itm}
+load net {vin(28)} -pin  "mux#2" {A1(6)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#30.itm}
+load net {vin(29)} -pin  "mux#2" {A1(7)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#30.itm}
+load net {or#14.cse} -pin  "mux#2" {S(0)} -attr @path {/markers/markers:core/or#14.cse}
+load net {mux#2.itm(0)} -pin  "mux#2" {Z(0)} -attr vt dc -attr @path {/markers/markers:core/mux#2.itm}
+load net {mux#2.itm(1)} -pin  "mux#2" {Z(1)} -attr vt dc -attr @path {/markers/markers:core/mux#2.itm}
+load net {mux#2.itm(2)} -pin  "mux#2" {Z(2)} -attr vt dc -attr @path {/markers/markers:core/mux#2.itm}
+load net {mux#2.itm(3)} -pin  "mux#2" {Z(3)} -attr vt dc -attr @path {/markers/markers:core/mux#2.itm}
+load net {mux#2.itm(4)} -pin  "mux#2" {Z(4)} -attr vt dc -attr @path {/markers/markers:core/mux#2.itm}
+load net {mux#2.itm(5)} -pin  "mux#2" {Z(5)} -attr vt dc -attr @path {/markers/markers:core/mux#2.itm}
+load net {mux#2.itm(6)} -pin  "mux#2" {Z(6)} -attr vt dc -attr @path {/markers/markers:core/mux#2.itm}
+load net {mux#2.itm(7)} -pin  "mux#2" {Z(7)} -attr vt dc -attr @path {/markers/markers:core/mux#2.itm}
+load inst "else:and#1" "and(2,8)" "INTERFACE" -attr xrf 7973 -attr oid 77 -attr vt d -attr @path {/markers/markers:core/else:and#1} -attr area 5.838659 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_and(8,2)"
+load net {vin(12)} -pin  "else:and#1" {A0(0)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#34.itm}
+load net {vin(13)} -pin  "else:and#1" {A0(1)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#34.itm}
+load net {vin(14)} -pin  "else:and#1" {A0(2)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#34.itm}
+load net {vin(15)} -pin  "else:and#1" {A0(3)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#34.itm}
+load net {vin(16)} -pin  "else:and#1" {A0(4)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#34.itm}
+load net {vin(17)} -pin  "else:and#1" {A0(5)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#34.itm}
+load net {vin(18)} -pin  "else:and#1" {A0(6)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#34.itm}
+load net {vin(19)} -pin  "else:and#1" {A0(7)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#34.itm}
+load net {else:if:nor.itm} -pin  "else:and#1" {A1(0)} -attr vt d -attr @path {/markers/markers:core/exs#1.itm}
+load net {else:if:nor.itm} -pin  "else:and#1" {A1(1)} -attr vt d -attr @path {/markers/markers:core/exs#1.itm}
+load net {else:if:nor.itm} -pin  "else:and#1" {A1(2)} -attr vt d -attr @path {/markers/markers:core/exs#1.itm}
+load net {else:if:nor.itm} -pin  "else:and#1" {A1(3)} -attr vt d -attr @path {/markers/markers:core/exs#1.itm}
+load net {else:if:nor.itm} -pin  "else:and#1" {A1(4)} -attr vt d -attr @path {/markers/markers:core/exs#1.itm}
+load net {else:if:nor.itm} -pin  "else:and#1" {A1(5)} -attr vt d -attr @path {/markers/markers:core/exs#1.itm}
+load net {else:if:nor.itm} -pin  "else:and#1" {A1(6)} -attr vt d -attr @path {/markers/markers:core/exs#1.itm}
+load net {else:if:nor.itm} -pin  "else:and#1" {A1(7)} -attr vt d -attr @path {/markers/markers:core/exs#1.itm}
+load net {else:and#1.itm(0)} -pin  "else:and#1" {Z(0)} -attr vt d -attr @path {/markers/markers:core/else:and#1.itm}
+load net {else:and#1.itm(1)} -pin  "else:and#1" {Z(1)} -attr vt d -attr @path {/markers/markers:core/else:and#1.itm}
+load net {else:and#1.itm(2)} -pin  "else:and#1" {Z(2)} -attr vt d -attr @path {/markers/markers:core/else:and#1.itm}
+load net {else:and#1.itm(3)} -pin  "else:and#1" {Z(3)} -attr vt d -attr @path {/markers/markers:core/else:and#1.itm}
+load net {else:and#1.itm(4)} -pin  "else:and#1" {Z(4)} -attr vt d -attr @path {/markers/markers:core/else:and#1.itm}
+load net {else:and#1.itm(5)} -pin  "else:and#1" {Z(5)} -attr vt d -attr @path {/markers/markers:core/else:and#1.itm}
+load net {else:and#1.itm(6)} -pin  "else:and#1" {Z(6)} -attr vt d -attr @path {/markers/markers:core/else:and#1.itm}
+load net {else:and#1.itm(7)} -pin  "else:and#1" {Z(7)} -attr vt d -attr @path {/markers/markers:core/else:and#1.itm}
+load inst "mux#1" "mux(2,8)" "INTERFACE" -attr xrf 7974 -attr oid 78 -attr vt d -attr @path {/markers/markers:core/mux#1} -attr area 7.356384 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_mux(8,1,2)"
+load net {else:and#1.itm(0)} -pin  "mux#1" {A0(0)} -attr vt d -attr @path {/markers/markers:core/else:and#1.itm}
+load net {else:and#1.itm(1)} -pin  "mux#1" {A0(1)} -attr vt d -attr @path {/markers/markers:core/else:and#1.itm}
+load net {else:and#1.itm(2)} -pin  "mux#1" {A0(2)} -attr vt d -attr @path {/markers/markers:core/else:and#1.itm}
+load net {else:and#1.itm(3)} -pin  "mux#1" {A0(3)} -attr vt d -attr @path {/markers/markers:core/else:and#1.itm}
+load net {else:and#1.itm(4)} -pin  "mux#1" {A0(4)} -attr vt d -attr @path {/markers/markers:core/else:and#1.itm}
+load net {else:and#1.itm(5)} -pin  "mux#1" {A0(5)} -attr vt d -attr @path {/markers/markers:core/else:and#1.itm}
+load net {else:and#1.itm(6)} -pin  "mux#1" {A0(6)} -attr vt d -attr @path {/markers/markers:core/else:and#1.itm}
+load net {else:and#1.itm(7)} -pin  "mux#1" {A0(7)} -attr vt d -attr @path {/markers/markers:core/else:and#1.itm}
+load net {vin(12)} -pin  "mux#1" {A1(0)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#31.itm}
+load net {vin(13)} -pin  "mux#1" {A1(1)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#31.itm}
+load net {vin(14)} -pin  "mux#1" {A1(2)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#31.itm}
+load net {vin(15)} -pin  "mux#1" {A1(3)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#31.itm}
+load net {vin(16)} -pin  "mux#1" {A1(4)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#31.itm}
+load net {vin(17)} -pin  "mux#1" {A1(5)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#31.itm}
+load net {vin(18)} -pin  "mux#1" {A1(6)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#31.itm}
+load net {vin(19)} -pin  "mux#1" {A1(7)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#31.itm}
+load net {or#14.cse} -pin  "mux#1" {S(0)} -attr @path {/markers/markers:core/or#14.cse}
+load net {mux#1.itm(0)} -pin  "mux#1" {Z(0)} -attr vt d -attr @path {/markers/markers:core/mux#1.itm}
+load net {mux#1.itm(1)} -pin  "mux#1" {Z(1)} -attr vt d -attr @path {/markers/markers:core/mux#1.itm}
+load net {mux#1.itm(2)} -pin  "mux#1" {Z(2)} -attr vt d -attr @path {/markers/markers:core/mux#1.itm}
+load net {mux#1.itm(3)} -pin  "mux#1" {Z(3)} -attr vt d -attr @path {/markers/markers:core/mux#1.itm}
+load net {mux#1.itm(4)} -pin  "mux#1" {Z(4)} -attr vt d -attr @path {/markers/markers:core/mux#1.itm}
+load net {mux#1.itm(5)} -pin  "mux#1" {Z(5)} -attr vt d -attr @path {/markers/markers:core/mux#1.itm}
+load net {mux#1.itm(6)} -pin  "mux#1" {Z(6)} -attr vt d -attr @path {/markers/markers:core/mux#1.itm}
+load net {mux#1.itm(7)} -pin  "mux#1" {Z(7)} -attr vt d -attr @path {/markers/markers:core/mux#1.itm}
+load inst "else:and#2" "and(2,8)" "INTERFACE" -attr xrf 7975 -attr oid 79 -attr vt d -attr @path {/markers/markers:core/else:and#2} -attr area 5.838659 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_and(8,2)"
+load net {vin(2)} -pin  "else:and#2" {A0(0)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#35.itm}
+load net {vin(3)} -pin  "else:and#2" {A0(1)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#35.itm}
+load net {vin(4)} -pin  "else:and#2" {A0(2)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#35.itm}
+load net {vin(5)} -pin  "else:and#2" {A0(3)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#35.itm}
+load net {vin(6)} -pin  "else:and#2" {A0(4)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#35.itm}
+load net {vin(7)} -pin  "else:and#2" {A0(5)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#35.itm}
+load net {vin(8)} -pin  "else:and#2" {A0(6)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#35.itm}
+load net {vin(9)} -pin  "else:and#2" {A0(7)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#35.itm}
+load net {else:if:nor.itm} -pin  "else:and#2" {A1(0)} -attr vt d -attr @path {/markers/markers:core/exs.itm}
+load net {else:if:nor.itm} -pin  "else:and#2" {A1(1)} -attr vt d -attr @path {/markers/markers:core/exs.itm}
+load net {else:if:nor.itm} -pin  "else:and#2" {A1(2)} -attr vt d -attr @path {/markers/markers:core/exs.itm}
+load net {else:if:nor.itm} -pin  "else:and#2" {A1(3)} -attr vt d -attr @path {/markers/markers:core/exs.itm}
+load net {else:if:nor.itm} -pin  "else:and#2" {A1(4)} -attr vt d -attr @path {/markers/markers:core/exs.itm}
+load net {else:if:nor.itm} -pin  "else:and#2" {A1(5)} -attr vt d -attr @path {/markers/markers:core/exs.itm}
+load net {else:if:nor.itm} -pin  "else:and#2" {A1(6)} -attr vt d -attr @path {/markers/markers:core/exs.itm}
+load net {else:if:nor.itm} -pin  "else:and#2" {A1(7)} -attr vt d -attr @path {/markers/markers:core/exs.itm}
+load net {else:and#2.itm(0)} -pin  "else:and#2" {Z(0)} -attr vt d -attr @path {/markers/markers:core/else:and#2.itm}
+load net {else:and#2.itm(1)} -pin  "else:and#2" {Z(1)} -attr vt d -attr @path {/markers/markers:core/else:and#2.itm}
+load net {else:and#2.itm(2)} -pin  "else:and#2" {Z(2)} -attr vt d -attr @path {/markers/markers:core/else:and#2.itm}
+load net {else:and#2.itm(3)} -pin  "else:and#2" {Z(3)} -attr vt d -attr @path {/markers/markers:core/else:and#2.itm}
+load net {else:and#2.itm(4)} -pin  "else:and#2" {Z(4)} -attr vt d -attr @path {/markers/markers:core/else:and#2.itm}
+load net {else:and#2.itm(5)} -pin  "else:and#2" {Z(5)} -attr vt d -attr @path {/markers/markers:core/else:and#2.itm}
+load net {else:and#2.itm(6)} -pin  "else:and#2" {Z(6)} -attr vt d -attr @path {/markers/markers:core/else:and#2.itm}
+load net {else:and#2.itm(7)} -pin  "else:and#2" {Z(7)} -attr vt d -attr @path {/markers/markers:core/else:and#2.itm}
+load inst "mux" "mux(2,8)" "INTERFACE" -attr xrf 7976 -attr oid 80 -attr vt d -attr @path {/markers/markers:core/mux} -attr area 7.356384 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_mux(8,1,2)"
+load net {else:and#2.itm(0)} -pin  "mux" {A0(0)} -attr vt d -attr @path {/markers/markers:core/else:and#2.itm}
+load net {else:and#2.itm(1)} -pin  "mux" {A0(1)} -attr vt d -attr @path {/markers/markers:core/else:and#2.itm}
+load net {else:and#2.itm(2)} -pin  "mux" {A0(2)} -attr vt d -attr @path {/markers/markers:core/else:and#2.itm}
+load net {else:and#2.itm(3)} -pin  "mux" {A0(3)} -attr vt d -attr @path {/markers/markers:core/else:and#2.itm}
+load net {else:and#2.itm(4)} -pin  "mux" {A0(4)} -attr vt d -attr @path {/markers/markers:core/else:and#2.itm}
+load net {else:and#2.itm(5)} -pin  "mux" {A0(5)} -attr vt d -attr @path {/markers/markers:core/else:and#2.itm}
+load net {else:and#2.itm(6)} -pin  "mux" {A0(6)} -attr vt d -attr @path {/markers/markers:core/else:and#2.itm}
+load net {else:and#2.itm(7)} -pin  "mux" {A0(7)} -attr vt d -attr @path {/markers/markers:core/else:and#2.itm}
+load net {vin(2)} -pin  "mux" {A1(0)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#32.itm}
+load net {vin(3)} -pin  "mux" {A1(1)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#32.itm}
+load net {vin(4)} -pin  "mux" {A1(2)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#32.itm}
+load net {vin(5)} -pin  "mux" {A1(3)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#32.itm}
+load net {vin(6)} -pin  "mux" {A1(4)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#32.itm}
+load net {vin(7)} -pin  "mux" {A1(5)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#32.itm}
+load net {vin(8)} -pin  "mux" {A1(6)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#32.itm}
+load net {vin(9)} -pin  "mux" {A1(7)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#32.itm}
+load net {or#14.cse} -pin  "mux" {S(0)} -attr @path {/markers/markers:core/or#14.cse}
+load net {mux.itm(0)} -pin  "mux" {Z(0)} -attr vt d -attr @path {/markers/markers:core/mux.itm}
+load net {mux.itm(1)} -pin  "mux" {Z(1)} -attr vt d -attr @path {/markers/markers:core/mux.itm}
+load net {mux.itm(2)} -pin  "mux" {Z(2)} -attr vt d -attr @path {/markers/markers:core/mux.itm}
+load net {mux.itm(3)} -pin  "mux" {Z(3)} -attr vt d -attr @path {/markers/markers:core/mux.itm}
+load net {mux.itm(4)} -pin  "mux" {Z(4)} -attr vt d -attr @path {/markers/markers:core/mux.itm}
+load net {mux.itm(5)} -pin  "mux" {Z(5)} -attr vt d -attr @path {/markers/markers:core/mux.itm}
+load net {mux.itm(6)} -pin  "mux" {Z(6)} -attr vt d -attr @path {/markers/markers:core/mux.itm}
+load net {mux.itm(7)} -pin  "mux" {Z(7)} -attr vt d -attr @path {/markers/markers:core/mux.itm}
+load inst "else:aif#2:aif:not#1" "not(7)" "INTERFACE" -attr xrf 7977 -attr oid 81 -attr vt d -attr @path {/markers/markers:core/else:aif#2:aif:not#1} -attr area 0.001000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_not(7)"
+load net {vin(3)} -pin  "else:aif#2:aif:not#1" {A(0)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#20.itm}
+load net {vin(4)} -pin  "else:aif#2:aif:not#1" {A(1)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#20.itm}
+load net {vin(5)} -pin  "else:aif#2:aif:not#1" {A(2)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#20.itm}
+load net {vin(6)} -pin  "else:aif#2:aif:not#1" {A(3)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#20.itm}
+load net {vin(7)} -pin  "else:aif#2:aif:not#1" {A(4)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#20.itm}
+load net {vin(8)} -pin  "else:aif#2:aif:not#1" {A(5)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#20.itm}
+load net {vin(9)} -pin  "else:aif#2:aif:not#1" {A(6)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#20.itm}
+load net {else:aif#2:aif:not#1.itm(0)} -pin  "else:aif#2:aif:not#1" {Z(0)} -attr vt d -attr @path {/markers/markers:core/else:aif#2:aif:not#1.itm}
+load net {else:aif#2:aif:not#1.itm(1)} -pin  "else:aif#2:aif:not#1" {Z(1)} -attr vt d -attr @path {/markers/markers:core/else:aif#2:aif:not#1.itm}
+load net {else:aif#2:aif:not#1.itm(2)} -pin  "else:aif#2:aif:not#1" {Z(2)} -attr vt d -attr @path {/markers/markers:core/else:aif#2:aif:not#1.itm}
+load net {else:aif#2:aif:not#1.itm(3)} -pin  "else:aif#2:aif:not#1" {Z(3)} -attr vt d -attr @path {/markers/markers:core/else:aif#2:aif:not#1.itm}
+load net {else:aif#2:aif:not#1.itm(4)} -pin  "else:aif#2:aif:not#1" {Z(4)} -attr vt d -attr @path {/markers/markers:core/else:aif#2:aif:not#1.itm}
+load net {else:aif#2:aif:not#1.itm(5)} -pin  "else:aif#2:aif:not#1" {Z(5)} -attr vt d -attr @path {/markers/markers:core/else:aif#2:aif:not#1.itm}
+load net {else:aif#2:aif:not#1.itm(6)} -pin  "else:aif#2:aif:not#1" {Z(6)} -attr vt d -attr @path {/markers/markers:core/else:aif#2:aif:not#1.itm}
+load inst "else:if:acc#2" "add(7,-1,7,-1,7)" "INTERFACE" -attr xrf 7978 -attr oid 82 -attr vt d -attr @path {/markers/markers:core/else:if:acc#2} -attr area 9.258614 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(8,0,8,0,8)"
+load net {else:aif#2:aif:not#1.itm(0)} -pin  "else:if:acc#2" {A(0)} -attr vt d -attr @path {/markers/markers:core/slc(conc#23.itm)}
+load net {else:aif#2:aif:not#1.itm(1)} -pin  "else:if:acc#2" {A(1)} -attr vt d -attr @path {/markers/markers:core/slc(conc#23.itm)}
+load net {else:aif#2:aif:not#1.itm(2)} -pin  "else:if:acc#2" {A(2)} -attr vt d -attr @path {/markers/markers:core/slc(conc#23.itm)}
+load net {else:aif#2:aif:not#1.itm(3)} -pin  "else:if:acc#2" {A(3)} -attr vt d -attr @path {/markers/markers:core/slc(conc#23.itm)}
+load net {else:aif#2:aif:not#1.itm(4)} -pin  "else:if:acc#2" {A(4)} -attr vt d -attr @path {/markers/markers:core/slc(conc#23.itm)}
+load net {else:aif#2:aif:not#1.itm(5)} -pin  "else:if:acc#2" {A(5)} -attr vt d -attr @path {/markers/markers:core/slc(conc#23.itm)}
+load net {else:aif#2:aif:not#1.itm(6)} -pin  "else:if:acc#2" {A(6)} -attr vt d -attr @path {/markers/markers:core/slc(conc#23.itm)}
+load net {PWR} -pin  "else:if:acc#2" {B(0)} -attr @path {/markers/markers:core/C75_7}
+load net {PWR} -pin  "else:if:acc#2" {B(1)} -attr @path {/markers/markers:core/C75_7}
+load net {GND} -pin  "else:if:acc#2" {B(2)} -attr @path {/markers/markers:core/C75_7}
+load net {PWR} -pin  "else:if:acc#2" {B(3)} -attr @path {/markers/markers:core/C75_7}
+load net {GND} -pin  "else:if:acc#2" {B(4)} -attr @path {/markers/markers:core/C75_7}
+load net {GND} -pin  "else:if:acc#2" {B(5)} -attr @path {/markers/markers:core/C75_7}
+load net {PWR} -pin  "else:if:acc#2" {B(6)} -attr @path {/markers/markers:core/C75_7}
+load net {else:if:acc#2(0)} -pin  "else:if:acc#2" {Z(0)} -attr vt d -attr @path {/markers/markers:core/else:if:acc#2}
+load net {else:if:acc#2(1)} -pin  "else:if:acc#2" {Z(1)} -attr vt d -attr @path {/markers/markers:core/else:if:acc#2}
+load net {else:if:acc#2(2)} -pin  "else:if:acc#2" {Z(2)} -attr vt d -attr @path {/markers/markers:core/else:if:acc#2}
+load net {else:if:acc#2(3)} -pin  "else:if:acc#2" {Z(3)} -attr vt d -attr @path {/markers/markers:core/else:if:acc#2}
+load net {else:if:acc#2(4)} -pin  "else:if:acc#2" {Z(4)} -attr vt d -attr @path {/markers/markers:core/else:if:acc#2}
+load net {else:if:acc#2(5)} -pin  "else:if:acc#2" {Z(5)} -attr vt d -attr @path {/markers/markers:core/else:if:acc#2}
+load net {else:if:acc#2(6)} -pin  "else:if:acc#2" {Z(6)} -attr vt d -attr @path {/markers/markers:core/else:if:acc#2}
+load inst "mux#3" "mux(2,1)" "INTERFACE" -attr xrf 7979 -attr oid 83 -attr vt c -attr @path {/markers/markers:core/mux#3} -attr area 0.920423 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_mux(1,1,2)"
+load net {else:aif#2:slc.svs} -pin  "mux#3" {A0(0)} -attr @path {/markers/markers:core/else:aif#2:slc.svs}
+load net {else:aif#2:acc.itm(8)} -pin  "mux#3" {A1(0)} -attr @path {/markers/markers:core/else:aif#2:slc.svs:mx0w0}
+load net {or#17.cse} -pin  "mux#3" {S(0)} -attr vt c -attr @path {/markers/markers:core/or#17.cse}
+load net {mux#3.itm} -pin  "mux#3" {Z(0)} -attr vt c -attr @path {/markers/markers:core/mux#3.itm}
+load inst "mux#5" "mux(2,1)" "INTERFACE" -attr xrf 7980 -attr oid 84 -attr @path {/markers/markers:core/mux#5} -attr area 0.920423 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_mux(1,1,2)"
+load net {else:aif#1:slc.svs} -pin  "mux#5" {A0(0)} -attr @path {/markers/markers:core/else:aif#1:slc.svs}
+load net {else:aif#1:acc.itm(8)} -pin  "mux#5" {A1(0)} -attr @path {/markers/markers:core/else:aif#1:slc.itm}
+load net {or.dcpl#16} -pin  "mux#5" {S(0)} -attr @path {/markers/markers:core/or.dcpl#16}
+load net {mux#5.itm} -pin  "mux#5" {Z(0)} -attr @path {/markers/markers:core/mux#5.itm}
+load inst "else:if:nor" "nor(6,1)" "INTERFACE" -attr xrf 7981 -attr oid 85 -attr vt c -attr @path {/markers/markers:core/else:if:nor} -attr area 2.029408 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_nor(1,6)"
+load net {else:if:acc#2(6)} -pin  "else:if:nor" {A0(0)} -attr @path {/markers/markers:core/else:aif#2:aif:slc.itm}
+load net {mux#3.itm} -pin  "else:if:nor" {A1(0)} -attr vt c -attr @path {/markers/markers:core/mux#3.itm}
+load net {else:if:acc#1.itm(5)} -pin  "else:if:nor" {A2(0)} -attr @path {/markers/markers:core/else:aif#1:aif:slc.itm}
+load net {mux#5.itm} -pin  "else:if:nor" {A3(0)} -attr @path {/markers/markers:core/mux#5.itm}
+load net {else:aif:acc.itm(7)} -pin  "else:if:nor" {A4(0)} -attr @path {/markers/markers:core/else:aif:slc.itm}
+load net {else:if:acc.itm(7)} -pin  "else:if:nor" {A5(0)} -attr @path {/markers/markers:core/else:slc.itm}
+load net {else:if:nor.itm} -pin  "else:if:nor" {Z(0)} -attr vt c -attr @path {/markers/markers:core/else:if:nor.itm}
+load inst "aif#5:aif:not#1" "not(8)" "INTERFACE" -attr xrf 7982 -attr oid 86 -attr vt d -attr @path {/markers/markers:core/aif#5:aif:not#1} -attr area 0.001000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_not(8)"
+load net {vin(2)} -pin  "aif#5:aif:not#1" {A(0)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#25.itm}
+load net {vin(3)} -pin  "aif#5:aif:not#1" {A(1)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#25.itm}
+load net {vin(4)} -pin  "aif#5:aif:not#1" {A(2)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#25.itm}
+load net {vin(5)} -pin  "aif#5:aif:not#1" {A(3)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#25.itm}
+load net {vin(6)} -pin  "aif#5:aif:not#1" {A(4)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#25.itm}
+load net {vin(7)} -pin  "aif#5:aif:not#1" {A(5)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#25.itm}
+load net {vin(8)} -pin  "aif#5:aif:not#1" {A(6)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#25.itm}
+load net {vin(9)} -pin  "aif#5:aif:not#1" {A(7)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#25.itm}
+load net {aif#5:aif:not#1.itm(0)} -pin  "aif#5:aif:not#1" {Z(0)} -attr vt d -attr @path {/markers/markers:core/aif#5:aif:not#1.itm}
+load net {aif#5:aif:not#1.itm(1)} -pin  "aif#5:aif:not#1" {Z(1)} -attr vt d -attr @path {/markers/markers:core/aif#5:aif:not#1.itm}
+load net {aif#5:aif:not#1.itm(2)} -pin  "aif#5:aif:not#1" {Z(2)} -attr vt d -attr @path {/markers/markers:core/aif#5:aif:not#1.itm}
+load net {aif#5:aif:not#1.itm(3)} -pin  "aif#5:aif:not#1" {Z(3)} -attr vt d -attr @path {/markers/markers:core/aif#5:aif:not#1.itm}
+load net {aif#5:aif:not#1.itm(4)} -pin  "aif#5:aif:not#1" {Z(4)} -attr vt d -attr @path {/markers/markers:core/aif#5:aif:not#1.itm}
+load net {aif#5:aif:not#1.itm(5)} -pin  "aif#5:aif:not#1" {Z(5)} -attr vt d -attr @path {/markers/markers:core/aif#5:aif:not#1.itm}
+load net {aif#5:aif:not#1.itm(6)} -pin  "aif#5:aif:not#1" {Z(6)} -attr vt d -attr @path {/markers/markers:core/aif#5:aif:not#1.itm}
+load net {aif#5:aif:not#1.itm(7)} -pin  "aif#5:aif:not#1" {Z(7)} -attr vt d -attr @path {/markers/markers:core/aif#5:aif:not#1.itm}
+load inst "aif#5:aif:acc" "add(9,-1,7,0,9)" "INTERFACE" -attr xrf 7983 -attr oid 87 -attr vt d -attr @path {/markers/markers:core/aif#5:aif:acc} -attr area 10.000000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(9,0,8,1,9)"
+load net {aif#5:aif:not#1.itm(0)} -pin  "aif#5:aif:acc" {A(0)} -attr vt d -attr @path {/markers/markers:core/conc#24.itm}
+load net {aif#5:aif:not#1.itm(1)} -pin  "aif#5:aif:acc" {A(1)} -attr vt d -attr @path {/markers/markers:core/conc#24.itm}
+load net {aif#5:aif:not#1.itm(2)} -pin  "aif#5:aif:acc" {A(2)} -attr vt d -attr @path {/markers/markers:core/conc#24.itm}
+load net {aif#5:aif:not#1.itm(3)} -pin  "aif#5:aif:acc" {A(3)} -attr vt d -attr @path {/markers/markers:core/conc#24.itm}
+load net {aif#5:aif:not#1.itm(4)} -pin  "aif#5:aif:acc" {A(4)} -attr vt d -attr @path {/markers/markers:core/conc#24.itm}
+load net {aif#5:aif:not#1.itm(5)} -pin  "aif#5:aif:acc" {A(5)} -attr vt d -attr @path {/markers/markers:core/conc#24.itm}
+load net {aif#5:aif:not#1.itm(6)} -pin  "aif#5:aif:acc" {A(6)} -attr vt d -attr @path {/markers/markers:core/conc#24.itm}
+load net {aif#5:aif:not#1.itm(7)} -pin  "aif#5:aif:acc" {A(7)} -attr vt d -attr @path {/markers/markers:core/conc#24.itm}
+load net {PWR} -pin  "aif#5:aif:acc" {A(8)} -attr @path {/markers/markers:core/conc#24.itm}
+load net {PWR} -pin  "aif#5:aif:acc" {B(0)} -attr @path {/markers/markers:core/C109_7}
+load net {GND} -pin  "aif#5:aif:acc" {B(1)} -attr @path {/markers/markers:core/C109_7}
+load net {PWR} -pin  "aif#5:aif:acc" {B(2)} -attr @path {/markers/markers:core/C109_7}
+load net {PWR} -pin  "aif#5:aif:acc" {B(3)} -attr @path {/markers/markers:core/C109_7}
+load net {GND} -pin  "aif#5:aif:acc" {B(4)} -attr @path {/markers/markers:core/C109_7}
+load net {PWR} -pin  "aif#5:aif:acc" {B(5)} -attr @path {/markers/markers:core/C109_7}
+load net {PWR} -pin  "aif#5:aif:acc" {B(6)} -attr @path {/markers/markers:core/C109_7}
+load net {aif#5:aif:acc.itm(0)} -pin  "aif#5:aif:acc" {Z(0)} -attr vt d -attr @path {/markers/markers:core/aif#5:aif:acc.itm}
+load net {aif#5:aif:acc.itm(1)} -pin  "aif#5:aif:acc" {Z(1)} -attr vt d -attr @path {/markers/markers:core/aif#5:aif:acc.itm}
+load net {aif#5:aif:acc.itm(2)} -pin  "aif#5:aif:acc" {Z(2)} -attr vt d -attr @path {/markers/markers:core/aif#5:aif:acc.itm}
+load net {aif#5:aif:acc.itm(3)} -pin  "aif#5:aif:acc" {Z(3)} -attr vt d -attr @path {/markers/markers:core/aif#5:aif:acc.itm}
+load net {aif#5:aif:acc.itm(4)} -pin  "aif#5:aif:acc" {Z(4)} -attr vt d -attr @path {/markers/markers:core/aif#5:aif:acc.itm}
+load net {aif#5:aif:acc.itm(5)} -pin  "aif#5:aif:acc" {Z(5)} -attr vt d -attr @path {/markers/markers:core/aif#5:aif:acc.itm}
+load net {aif#5:aif:acc.itm(6)} -pin  "aif#5:aif:acc" {Z(6)} -attr vt d -attr @path {/markers/markers:core/aif#5:aif:acc.itm}
+load net {aif#5:aif:acc.itm(7)} -pin  "aif#5:aif:acc" {Z(7)} -attr vt d -attr @path {/markers/markers:core/aif#5:aif:acc.itm}
+load net {aif#5:aif:acc.itm(8)} -pin  "aif#5:aif:acc" {Z(8)} -attr vt d -attr @path {/markers/markers:core/aif#5:aif:acc.itm}
+load inst "aif#1:aif:not#1" "not(7)" "INTERFACE" -attr xrf 7984 -attr oid 88 -attr vt d -attr @path {/markers/markers:core/aif#1:aif:not#1} -attr area 0.001000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_not(7)"
+load net {vin(12)} -pin  "aif#1:aif:not#1" {A(0)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#6.itm}
+load net {vin(13)} -pin  "aif#1:aif:not#1" {A(1)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#6.itm}
+load net {vin(14)} -pin  "aif#1:aif:not#1" {A(2)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#6.itm}
+load net {vin(15)} -pin  "aif#1:aif:not#1" {A(3)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#6.itm}
+load net {vin(16)} -pin  "aif#1:aif:not#1" {A(4)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#6.itm}
+load net {vin(17)} -pin  "aif#1:aif:not#1" {A(5)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#6.itm}
+load net {vin(18)} -pin  "aif#1:aif:not#1" {A(6)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#6.itm}
+load net {aif#1:aif:not#1.itm(0)} -pin  "aif#1:aif:not#1" {Z(0)} -attr vt d -attr @path {/markers/markers:core/aif#1:aif:not#1.itm}
+load net {aif#1:aif:not#1.itm(1)} -pin  "aif#1:aif:not#1" {Z(1)} -attr vt d -attr @path {/markers/markers:core/aif#1:aif:not#1.itm}
+load net {aif#1:aif:not#1.itm(2)} -pin  "aif#1:aif:not#1" {Z(2)} -attr vt d -attr @path {/markers/markers:core/aif#1:aif:not#1.itm}
+load net {aif#1:aif:not#1.itm(3)} -pin  "aif#1:aif:not#1" {Z(3)} -attr vt d -attr @path {/markers/markers:core/aif#1:aif:not#1.itm}
+load net {aif#1:aif:not#1.itm(4)} -pin  "aif#1:aif:not#1" {Z(4)} -attr vt d -attr @path {/markers/markers:core/aif#1:aif:not#1.itm}
+load net {aif#1:aif:not#1.itm(5)} -pin  "aif#1:aif:not#1" {Z(5)} -attr vt d -attr @path {/markers/markers:core/aif#1:aif:not#1.itm}
+load net {aif#1:aif:not#1.itm(6)} -pin  "aif#1:aif:not#1" {Z(6)} -attr vt d -attr @path {/markers/markers:core/aif#1:aif:not#1.itm}
+load inst "aif#1:aif:acc" "add(7,0,6,1,8)" "INTERFACE" -attr xrf 7985 -attr oid 89 -attr vt d -attr @path {/markers/markers:core/aif#1:aif:acc} -attr area 8.000000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(7,0,7,1,8)"
+load net {aif#1:aif:not#1.itm(0)} -pin  "aif#1:aif:acc" {A(0)} -attr vt d -attr @path {/markers/markers:core/aif#1:aif:not#1.itm}
+load net {aif#1:aif:not#1.itm(1)} -pin  "aif#1:aif:acc" {A(1)} -attr vt d -attr @path {/markers/markers:core/aif#1:aif:not#1.itm}
+load net {aif#1:aif:not#1.itm(2)} -pin  "aif#1:aif:acc" {A(2)} -attr vt d -attr @path {/markers/markers:core/aif#1:aif:not#1.itm}
+load net {aif#1:aif:not#1.itm(3)} -pin  "aif#1:aif:acc" {A(3)} -attr vt d -attr @path {/markers/markers:core/aif#1:aif:not#1.itm}
+load net {aif#1:aif:not#1.itm(4)} -pin  "aif#1:aif:acc" {A(4)} -attr vt d -attr @path {/markers/markers:core/aif#1:aif:not#1.itm}
+load net {aif#1:aif:not#1.itm(5)} -pin  "aif#1:aif:acc" {A(5)} -attr vt d -attr @path {/markers/markers:core/aif#1:aif:not#1.itm}
+load net {aif#1:aif:not#1.itm(6)} -pin  "aif#1:aif:acc" {A(6)} -attr vt d -attr @path {/markers/markers:core/aif#1:aif:not#1.itm}
+load net {PWR} -pin  "aif#1:aif:acc" {B(0)} -attr @path {/markers/markers:core/Cn25_6}
+load net {PWR} -pin  "aif#1:aif:acc" {B(1)} -attr @path {/markers/markers:core/Cn25_6}
+load net {PWR} -pin  "aif#1:aif:acc" {B(2)} -attr @path {/markers/markers:core/Cn25_6}
+load net {GND} -pin  "aif#1:aif:acc" {B(3)} -attr @path {/markers/markers:core/Cn25_6}
+load net {GND} -pin  "aif#1:aif:acc" {B(4)} -attr @path {/markers/markers:core/Cn25_6}
+load net {PWR} -pin  "aif#1:aif:acc" {B(5)} -attr @path {/markers/markers:core/Cn25_6}
+load net {aif#1:aif:acc.itm(0)} -pin  "aif#1:aif:acc" {Z(0)} -attr vt d -attr @path {/markers/markers:core/aif#1:aif:acc.itm}
+load net {aif#1:aif:acc.itm(1)} -pin  "aif#1:aif:acc" {Z(1)} -attr vt d -attr @path {/markers/markers:core/aif#1:aif:acc.itm}
+load net {aif#1:aif:acc.itm(2)} -pin  "aif#1:aif:acc" {Z(2)} -attr vt d -attr @path {/markers/markers:core/aif#1:aif:acc.itm}
+load net {aif#1:aif:acc.itm(3)} -pin  "aif#1:aif:acc" {Z(3)} -attr vt d -attr @path {/markers/markers:core/aif#1:aif:acc.itm}
+load net {aif#1:aif:acc.itm(4)} -pin  "aif#1:aif:acc" {Z(4)} -attr vt d -attr @path {/markers/markers:core/aif#1:aif:acc.itm}
+load net {aif#1:aif:acc.itm(5)} -pin  "aif#1:aif:acc" {Z(5)} -attr vt d -attr @path {/markers/markers:core/aif#1:aif:acc.itm}
+load net {aif#1:aif:acc.itm(6)} -pin  "aif#1:aif:acc" {Z(6)} -attr vt d -attr @path {/markers/markers:core/aif#1:aif:acc.itm}
+load net {aif#1:aif:acc.itm(7)} -pin  "aif#1:aif:acc" {Z(7)} -attr vt d -attr @path {/markers/markers:core/aif#1:aif:acc.itm}
+load inst "aif:not#1" "not(7)" "INTERFACE" -attr xrf 7986 -attr oid 90 -attr vt d -attr @path {/markers/markers:core/aif:not#1} -attr area 0.001000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_not(7)"
+load net {vin(23)} -pin  "aif:not#1" {A(0)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#29.itm}
+load net {vin(24)} -pin  "aif:not#1" {A(1)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#29.itm}
+load net {vin(25)} -pin  "aif:not#1" {A(2)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#29.itm}
+load net {vin(26)} -pin  "aif:not#1" {A(3)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#29.itm}
+load net {vin(27)} -pin  "aif:not#1" {A(4)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#29.itm}
+load net {vin(28)} -pin  "aif:not#1" {A(5)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#29.itm}
+load net {vin(29)} -pin  "aif:not#1" {A(6)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#29.itm}
+load net {aif:not#1.itm(0)} -pin  "aif:not#1" {Z(0)} -attr vt d -attr @path {/markers/markers:core/aif:not#1.itm}
+load net {aif:not#1.itm(1)} -pin  "aif:not#1" {Z(1)} -attr vt d -attr @path {/markers/markers:core/aif:not#1.itm}
+load net {aif:not#1.itm(2)} -pin  "aif:not#1" {Z(2)} -attr vt d -attr @path {/markers/markers:core/aif:not#1.itm}
+load net {aif:not#1.itm(3)} -pin  "aif:not#1" {Z(3)} -attr vt d -attr @path {/markers/markers:core/aif:not#1.itm}
+load net {aif:not#1.itm(4)} -pin  "aif:not#1" {Z(4)} -attr vt d -attr @path {/markers/markers:core/aif:not#1.itm}
+load net {aif:not#1.itm(5)} -pin  "aif:not#1" {Z(5)} -attr vt d -attr @path {/markers/markers:core/aif:not#1.itm}
+load net {aif:not#1.itm(6)} -pin  "aif:not#1" {Z(6)} -attr vt d -attr @path {/markers/markers:core/aif:not#1.itm}
+load inst "if:acc#1" "add(7,-1,7,-1,7)" "INTERFACE" -attr xrf 7987 -attr oid 91 -attr vt d -attr @path {/markers/markers:core/if:acc#1} -attr area 9.258614 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(8,0,8,0,8)"
+load net {aif:not#1.itm(0)} -pin  "if:acc#1" {A(0)} -attr vt d -attr @path {/markers/markers:core/slc(conc#25.itm)}
+load net {aif:not#1.itm(1)} -pin  "if:acc#1" {A(1)} -attr vt d -attr @path {/markers/markers:core/slc(conc#25.itm)}
+load net {aif:not#1.itm(2)} -pin  "if:acc#1" {A(2)} -attr vt d -attr @path {/markers/markers:core/slc(conc#25.itm)}
+load net {aif:not#1.itm(3)} -pin  "if:acc#1" {A(3)} -attr vt d -attr @path {/markers/markers:core/slc(conc#25.itm)}
+load net {aif:not#1.itm(4)} -pin  "if:acc#1" {A(4)} -attr vt d -attr @path {/markers/markers:core/slc(conc#25.itm)}
+load net {aif:not#1.itm(5)} -pin  "if:acc#1" {A(5)} -attr vt d -attr @path {/markers/markers:core/slc(conc#25.itm)}
+load net {aif:not#1.itm(6)} -pin  "if:acc#1" {A(6)} -attr vt d -attr @path {/markers/markers:core/slc(conc#25.itm)}
+load net {PWR} -pin  "if:acc#1" {B(0)} -attr @path {/markers/markers:core/C73_7}
+load net {GND} -pin  "if:acc#1" {B(1)} -attr @path {/markers/markers:core/C73_7}
+load net {GND} -pin  "if:acc#1" {B(2)} -attr @path {/markers/markers:core/C73_7}
+load net {PWR} -pin  "if:acc#1" {B(3)} -attr @path {/markers/markers:core/C73_7}
+load net {GND} -pin  "if:acc#1" {B(4)} -attr @path {/markers/markers:core/C73_7}
+load net {GND} -pin  "if:acc#1" {B(5)} -attr @path {/markers/markers:core/C73_7}
+load net {PWR} -pin  "if:acc#1" {B(6)} -attr @path {/markers/markers:core/C73_7}
+load net {if:acc#1(0)} -pin  "if:acc#1" {Z(0)} -attr vt d -attr @path {/markers/markers:core/if:acc#1}
+load net {if:acc#1(1)} -pin  "if:acc#1" {Z(1)} -attr vt d -attr @path {/markers/markers:core/if:acc#1}
+load net {if:acc#1(2)} -pin  "if:acc#1" {Z(2)} -attr vt d -attr @path {/markers/markers:core/if:acc#1}
+load net {if:acc#1(3)} -pin  "if:acc#1" {Z(3)} -attr vt d -attr @path {/markers/markers:core/if:acc#1}
+load net {if:acc#1(4)} -pin  "if:acc#1" {Z(4)} -attr vt d -attr @path {/markers/markers:core/if:acc#1}
+load net {if:acc#1(5)} -pin  "if:acc#1" {Z(5)} -attr vt d -attr @path {/markers/markers:core/if:acc#1}
+load net {if:acc#1(6)} -pin  "if:acc#1" {Z(6)} -attr vt d -attr @path {/markers/markers:core/if:acc#1}
+load inst "if:acc" "add(4,0,4,1,5)" "INTERFACE" -attr xrf 7988 -attr oid 92 -attr vt d -attr @path {/markers/markers:core/if:acc} -attr area 5.000000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(4,0,4,1,5)"
+load net {vin(26)} -pin  "if:acc" {A(0)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#3.itm}
+load net {vin(27)} -pin  "if:acc" {A(1)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#3.itm}
+load net {vin(28)} -pin  "if:acc" {A(2)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#3.itm}
+load net {vin(29)} -pin  "if:acc" {A(3)} -attr vt d -attr @path {/markers/markers:core/slc(vin)#3.itm}
+load net {PWR} -pin  "if:acc" {B(0)} -attr @path {/markers/markers:core/Cn5_4}
+load net {PWR} -pin  "if:acc" {B(1)} -attr @path {/markers/markers:core/Cn5_4}
+load net {GND} -pin  "if:acc" {B(2)} -attr @path {/markers/markers:core/Cn5_4}
+load net {PWR} -pin  "if:acc" {B(3)} -attr @path {/markers/markers:core/Cn5_4}
+load net {if:acc.itm(0)} -pin  "if:acc" {Z(0)} -attr vt d -attr @path {/markers/markers:core/if:acc.itm}
+load net {if:acc.itm(1)} -pin  "if:acc" {Z(1)} -attr vt d -attr @path {/markers/markers:core/if:acc.itm}
+load net {if:acc.itm(2)} -pin  "if:acc" {Z(2)} -attr vt d -attr @path {/markers/markers:core/if:acc.itm}
+load net {if:acc.itm(3)} -pin  "if:acc" {Z(3)} -attr vt d -attr @path {/markers/markers:core/if:acc.itm}
+load net {if:acc.itm(4)} -pin  "if:acc" {Z(4)} -attr vt d -attr @path {/markers/markers:core/if:acc.itm}
+load inst "or#16" "or(2,1)" "INTERFACE" -attr vt c -attr @path {/markers/markers:core/or#16} -attr area 0.730832 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_or(1,2)"
+load net {else:if:acc.itm(7)} -pin  "or#16" {A0(0)} -attr vt c -attr @path {/markers/markers:core/else:slc#1.itm}
+load net {else:aif:acc.itm(7)} -pin  "or#16" {A1(0)} -attr @path {/markers/markers:core/else:aif:slc#1.itm}
+load net {or.dcpl#16} -pin  "or#16" {Z(0)} -attr vt c -attr @path {/markers/markers:core/or.dcpl#16}
+load inst "or#17" "or(3,1)" "INTERFACE" -attr vt c -attr @path {/markers/markers:core/or#17} -attr area 1.055476 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_or(1,3)"
+load net {or.dcpl#16} -pin  "or#17" {A0(0)} -attr vt c -attr @path {/markers/markers:core/or.dcpl#16}
+load net {else:aif#1:acc.itm(8)} -pin  "or#17" {A1(0)} -attr @path {/markers/markers:core/else:aif#1:slc#1.itm}
+load net {else:if:acc#1.itm(5)} -pin  "or#17" {A2(0)} -attr @path {/markers/markers:core/else:aif#1:aif:slc#1.itm}
+load net {or#17.cse} -pin  "or#17" {Z(0)} -attr vt c -attr @path {/markers/markers:core/or#17.cse}
+load inst "reg(vout:rsc:mgc_out_stdreg.d)" "reg(8,1,1,-1,0)" "INTERFACE" -attr xrf 7989 -attr oid 93 -attr vt dc -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d)}
+load net {mux#2.itm(0)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {D(0)} -attr vt dc -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d).itm}
+load net {mux#2.itm(1)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {D(1)} -attr vt dc -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d).itm}
+load net {mux#2.itm(2)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {D(2)} -attr vt dc -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d).itm}
+load net {mux#2.itm(3)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {D(3)} -attr vt dc -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d).itm}
+load net {mux#2.itm(4)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {D(4)} -attr vt dc -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d).itm}
+load net {mux#2.itm(5)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {D(5)} -attr vt dc -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d).itm}
+load net {mux#2.itm(6)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {D(6)} -attr vt dc -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d).itm}
+load net {mux#2.itm(7)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {D(7)} -attr vt dc -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d).itm}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {DRa(0)} -attr @path {/markers/markers:core/C0_30#1}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {DRa(1)} -attr @path {/markers/markers:core/C0_30#1}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {DRa(2)} -attr @path {/markers/markers:core/C0_30#1}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {DRa(3)} -attr @path {/markers/markers:core/C0_30#1}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {DRa(4)} -attr @path {/markers/markers:core/C0_30#1}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {DRa(5)} -attr @path {/markers/markers:core/C0_30#1}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {DRa(6)} -attr @path {/markers/markers:core/C0_30#1}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {DRa(7)} -attr @path {/markers/markers:core/C0_30#1}
+load net {clk} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {clk} -attr xrf 7990 -attr oid 94 -attr @path {/markers/markers:core/clk}
+load net {en} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {en(0)} -attr @path {/markers/markers:core/en}
+load net {arst_n} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {Ra(0)} -attr @path {/markers/markers:core/arst_n}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(0)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {Z(0)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(1)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {Z(1)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(2)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {Z(2)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(3)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {Z(3)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(4)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {Z(4)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(5)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {Z(5)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(6)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {Z(6)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(7)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {Z(7)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp}
+load inst "reg(vout:rsc:mgc_out_stdreg.d)#1" "reg(8,1,1,-1,0)" "INTERFACE" -attr xrf 7991 -attr oid 95 -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d)#1}
+load net {mux#1.itm(0)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {D(0)} -attr vt d -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d)#1.itm}
+load net {mux#1.itm(1)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {D(1)} -attr vt d -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d)#1.itm}
+load net {mux#1.itm(2)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {D(2)} -attr vt d -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d)#1.itm}
+load net {mux#1.itm(3)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {D(3)} -attr vt d -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d)#1.itm}
+load net {mux#1.itm(4)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {D(4)} -attr vt d -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d)#1.itm}
+load net {mux#1.itm(5)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {D(5)} -attr vt d -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d)#1.itm}
+load net {mux#1.itm(6)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {D(6)} -attr vt d -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d)#1.itm}
+load net {mux#1.itm(7)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {D(7)} -attr vt d -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d)#1.itm}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {DRa(0)} -attr @path {/markers/markers:core/C0_30#4}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {DRa(1)} -attr @path {/markers/markers:core/C0_30#4}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {DRa(2)} -attr @path {/markers/markers:core/C0_30#4}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {DRa(3)} -attr @path {/markers/markers:core/C0_30#4}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {DRa(4)} -attr @path {/markers/markers:core/C0_30#4}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {DRa(5)} -attr @path {/markers/markers:core/C0_30#4}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {DRa(6)} -attr @path {/markers/markers:core/C0_30#4}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {DRa(7)} -attr @path {/markers/markers:core/C0_30#4}
+load net {clk} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {clk} -attr xrf 7992 -attr oid 96 -attr @path {/markers/markers:core/clk}
+load net {en} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {en(0)} -attr @path {/markers/markers:core/en}
+load net {arst_n} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {Ra(0)} -attr @path {/markers/markers:core/arst_n}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(0)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {Z(0)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp#1}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(1)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {Z(1)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp#1}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(2)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {Z(2)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp#1}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(3)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {Z(3)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp#1}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(4)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {Z(4)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp#1}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(5)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {Z(5)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp#1}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(6)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {Z(6)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp#1}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#1(7)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {Z(7)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp#1}
+load inst "reg(vout:rsc:mgc_out_stdreg.d)#2" "reg(8,1,1,-1,0)" "INTERFACE" -attr xrf 7993 -attr oid 97 -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d)#2}
+load net {mux.itm(0)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#2" {D(0)} -attr vt d -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d)#2.itm}
+load net {mux.itm(1)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#2" {D(1)} -attr vt d -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d)#2.itm}
+load net {mux.itm(2)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#2" {D(2)} -attr vt d -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d)#2.itm}
+load net {mux.itm(3)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#2" {D(3)} -attr vt d -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d)#2.itm}
+load net {mux.itm(4)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#2" {D(4)} -attr vt d -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d)#2.itm}
+load net {mux.itm(5)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#2" {D(5)} -attr vt d -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d)#2.itm}
+load net {mux.itm(6)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#2" {D(6)} -attr vt d -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d)#2.itm}
+load net {mux.itm(7)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#2" {D(7)} -attr vt d -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d)#2.itm}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#2" {DRa(0)} -attr @path {/markers/markers:core/C0_30#7}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#2" {DRa(1)} -attr @path {/markers/markers:core/C0_30#7}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#2" {DRa(2)} -attr @path {/markers/markers:core/C0_30#7}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#2" {DRa(3)} -attr @path {/markers/markers:core/C0_30#7}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#2" {DRa(4)} -attr @path {/markers/markers:core/C0_30#7}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#2" {DRa(5)} -attr @path {/markers/markers:core/C0_30#7}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#2" {DRa(6)} -attr @path {/markers/markers:core/C0_30#7}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#2" {DRa(7)} -attr @path {/markers/markers:core/C0_30#7}
+load net {clk} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#2" {clk} -attr xrf 7994 -attr oid 98 -attr @path {/markers/markers:core/clk}
+load net {en} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#2" {en(0)} -attr @path {/markers/markers:core/en}
+load net {arst_n} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#2" {Ra(0)} -attr @path {/markers/markers:core/arst_n}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(0)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#2" {Z(0)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp#2}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(1)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#2" {Z(1)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp#2}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(2)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#2" {Z(2)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp#2}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(3)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#2" {Z(3)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp#2}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(4)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#2" {Z(4)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp#2}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(5)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#2" {Z(5)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp#2}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(6)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#2" {Z(6)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp#2}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp#2(7)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#2" {Z(7)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp#2}
+### END MODULE 
+
+module new "markers" "orig"
+load portBus {vin(89:0)} input 90 {vin(89)} {vin(88)} {vin(87)} {vin(86)} {vin(85)} {vin(84)} {vin(83)} {vin(82)} {vin(81)} {vin(80)} {vin(79)} {vin(78)} {vin(77)} {vin(76)} {vin(75)} {vin(74)} {vin(73)} {vin(72)} {vin(71)} {vin(70)} {vin(69)} {vin(68)} {vin(67)} {vin(66)} {vin(65)} {vin(64)} {vin(63)} {vin(62)} {vin(61)} {vin(60)} {vin(59)} {vin(58)} {vin(57)} {vin(56)} {vin(55)} {vin(54)} {vin(53)} {vin(52)} {vin(51)} {vin(50)} {vin(49)} {vin(48)} {vin(47)} {vin(46)} {vin(45)} {vin(44)} {vin(43)} {vin(42)} {vin(41)} {vin(40)} {vin(39)} {vin(38)} {vin(37)} {vin(36)} {vin(35)} {vin(34)} {vin(33)} {vin(32)} {vin(31)} {vin(30)} {vin(29)} {vin(28)} {vin(27)} {vin(26)} {vin(25)} {vin(24)} {vin(23)} {vin(22)} {vin(21)} {vin(20)} {vin(19)} {vin(18)} {vin(17)} {vin(16)} {vin(15)} {vin(14)} {vin(13)} {vin(12)} {vin(11)} {vin(10)} {vin(9)} {vin(8)} {vin(7)} {vin(6)} {vin(5)} {vin(4)} {vin(3)} {vin(2)} {vin(1)} {vin(0)} -attr xrf 7995 -attr oid 99 -attr vt d -attr @path {/markers/vin}
+load portBus {vout:rsc.z(29:0)} output 30 {vout:rsc.z(29)} {vout:rsc.z(28)} {vout:rsc.z(27)} {vout:rsc.z(26)} {vout:rsc.z(25)} {vout:rsc.z(24)} {vout:rsc.z(23)} {vout:rsc.z(22)} {vout:rsc.z(21)} {vout:rsc.z(20)} {vout:rsc.z(19)} {vout:rsc.z(18)} {vout:rsc.z(17)} {vout:rsc.z(16)} {vout:rsc.z(15)} {vout:rsc.z(14)} {vout:rsc.z(13)} {vout:rsc.z(12)} {vout:rsc.z(11)} {vout:rsc.z(10)} {vout:rsc.z(9)} {vout:rsc.z(8)} {vout:rsc.z(7)} {vout:rsc.z(6)} {vout:rsc.z(5)} {vout:rsc.z(4)} {vout:rsc.z(3)} {vout:rsc.z(2)} {vout:rsc.z(1)} {vout:rsc.z(0)} -attr xrf 7996 -attr oid 100 -attr vt d -attr @path {/markers/vout:rsc.z}
+load portBus {vga_xy(19:0)} input 20 {vga_xy(19)} {vga_xy(18)} {vga_xy(17)} {vga_xy(16)} {vga_xy(15)} {vga_xy(14)} {vga_xy(13)} {vga_xy(12)} {vga_xy(11)} {vga_xy(10)} {vga_xy(9)} {vga_xy(8)} {vga_xy(7)} {vga_xy(6)} {vga_xy(5)} {vga_xy(4)} {vga_xy(3)} {vga_xy(2)} {vga_xy(1)} {vga_xy(0)} -attr xrf 7997 -attr oid 101 -attr vt d -attr @path {/markers/vga_xy}
+load portBus {volume:rsc.z(7:0)} output 8 {volume:rsc.z(7)} {volume:rsc.z(6)} {volume:rsc.z(5)} {volume:rsc.z(4)} {volume:rsc.z(3)} {volume:rsc.z(2)} {volume:rsc.z(1)} {volume:rsc.z(0)} -attr xrf 7998 -attr oid 102 -attr vt d -attr @path {/markers/volume:rsc.z}
+load port {clk} input -attr xrf 7999 -attr oid 103 -attr vt d -attr @path {/markers/clk}
+load port {en} input -attr xrf 8000 -attr oid 104 -attr vt d -attr @path {/markers/en}
+load port {arst_n} input -attr xrf 8001 -attr oid 105 -attr vt d -attr @path {/markers/arst_n}
+load symbol "mgc_ioport.mgc_out_stdreg(2,30)" "INTERFACE" GEN boxcolor 0 \
+     portBus {d(29:0)} input 30 {d(29)} {d(28)} {d(27)} {d(26)} {d(25)} {d(24)} {d(23)} {d(22)} {d(21)} {d(20)} {d(19)} {d(18)} {d(17)} {d(16)} {d(15)} {d(14)} {d(13)} {d(12)} {d(11)} {d(10)} {d(9)} {d(8)} {d(7)} {d(6)} {d(5)} {d(4)} {d(3)} {d(2)} {d(1)} {d(0)} \
+     portBus {z(29:0)} output 30 {z(29)} {z(28)} {z(27)} {z(26)} {z(25)} {z(24)} {z(23)} {z(22)} {z(21)} {z(20)} {z(19)} {z(18)} {z(17)} {z(16)} {z(15)} {z(14)} {z(13)} {z(12)} {z(11)} {z(10)} {z(9)} {z(8)} {z(7)} {z(6)} {z(5)} {z(4)} {z(3)} {z(2)} {z(1)} {z(0)} \
+
+load symbol "mgc_ioport.mgc_out_stdreg(4,8)" "INTERFACE" GEN boxcolor 0 \
+     portBus {d(7:0)} input 8 {d(7)} {d(6)} {d(5)} {d(4)} {d(3)} {d(2)} {d(1)} {d(0)} \
+     portBus {z(7:0)} output 8 {z(7)} {z(6)} {z(5)} {z(4)} {z(3)} {z(2)} {z(1)} {z(0)} \
+
+load symbol "markers:core" "orig" GEN \
+     portBus {vin#1(89:0)} input 90 {vin#1(89)} {vin#1(88)} {vin#1(87)} {vin#1(86)} {vin#1(85)} {vin#1(84)} {vin#1(83)} {vin#1(82)} {vin#1(81)} {vin#1(80)} {vin#1(79)} {vin#1(78)} {vin#1(77)} {vin#1(76)} {vin#1(75)} {vin#1(74)} {vin#1(73)} {vin#1(72)} {vin#1(71)} {vin#1(70)} {vin#1(69)} {vin#1(68)} {vin#1(67)} {vin#1(66)} {vin#1(65)} {vin#1(64)} {vin#1(63)} {vin#1(62)} {vin#1(61)} {vin#1(60)} {vin#1(59)} {vin#1(58)} {vin#1(57)} {vin#1(56)} {vin#1(55)} {vin#1(54)} {vin#1(53)} {vin#1(52)} {vin#1(51)} {vin#1(50)} {vin#1(49)} {vin#1(48)} {vin#1(47)} {vin#1(46)} {vin#1(45)} {vin#1(44)} {vin#1(43)} {vin#1(42)} {vin#1(41)} {vin#1(40)} {vin#1(39)} {vin#1(38)} {vin#1(37)} {vin#1(36)} {vin#1(35)} {vin#1(34)} {vin#1(33)} {vin#1(32)} {vin#1(31)} {vin#1(30)} {vin#1(29)} {vin#1(28)} {vin#1(27)} {vin#1(26)} {vin#1(25)} {vin#1(24)} {vin#1(23)} {vin#1(22)} {vin#1(21)} {vin#1(20)} {vin#1(19)} {vin#1(18)} {vin#1(17)} {vin#1(16)} {vin#1(15)} {vin#1(14)} {vin#1(13)} {vin#1(12)} {vin#1(11)} {vin#1(10)} {vin#1(9)} {vin#1(8)} {vin#1(7)} {vin#1(6)} {vin#1(5)} {vin#1(4)} {vin#1(3)} {vin#1(2)} {vin#1(1)} {vin#1(0)} \
+     port {clk#1} input \
+     port {en#1} input \
+     port {arst_n#1} input \
+     portBus {vout:rsc:mgc_out_stdreg.d(29:0)} output 30 {vout:rsc:mgc_out_stdreg.d(29)} {vout:rsc:mgc_out_stdreg.d(28)} {vout:rsc:mgc_out_stdreg.d(27)} {vout:rsc:mgc_out_stdreg.d(26)} {vout:rsc:mgc_out_stdreg.d(25)} {vout:rsc:mgc_out_stdreg.d(24)} {vout:rsc:mgc_out_stdreg.d(23)} {vout:rsc:mgc_out_stdreg.d(22)} {vout:rsc:mgc_out_stdreg.d(21)} {vout:rsc:mgc_out_stdreg.d(20)} {vout:rsc:mgc_out_stdreg.d(19)} {vout:rsc:mgc_out_stdreg.d(18)} {vout:rsc:mgc_out_stdreg.d(17)} {vout:rsc:mgc_out_stdreg.d(16)} {vout:rsc:mgc_out_stdreg.d(15)} {vout:rsc:mgc_out_stdreg.d(14)} {vout:rsc:mgc_out_stdreg.d(13)} {vout:rsc:mgc_out_stdreg.d(12)} {vout:rsc:mgc_out_stdreg.d(11)} {vout:rsc:mgc_out_stdreg.d(10)} {vout:rsc:mgc_out_stdreg.d(9)} {vout:rsc:mgc_out_stdreg.d(8)} {vout:rsc:mgc_out_stdreg.d(7)} {vout:rsc:mgc_out_stdreg.d(6)} {vout:rsc:mgc_out_stdreg.d(5)} {vout:rsc:mgc_out_stdreg.d(4)} {vout:rsc:mgc_out_stdreg.d(3)} {vout:rsc:mgc_out_stdreg.d(2)} {vout:rsc:mgc_out_stdreg.d(1)} {vout:rsc:mgc_out_stdreg.d(0)} \
+
+load net {vout:rsc:mgc_out_stdreg.d#1(0)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(1)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(2)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(3)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(4)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(5)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(6)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(7)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(8)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(9)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(10)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(11)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(12)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(13)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(14)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(15)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(16)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(17)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(18)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(19)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(20)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(21)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(22)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(23)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(24)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(25)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(26)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(27)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(28)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(29)} -attr vt d
+load netBundle {vout:rsc:mgc_out_stdreg.d#1} 30 {vout:rsc:mgc_out_stdreg.d#1(0)} {vout:rsc:mgc_out_stdreg.d#1(1)} {vout:rsc:mgc_out_stdreg.d#1(2)} {vout:rsc:mgc_out_stdreg.d#1(3)} {vout:rsc:mgc_out_stdreg.d#1(4)} {vout:rsc:mgc_out_stdreg.d#1(5)} {vout:rsc:mgc_out_stdreg.d#1(6)} {vout:rsc:mgc_out_stdreg.d#1(7)} {vout:rsc:mgc_out_stdreg.d#1(8)} {vout:rsc:mgc_out_stdreg.d#1(9)} {vout:rsc:mgc_out_stdreg.d#1(10)} {vout:rsc:mgc_out_stdreg.d#1(11)} {vout:rsc:mgc_out_stdreg.d#1(12)} {vout:rsc:mgc_out_stdreg.d#1(13)} {vout:rsc:mgc_out_stdreg.d#1(14)} {vout:rsc:mgc_out_stdreg.d#1(15)} {vout:rsc:mgc_out_stdreg.d#1(16)} {vout:rsc:mgc_out_stdreg.d#1(17)} {vout:rsc:mgc_out_stdreg.d#1(18)} {vout:rsc:mgc_out_stdreg.d#1(19)} {vout:rsc:mgc_out_stdreg.d#1(20)} {vout:rsc:mgc_out_stdreg.d#1(21)} {vout:rsc:mgc_out_stdreg.d#1(22)} {vout:rsc:mgc_out_stdreg.d#1(23)} {vout:rsc:mgc_out_stdreg.d#1(24)} {vout:rsc:mgc_out_stdreg.d#1(25)} {vout:rsc:mgc_out_stdreg.d#1(26)} {vout:rsc:mgc_out_stdreg.d#1(27)} {vout:rsc:mgc_out_stdreg.d#1(28)} {vout:rsc:mgc_out_stdreg.d#1(29)} -attr xrf 8002 -attr oid 106 -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vin(0)} -attr vt d
+load net {vin(1)} -attr vt d
+load net {vin(2)} -attr vt d
+load net {vin(3)} -attr vt d
+load net {vin(4)} -attr vt d
+load net {vin(5)} -attr vt d
+load net {vin(6)} -attr vt d
+load net {vin(7)} -attr vt d
+load net {vin(8)} -attr vt d
+load net {vin(9)} -attr vt d
+load net {vin(10)} -attr vt d
+load net {vin(11)} -attr vt d
+load net {vin(12)} -attr vt d
+load net {vin(13)} -attr vt d
+load net {vin(14)} -attr vt d
+load net {vin(15)} -attr vt d
+load net {vin(16)} -attr vt d
+load net {vin(17)} -attr vt d
+load net {vin(18)} -attr vt d
+load net {vin(19)} -attr vt d
+load net {vin(20)} -attr vt d
+load net {vin(21)} -attr vt d
+load net {vin(22)} -attr vt d
+load net {vin(23)} -attr vt d
+load net {vin(24)} -attr vt d
+load net {vin(25)} -attr vt d
+load net {vin(26)} -attr vt d
+load net {vin(27)} -attr vt d
+load net {vin(28)} -attr vt d
+load net {vin(29)} -attr vt d
+load net {vin(30)} -attr vt d
+load net {vin(31)} -attr vt d
+load net {vin(32)} -attr vt d
+load net {vin(33)} -attr vt d
+load net {vin(34)} -attr vt d
+load net {vin(35)} -attr vt d
+load net {vin(36)} -attr vt d
+load net {vin(37)} -attr vt d
+load net {vin(38)} -attr vt d
+load net {vin(39)} -attr vt d
+load net {vin(40)} -attr vt d
+load net {vin(41)} -attr vt d
+load net {vin(42)} -attr vt d
+load net {vin(43)} -attr vt d
+load net {vin(44)} -attr vt d
+load net {vin(45)} -attr vt d
+load net {vin(46)} -attr vt d
+load net {vin(47)} -attr vt d
+load net {vin(48)} -attr vt d
+load net {vin(49)} -attr vt d
+load net {vin(50)} -attr vt d
+load net {vin(51)} -attr vt d
+load net {vin(52)} -attr vt d
+load net {vin(53)} -attr vt d
+load net {vin(54)} -attr vt d
+load net {vin(55)} -attr vt d
+load net {vin(56)} -attr vt d
+load net {vin(57)} -attr vt d
+load net {vin(58)} -attr vt d
+load net {vin(59)} -attr vt d
+load net {vin(60)} -attr vt d
+load net {vin(61)} -attr vt d
+load net {vin(62)} -attr vt d
+load net {vin(63)} -attr vt d
+load net {vin(64)} -attr vt d
+load net {vin(65)} -attr vt d
+load net {vin(66)} -attr vt d
+load net {vin(67)} -attr vt d
+load net {vin(68)} -attr vt d
+load net {vin(69)} -attr vt d
+load net {vin(70)} -attr vt d
+load net {vin(71)} -attr vt d
+load net {vin(72)} -attr vt d
+load net {vin(73)} -attr vt d
+load net {vin(74)} -attr vt d
+load net {vin(75)} -attr vt d
+load net {vin(76)} -attr vt d
+load net {vin(77)} -attr vt d
+load net {vin(78)} -attr vt d
+load net {vin(79)} -attr vt d
+load net {vin(80)} -attr vt d
+load net {vin(81)} -attr vt d
+load net {vin(82)} -attr vt d
+load net {vin(83)} -attr vt d
+load net {vin(84)} -attr vt d
+load net {vin(85)} -attr vt d
+load net {vin(86)} -attr vt d
+load net {vin(87)} -attr vt d
+load net {vin(88)} -attr vt d
+load net {vin(89)} -attr vt d
+load netBundle {vin} 90 {vin(0)} {vin(1)} {vin(2)} {vin(3)} {vin(4)} {vin(5)} {vin(6)} {vin(7)} {vin(8)} {vin(9)} {vin(10)} {vin(11)} {vin(12)} {vin(13)} {vin(14)} {vin(15)} {vin(16)} {vin(17)} {vin(18)} {vin(19)} {vin(20)} {vin(21)} {vin(22)} {vin(23)} {vin(24)} {vin(25)} {vin(26)} {vin(27)} {vin(28)} {vin(29)} {vin(30)} {vin(31)} {vin(32)} {vin(33)} {vin(34)} {vin(35)} {vin(36)} {vin(37)} {vin(38)} {vin(39)} {vin(40)} {vin(41)} {vin(42)} {vin(43)} {vin(44)} {vin(45)} {vin(46)} {vin(47)} {vin(48)} {vin(49)} {vin(50)} {vin(51)} {vin(52)} {vin(53)} {vin(54)} {vin(55)} {vin(56)} {vin(57)} {vin(58)} {vin(59)} {vin(60)} {vin(61)} {vin(62)} {vin(63)} {vin(64)} {vin(65)} {vin(66)} {vin(67)} {vin(68)} {vin(69)} {vin(70)} {vin(71)} {vin(72)} {vin(73)} {vin(74)} {vin(75)} {vin(76)} {vin(77)} {vin(78)} {vin(79)} {vin(80)} {vin(81)} {vin(82)} {vin(83)} {vin(84)} {vin(85)} {vin(86)} {vin(87)} {vin(88)} {vin(89)} -attr xrf 8003 -attr oid 107 -attr vt d -attr @path {/markers/vin}
+load net {vin(0)} -port {vin(0)} -attr vt d
+load net {vin(1)} -port {vin(1)} -attr vt d
+load net {vin(2)} -port {vin(2)} -attr vt d
+load net {vin(3)} -port {vin(3)} -attr vt d
+load net {vin(4)} -port {vin(4)} -attr vt d
+load net {vin(5)} -port {vin(5)} -attr vt d
+load net {vin(6)} -port {vin(6)} -attr vt d
+load net {vin(7)} -port {vin(7)} -attr vt d
+load net {vin(8)} -port {vin(8)} -attr vt d
+load net {vin(9)} -port {vin(9)} -attr vt d
+load net {vin(10)} -port {vin(10)} -attr vt d
+load net {vin(11)} -port {vin(11)} -attr vt d
+load net {vin(12)} -port {vin(12)} -attr vt d
+load net {vin(13)} -port {vin(13)} -attr vt d
+load net {vin(14)} -port {vin(14)} -attr vt d
+load net {vin(15)} -port {vin(15)} -attr vt d
+load net {vin(16)} -port {vin(16)} -attr vt d
+load net {vin(17)} -port {vin(17)} -attr vt d
+load net {vin(18)} -port {vin(18)} -attr vt d
+load net {vin(19)} -port {vin(19)} -attr vt d
+load net {vin(20)} -port {vin(20)} -attr vt d
+load net {vin(21)} -port {vin(21)} -attr vt d
+load net {vin(22)} -port {vin(22)} -attr vt d
+load net {vin(23)} -port {vin(23)} -attr vt d
+load net {vin(24)} -port {vin(24)} -attr vt d
+load net {vin(25)} -port {vin(25)} -attr vt d
+load net {vin(26)} -port {vin(26)} -attr vt d
+load net {vin(27)} -port {vin(27)} -attr vt d
+load net {vin(28)} -port {vin(28)} -attr vt d
+load net {vin(29)} -port {vin(29)} -attr vt d
+load net {vin(30)} -port {vin(30)} -attr vt d
+load net {vin(31)} -port {vin(31)} -attr vt d
+load net {vin(32)} -port {vin(32)} -attr vt d
+load net {vin(33)} -port {vin(33)} -attr vt d
+load net {vin(34)} -port {vin(34)} -attr vt d
+load net {vin(35)} -port {vin(35)} -attr vt d
+load net {vin(36)} -port {vin(36)} -attr vt d
+load net {vin(37)} -port {vin(37)} -attr vt d
+load net {vin(38)} -port {vin(38)} -attr vt d
+load net {vin(39)} -port {vin(39)} -attr vt d
+load net {vin(40)} -port {vin(40)} -attr vt d
+load net {vin(41)} -port {vin(41)} -attr vt d
+load net {vin(42)} -port {vin(42)} -attr vt d
+load net {vin(43)} -port {vin(43)} -attr vt d
+load net {vin(44)} -port {vin(44)} -attr vt d
+load net {vin(45)} -port {vin(45)} -attr vt d
+load net {vin(46)} -port {vin(46)} -attr vt d
+load net {vin(47)} -port {vin(47)} -attr vt d
+load net {vin(48)} -port {vin(48)} -attr vt d
+load net {vin(49)} -port {vin(49)} -attr vt d
+load net {vin(50)} -port {vin(50)} -attr vt d
+load net {vin(51)} -port {vin(51)} -attr vt d
+load net {vin(52)} -port {vin(52)} -attr vt d
+load net {vin(53)} -port {vin(53)} -attr vt d
+load net {vin(54)} -port {vin(54)} -attr vt d
+load net {vin(55)} -port {vin(55)} -attr vt d
+load net {vin(56)} -port {vin(56)} -attr vt d
+load net {vin(57)} -port {vin(57)} -attr vt d
+load net {vin(58)} -port {vin(58)} -attr vt d
+load net {vin(59)} -port {vin(59)} -attr vt d
+load net {vin(60)} -port {vin(60)} -attr vt d
+load net {vin(61)} -port {vin(61)} -attr vt d
+load net {vin(62)} -port {vin(62)} -attr vt d
+load net {vin(63)} -port {vin(63)} -attr vt d
+load net {vin(64)} -port {vin(64)} -attr vt d
+load net {vin(65)} -port {vin(65)} -attr vt d
+load net {vin(66)} -port {vin(66)} -attr vt d
+load net {vin(67)} -port {vin(67)} -attr vt d
+load net {vin(68)} -port {vin(68)} -attr vt d
+load net {vin(69)} -port {vin(69)} -attr vt d
+load net {vin(70)} -port {vin(70)} -attr vt d
+load net {vin(71)} -port {vin(71)} -attr vt d
+load net {vin(72)} -port {vin(72)} -attr vt d
+load net {vin(73)} -port {vin(73)} -attr vt d
+load net {vin(74)} -port {vin(74)} -attr vt d
+load net {vin(75)} -port {vin(75)} -attr vt d
+load net {vin(76)} -port {vin(76)} -attr vt d
+load net {vin(77)} -port {vin(77)} -attr vt d
+load net {vin(78)} -port {vin(78)} -attr vt d
+load net {vin(79)} -port {vin(79)} -attr vt d
+load net {vin(80)} -port {vin(80)} -attr vt d
+load net {vin(81)} -port {vin(81)} -attr vt d
+load net {vin(82)} -port {vin(82)} -attr vt d
+load net {vin(83)} -port {vin(83)} -attr vt d
+load net {vin(84)} -port {vin(84)} -attr vt d
+load net {vin(85)} -port {vin(85)} -attr vt d
+load net {vin(86)} -port {vin(86)} -attr vt d
+load net {vin(87)} -port {vin(87)} -attr vt d
+load net {vin(88)} -port {vin(88)} -attr vt d
+load net {vin(89)} -port {vin(89)} -attr vt d
+load netBundle {vin} 90 {vin(0)} {vin(1)} {vin(2)} {vin(3)} {vin(4)} {vin(5)} {vin(6)} {vin(7)} {vin(8)} {vin(9)} {vin(10)} {vin(11)} {vin(12)} {vin(13)} {vin(14)} {vin(15)} {vin(16)} {vin(17)} {vin(18)} {vin(19)} {vin(20)} {vin(21)} {vin(22)} {vin(23)} {vin(24)} {vin(25)} {vin(26)} {vin(27)} {vin(28)} {vin(29)} {vin(30)} {vin(31)} {vin(32)} {vin(33)} {vin(34)} {vin(35)} {vin(36)} {vin(37)} {vin(38)} {vin(39)} {vin(40)} {vin(41)} {vin(42)} {vin(43)} {vin(44)} {vin(45)} {vin(46)} {vin(47)} {vin(48)} {vin(49)} {vin(50)} {vin(51)} {vin(52)} {vin(53)} {vin(54)} {vin(55)} {vin(56)} {vin(57)} {vin(58)} {vin(59)} {vin(60)} {vin(61)} {vin(62)} {vin(63)} {vin(64)} {vin(65)} {vin(66)} {vin(67)} {vin(68)} {vin(69)} {vin(70)} {vin(71)} {vin(72)} {vin(73)} {vin(74)} {vin(75)} {vin(76)} {vin(77)} {vin(78)} {vin(79)} {vin(80)} {vin(81)} {vin(82)} {vin(83)} {vin(84)} {vin(85)} {vin(86)} {vin(87)} {vin(88)} {vin(89)} -attr xrf 8004 -attr oid 108 -attr vt d -attr @path {/markers/vin}
+load net {vout:rsc.z(0)} -attr vt d
+load net {vout:rsc.z(1)} -attr vt d
+load net {vout:rsc.z(2)} -attr vt d
+load net {vout:rsc.z(3)} -attr vt d
+load net {vout:rsc.z(4)} -attr vt d
+load net {vout:rsc.z(5)} -attr vt d
+load net {vout:rsc.z(6)} -attr vt d
+load net {vout:rsc.z(7)} -attr vt d
+load net {vout:rsc.z(8)} -attr vt d
+load net {vout:rsc.z(9)} -attr vt d
+load net {vout:rsc.z(10)} -attr vt d
+load net {vout:rsc.z(11)} -attr vt d
+load net {vout:rsc.z(12)} -attr vt d
+load net {vout:rsc.z(13)} -attr vt d
+load net {vout:rsc.z(14)} -attr vt d
+load net {vout:rsc.z(15)} -attr vt d
+load net {vout:rsc.z(16)} -attr vt d
+load net {vout:rsc.z(17)} -attr vt d
+load net {vout:rsc.z(18)} -attr vt d
+load net {vout:rsc.z(19)} -attr vt d
+load net {vout:rsc.z(20)} -attr vt d
+load net {vout:rsc.z(21)} -attr vt d
+load net {vout:rsc.z(22)} -attr vt d
+load net {vout:rsc.z(23)} -attr vt d
+load net {vout:rsc.z(24)} -attr vt d
+load net {vout:rsc.z(25)} -attr vt d
+load net {vout:rsc.z(26)} -attr vt d
+load net {vout:rsc.z(27)} -attr vt d
+load net {vout:rsc.z(28)} -attr vt d
+load net {vout:rsc.z(29)} -attr vt d
+load netBundle {vout:rsc.z} 30 {vout:rsc.z(0)} {vout:rsc.z(1)} {vout:rsc.z(2)} {vout:rsc.z(3)} {vout:rsc.z(4)} {vout:rsc.z(5)} {vout:rsc.z(6)} {vout:rsc.z(7)} {vout:rsc.z(8)} {vout:rsc.z(9)} {vout:rsc.z(10)} {vout:rsc.z(11)} {vout:rsc.z(12)} {vout:rsc.z(13)} {vout:rsc.z(14)} {vout:rsc.z(15)} {vout:rsc.z(16)} {vout:rsc.z(17)} {vout:rsc.z(18)} {vout:rsc.z(19)} {vout:rsc.z(20)} {vout:rsc.z(21)} {vout:rsc.z(22)} {vout:rsc.z(23)} {vout:rsc.z(24)} {vout:rsc.z(25)} {vout:rsc.z(26)} {vout:rsc.z(27)} {vout:rsc.z(28)} {vout:rsc.z(29)} -attr xrf 8005 -attr oid 109 -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(0)} -port {vout:rsc.z(0)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(1)} -port {vout:rsc.z(1)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(2)} -port {vout:rsc.z(2)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(3)} -port {vout:rsc.z(3)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(4)} -port {vout:rsc.z(4)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(5)} -port {vout:rsc.z(5)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(6)} -port {vout:rsc.z(6)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(7)} -port {vout:rsc.z(7)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(8)} -port {vout:rsc.z(8)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(9)} -port {vout:rsc.z(9)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(10)} -port {vout:rsc.z(10)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(11)} -port {vout:rsc.z(11)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(12)} -port {vout:rsc.z(12)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(13)} -port {vout:rsc.z(13)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(14)} -port {vout:rsc.z(14)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(15)} -port {vout:rsc.z(15)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(16)} -port {vout:rsc.z(16)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(17)} -port {vout:rsc.z(17)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(18)} -port {vout:rsc.z(18)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(19)} -port {vout:rsc.z(19)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(20)} -port {vout:rsc.z(20)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(21)} -port {vout:rsc.z(21)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(22)} -port {vout:rsc.z(22)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(23)} -port {vout:rsc.z(23)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(24)} -port {vout:rsc.z(24)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(25)} -port {vout:rsc.z(25)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(26)} -port {vout:rsc.z(26)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(27)} -port {vout:rsc.z(27)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(28)} -port {vout:rsc.z(28)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(29)} -port {vout:rsc.z(29)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vga_xy(0)} -attr vt d
+load net {vga_xy(1)} -attr vt d
+load net {vga_xy(2)} -attr vt d
+load net {vga_xy(3)} -attr vt d
+load net {vga_xy(4)} -attr vt d
+load net {vga_xy(5)} -attr vt d
+load net {vga_xy(6)} -attr vt d
+load net {vga_xy(7)} -attr vt d
+load net {vga_xy(8)} -attr vt d
+load net {vga_xy(9)} -attr vt d
+load net {vga_xy(10)} -attr vt d
+load net {vga_xy(11)} -attr vt d
+load net {vga_xy(12)} -attr vt d
+load net {vga_xy(13)} -attr vt d
+load net {vga_xy(14)} -attr vt d
+load net {vga_xy(15)} -attr vt d
+load net {vga_xy(16)} -attr vt d
+load net {vga_xy(17)} -attr vt d
+load net {vga_xy(18)} -attr vt d
+load net {vga_xy(19)} -attr vt d
+load netBundle {vga_xy} 20 {vga_xy(0)} {vga_xy(1)} {vga_xy(2)} {vga_xy(3)} {vga_xy(4)} {vga_xy(5)} {vga_xy(6)} {vga_xy(7)} {vga_xy(8)} {vga_xy(9)} {vga_xy(10)} {vga_xy(11)} {vga_xy(12)} {vga_xy(13)} {vga_xy(14)} {vga_xy(15)} {vga_xy(16)} {vga_xy(17)} {vga_xy(18)} {vga_xy(19)} -attr xrf 8006 -attr oid 110 -attr vt d -attr @path {/markers/vga_xy}
+load net {vga_xy(0)} -port {vga_xy(0)} -attr vt d
+load net {vga_xy(1)} -port {vga_xy(1)} -attr vt d
+load net {vga_xy(2)} -port {vga_xy(2)} -attr vt d
+load net {vga_xy(3)} -port {vga_xy(3)} -attr vt d
+load net {vga_xy(4)} -port {vga_xy(4)} -attr vt d
+load net {vga_xy(5)} -port {vga_xy(5)} -attr vt d
+load net {vga_xy(6)} -port {vga_xy(6)} -attr vt d
+load net {vga_xy(7)} -port {vga_xy(7)} -attr vt d
+load net {vga_xy(8)} -port {vga_xy(8)} -attr vt d
+load net {vga_xy(9)} -port {vga_xy(9)} -attr vt d
+load net {vga_xy(10)} -port {vga_xy(10)} -attr vt d
+load net {vga_xy(11)} -port {vga_xy(11)} -attr vt d
+load net {vga_xy(12)} -port {vga_xy(12)} -attr vt d
+load net {vga_xy(13)} -port {vga_xy(13)} -attr vt d
+load net {vga_xy(14)} -port {vga_xy(14)} -attr vt d
+load net {vga_xy(15)} -port {vga_xy(15)} -attr vt d
+load net {vga_xy(16)} -port {vga_xy(16)} -attr vt d
+load net {vga_xy(17)} -port {vga_xy(17)} -attr vt d
+load net {vga_xy(18)} -port {vga_xy(18)} -attr vt d
+load net {vga_xy(19)} -port {vga_xy(19)} -attr vt d
+load netBundle {vga_xy} 20 {vga_xy(0)} {vga_xy(1)} {vga_xy(2)} {vga_xy(3)} {vga_xy(4)} {vga_xy(5)} {vga_xy(6)} {vga_xy(7)} {vga_xy(8)} {vga_xy(9)} {vga_xy(10)} {vga_xy(11)} {vga_xy(12)} {vga_xy(13)} {vga_xy(14)} {vga_xy(15)} {vga_xy(16)} {vga_xy(17)} {vga_xy(18)} {vga_xy(19)} -attr xrf 8007 -attr oid 111 -attr vt d -attr @path {/markers/vga_xy}
+load net {volume:rsc.z(0)} -attr vt d
+load net {volume:rsc.z(1)} -attr vt d
+load net {volume:rsc.z(2)} -attr vt d
+load net {volume:rsc.z(3)} -attr vt d
+load net {volume:rsc.z(4)} -attr vt d
+load net {volume:rsc.z(5)} -attr vt d
+load net {volume:rsc.z(6)} -attr vt d
+load net {volume:rsc.z(7)} -attr vt d
+load netBundle {volume:rsc.z} 8 {volume:rsc.z(0)} {volume:rsc.z(1)} {volume:rsc.z(2)} {volume:rsc.z(3)} {volume:rsc.z(4)} {volume:rsc.z(5)} {volume:rsc.z(6)} {volume:rsc.z(7)} -attr xrf 8008 -attr oid 112 -attr vt d -attr @path {/markers/volume:rsc.z}
+load net {volume:rsc.z(0)} -port {volume:rsc.z(0)} -attr vt d -attr @path {/markers/volume:rsc.z}
+load net {volume:rsc.z(1)} -port {volume:rsc.z(1)} -attr vt d -attr @path {/markers/volume:rsc.z}
+load net {volume:rsc.z(2)} -port {volume:rsc.z(2)} -attr vt d -attr @path {/markers/volume:rsc.z}
+load net {volume:rsc.z(3)} -port {volume:rsc.z(3)} -attr vt d -attr @path {/markers/volume:rsc.z}
+load net {volume:rsc.z(4)} -port {volume:rsc.z(4)} -attr vt d -attr @path {/markers/volume:rsc.z}
+load net {volume:rsc.z(5)} -port {volume:rsc.z(5)} -attr vt d -attr @path {/markers/volume:rsc.z}
+load net {volume:rsc.z(6)} -port {volume:rsc.z(6)} -attr vt d -attr @path {/markers/volume:rsc.z}
+load net {volume:rsc.z(7)} -port {volume:rsc.z(7)} -attr vt d -attr @path {/markers/volume:rsc.z}
+load net {clk} -attr xrf 8009 -attr oid 113
+load net {clk} -port {clk} -attr xrf 8010 -attr oid 114
+load net {en} -attr xrf 8011 -attr oid 115
+load net {en} -port {en} -attr xrf 8012 -attr oid 116
+load net {arst_n} -attr xrf 8013 -attr oid 117
+load net {arst_n} -port {arst_n} -attr xrf 8014 -attr oid 118
+load inst "markers:core:inst" "markers:core" "orig" -attr xrf 8015 -attr oid 119 -attr vt dc -attr @path {/markers/markers:core:inst} -attr area 154.709530 -attr delay 1.679024 -attr hier "/markers/markers:core" -pg 1 -lvl 3
+load net {vin(0)} -pin  "markers:core:inst" {vin#1(0)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(1)} -pin  "markers:core:inst" {vin#1(1)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(2)} -pin  "markers:core:inst" {vin#1(2)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(3)} -pin  "markers:core:inst" {vin#1(3)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(4)} -pin  "markers:core:inst" {vin#1(4)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(5)} -pin  "markers:core:inst" {vin#1(5)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(6)} -pin  "markers:core:inst" {vin#1(6)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(7)} -pin  "markers:core:inst" {vin#1(7)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(8)} -pin  "markers:core:inst" {vin#1(8)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(9)} -pin  "markers:core:inst" {vin#1(9)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(10)} -pin  "markers:core:inst" {vin#1(10)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(11)} -pin  "markers:core:inst" {vin#1(11)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(12)} -pin  "markers:core:inst" {vin#1(12)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(13)} -pin  "markers:core:inst" {vin#1(13)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(14)} -pin  "markers:core:inst" {vin#1(14)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(15)} -pin  "markers:core:inst" {vin#1(15)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(16)} -pin  "markers:core:inst" {vin#1(16)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(17)} -pin  "markers:core:inst" {vin#1(17)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(18)} -pin  "markers:core:inst" {vin#1(18)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(19)} -pin  "markers:core:inst" {vin#1(19)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(20)} -pin  "markers:core:inst" {vin#1(20)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(21)} -pin  "markers:core:inst" {vin#1(21)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(22)} -pin  "markers:core:inst" {vin#1(22)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(23)} -pin  "markers:core:inst" {vin#1(23)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(24)} -pin  "markers:core:inst" {vin#1(24)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(25)} -pin  "markers:core:inst" {vin#1(25)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(26)} -pin  "markers:core:inst" {vin#1(26)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(27)} -pin  "markers:core:inst" {vin#1(27)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(28)} -pin  "markers:core:inst" {vin#1(28)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(29)} -pin  "markers:core:inst" {vin#1(29)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(30)} -pin  "markers:core:inst" {vin#1(30)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(31)} -pin  "markers:core:inst" {vin#1(31)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(32)} -pin  "markers:core:inst" {vin#1(32)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(33)} -pin  "markers:core:inst" {vin#1(33)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(34)} -pin  "markers:core:inst" {vin#1(34)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(35)} -pin  "markers:core:inst" {vin#1(35)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(36)} -pin  "markers:core:inst" {vin#1(36)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(37)} -pin  "markers:core:inst" {vin#1(37)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(38)} -pin  "markers:core:inst" {vin#1(38)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(39)} -pin  "markers:core:inst" {vin#1(39)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(40)} -pin  "markers:core:inst" {vin#1(40)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(41)} -pin  "markers:core:inst" {vin#1(41)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(42)} -pin  "markers:core:inst" {vin#1(42)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(43)} -pin  "markers:core:inst" {vin#1(43)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(44)} -pin  "markers:core:inst" {vin#1(44)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(45)} -pin  "markers:core:inst" {vin#1(45)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(46)} -pin  "markers:core:inst" {vin#1(46)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(47)} -pin  "markers:core:inst" {vin#1(47)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(48)} -pin  "markers:core:inst" {vin#1(48)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(49)} -pin  "markers:core:inst" {vin#1(49)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(50)} -pin  "markers:core:inst" {vin#1(50)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(51)} -pin  "markers:core:inst" {vin#1(51)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(52)} -pin  "markers:core:inst" {vin#1(52)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(53)} -pin  "markers:core:inst" {vin#1(53)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(54)} -pin  "markers:core:inst" {vin#1(54)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(55)} -pin  "markers:core:inst" {vin#1(55)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(56)} -pin  "markers:core:inst" {vin#1(56)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(57)} -pin  "markers:core:inst" {vin#1(57)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(58)} -pin  "markers:core:inst" {vin#1(58)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(59)} -pin  "markers:core:inst" {vin#1(59)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(60)} -pin  "markers:core:inst" {vin#1(60)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(61)} -pin  "markers:core:inst" {vin#1(61)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(62)} -pin  "markers:core:inst" {vin#1(62)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(63)} -pin  "markers:core:inst" {vin#1(63)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(64)} -pin  "markers:core:inst" {vin#1(64)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(65)} -pin  "markers:core:inst" {vin#1(65)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(66)} -pin  "markers:core:inst" {vin#1(66)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(67)} -pin  "markers:core:inst" {vin#1(67)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(68)} -pin  "markers:core:inst" {vin#1(68)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(69)} -pin  "markers:core:inst" {vin#1(69)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(70)} -pin  "markers:core:inst" {vin#1(70)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(71)} -pin  "markers:core:inst" {vin#1(71)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(72)} -pin  "markers:core:inst" {vin#1(72)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(73)} -pin  "markers:core:inst" {vin#1(73)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(74)} -pin  "markers:core:inst" {vin#1(74)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(75)} -pin  "markers:core:inst" {vin#1(75)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(76)} -pin  "markers:core:inst" {vin#1(76)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(77)} -pin  "markers:core:inst" {vin#1(77)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(78)} -pin  "markers:core:inst" {vin#1(78)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(79)} -pin  "markers:core:inst" {vin#1(79)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(80)} -pin  "markers:core:inst" {vin#1(80)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(81)} -pin  "markers:core:inst" {vin#1(81)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(82)} -pin  "markers:core:inst" {vin#1(82)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(83)} -pin  "markers:core:inst" {vin#1(83)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(84)} -pin  "markers:core:inst" {vin#1(84)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(85)} -pin  "markers:core:inst" {vin#1(85)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(86)} -pin  "markers:core:inst" {vin#1(86)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(87)} -pin  "markers:core:inst" {vin#1(87)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(88)} -pin  "markers:core:inst" {vin#1(88)} -attr vt dc -attr @path {/markers/vin}
+load net {vin(89)} -pin  "markers:core:inst" {vin#1(89)} -attr vt dc -attr @path {/markers/vin}
+load net {clk} -pin  "markers:core:inst" {clk#1} -attr xrf 8016 -attr oid 120 -attr @path {/markers/clk}
+load net {en} -pin  "markers:core:inst" {en#1} -attr xrf 8017 -attr oid 121 -attr @path {/markers/en}
+load net {arst_n} -pin  "markers:core:inst" {arst_n#1} -attr xrf 8018 -attr oid 122 -attr @path {/markers/arst_n}
+load net {vout:rsc:mgc_out_stdreg.d#1(0)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(0)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(1)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(1)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(2)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(2)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(3)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(3)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(4)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(4)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(5)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(5)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(6)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(6)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(7)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(7)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(8)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(8)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(9)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(9)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(10)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(10)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(11)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(11)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(12)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(12)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(13)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(13)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(14)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(14)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(15)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(15)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(16)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(16)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(17)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(17)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(18)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(18)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(19)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(19)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(20)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(20)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(21)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(21)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(22)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(22)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(23)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(23)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(24)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(24)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(25)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(25)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(26)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(26)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(27)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(27)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(28)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(28)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(29)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(29)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load inst "vout:rsc:mgc_out_stdreg" "mgc_ioport.mgc_out_stdreg(2,30)" "INTERFACE" -attr xrf 8019 -attr oid 123 -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg} -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_ioport.mgc_out_stdreg(2,30)" -pg 1 -lvl 1002
+load net {vout:rsc:mgc_out_stdreg.d#1(0)} -pin  "vout:rsc:mgc_out_stdreg" {d(0)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(1)} -pin  "vout:rsc:mgc_out_stdreg" {d(1)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(2)} -pin  "vout:rsc:mgc_out_stdreg" {d(2)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(3)} -pin  "vout:rsc:mgc_out_stdreg" {d(3)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(4)} -pin  "vout:rsc:mgc_out_stdreg" {d(4)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(5)} -pin  "vout:rsc:mgc_out_stdreg" {d(5)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(6)} -pin  "vout:rsc:mgc_out_stdreg" {d(6)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(7)} -pin  "vout:rsc:mgc_out_stdreg" {d(7)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(8)} -pin  "vout:rsc:mgc_out_stdreg" {d(8)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(9)} -pin  "vout:rsc:mgc_out_stdreg" {d(9)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(10)} -pin  "vout:rsc:mgc_out_stdreg" {d(10)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(11)} -pin  "vout:rsc:mgc_out_stdreg" {d(11)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(12)} -pin  "vout:rsc:mgc_out_stdreg" {d(12)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(13)} -pin  "vout:rsc:mgc_out_stdreg" {d(13)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(14)} -pin  "vout:rsc:mgc_out_stdreg" {d(14)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(15)} -pin  "vout:rsc:mgc_out_stdreg" {d(15)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(16)} -pin  "vout:rsc:mgc_out_stdreg" {d(16)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(17)} -pin  "vout:rsc:mgc_out_stdreg" {d(17)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(18)} -pin  "vout:rsc:mgc_out_stdreg" {d(18)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(19)} -pin  "vout:rsc:mgc_out_stdreg" {d(19)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(20)} -pin  "vout:rsc:mgc_out_stdreg" {d(20)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(21)} -pin  "vout:rsc:mgc_out_stdreg" {d(21)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(22)} -pin  "vout:rsc:mgc_out_stdreg" {d(22)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(23)} -pin  "vout:rsc:mgc_out_stdreg" {d(23)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(24)} -pin  "vout:rsc:mgc_out_stdreg" {d(24)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(25)} -pin  "vout:rsc:mgc_out_stdreg" {d(25)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(26)} -pin  "vout:rsc:mgc_out_stdreg" {d(26)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(27)} -pin  "vout:rsc:mgc_out_stdreg" {d(27)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(28)} -pin  "vout:rsc:mgc_out_stdreg" {d(28)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(29)} -pin  "vout:rsc:mgc_out_stdreg" {d(29)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc.z(0)} -pin  "vout:rsc:mgc_out_stdreg" {z(0)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(1)} -pin  "vout:rsc:mgc_out_stdreg" {z(1)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(2)} -pin  "vout:rsc:mgc_out_stdreg" {z(2)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(3)} -pin  "vout:rsc:mgc_out_stdreg" {z(3)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(4)} -pin  "vout:rsc:mgc_out_stdreg" {z(4)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(5)} -pin  "vout:rsc:mgc_out_stdreg" {z(5)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(6)} -pin  "vout:rsc:mgc_out_stdreg" {z(6)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(7)} -pin  "vout:rsc:mgc_out_stdreg" {z(7)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(8)} -pin  "vout:rsc:mgc_out_stdreg" {z(8)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(9)} -pin  "vout:rsc:mgc_out_stdreg" {z(9)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(10)} -pin  "vout:rsc:mgc_out_stdreg" {z(10)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(11)} -pin  "vout:rsc:mgc_out_stdreg" {z(11)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(12)} -pin  "vout:rsc:mgc_out_stdreg" {z(12)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(13)} -pin  "vout:rsc:mgc_out_stdreg" {z(13)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(14)} -pin  "vout:rsc:mgc_out_stdreg" {z(14)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(15)} -pin  "vout:rsc:mgc_out_stdreg" {z(15)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(16)} -pin  "vout:rsc:mgc_out_stdreg" {z(16)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(17)} -pin  "vout:rsc:mgc_out_stdreg" {z(17)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(18)} -pin  "vout:rsc:mgc_out_stdreg" {z(18)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(19)} -pin  "vout:rsc:mgc_out_stdreg" {z(19)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(20)} -pin  "vout:rsc:mgc_out_stdreg" {z(20)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(21)} -pin  "vout:rsc:mgc_out_stdreg" {z(21)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(22)} -pin  "vout:rsc:mgc_out_stdreg" {z(22)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(23)} -pin  "vout:rsc:mgc_out_stdreg" {z(23)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(24)} -pin  "vout:rsc:mgc_out_stdreg" {z(24)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(25)} -pin  "vout:rsc:mgc_out_stdreg" {z(25)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(26)} -pin  "vout:rsc:mgc_out_stdreg" {z(26)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(27)} -pin  "vout:rsc:mgc_out_stdreg" {z(27)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(28)} -pin  "vout:rsc:mgc_out_stdreg" {z(28)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(29)} -pin  "vout:rsc:mgc_out_stdreg" {z(29)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load inst "volume:rsc:mgc_out_stdreg" "mgc_ioport.mgc_out_stdreg(4,8)" "INTERFACE" -attr xrf 8020 -attr oid 124 -attr vt d -attr @path {/markers/volume:rsc:mgc_out_stdreg} -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_ioport.mgc_out_stdreg(4,8)" -pg 1 -lvl 1002
+load net {GND} -pin  "volume:rsc:mgc_out_stdreg" {d(0)} -attr @path {/markers/C0_8#1}
+load net {GND} -pin  "volume:rsc:mgc_out_stdreg" {d(1)} -attr @path {/markers/C0_8#1}
+load net {GND} -pin  "volume:rsc:mgc_out_stdreg" {d(2)} -attr @path {/markers/C0_8#1}
+load net {GND} -pin  "volume:rsc:mgc_out_stdreg" {d(3)} -attr @path {/markers/C0_8#1}
+load net {GND} -pin  "volume:rsc:mgc_out_stdreg" {d(4)} -attr @path {/markers/C0_8#1}
+load net {GND} -pin  "volume:rsc:mgc_out_stdreg" {d(5)} -attr @path {/markers/C0_8#1}
+load net {GND} -pin  "volume:rsc:mgc_out_stdreg" {d(6)} -attr @path {/markers/C0_8#1}
+load net {GND} -pin  "volume:rsc:mgc_out_stdreg" {d(7)} -attr @path {/markers/C0_8#1}
+load net {volume:rsc.z(0)} -pin  "volume:rsc:mgc_out_stdreg" {z(0)} -attr vt d -attr @path {/markers/volume:rsc.z}
+load net {volume:rsc.z(1)} -pin  "volume:rsc:mgc_out_stdreg" {z(1)} -attr vt d -attr @path {/markers/volume:rsc.z}
+load net {volume:rsc.z(2)} -pin  "volume:rsc:mgc_out_stdreg" {z(2)} -attr vt d -attr @path {/markers/volume:rsc.z}
+load net {volume:rsc.z(3)} -pin  "volume:rsc:mgc_out_stdreg" {z(3)} -attr vt d -attr @path {/markers/volume:rsc.z}
+load net {volume:rsc.z(4)} -pin  "volume:rsc:mgc_out_stdreg" {z(4)} -attr vt d -attr @path {/markers/volume:rsc.z}
+load net {volume:rsc.z(5)} -pin  "volume:rsc:mgc_out_stdreg" {z(5)} -attr vt d -attr @path {/markers/volume:rsc.z}
+load net {volume:rsc.z(6)} -pin  "volume:rsc:mgc_out_stdreg" {z(6)} -attr vt d -attr @path {/markers/volume:rsc.z}
+load net {volume:rsc.z(7)} -pin  "volume:rsc:mgc_out_stdreg" {z(7)} -attr vt d -attr @path {/markers/volume:rsc.z}
+### END MODULE 
+
