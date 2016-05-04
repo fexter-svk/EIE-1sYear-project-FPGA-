@@ -1100,7 +1100,7 @@ applicable agreement for further details.
 (symbol
 	(rect 1464 688 1696 832)
 	(text "markers" (rect 5 0 45 12)(font "Arial" ))
-	(text "inst4" (rect 8 128 31 140)(font "Arial" ))
+	(text "inst6" (rect 8 128 31 140)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -1140,14 +1140,14 @@ applicable agreement for further details.
 		(pt 232 32)
 		(output)
 		(text "vout_rsc_z[29..0]" (rect 0 0 86 12)(font "Arial" ))
-		(text "vout_rsc_z[29..0]" (rect 139 27 211 39)(font "Arial" ))
+		(text "vout_rsc_z[29..0]" (rect 139 27 225 39)(font "Arial" ))
 		(line (pt 232 32)(pt 216 32)(line_width 3))
 	)
 	(port
 		(pt 232 48)
 		(output)
 		(text "volume_rsc_z[7..0]" (rect 0 0 94 12)(font "Arial" ))
-		(text "volume_rsc_z[7..0]" (rect 132 43 211 55)(font "Arial" ))
+		(text "volume_rsc_z[7..0]" (rect 132 43 226 55)(font "Arial" ))
 		(line (pt 232 48)(pt 216 48)(line_width 3))
 	)
 	(drawing

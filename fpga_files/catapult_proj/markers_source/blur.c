@@ -38,6 +38,7 @@
 
 #include <ac_fixed.h>
 #include "blur.h"
+
 #include <iostream>
 #include "stdio.h"
 #include "ac_int.h"
@@ -45,7 +46,11 @@
 
 
 static ac_int<4,false> acc[2];
+static ac_int<10, false> red_xy[2];
+static ac_int<10, false> blue_xy[2];
 
+static ac_int<10, false> red_xy_previous[2];
+static ac_int<10, false> blue_xy_previous[2];
 
 #pragma hls_design top
 void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS], ac_int<(COORD_WL+COORD_WL), false> vga_xy, ac_int<8,false> * volume)
@@ -53,7 +58,6 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     ac_int<10, false> red_out, green_out, blue_out;
     ac_int<10, false> red, green, blue;
     ac_int<10, false> vga_x, vga_y; // screen coordinates
-    ac_int<10, false> greenMarker_x, greenMarker_y, yellowMarker_x, yellowMarker_y;
     ac_int<1, false> detected;
     ac_int<3, false> counter;
     
@@ -68,8 +72,14 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     blue = vin[0].slc<COLOUR_WL>(0*COLOUR_WL)/4;
     
     // 
-    if ((vga_x % 20) == 0){acc[0] = 0; acc[1] = 0;}
-    
+    if ((vga_x % 15) == 0){
+        acc[0] = 0; 
+        acc[1] = 0;
+    }
+    if ((vga_y == 0) && (vga_x == 0)) {
+        red_xy[0] = 0;
+        red_xy[1] = 0;
+    }
     //GREEN marker (left hand)
     if (((80<=red) && (red<=145)) && ((150<=green) && (green<=230)) && ((30<=blue) && (blue<=108))){
         acc[0]++;
@@ -79,29 +89,39 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
             acc[1]++;
         }
     }
+    if (acc[0] > 7){
+        if ((red_xy[0]==0) && (red_xy[1]==0)) {
+            red_xy[0] = vga_x;
+            red_xy[1] = vga_y;
+        }
+    } 
+    if (acc[1] > 7){
+        if ((blue_xy[0]==0) && (blue_xy[1]==0)) {
+            
+            blue_xy[0] = vga_x;
+            blue_xy[1] = vga_y;
+        }
+    } 
+    int deltax_red = (vga_x - red_xy[0]);
+    int deltay_red = (vga_y - red_xy[1]);
     
+    int deltax_blue = (vga_x - blue_xy[0]);
+    int deltay_blue = (vga_y - blue_xy[1]);
     
-    if (acc[0] > 6){
-        red_out=red*4;
-        green_out=green*4;
-        blue_out=blue*4;
-        greenMarker_x = vga_x;
-        greenMarker_y = vga_y;
+    if (((deltax_red > 0)&&(deltax_red < 40)) && ((deltay_red > 0) &&(deltay_red < 40))){
+        red_out = 1023;
+        green_out = 0;
+        blue_out = 0;
     } else {
+        if (((deltax_blue > 0)&&(deltax_blue < 40)) && ((deltay_blue > 0) &&(deltay_blue < 40))) {
+            red_out = 0;
+            green_out = 0;
+            blue_out = 1023;
+        } else {
         red_out = 0;
         green_out = 0;
         blue_out = 0;
-    }
-    if (acc[1] > 6){
-        yellowMarker_x = vga_x;
-        yellowMarker_y = vga_y;
-        red_out=red*4;
-        green_out=green*4;
-        blue_out=blue*4;
-    } else {
-        red_out = 0;
-        green_out = 0;
-        blue_out = 0;
+        }
     }
 
 //adjustment of the volume
@@ -110,7 +130,7 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
 // group the RGB components into a single signal
 	vout[0] = ((((ac_int<PIXEL_WL, false>)red_out) << (2*COLOUR_WL)) | (((ac_int<PIXEL_WL, false>)green_out) << COLOUR_WL) | (ac_int<PIXEL_WL, false>)blue_out);
 	    
-    }
+}
 
 
 
