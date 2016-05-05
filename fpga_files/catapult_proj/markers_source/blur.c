@@ -85,10 +85,10 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     
     //RED marker (left hand)
     if (((180<=red) && (red<=255)) && ((0<=green) && (green<=100)) && ((0<=blue) && (0<=100))){
-        acc[0]++;
+        acc[0]++; //RED
     } 
     if (((0<=red) && (red<=100)) && ((0<=green) && (green<=100)) && ((180<=blue) && (blue<=255))){
-        acc[1]++;
+        acc[1]++; //BLUE
     }
     if (acc[0] > 4){
         if ((red_xy[0]==0) && (red_xy[1]==0)) {
@@ -112,7 +112,7 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     int deltax_red = (red_xy[0] - red_xy_previous[0]);
     int deltay_red = (red_xy[1] - red_xy_previous[1]);
     
-    if ((deltax_red<20) &&(deltax_red>-20)) {
+    if (((deltay_red>-40) &&(deltay_red<40))&&((deltax_red<40) &&(deltax_red>-40))) {
         red_xy_previous[0] = red_xy[0];
         red_xy_previous[1] = red_xy[1];
     }
