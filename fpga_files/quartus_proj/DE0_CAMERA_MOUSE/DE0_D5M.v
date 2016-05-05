@@ -45,10 +45,11 @@ module DE0_D5M
 	(
 		////////////////////	Clock Input	 	////////////////////	 
 		CLOCK_50,						//	50 MHz
+		CLOCK_96,						// 96 MHz
 		////////////////////	Push Button		////////////////////
 		KEY,								//	Pushbutton[2:0]
 		////////////////////	DPDT Switch		////////////////////
-		SW,								//	Toggle Switch[9:0]
+	//	SW,								//	Toggle Switch[9:0]
 		////////////////////////	LED		////////////////////////
 		LEDG,								//	LED Green[9:0]
 		////////////////////	7-SEG Dispaly	////////////////////
@@ -88,10 +89,11 @@ module DE0_D5M
 
 ////////////////////////	Clock Input	 	////////////////////////
 input			CLOCK_50;				//	50 MHz
+input      		CLOCK_96;
 ////////////////////////	Push Button		////////////////////////
 input	[2:0]	KEY;						//	Pushbutton[3:0]
 ////////////////////////	DPDT Switch		////////////////////////
-input	[9:0]	SW;						//	Toggle Switch[9:0]
+//input	[9:0]	SW;						//	Toggle Switch[9:0]
 ////////////////////////////	LED		////////////////////////////
 output	[9:0]	LEDG;					//	LED Green[7:0]
 ////////////////////////	7-SEG Dispaly	////////////////////////
@@ -187,7 +189,7 @@ assign	CCD_DATA[8]	=	GPIO_1[3];
 assign	CCD_DATA[9]	=	GPIO_1[2];
 assign	CCD_DATA[10]=	GPIO_1[1];
 assign	CCD_DATA[11]=	GPIO_1[0];
-assign	GPIO_1_CLKOUT[0]	=	CCD_MCLK;
+assign	GPIO_1_CLKOUT[0]	= CLOCK_96;	// CCD_MCLK;
 assign	CCD_FVAL	   =	GPIO_1[18];
 assign	CCD_LVAL	   =	GPIO_1[17];
 assign	CCD_PIXCLK	=	GPIO_1_CLKIN[0]; 
@@ -368,9 +370,9 @@ Sdram_Control_4Port	u7	(	//	HOST Side
 I2C_CCD_Config 		u8	(	//	Host Side
 								 .iCLK			  (CLOCK_50),
 								 .iRST_N         (DLY_RST_2),
-								 .iZOOM_MODE_SW  (SW[2]),
-								 .iEXPOSURE_ADJ  (SW[1]),
-								 .iEXPOSURE_DEC_p(SW[0]),
+								 .iZOOM_MODE_SW  (0),
+								 .iEXPOSURE_ADJ  (1),
+								 .iEXPOSURE_DEC_p(1),
 								  //	I2C Side
 								 .I2C_SCLK		  (GPIO_1[20]),
 								 .I2C_SDAT		  (GPIO_1[19])

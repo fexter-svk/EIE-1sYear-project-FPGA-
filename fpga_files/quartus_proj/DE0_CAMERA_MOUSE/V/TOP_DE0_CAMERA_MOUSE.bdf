@@ -21,7 +21,7 @@ applicable agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 424 88 600 104)
+	(rect 112 -48 288 -32)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "CLOCK_50" (rect 9 0 64 12)(font "Arial" ))
 	(pt 176 8)
@@ -34,11 +34,11 @@ applicable agreement for further details.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 368 104 424 120))
+	(annotation_block (location)(rect 56 -16 112 0))
 )
 (pin
 	(input)
-	(rect 512 120 688 136)
+	(rect 264 408 440 424)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "SW[9..0]" (rect 9 0 52 12)(font "Arial" ))
 	(pt 176 8)
@@ -51,11 +51,11 @@ applicable agreement for further details.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 456 136 512 152))
+	(annotation_block (location)(rect 208 424 264 440))
 )
 (pin
 	(input)
-	(rect 528 136 704 152)
+	(rect 472 136 648 152)
 	(text "INPUT" (rect 133 6 161 16)(font "Arial" (font_size 6)))
 	(text "GPIO_1_CLKIN[1..0]" (rect 9 4 112 16)(font "Arial" ))
 	(pt 176 8)
@@ -69,11 +69,11 @@ applicable agreement for further details.
 	)
 	(flipx)
 	(text "VCC" (rect 136 -1 156 9)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 464 152 528 168))
+	(annotation_block (location)(rect 408 152 472 168))
 )
 (pin
 	(input)
-	(rect 408 104 584 120)
+	(rect 408 120 584 136)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "KEY[2..0]" (rect 9 0 57 12)(font "Arial" ))
 	(pt 176 8)
@@ -86,7 +86,7 @@ applicable agreement for further details.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 352 120 408 136))
+	(annotation_block (location)(rect 352 136 408 152))
 )
 (pin
 	(input)
@@ -667,6 +667,262 @@ applicable agreement for further details.
 	)
 )
 (symbol
+	(rect 1800 536 1832 568)
+	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
+	(text "inst7" (rect 3 21 26 33)(font "Arial" )(invisible))
+	(port
+		(pt 16 0)
+		(output)
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(line (pt 16 8)(pt 16 0))
+	)
+	(drawing
+		(line (pt 8 8)(pt 16 16))
+		(line (pt 16 16)(pt 24 8))
+		(line (pt 8 8)(pt 24 8))
+	)
+)
+(symbol
+	(rect 1272 776 1304 792)
+	(text "VCC" (rect 7 0 27 10)(font "Arial" (font_size 6)))
+	(text "inst8" (rect 3 5 26 17)(font "Arial" )(invisible))
+	(port
+		(pt 16 16)
+		(output)
+		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
+		(line (pt 16 16)(pt 16 8))
+	)
+	(drawing
+		(line (pt 8 8)(pt 24 8))
+	)
+)
+(symbol
+	(rect 1896 456 2040 560)
+	(text "ALTSHIFT_TAPS" (rect 23 1 141 17)(font "Arial" (font_size 10)))
+	(text "fifo_inst2" (rect 8 88 55 100)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "shiftin[WIDTH-1..0]" (rect 0 0 96 12)(font "Arial" ))
+		(text "shiftin[]" (rect 21 25 62 39)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "clken" (rect 0 0 25 12)(font "Arial" ))
+		(text "clken" (rect 21 57 50 71)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clock" (rect 0 0 25 12)(font "Arial" ))
+		(text "clock" (rect 21 41 50 55)(font "Arial" (font_size 8))(invisible))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "aclr" (rect 24 72 45 86)(font "Arial" (font_size 8)))
+		(text "aclr" (rect 24 72 45 86)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 144 32)
+		(output)
+		(text "shiftout[WIDTH-1..0]" (rect -208 0 -105 12)(font "Arial" ))
+		(text "shiftout[]" (rect 82 25 131 39)(font "Arial" (font_size 8)))
+		(line (pt 144 32)(pt 128 32)(line_width 3))
+	)
+	(port
+		(pt 144 48)
+		(output)
+		(text "taps[(WIDTH*NUMBER_OF_TAPS) -1..0]" (rect -208 0 -4 12)(font "Arial" ))
+		(text "taps[]" (rect 97 41 128 55)(font "Arial" (font_size 8)))
+		(line (pt 144 48)(pt 128 48)(line_width 3))
+	)
+	(parameter
+		"NUMBER_OF_TAPS"
+		"3"
+		"Number of output taps, each separated by TAP_DISTANCE clock cycles"
+	)
+	(parameter
+		"TAP_DISTANCE"
+		"800"
+		"Number of shift positions between output taps"
+	)
+	(parameter
+		"WIDTH"
+		"30"
+		"Number of bits for the shiftin input"
+	)
+	(drawing
+		(line (pt 16 56)(pt 24 48))
+		(line (pt 16 40)(pt 24 48))
+		(rectangle (rect 16 16 128 88))
+	)
+	(annotation_block (parameter)(rect 1880 400 2049 456))
+)
+(symbol
+	(rect 1776 -8 1984 200)
+	(text "top" (rect 5 0 20 12)(font "Arial" ))
+	(text "inst3" (rect 8 192 31 204)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLOCK_50" (rect 0 0 55 12)(font "Arial" ))
+		(text "CLOCK_50" (rect 21 27 76 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "SW" (rect 0 0 17 12)(font "Arial" ))
+		(text "SW" (rect 21 43 38 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "volume[7..0]" (rect 0 0 62 12)(font "Arial" ))
+		(text "volume[7..0]" (rect 21 59 83 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "ADC_SDO" (rect 0 0 53 12)(font "Arial" ))
+		(text "ADC_SDO" (rect 21 75 74 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 208 32)
+		(output)
+		(text "HEX0_D[6..0]" (rect 0 0 67 12)(font "Arial" ))
+		(text "HEX0_D[6..0]" (rect 131 27 198 39)(font "Arial" ))
+		(line (pt 208 32)(pt 192 32)(line_width 3))
+	)
+	(port
+		(pt 208 48)
+		(output)
+		(text "HEX1_D[6..0]" (rect 0 0 67 12)(font "Arial" ))
+		(text "HEX1_D[6..0]" (rect 131 43 198 55)(font "Arial" ))
+		(line (pt 208 48)(pt 192 48)(line_width 3))
+	)
+	(port
+		(pt 208 64)
+		(output)
+		(text "HEX2_D[6..0]" (rect 0 0 67 12)(font "Arial" ))
+		(text "HEX2_D[6..0]" (rect 131 59 198 71)(font "Arial" ))
+		(line (pt 208 64)(pt 192 64)(line_width 3))
+	)
+	(port
+		(pt 208 80)
+		(output)
+		(text "DAC_SDI" (rect 0 0 48 12)(font "Arial" ))
+		(text "DAC_SDI" (rect 147 75 195 87)(font "Arial" ))
+		(line (pt 208 80)(pt 192 80))
+	)
+	(port
+		(pt 208 96)
+		(output)
+		(text "SCK" (rect 0 0 22 12)(font "Arial" ))
+		(text "SCK" (rect 169 91 191 103)(font "Arial" ))
+		(line (pt 208 96)(pt 192 96))
+	)
+	(port
+		(pt 208 112)
+		(output)
+		(text "DAC_CS" (rect 0 0 44 12)(font "Arial" ))
+		(text "DAC_CS" (rect 150 107 194 119)(font "Arial" ))
+		(line (pt 208 112)(pt 192 112))
+	)
+	(port
+		(pt 208 128)
+		(output)
+		(text "DAC_LD" (rect 0 0 43 12)(font "Arial" ))
+		(text "DAC_LD" (rect 151 123 194 135)(font "Arial" ))
+		(line (pt 208 128)(pt 192 128))
+	)
+	(port
+		(pt 208 144)
+		(output)
+		(text "ADC_SDI" (rect 0 0 48 12)(font "Arial" ))
+		(text "ADC_SDI" (rect 147 139 195 151)(font "Arial" ))
+		(line (pt 208 144)(pt 192 144))
+	)
+	(port
+		(pt 208 160)
+		(output)
+		(text "ADC_CS" (rect 0 0 44 12)(font "Arial" ))
+		(text "ADC_CS" (rect 150 155 194 167)(font "Arial" ))
+		(line (pt 208 160)(pt 192 160))
+	)
+	(drawing
+		(rectangle (rect 16 16 192 192))
+	)
+)
+(symbol
+	(rect 1464 696 1696 840)
+	(text "markers" (rect 5 0 45 12)(font "Arial" ))
+	(text "inst9" (rect 8 128 31 140)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "vin[89..0]" (rect 0 0 47 12)(font "Arial" ))
+		(text "vin[89..0]" (rect 21 27 68 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "vga_xy[19..0]" (rect 0 0 69 12)(font "Arial" ))
+		(text "vga_xy[19..0]" (rect 21 43 90 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 59 35 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "en" (rect 0 0 11 12)(font "Arial" ))
+		(text "en" (rect 21 75 32 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "arst_n" (rect 0 0 30 12)(font "Arial" ))
+		(text "arst_n" (rect 21 91 51 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 232 32)
+		(output)
+		(text "vout_rsc_z[29..0]" (rect 0 0 86 12)(font "Arial" ))
+		(text "vout_rsc_z[29..0]" (rect 139 27 225 39)(font "Arial" ))
+		(line (pt 232 32)(pt 216 32)(line_width 3))
+	)
+	(port
+		(pt 232 48)
+		(output)
+		(text "volume_rsc_z[7..0]" (rect 0 0 94 12)(font "Arial" ))
+		(text "volume_rsc_z[7..0]" (rect 132 43 226 55)(font "Arial" ))
+		(line (pt 232 48)(pt 216 48)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 216 128))
+	)
+)
+(symbol
 	(rect 760 64 1048 560)
 	(text "DE0_D5M" (rect 5 0 54 12)(font "Arial" ))
 	(text "inst" (rect 8 480 25 492)(font "Arial" ))
@@ -680,15 +936,15 @@ applicable agreement for further details.
 	(port
 		(pt 0 48)
 		(input)
-		(text "KEY[2..0]" (rect 0 0 48 12)(font "Arial" ))
-		(text "KEY[2..0]" (rect 21 43 69 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
+		(text "CLOCK_96" (rect 0 0 55 12)(font "Arial" ))
+		(text "CLOCK_96" (rect 21 43 76 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
 	)
 	(port
 		(pt 0 64)
 		(input)
-		(text "SW[9..0]" (rect 0 0 43 12)(font "Arial" ))
-		(text "SW[9..0]" (rect 21 59 64 71)(font "Arial" ))
+		(text "KEY[2..0]" (rect 0 0 48 12)(font "Arial" ))
+		(text "KEY[2..0]" (rect 21 59 69 71)(font "Arial" ))
 		(line (pt 0 64)(pt 16 64)(line_width 3))
 	)
 	(port
@@ -898,262 +1154,6 @@ applicable agreement for further details.
 		(rectangle (rect 16 16 272 480))
 	)
 )
-(symbol
-	(rect 1800 536 1832 568)
-	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
-	(text "inst7" (rect 3 21 26 33)(font "Arial" )(invisible))
-	(port
-		(pt 16 0)
-		(output)
-		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
-		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
-		(line (pt 16 8)(pt 16 0))
-	)
-	(drawing
-		(line (pt 8 8)(pt 16 16))
-		(line (pt 16 16)(pt 24 8))
-		(line (pt 8 8)(pt 24 8))
-	)
-)
-(symbol
-	(rect 1272 776 1304 792)
-	(text "VCC" (rect 7 0 27 10)(font "Arial" (font_size 6)))
-	(text "inst8" (rect 3 5 26 17)(font "Arial" )(invisible))
-	(port
-		(pt 16 16)
-		(output)
-		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
-		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
-		(line (pt 16 16)(pt 16 8))
-	)
-	(drawing
-		(line (pt 8 8)(pt 24 8))
-	)
-)
-(symbol
-	(rect 1896 456 2040 560)
-	(text "ALTSHIFT_TAPS" (rect 23 1 141 17)(font "Arial" (font_size 10)))
-	(text "fifo_inst2" (rect 8 88 55 100)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "shiftin[WIDTH-1..0]" (rect 0 0 96 12)(font "Arial" ))
-		(text "shiftin[]" (rect 21 25 62 39)(font "Arial" (font_size 8)))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "clken" (rect 0 0 25 12)(font "Arial" ))
-		(text "clken" (rect 21 57 50 71)(font "Arial" (font_size 8)))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "clock" (rect 0 0 25 12)(font "Arial" ))
-		(text "clock" (rect 21 41 50 55)(font "Arial" (font_size 8))(invisible))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "aclr" (rect 24 72 45 86)(font "Arial" (font_size 8)))
-		(text "aclr" (rect 24 72 45 86)(font "Arial" (font_size 8)))
-		(line (pt 0 80)(pt 16 80))
-	)
-	(port
-		(pt 144 32)
-		(output)
-		(text "shiftout[WIDTH-1..0]" (rect -208 0 -105 12)(font "Arial" ))
-		(text "shiftout[]" (rect 82 25 131 39)(font "Arial" (font_size 8)))
-		(line (pt 144 32)(pt 128 32)(line_width 3))
-	)
-	(port
-		(pt 144 48)
-		(output)
-		(text "taps[(WIDTH*NUMBER_OF_TAPS) -1..0]" (rect -208 0 -4 12)(font "Arial" ))
-		(text "taps[]" (rect 97 41 128 55)(font "Arial" (font_size 8)))
-		(line (pt 144 48)(pt 128 48)(line_width 3))
-	)
-	(parameter
-		"NUMBER_OF_TAPS"
-		"3"
-		"Number of output taps, each separated by TAP_DISTANCE clock cycles"
-	)
-	(parameter
-		"TAP_DISTANCE"
-		"800"
-		"Number of shift positions between output taps"
-	)
-	(parameter
-		"WIDTH"
-		"30"
-		"Number of bits for the shiftin input"
-	)
-	(drawing
-		(line (pt 16 56)(pt 24 48))
-		(line (pt 16 40)(pt 24 48))
-		(rectangle (rect 16 16 128 88))
-	)
-	(annotation_block (parameter)(rect 1880 400 2049 456))
-)
-(symbol
-	(rect 1776 -8 1984 200)
-	(text "top" (rect 5 0 20 12)(font "Arial" ))
-	(text "inst3" (rect 8 192 31 204)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "CLOCK_50" (rect 0 0 55 12)(font "Arial" ))
-		(text "CLOCK_50" (rect 21 27 76 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "SW" (rect 0 0 17 12)(font "Arial" ))
-		(text "SW" (rect 21 43 38 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "volume[7..0]" (rect 0 0 62 12)(font "Arial" ))
-		(text "volume[7..0]" (rect 21 59 83 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "ADC_SDO" (rect 0 0 53 12)(font "Arial" ))
-		(text "ADC_SDO" (rect 21 75 74 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80))
-	)
-	(port
-		(pt 208 32)
-		(output)
-		(text "HEX0_D[6..0]" (rect 0 0 67 12)(font "Arial" ))
-		(text "HEX0_D[6..0]" (rect 131 27 198 39)(font "Arial" ))
-		(line (pt 208 32)(pt 192 32)(line_width 3))
-	)
-	(port
-		(pt 208 48)
-		(output)
-		(text "HEX1_D[6..0]" (rect 0 0 67 12)(font "Arial" ))
-		(text "HEX1_D[6..0]" (rect 131 43 198 55)(font "Arial" ))
-		(line (pt 208 48)(pt 192 48)(line_width 3))
-	)
-	(port
-		(pt 208 64)
-		(output)
-		(text "HEX2_D[6..0]" (rect 0 0 67 12)(font "Arial" ))
-		(text "HEX2_D[6..0]" (rect 131 59 198 71)(font "Arial" ))
-		(line (pt 208 64)(pt 192 64)(line_width 3))
-	)
-	(port
-		(pt 208 80)
-		(output)
-		(text "DAC_SDI" (rect 0 0 48 12)(font "Arial" ))
-		(text "DAC_SDI" (rect 147 75 195 87)(font "Arial" ))
-		(line (pt 208 80)(pt 192 80))
-	)
-	(port
-		(pt 208 96)
-		(output)
-		(text "SCK" (rect 0 0 22 12)(font "Arial" ))
-		(text "SCK" (rect 169 91 191 103)(font "Arial" ))
-		(line (pt 208 96)(pt 192 96))
-	)
-	(port
-		(pt 208 112)
-		(output)
-		(text "DAC_CS" (rect 0 0 44 12)(font "Arial" ))
-		(text "DAC_CS" (rect 150 107 194 119)(font "Arial" ))
-		(line (pt 208 112)(pt 192 112))
-	)
-	(port
-		(pt 208 128)
-		(output)
-		(text "DAC_LD" (rect 0 0 43 12)(font "Arial" ))
-		(text "DAC_LD" (rect 151 123 194 135)(font "Arial" ))
-		(line (pt 208 128)(pt 192 128))
-	)
-	(port
-		(pt 208 144)
-		(output)
-		(text "ADC_SDI" (rect 0 0 48 12)(font "Arial" ))
-		(text "ADC_SDI" (rect 147 139 195 151)(font "Arial" ))
-		(line (pt 208 144)(pt 192 144))
-	)
-	(port
-		(pt 208 160)
-		(output)
-		(text "ADC_CS" (rect 0 0 44 12)(font "Arial" ))
-		(text "ADC_CS" (rect 150 155 194 167)(font "Arial" ))
-		(line (pt 208 160)(pt 192 160))
-	)
-	(drawing
-		(rectangle (rect 16 16 192 192))
-	)
-)
-(symbol
-	(rect 1464 696 1696 840)
-	(text "markers" (rect 5 0 45 12)(font "Arial" ))
-	(text "inst2" (rect 8 128 31 140)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "vin[89..0]" (rect 0 0 47 12)(font "Arial" ))
-		(text "vin[89..0]" (rect 21 27 68 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "vga_xy[19..0]" (rect 0 0 69 12)(font "Arial" ))
-		(text "vga_xy[19..0]" (rect 21 43 90 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "clk" (rect 0 0 14 12)(font "Arial" ))
-		(text "clk" (rect 21 59 35 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "en" (rect 0 0 11 12)(font "Arial" ))
-		(text "en" (rect 21 75 32 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "arst_n" (rect 0 0 30 12)(font "Arial" ))
-		(text "arst_n" (rect 21 91 51 103)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96))
-	)
-	(port
-		(pt 232 32)
-		(output)
-		(text "vout_rsc_z[29..0]" (rect 0 0 86 12)(font "Arial" ))
-		(text "vout_rsc_z[29..0]" (rect 139 27 225 39)(font "Arial" ))
-		(line (pt 232 32)(pt 216 32)(line_width 3))
-	)
-	(port
-		(pt 232 48)
-		(output)
-		(text "volume_rsc_z[7..0]" (rect 0 0 94 12)(font "Arial" ))
-		(text "volume_rsc_z[7..0]" (rect 132 43 226 55)(font "Arial" ))
-		(line (pt 232 48)(pt 216 48)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 216 128))
-	)
-)
 (connector
 	(pt 1048 96)
 	(pt 1080 96)
@@ -1258,11 +1258,6 @@ applicable agreement for further details.
 	(text "VGA_CLK" (rect 1058 432 1107 444)(font "Arial" ))
 	(pt 1048 448)
 	(pt 1232 448)
-)
-(connector
-	(pt 760 144)
-	(pt 704 144)
-	(bus)
 )
 (connector
 	(text "oLEDG[9..0]" (rect 978 16 1039 28)(font "Arial" ))
@@ -1399,17 +1394,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 760 128)
-	(pt 688 128)
-	(bus)
-)
-(connector
-	(text "KEY[2..0]" (rect 586 96 634 108)(font "Arial" ))
-	(pt 584 112)
-	(pt 760 112)
-	(bus)
-)
-(connector
 	(pt 2160 784)
 	(pt 2160 832)
 	(bus)
@@ -1456,23 +1440,6 @@ applicable agreement for further details.
 (connector
 	(pt 1776 24)
 	(pt 1768 24)
-)
-(connector
-	(pt 720 96)
-	(pt 720 -80)
-)
-(connector
-	(pt 720 -80)
-	(pt 1520 -80)
-)
-(connector
-	(text "CLOCK_50" (rect 602 80 657 92)(font "Arial" ))
-	(pt 600 96)
-	(pt 720 96)
-)
-(connector
-	(pt 720 96)
-	(pt 760 96)
 )
 (connector
 	(pt 1520 -80)
@@ -1549,7 +1516,68 @@ applicable agreement for further details.
 	(pt 2088 728)
 	(bus)
 )
-(junction (pt 720 96))
+(connector
+	(text "KEY[2..0]" (rect 586 112 634 124)(font "Arial" ))
+	(pt 584 128)
+	(pt 760 128)
+	(bus)
+)
+(connector
+	(text "CLOCK_50" (rect 290 -56 345 -44)(font "Arial" ))
+	(pt 288 -40)
+	(pt 408 -40)
+)
+(connector
+	(pt 408 -80)
+	(pt 408 -40)
+)
+(connector
+	(pt 760 96)
+	(pt 736 96)
+)
+(connector
+	(pt 1520 -80)
+	(pt 736 -80)
+)
+(connector
+	(pt 736 -80)
+	(pt 408 -80)
+)
+(connector
+	(pt 448 416)
+	(pt 448 408)
+	(bus)
+)
+(connector
+	(pt 440 416)
+	(pt 448 416)
+	(bus)
+)
+(connector
+	(text "SW[9..0]" (rect 477 392 520 404)(font "Arial" ))
+	(pt 448 408)
+	(pt 488 408)
+	(bus)
+)
+(connector
+	(pt 760 112)
+	(pt 736 112)
+)
+(connector
+	(pt 736 -80)
+	(pt 736 96)
+)
+(connector
+	(pt 736 96)
+	(pt 736 112)
+)
+(connector
+	(pt 648 144)
+	(pt 760 144)
+	(bus)
+)
+(junction (pt 736 -80))
+(junction (pt 736 96))
 (text "MEMORY" (rect 1464 192 1517 206)(font "Arial" (font_size 8)))
 (text "DIGITAL CAMERA" (rect 1416 488 1517 502)(font "Arial" (font_size 8)))
 (text "Hardware Block generated by the High-Level Synthesis Tool" (rect 1288 656 1949 678)(font "Arial" (font_size 14)(bold)))

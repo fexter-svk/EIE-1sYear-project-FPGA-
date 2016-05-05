@@ -369,7 +369,7 @@ GND                          : M12       : gnd    :                   :         
 GND                          : M13       : gnd    :                   :         :           :                
 VCCINT                       : M14       : power  :                   : 1.2V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M15       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : M16       :        :                   :         : 5         :                
+VGA_CLK                      : M16       : output : 3.3-V LVTTL       :         : 5         : N              
 MSEL0                        : M17       :        :                   :         : 6         :                
 CONF_DONE                    : M18       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M19       :        :                   :         : 5         :                
@@ -458,7 +458,7 @@ VCCINT                       : T13       : power  :                   : 1.2V    
 GPIO_1[18]                   : T14       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
 GPIO_1[11]                   : T15       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
 GPIO_1_CLKOUT[1]             : T16       : output : 3.3-V LVTTL       :         : 4         : Y              
-VGA_CLK                      : T17       : output : 3.3-V LVTTL       :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : T17       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T18       :        :                   :         : 5         :                
 VCCIO5                       : T19       : power  :                   : 3.3V    : 5         :                
 GND                          : T20       : gnd    :                   :         :           :                

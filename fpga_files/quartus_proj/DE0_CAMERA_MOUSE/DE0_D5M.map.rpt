@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE0_D5M
-Thu May 05 16:07:21 2016
+Thu May 05 16:46:28 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -100,15 +100,15 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
  92. Parameter Settings for User Entity Instance: top:inst3|processor:DUMMY
  93. Parameter Settings for User Entity Instance: top:inst3|processor:DUMMY|pulse_gen:pulse_gen
  94. Parameter Settings for User Entity Instance: top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component
- 95. Parameter Settings for User Entity Instance: markers:inst2|mgc_out_stdreg:vout_rsc_mgc_out_stdreg
- 96. Parameter Settings for User Entity Instance: markers:inst2|mgc_out_stdreg:volume_rsc_mgc_out_stdreg
+ 95. Parameter Settings for User Entity Instance: markers:inst9|mgc_out_stdreg:vout_rsc_mgc_out_stdreg
+ 96. Parameter Settings for User Entity Instance: markers:inst9|mgc_out_stdreg:volume_rsc_mgc_out_stdreg
  97. Parameter Settings for User Entity Instance: altshift_taps:fifo_inst2
  98. Parameter Settings for User Entity Instance: vga_mux:inst10|LPM_MUX:LPM_MUX_component
  99. altshift_taps Parameter Settings by Entity Instance
 100. altpll Parameter Settings by Entity Instance
 101. dcfifo Parameter Settings by Entity Instance
 102. scfifo Parameter Settings by Entity Instance
-103. Port Connectivity Checks: "markers:inst2|mgc_out_stdreg:volume_rsc_mgc_out_stdreg"
+103. Port Connectivity Checks: "markers:inst9|mgc_out_stdreg:volume_rsc_mgc_out_stdreg"
 104. Port Connectivity Checks: "top:inst3|hex_to_7seg:SEG2"
 105. Port Connectivity Checks: "top:inst3|processor:DUMMY|FIFO:FIFO"
 106. Port Connectivity Checks: "top:inst3|clk_div:GEN_10K"
@@ -152,15 +152,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 05 16:07:20 2016            ;
+; Analysis & Synthesis Status        ; Successful - Thu May 05 16:46:28 2016            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; DE0_D5M                                          ;
 ; Top-level Entity Name              ; TOP_DE0_CAMERA_MOUSE                             ;
 ; Family                             ; Cyclone III                                      ;
-; Total logic elements               ; 2,198                                            ;
-;     Total combinational functions  ; 1,786                                            ;
-;     Dedicated logic registers      ; 1,302                                            ;
-; Total registers                    ; 1302                                             ;
+; Total logic elements               ; 2,303                                            ;
+;     Total combinational functions  ; 1,882                                            ;
+;     Dedicated logic registers      ; 1,360                                            ;
+; Total registers                    ; 1360                                             ;
 ; Total pins                         ; 131                                              ;
 ; Total virtual pins                 ; 0                                                ;
 ; Total memory bits                  ; 94,668                                           ;
@@ -274,98 +274,98 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                      ;
-+-------------------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path          ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                   ; Library ;
-+-------------------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------+---------+
-; catapult_ip/marker/rtl_mgc_ioport.v       ; yes             ; User Verilog HDL File              ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/catapult_ip/marker/rtl_mgc_ioport.v       ;         ;
-; catapult_ip/marker/rtl.v                  ; yes             ; User Verilog HDL File              ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/catapult_ip/marker/rtl.v                  ;         ;
-; music/top.v                               ; yes             ; User Verilog HDL File              ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/music/top.v                               ;         ;
-; music/spi2dac.v                           ; yes             ; User Verilog HDL File              ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/music/spi2dac.v                           ;         ;
-; music/spi2adc.v                           ; yes             ; User Verilog HDL File              ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/music/spi2adc.v                           ;         ;
-; music/pulse_gen.v                         ; yes             ; User Verilog HDL File              ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/music/pulse_gen.v                         ;         ;
-; music/multiple_echo.v                     ; yes             ; User Verilog HDL File              ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/music/multiple_echo.v                     ;         ;
-; music/hex_to_7seg.v                       ; yes             ; User Verilog HDL File              ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/music/hex_to_7seg.v                       ;         ;
-; music/FIFO.v                              ; yes             ; User Wizard-Generated File         ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/music/FIFO.v                              ;         ;
-; music/clk_div.v                           ; yes             ; User Verilog HDL File              ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/music/clk_div.v                           ;         ;
-; Sdram_Control_4Port/Sdram_Params.h        ; yes             ; User Unspecified File              ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/Sdram_Control_4Port/Sdram_Params.h        ;         ;
-; Sdram_Control_4Port/command.v             ; yes             ; User Verilog HDL File              ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/Sdram_Control_4Port/command.v             ;         ;
-; Sdram_Control_4Port/control_interface.v   ; yes             ; User Verilog HDL File              ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/Sdram_Control_4Port/control_interface.v   ;         ;
-; Sdram_Control_4Port/sdr_data_path.v       ; yes             ; User Verilog HDL File              ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/Sdram_Control_4Port/sdr_data_path.v       ;         ;
-; Sdram_Control_4Port/Sdram_Control_4Port.v ; yes             ; User Verilog HDL File              ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/Sdram_Control_4Port/Sdram_Control_4Port.v ;         ;
-; Sdram_Control_4Port/Sdram_FIFO.v          ; yes             ; User Wizard-Generated File         ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/Sdram_Control_4Port/Sdram_FIFO.v          ;         ;
-; V/VGA_Param.h                             ; yes             ; User Unspecified File              ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/V/VGA_Param.h                             ;         ;
-; V/CCD_Capture.v                           ; yes             ; User Verilog HDL File              ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/V/CCD_Capture.v                           ;         ;
-; V/I2C_CCD_Config.v                        ; yes             ; User Verilog HDL File              ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/V/I2C_CCD_Config.v                        ;         ;
-; V/I2C_Controller.v                        ; yes             ; User Verilog HDL File              ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/V/I2C_Controller.v                        ;         ;
-; V/Line_Buffer.v                           ; yes             ; User Wizard-Generated File         ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/V/Line_Buffer.v                           ;         ;
-; V/RAW2RGB.v                               ; yes             ; User Verilog HDL File              ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/V/RAW2RGB.v                               ;         ;
-; V/Reset_Delay.v                           ; yes             ; User Verilog HDL File              ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/V/Reset_Delay.v                           ;         ;
-; V/sdram_pll.v                             ; yes             ; User Wizard-Generated File         ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/V/sdram_pll.v                             ;         ;
-; V/SEG7_LUT.v                              ; yes             ; User Verilog HDL File              ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/V/SEG7_LUT.v                              ;         ;
-; V/SEG7_LUT_8.v                            ; yes             ; User Verilog HDL File              ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/V/SEG7_LUT_8.v                            ;         ;
-; V/VGA_Controller.v                        ; yes             ; User Verilog HDL File              ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/V/VGA_Controller.v                        ;         ;
-; DE0_D5M.v                                 ; yes             ; User Verilog HDL File              ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/DE0_D5M.v                                 ;         ;
-; V/TOP_DE0_CAMERA_MOUSE.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/V/TOP_DE0_CAMERA_MOUSE.bdf                ;         ;
-; vga_mux.vhd                               ; yes             ; User Wizard-Generated File         ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/vga_mux.vhd                               ;         ;
-; altshift_taps.tdf                         ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift_taps.tdf                                            ;         ;
-; altdpram.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                                                 ;         ;
-; lpm_counter.inc                           ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.inc                                              ;         ;
-; lpm_compare.inc                           ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc                                              ;         ;
-; lpm_constant.inc                          ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc                                             ;         ;
-; db/shift_taps_rnn.tdf                     ; yes             ; Auto-Generated Megafunction        ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/shift_taps_rnn.tdf                     ;         ;
-; db/altsyncram_lp81.tdf                    ; yes             ; Auto-Generated Megafunction        ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/altsyncram_lp81.tdf                    ;         ;
-; db/cntr_cuf.tdf                           ; yes             ; Auto-Generated Megafunction        ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/cntr_cuf.tdf                           ;         ;
-; db/cmpr_vgc.tdf                           ; yes             ; Auto-Generated Megafunction        ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/cmpr_vgc.tdf                           ;         ;
-; altpll.tdf                                ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altpll.tdf                                                   ;         ;
-; aglobal130.inc                            ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                               ;         ;
-; stratix_pll.inc                           ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_pll.inc                                              ;         ;
-; stratixii_pll.inc                         ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratixii_pll.inc                                            ;         ;
-; cycloneii_pll.inc                         ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/cycloneii_pll.inc                                            ;         ;
-; db/altpll_9ee2.tdf                        ; yes             ; Auto-Generated Megafunction        ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/altpll_9ee2.tdf                        ;         ;
-; dcfifo.tdf                                ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/dcfifo.tdf                                                   ;         ;
-; lpm_add_sub.inc                           ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.inc                                              ;         ;
-; a_graycounter.inc                         ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_graycounter.inc                                            ;         ;
-; a_fefifo.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_fefifo.inc                                                 ;         ;
-; a_gray2bin.inc                            ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_gray2bin.inc                                               ;         ;
-; dffpipe.inc                               ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/dffpipe.inc                                                  ;         ;
-; alt_sync_fifo.inc                         ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_sync_fifo.inc                                            ;         ;
-; altsyncram_fifo.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram_fifo.inc                                          ;         ;
-; db/dcfifo_v5o1.tdf                        ; yes             ; Auto-Generated Megafunction        ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/dcfifo_v5o1.tdf                        ;         ;
-; db/a_gray2bin_tgb.tdf                     ; yes             ; Auto-Generated Megafunction        ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/a_gray2bin_tgb.tdf                     ;         ;
-; db/a_graycounter_s57.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/a_graycounter_s57.tdf                  ;         ;
-; db/a_graycounter_ojc.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/a_graycounter_ojc.tdf                  ;         ;
-; db/altsyncram_de51.tdf                    ; yes             ; Auto-Generated Megafunction        ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/altsyncram_de51.tdf                    ;         ;
-; db/dffpipe_oe9.tdf                        ; yes             ; Auto-Generated Megafunction        ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/dffpipe_oe9.tdf                        ;         ;
-; db/alt_synch_pipe_qld.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/alt_synch_pipe_qld.tdf                 ;         ;
-; db/dffpipe_pe9.tdf                        ; yes             ; Auto-Generated Megafunction        ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/dffpipe_pe9.tdf                        ;         ;
-; db/alt_synch_pipe_rld.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/alt_synch_pipe_rld.tdf                 ;         ;
-; db/dffpipe_qe9.tdf                        ; yes             ; Auto-Generated Megafunction        ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/dffpipe_qe9.tdf                        ;         ;
-; db/cmpr_e66.tdf                           ; yes             ; Auto-Generated Megafunction        ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/cmpr_e66.tdf                           ;         ;
-; scfifo.tdf                                ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/scfifo.tdf                                                   ;         ;
-; a_regfifo.inc                             ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_regfifo.inc                                                ;         ;
-; a_dpfifo.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_dpfifo.inc                                                 ;         ;
-; a_i2fifo.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_i2fifo.inc                                                 ;         ;
-; a_fffifo.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_fffifo.inc                                                 ;         ;
-; a_f2fifo.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_f2fifo.inc                                                 ;         ;
-; db/scfifo_2g21.tdf                        ; yes             ; Auto-Generated Megafunction        ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/scfifo_2g21.tdf                        ;         ;
-; db/a_dpfifo_9m21.tdf                      ; yes             ; Auto-Generated Megafunction        ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/a_dpfifo_9m21.tdf                      ;         ;
-; db/altsyncram_s5e1.tdf                    ; yes             ; Auto-Generated Megafunction        ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/altsyncram_s5e1.tdf                    ;         ;
-; db/cmpr_ls8.tdf                           ; yes             ; Auto-Generated Megafunction        ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/cmpr_ls8.tdf                           ;         ;
-; db/cntr_p8b.tdf                           ; yes             ; Auto-Generated Megafunction        ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/cntr_p8b.tdf                           ;         ;
-; db/cntr_da7.tdf                           ; yes             ; Auto-Generated Megafunction        ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/cntr_da7.tdf                           ;         ;
-; db/cntr_1ab.tdf                           ; yes             ; Auto-Generated Megafunction        ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/cntr_1ab.tdf                           ;         ;
-; db/shift_taps_jpm.tdf                     ; yes             ; Auto-Generated Megafunction        ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/shift_taps_jpm.tdf                     ;         ;
-; db/altsyncram_5n81.tdf                    ; yes             ; Auto-Generated Megafunction        ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/altsyncram_5n81.tdf                    ;         ;
-; db/cntr_1tf.tdf                           ; yes             ; Auto-Generated Megafunction        ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/cntr_1tf.tdf                           ;         ;
-; db/cmpr_ugc.tdf                           ; yes             ; Auto-Generated Megafunction        ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/cmpr_ugc.tdf                           ;         ;
-; lpm_mux.tdf                               ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.tdf                                                  ;         ;
-; muxlut.inc                                ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/muxlut.inc                                                   ;         ;
-; bypassff.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc                                                 ;         ;
-; altshift.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc                                                 ;         ;
-; db/mux_u7e.tdf                            ; yes             ; Auto-Generated Megafunction        ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/mux_u7e.tdf                            ;         ;
-+-------------------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                ;
++-------------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path          ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                             ; Library ;
++-------------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------------------+---------+
+; catapult_ip/marker/rtl_mgc_ioport.v       ; yes             ; User Verilog HDL File              ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/catapult_ip/marker/rtl_mgc_ioport.v       ;         ;
+; catapult_ip/marker/rtl.v                  ; yes             ; User Verilog HDL File              ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/catapult_ip/marker/rtl.v                  ;         ;
+; music/top.v                               ; yes             ; User Verilog HDL File              ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/music/top.v                               ;         ;
+; music/spi2dac.v                           ; yes             ; User Verilog HDL File              ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/music/spi2dac.v                           ;         ;
+; music/spi2adc.v                           ; yes             ; User Verilog HDL File              ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/music/spi2adc.v                           ;         ;
+; music/pulse_gen.v                         ; yes             ; User Verilog HDL File              ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/music/pulse_gen.v                         ;         ;
+; music/multiple_echo.v                     ; yes             ; User Verilog HDL File              ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/music/multiple_echo.v                     ;         ;
+; music/hex_to_7seg.v                       ; yes             ; User Verilog HDL File              ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/music/hex_to_7seg.v                       ;         ;
+; music/FIFO.v                              ; yes             ; User Wizard-Generated File         ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/music/FIFO.v                              ;         ;
+; music/clk_div.v                           ; yes             ; User Verilog HDL File              ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/music/clk_div.v                           ;         ;
+; Sdram_Control_4Port/Sdram_Params.h        ; yes             ; User Unspecified File              ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/Sdram_Control_4Port/Sdram_Params.h        ;         ;
+; Sdram_Control_4Port/command.v             ; yes             ; User Verilog HDL File              ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/Sdram_Control_4Port/command.v             ;         ;
+; Sdram_Control_4Port/control_interface.v   ; yes             ; User Verilog HDL File              ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/Sdram_Control_4Port/control_interface.v   ;         ;
+; Sdram_Control_4Port/sdr_data_path.v       ; yes             ; User Verilog HDL File              ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/Sdram_Control_4Port/sdr_data_path.v       ;         ;
+; Sdram_Control_4Port/Sdram_Control_4Port.v ; yes             ; User Verilog HDL File              ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/Sdram_Control_4Port/Sdram_Control_4Port.v ;         ;
+; Sdram_Control_4Port/Sdram_FIFO.v          ; yes             ; User Wizard-Generated File         ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/Sdram_Control_4Port/Sdram_FIFO.v          ;         ;
+; V/VGA_Param.h                             ; yes             ; User Unspecified File              ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/V/VGA_Param.h                             ;         ;
+; V/CCD_Capture.v                           ; yes             ; User Verilog HDL File              ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/V/CCD_Capture.v                           ;         ;
+; V/I2C_CCD_Config.v                        ; yes             ; User Verilog HDL File              ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/V/I2C_CCD_Config.v                        ;         ;
+; V/I2C_Controller.v                        ; yes             ; User Verilog HDL File              ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/V/I2C_Controller.v                        ;         ;
+; V/Line_Buffer.v                           ; yes             ; User Wizard-Generated File         ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/V/Line_Buffer.v                           ;         ;
+; V/RAW2RGB.v                               ; yes             ; User Verilog HDL File              ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/V/RAW2RGB.v                               ;         ;
+; V/Reset_Delay.v                           ; yes             ; User Verilog HDL File              ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/V/Reset_Delay.v                           ;         ;
+; V/sdram_pll.v                             ; yes             ; User Wizard-Generated File         ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/V/sdram_pll.v                             ;         ;
+; V/SEG7_LUT.v                              ; yes             ; User Verilog HDL File              ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/V/SEG7_LUT.v                              ;         ;
+; V/SEG7_LUT_8.v                            ; yes             ; User Verilog HDL File              ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/V/SEG7_LUT_8.v                            ;         ;
+; V/VGA_Controller.v                        ; yes             ; User Verilog HDL File              ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/V/VGA_Controller.v                        ;         ;
+; DE0_D5M.v                                 ; yes             ; User Verilog HDL File              ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/DE0_D5M.v                                 ;         ;
+; V/TOP_DE0_CAMERA_MOUSE.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/V/TOP_DE0_CAMERA_MOUSE.bdf                ;         ;
+; vga_mux.vhd                               ; yes             ; User Wizard-Generated File         ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/vga_mux.vhd                               ;         ;
+; altshift_taps.tdf                         ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift_taps.tdf                                                      ;         ;
+; altdpram.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                                                           ;         ;
+; lpm_counter.inc                           ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.inc                                                        ;         ;
+; lpm_compare.inc                           ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc                                                        ;         ;
+; lpm_constant.inc                          ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc                                                       ;         ;
+; db/shift_taps_rnn.tdf                     ; yes             ; Auto-Generated Megafunction        ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/shift_taps_rnn.tdf                     ;         ;
+; db/altsyncram_lp81.tdf                    ; yes             ; Auto-Generated Megafunction        ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/altsyncram_lp81.tdf                    ;         ;
+; db/cntr_cuf.tdf                           ; yes             ; Auto-Generated Megafunction        ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/cntr_cuf.tdf                           ;         ;
+; db/cmpr_vgc.tdf                           ; yes             ; Auto-Generated Megafunction        ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/cmpr_vgc.tdf                           ;         ;
+; altpll.tdf                                ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altpll.tdf                                                             ;         ;
+; aglobal130.inc                            ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                                         ;         ;
+; stratix_pll.inc                           ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_pll.inc                                                        ;         ;
+; stratixii_pll.inc                         ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratixii_pll.inc                                                      ;         ;
+; cycloneii_pll.inc                         ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/cycloneii_pll.inc                                                      ;         ;
+; db/altpll_9ee2.tdf                        ; yes             ; Auto-Generated Megafunction        ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/altpll_9ee2.tdf                        ;         ;
+; dcfifo.tdf                                ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/dcfifo.tdf                                                             ;         ;
+; lpm_add_sub.inc                           ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.inc                                                        ;         ;
+; a_graycounter.inc                         ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_graycounter.inc                                                      ;         ;
+; a_fefifo.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_fefifo.inc                                                           ;         ;
+; a_gray2bin.inc                            ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_gray2bin.inc                                                         ;         ;
+; dffpipe.inc                               ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/dffpipe.inc                                                            ;         ;
+; alt_sync_fifo.inc                         ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_sync_fifo.inc                                                      ;         ;
+; altsyncram_fifo.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram_fifo.inc                                                    ;         ;
+; db/dcfifo_v5o1.tdf                        ; yes             ; Auto-Generated Megafunction        ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/dcfifo_v5o1.tdf                        ;         ;
+; db/a_gray2bin_tgb.tdf                     ; yes             ; Auto-Generated Megafunction        ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/a_gray2bin_tgb.tdf                     ;         ;
+; db/a_graycounter_s57.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/a_graycounter_s57.tdf                  ;         ;
+; db/a_graycounter_ojc.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/a_graycounter_ojc.tdf                  ;         ;
+; db/altsyncram_de51.tdf                    ; yes             ; Auto-Generated Megafunction        ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/altsyncram_de51.tdf                    ;         ;
+; db/dffpipe_oe9.tdf                        ; yes             ; Auto-Generated Megafunction        ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/dffpipe_oe9.tdf                        ;         ;
+; db/alt_synch_pipe_qld.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/alt_synch_pipe_qld.tdf                 ;         ;
+; db/dffpipe_pe9.tdf                        ; yes             ; Auto-Generated Megafunction        ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/dffpipe_pe9.tdf                        ;         ;
+; db/alt_synch_pipe_rld.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/alt_synch_pipe_rld.tdf                 ;         ;
+; db/dffpipe_qe9.tdf                        ; yes             ; Auto-Generated Megafunction        ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/dffpipe_qe9.tdf                        ;         ;
+; db/cmpr_e66.tdf                           ; yes             ; Auto-Generated Megafunction        ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/cmpr_e66.tdf                           ;         ;
+; scfifo.tdf                                ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/scfifo.tdf                                                             ;         ;
+; a_regfifo.inc                             ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_regfifo.inc                                                          ;         ;
+; a_dpfifo.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_dpfifo.inc                                                           ;         ;
+; a_i2fifo.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_i2fifo.inc                                                           ;         ;
+; a_fffifo.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_fffifo.inc                                                           ;         ;
+; a_f2fifo.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_f2fifo.inc                                                           ;         ;
+; db/scfifo_2g21.tdf                        ; yes             ; Auto-Generated Megafunction        ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/scfifo_2g21.tdf                        ;         ;
+; db/a_dpfifo_9m21.tdf                      ; yes             ; Auto-Generated Megafunction        ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/a_dpfifo_9m21.tdf                      ;         ;
+; db/altsyncram_s5e1.tdf                    ; yes             ; Auto-Generated Megafunction        ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/altsyncram_s5e1.tdf                    ;         ;
+; db/cmpr_ls8.tdf                           ; yes             ; Auto-Generated Megafunction        ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/cmpr_ls8.tdf                           ;         ;
+; db/cntr_p8b.tdf                           ; yes             ; Auto-Generated Megafunction        ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/cntr_p8b.tdf                           ;         ;
+; db/cntr_da7.tdf                           ; yes             ; Auto-Generated Megafunction        ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/cntr_da7.tdf                           ;         ;
+; db/cntr_1ab.tdf                           ; yes             ; Auto-Generated Megafunction        ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/cntr_1ab.tdf                           ;         ;
+; db/shift_taps_jpm.tdf                     ; yes             ; Auto-Generated Megafunction        ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/shift_taps_jpm.tdf                     ;         ;
+; db/altsyncram_5n81.tdf                    ; yes             ; Auto-Generated Megafunction        ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/altsyncram_5n81.tdf                    ;         ;
+; db/cntr_1tf.tdf                           ; yes             ; Auto-Generated Megafunction        ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/cntr_1tf.tdf                           ;         ;
+; db/cmpr_ugc.tdf                           ; yes             ; Auto-Generated Megafunction        ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/cmpr_ugc.tdf                           ;         ;
+; lpm_mux.tdf                               ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.tdf                                                            ;         ;
+; muxlut.inc                                ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/muxlut.inc                                                             ;         ;
+; bypassff.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc                                                           ;         ;
+; altshift.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc                                                           ;         ;
+; db/mux_u7e.tdf                            ; yes             ; Auto-Generated Megafunction        ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/db/mux_u7e.tdf                            ;         ;
++-------------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------+
@@ -373,20 +373,20 @@ applicable agreement for further details.
 +---------------------------------------------+-------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                               ;
 +---------------------------------------------+-------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 2,198                                                                               ;
+; Estimated Total logic elements              ; 2,303                                                                               ;
 ;                                             ;                                                                                     ;
-; Total combinational functions               ; 1786                                                                                ;
+; Total combinational functions               ; 1882                                                                                ;
 ; Logic element usage by number of LUT inputs ;                                                                                     ;
 ;     -- 4 input functions                    ; 732                                                                                 ;
-;     -- 3 input functions                    ; 457                                                                                 ;
-;     -- <=2 input functions                  ; 597                                                                                 ;
+;     -- 3 input functions                    ; 492                                                                                 ;
+;     -- <=2 input functions                  ; 658                                                                                 ;
 ;                                             ;                                                                                     ;
 ; Logic elements by mode                      ;                                                                                     ;
-;     -- normal mode                          ; 1282                                                                                ;
-;     -- arithmetic mode                      ; 504                                                                                 ;
+;     -- normal mode                          ; 1340                                                                                ;
+;     -- arithmetic mode                      ; 542                                                                                 ;
 ;                                             ;                                                                                     ;
-; Total registers                             ; 1302                                                                                ;
-;     -- Dedicated logic registers            ; 1302                                                                                ;
+; Total registers                             ; 1360                                                                                ;
+;     -- Dedicated logic registers            ; 1360                                                                                ;
 ;     -- I/O registers                        ; 0                                                                                   ;
 ;                                             ;                                                                                     ;
 ; I/O pins                                    ; 131                                                                                 ;
@@ -397,8 +397,8 @@ applicable agreement for further details.
 ;                                             ;                                                                                     ;
 ; Maximum fan-out node                        ; DE0_D5M:inst|sdram_pll:u6|altpll:altpll_component|altpll_9ee2:auto_generated|clk[0] ;
 ; Maximum fan-out                             ; 562                                                                                 ;
-; Total fan-out                               ; 12167                                                                               ;
-; Average fan-out                             ; 3.46                                                                                ;
+; Total fan-out                               ; 12559                                                                               ;
+; Average fan-out                             ; 3.42                                                                                ;
 +---------------------------------------------+-------------------------------------------------------------------------------------+
 
 
@@ -407,12 +407,12 @@ applicable agreement for further details.
 +-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                  ; Library Name ;
 +-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |TOP_DE0_CAMERA_MOUSE                               ; 1786 (2)          ; 1302 (0)     ; 94668       ; 0            ; 0       ; 0         ; 131  ; 0            ; |TOP_DE0_CAMERA_MOUSE                                                                                                                                                                ; work         ;
-;    |DE0_D5M:inst|                                   ; 1156 (1)          ; 1012 (15)    ; 58320       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst                                                                                                                                                   ; work         ;
-;       |CCD_Capture:u3|                              ; 40 (40)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|CCD_Capture:u3                                                                                                                                    ; work         ;
-;       |I2C_CCD_Config:u8|                           ; 245 (176)         ; 133 (95)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|I2C_CCD_Config:u8                                                                                                                                 ; work         ;
+; |TOP_DE0_CAMERA_MOUSE                               ; 1882 (1)          ; 1360 (0)     ; 94668       ; 0            ; 0       ; 0         ; 131  ; 0            ; |TOP_DE0_CAMERA_MOUSE                                                                                                                                                                ; work         ;
+;    |DE0_D5M:inst|                                   ; 1167 (1)          ; 1021 (15)    ; 58320       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst                                                                                                                                                   ; work         ;
+;       |CCD_Capture:u3|                              ; 50 (50)           ; 43 (43)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|CCD_Capture:u3                                                                                                                                    ; work         ;
+;       |I2C_CCD_Config:u8|                           ; 210 (141)         ; 132 (94)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|I2C_CCD_Config:u8                                                                                                                                 ; work         ;
 ;          |I2C_Controller:u0|                        ; 69 (69)           ; 38 (38)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0                                                                                                               ; work         ;
-;       |RAW2RGB:u4|                                  ; 84 (68)           ; 66 (55)      ; 30672       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|RAW2RGB:u4                                                                                                                                        ; work         ;
+;       |RAW2RGB:u4|                                  ; 121 (105)         ; 66 (55)      ; 30672       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|RAW2RGB:u4                                                                                                                                        ; work         ;
 ;          |Line_Buffer:u0|                           ; 16 (0)            ; 11 (0)       ; 30672       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|RAW2RGB:u4|Line_Buffer:u0                                                                                                                         ; work         ;
 ;             |altshift_taps:altshift_taps_component| ; 16 (0)            ; 11 (0)       ; 30672       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:altshift_taps_component                                                                                   ; work         ;
 ;                |shift_taps_rnn:auto_generated|      ; 16 (0)            ; 11 (0)       ; 30672       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:altshift_taps_component|shift_taps_rnn:auto_generated                                                     ; work         ;
@@ -420,13 +420,13 @@ applicable agreement for further details.
 ;                   |cntr_cuf:cntr1|                  ; 16 (13)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:altshift_taps_component|shift_taps_rnn:auto_generated|cntr_cuf:cntr1                                      ; work         ;
 ;                      |cmpr_vgc:cmpr4|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:altshift_taps_component|shift_taps_rnn:auto_generated|cntr_cuf:cntr1|cmpr_vgc:cmpr4                       ; work         ;
 ;       |Reset_Delay:u2|                              ; 50 (50)           ; 35 (35)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Reset_Delay:u2                                                                                                                                    ; work         ;
-;       |Sdram_Control_4Port:u7|                      ; 676 (215)         ; 702 (135)    ; 27648       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7                                                                                                                            ; work         ;
-;          |Sdram_FIFO:read_fifo1|                    ; 84 (0)            ; 116 (0)      ; 5632        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1                                                                                                      ; work         ;
-;             |dcfifo:dcfifo_component|               ; 84 (0)            ; 116 (0)      ; 5632        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component                                                                              ; work         ;
-;                |dcfifo_v5o1:auto_generated|         ; 84 (15)           ; 116 (30)     ; 5632        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated                                                   ; work         ;
+;       |Sdram_Control_4Port:u7|                      ; 675 (214)         ; 702 (135)    ; 27648       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7                                                                                                                            ; work         ;
+;          |Sdram_FIFO:read_fifo1|                    ; 85 (0)            ; 116 (0)      ; 5632        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1                                                                                                      ; work         ;
+;             |dcfifo:dcfifo_component|               ; 85 (0)            ; 116 (0)      ; 5632        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component                                                                              ; work         ;
+;                |dcfifo_v5o1:auto_generated|         ; 85 (15)           ; 116 (30)     ; 5632        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated                                                   ; work         ;
 ;                   |a_gray2bin_tgb:wrptr_g_gray2bin| ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_gray2bin_tgb:wrptr_g_gray2bin                   ; work         ;
 ;                   |a_gray2bin_tgb:ws_dgrp_gray2bin| ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_gray2bin_tgb:ws_dgrp_gray2bin                   ; work         ;
-;                   |a_graycounter_ojc:wrptr_g1p|     ; 21 (21)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_ojc:wrptr_g1p                       ; work         ;
+;                   |a_graycounter_ojc:wrptr_g1p|     ; 22 (22)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_ojc:wrptr_g1p                       ; work         ;
 ;                   |a_graycounter_s57:rdptr_g1p|     ; 19 (19)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p                       ; work         ;
 ;                   |alt_synch_pipe_qld:rs_dgwp|      ; 0 (0)             ; 20 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|alt_synch_pipe_qld:rs_dgwp                        ; work         ;
 ;                      |dffpipe_pe9:dffpipe13|        ; 0 (0)             ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|alt_synch_pipe_qld:rs_dgwp|dffpipe_pe9:dffpipe13  ; work         ;
@@ -453,13 +453,13 @@ applicable agreement for further details.
 ;                   |cmpr_e66:wrfull_eq_comp|         ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|cmpr_e66:wrfull_eq_comp                           ; work         ;
 ;                   |dffpipe_oe9:ws_brp|              ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|dffpipe_oe9:ws_brp                                ; work         ;
 ;                   |dffpipe_oe9:ws_bwp|              ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|dffpipe_oe9:ws_bwp                                ; work         ;
-;          |Sdram_FIFO:write_fifo1|                   ; 85 (0)            ; 116 (0)      ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1                                                                                                     ; work         ;
-;             |dcfifo:dcfifo_component|               ; 85 (0)            ; 116 (0)      ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component                                                                             ; work         ;
-;                |dcfifo_v5o1:auto_generated|         ; 85 (15)           ; 116 (30)     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated                                                  ; work         ;
+;          |Sdram_FIFO:write_fifo1|                   ; 84 (0)            ; 116 (0)      ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1                                                                                                     ; work         ;
+;             |dcfifo:dcfifo_component|               ; 84 (0)            ; 116 (0)      ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component                                                                             ; work         ;
+;                |dcfifo_v5o1:auto_generated|         ; 84 (15)           ; 116 (30)     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated                                                  ; work         ;
 ;                   |a_gray2bin_tgb:rdptr_g_gray2bin| ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_gray2bin_tgb:rdptr_g_gray2bin                  ; work         ;
 ;                   |a_gray2bin_tgb:rs_dgwp_gray2bin| ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_gray2bin_tgb:rs_dgwp_gray2bin                  ; work         ;
 ;                   |a_graycounter_ojc:wrptr_g1p|     ; 19 (19)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_ojc:wrptr_g1p                      ; work         ;
-;                   |a_graycounter_s57:rdptr_g1p|     ; 21 (21)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p                      ; work         ;
+;                   |a_graycounter_s57:rdptr_g1p|     ; 20 (20)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p                      ; work         ;
 ;                   |alt_synch_pipe_qld:rs_dgwp|      ; 0 (0)             ; 20 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|alt_synch_pipe_qld:rs_dgwp                       ; work         ;
 ;                      |dffpipe_pe9:dffpipe13|        ; 0 (0)             ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|alt_synch_pipe_qld:rs_dgwp|dffpipe_pe9:dffpipe13 ; work         ;
 ;                   |alt_synch_pipe_rld:ws_dgrp|      ; 0 (0)             ; 20 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|alt_synch_pipe_rld:ws_dgrp                       ; work         ;
@@ -496,8 +496,8 @@ applicable agreement for further details.
 ;          |altsyncram_5n81:altsyncram2|              ; 0 (0)             ; 0 (0)        ; 27132       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|altshift_taps:fifo_inst2|shift_taps_jpm:auto_generated|altsyncram_5n81:altsyncram2                                                                             ; work         ;
 ;          |cntr_1tf:cntr1|                           ; 15 (12)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|altshift_taps:fifo_inst2|shift_taps_jpm:auto_generated|cntr_1tf:cntr1                                                                                          ; work         ;
 ;             |cmpr_ugc:cmpr4|                        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|altshift_taps:fifo_inst2|shift_taps_jpm:auto_generated|cntr_1tf:cntr1|cmpr_ugc:cmpr4                                                                           ; work         ;
-;    |markers:inst2|                                  ; 386 (0)           ; 134 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|markers:inst2                                                                                                                                                  ; work         ;
-;       |markers_core:markers_core_inst|              ; 386 (386)         ; 134 (134)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|markers:inst2|markers_core:markers_core_inst                                                                                                                   ; work         ;
+;    |markers:inst9|                                  ; 472 (0)           ; 183 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|markers:inst9                                                                                                                                                  ; work         ;
+;       |markers_core:markers_core_inst|              ; 472 (472)         ; 183 (183)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|markers:inst9|markers_core:markers_core_inst                                                                                                                   ; work         ;
 ;    |top:inst3|                                      ; 195 (1)           ; 146 (0)      ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|top:inst3                                                                                                                                                      ; work         ;
 ;       |clk_div:GEN_10K|                             ; 43 (43)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|top:inst3|clk_div:GEN_10K                                                                                                                                      ; work         ;
 ;       |hex_to_7seg:SEG0|                            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_DE0_CAMERA_MOUSE|top:inst3|hex_to_7seg:SEG0                                                                                                                                     ; work         ;
@@ -538,20 +538,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                                                                                                                  ;
-+--------+----------------------------+---------+--------------+--------------+----------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
-; Vendor ; IP Core Name               ; Version ; Release Date ; License Type ; Entity Instance                                                                  ; IP Include File                                                                                       ;
-+--------+----------------------------+---------+--------------+--------------+----------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
-; Altera ; Shift register (RAM-based) ; N/A     ; N/A          ; N/A          ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|RAW2RGB:u4|Line_Buffer:u0                     ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/V/Line_Buffer.v                  ;
-; Altera ; ALTPLL                     ; N/A     ; N/A          ; N/A          ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|sdram_pll:u6                                  ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/V/sdram_pll.v                    ;
-; Altera ; FIFO                       ; N/A     ; N/A          ; N/A          ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1  ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/Sdram_Control_4Port/Sdram_FIFO.v ;
-; Altera ; FIFO                       ; N/A     ; N/A          ; N/A          ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2  ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/Sdram_Control_4Port/Sdram_FIFO.v ;
-; Altera ; FIFO                       ; N/A     ; N/A          ; N/A          ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1 ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/Sdram_Control_4Port/Sdram_FIFO.v ;
-; Altera ; FIFO                       ; N/A     ; N/A          ; N/A          ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2 ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/Sdram_Control_4Port/Sdram_FIFO.v ;
-; Altera ; FIFO                       ; N/A     ; N/A          ; N/A          ; |TOP_DE0_CAMERA_MOUSE|top:inst3|processor:DUMMY|FIFO:FIFO                        ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/music/FIFO.v                     ;
-; Altera ; LPM_MUX                    ; 13.1    ; N/A          ; N/A          ; |TOP_DE0_CAMERA_MOUSE|vga_mux:inst10                                             ; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/vga_mux.vhd                      ;
-+--------+----------------------------+---------+--------------+--------------+----------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                                                                                            ;
++--------+----------------------------+---------+--------------+--------------+----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
+; Vendor ; IP Core Name               ; Version ; Release Date ; License Type ; Entity Instance                                                                  ; IP Include File                                                                                                 ;
++--------+----------------------------+---------+--------------+--------------+----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
+; Altera ; Shift register (RAM-based) ; N/A     ; N/A          ; N/A          ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|RAW2RGB:u4|Line_Buffer:u0                     ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/V/Line_Buffer.v                  ;
+; Altera ; ALTPLL                     ; N/A     ; N/A          ; N/A          ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|sdram_pll:u6                                  ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/V/sdram_pll.v                    ;
+; Altera ; FIFO                       ; N/A     ; N/A          ; N/A          ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1  ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/Sdram_Control_4Port/Sdram_FIFO.v ;
+; Altera ; FIFO                       ; N/A     ; N/A          ; N/A          ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2  ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/Sdram_Control_4Port/Sdram_FIFO.v ;
+; Altera ; FIFO                       ; N/A     ; N/A          ; N/A          ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1 ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/Sdram_Control_4Port/Sdram_FIFO.v ;
+; Altera ; FIFO                       ; N/A     ; N/A          ; N/A          ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2 ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/Sdram_Control_4Port/Sdram_FIFO.v ;
+; Altera ; FIFO                       ; N/A     ; N/A          ; N/A          ; |TOP_DE0_CAMERA_MOUSE|top:inst3|processor:DUMMY|FIFO:FIFO                        ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/music/FIFO.v                     ;
+; Altera ; LPM_MUX                    ; 13.1    ; N/A          ; N/A          ; |TOP_DE0_CAMERA_MOUSE|vga_mux:inst10                                             ; C:/workspace/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/vga_mux.vhd                      ;
++--------+----------------------------+---------+--------------+--------------+----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
 
 
 Encoding Type:  One-Hot
@@ -632,7 +632,8 @@ Encoding Type:  One-Hot
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|command:command1|CKE                                                                                    ; Stuck at VCC due to stuck port data_in                                                 ;
 ; top:inst3|spi2dac:SPI_DAC|shift_reg[1]                                                                                                      ; Stuck at GND due to stuck port data_in                                                 ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|CKE                                                                                                     ; Stuck at VCC due to stuck port data_in                                                 ;
-; markers:inst2|markers_core:markers_core_inst|vout_rsc_mgc_out_stdreg_d[16..19]                                                              ; Stuck at GND due to stuck port data_in                                                 ;
+; markers:inst9|markers_core:markers_core_inst|vout_rsc_mgc_out_stdreg_d[16..19]                                                              ; Stuck at GND due to stuck port data_in                                                 ;
+; DE0_D5M:inst|I2C_CCD_Config:u8|sensor_exposure[0,1]                                                                                         ; Stuck at GND due to stuck port data_in                                                 ;
 ; DE0_D5M:inst|I2C_CCD_Config:u8|mI2C_DATA[31]                                                                                                ; Stuck at VCC due to stuck port data_in                                                 ;
 ; DE0_D5M:inst|I2C_CCD_Config:u8|mI2C_DATA[30]                                                                                                ; Stuck at GND due to stuck port data_in                                                 ;
 ; DE0_D5M:inst|I2C_CCD_Config:u8|mI2C_DATA[27..29]                                                                                            ; Stuck at VCC due to stuck port data_in                                                 ;
@@ -653,8 +654,8 @@ Encoding Type:  One-Hot
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|dffpipe_oe9:rs_brp|dffe12a[9] ; Lost fanout                                                                            ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|dffpipe_oe9:rs_bwp|dffe12a[9] ; Lost fanout                                                                            ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|dffpipe_oe9:rs_brp|dffe12a[9] ; Lost fanout                                                                            ;
-; markers:inst2|markers_core:markers_core_inst|vout_rsc_mgc_out_stdreg_d[26..28]                                                              ; Merged with markers:inst2|markers_core:markers_core_inst|vout_rsc_mgc_out_stdreg_d[29] ;
-; markers:inst2|markers_core:markers_core_inst|vout_rsc_mgc_out_stdreg_d[6..8]                                                                ; Merged with markers:inst2|markers_core:markers_core_inst|vout_rsc_mgc_out_stdreg_d[9]  ;
+; markers:inst9|markers_core:markers_core_inst|vout_rsc_mgc_out_stdreg_d[26..28]                                                              ; Merged with markers:inst9|markers_core:markers_core_inst|vout_rsc_mgc_out_stdreg_d[29] ;
+; markers:inst9|markers_core:markers_core_inst|vout_rsc_mgc_out_stdreg_d[6..8]                                                                ; Merged with markers:inst9|markers_core:markers_core_inst|vout_rsc_mgc_out_stdreg_d[9]  ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|rWR1_ADDR[0..6]                                                                                         ; Merged with DE0_D5M:inst|Sdram_Control_4Port:u7|rWR1_ADDR[7]                           ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|rWR2_ADDR[0..6]                                                                                         ; Merged with DE0_D5M:inst|Sdram_Control_4Port:u7|rWR2_ADDR[7]                           ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|rRD1_ADDR[0..6]                                                                                         ; Merged with DE0_D5M:inst|Sdram_Control_4Port:u7|rRD1_ADDR[7]                           ;
@@ -667,7 +668,6 @@ Encoding Type:  One-Hot
 ; top:inst3|spi2dac:SPI_DAC|ctr[2]                                                                                                            ; Merged with top:inst3|spi2adc:SPI_ADC|ctr[2]                                           ;
 ; top:inst3|spi2dac:SPI_DAC|ctr[3]                                                                                                            ; Merged with top:inst3|spi2adc:SPI_ADC|ctr[3]                                           ;
 ; top:inst3|spi2dac:SPI_DAC|ctr[4]                                                                                                            ; Merged with top:inst3|spi2adc:SPI_ADC|ctr[4]                                           ;
-; DE0_D5M:inst|I2C_CCD_Config:u8|sensor_exposure[1]                                                                                           ; Merged with DE0_D5M:inst|I2C_CCD_Config:u8|sensor_exposure[0]                          ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|rWR1_ADDR[7]                                                                                            ; Stuck at GND due to stuck port data_in                                                 ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|rWR2_ADDR[7]                                                                                            ; Stuck at GND due to stuck port data_in                                                 ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|rRD1_ADDR[7]                                                                                            ; Stuck at GND due to stuck port data_in                                                 ;
@@ -683,8 +683,8 @@ Encoding Type:  One-Hot
 ; top:inst3|pulse_gen:PULSE|state.WAIT_LOW                                                                                                    ; Lost fanout                                                                            ;
 ; DE0_D5M:inst|I2C_CCD_Config:u8|mSetup_ST~9                                                                                                  ; Lost fanout                                                                            ;
 ; DE0_D5M:inst|I2C_CCD_Config:u8|mSetup_ST~10                                                                                                 ; Lost fanout                                                                            ;
-; DE0_D5M:inst|CCD_Capture:u3|Y_Cont[1..15]                                                                                                   ; Lost fanout                                                                            ;
-; Total Number of Removed Registers = 162                                                                                                     ;                                                                                        ;
+; DE0_D5M:inst|CCD_Capture:u3|Y_Cont[11..15]                                                                                                  ; Lost fanout                                                                            ;
+; Total Number of Removed Registers = 153                                                                                                     ;                                                                                        ;
 +---------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+
 
 
@@ -725,12 +725,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1302  ;
-; Number of registers using Synchronous Clear  ; 125   ;
-; Number of registers using Synchronous Load   ; 93    ;
-; Number of registers using Asynchronous Clear ; 834   ;
+; Total registers                              ; 1360  ;
+; Number of registers using Synchronous Clear  ; 135   ;
+; Number of registers using Synchronous Load   ; 80    ;
+; Number of registers using Asynchronous Clear ; 892   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 445   ;
+; Number of registers using Clock Enable       ; 463   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -740,13 +740,11 @@ Encoding Type:  One-Hot
 +------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Inverted Register                                                                                                                                    ; Fan out ;
 +------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; DE0_D5M:inst|I2C_CCD_Config:u8|sensor_exposure[9]                                                                                                    ; 4       ;
-; DE0_D5M:inst|I2C_CCD_Config:u8|sensor_exposure[7]                                                                                                    ; 4       ;
-; DE0_D5M:inst|I2C_CCD_Config:u8|sensor_exposure[6]                                                                                                    ; 4       ;
-; DE0_D5M:inst|I2C_CCD_Config:u8|sensor_exposure[3]                                                                                                    ; 4       ;
-; DE0_D5M:inst|I2C_CCD_Config:u8|sensor_exposure[4]                                                                                                    ; 4       ;
-; DE0_D5M:inst|I2C_CCD_Config:u8|sensor_exposure[5]                                                                                                    ; 4       ;
-; DE0_D5M:inst|I2C_CCD_Config:u8|sensor_exposure[2]                                                                                                    ; 4       ;
+; DE0_D5M:inst|I2C_CCD_Config:u8|sensor_exposure[8]                                                                                                    ; 3       ;
+; DE0_D5M:inst|I2C_CCD_Config:u8|sensor_exposure[9]                                                                                                    ; 3       ;
+; DE0_D5M:inst|I2C_CCD_Config:u8|sensor_exposure[7]                                                                                                    ; 3       ;
+; DE0_D5M:inst|I2C_CCD_Config:u8|sensor_exposure[6]                                                                                                    ; 3       ;
+; DE0_D5M:inst|I2C_CCD_Config:u8|sensor_exposure[4]                                                                                                    ; 3       ;
 ; top:inst3|spi2dac:SPI_DAC|dac_cs                                                                                                                     ; 20      ;
 ; top:inst3|spi2adc:SPI_ADC|adc_cs                                                                                                                     ; 9       ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p|counter5a0  ; 7       ;
@@ -763,19 +761,19 @@ Encoding Type:  One-Hot
 ; DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SDO                                                                                                 ; 6       ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_ojc:wrptr_g1p|parity9     ; 5       ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_ojc:wrptr_g1p|parity9     ; 5       ;
-; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p|counter5a0 ; 8       ;
+; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p|counter5a0 ; 7       ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p|counter5a0 ; 7       ;
 ; DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD_COUNTER[1]                                                                                       ; 17      ;
 ; DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD_COUNTER[0]                                                                                       ; 20      ;
-; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_ojc:wrptr_g1p|counter8a0 ; 7       ;
-; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p|parity6    ; 5       ;
+; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_ojc:wrptr_g1p|counter8a0 ; 6       ;
+; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p|parity6    ; 4       ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_ojc:wrptr_g1p|counter8a0 ; 6       ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_s57:rdptr_g1p|parity6    ; 4       ;
 ; DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|END                                                                                                 ; 5       ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_ojc:wrptr_g1p|parity9    ; 4       ;
 ; DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|a_graycounter_ojc:wrptr_g1p|parity9    ; 4       ;
-; DE0_D5M:inst|I2C_CCD_Config:u8|sensor_exposure[0]                                                                                                    ; 3       ;
-; Total number of inverted registers = 35                                                                                                              ;         ;
+; DE0_D5M:inst|I2C_CCD_Config:u8|sensor_exposure[2]                                                                                                    ; 2       ;
+; Total number of inverted registers = 33                                                                                                              ;         ;
 +------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -785,28 +783,24 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------+
 ; 3:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|command:command1|SA[9]               ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|control_interface:control1|timer[11] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|command:command1|command_delay[1]    ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|RAW2RGB:u4|mCCD_G[9]                                        ;
-; 4:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|RAW2RGB:u4|mCCD_B[11]                                       ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|I2C_CCD_Config:u8|sensor_exposure[15]                       ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|CCD_Capture:u3|X_Cont[13]                                   ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|CCD_Capture:u3|Y_Cont[14]                                   ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|rRD2_ADDR[17]                        ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|rRD1_ADDR[11]                        ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|rWR2_ADDR[17]                        ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|rWR1_ADDR[10]                        ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|command:command1|rp_shift[1]         ;
-; 5:1                ; 15 bits   ; 45 LEs        ; 30 LEs               ; 15 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|mADDR[13]                            ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|I2C_CCD_Config:u8|mI2C_DATA[5]                              ;
-; 64:1               ; 5 bits    ; 210 LEs       ; 60 LEs               ; 150 LEs                ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|I2C_CCD_Config:u8|mI2C_DATA[14]                             ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|control_interface:control1|timer[14] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|command:command1|command_done        ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|RAW2RGB:u4|mCCD_G[7]                                        ;
+; 5:1                ; 20 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|RAW2RGB:u4|mCCD_B[7]                                        ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|CCD_Capture:u3|X_Cont[9]                                    ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|CCD_Capture:u3|Y_Cont[3]                                    ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|rRD2_ADDR[18]                        ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|rRD1_ADDR[8]                         ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|rWR2_ADDR[22]                        ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|rWR1_ADDR[20]                        ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|command:command1|rp_shift[0]         ;
+; 5:1                ; 15 bits   ; 45 LEs        ; 30 LEs               ; 15 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|mADDR[17]                            ;
+; 64:1               ; 13 bits   ; 546 LEs       ; 208 LEs              ; 338 LEs                ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|I2C_CCD_Config:u8|mI2C_DATA[3]                              ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|CMD[1]                               ;
 ; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|RD_MASK[1]                           ;
 ; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|mWR                                  ;
-; 7:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|ST[9]                                ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD_COUNTER[1]           ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|I2C_CCD_Config:u8|sensor_exposure[2]                        ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|I2C_CCD_Config:u8|Mux12                                     ;
+; 7:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|Sdram_Control_4Port:u7|ST[8]                                ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |TOP_DE0_CAMERA_MOUSE|DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD_COUNTER[3]           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------+
 
 
@@ -1970,8 +1964,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+------------------+----------------------------------+
 ; Parameter Name        ; Value            ; Type                             ;
 +-----------------------+------------------+----------------------------------+
-; default_exposure      ; 0000001011111111 ; Unsigned Binary                  ;
-; exposure_change_value ; 0000000100101100 ; Unsigned Binary                  ;
+; default_exposure      ; 0000001111010100 ; Unsigned Binary                  ;
+; exposure_change_value ; 0000000011001000 ; Unsigned Binary                  ;
 ; CLK_Freq              ; 50000000         ; Signed Integer                   ;
 ; I2C_Freq              ; 20000            ; Signed Integer                   ;
 ; LUT_SIZE              ; 25               ; Signed Integer                   ;
@@ -2084,7 +2078,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: markers:inst2|mgc_out_stdreg:vout_rsc_mgc_out_stdreg ;
+; Parameter Settings for User Entity Instance: markers:inst9|mgc_out_stdreg:vout_rsc_mgc_out_stdreg ;
 +----------------+-------+--------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                     ;
 +----------------+-------+--------------------------------------------------------------------------+
@@ -2095,7 +2089,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: markers:inst2|mgc_out_stdreg:volume_rsc_mgc_out_stdreg ;
+; Parameter Settings for User Entity Instance: markers:inst9|mgc_out_stdreg:volume_rsc_mgc_out_stdreg ;
 +----------------+-------+----------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                       ;
 +----------------+-------+----------------------------------------------------------------------------+
@@ -2222,7 +2216,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "markers:inst2|mgc_out_stdreg:volume_rsc_mgc_out_stdreg" ;
+; Port Connectivity Checks: "markers:inst9|mgc_out_stdreg:volume_rsc_mgc_out_stdreg" ;
 +------+-------+----------+----------------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                                  ;
 +------+-------+----------+----------------------------------------------------------+
@@ -2262,13 +2256,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+-------+----------+-----------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "DE0_D5M:inst|I2C_CCD_Config:u8"                                                                                                                   ;
-+------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port       ; Type  ; Severity ; Details                                                                                                                                      ;
-+------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; iUART_CTRL ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "DE0_D5M:inst|I2C_CCD_Config:u8"                                                                                                                                                                  ;
++---------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; iZOOM_MODE_SW       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; iZOOM_MODE_SW[-1]   ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; iEXPOSURE_ADJ       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; iEXPOSURE_ADJ[-1]   ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; iEXPOSURE_DEC_p     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; iEXPOSURE_DEC_p[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; iUART_CTRL          ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                                       ;
++---------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------+
@@ -2465,7 +2465,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -2475,7 +2475,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Thu May 05 16:07:11 2016
+    Info: Processing started: Thu May 05 16:46:20 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE0_D5M -c DE0_D5M
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 7 design units, including 7 entities, in source file catapult_ip/marker/rtl_mgc_ioport_v2001.v
@@ -2570,17 +2570,20 @@ Info (12021): Found 1 design units, including 1 entities, in source file v/top_d
 Info (12021): Found 2 design units, including 1 entities, in source file vga_mux.vhd
     Info (12022): Found design unit 1: vga_mux-SYN
     Info (12023): Found entity 1: vga_mux
+Info (12021): Found 1 design units, including 1 entities, in source file altpll0.v
+    Info (12023): Found entity 1: altpll0
 Info (12127): Elaborating entity "TOP_DE0_CAMERA_MOUSE" for the top level hierarchy
 Info (12128): Elaborating entity "DE0_D5M" for hierarchy "DE0_D5M:inst"
-Critical Warning (10169): Verilog HDL warning at DE0_D5M.v(118): the port and data declarations for array port "VGA_R" do not specify the same range for each dimension
-Warning (10359): HDL warning at DE0_D5M.v(166): see declaration for object "VGA_R"
-Critical Warning (10169): Verilog HDL warning at DE0_D5M.v(119): the port and data declarations for array port "VGA_G" do not specify the same range for each dimension
-Warning (10359): HDL warning at DE0_D5M.v(167): see declaration for object "VGA_G"
-Critical Warning (10169): Verilog HDL warning at DE0_D5M.v(120): the port and data declarations for array port "VGA_B" do not specify the same range for each dimension
-Warning (10359): HDL warning at DE0_D5M.v(168): see declaration for object "VGA_B"
-Warning (10230): Verilog HDL assignment warning at DE0_D5M.v(197): truncated value with size 16 to match size of target (10)
-Warning (10230): Verilog HDL assignment warning at DE0_D5M.v(202): truncated value with size 32 to match size of target (2)
-Warning (10034): Output port "GPIO_1_CLKOUT[1]" at DE0_D5M.v(128) has no driver
+Critical Warning (10169): Verilog HDL warning at DE0_D5M.v(120): the port and data declarations for array port "VGA_R" do not specify the same range for each dimension
+Warning (10359): HDL warning at DE0_D5M.v(168): see declaration for object "VGA_R"
+Critical Warning (10169): Verilog HDL warning at DE0_D5M.v(121): the port and data declarations for array port "VGA_G" do not specify the same range for each dimension
+Warning (10359): HDL warning at DE0_D5M.v(169): see declaration for object "VGA_G"
+Critical Warning (10169): Verilog HDL warning at DE0_D5M.v(122): the port and data declarations for array port "VGA_B" do not specify the same range for each dimension
+Warning (10359): HDL warning at DE0_D5M.v(170): see declaration for object "VGA_B"
+Warning (10036): Verilog HDL or VHDL warning at DE0_D5M.v(145): object "CCD_MCLK" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at DE0_D5M.v(199): truncated value with size 16 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at DE0_D5M.v(204): truncated value with size 32 to match size of target (2)
+Warning (10034): Output port "GPIO_1_CLKOUT[1]" at DE0_D5M.v(130) has no driver
 Info (12128): Elaborating entity "VGA_Controller" for hierarchy "DE0_D5M:inst|VGA_Controller:u1"
 Warning (10230): Verilog HDL assignment warning at VGA_Controller.v(70): truncated value with size 32 to match size of target (10)
 Warning (10230): Verilog HDL assignment warning at VGA_Controller.v(73): truncated value with size 32 to match size of target (10)
@@ -2845,12 +2848,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_e66
 Info (12128): Elaborating entity "cmpr_e66" for hierarchy "DE0_D5M:inst|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_v5o1:auto_generated|cmpr_e66:rdempty_eq_comp"
 Info (12128): Elaborating entity "I2C_CCD_Config" for hierarchy "DE0_D5M:inst|I2C_CCD_Config:u8"
-Warning (10230): Verilog HDL assignment warning at I2C_CCD_Config.v(126): truncated value with size 32 to match size of target (1)
 Warning (10230): Verilog HDL assignment warning at I2C_CCD_Config.v(127): truncated value with size 32 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at I2C_CCD_Config.v(160): truncated value with size 32 to match size of target (25)
-Warning (10230): Verilog HDL assignment warning at I2C_CCD_Config.v(165): truncated value with size 32 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at I2C_CCD_Config.v(190): truncated value with size 32 to match size of target (16)
-Warning (10230): Verilog HDL assignment warning at I2C_CCD_Config.v(240): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at I2C_CCD_Config.v(128): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at I2C_CCD_Config.v(161): truncated value with size 32 to match size of target (25)
+Warning (10230): Verilog HDL assignment warning at I2C_CCD_Config.v(166): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at I2C_CCD_Config.v(191): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at I2C_CCD_Config.v(241): truncated value with size 32 to match size of target (6)
 Info (12128): Elaborating entity "I2C_Controller" for hierarchy "DE0_D5M:inst|I2C_CCD_Config:u8|I2C_Controller:u0"
 Warning (10230): Verilog HDL assignment warning at I2C_Controller.v(70): truncated value with size 32 to match size of target (1)
 Warning (10230): Verilog HDL assignment warning at I2C_Controller.v(69): truncated value with size 32 to match size of target (1)
@@ -2898,10 +2901,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cntr
     Info (12023): Found entity 1: cntr_1ab
 Info (12128): Elaborating entity "cntr_1ab" for hierarchy "top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated|a_dpfifo_9m21:dpfifo|cntr_1ab:wr_ptr"
 Info (12128): Elaborating entity "hex_to_7seg" for hierarchy "top:inst3|hex_to_7seg:SEG0"
-Info (12128): Elaborating entity "markers" for hierarchy "markers:inst2"
-Info (12128): Elaborating entity "mgc_out_stdreg" for hierarchy "markers:inst2|mgc_out_stdreg:vout_rsc_mgc_out_stdreg"
-Info (12128): Elaborating entity "mgc_out_stdreg" for hierarchy "markers:inst2|mgc_out_stdreg:volume_rsc_mgc_out_stdreg"
-Info (12128): Elaborating entity "markers_core" for hierarchy "markers:inst2|markers_core:markers_core_inst"
+Info (12128): Elaborating entity "markers" for hierarchy "markers:inst9"
+Info (12128): Elaborating entity "mgc_out_stdreg" for hierarchy "markers:inst9|mgc_out_stdreg:vout_rsc_mgc_out_stdreg"
+Info (12128): Elaborating entity "mgc_out_stdreg" for hierarchy "markers:inst9|mgc_out_stdreg:volume_rsc_mgc_out_stdreg"
+Info (12128): Elaborating entity "markers_core" for hierarchy "markers:inst9|markers_core:markers_core_inst"
 Info (12128): Elaborating entity "altshift_taps" for hierarchy "altshift_taps:fifo_inst2"
 Info (12130): Elaborated megafunction instantiation "altshift_taps:fifo_inst2"
 Info (12133): Instantiated megafunction "altshift_taps:fifo_inst2" with the following parameter:
@@ -3048,26 +3051,29 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "GPIO_1_CLKOUT[1]" is stuck at GND
     Warning (13410): Pin "HEX2_D[1]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 33 registers lost all their fanouts during netlist optimizations.
+Info (17049): 23 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 5 input pin(s) that do not drive logic
+Warning (21074): Design contains 8 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "GPIO_1_CLKIN[1]"
     Warning (15610): No output dependent on input pin "SW[8]"
     Warning (15610): No output dependent on input pin "SW[7]"
     Warning (15610): No output dependent on input pin "SW[6]"
     Warning (15610): No output dependent on input pin "SW[3]"
-Info (21057): Implemented 2547 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "SW[2]"
+    Warning (15610): No output dependent on input pin "SW[1]"
+    Warning (15610): No output dependent on input pin "SW[0]"
+Info (21057): Implemented 2680 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 17 input pins
     Info (21059): Implemented 66 output pins
     Info (21060): Implemented 48 bidirectional pins
-    Info (21061): Implemented 2294 logic cells
+    Info (21061): Implemented 2427 logic cells
     Info (21064): Implemented 121 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 169 warnings
-    Info: Peak virtual memory: 551 megabytes
-    Info: Processing ended: Thu May 05 16:07:21 2016
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:09
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 173 warnings
+    Info: Peak virtual memory: 544 megabytes
+    Info: Processing ended: Thu May 05 16:46:28 2016
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:08
 
 

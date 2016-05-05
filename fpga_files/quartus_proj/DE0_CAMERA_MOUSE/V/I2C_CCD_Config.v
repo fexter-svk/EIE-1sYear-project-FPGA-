@@ -39,6 +39,7 @@
 //   Ver  :| Author            :| Mod. Date :| Changes Made:
 //   V1.0 :| Johnny FAN        :| 07/07/09  :| Initial Revision
 //   V2.0 :| Rui Duarte        :| 16/03/14  :| CCD config, spelling
+//	  V2.1 :| George Punter		 :| 05/05/15  :| Increase fps
 // --------------------------------------------------------------------
 
 module I2C_CCD_Config (	//	Host Side
@@ -79,8 +80,8 @@ reg	[3:0]	mSetup_ST;
 input 		iEXPOSURE_ADJ;
 input		iEXPOSURE_DEC_p;	
 
-parameter 	default_exposure 			= 16'h02ff; //16'h01ff
-parameter 	exposure_change_value	 	= 16'd300; //16'd200
+parameter 	default_exposure 			= 16'h03d4;
+parameter 	exposure_change_value	 	= 16'd200;
 
 
 // `define 	ENABLE_TEST_PATTERN 1
@@ -107,8 +108,8 @@ assign sensor_start_row 		= iZOOM_MODE_SW ?  24'h010036 : 24'h010000;
 assign sensor_start_column 		= iZOOM_MODE_SW ?  24'h020010 : 24'h020000;
 assign sensor_row_size	 		= iZOOM_MODE_SW ?  24'h0303BF : 24'h03077F;
 assign sensor_column_size 		= iZOOM_MODE_SW ?  24'h0404FF : 24'h0409FF;
-assign sensor_row_mode 			= iZOOM_MODE_SW ?  24'h220000 : 24'h220011;
-assign sensor_column_mode		= iZOOM_MODE_SW ?  24'h230000 : 24'h230011;
+assign sensor_row_mode 			= iZOOM_MODE_SW ?  24'h220000 : 24'h220001;
+assign sensor_column_mode		= iZOOM_MODE_SW ?  24'h230000 : 24'h230001;
 
 	
 always@(posedge iCLK or negedge iRST_N)
@@ -243,7 +244,7 @@ begin
 			endcase
 		end
 end
-////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////	
 /////////////////////	Config Data LUT	  //////////////////////////		
 always
 begin
@@ -254,14 +255,14 @@ begin
 	3	:	LUT_DATA	<=	24'h050000;				//	H_Blanking
 	4	:	LUT_DATA	<=	24'h060019;				//	V_Blanking	
 	5	:	LUT_DATA	<=	24'h0A8000;				//	change latch
-	6	:	LUT_DATA	<=	24'h2B00ff;				//	Green 1 Gain  24'h2B000b
-	7	:	LUT_DATA	<=	24'h2C01ff;				//	Blue Gain 24'h2C000f
-	8	:	LUT_DATA	<=	24'h2D01ff;				//	Red Gain 24'h2D000f
-	9	:	LUT_DATA	<=	24'h2E00ff;				//	Green 2 Gain 24'h2E000b
-	10	:	LUT_DATA	<=	24'h100051;				//	set up PLL power on
-	11	:	LUT_DATA	<=	24'h111807;				//	PLL_m_Factor<<8+PLL_n_Divider
-	12	:	LUT_DATA	<=	24'h120002;				//	PLL_p1_Divider
-	13	:	LUT_DATA	<=	24'h100053;				//	set USE PLL	 
+	6	:	LUT_DATA	<=	24'h2B000b;				//	Green 1 Gain
+	7	:	LUT_DATA	<=	24'h2C000f;				//	Blue Gain
+	8	:	LUT_DATA	<=	24'h2D000f;				//	Red Gain
+	9	:	LUT_DATA	<=	24'h2E000b;				//	Green 2 Gain
+	10	:	LUT_DATA	<=	24'h100050;//last bit 1				//	set up PLL power on
+	11	:	LUT_DATA	<=	24'h111E01;				//	PLL_m_Factor<<8+PLL_n_Divider
+	12	:	LUT_DATA	<=	24'h120005;				//	PLL_p1_Divider
+	13	:	LUT_DATA	<=	24'h100050;//last bit 3				//	set USE PLL	 
 	14	:	LUT_DATA	<=	24'h980000;				//	disble calibration 	
 `ifdef ENABLE_TEST_PATTERN
 	15	:	LUT_DATA	<=	24'hA00001;				//	Test pattern control 	

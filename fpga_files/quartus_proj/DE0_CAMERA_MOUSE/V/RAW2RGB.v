@@ -38,6 +38,7 @@
 // --------------------------------------------------------------------
 //   Ver  :| Author            :| Mod. Date :| Changes Made:
 //   V1.0 :| Johnny FAN        :| 07/07/09  :| Initial Revision
+//	  V2.0 :| Tom Hartley		 :| 14/05/15  :| Improved frame rate, decreased frame shifting bugs
 // --------------------------------------------------------------------
 
 module RAW2RGB(	oRed,
@@ -98,7 +99,13 @@ begin
 		mDATAd_0	<=	mDATA_0;
 		mDATAd_1	<=	mDATA_1;
 		mDVAL		<=	{iY_Cont[0]|iX_Cont[0]}	?	1'b0	:	iDVAL;
-		if({iY_Cont[0],iX_Cont[0]}==2'b10)
+		if ({iY_Cont,iX_Cont}==22'b0000000000000000000000)
+		begin
+			mCCD_R <= 12'b000000000000;
+			mCCD_G <= 13'b1111111111111;
+			mCCD_B <= 12'b000000000000;
+		end
+		else if({iY_Cont[0],iX_Cont[0]}==2'b10)
 		begin
 			mCCD_R	<=	mDATA_0;
 			mCCD_G	<=	mDATAd_0+mDATA_1;
