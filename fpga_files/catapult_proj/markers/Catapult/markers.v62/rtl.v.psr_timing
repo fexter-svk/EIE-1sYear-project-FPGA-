@@ -1,0 +1,2 @@
+create_clock -domain clk -name clk -period 6.666667 -waveform { 0.0 3.33 } clk
+set_clock_uncertainty -design rtl 0.0 clk
