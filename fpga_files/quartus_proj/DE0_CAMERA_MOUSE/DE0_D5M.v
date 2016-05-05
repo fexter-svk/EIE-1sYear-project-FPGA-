@@ -45,7 +45,6 @@ module DE0_D5M
 	(
 		////////////////////	Clock Input	 	////////////////////	 
 		CLOCK_50,						//	50 MHz
-		CLOCK_96,						// 96 MHz
 		////////////////////	Push Button		////////////////////
 		KEY,								//	Pushbutton[2:0]
 		////////////////////	DPDT Switch		////////////////////
@@ -89,7 +88,6 @@ module DE0_D5M
 
 ////////////////////////	Clock Input	 	////////////////////////
 input			CLOCK_50;				//	50 MHz
-input      		CLOCK_96;
 ////////////////////////	Push Button		////////////////////////
 input	[2:0]	KEY;						//	Pushbutton[3:0]
 ////////////////////////	DPDT Switch		////////////////////////
@@ -189,7 +187,7 @@ assign	CCD_DATA[8]	=	GPIO_1[3];
 assign	CCD_DATA[9]	=	GPIO_1[2];
 assign	CCD_DATA[10]=	GPIO_1[1];
 assign	CCD_DATA[11]=	GPIO_1[0];
-assign	GPIO_1_CLKOUT[0]	= CLOCK_96;	// CCD_MCLK;
+assign	GPIO_1_CLKOUT[0]	= CLOCK_50;	// CCD_MCLK;
 assign	CCD_FVAL	   =	GPIO_1[18];
 assign	CCD_LVAL	   =	GPIO_1[17];
 assign	CCD_PIXCLK	=	GPIO_1_CLKIN[0]; 

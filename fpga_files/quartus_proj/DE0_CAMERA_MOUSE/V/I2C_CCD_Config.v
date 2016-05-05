@@ -80,8 +80,8 @@ reg	[3:0]	mSetup_ST;
 input 		iEXPOSURE_ADJ;
 input		iEXPOSURE_DEC_p;	
 
-parameter 	default_exposure 			= 16'h03d4;
-parameter 	exposure_change_value	 	= 16'd200;
+parameter 	default_exposure 			= 16'h03Cf; //16'h01ff
+parameter 	exposure_change_value	 	= 16'd300; //16'd200
 
 
 // `define 	ENABLE_TEST_PATTERN 1
@@ -255,10 +255,10 @@ begin
 	3	:	LUT_DATA	<=	24'h050000;				//	H_Blanking
 	4	:	LUT_DATA	<=	24'h060019;				//	V_Blanking	
 	5	:	LUT_DATA	<=	24'h0A8000;				//	change latch
-	6	:	LUT_DATA	<=	24'h2B000b;				//	Green 1 Gain
-	7	:	LUT_DATA	<=	24'h2C000f;				//	Blue Gain
-	8	:	LUT_DATA	<=	24'h2D000f;				//	Red Gain
-	9	:	LUT_DATA	<=	24'h2E000b;				//	Green 2 Gain
+	6	:	LUT_DATA	<=	24'h2B00ff;				//	Green 1 Gain  24'h2B000b
+	7	:	LUT_DATA	<=	24'h2C01ff;				//	Blue Gain 24'h2C000f
+	8	:	LUT_DATA	<=	24'h2D01ff;				//	Red Gain 24'h2D000f
+	9	:	LUT_DATA	<=	24'h2E00ff;				//	Green 2 Gain 24'h2E000b
 	10	:	LUT_DATA	<=	24'h100050;//last bit 1				//	set up PLL power on
 	11	:	LUT_DATA	<=	24'h111E01;				//	PLL_m_Factor<<8+PLL_n_Divider
 	12	:	LUT_DATA	<=	24'h120005;				//	PLL_p1_Divider

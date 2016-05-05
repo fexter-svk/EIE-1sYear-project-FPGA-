@@ -1,9 +1,0 @@
-set a(0-7) {LIBRARY mgc_ioport MODULE mgc_out_stdreg(4,10) AREA_SCORE 0.00 QUANTITY 1 NAME io_write(volume:rsc.d) TYPE {I/O_WRITE VAR} DELAY {0.00 ns} PAR 0-6 XREFS 2480 LOC {1 1.0 1 1.0 1 1.0 2 0.0 1 0.9999} PREDS {{260 0 0-7 {}} {80 0 0-8 {}}} SUCCS {{260 0 0-7 {}} {80 0 0-8 {}}} CYCLES {}}
-set a(0-8) {LIBRARY mgc_ioport MODULE mgc_out_stdreg(2,30) AREA_SCORE 0.00 QUANTITY 1 NAME io_write(vout:rsc.d) TYPE {I/O_WRITE VAR} DELAY {0.00 ns} PAR 0-6 XREFS 2481 LOC {1 1.0 1 1.0 1 1.0 2 0.0 1 0.9999} PREDS {{260 0 0-8 {}} {80 0 0-7 {}}} SUCCS {{80 0 0-7 {}} {260 0 0-8 {}}} CYCLES {}}
-set a(0-6) {CHI {0-7 0-8} ITERATIONS Infinite LATENCY 2 RESET_LATENCY 0 CSTEPS 2 UNROLL 0 PERIOD {20.00 ns} FULL_PERIOD {20.00 ns} THROUGHPUT_PERIOD 1 %_SHARING_ALLOC {20.0 %} PIPELINED Yes INITIATION 1 STAGES 2.0 CYCLES_IN 1 TOTAL_CYCLES_IN 1 TOTAL_CYCLES_UNDER 0 TOTAL_CYCLES 1 NAME main TYPE LOOP DELAY {40.00 ns} PAR {} XREFS 2482 LOC {0 0.0 0 0.0 0 0.0 1 0.0} PREDS {} SUCCS {} CYCLES {}}
-set a(0-6-TOTALCYCLES) {1}
-set a(0-6-QMOD) {mgc_ioport.mgc_out_stdreg(4,10) 0-7 mgc_ioport.mgc_out_stdreg(2,30) 0-8}
-set a(0-6-PROC_NAME) {core}
-set a(0-6-HIER_NAME) {/markers/core}
-set a(TOP) {0-6}
-

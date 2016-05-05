@@ -1,3 +1,0 @@
-./rtl_mgc_ioport.v
-./rtl_mgc_ioport_v2001.v
-./rtl.v
