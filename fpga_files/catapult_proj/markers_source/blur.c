@@ -68,9 +68,9 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     vga_x = (vga_xy).slc<COORD_WL>(0);
     vga_y = (vga_xy).slc<COORD_WL>(10);
 
-    red = (vin[0].slc<COLOUR_WL>(2*COLOUR_WL))/4;
-    green = vin[0].slc<COLOUR_WL>(1*COLOUR_WL)/4;
-    blue = vin[0].slc<COLOUR_WL>(0*COLOUR_WL)/4;
+    red = (vin[0].slc<COLOUR_WL>(2*COLOUR_WL));
+    green = vin[0].slc<COLOUR_WL>(1*COLOUR_WL);
+    blue = vin[0].slc<COLOUR_WL>(0*COLOUR_WL);
     // 
     if ((vga_x % 15) == 0){
         acc[0] = 0; 
@@ -84,10 +84,10 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     }
     
     //RED marker (left hand)
-    if (((180<=red) && (red<=255)) && ((0<=green) && (green<=100)) && ((0<=blue) && (0<=100))){
+    if ((((180*4)<=red) && (red<=255)) && ((0<=green) && (green<=(4*100))) && ((0<=blue) && (0<=(4*100)))){
         acc[0]++; //RED
     } 
-    if (((0<=red) && (red<=40)) && ((50<=green) && (green<=180)) && ((100<=blue) && (blue<=255))){
+    if (((0<=red) && (red<=(4*90))) && ((0<=green) && (green<=(4*90))) && (((4*110)<=blue) && (blue<=(4*255)))){
         acc[1]++; //BLUE
     }
     if (acc[0] > 4){
@@ -112,7 +112,7 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     int deltax_red = (red_xy[0] - red_xy_previous[0]);
     int deltay_red = (red_xy[1] - red_xy_previous[1]);
     
-    if (((deltay_red>-20) && (deltay_red<20))||((deltax_red<20) &&(deltax_red>-20))) {
+    if (((deltay_red>-10) && (deltay_red<10))||((deltax_red<10) &&(deltax_red>-10))) {
         red_xy_previous[0] = red_xy[0];
         red_xy_previous[1] = red_xy[1];
     }
@@ -137,7 +137,7 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     
     //BLUE
     //Calculate the coordinates for the square
-    if (((deltay_blue>-20) && (deltay_blue<20))||((deltax_blue<20) &&(deltax_blue>-20))) {
+    if (((deltay_blue>-10) && (deltay_blue<10))||((deltax_blue<10) &&(deltax_blue>-10))) {
         blue_xy_previous[0] = blue_xy[0];
         blue_xy_previous[1] = blue_xy[1];
     }

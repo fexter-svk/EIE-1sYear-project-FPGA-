@@ -35,7 +35,7 @@ module processor (sysclk, data_in, data_valid, data_out,volume);
 	// This part should include your own processing hardware 
 	// ... that takes x to produce y
 	// ... In this case, it is ALL PASS.
-	//assign y = x*volume;
+	//assign y = (x * volume);
 	
 	FIFO FIFO (
 	.clock(sysclk),
@@ -50,7 +50,10 @@ module processor (sysclk, data_in, data_valid, data_out,volume);
 	assign att_q[8:0] = q[9:1];
 	assign att_q[9] = q[9];
 	
-	assign y = x - att_q;
+	//assign y = x - att_q;
+	
+	assign y = (x * volume) - att_q;
+	
 	
 	
 

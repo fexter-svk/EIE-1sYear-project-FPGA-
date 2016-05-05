@@ -15,8 +15,8 @@
 //  
 if {[info script] != {} && [file isdirectory [file rootname [info script]]]} {
   project load [file rootname [info script]] 2011a
-} elseif { [file isdirectory C:/EIE-1stYear-project-FPGA/fpga_files/catapult_proj/markers/Catapult] } {
-  project load C:/EIE-1stYear-project-FPGA/fpga_files/catapult_proj/markers/Catapult 2011a
+} elseif { [file isdirectory C:/workspace/new/EIE-1stYear-project-fpga/fpga_files/catapult_proj/markers/Catapult] } {
+  project load C:/workspace/new/EIE-1stYear-project-fpga/fpga_files/catapult_proj/markers/Catapult 2011a
 } else {
   error {unable to locate project directory 'Catapult'}
 }
