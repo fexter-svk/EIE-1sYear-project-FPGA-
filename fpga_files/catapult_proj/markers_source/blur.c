@@ -45,6 +45,7 @@
 #include "shift_class.h" 
 
 
+static ac_int<8, false> volume_memory[1] = {0};
 static ac_int<4,false> acc[2];
 static ac_int<10, false> red_xy[2];
 static ac_int<10, false> blue_xy[2];
@@ -66,7 +67,7 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     // extract VGA pixel X-Y coordinates  
     vga_x = (vga_xy).slc<COORD_WL>(0);
     vga_y = (vga_xy).slc<COORD_WL>(10);
-    // shifts pixels from KERNEL_WIDTH rows and keeps KERNEL_WIDTH columns (KERNEL_WIDTHxKERNEL_WIDTH pixels stored)
+
     red = (vin[0].slc<COLOUR_WL>(2*COLOUR_WL))/4;
     green = vin[0].slc<COLOUR_WL>(1*COLOUR_WL)/4;
     blue = vin[0].slc<COLOUR_WL>(0*COLOUR_WL)/4;
@@ -78,23 +79,24 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     if ((vga_y == 0) && (vga_x == 0)) {
         red_xy[0] = 0;
         red_xy[1] = 0;
+        blue_xy[0] = 0;
+        blue_xy[1] = 0;
     }
+    
     //RED marker (left hand)
-    if (((80<=red) && (red<=145)) && ((150<=green) && (green<=230)) && ((30<=blue) && (blue<=108))){
+    if (((180<=red) && (red<=255)) && ((0<=green) && (green<=100)) && ((0<=blue) && (0<=100))){
         acc[0]++;
-    } else {
-        //BLUE marker (right hand)
-        if (((165<=red) && (red<=222)) && ((185<=green) && (green<=240)) && ((49<=blue) && (blue<=149))){
-            acc[1]++;
-        }
+    } 
+    if (((0<=red) && (red<=100)) && ((0<=green) && (green<=100)) && ((180<=blue) && (blue<=255))){
+        acc[1]++;
     }
-    if (acc[0] > 7){
+    if (acc[0] > 4){
         if ((red_xy[0]==0) && (red_xy[1]==0)) {
             red_xy[0] = vga_x;
             red_xy[1] = vga_y;
         }
     } 
-    if (acc[1] > 7){
+    if (acc[1] > 4){
         if ((blue_xy[0]==0) && (blue_xy[1]==0)) {
             blue_xy[0] = vga_x;
             blue_xy[1] = vga_y;
@@ -142,27 +144,28 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     int deltax_square_blue = vga_x - blue_xy_previous[0];
     int deltay_square_blue = vga_y - blue_xy_previous[1];
     
+    red_out = 0;
+    green_out = 0;
+    blue_out = 0;
     
-    if (((deltax_square_red > 0)&&(deltax_square_red < 40)) && ((deltay_square_red > 0) &&(deltay_square_red < 40))){
+    if (((deltax_square_red >= 0)&&(deltax_square_red <= 40)) && ((deltay_square_red >= 0) &&(deltay_square_red <= 40))){
         red_out = 1023;
         green_out = 0;
         blue_out = 0;
-    } else {
-        if (((deltax_square_blue > 0)&&(deltax_square_blue < 40)) && ((deltay_square_blue > 0) &&(deltay_square_blue < 40))) {
-            red_out = 0;
-            green_out = 0;
-            blue_out = 1023;
-        } else {
+    }
+    if (((deltax_square_blue >= 0)&&(deltax_square_blue <= 40)) && ((deltay_square_blue >= 0) &&(deltay_square_blue <= 40))){
         red_out = 0;
         green_out = 0;
-        blue_out = 0;
-        }
-    }
-
-//adjustment of the volume
-	*volume = 0;
+        blue_out = 1023;
+    } 
+    
+    //adjustment of the volume
+    int xy_level = (red_xy_previous[1] + blue_xy_previous[1])-1280;
+    xy_level = int((-1*xy_level) / 256);
+    volume_memory[0] = xy_level;
+    *volume = volume_memory[0]; 
 	    
-// group the RGB components into a single signal
+    // group the RGB components into a single signal
 	vout[0] = ((((ac_int<PIXEL_WL, false>)red_out) << (2*COLOUR_WL)) | (((ac_int<PIXEL_WL, false>)green_out) << COLOUR_WL) | (ac_int<PIXEL_WL, false>)blue_out);
 	    
 }

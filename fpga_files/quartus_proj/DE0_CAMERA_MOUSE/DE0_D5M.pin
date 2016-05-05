@@ -354,7 +354,7 @@ VCCIO6                       : L19       : power  :                   : 3.3V    
 GND                          : L20       : gnd    :                   :         :           :                
 VGA_HS                       : L21       : output : 3.3-V LVTTL       :         : 6         : Y              
 VGA_VS                       : L22       : output : 3.3-V LVTTL       :         : 6         : Y              
-VGA_CLK                      : M1        : output : 3.3-V LVTTL       :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : M1        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M2        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M3        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M4        :        :                   :         : 2         :                
@@ -374,7 +374,7 @@ MSEL0                        : M17       :        :                   :         
 CONF_DONE                    : M18       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M19       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M20       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : M21       :        :                   :         : 5         :                
+VGA_CLK                      : M21       : output : 3.3-V LVTTL       :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : M22       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N1        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N2        :        :                   :         : 2         :                

@@ -5,7 +5,7 @@
 //            CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
 //          PROPERTY OF CALYPTO DESIGN SYSTEMS OR ITS LICENSORS
 //  
-//  Running on Windows 7 mf2915@EEWS104A-015 Service Pack 1 6.01.7601 i686
+//  Running on Windows 7 mf2915@EEWS305-026 Service Pack 1 6.01.7601 i686
 //  
 //  Package information: SIFLIBS v17.0_1.1, HLS_PKGS v17.0_1.1, 
 //                       DesignPad v2.78_0.0
@@ -45,6 +45,7 @@ directive set -CLOCKS {clk {-CLOCK_PERIOD 6.66666666667 -CLOCK_EDGE rising -CLOC
 directive set -TECHLIBS {{Altera_accel_CycloneIII.lib Altera_accel_CycloneIII} {mgc_Altera-Cyclone-III-6_beh_psr.lib {{mgc_Altera-Cyclone-III-6_beh_psr part EP3C16F484C}}}}
 directive set -DESIGN_HIERARCHY markers
 go compile
+directive set /markers/core/main -UNROLL no
 directive set /markers/vga_xy:rsc -MAP_TO_MODULE {[DirectInput]}
 directive set /markers/vin:rsc -MAP_TO_MODULE {[DirectInput]}
 directive set /markers/vout -STREAM 30

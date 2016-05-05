@@ -12,7 +12,7 @@ module processor (sysclk, data_in, data_valid, data_out,volume);
 	input [9:0]		data_in;		// 10-bit input data
 	input 			data_valid;
 	output [9:0] 	data_out;	// 10-bit output data
-	input [7:0] volume;
+	input [7:0]    volume;
 	wire				sysclk;
 	wire [9:0]		data_in;
 	reg [9:0] 		data_out;
@@ -35,7 +35,7 @@ module processor (sysclk, data_in, data_valid, data_out,volume);
 	// This part should include your own processing hardware 
 	// ... that takes x to produce y
 	// ... In this case, it is ALL PASS.
-	//assign y = 4*x;
+	//assign y = x*volume;
 	
 	FIFO FIFO (
 	.clock(sysclk),
@@ -53,7 +53,7 @@ module processor (sysclk, data_in, data_valid, data_out,volume);
 	assign y = x - att_q;
 	
 	
-	
+
 	//  Now clock y output with system clock
 	always @(posedge sysclk) begin
 		data_out <=  y + DAC_OFFSET;

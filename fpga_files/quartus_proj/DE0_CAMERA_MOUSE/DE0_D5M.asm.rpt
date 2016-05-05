@@ -1,5 +1,5 @@
 Assembler report for DE0_D5M
-Wed May 04 16:42:02 2016
+Thu May 05 12:32:25 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -10,8 +10,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/FPGA/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/DE0_D5M.sof
-  6. Assembler Device Options: C:/FPGA/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/DE0_D5M.pof
+  5. Assembler Device Options: C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/DE0_D5M.sof
+  6. Assembler Device Options: C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/DE0_D5M.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed May 04 16:42:02 2016 ;
+; Assembler Status      ; Successful - Thu May 05 12:32:25 2016 ;
 ; Revision Name         ; DE0_D5M                               ;
 ; Top-level Entity Name ; TOP_DE0_CAMERA_MOUSE                  ;
 ; Family                ; Cyclone III                           ;
@@ -78,37 +78,37 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+---------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                             ;
-+---------------------------------------------------------------------------------------+
-; File Name                                                                             ;
-+---------------------------------------------------------------------------------------+
-; C:/FPGA/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/DE0_D5M.sof ;
-; C:/FPGA/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/DE0_D5M.pof ;
-+---------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Assembler Generated Files                                                        ;
++----------------------------------------------------------------------------------+
+; File Name                                                                        ;
++----------------------------------------------------------------------------------+
+; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/DE0_D5M.sof ;
+; C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/DE0_D5M.pof ;
++----------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/FPGA/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/DE0_D5M.sof ;
-+----------------+------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                        ;
-+----------------+------------------------------------------------------------------------------------------------+
-; Device         ; EP3C16F484C6                                                                                   ;
-; JTAG usercode  ; 0x001FD092                                                                                     ;
-; Checksum       ; 0x001FD092                                                                                     ;
-+----------------+------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/DE0_D5M.sof ;
++----------------+-------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                   ;
++----------------+-------------------------------------------------------------------------------------------+
+; Device         ; EP3C16F484C6                                                                              ;
+; JTAG usercode  ; 0x001FEEE3                                                                                ;
+; Checksum       ; 0x001FEEE3                                                                                ;
++----------------+-------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/FPGA/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/DE0_D5M.pof ;
-+--------------------+--------------------------------------------------------------------------------------------+
-; Option             ; Setting                                                                                    ;
-+--------------------+--------------------------------------------------------------------------------------------+
-; Device             ; EPCS4                                                                                      ;
-; JTAG usercode      ; 0x00000000                                                                                 ;
-; Checksum           ; 0x05BC76E5                                                                                 ;
-; Compression Ratio  ; 3                                                                                          ;
-+--------------------+--------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/EIE-1stYear-project-FPGA/fpga_files/quartus_proj/DE0_CAMERA_MOUSE/DE0_D5M.pof ;
++--------------------+---------------------------------------------------------------------------------------+
+; Option             ; Setting                                                                               ;
++--------------------+---------------------------------------------------------------------------------------+
+; Device             ; EPCS4                                                                                 ;
+; JTAG usercode      ; 0x00000000                                                                            ;
+; Checksum           ; 0x05B3CAC7                                                                            ;
+; Compression Ratio  ; 3                                                                                     ;
++--------------------+---------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -117,13 +117,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Wed May 04 16:42:00 2016
+    Info: Processing started: Thu May 05 12:32:23 2016
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off DE0_D5M -c DE0_D5M
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 434 megabytes
-    Info: Processing ended: Wed May 04 16:42:02 2016
+    Info: Peak virtual memory: 433 megabytes
+    Info: Processing ended: Thu May 05 12:32:25 2016
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
