@@ -61,8 +61,6 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     ac_int<10, false> red_out, green_out, blue_out;
     ac_int<10, false> red, green, blue;
     ac_int<10, false> vga_x, vga_y; // screen coordinates
-    ac_int<1, false> detected;
-    ac_int<3, false> counter;
     
     // extract VGA pixel X-Y coordinates from input
     vga_x = (vga_xy).slc<COORD_WL>(0);
@@ -88,11 +86,11 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     }
     
     //RED marker (left hand)
-    if ((((160*4)<=red) && (red<=4*255)) && ((0<=green) && (green<=(4*120))) && ((0<=blue) && (0<=(4*120)))){
+    if ((((160*4)<=red) && (red<=4*255)) && ((0<=green) && (green<=(4*100))) && ((0<=blue) && (0<=(4*100)))){
         acc[0]++; //RED
     } 
     //BLUE marker (right hand)
-    if (((0<=red) && (red<=(4*90))) && ((0<=green) && (green<=(4*90))) && (((4*90)<=blue) && (blue<=(4*255)))){
+    if (((0<=red) && (red<=(4*80))) && ((0<=green) && (green<=(4*80))) && (((4*90)<=blue) && (blue<=(4*180)))){
         acc[1]++; //BLUE
     }
     //If 4 familiar pixels, probably the right point, assign it to corrent x,y coordinates 
@@ -173,12 +171,12 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     } 
     
     //adjustment of the volume
-    int volume_current = (red_xy_previous[1] + blue_xy_previous[1])-960;
-    volume_current = int((-1*volume_current) / 256);
-    if ((((volume_current-volume_previous[0])>=-1) &&((volume_current-volume_previous[0])<=1)) && (volume_current>=0)){
+    
+    ac_int<4, false> volume_current = ((-1*((red_xy[1]+blue_xy[1])-960))/220);
+    if (((volume_current-volume_previous[0])>=-2) &&((volume_current-volume_previous[0])<=2)){
         volume_previous[0] = volume_current;
     }
-    *volume = volume_previous[0]; 
+    *volume = volume_previous[0];
 	    
     // group the RGB components into a single signal
 	vout[0] = ((((ac_int<PIXEL_WL, false>)red_out) << (2*COLOUR_WL)) | (((ac_int<PIXEL_WL, false>)green_out) << COLOUR_WL) | (ac_int<PIXEL_WL, false>)blue_out);

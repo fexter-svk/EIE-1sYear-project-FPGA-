@@ -1,23 +1,23 @@
 
-State Machine - |TOP_DE0_CAMERA_MOUSE|top:inst3|processor:DUMMY|pulse_gen:pulse_gen|state
+State Machine - |TOP_DE0_CAMERA_MOUSE|top:inst9|processor:DUMMY|pulse_gen:pulse_gen|state
 Name state.IDLE state.WAIT_LOW state.IN_HIGH 
 state.IDLE 0 0 0 
 state.IN_HIGH 1 0 1 
 state.WAIT_LOW 1 1 0 
 
-State Machine - |TOP_DE0_CAMERA_MOUSE|top:inst3|spi2adc:SPI_ADC|sr_state
+State Machine - |TOP_DE0_CAMERA_MOUSE|top:inst9|spi2adc:SPI_ADC|sr_state
 Name sr_state.IDLE sr_state.WAIT_CSB_HIGH sr_state.WAIT_CSB_FALL 
 sr_state.IDLE 0 0 0 
 sr_state.WAIT_CSB_FALL 1 0 1 
 sr_state.WAIT_CSB_HIGH 1 1 0 
 
-State Machine - |TOP_DE0_CAMERA_MOUSE|top:inst3|spi2dac:SPI_DAC|sr_state
+State Machine - |TOP_DE0_CAMERA_MOUSE|top:inst9|spi2dac:SPI_DAC|sr_state
 Name sr_state.IDLE sr_state.WAIT_CSB_HIGH sr_state.WAIT_CSB_FALL 
 sr_state.IDLE 0 0 0 
 sr_state.WAIT_CSB_FALL 1 0 1 
 sr_state.WAIT_CSB_HIGH 1 1 0 
 
-State Machine - |TOP_DE0_CAMERA_MOUSE|top:inst3|pulse_gen:PULSE|state
+State Machine - |TOP_DE0_CAMERA_MOUSE|top:inst9|pulse_gen:PULSE|state
 Name state.IDLE state.WAIT_LOW state.IN_HIGH 
 state.IDLE 0 0 0 
 state.IN_HIGH 1 0 1 

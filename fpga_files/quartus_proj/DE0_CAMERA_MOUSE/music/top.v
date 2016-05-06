@@ -6,15 +6,15 @@
 // Date:     20 Jan 2014
 //------------------------------
 
-module top (CLOCK_50, SW, HEX0_D, HEX1_D, HEX2_D, volume,
+module top (CLOCK_50, SW, HEX0_D, volume,
 					DAC_SDI, SCK, DAC_CS, DAC_LD,
 					ADC_SDI, ADC_CS, ADC_SDO);
 
 	input			CLOCK_50;		// DE0 50MHz system clock
 	input	SW;				// 10 slide switches to specify address to ROM
 	output [6:0] HEX0_D;
-	output [6:0] HEX1_D;
-	output [6:0] HEX2_D;	
+	//output [6:0] HEX1_D;
+	//output [6:0] HEX2_D;	
 	output 		DAC_SDI;			//Serial data out to SDI of the DAC
 	output 		SCK;				//Serial clock signal to both DAC and ADC
 	output		DAC_CS;			//Chip select to the DAC, low active
@@ -54,8 +54,6 @@ module top (CLOCK_50, SW, HEX0_D, HEX1_D, HEX2_D, volume,
 	assign SCK = DAC_SCK | ADC_SCK;							// merge the two serial clocks
 	
 	hex_to_7seg SEG0 (HEX0_D, volume[3:0]);				// display the converted value
-	//hex_to_7seg SEG1 (HEX1_D, data_in[7:4]);
-	//hex_to_7seg SEG2 (HEX2_D, {2'b0,data_in[9:8]});
 		
 endmodule
 

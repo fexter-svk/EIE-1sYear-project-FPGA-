@@ -16,7 +16,7 @@ module processor (sysclk, data_in, data_valid, data_out,volume);
 	wire				sysclk;
 	wire [9:0]		data_in;
 	reg [9:0] 		data_out;
-	wire [9:0]		x,y;
+	wire [9:0]		x,y,z;
 	wire 				pulse;
 	wire 				d; // wire from full output to flip flop
 	reg				ff_out; // output from flip flop to and gate
@@ -35,7 +35,7 @@ module processor (sysclk, data_in, data_valid, data_out,volume);
 	// This part should include your own processing hardware 
 	// ... that takes x to produce y
 	// ... In this case, it is ALL PASS.
-	//assign y = (x * volume);
+	assign z = (x * volume);
 	
 	FIFO FIFO (
 	.clock(sysclk),
@@ -50,11 +50,10 @@ module processor (sysclk, data_in, data_valid, data_out,volume);
 	assign att_q[8:0] = q[9:1];
 	assign att_q[9] = q[9];
 	
-	//assign y = x - att_q;
-	
-	//assign y = (x * volume) - att_q;
-	//assign y = x - att_q;
-	assign y = (x - att_q) * volume;
+
+	//assign y = x - att_q; CORRECT
+	assign y = z - att_q;
+	//assign y = (x - att_q) * volume;
 	
 
 	//  Now clock y output with system clock

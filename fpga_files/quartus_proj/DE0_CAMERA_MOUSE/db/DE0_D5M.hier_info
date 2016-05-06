@@ -1,7 +1,7 @@
 |TOP_DE0_CAMERA_MOUSE
 DRAM_LDQM <= DE0_D5M:inst.DRAM_LDQM
 CLOCK_50 => DE0_D5M:inst.CLOCK_50
-CLOCK_50 => top:inst3.CLOCK_50
+CLOCK_50 => top:inst9.CLOCK_50
 DRAM_DQ[0] <> DE0_D5M:inst.DRAM_DQ[0]
 DRAM_DQ[1] <> DE0_D5M:inst.DRAM_DQ[1]
 DRAM_DQ[2] <> DE0_D5M:inst.DRAM_DQ[2]
@@ -68,7 +68,7 @@ DRAM_CLK <= DE0_D5M:inst.DRAM_CLK
 VGA_CLK <= DE0_D5M:inst.VGA_CLK
 VGA_HS <= DE0_D5M:inst.VGA_HS
 VGA_VS <= DE0_D5M:inst.VGA_VS
-DAC_SDI <= top:inst3.DAC_SDI
+DAC_SDI <= top:inst9.DAC_SDI
 SW[0] => ~NO_FANOUT~
 SW[1] => ~NO_FANOUT~
 SW[2] => ~NO_FANOUT~
@@ -78,13 +78,13 @@ SW[5] => vga_mux:inst10.sel[1]
 SW[6] => ~NO_FANOUT~
 SW[7] => ~NO_FANOUT~
 SW[8] => ~NO_FANOUT~
-SW[9] => top:inst3.SW
-ADC_SDO => top:inst3.ADC_SDO
-SCK <= top:inst3.SCK
-DAC_CS <= top:inst3.DAC_CS
-DAC_LD <= top:inst3.DAC_LD
-ADC_SDI <= top:inst3.ADC_SDI
-ADC_CS <= top:inst3.ADC_CS
+SW[9] => top:inst9.SW
+ADC_SDO => top:inst9.ADC_SDO
+SCK <= top:inst9.SCK
+DAC_CS <= top:inst9.DAC_CS
+DAC_LD <= top:inst9.DAC_LD
+ADC_SDI <= top:inst9.ADC_SDI
+ADC_CS <= top:inst9.ADC_CS
 DRAM_ADDR[0] <= DE0_D5M:inst.DRAM_ADDR[0]
 DRAM_ADDR[1] <= DE0_D5M:inst.DRAM_ADDR[1]
 DRAM_ADDR[2] <= DE0_D5M:inst.DRAM_ADDR[2]
@@ -99,27 +99,13 @@ DRAM_ADDR[10] <= DE0_D5M:inst.DRAM_ADDR[10]
 DRAM_ADDR[11] <= DE0_D5M:inst.DRAM_ADDR[11]
 GPIO_1_CLKOUT[0] <= DE0_D5M:inst.GPIO_1_CLKOUT[0]
 GPIO_1_CLKOUT[1] <= DE0_D5M:inst.GPIO_1_CLKOUT[1]
-HEX0_D[0] <= top:inst3.HEX0_D[0]
-HEX0_D[1] <= top:inst3.HEX0_D[1]
-HEX0_D[2] <= top:inst3.HEX0_D[2]
-HEX0_D[3] <= top:inst3.HEX0_D[3]
-HEX0_D[4] <= top:inst3.HEX0_D[4]
-HEX0_D[5] <= top:inst3.HEX0_D[5]
-HEX0_D[6] <= top:inst3.HEX0_D[6]
-HEX1_D[0] <= top:inst3.HEX1_D[0]
-HEX1_D[1] <= top:inst3.HEX1_D[1]
-HEX1_D[2] <= top:inst3.HEX1_D[2]
-HEX1_D[3] <= top:inst3.HEX1_D[3]
-HEX1_D[4] <= top:inst3.HEX1_D[4]
-HEX1_D[5] <= top:inst3.HEX1_D[5]
-HEX1_D[6] <= top:inst3.HEX1_D[6]
-HEX2_D[0] <= top:inst3.HEX2_D[0]
-HEX2_D[1] <= top:inst3.HEX2_D[1]
-HEX2_D[2] <= top:inst3.HEX2_D[2]
-HEX2_D[3] <= top:inst3.HEX2_D[3]
-HEX2_D[4] <= top:inst3.HEX2_D[4]
-HEX2_D[5] <= top:inst3.HEX2_D[5]
-HEX2_D[6] <= top:inst3.HEX2_D[6]
+HEX0_D[0] <= top:inst9.HEX0_D[0]
+HEX0_D[1] <= top:inst9.HEX0_D[1]
+HEX0_D[2] <= top:inst9.HEX0_D[2]
+HEX0_D[3] <= top:inst9.HEX0_D[3]
+HEX0_D[4] <= top:inst9.HEX0_D[4]
+HEX0_D[5] <= top:inst9.HEX0_D[5]
+HEX0_D[6] <= top:inst9.HEX0_D[6]
 VGA_B[0] <= VGA_MUX_OUT[6].DB_MAX_OUTPUT_PORT_TYPE
 VGA_B[1] <= VGA_MUX_OUT[7].DB_MAX_OUTPUT_PORT_TYPE
 VGA_B[2] <= VGA_MUX_OUT[8].DB_MAX_OUTPUT_PORT_TYPE
@@ -8242,7 +8228,7 @@ RESET => SD[2].ENA
 RESET => SD[1].ENA
 
 
-|TOP_DE0_CAMERA_MOUSE|top:inst3
+|TOP_DE0_CAMERA_MOUSE|top:inst9
 CLOCK_50 => CLOCK_50.IN5
 SW => SW.IN1
 HEX0_D[0] <= hex_to_7seg:SEG0.port0
@@ -8252,28 +8238,10 @@ HEX0_D[3] <= hex_to_7seg:SEG0.port0
 HEX0_D[4] <= hex_to_7seg:SEG0.port0
 HEX0_D[5] <= hex_to_7seg:SEG0.port0
 HEX0_D[6] <= hex_to_7seg:SEG0.port0
-HEX1_D[0] <= hex_to_7seg:SEG1.port0
-HEX1_D[1] <= hex_to_7seg:SEG1.port0
-HEX1_D[2] <= hex_to_7seg:SEG1.port0
-HEX1_D[3] <= hex_to_7seg:SEG1.port0
-HEX1_D[4] <= hex_to_7seg:SEG1.port0
-HEX1_D[5] <= hex_to_7seg:SEG1.port0
-HEX1_D[6] <= hex_to_7seg:SEG1.port0
-HEX2_D[0] <= hex_to_7seg:SEG2.port0
-HEX2_D[1] <= hex_to_7seg:SEG2.port0
-HEX2_D[2] <= hex_to_7seg:SEG2.port0
-HEX2_D[3] <= hex_to_7seg:SEG2.port0
-HEX2_D[4] <= hex_to_7seg:SEG2.port0
-HEX2_D[5] <= hex_to_7seg:SEG2.port0
-HEX2_D[6] <= hex_to_7seg:SEG2.port0
-volume[0] => volume[0].IN1
-volume[1] => volume[1].IN1
-volume[2] => volume[2].IN1
-volume[3] => volume[3].IN1
-volume[4] => volume[4].IN1
-volume[5] => volume[5].IN1
-volume[6] => volume[6].IN1
-volume[7] => volume[7].IN1
+volume[0] => volume[0].IN2
+volume[1] => volume[1].IN2
+volume[2] => volume[2].IN2
+volume[3] => volume[3].IN2
 DAC_SDI <= spi2dac:SPI_DAC.port3
 SCK <= SCK.DB_MAX_OUTPUT_PORT_TYPE
 DAC_CS <= spi2dac:SPI_DAC.port4
@@ -8283,7 +8251,7 @@ ADC_CS <= spi2adc:SPI_ADC.adc_cs
 ADC_SDO => ADC_SDO.IN1
 
 
-|TOP_DE0_CAMERA_MOUSE|top:inst3|clk_div:GEN_10K
+|TOP_DE0_CAMERA_MOUSE|top:inst9|clk_div:GEN_10K
 clkin => clkout~reg0.CLK
 clkin => ctr[0].CLK
 clkin => ctr[1].CLK
@@ -8330,7 +8298,7 @@ tc[20] => ctr.DATAB
 clkout <= clkout~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TOP_DE0_CAMERA_MOUSE|top:inst3|pulse_gen:PULSE
+|TOP_DE0_CAMERA_MOUSE|top:inst9|pulse_gen:PULSE
 pulse <= pulse~reg0.DB_MAX_OUTPUT_PORT_TYPE
 in => pulse.DATAB
 in => Selector0.IN1
@@ -8339,7 +8307,7 @@ clk => pulse~reg0.CLK
 clk => state~1.DATAIN
 
 
-|TOP_DE0_CAMERA_MOUSE|top:inst3|spi2dac:SPI_DAC
+|TOP_DE0_CAMERA_MOUSE|top:inst9|spi2dac:SPI_DAC
 sysclk => dac_start.CLK
 sysclk => clk_1MHz.CLK
 sysclk => ctr[0].CLK
@@ -8367,7 +8335,7 @@ dac_sck <= dac_sck.DB_MAX_OUTPUT_PORT_TYPE
 dac_ld <= dac_ld~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TOP_DE0_CAMERA_MOUSE|top:inst3|spi2adc:SPI_ADC
+|TOP_DE0_CAMERA_MOUSE|top:inst9|spi2adc:SPI_ADC
 sysclk => adc_start.CLK
 sysclk => clk_1MHz.CLK
 sysclk => ctr[0].CLK
@@ -8397,7 +8365,7 @@ adc_sck <= adc_sck.DB_MAX_OUTPUT_PORT_TYPE
 sdata_from_adc => shift_reg[0].DATAIN
 
 
-|TOP_DE0_CAMERA_MOUSE|top:inst3|processor:DUMMY
+|TOP_DE0_CAMERA_MOUSE|top:inst9|processor:DUMMY
 sysclk => sysclk.IN2
 data_in[0] => Add0.IN20
 data_in[1] => Add0.IN19
@@ -8420,17 +8388,13 @@ data_out[6] <= data_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[7] <= data_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[8] <= data_out[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[9] <= data_out[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-volume[0] => Mult0.IN17
-volume[1] => Mult0.IN16
-volume[2] => Mult0.IN15
-volume[3] => Mult0.IN14
-volume[4] => Mult0.IN13
-volume[5] => Mult0.IN12
-volume[6] => Mult0.IN11
-volume[7] => Mult0.IN10
+volume[0] => Mult0.IN3
+volume[1] => Mult0.IN2
+volume[2] => Mult0.IN1
+volume[3] => Mult0.IN0
 
 
-|TOP_DE0_CAMERA_MOUSE|top:inst3|processor:DUMMY|pulse_gen:pulse_gen
+|TOP_DE0_CAMERA_MOUSE|top:inst9|processor:DUMMY|pulse_gen:pulse_gen
 pulse <= pulse~reg0.DB_MAX_OUTPUT_PORT_TYPE
 in => pulse.DATAB
 in => Selector0.IN1
@@ -8439,7 +8403,7 @@ clk => pulse~reg0.CLK
 clk => state~1.DATAIN
 
 
-|TOP_DE0_CAMERA_MOUSE|top:inst3|processor:DUMMY|FIFO:FIFO
+|TOP_DE0_CAMERA_MOUSE|top:inst9|processor:DUMMY|FIFO:FIFO
 clock => clock.IN1
 data[0] => data[0].IN1
 data[1] => data[1].IN1
@@ -8466,7 +8430,7 @@ q[8] <= scfifo:scfifo_component.q
 q[9] <= scfifo:scfifo_component.q
 
 
-|TOP_DE0_CAMERA_MOUSE|top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component
+|TOP_DE0_CAMERA_MOUSE|top:inst9|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component
 data[0] => scfifo_2g21:auto_generated.data[0]
 data[1] => scfifo_2g21:auto_generated.data[1]
 data[2] => scfifo_2g21:auto_generated.data[2]
@@ -8508,7 +8472,7 @@ usedw[8] <= <GND>
 usedw[9] <= <GND>
 
 
-|TOP_DE0_CAMERA_MOUSE|top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated
+|TOP_DE0_CAMERA_MOUSE|top:inst9|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated
 clock => a_dpfifo_9m21:dpfifo.clock
 data[0] => a_dpfifo_9m21:dpfifo.data[0]
 data[1] => a_dpfifo_9m21:dpfifo.data[1]
@@ -8535,7 +8499,7 @@ rdreq => a_dpfifo_9m21:dpfifo.rreq
 wrreq => a_dpfifo_9m21:dpfifo.wreq
 
 
-|TOP_DE0_CAMERA_MOUSE|top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated|a_dpfifo_9m21:dpfifo
+|TOP_DE0_CAMERA_MOUSE|top:inst9|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated|a_dpfifo_9m21:dpfifo
 clock => altsyncram_s5e1:FIFOram.clock0
 clock => altsyncram_s5e1:FIFOram.clock1
 clock => cntr_p8b:rd_ptr_msb.clock
@@ -8593,7 +8557,7 @@ sclr => usedw_will_be_1.IN0
 wreq => valid_wreq.IN0
 
 
-|TOP_DE0_CAMERA_MOUSE|top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated|a_dpfifo_9m21:dpfifo|altsyncram_s5e1:FIFOram
+|TOP_DE0_CAMERA_MOUSE|top:inst9|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated|a_dpfifo_9m21:dpfifo|altsyncram_s5e1:FIFOram
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -8866,7 +8830,7 @@ wren_a => ram_block1a9.PORTAWE
 wren_a => ram_block1a9.ENA0
 
 
-|TOP_DE0_CAMERA_MOUSE|top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated|a_dpfifo_9m21:dpfifo|cmpr_ls8:almost_full_comparer
+|TOP_DE0_CAMERA_MOUSE|top:inst9|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated|a_dpfifo_9m21:dpfifo|cmpr_ls8:almost_full_comparer
 aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
 dataa[0] => data_wire[2].IN0
 dataa[1] => data_wire[2].IN0
@@ -8890,7 +8854,7 @@ datab[8] => data_wire[6].IN1
 datab[9] => data_wire[6].IN1
 
 
-|TOP_DE0_CAMERA_MOUSE|top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated|a_dpfifo_9m21:dpfifo|cmpr_ls8:two_comparison
+|TOP_DE0_CAMERA_MOUSE|top:inst9|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated|a_dpfifo_9m21:dpfifo|cmpr_ls8:two_comparison
 aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
 dataa[0] => data_wire[2].IN0
 dataa[1] => data_wire[2].IN0
@@ -8914,7 +8878,7 @@ datab[8] => data_wire[6].IN1
 datab[9] => data_wire[6].IN1
 
 
-|TOP_DE0_CAMERA_MOUSE|top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated|a_dpfifo_9m21:dpfifo|cntr_p8b:rd_ptr_msb
+|TOP_DE0_CAMERA_MOUSE|top:inst9|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated|a_dpfifo_9m21:dpfifo|cntr_p8b:rd_ptr_msb
 clock => counter_reg_bit[8].CLK
 clock => counter_reg_bit[7].CLK
 clock => counter_reg_bit[6].CLK
@@ -8939,7 +8903,7 @@ sclr => _.IN0
 sclr => _.IN0
 
 
-|TOP_DE0_CAMERA_MOUSE|top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated|a_dpfifo_9m21:dpfifo|cntr_da7:usedw_counter
+|TOP_DE0_CAMERA_MOUSE|top:inst9|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated|a_dpfifo_9m21:dpfifo|cntr_da7:usedw_counter
 clock => counter_reg_bit[9].CLK
 clock => counter_reg_bit[8].CLK
 clock => counter_reg_bit[7].CLK
@@ -8976,7 +8940,7 @@ updown => counter_comb_bita8.DATAB
 updown => counter_comb_bita9.DATAB
 
 
-|TOP_DE0_CAMERA_MOUSE|top:inst3|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated|a_dpfifo_9m21:dpfifo|cntr_1ab:wr_ptr
+|TOP_DE0_CAMERA_MOUSE|top:inst9|processor:DUMMY|FIFO:FIFO|scfifo:scfifo_component|scfifo_2g21:auto_generated|a_dpfifo_9m21:dpfifo|cntr_1ab:wr_ptr
 clock => counter_reg_bit[9].CLK
 clock => counter_reg_bit[8].CLK
 clock => counter_reg_bit[7].CLK
@@ -9003,35 +8967,7 @@ sclr => _.IN0
 sclr => _.IN0
 
 
-|TOP_DE0_CAMERA_MOUSE|top:inst3|hex_to_7seg:SEG0
-out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
-out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-in[0] => Decoder0.IN3
-in[1] => Decoder0.IN2
-in[2] => Decoder0.IN1
-in[3] => Decoder0.IN0
-
-
-|TOP_DE0_CAMERA_MOUSE|top:inst3|hex_to_7seg:SEG1
-out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
-out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-in[0] => Decoder0.IN3
-in[1] => Decoder0.IN2
-in[2] => Decoder0.IN1
-in[3] => Decoder0.IN0
-
-
-|TOP_DE0_CAMERA_MOUSE|top:inst3|hex_to_7seg:SEG2
+|TOP_DE0_CAMERA_MOUSE|top:inst9|hex_to_7seg:SEG0
 out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
@@ -9190,10 +9126,6 @@ volume_rsc_z[0] <= mgc_out_stdreg:volume_rsc_mgc_out_stdreg.z
 volume_rsc_z[1] <= mgc_out_stdreg:volume_rsc_mgc_out_stdreg.z
 volume_rsc_z[2] <= mgc_out_stdreg:volume_rsc_mgc_out_stdreg.z
 volume_rsc_z[3] <= mgc_out_stdreg:volume_rsc_mgc_out_stdreg.z
-volume_rsc_z[4] <= mgc_out_stdreg:volume_rsc_mgc_out_stdreg.z
-volume_rsc_z[5] <= mgc_out_stdreg:volume_rsc_mgc_out_stdreg.z
-volume_rsc_z[6] <= mgc_out_stdreg:volume_rsc_mgc_out_stdreg.z
-volume_rsc_z[7] <= mgc_out_stdreg:volume_rsc_mgc_out_stdreg.z
 clk => clk.IN1
 en => en.IN1
 arst_n => arst_n.IN1
@@ -9267,80 +9199,72 @@ d[0] => z[0].DATAIN
 d[1] => z[1].DATAIN
 d[2] => z[2].DATAIN
 d[3] => z[3].DATAIN
-d[4] => z[4].DATAIN
-d[5] => z[5].DATAIN
-d[6] => z[6].DATAIN
-d[7] => z[7].DATAIN
 z[0] <= d[0].DB_MAX_OUTPUT_PORT_TYPE
 z[1] <= d[1].DB_MAX_OUTPUT_PORT_TYPE
 z[2] <= d[2].DB_MAX_OUTPUT_PORT_TYPE
 z[3] <= d[3].DB_MAX_OUTPUT_PORT_TYPE
-z[4] <= d[4].DB_MAX_OUTPUT_PORT_TYPE
-z[5] <= d[5].DB_MAX_OUTPUT_PORT_TYPE
-z[6] <= d[6].DB_MAX_OUTPUT_PORT_TYPE
-z[7] <= d[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TOP_DE0_CAMERA_MOUSE|markers:inst12|markers_core:markers_core_inst
-vin[0] => Add23.IN20
-vin[1] => Add23.IN19
-vin[2] => Add23.IN18
-vin[3] => Add7.IN14
-vin[3] => Add23.IN17
-vin[4] => Add7.IN13
-vin[4] => Add23.IN16
-vin[5] => Add7.IN12
-vin[5] => Add23.IN15
-vin[6] => Add7.IN11
-vin[6] => Add23.IN14
-vin[7] => Add7.IN10
-vin[7] => Add23.IN13
-vin[8] => Add7.IN9
-vin[8] => Add23.IN12
-vin[9] => Add7.IN8
-vin[9] => Add23.IN11
-vin[10] => Add8.IN20
-vin[10] => Add24.IN20
-vin[11] => Add8.IN19
-vin[11] => Add24.IN19
-vin[12] => Add8.IN18
-vin[12] => Add24.IN18
-vin[13] => Add8.IN17
-vin[13] => Add24.IN17
-vin[14] => Add8.IN16
-vin[14] => Add24.IN16
-vin[15] => Add8.IN15
-vin[15] => Add24.IN15
-vin[16] => Add8.IN14
-vin[16] => Add24.IN14
-vin[17] => Add8.IN13
-vin[17] => Add24.IN13
-vin[18] => Add8.IN12
-vin[18] => Add24.IN12
-vin[19] => Add8.IN11
-vin[19] => Add24.IN11
-vin[20] => Add9.IN20
-vin[20] => Add25.IN18
-vin[21] => Add9.IN19
-vin[21] => Add25.IN17
-vin[22] => Add9.IN18
-vin[22] => Add25.IN16
-vin[23] => Add9.IN17
-vin[23] => Add25.IN15
-vin[24] => Add9.IN16
-vin[24] => Add25.IN14
-vin[25] => Add9.IN15
-vin[25] => Add25.IN13
-vin[26] => Add9.IN14
-vin[26] => Add25.IN12
-vin[27] => Add26.IN6
-vin[27] => Add9.IN13
-vin[27] => Add25.IN11
-vin[28] => Add26.IN5
-vin[28] => Add9.IN12
-vin[28] => Add25.IN10
-vin[29] => Add26.IN4
-vin[29] => Add9.IN11
+vin[0] => Add39.IN20
+vin[1] => Add39.IN19
+vin[2] => Add39.IN18
+vin[3] => Add14.IN14
+vin[3] => Add39.IN17
+vin[4] => Add14.IN13
+vin[4] => Add39.IN16
+vin[5] => Add14.IN12
+vin[5] => Add39.IN15
+vin[6] => Add14.IN11
+vin[6] => Add39.IN14
+vin[7] => Add14.IN10
+vin[7] => Add39.IN13
+vin[8] => Add14.IN9
+vin[8] => Add39.IN12
+vin[9] => Add14.IN8
+vin[9] => Add39.IN11
+vin[10] => Add15.IN20
+vin[10] => Add40.IN20
+vin[11] => Add15.IN19
+vin[11] => Add40.IN19
+vin[12] => Add15.IN18
+vin[12] => Add40.IN18
+vin[13] => Add15.IN17
+vin[13] => Add40.IN17
+vin[14] => Add15.IN16
+vin[14] => Add40.IN16
+vin[15] => Add15.IN15
+vin[15] => Add40.IN15
+vin[16] => Add15.IN14
+vin[16] => Add40.IN14
+vin[17] => Add15.IN13
+vin[17] => Add40.IN13
+vin[18] => Add15.IN12
+vin[18] => Add40.IN12
+vin[19] => Add15.IN11
+vin[19] => Add40.IN11
+vin[20] => Add16.IN20
+vin[20] => Add41.IN18
+vin[21] => Add16.IN19
+vin[21] => Add41.IN17
+vin[22] => Add16.IN18
+vin[22] => Add41.IN16
+vin[23] => Add16.IN17
+vin[23] => Add41.IN15
+vin[24] => Add16.IN16
+vin[24] => Add41.IN14
+vin[25] => Add16.IN15
+vin[25] => Add41.IN13
+vin[26] => Add16.IN14
+vin[26] => Add41.IN12
+vin[27] => Add42.IN6
+vin[27] => Add16.IN13
+vin[27] => Add41.IN11
+vin[28] => Add42.IN5
+vin[28] => Add16.IN12
+vin[28] => Add41.IN10
+vin[29] => Add42.IN4
+vin[29] => Add16.IN11
 vin[30] => ~NO_FANOUT~
 vin[31] => ~NO_FANOUT~
 vin[32] => ~NO_FANOUT~
@@ -9403,116 +9327,129 @@ vin[88] => ~NO_FANOUT~
 vin[89] => ~NO_FANOUT~
 vga_xy[0] => red_xy_0_sva_dfm_2_mx0[0].DATAA
 vga_xy[0] => blue_xy_0_sva_dfm_2_mx0[0].DATAA
-vga_xy[0] => Add3.IN20
-vga_xy[0] => Add4.IN20
-vga_xy[0] => Add13.IN8
+vga_xy[0] => Add10.IN20
+vga_xy[0] => Add11.IN20
+vga_xy[0] => Add27.IN8
 vga_xy[0] => nand_2_itm.IN1
 vga_xy[1] => red_xy_0_sva_dfm_2_mx0[1].DATAA
 vga_xy[1] => blue_xy_0_sva_dfm_2_mx0[1].DATAA
-vga_xy[1] => Add3.IN19
-vga_xy[1] => Add4.IN19
-vga_xy[1] => Add13.IN7
+vga_xy[1] => Add10.IN19
+vga_xy[1] => Add11.IN19
+vga_xy[1] => Add27.IN7
 vga_xy[1] => nand_2_itm.IN1
 vga_xy[2] => red_xy_0_sva_dfm_2_mx0[2].DATAA
 vga_xy[2] => blue_xy_0_sva_dfm_2_mx0[2].DATAA
-vga_xy[2] => Add3.IN18
-vga_xy[2] => Add4.IN18
-vga_xy[2] => Add13.IN6
+vga_xy[2] => Add10.IN18
+vga_xy[2] => Add11.IN18
+vga_xy[2] => Add27.IN6
 vga_xy[2] => nand_2_itm.IN1
 vga_xy[3] => red_xy_0_sva_dfm_2_mx0[3].DATAA
 vga_xy[3] => blue_xy_0_sva_dfm_2_mx0[3].DATAA
-vga_xy[3] => Add3.IN17
-vga_xy[3] => Add4.IN17
-vga_xy[3] => Add13.IN5
+vga_xy[3] => Add10.IN17
+vga_xy[3] => Add11.IN17
+vga_xy[3] => Add27.IN5
 vga_xy[3] => nand_2_itm.IN1
-vga_xy[3] => Add15.IN1
+vga_xy[3] => Add29.IN1
 vga_xy[4] => red_xy_0_sva_dfm_2_mx0[4].DATAA
 vga_xy[4] => blue_xy_0_sva_dfm_2_mx0[4].DATAA
-vga_xy[4] => Add3.IN16
-vga_xy[4] => Add4.IN16
-vga_xy[4] => Add13.IN4
+vga_xy[4] => Add10.IN16
+vga_xy[4] => Add11.IN16
+vga_xy[4] => Add27.IN4
 vga_xy[4] => nand_2_itm.IN1
 vga_xy[5] => red_xy_0_sva_dfm_2_mx0[5].DATAA
 vga_xy[5] => blue_xy_0_sva_dfm_2_mx0[5].DATAA
-vga_xy[5] => Add3.IN15
-vga_xy[5] => Add4.IN15
-vga_xy[5] => Add13.IN3
+vga_xy[5] => Add10.IN15
+vga_xy[5] => Add11.IN15
+vga_xy[5] => Add27.IN3
 vga_xy[5] => nand_2_itm.IN1
 vga_xy[6] => red_xy_0_sva_dfm_2_mx0[6].DATAA
 vga_xy[6] => blue_xy_0_sva_dfm_2_mx0[6].DATAA
-vga_xy[6] => Add3.IN14
-vga_xy[6] => Add4.IN14
-vga_xy[6] => Add13.IN2
+vga_xy[6] => Add10.IN14
+vga_xy[6] => Add11.IN14
+vga_xy[6] => Add27.IN2
 vga_xy[6] => nand_2_itm.IN1
 vga_xy[7] => red_xy_0_sva_dfm_2_mx0[7].DATAA
 vga_xy[7] => blue_xy_0_sva_dfm_2_mx0[7].DATAA
-vga_xy[7] => Add3.IN13
-vga_xy[7] => Add4.IN13
-vga_xy[7] => Add16.IN2
+vga_xy[7] => Add10.IN13
+vga_xy[7] => Add11.IN13
+vga_xy[7] => Add30.IN2
 vga_xy[7] => nand_2_itm.IN1
-vga_xy[7] => Add15.IN2
+vga_xy[7] => Add29.IN2
 vga_xy[8] => red_xy_0_sva_dfm_2_mx0[8].DATAA
 vga_xy[8] => blue_xy_0_sva_dfm_2_mx0[8].DATAA
-vga_xy[8] => Add3.IN12
-vga_xy[8] => Add4.IN12
-vga_xy[8] => Add14.IN8
+vga_xy[8] => Add10.IN12
+vga_xy[8] => Add11.IN12
+vga_xy[8] => Add28.IN8
 vga_xy[8] => nand_2_itm.IN0
 vga_xy[9] => red_xy_0_sva_dfm_2_mx0[9].DATAA
 vga_xy[9] => blue_xy_0_sva_dfm_2_mx0[9].DATAA
-vga_xy[9] => Add3.IN11
-vga_xy[9] => Add4.IN11
-vga_xy[9] => Add14.IN7
+vga_xy[9] => Add10.IN11
+vga_xy[9] => Add11.IN11
+vga_xy[9] => Add28.IN7
 vga_xy[9] => nand_2_itm.IN1
-vga_xy[10] => Add0.IN20
+vga_xy[10] => Add8.IN20
 vga_xy[10] => red_xy_1_sva_dfm_4_mx0[0].DATAA
-vga_xy[10] => Add1.IN20
+vga_xy[10] => Add9.IN20
 vga_xy[10] => blue_xy_1_sva_dfm_4_mx0[0].DATAA
 vga_xy[10] => nand_2_itm.IN1
-vga_xy[11] => Add0.IN19
+vga_xy[11] => Add8.IN19
 vga_xy[11] => red_xy_1_sva_dfm_4_mx0[1].DATAA
-vga_xy[11] => Add1.IN19
+vga_xy[11] => Add9.IN19
 vga_xy[11] => blue_xy_1_sva_dfm_4_mx0[1].DATAA
 vga_xy[11] => nand_2_itm.IN1
-vga_xy[12] => Add0.IN18
+vga_xy[12] => Add8.IN18
 vga_xy[12] => red_xy_1_sva_dfm_4_mx0[2].DATAA
-vga_xy[12] => Add1.IN18
+vga_xy[12] => Add9.IN18
 vga_xy[12] => blue_xy_1_sva_dfm_4_mx0[2].DATAA
 vga_xy[12] => nand_2_itm.IN1
-vga_xy[13] => Add0.IN17
+vga_xy[13] => Add8.IN17
 vga_xy[13] => red_xy_1_sva_dfm_4_mx0[3].DATAA
-vga_xy[13] => Add1.IN17
+vga_xy[13] => Add9.IN17
 vga_xy[13] => blue_xy_1_sva_dfm_4_mx0[3].DATAA
 vga_xy[13] => nand_2_itm.IN1
-vga_xy[14] => Add0.IN16
+vga_xy[14] => Add8.IN16
 vga_xy[14] => red_xy_1_sva_dfm_4_mx0[4].DATAA
-vga_xy[14] => Add1.IN16
+vga_xy[14] => Add9.IN16
 vga_xy[14] => blue_xy_1_sva_dfm_4_mx0[4].DATAA
 vga_xy[14] => nand_2_itm.IN1
-vga_xy[15] => Add0.IN15
+vga_xy[15] => Add8.IN15
 vga_xy[15] => red_xy_1_sva_dfm_4_mx0[5].DATAA
-vga_xy[15] => Add1.IN15
+vga_xy[15] => Add9.IN15
 vga_xy[15] => blue_xy_1_sva_dfm_4_mx0[5].DATAA
 vga_xy[15] => nand_2_itm.IN1
-vga_xy[16] => Add0.IN14
+vga_xy[16] => Add8.IN14
 vga_xy[16] => red_xy_1_sva_dfm_4_mx0[6].DATAA
-vga_xy[16] => Add1.IN14
+vga_xy[16] => Add9.IN14
 vga_xy[16] => blue_xy_1_sva_dfm_4_mx0[6].DATAA
 vga_xy[16] => nand_2_itm.IN1
-vga_xy[17] => Add0.IN13
+vga_xy[17] => Add8.IN13
 vga_xy[17] => red_xy_1_sva_dfm_4_mx0[7].DATAA
-vga_xy[17] => Add1.IN13
+vga_xy[17] => Add9.IN13
 vga_xy[17] => blue_xy_1_sva_dfm_4_mx0[7].DATAA
 vga_xy[17] => nand_2_itm.IN1
-vga_xy[18] => Add0.IN12
+vga_xy[18] => Add8.IN12
 vga_xy[18] => red_xy_1_sva_dfm_4_mx0[8].DATAA
-vga_xy[18] => Add1.IN12
+vga_xy[18] => Add9.IN12
 vga_xy[18] => blue_xy_1_sva_dfm_4_mx0[8].DATAA
 vga_xy[18] => nand_2_itm.IN0
-vga_xy[19] => Add0.IN11
+vga_xy[19] => Add8.IN11
 vga_xy[19] => red_xy_1_sva_dfm_4_mx0[9].DATAA
-vga_xy[19] => Add1.IN11
+vga_xy[19] => Add9.IN11
 vga_xy[19] => blue_xy_1_sva_dfm_4_mx0[9].DATAA
 vga_xy[19] => nand_2_itm.IN1
+clk => volume_current_slc_acc_idiv_10_itm_1[0].CLK
+clk => volume_current_slc_acc_idiv_10_itm_1[1].CLK
+clk => volume_current_slc_acc_idiv_10_itm_1[2].CLK
+clk => volume_current_slc_acc_idiv_itm_1[0].CLK
+clk => volume_current_slc_acc_idiv_itm_1[1].CLK
+clk => volume_current_slc_acc_idiv_itm_1[2].CLK
+clk => volume_current_slc_acc_idiv_itm_1[3].CLK
+clk => volume_current_slc_acc_idiv_itm_1[4].CLK
+clk => volume_current_slc_acc_idiv_8_itm_1.CLK
+clk => volume_current_slc_acc_idiv_5_itm_1.CLK
+clk => volume_current_slc_acc_idiv_14_itm_1.CLK
+clk => volume_current_slc_acc_idiv_7_itm_1.CLK
+clk => main_stage_0_4.CLK
 clk => main_stage_0_3.CLK
 clk => main_stage_0_2.CLK
 clk => aif_17_slc_svs.CLK
@@ -9558,16 +9495,16 @@ clk => red_xy_0_sva_dfm_3[6].CLK
 clk => red_xy_0_sva_dfm_3[7].CLK
 clk => red_xy_0_sva_dfm_3[8].CLK
 clk => red_xy_0_sva_dfm_3[9].CLK
-clk => acc_10_1_sva_dfm_2[0].CLK
-clk => acc_10_1_sva_dfm_2[1].CLK
-clk => acc_10_1_sva_dfm_2[2].CLK
-clk => acc_10_1_sva_dfm_2[3].CLK
-clk => acc_10_0_sva_dfm_2[0].CLK
-clk => acc_10_0_sva_dfm_2[1].CLK
-clk => acc_10_0_sva_dfm_2[2].CLK
-clk => acc_10_0_sva_dfm_2[3].CLK
-clk => land_14_lpi_1_dfm_1.CLK
-clk => land_12_lpi_1_dfm_1.CLK
+clk => acc_12_1_sva_dfm_2[0].CLK
+clk => acc_12_1_sva_dfm_2[1].CLK
+clk => acc_12_1_sva_dfm_2[2].CLK
+clk => acc_12_1_sva_dfm_2[3].CLK
+clk => acc_12_0_sva_dfm_2[0].CLK
+clk => acc_12_0_sva_dfm_2[1].CLK
+clk => acc_12_0_sva_dfm_2[2].CLK
+clk => acc_12_0_sva_dfm_2[3].CLK
+clk => land_12_lpi_1_dfm_st_1.CLK
+clk => land_14_lpi_1_dfm_st_1.CLK
 clk => blue_xy_1_sva_dfm_4[0].CLK
 clk => blue_xy_1_sva_dfm_4[1].CLK
 clk => blue_xy_1_sva_dfm_4[2].CLK
@@ -9588,6 +9525,26 @@ clk => red_xy_1_sva_dfm_4[6].CLK
 clk => red_xy_1_sva_dfm_4[7].CLK
 clk => red_xy_1_sva_dfm_4[8].CLK
 clk => red_xy_1_sva_dfm_4[9].CLK
+clk => volume_current_acc_10_itm_1[0].CLK
+clk => volume_current_acc_10_itm_1[1].CLK
+clk => volume_current_slc_acc_idiv_10_itm_2[0].CLK
+clk => volume_current_slc_acc_idiv_10_itm_2[1].CLK
+clk => volume_current_slc_acc_idiv_10_itm_2[2].CLK
+clk => volume_current_acc_8_itm_1[0].CLK
+clk => volume_current_acc_8_itm_1[1].CLK
+clk => volume_current_acc_9_itm_1[0].CLK
+clk => volume_current_acc_9_itm_1[1].CLK
+clk => volume_current_slc_acc_idiv_12_itm_2.CLK
+clk => land_13_lpi_1_dfm_1.CLK
+clk => and_11_itm_1.CLK
+clk => volume_previous_sva[0].CLK
+clk => volume_previous_sva[1].CLK
+clk => volume_previous_sva[2].CLK
+clk => volume_previous_sva[3].CLK
+clk => volume_rsc_mgc_out_stdreg_d[0]~reg0.CLK
+clk => volume_rsc_mgc_out_stdreg_d[1]~reg0.CLK
+clk => volume_rsc_mgc_out_stdreg_d[2]~reg0.CLK
+clk => volume_rsc_mgc_out_stdreg_d[3]~reg0.CLK
 clk => vout_rsc_mgc_out_stdreg_d[0]~reg0.CLK
 clk => vout_rsc_mgc_out_stdreg_d[1]~reg0.CLK
 clk => vout_rsc_mgc_out_stdreg_d[2]~reg0.CLK
@@ -9618,7 +9575,6 @@ clk => vout_rsc_mgc_out_stdreg_d[26]~reg0.CLK
 clk => vout_rsc_mgc_out_stdreg_d[27]~reg0.CLK
 clk => vout_rsc_mgc_out_stdreg_d[28]~reg0.CLK
 clk => vout_rsc_mgc_out_stdreg_d[29]~reg0.CLK
-en => main_stage_0_3.ENA
 en => vout_rsc_mgc_out_stdreg_d[29]~reg0.ENA
 en => vout_rsc_mgc_out_stdreg_d[28]~reg0.ENA
 en => vout_rsc_mgc_out_stdreg_d[27]~reg0.ENA
@@ -9649,6 +9605,26 @@ en => vout_rsc_mgc_out_stdreg_d[3]~reg0.ENA
 en => vout_rsc_mgc_out_stdreg_d[2]~reg0.ENA
 en => vout_rsc_mgc_out_stdreg_d[1]~reg0.ENA
 en => vout_rsc_mgc_out_stdreg_d[0]~reg0.ENA
+en => volume_rsc_mgc_out_stdreg_d[3]~reg0.ENA
+en => volume_rsc_mgc_out_stdreg_d[2]~reg0.ENA
+en => volume_rsc_mgc_out_stdreg_d[1]~reg0.ENA
+en => volume_rsc_mgc_out_stdreg_d[0]~reg0.ENA
+en => volume_previous_sva[3].ENA
+en => volume_previous_sva[2].ENA
+en => volume_previous_sva[1].ENA
+en => volume_previous_sva[0].ENA
+en => and_11_itm_1.ENA
+en => land_13_lpi_1_dfm_1.ENA
+en => volume_current_slc_acc_idiv_12_itm_2.ENA
+en => volume_current_acc_9_itm_1[1].ENA
+en => volume_current_acc_9_itm_1[0].ENA
+en => volume_current_acc_8_itm_1[1].ENA
+en => volume_current_acc_8_itm_1[0].ENA
+en => volume_current_slc_acc_idiv_10_itm_2[2].ENA
+en => volume_current_slc_acc_idiv_10_itm_2[1].ENA
+en => volume_current_slc_acc_idiv_10_itm_2[0].ENA
+en => volume_current_acc_10_itm_1[1].ENA
+en => volume_current_acc_10_itm_1[0].ENA
 en => red_xy_1_sva_dfm_4[9].ENA
 en => red_xy_1_sva_dfm_4[8].ENA
 en => red_xy_1_sva_dfm_4[7].ENA
@@ -9669,16 +9645,16 @@ en => blue_xy_1_sva_dfm_4[3].ENA
 en => blue_xy_1_sva_dfm_4[2].ENA
 en => blue_xy_1_sva_dfm_4[1].ENA
 en => blue_xy_1_sva_dfm_4[0].ENA
-en => land_12_lpi_1_dfm_1.ENA
-en => land_14_lpi_1_dfm_1.ENA
-en => acc_10_0_sva_dfm_2[3].ENA
-en => acc_10_0_sva_dfm_2[2].ENA
-en => acc_10_0_sva_dfm_2[1].ENA
-en => acc_10_0_sva_dfm_2[0].ENA
-en => acc_10_1_sva_dfm_2[3].ENA
-en => acc_10_1_sva_dfm_2[2].ENA
-en => acc_10_1_sva_dfm_2[1].ENA
-en => acc_10_1_sva_dfm_2[0].ENA
+en => land_14_lpi_1_dfm_st_1.ENA
+en => land_12_lpi_1_dfm_st_1.ENA
+en => acc_12_0_sva_dfm_2[3].ENA
+en => acc_12_0_sva_dfm_2[2].ENA
+en => acc_12_0_sva_dfm_2[1].ENA
+en => acc_12_0_sva_dfm_2[0].ENA
+en => acc_12_1_sva_dfm_2[3].ENA
+en => acc_12_1_sva_dfm_2[2].ENA
+en => acc_12_1_sva_dfm_2[1].ENA
+en => acc_12_1_sva_dfm_2[0].ENA
 en => red_xy_0_sva_dfm_3[9].ENA
 en => red_xy_0_sva_dfm_3[8].ENA
 en => red_xy_0_sva_dfm_3[7].ENA
@@ -9723,6 +9699,33 @@ en => land_4_lpi_1_dfm_1.ENA
 en => land_2_lpi_1_dfm_1.ENA
 en => aif_17_slc_svs.ENA
 en => main_stage_0_2.ENA
+en => main_stage_0_3.ENA
+en => main_stage_0_4.ENA
+en => volume_current_slc_acc_idiv_7_itm_1.ENA
+en => volume_current_slc_acc_idiv_14_itm_1.ENA
+en => volume_current_slc_acc_idiv_5_itm_1.ENA
+en => volume_current_slc_acc_idiv_8_itm_1.ENA
+en => volume_current_slc_acc_idiv_itm_1[4].ENA
+en => volume_current_slc_acc_idiv_itm_1[3].ENA
+en => volume_current_slc_acc_idiv_itm_1[2].ENA
+en => volume_current_slc_acc_idiv_itm_1[1].ENA
+en => volume_current_slc_acc_idiv_itm_1[0].ENA
+en => volume_current_slc_acc_idiv_10_itm_1[2].ENA
+en => volume_current_slc_acc_idiv_10_itm_1[1].ENA
+en => volume_current_slc_acc_idiv_10_itm_1[0].ENA
+arst_n => volume_current_slc_acc_idiv_10_itm_1[0].ACLR
+arst_n => volume_current_slc_acc_idiv_10_itm_1[1].ACLR
+arst_n => volume_current_slc_acc_idiv_10_itm_1[2].ACLR
+arst_n => volume_current_slc_acc_idiv_itm_1[0].ACLR
+arst_n => volume_current_slc_acc_idiv_itm_1[1].ACLR
+arst_n => volume_current_slc_acc_idiv_itm_1[2].ACLR
+arst_n => volume_current_slc_acc_idiv_itm_1[3].ACLR
+arst_n => volume_current_slc_acc_idiv_itm_1[4].ACLR
+arst_n => volume_current_slc_acc_idiv_8_itm_1.ACLR
+arst_n => volume_current_slc_acc_idiv_5_itm_1.ACLR
+arst_n => volume_current_slc_acc_idiv_14_itm_1.ACLR
+arst_n => volume_current_slc_acc_idiv_7_itm_1.ACLR
+arst_n => main_stage_0_4.ACLR
 arst_n => main_stage_0_3.ACLR
 arst_n => main_stage_0_2.ACLR
 arst_n => aif_17_slc_svs.ACLR
@@ -9768,16 +9771,16 @@ arst_n => red_xy_0_sva_dfm_3[6].ACLR
 arst_n => red_xy_0_sva_dfm_3[7].ACLR
 arst_n => red_xy_0_sva_dfm_3[8].ACLR
 arst_n => red_xy_0_sva_dfm_3[9].ACLR
-arst_n => acc_10_1_sva_dfm_2[0].ACLR
-arst_n => acc_10_1_sva_dfm_2[1].ACLR
-arst_n => acc_10_1_sva_dfm_2[2].ACLR
-arst_n => acc_10_1_sva_dfm_2[3].ACLR
-arst_n => acc_10_0_sva_dfm_2[0].ACLR
-arst_n => acc_10_0_sva_dfm_2[1].ACLR
-arst_n => acc_10_0_sva_dfm_2[2].ACLR
-arst_n => acc_10_0_sva_dfm_2[3].ACLR
-arst_n => land_14_lpi_1_dfm_1.ACLR
-arst_n => land_12_lpi_1_dfm_1.ACLR
+arst_n => acc_12_1_sva_dfm_2[0].ACLR
+arst_n => acc_12_1_sva_dfm_2[1].ACLR
+arst_n => acc_12_1_sva_dfm_2[2].ACLR
+arst_n => acc_12_1_sva_dfm_2[3].ACLR
+arst_n => acc_12_0_sva_dfm_2[0].ACLR
+arst_n => acc_12_0_sva_dfm_2[1].ACLR
+arst_n => acc_12_0_sva_dfm_2[2].ACLR
+arst_n => acc_12_0_sva_dfm_2[3].ACLR
+arst_n => land_12_lpi_1_dfm_st_1.ACLR
+arst_n => land_14_lpi_1_dfm_st_1.ACLR
 arst_n => blue_xy_1_sva_dfm_4[0].ACLR
 arst_n => blue_xy_1_sva_dfm_4[1].ACLR
 arst_n => blue_xy_1_sva_dfm_4[2].ACLR
@@ -9798,6 +9801,26 @@ arst_n => red_xy_1_sva_dfm_4[6].ACLR
 arst_n => red_xy_1_sva_dfm_4[7].ACLR
 arst_n => red_xy_1_sva_dfm_4[8].ACLR
 arst_n => red_xy_1_sva_dfm_4[9].ACLR
+arst_n => volume_current_acc_10_itm_1[0].ACLR
+arst_n => volume_current_acc_10_itm_1[1].ACLR
+arst_n => volume_current_slc_acc_idiv_10_itm_2[0].ACLR
+arst_n => volume_current_slc_acc_idiv_10_itm_2[1].ACLR
+arst_n => volume_current_slc_acc_idiv_10_itm_2[2].ACLR
+arst_n => volume_current_acc_8_itm_1[0].ACLR
+arst_n => volume_current_acc_8_itm_1[1].ACLR
+arst_n => volume_current_acc_9_itm_1[0].ACLR
+arst_n => volume_current_acc_9_itm_1[1].ACLR
+arst_n => volume_current_slc_acc_idiv_12_itm_2.ACLR
+arst_n => land_13_lpi_1_dfm_1.ACLR
+arst_n => and_11_itm_1.ACLR
+arst_n => volume_previous_sva[0].ACLR
+arst_n => volume_previous_sva[1].ACLR
+arst_n => volume_previous_sva[2].ACLR
+arst_n => volume_previous_sva[3].ACLR
+arst_n => volume_rsc_mgc_out_stdreg_d[0]~reg0.ACLR
+arst_n => volume_rsc_mgc_out_stdreg_d[1]~reg0.ACLR
+arst_n => volume_rsc_mgc_out_stdreg_d[2]~reg0.ACLR
+arst_n => volume_rsc_mgc_out_stdreg_d[3]~reg0.ACLR
 arst_n => vout_rsc_mgc_out_stdreg_d[0]~reg0.ACLR
 arst_n => vout_rsc_mgc_out_stdreg_d[1]~reg0.ACLR
 arst_n => vout_rsc_mgc_out_stdreg_d[2]~reg0.ACLR
@@ -9858,6 +9881,10 @@ vout_rsc_mgc_out_stdreg_d[26] <= vout_rsc_mgc_out_stdreg_d[26]~reg0.DB_MAX_OUTPU
 vout_rsc_mgc_out_stdreg_d[27] <= vout_rsc_mgc_out_stdreg_d[27]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 vout_rsc_mgc_out_stdreg_d[28] <= vout_rsc_mgc_out_stdreg_d[28]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 vout_rsc_mgc_out_stdreg_d[29] <= vout_rsc_mgc_out_stdreg_d[29]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+volume_rsc_mgc_out_stdreg_d[0] <= volume_rsc_mgc_out_stdreg_d[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+volume_rsc_mgc_out_stdreg_d[1] <= volume_rsc_mgc_out_stdreg_d[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+volume_rsc_mgc_out_stdreg_d[2] <= volume_rsc_mgc_out_stdreg_d[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+volume_rsc_mgc_out_stdreg_d[3] <= volume_rsc_mgc_out_stdreg_d[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TOP_DE0_CAMERA_MOUSE|altshift_taps:fifo_inst2

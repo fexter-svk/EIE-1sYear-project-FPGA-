@@ -68,8 +68,8 @@ applicable agreement for further details.
 	(port
 		(pt 232 48)
 		(output)
-		(text "volume_rsc_z[7..0]" (rect 0 0 77 12)(font "Arial" ))
-		(text "volume_rsc_z[7..0]" (rect 134 43 211 55)(font "Arial" ))
+		(text "volume_rsc_z[3..0]" (rect 0 0 77 12)(font "Arial" ))
+		(text "volume_rsc_z[3..0]" (rect 134 43 211 55)(font "Arial" ))
 		(line (pt 232 48)(pt 216 48)(line_width 3))
 	)
 	(drawing
