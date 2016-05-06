@@ -90,7 +90,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 1480 88 1648 104)
+	(rect 1584 64 1752 80)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "ADC_SDO" (rect 5 0 58 12)(font "Arial" ))
 	(pt 168 8)
@@ -103,7 +103,7 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 1424 104 1480 120))
+	(annotation_block (location)(rect 1528 80 1584 96))
 )
 (pin
 	(output)
@@ -1093,7 +1093,7 @@ applicable agreement for further details.
 (symbol
 	(rect 1464 696 1696 840)
 	(text "markers" (rect 5 0 45 12)(font "Arial" ))
-	(text "inst5" (rect 8 128 31 140)(font "Arial" ))
+	(text "inst12" (rect 8 128 37 140)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -1422,11 +1422,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "SW[9]" (rect 1568 24 1598 36)(font "Arial" ))
-	(pt 1776 40)
-	(pt 1528 40)
-)
-(connector
 	(pt 1768 24)
 	(pt 1768 8)
 )
@@ -1449,24 +1444,6 @@ applicable agreement for further details.
 (connector
 	(pt 1768 8)
 	(pt 1568 8)
-)
-(connector
-	(pt 1768 72)
-	(pt 1768 96)
-)
-(connector
-	(pt 1776 72)
-	(pt 1768 72)
-)
-(connector
-	(pt 1768 96)
-	(pt 1648 96)
-)
-(connector
-	(text "volume[7..0]" (rect 1546 40 1608 52)(font "Arial" ))
-	(pt 1776 56)
-	(pt 1536 56)
-	(bus)
 )
 (connector
 	(pt 1288 792)
@@ -1560,6 +1537,21 @@ applicable agreement for further details.
 	(text "CLOCK_50" (rect 290 -56 345 -44)(font "Arial" ))
 	(pt 288 -40)
 	(pt 408 -40)
+)
+(connector
+	(text "volume[7..0]" (rect 1650 40 1712 52)(font "Arial" ))
+	(pt 1648 56)
+	(pt 1776 56)
+	(bus)
+)
+(connector
+	(text "SW[9]" (rect 1656 16 1686 28)(font "Arial" ))
+	(pt 1648 40)
+	(pt 1776 40)
+)
+(connector
+	(pt 1776 72)
+	(pt 1752 72)
 )
 (junction (pt 736 -80))
 (text "MEMORY" (rect 1464 192 1517 206)(font "Arial" (font_size 8)))

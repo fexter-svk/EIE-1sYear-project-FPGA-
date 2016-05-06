@@ -45,7 +45,7 @@
 #include "shift_class.h" 
 
 
-static ac_int<8, false> volume_memory[1] = {0};
+static ac_int<8, false> volume_previous[1] = {0};
 static ac_int<4,false> acc[2];
 static ac_int<10, false> red_xy[2];
 static ac_int<10, false> blue_xy[2];
@@ -64,18 +64,22 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     ac_int<1, false> detected;
     ac_int<3, false> counter;
     
-    // extract VGA pixel X-Y coordinates  
+    // extract VGA pixel X-Y coordinates from input
     vga_x = (vga_xy).slc<COORD_WL>(0);
     vga_y = (vga_xy).slc<COORD_WL>(10);
 
+    //Extract the colour from the input 
     red = (vin[0].slc<COLOUR_WL>(2*COLOUR_WL));
     green = vin[0].slc<COLOUR_WL>(1*COLOUR_WL);
     blue = vin[0].slc<COLOUR_WL>(0*COLOUR_WL);
-    // 
+    
+    // Reset of the valid accumulators acc[0] for RED acc[1] for BLUE reset every 15 pixels
     if ((vga_x % 15) == 0){
         acc[0] = 0; 
         acc[1] = 0;
     }
+    
+    // Reset of the CURRENT x,y coordinates for BLUE and RED pixels
     if ((vga_y == 0) && (vga_x == 0)) {
         red_xy[0] = 0;
         red_xy[1] = 0;
@@ -84,12 +88,14 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     }
     
     //RED marker (left hand)
-    if ((((180*4)<=red) && (red<=255)) && ((0<=green) && (green<=(4*100))) && ((0<=blue) && (0<=(4*100)))){
+    if ((((160*4)<=red) && (red<=4*255)) && ((0<=green) && (green<=(4*120))) && ((0<=blue) && (0<=(4*120)))){
         acc[0]++; //RED
     } 
-    if (((0<=red) && (red<=(4*90))) && ((0<=green) && (green<=(4*90))) && (((4*110)<=blue) && (blue<=(4*255)))){
+    //BLUE marker (right hand)
+    if (((0<=red) && (red<=(4*90))) && ((0<=green) && (green<=(4*90))) && (((4*90)<=blue) && (blue<=(4*255)))){
         acc[1]++; //BLUE
     }
+    //If 4 familiar pixels, probably the right point, assign it to corrent x,y coordinates 
     if (acc[0] > 4){
         if ((red_xy[0]==0) && (red_xy[1]==0)) {
             red_xy[0] = vga_x;
@@ -102,7 +108,8 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
             blue_xy[1] = vga_y;
         }
     }
-    // RED marker previous value initialisation  
+    
+    // RED marker previous value initialisation  - only during the SETUP phase
     if ((red_xy_previous[0]==0) && (red_xy[0]!=0)) {
         red_xy_previous[0] = red_xy[0];
         red_xy_previous[1] = red_xy[1];
@@ -113,8 +120,10 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     int deltay_red = (red_xy[1] - red_xy_previous[1]);
     
     if (((deltay_red>-10) && (deltay_red<10))||((deltax_red<10) &&(deltax_red>-10))) {
+       // if (!(((deltay_red>-5) && (deltay_red<5))||((deltax_red<5) &&(deltax_red>-5)))){
         red_xy_previous[0] = red_xy[0];
         red_xy_previous[1] = red_xy[1];
+       // }
     }
     //RED
     //Calculate the coordinates for the square
@@ -125,7 +134,7 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     //
     //
     //
-    //BLUE marker previous value initialisation 
+    //BLUE marker previous value initialisation - only during the SETUP phase
     if ((blue_xy_previous[0]==0) && (blue_xy[0]!=0)) {
         blue_xy_previous[0] = blue_xy[0];
         blue_xy_previous[1] = blue_xy[1];
@@ -137,17 +146,21 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     
     //BLUE
     //Calculate the coordinates for the square
-    if (((deltay_blue>-10) && (deltay_blue<10))||((deltax_blue<10) &&(deltax_blue>-10))) {
-        blue_xy_previous[0] = blue_xy[0];
-        blue_xy_previous[1] = blue_xy[1];
+    if (((deltay_blue>-10) && (deltay_blue<10))||((deltax_blue<10) &&(deltax_blue>-10))){
+       // if (!(((deltay_blue>-5) && (deltay_blue<5))||((deltax_blue<5) &&(deltax_blue>-5)))){
+            blue_xy_previous[0] = blue_xy[0];
+            blue_xy_previous[1] = blue_xy[1];
+       // }
     }
     int deltax_square_blue = vga_x - blue_xy_previous[0];
     int deltay_square_blue = vga_y - blue_xy_previous[1];
     
+    //Make all the other pixels black
     red_out = 0;
     green_out = 0;
     blue_out = 0;
     
+    //Draw both the RED and BLUE squares
     if (((deltax_square_red >= 0)&&(deltax_square_red <= 40)) && ((deltay_square_red >= 0) &&(deltay_square_red <= 40))){
         red_out = 1023;
         green_out = 0;
@@ -160,10 +173,12 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     } 
     
     //adjustment of the volume
-    int xy_level = (red_xy_previous[1] + blue_xy_previous[1])-1280;
-    xy_level = int((-1*xy_level) / 256);
-    volume_memory[0] = xy_level;
-    *volume = volume_memory[0]; 
+    int volume_current = (red_xy_previous[1] + blue_xy_previous[1])-960;
+    volume_current = int((-1*volume_current) / 256);
+    if ((((volume_current-volume_previous[0])>=-1) &&((volume_current-volume_previous[0])<=1)) && (volume_current>=0)){
+        volume_previous[0] = volume_current;
+    }
+    *volume = volume_previous[0]; 
 	    
     // group the RGB components into a single signal
 	vout[0] = ((((ac_int<PIXEL_WL, false>)red_out) << (2*COLOUR_WL)) | (((ac_int<PIXEL_WL, false>)green_out) << COLOUR_WL) | (ac_int<PIXEL_WL, false>)blue_out);
