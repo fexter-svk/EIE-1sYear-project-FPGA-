@@ -12,7 +12,7 @@ module processor (sysclk, data_in, data_valid, data_out,volume);
 	input [9:0]		data_in;		// 10-bit input data
 	input 			data_valid;
 	output [9:0] 	data_out;	// 10-bit output data
-	input [7:0]    volume;
+	input [3:0]    volume;
 	wire				sysclk;
 	wire [9:0]		data_in;
 	reg [9:0] 		data_out;
@@ -52,9 +52,9 @@ module processor (sysclk, data_in, data_valid, data_out,volume);
 	
 	//assign y = x - att_q;
 	
-	assign y = (x * volume) - att_q;
-	
-	
+	//assign y = (x * volume) - att_q;
+	//assign y = x - att_q;
+	assign y = (x - att_q) * volume;
 	
 
 	//  Now clock y output with system clock

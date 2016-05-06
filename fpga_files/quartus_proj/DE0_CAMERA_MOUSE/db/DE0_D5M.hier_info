@@ -8420,14 +8420,14 @@ data_out[6] <= data_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[7] <= data_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[8] <= data_out[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[9] <= data_out[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-volume[0] => Mult0.IN7
-volume[1] => Mult0.IN6
-volume[2] => Mult0.IN5
-volume[3] => Mult0.IN4
-volume[4] => Mult0.IN3
-volume[5] => Mult0.IN2
-volume[6] => Mult0.IN1
-volume[7] => Mult0.IN0
+volume[0] => Mult0.IN17
+volume[1] => Mult0.IN16
+volume[2] => Mult0.IN15
+volume[3] => Mult0.IN14
+volume[4] => Mult0.IN13
+volume[5] => Mult0.IN12
+volume[6] => Mult0.IN11
+volume[7] => Mult0.IN10
 
 
 |TOP_DE0_CAMERA_MOUSE|top:inst3|processor:DUMMY|pulse_gen:pulse_gen

@@ -45,7 +45,7 @@
 #include "shift_class.h" 
 
 
-static ac_int<8, false> volume_previous[1] = {0};
+static ac_int<4, false> volume_previous[1] = {0};
 static ac_int<4,false> acc[2];
 static ac_int<10, false> red_xy[2];
 static ac_int<10, false> blue_xy[2];
@@ -56,7 +56,7 @@ static ac_int<10, false> red_xy_previous[2] = {0,0};
 static ac_int<10, false> blue_xy_previous[2] = {0,0};
 
 #pragma hls_design top
-void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS], ac_int<(COORD_WL+COORD_WL), false> vga_xy, ac_int<8,false> * volume)
+void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS], ac_int<(COORD_WL+COORD_WL), false> vga_xy, ac_int<4,false> * volume)
 {
     ac_int<10, false> red_out, green_out, blue_out;
     ac_int<10, false> red, green, blue;

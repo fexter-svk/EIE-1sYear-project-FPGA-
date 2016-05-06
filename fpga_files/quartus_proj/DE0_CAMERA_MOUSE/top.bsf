@@ -40,8 +40,8 @@ applicable agreement for further details.
 	(port
 		(pt 0 64)
 		(input)
-		(text "volume[7..0]" (rect 0 0 49 12)(font "Arial" ))
-		(text "volume[7..0]" (rect 21 59 70 71)(font "Arial" ))
+		(text "volume[3..0]" (rect 0 0 49 12)(font "Arial" ))
+		(text "volume[3..0]" (rect 21 59 70 71)(font "Arial" ))
 		(line (pt 0 64)(pt 16 64)(line_width 3))
 	)
 	(port

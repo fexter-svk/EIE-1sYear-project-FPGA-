@@ -30,7 +30,7 @@ module top (CLOCK_50, SW, HEX0_D, HEX1_D, HEX2_D, volume,
 	wire			data_valid;
 	wire			DAC_SCK, ADC_SCK, SCK;
 	
-	input [7:0]		   volume;
+	input [3:0]		   volume;
 	
 	clk_div  GEN_10K (CLOCK_50, 21'd2499, clk_10k);  	// generate 10KHz sampling clock
 	pulse_gen  PULSE (ld_pulse, clk_10k, CLOCK_50);		// generate a convert pulse
@@ -53,9 +53,9 @@ module top (CLOCK_50, SW, HEX0_D, HEX1_D, HEX2_D, volume,
 	
 	assign SCK = DAC_SCK | ADC_SCK;							// merge the two serial clocks
 	
-	hex_to_7seg SEG0 (HEX0_D, data_in[3:0]);				// display the converted value
-	hex_to_7seg SEG1 (HEX1_D, data_in[7:4]);
-	hex_to_7seg SEG2 (HEX2_D, {2'b0,data_in[9:8]});
+	hex_to_7seg SEG0 (HEX0_D, volume[3:0]);				// display the converted value
+	//hex_to_7seg SEG1 (HEX1_D, data_in[7:4]);
+	//hex_to_7seg SEG2 (HEX2_D, {2'b0,data_in[9:8]});
 		
 endmodule
 
