@@ -1,0 +1,181 @@
+//  Catapult University Version 2011a.126 (Production Release) Wed Aug  8 00:52:07 PDT 2012
+//  
+//  Copyright (c) Calypto Design Systems, Inc., 1996-2012, All Rights Reserved.
+//                       UNPUBLISHED, LICENSED SOFTWARE.
+//            CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//          PROPERTY OF CALYPTO DESIGN SYSTEMS OR ITS LICENSORS
+//  
+//  Running on Windows 7 gsp14@EEWS305-036 Service Pack 1 6.01.7601 i686
+//  
+//  Package information: SIFLIBS v17.0_1.1, HLS_PKGS v17.0_1.1, 
+//                       DesignPad v2.78_0.0
+//  
+//  This version may only be used for academic purposes.  Some optimizations 
+//  are disabled, so results obtained from this version may be sub-optimal.
+//  
+//  Start time Sat May 07 13:32:11 2016
+# -------------------------------------------------
+# Logging session transcript to file "C:\Users\gsp14\AppData\Local\Temp\log740424ddc74.0"
+# Loading options from registry.
+# Warning: set_working_dir: Directory 'C:/Windows/System32' not writable, using C:/Users/gsp14/AppData/Local/Temp
+project load C:/workspace/EIE-1styear-project-FPGA/prj2/catapult_proj/sobel_filterv2/sobel_filter.ccs
+# Moving session transcript to file "C:\workspace\EIE-1styear-project-FPGA\prj2\catapult_proj\sobel_filterv2\catapult.log"
+# Reading component library '$MGC_HOME\pkgs\siflibs\mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+# Reading component library '$MGC_HOME\pkgs\siflibs\stdops.lib' [STDOPS]... (LIB-49)
+# Reading component library '$MGC_HOME\pkgs\siflibs\mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+# Reading component library '$MGC_HOME\pkgs\ccs_altera\Altera_accel_CycloneIII.lib' [Altera_accel_CycloneIII]... (LIB-49)
+# Reading component library '$MGC_HOME\pkgs\siflibs\psr2010a_up2\mgc_Altera-Cyclone-III-6_beh_psr.lib' [mgc_Altera-Cyclone-III-6_beh_psr]... (LIB-49)
+go compile
+directive set /sobel_filter/vin:rsc -MAP_TO_MODULE {[DirectInput]}
+# Info: Branching solution 'sobel_filter.v3' at state 'compile' (PRJ-2)
+# /sobel_filter/vin:rsc/MAP_TO_MODULE {[DirectInput]}
+directive set /sobel_filter/vga_xy:rsc -MAP_TO_MODULE {[DirectInput]}
+# /sobel_filter/vga_xy:rsc/MAP_TO_MODULE {[DirectInput]}
+go extract
+# Info: Starting transformation 'architect' on solution 'sobel_filter.v3' (SOL-8)
+# $PROJECT_HOME/../sobel_filter_sourcev2/shift_class_sob.h(34): Loop '/sobel_filter/core/SHIFT' is being fully unrolled (3 times). (LOOP-7)
+# $PROJECT_HOME/../sobel_filter_sourcev2/blur_sob.c(97): Loop '/sobel_filter/core/ACC1' is being fully unrolled (3 times). (LOOP-7)
+# $PROJECT_HOME/../sobel_filter_sourcev2/blur_sob.c(120): Loop '/sobel_filter/core/MAC2' is being fully unrolled (3 times). (LOOP-7)
+# Info: Optimizing partition '/sobel_filter/core': (Total ops = 938, Real ops = 202, Vars = 24) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/core': (Total ops = 861, Real ops = 165, Vars = 42) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/core': (Total ops = 871, Real ops = 165, Vars = 41) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/core': (Total ops = 859, Real ops = 164, Vars = 40) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/core': (Total ops = 859, Real ops = 164, Vars = 40) (SOL-10)
+# $PROJECT_HOME/../sobel_filter_sourcev2/blur_sob.c(119): Loop '/sobel_filter/core/ACC3' is being fully unrolled (3 times). (LOOP-7)
+# Info: Optimizing partition '/sobel_filter/core': (Total ops = 937, Real ops = 190, Vars = 40) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/core': (Total ops = 841, Real ops = 159, Vars = 34) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/core': (Total ops = 841, Real ops = 159, Vars = 34) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/core': (Total ops = 769, Real ops = 143, Vars = 34) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/core': (Total ops = 745, Real ops = 143, Vars = 34) (SOL-10)
+# $PROJECT_HOME/../sobel_filter_sourcev2/blur_sob.c(70): Loop '/sobel_filter/core/main' is left rolled. (LOOP-4)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 745, Real ops = 143, Vars = 40) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/core': (Total ops = 745, Real ops = 143, Vars = 34) (SOL-10)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 745, Real ops = 143, Vars = 40) (SOL-10)
+# $PROJECT_HOME/../sobel_filter_sourcev2/blur_sob.c(70): I/O-Port inferred - resource 'vout:rsc' (from var: vout) mapped to 'mgc_ioport.mgc_out_stdreg' (size: 30). (MEM-2)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 746, Real ops = 143, Vars = 40) (SOL-10)
+# Warning: $PROJECT_HOME/../sobel_filter_sourcev2/blur_sob.c(70): Input port 'vga_xy' is never used. (OPT-4)
+# Info: Optimizing partition '/sobel_filter/core': (Total ops = 746, Real ops = 143, Vars = 34) (SOL-10)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 748, Real ops = 143, Vars = 50) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/core': (Total ops = 744, Real ops = 143, Vars = 48) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/core': (Total ops = 745, Real ops = 191, Vars = 36) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/core': (Total ops = 743, Real ops = 191, Vars = 37) (SOL-10)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 743, Real ops = 191, Vars = 43) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/core': (Total ops = 742, Real ops = 191, Vars = 42) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/core': (Total ops = 742, Real ops = 191, Vars = 39) (SOL-10)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 742, Real ops = 191, Vars = 45) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/core': (Total ops = 742, Real ops = 191, Vars = 39) (SOL-10)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 742, Real ops = 191, Vars = 45) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/core': (Total ops = 1037, Real ops = 198, Vars = 212) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/core': (Total ops = 741, Real ops = 195, Vars = 38) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/core': (Total ops = 741, Real ops = 195, Vars = 37) (SOL-10)
+# Design 'sobel_filter' contains '365' real operations. (SOL-11)
+# Info: Completed transformation 'architect' on solution 'sobel_filter.v3': elapsed time 6.46 seconds, memory usage 168588kB, peak memory usage 180916kB (SOL-9)
+# Info: Starting transformation 'allocate' on solution 'sobel_filter.v3' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/sobel_filter/core' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $PROJECT_HOME/../sobel_filter_sourcev2/blur_sob.c(70): Prescheduled LOOP 'main' (3 c-steps) (SCHD-7)
+# $PROJECT_HOME/../sobel_filter_sourcev2/blur_sob.c(70): Prescheduled LOOP 'core:rlp' (0 c-steps) (SCHD-7)
+# $PROJECT_HOME/../sobel_filter_sourcev2/blur_sob.c(70): Prescheduled SEQUENTIAL 'core' (total length 3 c-steps) (SCHD-8)
+# Info: Initial schedule of SEQUENTIAL 'core': Latency = 2, Area (Datapath, Register, Total) = 4716.42, 0.00, 4716.42 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Info: Optimized LOOP 'main': Latency = 2, Area (Datapath, Register, Total) = 4647.13, 0.00, 4647.13 (CRAAS-10)
+# Info: Final schedule of SEQUENTIAL 'core': Latency = 2, Area (Datapath, Register, Total) = 4647.13, 0.00, 4647.13 (CRAAS-12)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Completed transformation 'allocate' on solution 'sobel_filter.v3': elapsed time 2.01 seconds, memory usage 170376kB, peak memory usage 180916kB (SOL-9)
+# Info: Starting transformation 'schedule' on solution 'sobel_filter.v3' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/sobel_filter/core' (CRAAS-1)
+# Warning: Cannot build distributed pipeline in process 'core' because of missing handshake for resource 'vout:rsc' (SCHD-15)
+# Global signal 'vout:rsc.z' added to design 'sobel_filter' for component 'vout:rsc:mgc_out_stdreg' (LIB-3)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 1189, Real ops = 366, Vars = 78) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core': (Total ops = 1181, Real ops = 365, Vars = 70) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core/core': (Total ops = 1176, Real ops = 365, Vars = 65) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core/core': (Total ops = 997, Real ops = 277, Vars = 50) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core/core': (Total ops = 986, Real ops = 276, Vars = 44) (SOL-10)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 998, Real ops = 276, Vars = 56) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core': (Total ops = 991, Real ops = 276, Vars = 49) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core/core': (Total ops = 985, Real ops = 276, Vars = 47) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core/core': (Total ops = 984, Real ops = 276, Vars = 45) (SOL-10)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 996, Real ops = 276, Vars = 57) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core': (Total ops = 989, Real ops = 276, Vars = 50) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core/core': (Total ops = 984, Real ops = 276, Vars = 45) (SOL-10)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 996, Real ops = 276, Vars = 57) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core': (Total ops = 989, Real ops = 276, Vars = 50) (SOL-10)
+# Report written to file 'cycle.rpt'
+# Netlist written to file 'cycle.v' (NET-4)
+# Info: Completed transformation 'schedule' on solution 'sobel_filter.v3': elapsed time 3.23 seconds, memory usage 183456kB, peak memory usage 200776kB (SOL-9)
+# Info: Starting transformation 'dpfsm' on solution 'sobel_filter.v3' (SOL-8)
+# Performing FSM extraction... (FSM-1)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 1240, Real ops = 270, Vars = 794) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core': (Total ops = 1233, Real ops = 270, Vars = 787) (SOL-10)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 1796, Real ops = 287, Vars = 55) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core': (Total ops = 1789, Real ops = 287, Vars = 48) (SOL-10)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 988, Real ops = 283, Vars = 55) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core': (Total ops = 981, Real ops = 283, Vars = 48) (SOL-10)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 988, Real ops = 283, Vars = 55) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core': (Total ops = 981, Real ops = 283, Vars = 48) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core': (Total ops = 981, Real ops = 283, Vars = 48) (SOL-10)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 988, Real ops = 283, Vars = 55) (SOL-10)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 988, Real ops = 283, Vars = 55) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core': (Total ops = 981, Real ops = 283, Vars = 48) (SOL-10)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 988, Real ops = 283, Vars = 55) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core': (Total ops = 981, Real ops = 283, Vars = 48) (SOL-10)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 988, Real ops = 283, Vars = 55) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core': (Total ops = 981, Real ops = 283, Vars = 48) (SOL-10)
+# Info: Completed transformation 'dpfsm' on solution 'sobel_filter.v3': elapsed time 1.25 seconds, memory usage 183456kB, peak memory usage 200776kB (SOL-9)
+# Info: Starting transformation 'extract' on solution 'sobel_filter.v3' (SOL-8)
+# Warning: Reassigned operation MAC2:acc#86:DEFAULT to mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(12,1,12,1,13) (ASG-1)
+# Warning: Reassigned operation MAC2:acc#83:DEFAULT to mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(9,0,8,1,9) (ASG-1)
+# Warning: Reassigned operation MAC2:acc#88:DEFAULT to mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(9,1,9,1,10) (ASG-1)
+# Warning: Reassigned operation ACC1:acc#182:DEFAULT to mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(12,0,11,1,12) (ASG-1)
+# Warning: Reassigned operation ACC1-1:acc#15:mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(11,0,10,1,12) to mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(10,0,10,1,12) (ASG-1)
+# Warning: Reassigned operation ACC1-1:acc#18:mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(11,0,10,1,12) to mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(10,0,10,1,12) (ASG-1)
+# Warning: Reassigned operation ACC1-3:acc#18:mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(11,0,10,1,12) to mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(10,0,10,1,12) (ASG-1)
+# Warning: Reassigned operation ACC1-3:acc#15:mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(11,0,10,1,12) to mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(10,0,10,1,12) (ASG-1)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 1106, Real ops = 318, Vars = 1105) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core': (Total ops = 1099, Real ops = 318, Vars = 1098) (SOL-10)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 1080, Real ops = 313, Vars = 59) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core': (Total ops = 1073, Real ops = 313, Vars = 52) (SOL-10)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 1080, Real ops = 313, Vars = 55) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core': (Total ops = 1073, Real ops = 313, Vars = 48) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core': (Total ops = 1073, Real ops = 313, Vars = 48) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core': (Total ops = 1073, Real ops = 313, Vars = 48) (SOL-10)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 1080, Real ops = 313, Vars = 55) (SOL-10)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 1080, Real ops = 313, Vars = 55) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core': (Total ops = 1073, Real ops = 313, Vars = 48) (SOL-10)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 1080, Real ops = 313, Vars = 55) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core': (Total ops = 1073, Real ops = 313, Vars = 48) (SOL-10)
+# Warning: Reassigned operation ACC1:acc#182:mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(12,0,11,1,12) to mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(11,1,11,1,12) (ASG-1)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 1094, Real ops = 318, Vars = 1093) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core': (Total ops = 1087, Real ops = 318, Vars = 1086) (SOL-10)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 1094, Real ops = 318, Vars = 1093) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core': (Total ops = 1087, Real ops = 318, Vars = 1086) (SOL-10)
+# Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 1094, Real ops = 318, Vars = 1093) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core': (Total ops = 1087, Real ops = 318, Vars = 1086) (SOL-10)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 1081, Real ops = 314, Vars = 59) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core': (Total ops = 1074, Real ops = 314, Vars = 52) (SOL-10)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 1081, Real ops = 314, Vars = 55) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core': (Total ops = 1074, Real ops = 314, Vars = 48) (SOL-10)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 1081, Real ops = 314, Vars = 55) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core': (Total ops = 1074, Real ops = 314, Vars = 48) (SOL-10)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 1081, Real ops = 314, Vars = 55) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core': (Total ops = 1074, Real ops = 314, Vars = 48) (SOL-10)
+# Info: Optimizing partition '/sobel_filter': (Total ops = 1081, Real ops = 314, Vars = 55) (SOL-10)
+# Info: Optimizing partition '/sobel_filter/sobel_filter:core': (Total ops = 1074, Real ops = 314, Vars = 48) (SOL-10)
+# Report written to file 'rtl.rpt'
+# Netlist written to file 'rtl.v' (NET-4)
+# generate concat
+# order file name is: rtl.v_order.txt
+# Add dependent file: ./rtl_mgc_ioport.v
+# Add dependent file: ./rtl_mgc_ioport_v2001.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated file: C:/workspace/EIE-1styear-project-FPGA/prj2/catapult_proj/sobel_filterv2/sobel_filter/sobel_filter.v3/concat_rtl.v
+# Synthesis timing script written to file './rtl.v.psr_timing'
+# IO timing constraints written to synthesis script file
+# Synthesis script written to file 'rtl.v.psr'
+# Info: Completed transformation 'extract' on solution 'sobel_filter.v3': elapsed time 5.62 seconds, memory usage 184892kB, peak memory usage 200776kB (SOL-9)
+project save
+# Saving project file 'C:/workspace/EIE-1styear-project-FPGA/prj2/catapult_proj/sobel_filterv2/sobel_filter.ccs'. (PRJ-5)
+quit -f

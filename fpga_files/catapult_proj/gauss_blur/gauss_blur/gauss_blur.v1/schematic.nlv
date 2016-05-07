@@ -1,0 +1,179 @@
+
+# Program: Catapult University Version
+# Version: 2011a.126
+#    File: Nlview netlist
+
+module new "gauss_blur:core" "orig"
+load port {clk} input -attr xrf 890 -attr oid 1 -attr vt d -attr @path {/gauss_blur/gauss_blur:core/clk}
+load port {en} input -attr xrf 891 -attr oid 2 -attr vt d -attr @path {/gauss_blur/gauss_blur:core/en}
+load port {arst_n} input -attr xrf 892 -attr oid 3 -attr vt d -attr @path {/gauss_blur/gauss_blur:core/arst_n}
+load net {clk} -attr xrf 893 -attr oid 4
+load net {clk} -port {clk} -attr xrf 894 -attr oid 5
+load net {en} -attr xrf 895 -attr oid 6
+load net {en} -port {en} -attr xrf 896 -attr oid 7
+load net {arst_n} -attr xrf 897 -attr oid 8
+load net {arst_n} -port {arst_n} -attr xrf 898 -attr oid 9
+### END MODULE 
+
+module new "gauss_blur" "orig"
+load portBus {vout:rsc.z(29:0)} output 30 {vout:rsc.z(29)} {vout:rsc.z(28)} {vout:rsc.z(27)} {vout:rsc.z(26)} {vout:rsc.z(25)} {vout:rsc.z(24)} {vout:rsc.z(23)} {vout:rsc.z(22)} {vout:rsc.z(21)} {vout:rsc.z(20)} {vout:rsc.z(19)} {vout:rsc.z(18)} {vout:rsc.z(17)} {vout:rsc.z(16)} {vout:rsc.z(15)} {vout:rsc.z(14)} {vout:rsc.z(13)} {vout:rsc.z(12)} {vout:rsc.z(11)} {vout:rsc.z(10)} {vout:rsc.z(9)} {vout:rsc.z(8)} {vout:rsc.z(7)} {vout:rsc.z(6)} {vout:rsc.z(5)} {vout:rsc.z(4)} {vout:rsc.z(3)} {vout:rsc.z(2)} {vout:rsc.z(1)} {vout:rsc.z(0)} -attr xrf 899 -attr oid 10 -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load portBus {volume:rsc.z(3:0)} output 4 {volume:rsc.z(3)} {volume:rsc.z(2)} {volume:rsc.z(1)} {volume:rsc.z(0)} -attr xrf 900 -attr oid 11 -attr vt d -attr @path {/gauss_blur/volume:rsc.z}
+load port {clk} input -attr xrf 901 -attr oid 12 -attr vt d -attr @path {/gauss_blur/clk}
+load port {en} input -attr xrf 902 -attr oid 13 -attr vt d -attr @path {/gauss_blur/en}
+load port {arst_n} input -attr xrf 903 -attr oid 14 -attr vt d -attr @path {/gauss_blur/arst_n}
+load symbol "mgc_ioport.mgc_out_stdreg(2,30)" "INTERFACE" GEN boxcolor 0 \
+     portBus {d(29:0)} input 30 {d(29)} {d(28)} {d(27)} {d(26)} {d(25)} {d(24)} {d(23)} {d(22)} {d(21)} {d(20)} {d(19)} {d(18)} {d(17)} {d(16)} {d(15)} {d(14)} {d(13)} {d(12)} {d(11)} {d(10)} {d(9)} {d(8)} {d(7)} {d(6)} {d(5)} {d(4)} {d(3)} {d(2)} {d(1)} {d(0)} \
+     portBus {z(29:0)} output 30 {z(29)} {z(28)} {z(27)} {z(26)} {z(25)} {z(24)} {z(23)} {z(22)} {z(21)} {z(20)} {z(19)} {z(18)} {z(17)} {z(16)} {z(15)} {z(14)} {z(13)} {z(12)} {z(11)} {z(10)} {z(9)} {z(8)} {z(7)} {z(6)} {z(5)} {z(4)} {z(3)} {z(2)} {z(1)} {z(0)} \
+
+load symbol "mgc_ioport.mgc_out_stdreg(4,4)" "INTERFACE" GEN boxcolor 0 \
+     portBus {d(3:0)} input 4 {d(3)} {d(2)} {d(1)} {d(0)} \
+     portBus {z(3:0)} output 4 {z(3)} {z(2)} {z(1)} {z(0)} \
+
+load net {vout:rsc.z(0)} -attr vt d
+load net {vout:rsc.z(1)} -attr vt d
+load net {vout:rsc.z(2)} -attr vt d
+load net {vout:rsc.z(3)} -attr vt d
+load net {vout:rsc.z(4)} -attr vt d
+load net {vout:rsc.z(5)} -attr vt d
+load net {vout:rsc.z(6)} -attr vt d
+load net {vout:rsc.z(7)} -attr vt d
+load net {vout:rsc.z(8)} -attr vt d
+load net {vout:rsc.z(9)} -attr vt d
+load net {vout:rsc.z(10)} -attr vt d
+load net {vout:rsc.z(11)} -attr vt d
+load net {vout:rsc.z(12)} -attr vt d
+load net {vout:rsc.z(13)} -attr vt d
+load net {vout:rsc.z(14)} -attr vt d
+load net {vout:rsc.z(15)} -attr vt d
+load net {vout:rsc.z(16)} -attr vt d
+load net {vout:rsc.z(17)} -attr vt d
+load net {vout:rsc.z(18)} -attr vt d
+load net {vout:rsc.z(19)} -attr vt d
+load net {vout:rsc.z(20)} -attr vt d
+load net {vout:rsc.z(21)} -attr vt d
+load net {vout:rsc.z(22)} -attr vt d
+load net {vout:rsc.z(23)} -attr vt d
+load net {vout:rsc.z(24)} -attr vt d
+load net {vout:rsc.z(25)} -attr vt d
+load net {vout:rsc.z(26)} -attr vt d
+load net {vout:rsc.z(27)} -attr vt d
+load net {vout:rsc.z(28)} -attr vt d
+load net {vout:rsc.z(29)} -attr vt d
+load netBundle {vout:rsc.z} 30 {vout:rsc.z(0)} {vout:rsc.z(1)} {vout:rsc.z(2)} {vout:rsc.z(3)} {vout:rsc.z(4)} {vout:rsc.z(5)} {vout:rsc.z(6)} {vout:rsc.z(7)} {vout:rsc.z(8)} {vout:rsc.z(9)} {vout:rsc.z(10)} {vout:rsc.z(11)} {vout:rsc.z(12)} {vout:rsc.z(13)} {vout:rsc.z(14)} {vout:rsc.z(15)} {vout:rsc.z(16)} {vout:rsc.z(17)} {vout:rsc.z(18)} {vout:rsc.z(19)} {vout:rsc.z(20)} {vout:rsc.z(21)} {vout:rsc.z(22)} {vout:rsc.z(23)} {vout:rsc.z(24)} {vout:rsc.z(25)} {vout:rsc.z(26)} {vout:rsc.z(27)} {vout:rsc.z(28)} {vout:rsc.z(29)} -attr xrf 904 -attr oid 15 -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(0)} -port {vout:rsc.z(0)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(1)} -port {vout:rsc.z(1)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(2)} -port {vout:rsc.z(2)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(3)} -port {vout:rsc.z(3)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(4)} -port {vout:rsc.z(4)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(5)} -port {vout:rsc.z(5)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(6)} -port {vout:rsc.z(6)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(7)} -port {vout:rsc.z(7)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(8)} -port {vout:rsc.z(8)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(9)} -port {vout:rsc.z(9)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(10)} -port {vout:rsc.z(10)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(11)} -port {vout:rsc.z(11)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(12)} -port {vout:rsc.z(12)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(13)} -port {vout:rsc.z(13)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(14)} -port {vout:rsc.z(14)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(15)} -port {vout:rsc.z(15)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(16)} -port {vout:rsc.z(16)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(17)} -port {vout:rsc.z(17)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(18)} -port {vout:rsc.z(18)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(19)} -port {vout:rsc.z(19)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(20)} -port {vout:rsc.z(20)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(21)} -port {vout:rsc.z(21)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(22)} -port {vout:rsc.z(22)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(23)} -port {vout:rsc.z(23)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(24)} -port {vout:rsc.z(24)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(25)} -port {vout:rsc.z(25)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(26)} -port {vout:rsc.z(26)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(27)} -port {vout:rsc.z(27)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(28)} -port {vout:rsc.z(28)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(29)} -port {vout:rsc.z(29)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {volume:rsc.z(0)} -attr vt d
+load net {volume:rsc.z(1)} -attr vt d
+load net {volume:rsc.z(2)} -attr vt d
+load net {volume:rsc.z(3)} -attr vt d
+load netBundle {volume:rsc.z} 4 {volume:rsc.z(0)} {volume:rsc.z(1)} {volume:rsc.z(2)} {volume:rsc.z(3)} -attr xrf 905 -attr oid 16 -attr vt d -attr @path {/gauss_blur/volume:rsc.z}
+load net {volume:rsc.z(0)} -port {volume:rsc.z(0)} -attr vt d -attr @path {/gauss_blur/volume:rsc.z}
+load net {volume:rsc.z(1)} -port {volume:rsc.z(1)} -attr vt d -attr @path {/gauss_blur/volume:rsc.z}
+load net {volume:rsc.z(2)} -port {volume:rsc.z(2)} -attr vt d -attr @path {/gauss_blur/volume:rsc.z}
+load net {volume:rsc.z(3)} -port {volume:rsc.z(3)} -attr vt d -attr @path {/gauss_blur/volume:rsc.z}
+load net {clk} -attr xrf 906 -attr oid 17
+load net {clk} -port {clk} -attr xrf 907 -attr oid 18
+load net {en} -attr xrf 908 -attr oid 19
+load net {en} -port {en} -attr xrf 909 -attr oid 20
+load net {arst_n} -attr xrf 910 -attr oid 21
+load net {arst_n} -port {arst_n} -attr xrf 911 -attr oid 22
+load inst "vout:rsc:mgc_out_stdreg" "mgc_ioport.mgc_out_stdreg(2,30)" "INTERFACE" -attr xrf 912 -attr oid 23 -attr vt d -attr @path {/gauss_blur/vout:rsc:mgc_out_stdreg} -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_ioport.mgc_out_stdreg(2,30)" -pg 1 -lvl 1002
+load net {PWR} -pin  "vout:rsc:mgc_out_stdreg" {d(0)} -attr @path {/gauss_blur/C1111111111----------1111111111_30}
+load net {PWR} -pin  "vout:rsc:mgc_out_stdreg" {d(1)} -attr @path {/gauss_blur/C1111111111----------1111111111_30}
+load net {PWR} -pin  "vout:rsc:mgc_out_stdreg" {d(2)} -attr @path {/gauss_blur/C1111111111----------1111111111_30}
+load net {PWR} -pin  "vout:rsc:mgc_out_stdreg" {d(3)} -attr @path {/gauss_blur/C1111111111----------1111111111_30}
+load net {PWR} -pin  "vout:rsc:mgc_out_stdreg" {d(4)} -attr @path {/gauss_blur/C1111111111----------1111111111_30}
+load net {PWR} -pin  "vout:rsc:mgc_out_stdreg" {d(5)} -attr @path {/gauss_blur/C1111111111----------1111111111_30}
+load net {PWR} -pin  "vout:rsc:mgc_out_stdreg" {d(6)} -attr @path {/gauss_blur/C1111111111----------1111111111_30}
+load net {PWR} -pin  "vout:rsc:mgc_out_stdreg" {d(7)} -attr @path {/gauss_blur/C1111111111----------1111111111_30}
+load net {PWR} -pin  "vout:rsc:mgc_out_stdreg" {d(8)} -attr @path {/gauss_blur/C1111111111----------1111111111_30}
+load net {PWR} -pin  "vout:rsc:mgc_out_stdreg" {d(9)} -attr @path {/gauss_blur/C1111111111----------1111111111_30}
+load net {DC} -pin  "vout:rsc:mgc_out_stdreg" {d(10)} -attr @path {/gauss_blur/C1111111111----------1111111111_30}
+load net {DC} -pin  "vout:rsc:mgc_out_stdreg" {d(11)} -attr @path {/gauss_blur/C1111111111----------1111111111_30}
+load net {DC} -pin  "vout:rsc:mgc_out_stdreg" {d(12)} -attr @path {/gauss_blur/C1111111111----------1111111111_30}
+load net {DC} -pin  "vout:rsc:mgc_out_stdreg" {d(13)} -attr @path {/gauss_blur/C1111111111----------1111111111_30}
+load net {DC} -pin  "vout:rsc:mgc_out_stdreg" {d(14)} -attr @path {/gauss_blur/C1111111111----------1111111111_30}
+load net {DC} -pin  "vout:rsc:mgc_out_stdreg" {d(15)} -attr @path {/gauss_blur/C1111111111----------1111111111_30}
+load net {DC} -pin  "vout:rsc:mgc_out_stdreg" {d(16)} -attr @path {/gauss_blur/C1111111111----------1111111111_30}
+load net {DC} -pin  "vout:rsc:mgc_out_stdreg" {d(17)} -attr @path {/gauss_blur/C1111111111----------1111111111_30}
+load net {DC} -pin  "vout:rsc:mgc_out_stdreg" {d(18)} -attr @path {/gauss_blur/C1111111111----------1111111111_30}
+load net {DC} -pin  "vout:rsc:mgc_out_stdreg" {d(19)} -attr @path {/gauss_blur/C1111111111----------1111111111_30}
+load net {PWR} -pin  "vout:rsc:mgc_out_stdreg" {d(20)} -attr @path {/gauss_blur/C1111111111----------1111111111_30}
+load net {PWR} -pin  "vout:rsc:mgc_out_stdreg" {d(21)} -attr @path {/gauss_blur/C1111111111----------1111111111_30}
+load net {PWR} -pin  "vout:rsc:mgc_out_stdreg" {d(22)} -attr @path {/gauss_blur/C1111111111----------1111111111_30}
+load net {PWR} -pin  "vout:rsc:mgc_out_stdreg" {d(23)} -attr @path {/gauss_blur/C1111111111----------1111111111_30}
+load net {PWR} -pin  "vout:rsc:mgc_out_stdreg" {d(24)} -attr @path {/gauss_blur/C1111111111----------1111111111_30}
+load net {PWR} -pin  "vout:rsc:mgc_out_stdreg" {d(25)} -attr @path {/gauss_blur/C1111111111----------1111111111_30}
+load net {PWR} -pin  "vout:rsc:mgc_out_stdreg" {d(26)} -attr @path {/gauss_blur/C1111111111----------1111111111_30}
+load net {PWR} -pin  "vout:rsc:mgc_out_stdreg" {d(27)} -attr @path {/gauss_blur/C1111111111----------1111111111_30}
+load net {PWR} -pin  "vout:rsc:mgc_out_stdreg" {d(28)} -attr @path {/gauss_blur/C1111111111----------1111111111_30}
+load net {PWR} -pin  "vout:rsc:mgc_out_stdreg" {d(29)} -attr @path {/gauss_blur/C1111111111----------1111111111_30}
+load net {vout:rsc.z(0)} -pin  "vout:rsc:mgc_out_stdreg" {z(0)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(1)} -pin  "vout:rsc:mgc_out_stdreg" {z(1)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(2)} -pin  "vout:rsc:mgc_out_stdreg" {z(2)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(3)} -pin  "vout:rsc:mgc_out_stdreg" {z(3)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(4)} -pin  "vout:rsc:mgc_out_stdreg" {z(4)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(5)} -pin  "vout:rsc:mgc_out_stdreg" {z(5)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(6)} -pin  "vout:rsc:mgc_out_stdreg" {z(6)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(7)} -pin  "vout:rsc:mgc_out_stdreg" {z(7)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(8)} -pin  "vout:rsc:mgc_out_stdreg" {z(8)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(9)} -pin  "vout:rsc:mgc_out_stdreg" {z(9)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(10)} -pin  "vout:rsc:mgc_out_stdreg" {z(10)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(11)} -pin  "vout:rsc:mgc_out_stdreg" {z(11)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(12)} -pin  "vout:rsc:mgc_out_stdreg" {z(12)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(13)} -pin  "vout:rsc:mgc_out_stdreg" {z(13)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(14)} -pin  "vout:rsc:mgc_out_stdreg" {z(14)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(15)} -pin  "vout:rsc:mgc_out_stdreg" {z(15)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(16)} -pin  "vout:rsc:mgc_out_stdreg" {z(16)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(17)} -pin  "vout:rsc:mgc_out_stdreg" {z(17)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(18)} -pin  "vout:rsc:mgc_out_stdreg" {z(18)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(19)} -pin  "vout:rsc:mgc_out_stdreg" {z(19)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(20)} -pin  "vout:rsc:mgc_out_stdreg" {z(20)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(21)} -pin  "vout:rsc:mgc_out_stdreg" {z(21)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(22)} -pin  "vout:rsc:mgc_out_stdreg" {z(22)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(23)} -pin  "vout:rsc:mgc_out_stdreg" {z(23)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(24)} -pin  "vout:rsc:mgc_out_stdreg" {z(24)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(25)} -pin  "vout:rsc:mgc_out_stdreg" {z(25)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(26)} -pin  "vout:rsc:mgc_out_stdreg" {z(26)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(27)} -pin  "vout:rsc:mgc_out_stdreg" {z(27)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(28)} -pin  "vout:rsc:mgc_out_stdreg" {z(28)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load net {vout:rsc.z(29)} -pin  "vout:rsc:mgc_out_stdreg" {z(29)} -attr vt d -attr @path {/gauss_blur/vout:rsc.z}
+load inst "volume:rsc:mgc_out_stdreg" "mgc_ioport.mgc_out_stdreg(4,4)" "INTERFACE" -attr xrf 913 -attr oid 24 -attr vt d -attr @path {/gauss_blur/volume:rsc:mgc_out_stdreg} -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_ioport.mgc_out_stdreg(4,4)" -pg 1 -lvl 1002
+load net {GND} -pin  "volume:rsc:mgc_out_stdreg" {d(0)} -attr @path {/gauss_blur/C0_4#1}
+load net {GND} -pin  "volume:rsc:mgc_out_stdreg" {d(1)} -attr @path {/gauss_blur/C0_4#1}
+load net {GND} -pin  "volume:rsc:mgc_out_stdreg" {d(2)} -attr @path {/gauss_blur/C0_4#1}
+load net {GND} -pin  "volume:rsc:mgc_out_stdreg" {d(3)} -attr @path {/gauss_blur/C0_4#1}
+load net {volume:rsc.z(0)} -pin  "volume:rsc:mgc_out_stdreg" {z(0)} -attr vt d -attr @path {/gauss_blur/volume:rsc.z}
+load net {volume:rsc.z(1)} -pin  "volume:rsc:mgc_out_stdreg" {z(1)} -attr vt d -attr @path {/gauss_blur/volume:rsc.z}
+load net {volume:rsc.z(2)} -pin  "volume:rsc:mgc_out_stdreg" {z(2)} -attr vt d -attr @path {/gauss_blur/volume:rsc.z}
+load net {volume:rsc.z(3)} -pin  "volume:rsc:mgc_out_stdreg" {z(3)} -attr vt d -attr @path {/gauss_blur/volume:rsc.z}
+### END MODULE 
+
