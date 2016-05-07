@@ -1,7 +1,7 @@
 # EIE 1st Year Project - Body detection using markers
 EIE First year project at Imperial College London - Martin Ferianc, George Punter, Alex Luisi
 
-#Organisation of the github
+#Organisation of the Git
 -hl_simulation
   Contains all higher level programming files on which we will base our final HLS design.
 -Prj1
