@@ -607,7 +607,6 @@ set_global_assignment -name VERILOG_FILE music/hex_to_7seg.v
 set_global_assignment -name VERILOG_FILE music/FIFO.v
 set_global_assignment -name VERILOG_FILE music/clk_div.v
 set_global_assignment -name VERILOG_FILE "../../../../Desktop/labs/FPGA Lab/FPGA Lab/stopwatch2works/module decode_7segment.v"
-set_global_assignment -name VERILOG_FILE catapult_ip/sobel_filter/rtl.v
 set_global_assignment -name VERILOG_FILE V/ps2.v
 set_global_assignment -name SOURCE_FILE Sdram_Control_4Port/Sdram_Params.h
 set_global_assignment -name VERILOG_FILE Sdram_Control_4Port/command.v

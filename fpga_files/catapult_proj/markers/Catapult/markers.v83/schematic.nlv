@@ -1,0 +1,960 @@
+
+# Program: Catapult University Version
+# Version: 2011a.126
+#    File: Nlview netlist
+
+module new "markers:core" "orig"
+load portBus {vga_xy(19:0)} input 20 {vga_xy(19)} {vga_xy(18)} {vga_xy(17)} {vga_xy(16)} {vga_xy(15)} {vga_xy(14)} {vga_xy(13)} {vga_xy(12)} {vga_xy(11)} {vga_xy(10)} {vga_xy(9)} {vga_xy(8)} {vga_xy(7)} {vga_xy(6)} {vga_xy(5)} {vga_xy(4)} {vga_xy(3)} {vga_xy(2)} {vga_xy(1)} {vga_xy(0)} -attr xrf 121720 -attr oid 1 -attr vt d -attr @path {/markers/markers:core/vga_xy}
+load port {clk} input -attr xrf 121721 -attr oid 2 -attr vt d -attr @path {/markers/markers:core/clk}
+load port {en} input -attr xrf 121722 -attr oid 3 -attr vt d -attr @path {/markers/markers:core/en}
+load port {arst_n} input -attr xrf 121723 -attr oid 4 -attr vt d -attr @path {/markers/markers:core/arst_n}
+load portBus {vout:rsc:mgc_out_stdreg.d(29:0)} output 30 {vout:rsc:mgc_out_stdreg.d(29)} {vout:rsc:mgc_out_stdreg.d(28)} {vout:rsc:mgc_out_stdreg.d(27)} {vout:rsc:mgc_out_stdreg.d(26)} {vout:rsc:mgc_out_stdreg.d(25)} {vout:rsc:mgc_out_stdreg.d(24)} {vout:rsc:mgc_out_stdreg.d(23)} {vout:rsc:mgc_out_stdreg.d(22)} {vout:rsc:mgc_out_stdreg.d(21)} {vout:rsc:mgc_out_stdreg.d(20)} {vout:rsc:mgc_out_stdreg.d(19)} {vout:rsc:mgc_out_stdreg.d(18)} {vout:rsc:mgc_out_stdreg.d(17)} {vout:rsc:mgc_out_stdreg.d(16)} {vout:rsc:mgc_out_stdreg.d(15)} {vout:rsc:mgc_out_stdreg.d(14)} {vout:rsc:mgc_out_stdreg.d(13)} {vout:rsc:mgc_out_stdreg.d(12)} {vout:rsc:mgc_out_stdreg.d(11)} {vout:rsc:mgc_out_stdreg.d(10)} {vout:rsc:mgc_out_stdreg.d(9)} {vout:rsc:mgc_out_stdreg.d(8)} {vout:rsc:mgc_out_stdreg.d(7)} {vout:rsc:mgc_out_stdreg.d(6)} {vout:rsc:mgc_out_stdreg.d(5)} {vout:rsc:mgc_out_stdreg.d(4)} {vout:rsc:mgc_out_stdreg.d(3)} {vout:rsc:mgc_out_stdreg.d(2)} {vout:rsc:mgc_out_stdreg.d(1)} {vout:rsc:mgc_out_stdreg.d(0)} -attr xrf 121724 -attr oid 5 -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load symbol "reg(1,1,1,-1,0)" "INTERFACE" GEN boxcolor 1 \
+     portBus {D(0:0)} input 1 {D(0)} \
+     portBus {DRa(0:0)} input 1 {DRa(0)} \
+     port {clk} input.clk \
+     portBus {en(0:0)} input 1 {en(0)} \
+     portBus {Ra(0:0)} input 1 {Ra(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load symbol "not(10)" "INTERFACE" INV boxcolor 0 \
+     portBus {A(9:0)} input 10 {A(9)} {A(8)} {A(7)} {A(6)} {A(5)} {A(4)} {A(3)} {A(2)} {A(1)} {A(0)} \
+     portBus {Z(9:0)} output 10 {Z(9)} {Z(8)} {Z(7)} {Z(6)} {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "add(11,-1,6,0,11)" "INTERFACE" RTL(+) boxcolor 0 \
+     portBus {A(10:0)} input 11 {A(10)} {A(9)} {A(8)} {A(7)} {A(6)} {A(5)} {A(4)} {A(3)} {A(2)} {A(1)} {A(0)} \
+     portBus {B(5:0)} input 6 {B(5)} {B(4)} {B(3)} {B(2)} {B(1)} {B(0)} \
+     portBus {Z(10:0)} output 11 {Z(10)} {Z(9)} {Z(8)} {Z(7)} {Z(6)} {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "mux(2,1)" "INTERFACE" MUX boxcolor 0 \
+     portBus {A0(0:0)} input 1 {A0(0)} \
+     portBus {A1(0:0)} input 1 {A1(0)} \
+     portBus {S(0:0)} input.top 1 {S(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load symbol "nor(3,1)" "INTERFACE" NOR boxcolor 0 \
+     portBus {A0(0:0)} input 1 {A0(0)} \
+     portBus {A1(0:0)} input 1 {A1(0)} \
+     portBus {A2(0:0)} input 1 {A2(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load symbol "nor(2,1)" "INTERFACE" NOR boxcolor 0 \
+     portBus {A0(0:0)} input 1 {A0(0)} \
+     portBus {A1(0:0)} input 1 {A1(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load symbol "reg(10,1,1,-1,0)" "INTERFACE" GEN boxcolor 1 \
+     portBus {D(9:0)} input 10 {D(9)} {D(8)} {D(7)} {D(6)} {D(5)} {D(4)} {D(3)} {D(2)} {D(1)} {D(0)} \
+     portBus {DRa(9:0)} input 10 {DRa(9)} {DRa(8)} {DRa(7)} {DRa(6)} {DRa(5)} {DRa(4)} {DRa(3)} {DRa(2)} {DRa(1)} {DRa(0)} \
+     port {clk} input.clk \
+     portBus {en(0:0)} input 1 {en(0)} \
+     portBus {Ra(0:0)} input 1 {Ra(0)} \
+     portBus {Z(9:0)} output 10 {Z(9)} {Z(8)} {Z(7)} {Z(6)} {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(0)} -attr vt d
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(1)} -attr vt d
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(2)} -attr vt d
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(3)} -attr vt d
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(4)} -attr vt d
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(5)} -attr vt d
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(6)} -attr vt d
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(7)} -attr vt d
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(8)} -attr vt d
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(9)} -attr vt d
+load netBundle {reg(vout:rsc:mgc_out_stdreg.d).tmp} 10 {reg(vout:rsc:mgc_out_stdreg.d).tmp(0)} {reg(vout:rsc:mgc_out_stdreg.d).tmp(1)} {reg(vout:rsc:mgc_out_stdreg.d).tmp(2)} {reg(vout:rsc:mgc_out_stdreg.d).tmp(3)} {reg(vout:rsc:mgc_out_stdreg.d).tmp(4)} {reg(vout:rsc:mgc_out_stdreg.d).tmp(5)} {reg(vout:rsc:mgc_out_stdreg.d).tmp(6)} {reg(vout:rsc:mgc_out_stdreg.d).tmp(7)} {reg(vout:rsc:mgc_out_stdreg.d).tmp(8)} {reg(vout:rsc:mgc_out_stdreg.d).tmp(9)} -attr xrf 121725 -attr oid 6 -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp}
+load net {vout:rsc:mgc_out_stdreg.d#1(0)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(1)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(2)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(3)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(4)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(5)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(6)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(7)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(8)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(9)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(10)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(11)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(12)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(13)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(14)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(15)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(16)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(17)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(18)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(19)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(20)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(21)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(22)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(23)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(24)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(25)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(26)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(27)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(28)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(29)} -attr vt d
+load netBundle {vout:rsc:mgc_out_stdreg.d#1} 30 {vout:rsc:mgc_out_stdreg.d#1(0)} {vout:rsc:mgc_out_stdreg.d#1(1)} {vout:rsc:mgc_out_stdreg.d#1(2)} {vout:rsc:mgc_out_stdreg.d#1(3)} {vout:rsc:mgc_out_stdreg.d#1(4)} {vout:rsc:mgc_out_stdreg.d#1(5)} {vout:rsc:mgc_out_stdreg.d#1(6)} {vout:rsc:mgc_out_stdreg.d#1(7)} {vout:rsc:mgc_out_stdreg.d#1(8)} {vout:rsc:mgc_out_stdreg.d#1(9)} {vout:rsc:mgc_out_stdreg.d#1(10)} {vout:rsc:mgc_out_stdreg.d#1(11)} {vout:rsc:mgc_out_stdreg.d#1(12)} {vout:rsc:mgc_out_stdreg.d#1(13)} {vout:rsc:mgc_out_stdreg.d#1(14)} {vout:rsc:mgc_out_stdreg.d#1(15)} {vout:rsc:mgc_out_stdreg.d#1(16)} {vout:rsc:mgc_out_stdreg.d#1(17)} {vout:rsc:mgc_out_stdreg.d#1(18)} {vout:rsc:mgc_out_stdreg.d#1(19)} {vout:rsc:mgc_out_stdreg.d#1(20)} {vout:rsc:mgc_out_stdreg.d#1(21)} {vout:rsc:mgc_out_stdreg.d#1(22)} {vout:rsc:mgc_out_stdreg.d#1(23)} {vout:rsc:mgc_out_stdreg.d#1(24)} {vout:rsc:mgc_out_stdreg.d#1(25)} {vout:rsc:mgc_out_stdreg.d#1(26)} {vout:rsc:mgc_out_stdreg.d#1(27)} {vout:rsc:mgc_out_stdreg.d#1(28)} {vout:rsc:mgc_out_stdreg.d#1(29)} -attr xrf 121726 -attr oid 7 -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d#1}
+load net {exs.itm(0)} -attr vt d
+load net {exs.itm(1)} -attr vt d
+load net {exs.itm(2)} -attr vt d
+load net {exs.itm(3)} -attr vt d
+load net {exs.itm(4)} -attr vt d
+load net {exs.itm(5)} -attr vt d
+load net {exs.itm(6)} -attr vt d
+load net {exs.itm(7)} -attr vt d
+load net {exs.itm(8)} -attr vt d
+load net {exs.itm(9)} -attr vt d
+load netBundle {exs.itm} 10 {exs.itm(0)} {exs.itm(1)} {exs.itm(2)} {exs.itm(3)} {exs.itm(4)} {exs.itm(5)} {exs.itm(6)} {exs.itm(7)} {exs.itm(8)} {exs.itm(9)} -attr xrf 121727 -attr oid 8 -attr vt d -attr @path {/markers/markers:core/exs.itm}
+load net {conc#14.itm(0)} -attr vt d
+load net {conc#14.itm(1)} -attr vt d
+load net {conc#14.itm(2)} -attr vt d
+load net {conc#14.itm(3)} -attr vt d
+load net {conc#14.itm(4)} -attr vt d
+load net {conc#14.itm(5)} -attr vt d
+load net {conc#14.itm(6)} -attr vt d
+load net {conc#14.itm(7)} -attr vt d
+load net {conc#14.itm(8)} -attr vt d
+load net {conc#14.itm(9)} -attr vt d
+load net {conc#14.itm(10)} -attr vt d
+load netBundle {conc#14.itm} 11 {conc#14.itm(0)} {conc#14.itm(1)} {conc#14.itm(2)} {conc#14.itm(3)} {conc#14.itm(4)} {conc#14.itm(5)} {conc#14.itm(6)} {conc#14.itm(7)} {conc#14.itm(8)} {conc#14.itm(9)} {conc#14.itm(10)} -attr xrf 121728 -attr oid 9 -attr vt d -attr @path {/markers/markers:core/conc#14.itm}
+load net {deltay_square_red:not#1.itm(0)} -attr vt d
+load net {deltay_square_red:not#1.itm(1)} -attr vt d
+load net {deltay_square_red:not#1.itm(2)} -attr vt d
+load net {deltay_square_red:not#1.itm(3)} -attr vt d
+load net {deltay_square_red:not#1.itm(4)} -attr vt d
+load net {deltay_square_red:not#1.itm(5)} -attr vt d
+load net {deltay_square_red:not#1.itm(6)} -attr vt d
+load net {deltay_square_red:not#1.itm(7)} -attr vt d
+load net {deltay_square_red:not#1.itm(8)} -attr vt d
+load net {deltay_square_red:not#1.itm(9)} -attr vt d
+load netBundle {deltay_square_red:not#1.itm} 10 {deltay_square_red:not#1.itm(0)} {deltay_square_red:not#1.itm(1)} {deltay_square_red:not#1.itm(2)} {deltay_square_red:not#1.itm(3)} {deltay_square_red:not#1.itm(4)} {deltay_square_red:not#1.itm(5)} {deltay_square_red:not#1.itm(6)} {deltay_square_red:not#1.itm(7)} {deltay_square_red:not#1.itm(8)} {deltay_square_red:not#1.itm(9)} -attr xrf 121729 -attr oid 10 -attr vt d -attr @path {/markers/markers:core/deltay_square_red:not#1.itm}
+load net {slc(vga_xy#1)#10.itm(0)} -attr vt d
+load net {slc(vga_xy#1)#10.itm(1)} -attr vt d
+load net {slc(vga_xy#1)#10.itm(2)} -attr vt d
+load net {slc(vga_xy#1)#10.itm(3)} -attr vt d
+load net {slc(vga_xy#1)#10.itm(4)} -attr vt d
+load net {slc(vga_xy#1)#10.itm(5)} -attr vt d
+load net {slc(vga_xy#1)#10.itm(6)} -attr vt d
+load net {slc(vga_xy#1)#10.itm(7)} -attr vt d
+load net {slc(vga_xy#1)#10.itm(8)} -attr vt d
+load net {slc(vga_xy#1)#10.itm(9)} -attr vt d
+load netBundle {slc(vga_xy#1)#10.itm} 10 {slc(vga_xy#1)#10.itm(0)} {slc(vga_xy#1)#10.itm(1)} {slc(vga_xy#1)#10.itm(2)} {slc(vga_xy#1)#10.itm(3)} {slc(vga_xy#1)#10.itm(4)} {slc(vga_xy#1)#10.itm(5)} {slc(vga_xy#1)#10.itm(6)} {slc(vga_xy#1)#10.itm(7)} {slc(vga_xy#1)#10.itm(8)} {slc(vga_xy#1)#10.itm(9)} -attr xrf 121730 -attr oid 11 -attr vt d -attr @path {/markers/markers:core/slc(vga_xy#1)#10.itm}
+load net {exs#4.itm(0)} -attr vt d
+load net {exs#4.itm(1)} -attr vt d
+load net {exs#4.itm(2)} -attr vt d
+load net {exs#4.itm(3)} -attr vt d
+load net {exs#4.itm(4)} -attr vt d
+load net {exs#4.itm(5)} -attr vt d
+load net {exs#4.itm(6)} -attr vt d
+load net {exs#4.itm(7)} -attr vt d
+load net {exs#4.itm(8)} -attr vt d
+load net {exs#4.itm(9)} -attr vt d
+load netBundle {exs#4.itm} 10 {exs#4.itm(0)} {exs#4.itm(1)} {exs#4.itm(2)} {exs#4.itm(3)} {exs#4.itm(4)} {exs#4.itm(5)} {exs#4.itm(6)} {exs#4.itm(7)} {exs#4.itm(8)} {exs#4.itm(9)} -attr xrf 121731 -attr oid 12 -attr vt d -attr @path {/markers/markers:core/exs#4.itm}
+load net {exs#2.itm(0)} -attr vt d
+load net {exs#2.itm(1)} -attr vt d
+load net {exs#2.itm(2)} -attr vt d
+load net {exs#2.itm(3)} -attr vt d
+load net {exs#2.itm(4)} -attr vt d
+load net {exs#2.itm(5)} -attr vt d
+load net {exs#2.itm(6)} -attr vt d
+load net {exs#2.itm(7)} -attr vt d
+load net {exs#2.itm(8)} -attr vt d
+load net {exs#2.itm(9)} -attr vt d
+load netBundle {exs#2.itm} 10 {exs#2.itm(0)} {exs#2.itm(1)} {exs#2.itm(2)} {exs#2.itm(3)} {exs#2.itm(4)} {exs#2.itm(5)} {exs#2.itm(6)} {exs#2.itm(7)} {exs#2.itm(8)} {exs#2.itm(9)} -attr xrf 121732 -attr oid 13 -attr vt d -attr @path {/markers/markers:core/exs#2.itm}
+load net {conc#15.itm(0)} -attr vt d
+load net {conc#15.itm(1)} -attr vt d
+load net {conc#15.itm(2)} -attr vt d
+load net {conc#15.itm(3)} -attr vt d
+load net {conc#15.itm(4)} -attr vt d
+load net {conc#15.itm(5)} -attr vt d
+load net {conc#15.itm(6)} -attr vt d
+load net {conc#15.itm(7)} -attr vt d
+load net {conc#15.itm(8)} -attr vt d
+load net {conc#15.itm(9)} -attr vt d
+load net {conc#15.itm(10)} -attr vt d
+load netBundle {conc#15.itm} 11 {conc#15.itm(0)} {conc#15.itm(1)} {conc#15.itm(2)} {conc#15.itm(3)} {conc#15.itm(4)} {conc#15.itm(5)} {conc#15.itm(6)} {conc#15.itm(7)} {conc#15.itm(8)} {conc#15.itm(9)} {conc#15.itm(10)} -attr xrf 121733 -attr oid 14 -attr vt d -attr @path {/markers/markers:core/conc#15.itm}
+load net {deltax_square_red:not#1.itm(0)} -attr vt d
+load net {deltax_square_red:not#1.itm(1)} -attr vt d
+load net {deltax_square_red:not#1.itm(2)} -attr vt d
+load net {deltax_square_red:not#1.itm(3)} -attr vt d
+load net {deltax_square_red:not#1.itm(4)} -attr vt d
+load net {deltax_square_red:not#1.itm(5)} -attr vt d
+load net {deltax_square_red:not#1.itm(6)} -attr vt d
+load net {deltax_square_red:not#1.itm(7)} -attr vt d
+load net {deltax_square_red:not#1.itm(8)} -attr vt d
+load net {deltax_square_red:not#1.itm(9)} -attr vt d
+load netBundle {deltax_square_red:not#1.itm} 10 {deltax_square_red:not#1.itm(0)} {deltax_square_red:not#1.itm(1)} {deltax_square_red:not#1.itm(2)} {deltax_square_red:not#1.itm(3)} {deltax_square_red:not#1.itm(4)} {deltax_square_red:not#1.itm(5)} {deltax_square_red:not#1.itm(6)} {deltax_square_red:not#1.itm(7)} {deltax_square_red:not#1.itm(8)} {deltax_square_red:not#1.itm(9)} -attr xrf 121734 -attr oid 15 -attr vt d -attr @path {/markers/markers:core/deltax_square_red:not#1.itm}
+load net {slc(vga_xy#1)#9.itm(0)} -attr vt d
+load net {slc(vga_xy#1)#9.itm(1)} -attr vt d
+load net {slc(vga_xy#1)#9.itm(2)} -attr vt d
+load net {slc(vga_xy#1)#9.itm(3)} -attr vt d
+load net {slc(vga_xy#1)#9.itm(4)} -attr vt d
+load net {slc(vga_xy#1)#9.itm(5)} -attr vt d
+load net {slc(vga_xy#1)#9.itm(6)} -attr vt d
+load net {slc(vga_xy#1)#9.itm(7)} -attr vt d
+load net {slc(vga_xy#1)#9.itm(8)} -attr vt d
+load net {slc(vga_xy#1)#9.itm(9)} -attr vt d
+load netBundle {slc(vga_xy#1)#9.itm} 10 {slc(vga_xy#1)#9.itm(0)} {slc(vga_xy#1)#9.itm(1)} {slc(vga_xy#1)#9.itm(2)} {slc(vga_xy#1)#9.itm(3)} {slc(vga_xy#1)#9.itm(4)} {slc(vga_xy#1)#9.itm(5)} {slc(vga_xy#1)#9.itm(6)} {slc(vga_xy#1)#9.itm(7)} {slc(vga_xy#1)#9.itm(8)} {slc(vga_xy#1)#9.itm(9)} -attr xrf 121735 -attr oid 16 -attr vt d -attr @path {/markers/markers:core/slc(vga_xy#1)#9.itm}
+load net {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(0)} -attr vt d
+load net {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(1)} -attr vt d
+load net {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(2)} -attr vt d
+load net {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(3)} -attr vt d
+load net {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(4)} -attr vt d
+load net {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(5)} -attr vt d
+load net {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(6)} -attr vt d
+load net {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(7)} -attr vt d
+load net {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(8)} -attr vt d
+load net {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(9)} -attr vt d
+load netBundle {slc(vout:rsc:mgc_out_stdreg.d)#1.itm} 10 {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(0)} {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(1)} {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(2)} {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(3)} {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(4)} {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(5)} {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(6)} {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(7)} {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(8)} {slc(vout:rsc:mgc_out_stdreg.d)#1.itm(9)} -attr xrf 121736 -attr oid 17 -attr vt d -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d)#1.itm}
+load net {vga_xy(0)} -attr vt d
+load net {vga_xy(1)} -attr vt d
+load net {vga_xy(2)} -attr vt d
+load net {vga_xy(3)} -attr vt d
+load net {vga_xy(4)} -attr vt d
+load net {vga_xy(5)} -attr vt d
+load net {vga_xy(6)} -attr vt d
+load net {vga_xy(7)} -attr vt d
+load net {vga_xy(8)} -attr vt d
+load net {vga_xy(9)} -attr vt d
+load net {vga_xy(10)} -attr vt d
+load net {vga_xy(11)} -attr vt d
+load net {vga_xy(12)} -attr vt d
+load net {vga_xy(13)} -attr vt d
+load net {vga_xy(14)} -attr vt d
+load net {vga_xy(15)} -attr vt d
+load net {vga_xy(16)} -attr vt d
+load net {vga_xy(17)} -attr vt d
+load net {vga_xy(18)} -attr vt d
+load net {vga_xy(19)} -attr vt d
+load netBundle {vga_xy} 20 {vga_xy(0)} {vga_xy(1)} {vga_xy(2)} {vga_xy(3)} {vga_xy(4)} {vga_xy(5)} {vga_xy(6)} {vga_xy(7)} {vga_xy(8)} {vga_xy(9)} {vga_xy(10)} {vga_xy(11)} {vga_xy(12)} {vga_xy(13)} {vga_xy(14)} {vga_xy(15)} {vga_xy(16)} {vga_xy(17)} {vga_xy(18)} {vga_xy(19)} -attr xrf 121737 -attr oid 18 -attr vt d -attr @path {/markers/markers:core/vga_xy}
+load net {vga_xy(0)} -port {vga_xy(0)} -attr vt d
+load net {vga_xy(1)} -port {vga_xy(1)} -attr vt d
+load net {vga_xy(2)} -port {vga_xy(2)} -attr vt d
+load net {vga_xy(3)} -port {vga_xy(3)} -attr vt d
+load net {vga_xy(4)} -port {vga_xy(4)} -attr vt d
+load net {vga_xy(5)} -port {vga_xy(5)} -attr vt d
+load net {vga_xy(6)} -port {vga_xy(6)} -attr vt d
+load net {vga_xy(7)} -port {vga_xy(7)} -attr vt d
+load net {vga_xy(8)} -port {vga_xy(8)} -attr vt d
+load net {vga_xy(9)} -port {vga_xy(9)} -attr vt d
+load net {vga_xy(10)} -port {vga_xy(10)} -attr vt d
+load net {vga_xy(11)} -port {vga_xy(11)} -attr vt d
+load net {vga_xy(12)} -port {vga_xy(12)} -attr vt d
+load net {vga_xy(13)} -port {vga_xy(13)} -attr vt d
+load net {vga_xy(14)} -port {vga_xy(14)} -attr vt d
+load net {vga_xy(15)} -port {vga_xy(15)} -attr vt d
+load net {vga_xy(16)} -port {vga_xy(16)} -attr vt d
+load net {vga_xy(17)} -port {vga_xy(17)} -attr vt d
+load net {vga_xy(18)} -port {vga_xy(18)} -attr vt d
+load net {vga_xy(19)} -port {vga_xy(19)} -attr vt d
+load netBundle {vga_xy} 20 {vga_xy(0)} {vga_xy(1)} {vga_xy(2)} {vga_xy(3)} {vga_xy(4)} {vga_xy(5)} {vga_xy(6)} {vga_xy(7)} {vga_xy(8)} {vga_xy(9)} {vga_xy(10)} {vga_xy(11)} {vga_xy(12)} {vga_xy(13)} {vga_xy(14)} {vga_xy(15)} {vga_xy(16)} {vga_xy(17)} {vga_xy(18)} {vga_xy(19)} -attr xrf 121738 -attr oid 19 -attr vt d -attr @path {/markers/markers:core/vga_xy}
+load net {clk} -attr xrf 121739 -attr oid 20
+load net {clk} -port {clk} -attr xrf 121740 -attr oid 21
+load net {en} -attr xrf 121741 -attr oid 22
+load net {en} -port {en} -attr xrf 121742 -attr oid 23
+load net {arst_n} -attr xrf 121743 -attr oid 24
+load net {arst_n} -port {arst_n} -attr xrf 121744 -attr oid 25
+load net {vout:rsc:mgc_out_stdreg.d(0)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(1)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(2)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(3)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(4)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(5)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(6)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(7)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(8)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(9)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(10)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(11)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(12)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(13)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(14)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(15)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(16)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(17)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(18)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(19)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(20)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(21)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(22)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(23)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(24)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(25)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(26)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(27)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(28)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d(29)} -attr vt d
+load netBundle {vout:rsc:mgc_out_stdreg.d} 30 {vout:rsc:mgc_out_stdreg.d(0)} {vout:rsc:mgc_out_stdreg.d(1)} {vout:rsc:mgc_out_stdreg.d(2)} {vout:rsc:mgc_out_stdreg.d(3)} {vout:rsc:mgc_out_stdreg.d(4)} {vout:rsc:mgc_out_stdreg.d(5)} {vout:rsc:mgc_out_stdreg.d(6)} {vout:rsc:mgc_out_stdreg.d(7)} {vout:rsc:mgc_out_stdreg.d(8)} {vout:rsc:mgc_out_stdreg.d(9)} {vout:rsc:mgc_out_stdreg.d(10)} {vout:rsc:mgc_out_stdreg.d(11)} {vout:rsc:mgc_out_stdreg.d(12)} {vout:rsc:mgc_out_stdreg.d(13)} {vout:rsc:mgc_out_stdreg.d(14)} {vout:rsc:mgc_out_stdreg.d(15)} {vout:rsc:mgc_out_stdreg.d(16)} {vout:rsc:mgc_out_stdreg.d(17)} {vout:rsc:mgc_out_stdreg.d(18)} {vout:rsc:mgc_out_stdreg.d(19)} {vout:rsc:mgc_out_stdreg.d(20)} {vout:rsc:mgc_out_stdreg.d(21)} {vout:rsc:mgc_out_stdreg.d(22)} {vout:rsc:mgc_out_stdreg.d(23)} {vout:rsc:mgc_out_stdreg.d(24)} {vout:rsc:mgc_out_stdreg.d(25)} {vout:rsc:mgc_out_stdreg.d(26)} {vout:rsc:mgc_out_stdreg.d(27)} {vout:rsc:mgc_out_stdreg.d(28)} {vout:rsc:mgc_out_stdreg.d(29)} -attr xrf 121745 -attr oid 26 -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(0)} -port {vout:rsc:mgc_out_stdreg.d(0)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(1)} -port {vout:rsc:mgc_out_stdreg.d(1)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(2)} -port {vout:rsc:mgc_out_stdreg.d(2)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(3)} -port {vout:rsc:mgc_out_stdreg.d(3)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(4)} -port {vout:rsc:mgc_out_stdreg.d(4)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(5)} -port {vout:rsc:mgc_out_stdreg.d(5)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(6)} -port {vout:rsc:mgc_out_stdreg.d(6)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(7)} -port {vout:rsc:mgc_out_stdreg.d(7)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(8)} -port {vout:rsc:mgc_out_stdreg.d(8)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(9)} -port {vout:rsc:mgc_out_stdreg.d(9)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {GND} -port {vout:rsc:mgc_out_stdreg.d(10)} -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {GND} -port {vout:rsc:mgc_out_stdreg.d(11)} -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {GND} -port {vout:rsc:mgc_out_stdreg.d(12)} -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {GND} -port {vout:rsc:mgc_out_stdreg.d(13)} -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {GND} -port {vout:rsc:mgc_out_stdreg.d(14)} -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {GND} -port {vout:rsc:mgc_out_stdreg.d(15)} -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {GND} -port {vout:rsc:mgc_out_stdreg.d(16)} -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {GND} -port {vout:rsc:mgc_out_stdreg.d(17)} -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {GND} -port {vout:rsc:mgc_out_stdreg.d(18)} -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {GND} -port {vout:rsc:mgc_out_stdreg.d(19)} -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d)#1.reg} -port {vout:rsc:mgc_out_stdreg.d(20)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d)#1.reg} -port {vout:rsc:mgc_out_stdreg.d(21)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d)#1.reg} -port {vout:rsc:mgc_out_stdreg.d(22)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d)#1.reg} -port {vout:rsc:mgc_out_stdreg.d(23)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d)#1.reg} -port {vout:rsc:mgc_out_stdreg.d(24)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d)#1.reg} -port {vout:rsc:mgc_out_stdreg.d(25)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d)#1.reg} -port {vout:rsc:mgc_out_stdreg.d(26)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d)#1.reg} -port {vout:rsc:mgc_out_stdreg.d(27)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d)#1.reg} -port {vout:rsc:mgc_out_stdreg.d(28)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load net {reg(vout:rsc:mgc_out_stdreg.d)#1.reg} -port {vout:rsc:mgc_out_stdreg.d(29)} -attr vt d -attr @path {/markers/markers:core/vout:rsc:mgc_out_stdreg.d}
+load inst "reg(aif#41:aif:acc.cse.sg1)" "reg(1,1,1,-1,0)" "INTERFACE" -attr xrf 121746 -attr oid 27 -attr @path {/markers/markers:core/reg(aif#41:aif:acc.cse.sg1)}
+load net {aif#41:aif:acc.cse.sg1:mx0} -pin  "reg(aif#41:aif:acc.cse.sg1)" {D(0)} -attr @path {/markers/markers:core/aif#41:aif:acc.cse.sg1:mx0}
+load net {GND} -pin  "reg(aif#41:aif:acc.cse.sg1)" {DRa(0)} -attr @path {/markers/markers:core/C0_1#1}
+load net {clk} -pin  "reg(aif#41:aif:acc.cse.sg1)" {clk} -attr xrf 121747 -attr oid 28 -attr @path {/markers/markers:core/clk}
+load net {en} -pin  "reg(aif#41:aif:acc.cse.sg1)" {en(0)} -attr @path {/markers/markers:core/en}
+load net {arst_n} -pin  "reg(aif#41:aif:acc.cse.sg1)" {Ra(0)} -attr @path {/markers/markers:core/arst_n}
+load net {aif#41:aif:acc.cse.sg1} -pin  "reg(aif#41:aif:acc.cse.sg1)" {Z(0)} -attr @path {/markers/markers:core/aif#41:aif:acc.cse.sg1}
+load inst "reg(vout:rsc:mgc_out_stdreg.d)#1" "reg(1,1,1,-1,0)" "INTERFACE" -attr xrf 121748 -attr oid 29 -attr vt c -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d)#1}
+load net {nor.itm} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {D(0)} -attr vt c -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d)#5.itm}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {DRa(0)} -attr @path {/markers/markers:core/C0_30#13}
+load net {clk} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {clk} -attr xrf 121749 -attr oid 30 -attr @path {/markers/markers:core/clk}
+load net {en} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {en(0)} -attr @path {/markers/markers:core/en}
+load net {arst_n} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {Ra(0)} -attr @path {/markers/markers:core/arst_n}
+load net {reg(vout:rsc:mgc_out_stdreg.d)#1.reg} -pin  "reg(vout:rsc:mgc_out_stdreg.d)#1" {Z(0)} -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d)#1.reg}
+load inst "deltay_square_red:not#1" "not(10)" "INTERFACE" -attr xrf 121750 -attr oid 31 -attr vt dc -attr @path {/markers/markers:core/deltay_square_red:not#1} -attr area 0.001000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_not(10)"
+load net {vga_xy(10)} -pin  "deltay_square_red:not#1" {A(0)} -attr vt dc -attr @path {/markers/markers:core/slc(vga_xy#1)#10.itm}
+load net {vga_xy(11)} -pin  "deltay_square_red:not#1" {A(1)} -attr vt dc -attr @path {/markers/markers:core/slc(vga_xy#1)#10.itm}
+load net {vga_xy(12)} -pin  "deltay_square_red:not#1" {A(2)} -attr vt dc -attr @path {/markers/markers:core/slc(vga_xy#1)#10.itm}
+load net {vga_xy(13)} -pin  "deltay_square_red:not#1" {A(3)} -attr vt dc -attr @path {/markers/markers:core/slc(vga_xy#1)#10.itm}
+load net {vga_xy(14)} -pin  "deltay_square_red:not#1" {A(4)} -attr vt dc -attr @path {/markers/markers:core/slc(vga_xy#1)#10.itm}
+load net {vga_xy(15)} -pin  "deltay_square_red:not#1" {A(5)} -attr vt dc -attr @path {/markers/markers:core/slc(vga_xy#1)#10.itm}
+load net {vga_xy(16)} -pin  "deltay_square_red:not#1" {A(6)} -attr vt dc -attr @path {/markers/markers:core/slc(vga_xy#1)#10.itm}
+load net {vga_xy(17)} -pin  "deltay_square_red:not#1" {A(7)} -attr vt dc -attr @path {/markers/markers:core/slc(vga_xy#1)#10.itm}
+load net {vga_xy(18)} -pin  "deltay_square_red:not#1" {A(8)} -attr vt dc -attr @path {/markers/markers:core/slc(vga_xy#1)#10.itm}
+load net {vga_xy(19)} -pin  "deltay_square_red:not#1" {A(9)} -attr vt dc -attr @path {/markers/markers:core/slc(vga_xy#1)#10.itm}
+load net {deltay_square_red:not#1.itm(0)} -pin  "deltay_square_red:not#1" {Z(0)} -attr vt dc -attr @path {/markers/markers:core/deltay_square_red:not#1.itm}
+load net {deltay_square_red:not#1.itm(1)} -pin  "deltay_square_red:not#1" {Z(1)} -attr vt dc -attr @path {/markers/markers:core/deltay_square_red:not#1.itm}
+load net {deltay_square_red:not#1.itm(2)} -pin  "deltay_square_red:not#1" {Z(2)} -attr vt dc -attr @path {/markers/markers:core/deltay_square_red:not#1.itm}
+load net {deltay_square_red:not#1.itm(3)} -pin  "deltay_square_red:not#1" {Z(3)} -attr vt dc -attr @path {/markers/markers:core/deltay_square_red:not#1.itm}
+load net {deltay_square_red:not#1.itm(4)} -pin  "deltay_square_red:not#1" {Z(4)} -attr vt dc -attr @path {/markers/markers:core/deltay_square_red:not#1.itm}
+load net {deltay_square_red:not#1.itm(5)} -pin  "deltay_square_red:not#1" {Z(5)} -attr vt dc -attr @path {/markers/markers:core/deltay_square_red:not#1.itm}
+load net {deltay_square_red:not#1.itm(6)} -pin  "deltay_square_red:not#1" {Z(6)} -attr vt dc -attr @path {/markers/markers:core/deltay_square_red:not#1.itm}
+load net {deltay_square_red:not#1.itm(7)} -pin  "deltay_square_red:not#1" {Z(7)} -attr vt dc -attr @path {/markers/markers:core/deltay_square_red:not#1.itm}
+load net {deltay_square_red:not#1.itm(8)} -pin  "deltay_square_red:not#1" {Z(8)} -attr vt dc -attr @path {/markers/markers:core/deltay_square_red:not#1.itm}
+load net {deltay_square_red:not#1.itm(9)} -pin  "deltay_square_red:not#1" {Z(9)} -attr vt dc -attr @path {/markers/markers:core/deltay_square_red:not#1.itm}
+load inst "aif#41:aif:acc" "add(11,-1,6,0,11)" "INTERFACE" -attr xrf 121751 -attr oid 32 -attr vt dc -attr @path {/markers/markers:core/aif#41:aif:acc} -attr area 12.000000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(11,0,7,1,11)"
+load net {deltay_square_red:not#1.itm(0)} -pin  "aif#41:aif:acc" {A(0)} -attr vt dc -attr @path {/markers/markers:core/conc#14.itm}
+load net {deltay_square_red:not#1.itm(1)} -pin  "aif#41:aif:acc" {A(1)} -attr vt dc -attr @path {/markers/markers:core/conc#14.itm}
+load net {deltay_square_red:not#1.itm(2)} -pin  "aif#41:aif:acc" {A(2)} -attr vt dc -attr @path {/markers/markers:core/conc#14.itm}
+load net {deltay_square_red:not#1.itm(3)} -pin  "aif#41:aif:acc" {A(3)} -attr vt dc -attr @path {/markers/markers:core/conc#14.itm}
+load net {deltay_square_red:not#1.itm(4)} -pin  "aif#41:aif:acc" {A(4)} -attr vt dc -attr @path {/markers/markers:core/conc#14.itm}
+load net {deltay_square_red:not#1.itm(5)} -pin  "aif#41:aif:acc" {A(5)} -attr vt dc -attr @path {/markers/markers:core/conc#14.itm}
+load net {deltay_square_red:not#1.itm(6)} -pin  "aif#41:aif:acc" {A(6)} -attr vt dc -attr @path {/markers/markers:core/conc#14.itm}
+load net {deltay_square_red:not#1.itm(7)} -pin  "aif#41:aif:acc" {A(7)} -attr vt dc -attr @path {/markers/markers:core/conc#14.itm}
+load net {deltay_square_red:not#1.itm(8)} -pin  "aif#41:aif:acc" {A(8)} -attr vt dc -attr @path {/markers/markers:core/conc#14.itm}
+load net {deltay_square_red:not#1.itm(9)} -pin  "aif#41:aif:acc" {A(9)} -attr vt dc -attr @path {/markers/markers:core/conc#14.itm}
+load net {PWR} -pin  "aif#41:aif:acc" {A(10)} -attr @path {/markers/markers:core/conc#14.itm}
+load net {PWR} -pin  "aif#41:aif:acc" {B(0)} -attr @path {/markers/markers:core/C41_6}
+load net {GND} -pin  "aif#41:aif:acc" {B(1)} -attr @path {/markers/markers:core/C41_6}
+load net {GND} -pin  "aif#41:aif:acc" {B(2)} -attr @path {/markers/markers:core/C41_6}
+load net {PWR} -pin  "aif#41:aif:acc" {B(3)} -attr @path {/markers/markers:core/C41_6}
+load net {GND} -pin  "aif#41:aif:acc" {B(4)} -attr @path {/markers/markers:core/C41_6}
+load net {PWR} -pin  "aif#41:aif:acc" {B(5)} -attr @path {/markers/markers:core/C41_6}
+load net {aif#41:aif:acc.itm(0)} -pin  "aif#41:aif:acc" {Z(0)} -attr vt dc -attr @path {/markers/markers:core/aif#41:aif:acc.itm}
+load net {aif#41:aif:acc.itm(1)} -pin  "aif#41:aif:acc" {Z(1)} -attr vt dc -attr @path {/markers/markers:core/aif#41:aif:acc.itm}
+load net {aif#41:aif:acc.itm(2)} -pin  "aif#41:aif:acc" {Z(2)} -attr vt dc -attr @path {/markers/markers:core/aif#41:aif:acc.itm}
+load net {aif#41:aif:acc.itm(3)} -pin  "aif#41:aif:acc" {Z(3)} -attr vt dc -attr @path {/markers/markers:core/aif#41:aif:acc.itm}
+load net {aif#41:aif:acc.itm(4)} -pin  "aif#41:aif:acc" {Z(4)} -attr vt dc -attr @path {/markers/markers:core/aif#41:aif:acc.itm}
+load net {aif#41:aif:acc.itm(5)} -pin  "aif#41:aif:acc" {Z(5)} -attr vt dc -attr @path {/markers/markers:core/aif#41:aif:acc.itm}
+load net {aif#41:aif:acc.itm(6)} -pin  "aif#41:aif:acc" {Z(6)} -attr vt dc -attr @path {/markers/markers:core/aif#41:aif:acc.itm}
+load net {aif#41:aif:acc.itm(7)} -pin  "aif#41:aif:acc" {Z(7)} -attr vt dc -attr @path {/markers/markers:core/aif#41:aif:acc.itm}
+load net {aif#41:aif:acc.itm(8)} -pin  "aif#41:aif:acc" {Z(8)} -attr vt dc -attr @path {/markers/markers:core/aif#41:aif:acc.itm}
+load net {aif#41:aif:acc.itm(9)} -pin  "aif#41:aif:acc" {Z(9)} -attr vt dc -attr @path {/markers/markers:core/aif#41:aif:acc.itm}
+load net {aif#41:aif:acc.itm(10)} -pin  "aif#41:aif:acc" {Z(10)} -attr vt dc -attr @path {/markers/markers:core/aif#41:aif:acc.itm}
+load inst "mux" "mux(2,1)" "INTERFACE" -attr xrf 121752 -attr oid 33 -attr vt c -attr @path {/markers/markers:core/mux} -attr area 0.920423 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_mux(1,1,2)"
+load net {aif#41:aif:acc.cse.sg1} -pin  "mux" {A0(0)} -attr @path {/markers/markers:core/aif#41:aif:acc.cse.sg1}
+load net {aif#41:aif:acc.itm(10)} -pin  "mux" {A1(0)} -attr vt c -attr @path {/markers/markers:core/if#12:slc#1.itm}
+load net {aif#39:acc.itm(10)} -pin  "mux" {S(0)} -attr @path {/markers/markers:core/if#12:slc#2.itm}
+load net {aif#41:aif:acc.cse.sg1:mx0} -pin  "mux" {Z(0)} -attr vt c -attr @path {/markers/markers:core/aif#41:aif:acc.cse.sg1:mx0}
+load inst "nor" "nor(3,1)" "INTERFACE" -attr xrf 121753 -attr oid 34 -attr vt c -attr @path {/markers/markers:core/nor} -attr area 1.055476 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_nor(1,3)"
+load net {aif#41:aif:acc.cse.sg1:mx0} -pin  "nor" {A0(0)} -attr vt c -attr @path {/markers/markers:core/aif#41:aif:acc.cse.sg1:mx0}
+load net {aif#39:acc.itm(10)} -pin  "nor" {A1(0)} -attr @path {/markers/markers:core/if#12:slc#3.itm}
+load net {land#13.lpi.dfm} -pin  "nor" {A2(0)} -attr vt c -attr @path {/markers/markers:core/land#13.lpi.dfm}
+load net {nor.itm} -pin  "nor" {Z(0)} -attr vt c -attr @path {/markers/markers:core/nor.itm}
+load inst "deltax_square_red:not#1" "not(10)" "INTERFACE" -attr xrf 121754 -attr oid 35 -attr vt d -attr @path {/markers/markers:core/deltax_square_red:not#1} -attr area 0.001000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_not(10)"
+load net {vga_xy(0)} -pin  "deltax_square_red:not#1" {A(0)} -attr vt d -attr @path {/markers/markers:core/slc(vga_xy#1)#9.itm}
+load net {vga_xy(1)} -pin  "deltax_square_red:not#1" {A(1)} -attr vt d -attr @path {/markers/markers:core/slc(vga_xy#1)#9.itm}
+load net {vga_xy(2)} -pin  "deltax_square_red:not#1" {A(2)} -attr vt d -attr @path {/markers/markers:core/slc(vga_xy#1)#9.itm}
+load net {vga_xy(3)} -pin  "deltax_square_red:not#1" {A(3)} -attr vt d -attr @path {/markers/markers:core/slc(vga_xy#1)#9.itm}
+load net {vga_xy(4)} -pin  "deltax_square_red:not#1" {A(4)} -attr vt d -attr @path {/markers/markers:core/slc(vga_xy#1)#9.itm}
+load net {vga_xy(5)} -pin  "deltax_square_red:not#1" {A(5)} -attr vt d -attr @path {/markers/markers:core/slc(vga_xy#1)#9.itm}
+load net {vga_xy(6)} -pin  "deltax_square_red:not#1" {A(6)} -attr vt d -attr @path {/markers/markers:core/slc(vga_xy#1)#9.itm}
+load net {vga_xy(7)} -pin  "deltax_square_red:not#1" {A(7)} -attr vt d -attr @path {/markers/markers:core/slc(vga_xy#1)#9.itm}
+load net {vga_xy(8)} -pin  "deltax_square_red:not#1" {A(8)} -attr vt d -attr @path {/markers/markers:core/slc(vga_xy#1)#9.itm}
+load net {vga_xy(9)} -pin  "deltax_square_red:not#1" {A(9)} -attr vt d -attr @path {/markers/markers:core/slc(vga_xy#1)#9.itm}
+load net {deltax_square_red:not#1.itm(0)} -pin  "deltax_square_red:not#1" {Z(0)} -attr vt d -attr @path {/markers/markers:core/deltax_square_red:not#1.itm}
+load net {deltax_square_red:not#1.itm(1)} -pin  "deltax_square_red:not#1" {Z(1)} -attr vt d -attr @path {/markers/markers:core/deltax_square_red:not#1.itm}
+load net {deltax_square_red:not#1.itm(2)} -pin  "deltax_square_red:not#1" {Z(2)} -attr vt d -attr @path {/markers/markers:core/deltax_square_red:not#1.itm}
+load net {deltax_square_red:not#1.itm(3)} -pin  "deltax_square_red:not#1" {Z(3)} -attr vt d -attr @path {/markers/markers:core/deltax_square_red:not#1.itm}
+load net {deltax_square_red:not#1.itm(4)} -pin  "deltax_square_red:not#1" {Z(4)} -attr vt d -attr @path {/markers/markers:core/deltax_square_red:not#1.itm}
+load net {deltax_square_red:not#1.itm(5)} -pin  "deltax_square_red:not#1" {Z(5)} -attr vt d -attr @path {/markers/markers:core/deltax_square_red:not#1.itm}
+load net {deltax_square_red:not#1.itm(6)} -pin  "deltax_square_red:not#1" {Z(6)} -attr vt d -attr @path {/markers/markers:core/deltax_square_red:not#1.itm}
+load net {deltax_square_red:not#1.itm(7)} -pin  "deltax_square_red:not#1" {Z(7)} -attr vt d -attr @path {/markers/markers:core/deltax_square_red:not#1.itm}
+load net {deltax_square_red:not#1.itm(8)} -pin  "deltax_square_red:not#1" {Z(8)} -attr vt d -attr @path {/markers/markers:core/deltax_square_red:not#1.itm}
+load net {deltax_square_red:not#1.itm(9)} -pin  "deltax_square_red:not#1" {Z(9)} -attr vt d -attr @path {/markers/markers:core/deltax_square_red:not#1.itm}
+load inst "aif#39:acc" "add(11,-1,6,0,11)" "INTERFACE" -attr xrf 121755 -attr oid 36 -attr vt d -attr @path {/markers/markers:core/aif#39:acc} -attr area 12.000000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(11,0,7,1,11)"
+load net {deltax_square_red:not#1.itm(0)} -pin  "aif#39:acc" {A(0)} -attr vt d -attr @path {/markers/markers:core/conc#15.itm}
+load net {deltax_square_red:not#1.itm(1)} -pin  "aif#39:acc" {A(1)} -attr vt d -attr @path {/markers/markers:core/conc#15.itm}
+load net {deltax_square_red:not#1.itm(2)} -pin  "aif#39:acc" {A(2)} -attr vt d -attr @path {/markers/markers:core/conc#15.itm}
+load net {deltax_square_red:not#1.itm(3)} -pin  "aif#39:acc" {A(3)} -attr vt d -attr @path {/markers/markers:core/conc#15.itm}
+load net {deltax_square_red:not#1.itm(4)} -pin  "aif#39:acc" {A(4)} -attr vt d -attr @path {/markers/markers:core/conc#15.itm}
+load net {deltax_square_red:not#1.itm(5)} -pin  "aif#39:acc" {A(5)} -attr vt d -attr @path {/markers/markers:core/conc#15.itm}
+load net {deltax_square_red:not#1.itm(6)} -pin  "aif#39:acc" {A(6)} -attr vt d -attr @path {/markers/markers:core/conc#15.itm}
+load net {deltax_square_red:not#1.itm(7)} -pin  "aif#39:acc" {A(7)} -attr vt d -attr @path {/markers/markers:core/conc#15.itm}
+load net {deltax_square_red:not#1.itm(8)} -pin  "aif#39:acc" {A(8)} -attr vt d -attr @path {/markers/markers:core/conc#15.itm}
+load net {deltax_square_red:not#1.itm(9)} -pin  "aif#39:acc" {A(9)} -attr vt d -attr @path {/markers/markers:core/conc#15.itm}
+load net {PWR} -pin  "aif#39:acc" {A(10)} -attr @path {/markers/markers:core/conc#15.itm}
+load net {PWR} -pin  "aif#39:acc" {B(0)} -attr @path {/markers/markers:core/C41_6}
+load net {GND} -pin  "aif#39:acc" {B(1)} -attr @path {/markers/markers:core/C41_6}
+load net {GND} -pin  "aif#39:acc" {B(2)} -attr @path {/markers/markers:core/C41_6}
+load net {PWR} -pin  "aif#39:acc" {B(3)} -attr @path {/markers/markers:core/C41_6}
+load net {GND} -pin  "aif#39:acc" {B(4)} -attr @path {/markers/markers:core/C41_6}
+load net {PWR} -pin  "aif#39:acc" {B(5)} -attr @path {/markers/markers:core/C41_6}
+load net {aif#39:acc.itm(0)} -pin  "aif#39:acc" {Z(0)} -attr vt d -attr @path {/markers/markers:core/aif#39:acc.itm}
+load net {aif#39:acc.itm(1)} -pin  "aif#39:acc" {Z(1)} -attr vt d -attr @path {/markers/markers:core/aif#39:acc.itm}
+load net {aif#39:acc.itm(2)} -pin  "aif#39:acc" {Z(2)} -attr vt d -attr @path {/markers/markers:core/aif#39:acc.itm}
+load net {aif#39:acc.itm(3)} -pin  "aif#39:acc" {Z(3)} -attr vt d -attr @path {/markers/markers:core/aif#39:acc.itm}
+load net {aif#39:acc.itm(4)} -pin  "aif#39:acc" {Z(4)} -attr vt d -attr @path {/markers/markers:core/aif#39:acc.itm}
+load net {aif#39:acc.itm(5)} -pin  "aif#39:acc" {Z(5)} -attr vt d -attr @path {/markers/markers:core/aif#39:acc.itm}
+load net {aif#39:acc.itm(6)} -pin  "aif#39:acc" {Z(6)} -attr vt d -attr @path {/markers/markers:core/aif#39:acc.itm}
+load net {aif#39:acc.itm(7)} -pin  "aif#39:acc" {Z(7)} -attr vt d -attr @path {/markers/markers:core/aif#39:acc.itm}
+load net {aif#39:acc.itm(8)} -pin  "aif#39:acc" {Z(8)} -attr vt d -attr @path {/markers/markers:core/aif#39:acc.itm}
+load net {aif#39:acc.itm(9)} -pin  "aif#39:acc" {Z(9)} -attr vt d -attr @path {/markers/markers:core/aif#39:acc.itm}
+load net {aif#39:acc.itm(10)} -pin  "aif#39:acc" {Z(10)} -attr vt d -attr @path {/markers/markers:core/aif#39:acc.itm}
+load inst "if#13:nor" "nor(2,1)" "INTERFACE" -attr xrf 121756 -attr oid 37 -attr vt c -attr @path {/markers/markers:core/if#13:nor} -attr area 0.730832 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_nor(1,2)"
+load net {aif#41:aif:acc.cse.sg1:mx0} -pin  "if#13:nor" {A0(0)} -attr vt c -attr @path {/markers/markers:core/aif#41:aif:acc.cse.sg1:mx0}
+load net {aif#39:acc.itm(10)} -pin  "if#13:nor" {A1(0)} -attr @path {/markers/markers:core/if#12:slc.itm}
+load net {land#13.lpi.dfm} -pin  "if#13:nor" {Z(0)} -attr vt c -attr @path {/markers/markers:core/land#13.lpi.dfm}
+load inst "reg(vout:rsc:mgc_out_stdreg.d)" "reg(10,1,1,-1,0)" "INTERFACE" -attr xrf 121757 -attr oid 38 -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d)}
+load net {land#13.lpi.dfm} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {D(0)} -attr vt d -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d)#1.itm}
+load net {land#13.lpi.dfm} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {D(1)} -attr vt d -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d)#1.itm}
+load net {land#13.lpi.dfm} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {D(2)} -attr vt d -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d)#1.itm}
+load net {land#13.lpi.dfm} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {D(3)} -attr vt d -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d)#1.itm}
+load net {land#13.lpi.dfm} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {D(4)} -attr vt d -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d)#1.itm}
+load net {land#13.lpi.dfm} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {D(5)} -attr vt d -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d)#1.itm}
+load net {land#13.lpi.dfm} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {D(6)} -attr vt d -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d)#1.itm}
+load net {land#13.lpi.dfm} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {D(7)} -attr vt d -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d)#1.itm}
+load net {land#13.lpi.dfm} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {D(8)} -attr vt d -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d)#1.itm}
+load net {land#13.lpi.dfm} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {D(9)} -attr vt d -attr @path {/markers/markers:core/slc(vout:rsc:mgc_out_stdreg.d)#1.itm}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {DRa(0)} -attr @path {/markers/markers:core/C0_30#12}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {DRa(1)} -attr @path {/markers/markers:core/C0_30#12}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {DRa(2)} -attr @path {/markers/markers:core/C0_30#12}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {DRa(3)} -attr @path {/markers/markers:core/C0_30#12}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {DRa(4)} -attr @path {/markers/markers:core/C0_30#12}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {DRa(5)} -attr @path {/markers/markers:core/C0_30#12}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {DRa(6)} -attr @path {/markers/markers:core/C0_30#12}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {DRa(7)} -attr @path {/markers/markers:core/C0_30#12}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {DRa(8)} -attr @path {/markers/markers:core/C0_30#12}
+load net {GND} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {DRa(9)} -attr @path {/markers/markers:core/C0_30#12}
+load net {clk} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {clk} -attr xrf 121758 -attr oid 39 -attr @path {/markers/markers:core/clk}
+load net {en} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {en(0)} -attr @path {/markers/markers:core/en}
+load net {arst_n} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {Ra(0)} -attr @path {/markers/markers:core/arst_n}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(0)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {Z(0)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(1)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {Z(1)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(2)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {Z(2)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(3)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {Z(3)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(4)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {Z(4)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(5)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {Z(5)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(6)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {Z(6)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(7)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {Z(7)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(8)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {Z(8)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp}
+load net {reg(vout:rsc:mgc_out_stdreg.d).tmp(9)} -pin  "reg(vout:rsc:mgc_out_stdreg.d)" {Z(9)} -attr vt d -attr @path {/markers/markers:core/reg(vout:rsc:mgc_out_stdreg.d).tmp}
+### END MODULE 
+
+module new "markers" "orig"
+load portBus {vin(89:0)} input 90 {vin(89)} {vin(88)} {vin(87)} {vin(86)} {vin(85)} {vin(84)} {vin(83)} {vin(82)} {vin(81)} {vin(80)} {vin(79)} {vin(78)} {vin(77)} {vin(76)} {vin(75)} {vin(74)} {vin(73)} {vin(72)} {vin(71)} {vin(70)} {vin(69)} {vin(68)} {vin(67)} {vin(66)} {vin(65)} {vin(64)} {vin(63)} {vin(62)} {vin(61)} {vin(60)} {vin(59)} {vin(58)} {vin(57)} {vin(56)} {vin(55)} {vin(54)} {vin(53)} {vin(52)} {vin(51)} {vin(50)} {vin(49)} {vin(48)} {vin(47)} {vin(46)} {vin(45)} {vin(44)} {vin(43)} {vin(42)} {vin(41)} {vin(40)} {vin(39)} {vin(38)} {vin(37)} {vin(36)} {vin(35)} {vin(34)} {vin(33)} {vin(32)} {vin(31)} {vin(30)} {vin(29)} {vin(28)} {vin(27)} {vin(26)} {vin(25)} {vin(24)} {vin(23)} {vin(22)} {vin(21)} {vin(20)} {vin(19)} {vin(18)} {vin(17)} {vin(16)} {vin(15)} {vin(14)} {vin(13)} {vin(12)} {vin(11)} {vin(10)} {vin(9)} {vin(8)} {vin(7)} {vin(6)} {vin(5)} {vin(4)} {vin(3)} {vin(2)} {vin(1)} {vin(0)} -attr xrf 121759 -attr oid 40 -attr vt d -attr @path {/markers/vin}
+load portBus {vout:rsc.z(29:0)} output 30 {vout:rsc.z(29)} {vout:rsc.z(28)} {vout:rsc.z(27)} {vout:rsc.z(26)} {vout:rsc.z(25)} {vout:rsc.z(24)} {vout:rsc.z(23)} {vout:rsc.z(22)} {vout:rsc.z(21)} {vout:rsc.z(20)} {vout:rsc.z(19)} {vout:rsc.z(18)} {vout:rsc.z(17)} {vout:rsc.z(16)} {vout:rsc.z(15)} {vout:rsc.z(14)} {vout:rsc.z(13)} {vout:rsc.z(12)} {vout:rsc.z(11)} {vout:rsc.z(10)} {vout:rsc.z(9)} {vout:rsc.z(8)} {vout:rsc.z(7)} {vout:rsc.z(6)} {vout:rsc.z(5)} {vout:rsc.z(4)} {vout:rsc.z(3)} {vout:rsc.z(2)} {vout:rsc.z(1)} {vout:rsc.z(0)} -attr xrf 121760 -attr oid 41 -attr vt d -attr @path {/markers/vout:rsc.z}
+load portBus {vga_xy(19:0)} input 20 {vga_xy(19)} {vga_xy(18)} {vga_xy(17)} {vga_xy(16)} {vga_xy(15)} {vga_xy(14)} {vga_xy(13)} {vga_xy(12)} {vga_xy(11)} {vga_xy(10)} {vga_xy(9)} {vga_xy(8)} {vga_xy(7)} {vga_xy(6)} {vga_xy(5)} {vga_xy(4)} {vga_xy(3)} {vga_xy(2)} {vga_xy(1)} {vga_xy(0)} -attr xrf 121761 -attr oid 42 -attr vt d -attr @path {/markers/vga_xy}
+load portBus {volume:rsc.z(3:0)} output 4 {volume:rsc.z(3)} {volume:rsc.z(2)} {volume:rsc.z(1)} {volume:rsc.z(0)} -attr xrf 121762 -attr oid 43 -attr vt d -attr @path {/markers/volume:rsc.z}
+load port {clk} input -attr xrf 121763 -attr oid 44 -attr vt d -attr @path {/markers/clk}
+load port {en} input -attr xrf 121764 -attr oid 45 -attr vt d -attr @path {/markers/en}
+load port {arst_n} input -attr xrf 121765 -attr oid 46 -attr vt d -attr @path {/markers/arst_n}
+load symbol "mgc_ioport.mgc_out_stdreg(2,30)" "INTERFACE" GEN boxcolor 0 \
+     portBus {d(29:0)} input 30 {d(29)} {d(28)} {d(27)} {d(26)} {d(25)} {d(24)} {d(23)} {d(22)} {d(21)} {d(20)} {d(19)} {d(18)} {d(17)} {d(16)} {d(15)} {d(14)} {d(13)} {d(12)} {d(11)} {d(10)} {d(9)} {d(8)} {d(7)} {d(6)} {d(5)} {d(4)} {d(3)} {d(2)} {d(1)} {d(0)} \
+     portBus {z(29:0)} output 30 {z(29)} {z(28)} {z(27)} {z(26)} {z(25)} {z(24)} {z(23)} {z(22)} {z(21)} {z(20)} {z(19)} {z(18)} {z(17)} {z(16)} {z(15)} {z(14)} {z(13)} {z(12)} {z(11)} {z(10)} {z(9)} {z(8)} {z(7)} {z(6)} {z(5)} {z(4)} {z(3)} {z(2)} {z(1)} {z(0)} \
+
+load symbol "mgc_ioport.mgc_out_stdreg(4,4)" "INTERFACE" GEN boxcolor 0 \
+     portBus {d(3:0)} input 4 {d(3)} {d(2)} {d(1)} {d(0)} \
+     portBus {z(3:0)} output 4 {z(3)} {z(2)} {z(1)} {z(0)} \
+
+load symbol "markers:core" "orig" GEN \
+     portBus {vga_xy#1(19:0)} input 20 {vga_xy#1(19)} {vga_xy#1(18)} {vga_xy#1(17)} {vga_xy#1(16)} {vga_xy#1(15)} {vga_xy#1(14)} {vga_xy#1(13)} {vga_xy#1(12)} {vga_xy#1(11)} {vga_xy#1(10)} {vga_xy#1(9)} {vga_xy#1(8)} {vga_xy#1(7)} {vga_xy#1(6)} {vga_xy#1(5)} {vga_xy#1(4)} {vga_xy#1(3)} {vga_xy#1(2)} {vga_xy#1(1)} {vga_xy#1(0)} \
+     port {clk#1} input \
+     port {en#1} input \
+     port {arst_n#1} input \
+     portBus {vout:rsc:mgc_out_stdreg.d(29:0)} output 30 {vout:rsc:mgc_out_stdreg.d(29)} {vout:rsc:mgc_out_stdreg.d(28)} {vout:rsc:mgc_out_stdreg.d(27)} {vout:rsc:mgc_out_stdreg.d(26)} {vout:rsc:mgc_out_stdreg.d(25)} {vout:rsc:mgc_out_stdreg.d(24)} {vout:rsc:mgc_out_stdreg.d(23)} {vout:rsc:mgc_out_stdreg.d(22)} {vout:rsc:mgc_out_stdreg.d(21)} {vout:rsc:mgc_out_stdreg.d(20)} {vout:rsc:mgc_out_stdreg.d(19)} {vout:rsc:mgc_out_stdreg.d(18)} {vout:rsc:mgc_out_stdreg.d(17)} {vout:rsc:mgc_out_stdreg.d(16)} {vout:rsc:mgc_out_stdreg.d(15)} {vout:rsc:mgc_out_stdreg.d(14)} {vout:rsc:mgc_out_stdreg.d(13)} {vout:rsc:mgc_out_stdreg.d(12)} {vout:rsc:mgc_out_stdreg.d(11)} {vout:rsc:mgc_out_stdreg.d(10)} {vout:rsc:mgc_out_stdreg.d(9)} {vout:rsc:mgc_out_stdreg.d(8)} {vout:rsc:mgc_out_stdreg.d(7)} {vout:rsc:mgc_out_stdreg.d(6)} {vout:rsc:mgc_out_stdreg.d(5)} {vout:rsc:mgc_out_stdreg.d(4)} {vout:rsc:mgc_out_stdreg.d(3)} {vout:rsc:mgc_out_stdreg.d(2)} {vout:rsc:mgc_out_stdreg.d(1)} {vout:rsc:mgc_out_stdreg.d(0)} \
+
+load net {vout:rsc:mgc_out_stdreg.d#1(0)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(1)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(2)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(3)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(4)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(5)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(6)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(7)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(8)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(9)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(10)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(11)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(12)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(13)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(14)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(15)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(16)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(17)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(18)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(19)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(20)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(21)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(22)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(23)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(24)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(25)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(26)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(27)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(28)} -attr vt d
+load net {vout:rsc:mgc_out_stdreg.d#1(29)} -attr vt d
+load netBundle {vout:rsc:mgc_out_stdreg.d#1} 30 {vout:rsc:mgc_out_stdreg.d#1(0)} {vout:rsc:mgc_out_stdreg.d#1(1)} {vout:rsc:mgc_out_stdreg.d#1(2)} {vout:rsc:mgc_out_stdreg.d#1(3)} {vout:rsc:mgc_out_stdreg.d#1(4)} {vout:rsc:mgc_out_stdreg.d#1(5)} {vout:rsc:mgc_out_stdreg.d#1(6)} {vout:rsc:mgc_out_stdreg.d#1(7)} {vout:rsc:mgc_out_stdreg.d#1(8)} {vout:rsc:mgc_out_stdreg.d#1(9)} {vout:rsc:mgc_out_stdreg.d#1(10)} {vout:rsc:mgc_out_stdreg.d#1(11)} {vout:rsc:mgc_out_stdreg.d#1(12)} {vout:rsc:mgc_out_stdreg.d#1(13)} {vout:rsc:mgc_out_stdreg.d#1(14)} {vout:rsc:mgc_out_stdreg.d#1(15)} {vout:rsc:mgc_out_stdreg.d#1(16)} {vout:rsc:mgc_out_stdreg.d#1(17)} {vout:rsc:mgc_out_stdreg.d#1(18)} {vout:rsc:mgc_out_stdreg.d#1(19)} {vout:rsc:mgc_out_stdreg.d#1(20)} {vout:rsc:mgc_out_stdreg.d#1(21)} {vout:rsc:mgc_out_stdreg.d#1(22)} {vout:rsc:mgc_out_stdreg.d#1(23)} {vout:rsc:mgc_out_stdreg.d#1(24)} {vout:rsc:mgc_out_stdreg.d#1(25)} {vout:rsc:mgc_out_stdreg.d#1(26)} {vout:rsc:mgc_out_stdreg.d#1(27)} {vout:rsc:mgc_out_stdreg.d#1(28)} {vout:rsc:mgc_out_stdreg.d#1(29)} -attr xrf 121766 -attr oid 47 -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vin(0)} -attr vt d
+load net {vin(1)} -attr vt d
+load net {vin(2)} -attr vt d
+load net {vin(3)} -attr vt d
+load net {vin(4)} -attr vt d
+load net {vin(5)} -attr vt d
+load net {vin(6)} -attr vt d
+load net {vin(7)} -attr vt d
+load net {vin(8)} -attr vt d
+load net {vin(9)} -attr vt d
+load net {vin(10)} -attr vt d
+load net {vin(11)} -attr vt d
+load net {vin(12)} -attr vt d
+load net {vin(13)} -attr vt d
+load net {vin(14)} -attr vt d
+load net {vin(15)} -attr vt d
+load net {vin(16)} -attr vt d
+load net {vin(17)} -attr vt d
+load net {vin(18)} -attr vt d
+load net {vin(19)} -attr vt d
+load net {vin(20)} -attr vt d
+load net {vin(21)} -attr vt d
+load net {vin(22)} -attr vt d
+load net {vin(23)} -attr vt d
+load net {vin(24)} -attr vt d
+load net {vin(25)} -attr vt d
+load net {vin(26)} -attr vt d
+load net {vin(27)} -attr vt d
+load net {vin(28)} -attr vt d
+load net {vin(29)} -attr vt d
+load net {vin(30)} -attr vt d
+load net {vin(31)} -attr vt d
+load net {vin(32)} -attr vt d
+load net {vin(33)} -attr vt d
+load net {vin(34)} -attr vt d
+load net {vin(35)} -attr vt d
+load net {vin(36)} -attr vt d
+load net {vin(37)} -attr vt d
+load net {vin(38)} -attr vt d
+load net {vin(39)} -attr vt d
+load net {vin(40)} -attr vt d
+load net {vin(41)} -attr vt d
+load net {vin(42)} -attr vt d
+load net {vin(43)} -attr vt d
+load net {vin(44)} -attr vt d
+load net {vin(45)} -attr vt d
+load net {vin(46)} -attr vt d
+load net {vin(47)} -attr vt d
+load net {vin(48)} -attr vt d
+load net {vin(49)} -attr vt d
+load net {vin(50)} -attr vt d
+load net {vin(51)} -attr vt d
+load net {vin(52)} -attr vt d
+load net {vin(53)} -attr vt d
+load net {vin(54)} -attr vt d
+load net {vin(55)} -attr vt d
+load net {vin(56)} -attr vt d
+load net {vin(57)} -attr vt d
+load net {vin(58)} -attr vt d
+load net {vin(59)} -attr vt d
+load net {vin(60)} -attr vt d
+load net {vin(61)} -attr vt d
+load net {vin(62)} -attr vt d
+load net {vin(63)} -attr vt d
+load net {vin(64)} -attr vt d
+load net {vin(65)} -attr vt d
+load net {vin(66)} -attr vt d
+load net {vin(67)} -attr vt d
+load net {vin(68)} -attr vt d
+load net {vin(69)} -attr vt d
+load net {vin(70)} -attr vt d
+load net {vin(71)} -attr vt d
+load net {vin(72)} -attr vt d
+load net {vin(73)} -attr vt d
+load net {vin(74)} -attr vt d
+load net {vin(75)} -attr vt d
+load net {vin(76)} -attr vt d
+load net {vin(77)} -attr vt d
+load net {vin(78)} -attr vt d
+load net {vin(79)} -attr vt d
+load net {vin(80)} -attr vt d
+load net {vin(81)} -attr vt d
+load net {vin(82)} -attr vt d
+load net {vin(83)} -attr vt d
+load net {vin(84)} -attr vt d
+load net {vin(85)} -attr vt d
+load net {vin(86)} -attr vt d
+load net {vin(87)} -attr vt d
+load net {vin(88)} -attr vt d
+load net {vin(89)} -attr vt d
+load netBundle {vin} 90 {vin(0)} {vin(1)} {vin(2)} {vin(3)} {vin(4)} {vin(5)} {vin(6)} {vin(7)} {vin(8)} {vin(9)} {vin(10)} {vin(11)} {vin(12)} {vin(13)} {vin(14)} {vin(15)} {vin(16)} {vin(17)} {vin(18)} {vin(19)} {vin(20)} {vin(21)} {vin(22)} {vin(23)} {vin(24)} {vin(25)} {vin(26)} {vin(27)} {vin(28)} {vin(29)} {vin(30)} {vin(31)} {vin(32)} {vin(33)} {vin(34)} {vin(35)} {vin(36)} {vin(37)} {vin(38)} {vin(39)} {vin(40)} {vin(41)} {vin(42)} {vin(43)} {vin(44)} {vin(45)} {vin(46)} {vin(47)} {vin(48)} {vin(49)} {vin(50)} {vin(51)} {vin(52)} {vin(53)} {vin(54)} {vin(55)} {vin(56)} {vin(57)} {vin(58)} {vin(59)} {vin(60)} {vin(61)} {vin(62)} {vin(63)} {vin(64)} {vin(65)} {vin(66)} {vin(67)} {vin(68)} {vin(69)} {vin(70)} {vin(71)} {vin(72)} {vin(73)} {vin(74)} {vin(75)} {vin(76)} {vin(77)} {vin(78)} {vin(79)} {vin(80)} {vin(81)} {vin(82)} {vin(83)} {vin(84)} {vin(85)} {vin(86)} {vin(87)} {vin(88)} {vin(89)} -attr xrf 121767 -attr oid 48 -attr vt d -attr @path {/markers/vin}
+load net {vin(0)} -port {vin(0)} -attr vt d
+load net {vin(1)} -port {vin(1)} -attr vt d
+load net {vin(2)} -port {vin(2)} -attr vt d
+load net {vin(3)} -port {vin(3)} -attr vt d
+load net {vin(4)} -port {vin(4)} -attr vt d
+load net {vin(5)} -port {vin(5)} -attr vt d
+load net {vin(6)} -port {vin(6)} -attr vt d
+load net {vin(7)} -port {vin(7)} -attr vt d
+load net {vin(8)} -port {vin(8)} -attr vt d
+load net {vin(9)} -port {vin(9)} -attr vt d
+load net {vin(10)} -port {vin(10)} -attr vt d
+load net {vin(11)} -port {vin(11)} -attr vt d
+load net {vin(12)} -port {vin(12)} -attr vt d
+load net {vin(13)} -port {vin(13)} -attr vt d
+load net {vin(14)} -port {vin(14)} -attr vt d
+load net {vin(15)} -port {vin(15)} -attr vt d
+load net {vin(16)} -port {vin(16)} -attr vt d
+load net {vin(17)} -port {vin(17)} -attr vt d
+load net {vin(18)} -port {vin(18)} -attr vt d
+load net {vin(19)} -port {vin(19)} -attr vt d
+load net {vin(20)} -port {vin(20)} -attr vt d
+load net {vin(21)} -port {vin(21)} -attr vt d
+load net {vin(22)} -port {vin(22)} -attr vt d
+load net {vin(23)} -port {vin(23)} -attr vt d
+load net {vin(24)} -port {vin(24)} -attr vt d
+load net {vin(25)} -port {vin(25)} -attr vt d
+load net {vin(26)} -port {vin(26)} -attr vt d
+load net {vin(27)} -port {vin(27)} -attr vt d
+load net {vin(28)} -port {vin(28)} -attr vt d
+load net {vin(29)} -port {vin(29)} -attr vt d
+load net {vin(30)} -port {vin(30)} -attr vt d
+load net {vin(31)} -port {vin(31)} -attr vt d
+load net {vin(32)} -port {vin(32)} -attr vt d
+load net {vin(33)} -port {vin(33)} -attr vt d
+load net {vin(34)} -port {vin(34)} -attr vt d
+load net {vin(35)} -port {vin(35)} -attr vt d
+load net {vin(36)} -port {vin(36)} -attr vt d
+load net {vin(37)} -port {vin(37)} -attr vt d
+load net {vin(38)} -port {vin(38)} -attr vt d
+load net {vin(39)} -port {vin(39)} -attr vt d
+load net {vin(40)} -port {vin(40)} -attr vt d
+load net {vin(41)} -port {vin(41)} -attr vt d
+load net {vin(42)} -port {vin(42)} -attr vt d
+load net {vin(43)} -port {vin(43)} -attr vt d
+load net {vin(44)} -port {vin(44)} -attr vt d
+load net {vin(45)} -port {vin(45)} -attr vt d
+load net {vin(46)} -port {vin(46)} -attr vt d
+load net {vin(47)} -port {vin(47)} -attr vt d
+load net {vin(48)} -port {vin(48)} -attr vt d
+load net {vin(49)} -port {vin(49)} -attr vt d
+load net {vin(50)} -port {vin(50)} -attr vt d
+load net {vin(51)} -port {vin(51)} -attr vt d
+load net {vin(52)} -port {vin(52)} -attr vt d
+load net {vin(53)} -port {vin(53)} -attr vt d
+load net {vin(54)} -port {vin(54)} -attr vt d
+load net {vin(55)} -port {vin(55)} -attr vt d
+load net {vin(56)} -port {vin(56)} -attr vt d
+load net {vin(57)} -port {vin(57)} -attr vt d
+load net {vin(58)} -port {vin(58)} -attr vt d
+load net {vin(59)} -port {vin(59)} -attr vt d
+load net {vin(60)} -port {vin(60)} -attr vt d
+load net {vin(61)} -port {vin(61)} -attr vt d
+load net {vin(62)} -port {vin(62)} -attr vt d
+load net {vin(63)} -port {vin(63)} -attr vt d
+load net {vin(64)} -port {vin(64)} -attr vt d
+load net {vin(65)} -port {vin(65)} -attr vt d
+load net {vin(66)} -port {vin(66)} -attr vt d
+load net {vin(67)} -port {vin(67)} -attr vt d
+load net {vin(68)} -port {vin(68)} -attr vt d
+load net {vin(69)} -port {vin(69)} -attr vt d
+load net {vin(70)} -port {vin(70)} -attr vt d
+load net {vin(71)} -port {vin(71)} -attr vt d
+load net {vin(72)} -port {vin(72)} -attr vt d
+load net {vin(73)} -port {vin(73)} -attr vt d
+load net {vin(74)} -port {vin(74)} -attr vt d
+load net {vin(75)} -port {vin(75)} -attr vt d
+load net {vin(76)} -port {vin(76)} -attr vt d
+load net {vin(77)} -port {vin(77)} -attr vt d
+load net {vin(78)} -port {vin(78)} -attr vt d
+load net {vin(79)} -port {vin(79)} -attr vt d
+load net {vin(80)} -port {vin(80)} -attr vt d
+load net {vin(81)} -port {vin(81)} -attr vt d
+load net {vin(82)} -port {vin(82)} -attr vt d
+load net {vin(83)} -port {vin(83)} -attr vt d
+load net {vin(84)} -port {vin(84)} -attr vt d
+load net {vin(85)} -port {vin(85)} -attr vt d
+load net {vin(86)} -port {vin(86)} -attr vt d
+load net {vin(87)} -port {vin(87)} -attr vt d
+load net {vin(88)} -port {vin(88)} -attr vt d
+load net {vin(89)} -port {vin(89)} -attr vt d
+load netBundle {vin} 90 {vin(0)} {vin(1)} {vin(2)} {vin(3)} {vin(4)} {vin(5)} {vin(6)} {vin(7)} {vin(8)} {vin(9)} {vin(10)} {vin(11)} {vin(12)} {vin(13)} {vin(14)} {vin(15)} {vin(16)} {vin(17)} {vin(18)} {vin(19)} {vin(20)} {vin(21)} {vin(22)} {vin(23)} {vin(24)} {vin(25)} {vin(26)} {vin(27)} {vin(28)} {vin(29)} {vin(30)} {vin(31)} {vin(32)} {vin(33)} {vin(34)} {vin(35)} {vin(36)} {vin(37)} {vin(38)} {vin(39)} {vin(40)} {vin(41)} {vin(42)} {vin(43)} {vin(44)} {vin(45)} {vin(46)} {vin(47)} {vin(48)} {vin(49)} {vin(50)} {vin(51)} {vin(52)} {vin(53)} {vin(54)} {vin(55)} {vin(56)} {vin(57)} {vin(58)} {vin(59)} {vin(60)} {vin(61)} {vin(62)} {vin(63)} {vin(64)} {vin(65)} {vin(66)} {vin(67)} {vin(68)} {vin(69)} {vin(70)} {vin(71)} {vin(72)} {vin(73)} {vin(74)} {vin(75)} {vin(76)} {vin(77)} {vin(78)} {vin(79)} {vin(80)} {vin(81)} {vin(82)} {vin(83)} {vin(84)} {vin(85)} {vin(86)} {vin(87)} {vin(88)} {vin(89)} -attr xrf 121768 -attr oid 49 -attr vt d -attr @path {/markers/vin}
+load net {vout:rsc.z(0)} -attr vt d
+load net {vout:rsc.z(1)} -attr vt d
+load net {vout:rsc.z(2)} -attr vt d
+load net {vout:rsc.z(3)} -attr vt d
+load net {vout:rsc.z(4)} -attr vt d
+load net {vout:rsc.z(5)} -attr vt d
+load net {vout:rsc.z(6)} -attr vt d
+load net {vout:rsc.z(7)} -attr vt d
+load net {vout:rsc.z(8)} -attr vt d
+load net {vout:rsc.z(9)} -attr vt d
+load net {vout:rsc.z(10)} -attr vt d
+load net {vout:rsc.z(11)} -attr vt d
+load net {vout:rsc.z(12)} -attr vt d
+load net {vout:rsc.z(13)} -attr vt d
+load net {vout:rsc.z(14)} -attr vt d
+load net {vout:rsc.z(15)} -attr vt d
+load net {vout:rsc.z(16)} -attr vt d
+load net {vout:rsc.z(17)} -attr vt d
+load net {vout:rsc.z(18)} -attr vt d
+load net {vout:rsc.z(19)} -attr vt d
+load net {vout:rsc.z(20)} -attr vt d
+load net {vout:rsc.z(21)} -attr vt d
+load net {vout:rsc.z(22)} -attr vt d
+load net {vout:rsc.z(23)} -attr vt d
+load net {vout:rsc.z(24)} -attr vt d
+load net {vout:rsc.z(25)} -attr vt d
+load net {vout:rsc.z(26)} -attr vt d
+load net {vout:rsc.z(27)} -attr vt d
+load net {vout:rsc.z(28)} -attr vt d
+load net {vout:rsc.z(29)} -attr vt d
+load netBundle {vout:rsc.z} 30 {vout:rsc.z(0)} {vout:rsc.z(1)} {vout:rsc.z(2)} {vout:rsc.z(3)} {vout:rsc.z(4)} {vout:rsc.z(5)} {vout:rsc.z(6)} {vout:rsc.z(7)} {vout:rsc.z(8)} {vout:rsc.z(9)} {vout:rsc.z(10)} {vout:rsc.z(11)} {vout:rsc.z(12)} {vout:rsc.z(13)} {vout:rsc.z(14)} {vout:rsc.z(15)} {vout:rsc.z(16)} {vout:rsc.z(17)} {vout:rsc.z(18)} {vout:rsc.z(19)} {vout:rsc.z(20)} {vout:rsc.z(21)} {vout:rsc.z(22)} {vout:rsc.z(23)} {vout:rsc.z(24)} {vout:rsc.z(25)} {vout:rsc.z(26)} {vout:rsc.z(27)} {vout:rsc.z(28)} {vout:rsc.z(29)} -attr xrf 121769 -attr oid 50 -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(0)} -port {vout:rsc.z(0)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(1)} -port {vout:rsc.z(1)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(2)} -port {vout:rsc.z(2)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(3)} -port {vout:rsc.z(3)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(4)} -port {vout:rsc.z(4)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(5)} -port {vout:rsc.z(5)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(6)} -port {vout:rsc.z(6)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(7)} -port {vout:rsc.z(7)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(8)} -port {vout:rsc.z(8)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(9)} -port {vout:rsc.z(9)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(10)} -port {vout:rsc.z(10)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(11)} -port {vout:rsc.z(11)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(12)} -port {vout:rsc.z(12)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(13)} -port {vout:rsc.z(13)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(14)} -port {vout:rsc.z(14)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(15)} -port {vout:rsc.z(15)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(16)} -port {vout:rsc.z(16)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(17)} -port {vout:rsc.z(17)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(18)} -port {vout:rsc.z(18)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(19)} -port {vout:rsc.z(19)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(20)} -port {vout:rsc.z(20)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(21)} -port {vout:rsc.z(21)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(22)} -port {vout:rsc.z(22)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(23)} -port {vout:rsc.z(23)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(24)} -port {vout:rsc.z(24)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(25)} -port {vout:rsc.z(25)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(26)} -port {vout:rsc.z(26)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(27)} -port {vout:rsc.z(27)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(28)} -port {vout:rsc.z(28)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(29)} -port {vout:rsc.z(29)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vga_xy(0)} -attr vt d
+load net {vga_xy(1)} -attr vt d
+load net {vga_xy(2)} -attr vt d
+load net {vga_xy(3)} -attr vt d
+load net {vga_xy(4)} -attr vt d
+load net {vga_xy(5)} -attr vt d
+load net {vga_xy(6)} -attr vt d
+load net {vga_xy(7)} -attr vt d
+load net {vga_xy(8)} -attr vt d
+load net {vga_xy(9)} -attr vt d
+load net {vga_xy(10)} -attr vt d
+load net {vga_xy(11)} -attr vt d
+load net {vga_xy(12)} -attr vt d
+load net {vga_xy(13)} -attr vt d
+load net {vga_xy(14)} -attr vt d
+load net {vga_xy(15)} -attr vt d
+load net {vga_xy(16)} -attr vt d
+load net {vga_xy(17)} -attr vt d
+load net {vga_xy(18)} -attr vt d
+load net {vga_xy(19)} -attr vt d
+load netBundle {vga_xy} 20 {vga_xy(0)} {vga_xy(1)} {vga_xy(2)} {vga_xy(3)} {vga_xy(4)} {vga_xy(5)} {vga_xy(6)} {vga_xy(7)} {vga_xy(8)} {vga_xy(9)} {vga_xy(10)} {vga_xy(11)} {vga_xy(12)} {vga_xy(13)} {vga_xy(14)} {vga_xy(15)} {vga_xy(16)} {vga_xy(17)} {vga_xy(18)} {vga_xy(19)} -attr xrf 121770 -attr oid 51 -attr vt d -attr @path {/markers/vga_xy}
+load net {vga_xy(0)} -port {vga_xy(0)} -attr vt d
+load net {vga_xy(1)} -port {vga_xy(1)} -attr vt d
+load net {vga_xy(2)} -port {vga_xy(2)} -attr vt d
+load net {vga_xy(3)} -port {vga_xy(3)} -attr vt d
+load net {vga_xy(4)} -port {vga_xy(4)} -attr vt d
+load net {vga_xy(5)} -port {vga_xy(5)} -attr vt d
+load net {vga_xy(6)} -port {vga_xy(6)} -attr vt d
+load net {vga_xy(7)} -port {vga_xy(7)} -attr vt d
+load net {vga_xy(8)} -port {vga_xy(8)} -attr vt d
+load net {vga_xy(9)} -port {vga_xy(9)} -attr vt d
+load net {vga_xy(10)} -port {vga_xy(10)} -attr vt d
+load net {vga_xy(11)} -port {vga_xy(11)} -attr vt d
+load net {vga_xy(12)} -port {vga_xy(12)} -attr vt d
+load net {vga_xy(13)} -port {vga_xy(13)} -attr vt d
+load net {vga_xy(14)} -port {vga_xy(14)} -attr vt d
+load net {vga_xy(15)} -port {vga_xy(15)} -attr vt d
+load net {vga_xy(16)} -port {vga_xy(16)} -attr vt d
+load net {vga_xy(17)} -port {vga_xy(17)} -attr vt d
+load net {vga_xy(18)} -port {vga_xy(18)} -attr vt d
+load net {vga_xy(19)} -port {vga_xy(19)} -attr vt d
+load netBundle {vga_xy} 20 {vga_xy(0)} {vga_xy(1)} {vga_xy(2)} {vga_xy(3)} {vga_xy(4)} {vga_xy(5)} {vga_xy(6)} {vga_xy(7)} {vga_xy(8)} {vga_xy(9)} {vga_xy(10)} {vga_xy(11)} {vga_xy(12)} {vga_xy(13)} {vga_xy(14)} {vga_xy(15)} {vga_xy(16)} {vga_xy(17)} {vga_xy(18)} {vga_xy(19)} -attr xrf 121771 -attr oid 52 -attr vt d -attr @path {/markers/vga_xy}
+load net {volume:rsc.z(0)} -attr vt d
+load net {volume:rsc.z(1)} -attr vt d
+load net {volume:rsc.z(2)} -attr vt d
+load net {volume:rsc.z(3)} -attr vt d
+load netBundle {volume:rsc.z} 4 {volume:rsc.z(0)} {volume:rsc.z(1)} {volume:rsc.z(2)} {volume:rsc.z(3)} -attr xrf 121772 -attr oid 53 -attr vt d -attr @path {/markers/volume:rsc.z}
+load net {volume:rsc.z(0)} -port {volume:rsc.z(0)} -attr vt d -attr @path {/markers/volume:rsc.z}
+load net {volume:rsc.z(1)} -port {volume:rsc.z(1)} -attr vt d -attr @path {/markers/volume:rsc.z}
+load net {volume:rsc.z(2)} -port {volume:rsc.z(2)} -attr vt d -attr @path {/markers/volume:rsc.z}
+load net {volume:rsc.z(3)} -port {volume:rsc.z(3)} -attr vt d -attr @path {/markers/volume:rsc.z}
+load net {clk} -attr xrf 121773 -attr oid 54
+load net {clk} -port {clk} -attr xrf 121774 -attr oid 55
+load net {en} -attr xrf 121775 -attr oid 56
+load net {en} -port {en} -attr xrf 121776 -attr oid 57
+load net {arst_n} -attr xrf 121777 -attr oid 58
+load net {arst_n} -port {arst_n} -attr xrf 121778 -attr oid 59
+load inst "markers:core:inst" "markers:core" "orig" -attr xrf 121779 -attr oid 60 -attr vt dc -attr @path {/markers/markers:core:inst} -attr area 26.708732 -attr delay 1.047545 -attr hier "/markers/markers:core" -pg 1 -lvl 3
+load net {vga_xy(0)} -pin  "markers:core:inst" {vga_xy#1(0)} -attr vt dc -attr @path {/markers/vga_xy}
+load net {vga_xy(1)} -pin  "markers:core:inst" {vga_xy#1(1)} -attr vt dc -attr @path {/markers/vga_xy}
+load net {vga_xy(2)} -pin  "markers:core:inst" {vga_xy#1(2)} -attr vt dc -attr @path {/markers/vga_xy}
+load net {vga_xy(3)} -pin  "markers:core:inst" {vga_xy#1(3)} -attr vt dc -attr @path {/markers/vga_xy}
+load net {vga_xy(4)} -pin  "markers:core:inst" {vga_xy#1(4)} -attr vt dc -attr @path {/markers/vga_xy}
+load net {vga_xy(5)} -pin  "markers:core:inst" {vga_xy#1(5)} -attr vt dc -attr @path {/markers/vga_xy}
+load net {vga_xy(6)} -pin  "markers:core:inst" {vga_xy#1(6)} -attr vt dc -attr @path {/markers/vga_xy}
+load net {vga_xy(7)} -pin  "markers:core:inst" {vga_xy#1(7)} -attr vt dc -attr @path {/markers/vga_xy}
+load net {vga_xy(8)} -pin  "markers:core:inst" {vga_xy#1(8)} -attr vt dc -attr @path {/markers/vga_xy}
+load net {vga_xy(9)} -pin  "markers:core:inst" {vga_xy#1(9)} -attr vt dc -attr @path {/markers/vga_xy}
+load net {vga_xy(10)} -pin  "markers:core:inst" {vga_xy#1(10)} -attr vt dc -attr @path {/markers/vga_xy}
+load net {vga_xy(11)} -pin  "markers:core:inst" {vga_xy#1(11)} -attr vt dc -attr @path {/markers/vga_xy}
+load net {vga_xy(12)} -pin  "markers:core:inst" {vga_xy#1(12)} -attr vt dc -attr @path {/markers/vga_xy}
+load net {vga_xy(13)} -pin  "markers:core:inst" {vga_xy#1(13)} -attr vt dc -attr @path {/markers/vga_xy}
+load net {vga_xy(14)} -pin  "markers:core:inst" {vga_xy#1(14)} -attr vt dc -attr @path {/markers/vga_xy}
+load net {vga_xy(15)} -pin  "markers:core:inst" {vga_xy#1(15)} -attr vt dc -attr @path {/markers/vga_xy}
+load net {vga_xy(16)} -pin  "markers:core:inst" {vga_xy#1(16)} -attr vt dc -attr @path {/markers/vga_xy}
+load net {vga_xy(17)} -pin  "markers:core:inst" {vga_xy#1(17)} -attr vt dc -attr @path {/markers/vga_xy}
+load net {vga_xy(18)} -pin  "markers:core:inst" {vga_xy#1(18)} -attr vt dc -attr @path {/markers/vga_xy}
+load net {vga_xy(19)} -pin  "markers:core:inst" {vga_xy#1(19)} -attr vt dc -attr @path {/markers/vga_xy}
+load net {clk} -pin  "markers:core:inst" {clk#1} -attr xrf 121780 -attr oid 61 -attr @path {/markers/clk}
+load net {en} -pin  "markers:core:inst" {en#1} -attr xrf 121781 -attr oid 62 -attr @path {/markers/en}
+load net {arst_n} -pin  "markers:core:inst" {arst_n#1} -attr xrf 121782 -attr oid 63 -attr @path {/markers/arst_n}
+load net {vout:rsc:mgc_out_stdreg.d#1(0)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(0)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(1)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(1)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(2)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(2)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(3)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(3)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(4)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(4)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(5)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(5)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(6)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(6)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(7)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(7)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(8)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(8)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(9)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(9)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(10)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(10)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(11)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(11)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(12)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(12)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(13)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(13)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(14)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(14)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(15)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(15)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(16)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(16)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(17)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(17)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(18)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(18)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(19)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(19)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(20)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(20)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(21)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(21)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(22)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(22)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(23)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(23)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(24)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(24)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(25)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(25)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(26)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(26)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(27)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(27)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(28)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(28)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(29)} -pin  "markers:core:inst" {vout:rsc:mgc_out_stdreg.d(29)} -attr vt dc -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load inst "vout:rsc:mgc_out_stdreg" "mgc_ioport.mgc_out_stdreg(2,30)" "INTERFACE" -attr xrf 121783 -attr oid 64 -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg} -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_ioport.mgc_out_stdreg(2,30)" -pg 1 -lvl 1002
+load net {vout:rsc:mgc_out_stdreg.d#1(0)} -pin  "vout:rsc:mgc_out_stdreg" {d(0)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(1)} -pin  "vout:rsc:mgc_out_stdreg" {d(1)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(2)} -pin  "vout:rsc:mgc_out_stdreg" {d(2)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(3)} -pin  "vout:rsc:mgc_out_stdreg" {d(3)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(4)} -pin  "vout:rsc:mgc_out_stdreg" {d(4)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(5)} -pin  "vout:rsc:mgc_out_stdreg" {d(5)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(6)} -pin  "vout:rsc:mgc_out_stdreg" {d(6)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(7)} -pin  "vout:rsc:mgc_out_stdreg" {d(7)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(8)} -pin  "vout:rsc:mgc_out_stdreg" {d(8)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(9)} -pin  "vout:rsc:mgc_out_stdreg" {d(9)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(10)} -pin  "vout:rsc:mgc_out_stdreg" {d(10)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(11)} -pin  "vout:rsc:mgc_out_stdreg" {d(11)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(12)} -pin  "vout:rsc:mgc_out_stdreg" {d(12)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(13)} -pin  "vout:rsc:mgc_out_stdreg" {d(13)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(14)} -pin  "vout:rsc:mgc_out_stdreg" {d(14)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(15)} -pin  "vout:rsc:mgc_out_stdreg" {d(15)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(16)} -pin  "vout:rsc:mgc_out_stdreg" {d(16)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(17)} -pin  "vout:rsc:mgc_out_stdreg" {d(17)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(18)} -pin  "vout:rsc:mgc_out_stdreg" {d(18)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(19)} -pin  "vout:rsc:mgc_out_stdreg" {d(19)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(20)} -pin  "vout:rsc:mgc_out_stdreg" {d(20)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(21)} -pin  "vout:rsc:mgc_out_stdreg" {d(21)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(22)} -pin  "vout:rsc:mgc_out_stdreg" {d(22)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(23)} -pin  "vout:rsc:mgc_out_stdreg" {d(23)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(24)} -pin  "vout:rsc:mgc_out_stdreg" {d(24)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(25)} -pin  "vout:rsc:mgc_out_stdreg" {d(25)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(26)} -pin  "vout:rsc:mgc_out_stdreg" {d(26)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(27)} -pin  "vout:rsc:mgc_out_stdreg" {d(27)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(28)} -pin  "vout:rsc:mgc_out_stdreg" {d(28)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc:mgc_out_stdreg.d#1(29)} -pin  "vout:rsc:mgc_out_stdreg" {d(29)} -attr vt d -attr @path {/markers/vout:rsc:mgc_out_stdreg.d}
+load net {vout:rsc.z(0)} -pin  "vout:rsc:mgc_out_stdreg" {z(0)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(1)} -pin  "vout:rsc:mgc_out_stdreg" {z(1)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(2)} -pin  "vout:rsc:mgc_out_stdreg" {z(2)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(3)} -pin  "vout:rsc:mgc_out_stdreg" {z(3)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(4)} -pin  "vout:rsc:mgc_out_stdreg" {z(4)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(5)} -pin  "vout:rsc:mgc_out_stdreg" {z(5)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(6)} -pin  "vout:rsc:mgc_out_stdreg" {z(6)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(7)} -pin  "vout:rsc:mgc_out_stdreg" {z(7)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(8)} -pin  "vout:rsc:mgc_out_stdreg" {z(8)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(9)} -pin  "vout:rsc:mgc_out_stdreg" {z(9)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(10)} -pin  "vout:rsc:mgc_out_stdreg" {z(10)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(11)} -pin  "vout:rsc:mgc_out_stdreg" {z(11)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(12)} -pin  "vout:rsc:mgc_out_stdreg" {z(12)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(13)} -pin  "vout:rsc:mgc_out_stdreg" {z(13)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(14)} -pin  "vout:rsc:mgc_out_stdreg" {z(14)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(15)} -pin  "vout:rsc:mgc_out_stdreg" {z(15)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(16)} -pin  "vout:rsc:mgc_out_stdreg" {z(16)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(17)} -pin  "vout:rsc:mgc_out_stdreg" {z(17)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(18)} -pin  "vout:rsc:mgc_out_stdreg" {z(18)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(19)} -pin  "vout:rsc:mgc_out_stdreg" {z(19)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(20)} -pin  "vout:rsc:mgc_out_stdreg" {z(20)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(21)} -pin  "vout:rsc:mgc_out_stdreg" {z(21)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(22)} -pin  "vout:rsc:mgc_out_stdreg" {z(22)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(23)} -pin  "vout:rsc:mgc_out_stdreg" {z(23)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(24)} -pin  "vout:rsc:mgc_out_stdreg" {z(24)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(25)} -pin  "vout:rsc:mgc_out_stdreg" {z(25)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(26)} -pin  "vout:rsc:mgc_out_stdreg" {z(26)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(27)} -pin  "vout:rsc:mgc_out_stdreg" {z(27)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(28)} -pin  "vout:rsc:mgc_out_stdreg" {z(28)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load net {vout:rsc.z(29)} -pin  "vout:rsc:mgc_out_stdreg" {z(29)} -attr vt d -attr @path {/markers/vout:rsc.z}
+load inst "volume:rsc:mgc_out_stdreg" "mgc_ioport.mgc_out_stdreg(4,4)" "INTERFACE" -attr xrf 121784 -attr oid 65 -attr vt d -attr @path {/markers/volume:rsc:mgc_out_stdreg} -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_ioport.mgc_out_stdreg(4,4)" -pg 1 -lvl 1002
+load net {GND} -pin  "volume:rsc:mgc_out_stdreg" {d(0)} -attr @path {/markers/C0_4#1}
+load net {GND} -pin  "volume:rsc:mgc_out_stdreg" {d(1)} -attr @path {/markers/C0_4#1}
+load net {GND} -pin  "volume:rsc:mgc_out_stdreg" {d(2)} -attr @path {/markers/C0_4#1}
+load net {GND} -pin  "volume:rsc:mgc_out_stdreg" {d(3)} -attr @path {/markers/C0_4#1}
+load net {volume:rsc.z(0)} -pin  "volume:rsc:mgc_out_stdreg" {z(0)} -attr vt d -attr @path {/markers/volume:rsc.z}
+load net {volume:rsc.z(1)} -pin  "volume:rsc:mgc_out_stdreg" {z(1)} -attr vt d -attr @path {/markers/volume:rsc.z}
+load net {volume:rsc.z(2)} -pin  "volume:rsc:mgc_out_stdreg" {z(2)} -attr vt d -attr @path {/markers/volume:rsc.z}
+load net {volume:rsc.z(3)} -pin  "volume:rsc:mgc_out_stdreg" {z(3)} -attr vt d -attr @path {/markers/volume:rsc.z}
+### END MODULE 
+

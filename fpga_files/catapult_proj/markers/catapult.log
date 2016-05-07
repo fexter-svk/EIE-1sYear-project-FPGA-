@@ -13,11 +13,11 @@
 //  This version may only be used for academic purposes.  Some optimizations 
 //  are disabled, so results obtained from this version may be sub-optimal.
 //  
-//  Start time Sat May 07 12:13:01 2016
+//  Start time Sat May 07 13:11:00 2016
 # -------------------------------------------------
-# Logging session transcript to file "C:\Users\mf2915\AppData\Local\Temp\log4756233a364.0"
+# Logging session transcript to file "C:\Users\mf2915\AppData\Local\Temp\log3732a8bf64.0"
 # Loading options from registry.
-# Warning: set_working_dir: Directory 'C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Catapult 2011a.126' not writable, using C:/Users/mf2915/AppData/Local/Temp
+# Warning: set_working_dir: Directory 'C:/Windows/System32' not writable, using C:/Users/mf2915/AppData/Local/Temp
 project load C:/EIE-1stYear-project-FPGA/fpga_files/catapult_proj/markers/Catapult.ccs
 # Moving session transcript to file "C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers\catapult.log"
 # Reading component library '$MGC_HOME\pkgs\siflibs\mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
@@ -30,119 +30,198 @@ project load C:/EIE-1stYear-project-FPGA/fpga_files/catapult_proj/markers/Catapu
 # Reading component library '$MGC_HOME\pkgs\siflibs\mgc_ioport.lib' [mgc_ioport]... (LIB-49)
 # Reading component library '$MGC_HOME\pkgs\ccs_altera\Altera_accel_CycloneIII.lib' [Altera_accel_CycloneIII]... (LIB-49)
 # Reading component library '$MGC_HOME\pkgs\siflibs\psr2010a_up2\mgc_Altera-Cyclone-III-6_beh_psr.lib' [mgc_Altera-Cyclone-III-6_beh_psr]... (LIB-49)
-# File '$PROJECT_HOME/../markers_source/blur.c' saved
-# File '$PROJECT_HOME/../markers_source/blur.c' saved
-go analyze
-# Info: Starting transformation 'analyze' on solution 'solution.v32' (SOL-8)
-# Front End called with arguments: -- {C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.h} {C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c} {C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\shift_class.h} (CIN-69)
-# Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
-# Error: $PROJECT_HOME/../markers_source/blur.c(53): $PROJECT_HOME/../markers_source/blur.c(53): expected a ";" (CRD-65)
-# Warning:           detected during compilation of secondary translation unit "C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c"
-# Warning: $PROJECT_HOME/../markers_source/blur.c(57): $PROJECT_HOME/../markers_source/blur.c(57): parsing restarts here after previous syntax error (CRD-12)
-# Warning:           detected during compilation of secondary translation unit "C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c"
-# Error: $PROJECT_HOME/../markers_source/blur.c(82): $PROJECT_HOME/../markers_source/blur.c(82): expected a ";" (CRD-65)
-# Warning:           detected during compilation of secondary translation unit "C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c"
-# Error: $PROJECT_HOME/../markers_source/blur.c(92): $PROJECT_HOME/../markers_source/blur.c(92): identifier "gauss_blur_store" is undefined (CRD-20)
-# Warning:           detected during compilation of secondary translation unit "C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c"
-# Error: $PROJECT_HOME/../markers_source/blur.c(94): $PROJECT_HOME/../markers_source/blur.c(94): more than one instance of overloaded function "floor" matches the argument list: (CRD-308)
-# Warning:             function "floor(double)" (from translation unit "C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c")
-# Warning:             function "floor(float)" (from translation unit "C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c")
-# Warning:             function "floor(long double)" (from translation unit "C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c")
-# Warning:             argument types are: (ac_int<33, true>)
-# Warning:           detected during compilation of secondary translation unit "C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c"
-# Error: Compilation aborted (CIN-5)
-# Error: go analyze: Failed analyze
-# File '$PROJECT_HOME/../markers_source/blur.c' saved
-# File '$PROJECT_HOME/../markers_source/blur.h' saved
-go analyze
-# Info: Starting transformation 'analyze' on solution 'solution.v32' (SOL-8)
-# Front End called with arguments: -- {C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.h} {C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c} {C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\shift_class.h} (CIN-69)
-# Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
-# Error: $PROJECT_HOME/../markers_source/blur.c(54): $PROJECT_HOME/../markers_source/blur.c(54): expected a ";" (CRD-65)
-# Warning:           detected during compilation of secondary translation unit "C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c"
-# Warning: $PROJECT_HOME/../markers_source/blur.c(58): $PROJECT_HOME/../markers_source/blur.c(58): parsing restarts here after previous syntax error (CRD-12)
-# Warning:           detected during compilation of secondary translation unit "C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c"
-# Error: $PROJECT_HOME/../markers_source/blur.c(83): $PROJECT_HOME/../markers_source/blur.c(83): expected a ";" (CRD-65)
-# Warning:           detected during compilation of secondary translation unit "C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c"
-# Error: $PROJECT_HOME/../markers_source/blur.c(93): $PROJECT_HOME/../markers_source/blur.c(93): identifier "gauss_blur_store" is undefined (CRD-20)
-# Warning:           detected during compilation of secondary translation unit "C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c"
-# Error: $PROJECT_HOME/../markers_source/blur.c(95): $PROJECT_HOME/../markers_source/blur.c(95): more than one instance of overloaded function "floor" matches the argument list: (CRD-308)
-# Warning:             function "floor(double)" (from translation unit "C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c")
-# Warning:             function "floor(float)" (from translation unit "C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c")
-# Warning:             function "floor(long double)" (from translation unit "C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c")
-# Warning:             argument types are: (ac_int<33, true>)
-# Warning:           detected during compilation of secondary translation unit "C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c"
-# Error: Compilation aborted (CIN-5)
-# Error: go analyze: Failed analyze
-# File '$PROJECT_HOME/../markers_source/blur.c' saved
-go analyze
-# Info: Starting transformation 'analyze' on solution 'solution.v32' (SOL-8)
-# Front End called with arguments: -- {C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.h} {C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c} {C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\shift_class.h} (CIN-69)
-# Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
-# Error: $PROJECT_HOME/../markers_source/blur.c(54): $PROJECT_HOME/../markers_source/blur.c(54): expected a ";" (CRD-65)
-# Warning:           detected during compilation of secondary translation unit "C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c"
-# Warning: $PROJECT_HOME/../markers_source/blur.c(58): $PROJECT_HOME/../markers_source/blur.c(58): parsing restarts here after previous syntax error (CRD-12)
-# Warning:           detected during compilation of secondary translation unit "C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c"
-# Error: $PROJECT_HOME/../markers_source/blur.c(83): $PROJECT_HOME/../markers_source/blur.c(83): expected a ";" (CRD-65)
-# Warning:           detected during compilation of secondary translation unit "C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c"
-# Error: $PROJECT_HOME/../markers_source/blur.c(93): $PROJECT_HOME/../markers_source/blur.c(93): identifier "gauss_blur_store" is undefined (CRD-20)
-# Warning:           detected during compilation of secondary translation unit "C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c"
-# Error: Compilation aborted (CIN-5)
-# Error: go analyze: Failed analyze
-# File '$PROJECT_HOME/../markers_source/blur.c' saved
-# File '$PROJECT_HOME/../markers_source/blur.c' saved
-# File '$PROJECT_HOME/../markers_source/blur.c' saved
-# File '$PROJECT_HOME/../markers_source/blur.c' saved
-go analyze
-# Info: Starting transformation 'analyze' on solution 'solution.v32' (SOL-8)
-# Front End called with arguments: -- {C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.h} {C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c} {C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\shift_class.h} (CIN-69)
-# Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
-# Error: $PROJECT_HOME/../markers_source/blur.c(54): $PROJECT_HOME/../markers_source/blur.c(54): expected a ";" (CRD-65)
-# Warning:           detected during compilation of secondary translation unit "C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c"
-# Warning: $PROJECT_HOME/../markers_source/blur.c(58): $PROJECT_HOME/../markers_source/blur.c(58): parsing restarts here after previous syntax error (CRD-12)
-# Warning:           detected during compilation of secondary translation unit "C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c"
-# Error: $PROJECT_HOME/../markers_source/blur.c(83): $PROJECT_HOME/../markers_source/blur.c(83): expected a ";" (CRD-65)
-# Warning:           detected during compilation of secondary translation unit "C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c"
-# Error: Compilation aborted (CIN-5)
-# Error: go analyze: Failed analyze
-# File '$PROJECT_HOME/../markers_source/blur.c' saved
-go analyze
-# Info: Starting transformation 'analyze' on solution 'solution.v32' (SOL-8)
-# Front End called with arguments: -- {C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.h} {C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c} {C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\shift_class.h} (CIN-69)
-# Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
-# Error: $PROJECT_HOME/../markers_source/blur.c(54): $PROJECT_HOME/../markers_source/blur.c(54): expected a ";" (CRD-65)
-# Warning:           detected during compilation of secondary translation unit "C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c"
-# Warning: $PROJECT_HOME/../markers_source/blur.c(58): $PROJECT_HOME/../markers_source/blur.c(58): parsing restarts here after previous syntax error (CRD-12)
-# Warning:           detected during compilation of secondary translation unit "C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c"
-# Error: Compilation aborted (CIN-5)
-# Error: go analyze: Failed analyze
-# File '$PROJECT_HOME/../markers_source/blur.c' saved
-go analyze
-# Info: Starting transformation 'analyze' on solution 'solution.v32' (SOL-8)
-# Front End called with arguments: -- {C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.h} {C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c} {C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\shift_class.h} (CIN-69)
-# Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
-# Error: $PROJECT_HOME/../markers_source/blur.c(54): $PROJECT_HOME/../markers_source/blur.c(54): expected a ";" (CRD-65)
-# Warning:           detected during compilation of secondary translation unit "C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c"
-# Warning: $PROJECT_HOME/../markers_source/blur.c(58): $PROJECT_HOME/../markers_source/blur.c(58): parsing restarts here after previous syntax error (CRD-12)
-# Warning:           detected during compilation of secondary translation unit "C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c"
-# Error: Compilation aborted (CIN-5)
-# Error: go analyze: Failed analyze
-# File '$PROJECT_HOME/../markers_source/blur.c' saved
-# File '$PROJECT_HOME/../markers_source/blur.c' saved
-# File '$PROJECT_HOME/../markers_source/blur.c' saved
-go analyze
-# Info: Starting transformation 'analyze' on solution 'solution.v32' (SOL-8)
+go extract
+# Info: Starting transformation 'analyze' on solution 'solution.v33' (SOL-8)
 # Front End called with arguments: -- {C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.h} {C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\blur.c} {C:\EIE-1stYear-project-FPGA\fpga_files\catapult_proj\markers_source\shift_class.h} (CIN-69)
 # Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
 # $PROJECT_HOME/../markers_source/blur.c(63): Pragma 'hls_design<top>' detected on routine 'markers' (CIN-6)
 # Source file analysis completed (CIN-68)
-# Info: Completed transformation 'analyze' on solution 'solution.v32': elapsed time 1.65 seconds, memory usage 468876kB, peak memory usage 532132kB (SOL-9)
-# Input file has changed
-go new
-solution file set {$PROJECT_HOME/../markers_source/blur.c} -updated
-# Info: Branching solution 'solution.v33' at state 'new' (PRJ-2)
-# File '$PROJECT_HOME/../markers_source/blur.c' saved
-# File '$PROJECT_HOME/../markers_source/blur.c' saved
+# Info: Completed transformation 'analyze' on solution 'solution.v33': elapsed time 1.67 seconds, memory usage 457924kB, peak memory usage 527984kB (SOL-9)
+# Info: Starting transformation 'compile' on solution 'solution.v33' (SOL-8)
+# Generating synthesis internal form... (CIN-3)
+# $PROJECT_HOME/../markers_source/blur.c(64): Found top design routine 'markers' specified by directive (CIN-52)
+# $PROJECT_HOME/../markers_source/blur.c(64): Synthesizing routine 'markers' (CIN-13)
+# $PROJECT_HOME/../markers_source/blur.c(64): Inlining routine 'markers' (CIN-14)
+# Warning: $PROJECT_HOME/../markers_source/blur.c(93): Instantiating global variable 'gauss' which may be accessed outside this scope (CIN-18)
+# Warning: $PROJECT_HOME/../markers_source/blur.c(106): Instantiating global variable 'acc' which may be accessed outside this scope (CIN-18)
+# Warning: $PROJECT_HOME/../markers_source/blur.c(112): Instantiating global variable 'red_xy' which may be accessed outside this scope (CIN-18)
+# Warning: $PROJECT_HOME/../markers_source/blur.c(114): Instantiating global variable 'blue_xy' which may be accessed outside this scope (CIN-18)
+# Warning: $PROJECT_HOME/../markers_source/blur.c(141): Instantiating global variable 'red_xy_previous' which may be accessed outside this scope (CIN-18)
+# Warning: $PROJECT_HOME/../markers_source/blur.c(166): Instantiating global variable 'blue_xy_previous' which may be accessed outside this scope (CIN-18)
+# Warning: $PROJECT_HOME/../markers_source/blur.c(206): Instantiating global variable 'volume_previous' which may be accessed outside this scope (CIN-18)
+# $PROJECT_HOME/../markers_source/blur.c(64): Optimizing block '/markers' ... (CIN-4)
+# $PROJECT_HOME/../markers_source/blur.c(64): Inout port 'vin' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../markers_source/blur.c(64): Inout port 'vout' is only used as an output. (OPT-11)
+# $PROJECT_HOME/../markers_source/blur.c(64): Inout port 'volume' is only used as an output. (OPT-11)
+# Info: Optimizing partition '/markers': (Total ops = 540, Real ops = 144, Vars = 121) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 540, Real ops = 144, Vars = 117) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 536, Real ops = 140, Vars = 119) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 536, Real ops = 140, Vars = 123) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 536, Real ops = 140, Vars = 123) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 536, Real ops = 140, Vars = 119) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 383, Real ops = 97, Vars = 77) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 383, Real ops = 97, Vars = 77) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 383, Real ops = 97, Vars = 81) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 383, Real ops = 97, Vars = 81) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 418, Real ops = 97, Vars = 109) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 409, Real ops = 87, Vars = 54) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 409, Real ops = 87, Vars = 58) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 410, Real ops = 87, Vars = 57) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 402, Real ops = 87, Vars = 51) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 402, Real ops = 87, Vars = 55) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 403, Real ops = 87, Vars = 52) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 391, Real ops = 83, Vars = 49) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 391, Real ops = 83, Vars = 53) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 391, Real ops = 83, Vars = 49) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 389, Real ops = 83, Vars = 48) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 389, Real ops = 83, Vars = 52) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 389, Real ops = 83, Vars = 52) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 389, Real ops = 83, Vars = 48) (SOL-10)
+# $PROJECT_HOME/../markers_source/blur.c(83): Loop '/markers/core/ACC1' iterated at most 3 times. (LOOP-2)
+# $PROJECT_HOME/../markers_source/blur.c(91): Loop '/markers/core/MAC1' iterated at most 3 times. (LOOP-2)
+# $PROJECT_HOME/../markers_source/blur.c(90): Loop '/markers/core/ACC2' iterated at most 3 times. (LOOP-2)
+# Info: Optimizing partition '/markers/core': (Total ops = 359, Real ops = 83, Vars = 69) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 311, Real ops = 78, Vars = 51) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 306, Real ops = 78, Vars = 39) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 306, Real ops = 78, Vars = 43) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 306, Real ops = 78, Vars = 39) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 306, Real ops = 78, Vars = 43) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 306, Real ops = 78, Vars = 43) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 306, Real ops = 78, Vars = 39) (SOL-10)
+# Design 'markers' was read (SOL-1)
+# Info: Completed transformation 'compile' on solution 'markers.v83': elapsed time 51.82 seconds, memory usage 462376kB, peak memory usage 527984kB (SOL-9)
+# Info: Starting transformation 'architect' on solution 'markers.v83' (SOL-8)
+# $PROJECT_HOME/../markers_source/blur.c(83): Loop '/markers/core/ACC1' is being fully unrolled (3 times). (LOOP-7)
+# $PROJECT_HOME/../markers_source/blur.c(91): Loop '/markers/core/MAC1' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../markers_source/blur.c(90): Loop '/markers/core/ACC2' is being fully unrolled (3 times). (LOOP-7)
+# Info: Optimizing partition '/markers/core': (Total ops = 349, Real ops = 101, Vars = 39) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 324, Real ops = 82, Vars = 40) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 304, Real ops = 73, Vars = 37) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 304, Real ops = 73, Vars = 37) (SOL-10)
+# $PROJECT_HOME/../markers_source/blur.c(64): Loop '/markers/core/main' is left rolled. (LOOP-4)
+# Info: Optimizing partition '/markers': (Total ops = 304, Real ops = 73, Vars = 44) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 304, Real ops = 73, Vars = 37) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 304, Real ops = 73, Vars = 44) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 302, Real ops = 73, Vars = 48) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 302, Real ops = 73, Vars = 41) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 270, Real ops = 71, Vars = 35) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 264, Real ops = 71, Vars = 33) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 264, Real ops = 71, Vars = 33) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 264, Real ops = 71, Vars = 40) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 264, Real ops = 71, Vars = 33) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 264, Real ops = 71, Vars = 40) (SOL-10)
+# $PROJECT_HOME/../markers_source/blur.c(64): I/O-Port inferred - resource 'vout:rsc' (from var: vout) mapped to 'mgc_ioport.mgc_out_stdreg' (size: 30). (MEM-2)
+# $PROJECT_HOME/../markers_source/blur.c(64): I/O-Port inferred - resource 'volume:rsc' (from var: volume) mapped to 'mgc_ioport.mgc_out_stdreg' (size: 4). (MEM-2)
+# Info: Optimizing partition '/markers': (Total ops = 265, Real ops = 71, Vars = 40) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 265, Real ops = 71, Vars = 33) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 264, Real ops = 71, Vars = 32) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 264, Real ops = 71, Vars = 39) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 257, Real ops = 71, Vars = 50) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 257, Real ops = 71, Vars = 43) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 124, Real ops = 31, Vars = 17) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 34, Real ops = 11, Vars = 3) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 28, Real ops = 9, Vars = 4) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 28, Real ops = 9, Vars = 4) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 28, Real ops = 9, Vars = 11) (SOL-10)
+# Warning: $PROJECT_HOME/../markers_source/blur.c(64): Input port 'vin' is never used. (OPT-4)
+# Info: Optimizing partition '/markers/core': (Total ops = 29, Real ops = 9, Vars = 5) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 29, Real ops = 9, Vars = 4) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 29, Real ops = 9, Vars = 11) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 29, Real ops = 9, Vars = 4) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 29, Real ops = 9, Vars = 11) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 63, Real ops = 13, Vars = 26) (SOL-10)
+# Info: Optimizing partition '/markers/core': (Total ops = 32, Real ops = 14, Vars = 4) (SOL-10)
+# Design 'markers' contains '14' real operations. (SOL-11)
+# Info: Completed transformation 'architect' on solution 'markers.v83': elapsed time 99.04 seconds, memory usage 462164kB, peak memory usage 527984kB (SOL-9)
+# Info: Starting transformation 'allocate' on solution 'markers.v83' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/markers/core' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $PROJECT_HOME/../markers_source/blur.c(64): Prescheduled LOOP 'main' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/../markers_source/blur.c(64): Prescheduled SEQUENTIAL 'core' (total length 2 c-steps) (SCHD-8)
+# Info: Initial schedule of SEQUENTIAL 'core': Latency = 1, Area (Datapath, Register, Total) = 36.00, 0.00, 36.00 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Info: Final schedule of SEQUENTIAL 'core': Latency = 1, Area (Datapath, Register, Total) = 36.00, 0.00, 36.00 (CRAAS-12)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Completed transformation 'allocate' on solution 'markers.v83': elapsed time 1.59 seconds, memory usage 462216kB, peak memory usage 527984kB (SOL-9)
+# Info: Starting transformation 'schedule' on solution 'markers.v83' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/markers/core' (CRAAS-1)
+# Warning: Cannot build distributed pipeline in process 'core' because of missing handshake for resource 'vout:rsc' (SCHD-15)
+# Warning: Cannot build distributed pipeline in process 'core' because of missing handshake for resource 'volume:rsc' (SCHD-15)
+# Global signal 'vout:rsc.z' added to design 'markers' for component 'vout:rsc:mgc_out_stdreg' (LIB-3)
+# Global signal 'volume:rsc.z' added to design 'markers' for component 'volume:rsc:mgc_out_stdreg' (LIB-3)
+# Info: Optimizing partition '/markers': (Total ops = 55, Real ops = 15, Vars = 24) (SOL-10)
+# Info: Optimizing partition '/markers/markers:core': (Total ops = 44, Real ops = 14, Vars = 14) (SOL-10)
+# Info: Optimizing partition '/markers/markers:core/core': (Total ops = 38, Real ops = 14, Vars = 8) (SOL-10)
+# Info: Optimizing partition '/markers/markers:core/core': (Total ops = 31, Real ops = 14, Vars = 4) (SOL-10)
+# Info: Optimizing partition '/markers/markers:core/core': (Total ops = 30, Real ops = 14, Vars = 4) (SOL-10)
+# Info: Optimizing partition '/markers/markers:core/core': (Total ops = 19, Real ops = 7, Vars = 3) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 32, Real ops = 7, Vars = 17) (SOL-10)
+# Info: Optimizing partition '/markers/markers:core': (Total ops = 23, Real ops = 7, Vars = 8) (SOL-10)
+# Info: Optimizing partition '/markers/markers:core/core': (Total ops = 19, Real ops = 7, Vars = 4) (SOL-10)
+# Info: Optimizing partition '/markers/markers:core/core': (Total ops = 17, Real ops = 7, Vars = 3) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 31, Real ops = 7, Vars = 16) (SOL-10)
+# Info: Optimizing partition '/markers/markers:core': (Total ops = 22, Real ops = 7, Vars = 8) (SOL-10)
+# Info: Optimizing partition '/markers/markers:core/core': (Total ops = 17, Real ops = 7, Vars = 3) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 31, Real ops = 7, Vars = 16) (SOL-10)
+# Info: Optimizing partition '/markers/markers:core': (Total ops = 22, Real ops = 7, Vars = 8) (SOL-10)
+# Report written to file 'cycle.rpt'
+# Netlist written to file 'cycle.v' (NET-4)
+# Info: Completed transformation 'schedule' on solution 'markers.v83': elapsed time 2.09 seconds, memory usage 463472kB, peak memory usage 527984kB (SOL-9)
+# Info: Starting transformation 'dpfsm' on solution 'markers.v83' (SOL-8)
+# Performing FSM extraction... (FSM-1)
+# Info: Optimizing partition '/markers': (Total ops = 36, Real ops = 9, Vars = 25) (SOL-10)
+# Info: Optimizing partition '/markers/markers:core': (Total ops = 27, Real ops = 9, Vars = 17) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 46, Real ops = 7, Vars = 18) (SOL-10)
+# Info: Optimizing partition '/markers/markers:core': (Total ops = 37, Real ops = 7, Vars = 10) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 32, Real ops = 8, Vars = 19) (SOL-10)
+# Info: Optimizing partition '/markers/markers:core': (Total ops = 23, Real ops = 8, Vars = 11) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 32, Real ops = 8, Vars = 20) (SOL-10)
+# Info: Optimizing partition '/markers/markers:core': (Total ops = 23, Real ops = 8, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/markers/markers:core': (Total ops = 23, Real ops = 8, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 32, Real ops = 8, Vars = 20) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 32, Real ops = 8, Vars = 20) (SOL-10)
+# Info: Optimizing partition '/markers/markers:core': (Total ops = 23, Real ops = 8, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 32, Real ops = 8, Vars = 20) (SOL-10)
+# Info: Optimizing partition '/markers/markers:core': (Total ops = 23, Real ops = 8, Vars = 12) (SOL-10)
+# Info: Completed transformation 'dpfsm' on solution 'markers.v83': elapsed time 1.16 seconds, memory usage 463472kB, peak memory usage 527984kB (SOL-9)
+# Info: Starting transformation 'extract' on solution 'markers.v83' (SOL-8)
+# Info: Optimizing partition '/markers': (Total ops = 37, Real ops = 10, Vars = 35) (SOL-10)
+# Info: Optimizing partition '/markers/markers:core': (Total ops = 28, Real ops = 10, Vars = 27) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 34, Real ops = 8, Vars = 20) (SOL-10)
+# Info: Optimizing partition '/markers/markers:core': (Total ops = 25, Real ops = 8, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 34, Real ops = 8, Vars = 20) (SOL-10)
+# Info: Optimizing partition '/markers/markers:core': (Total ops = 25, Real ops = 8, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/markers/markers:core': (Total ops = 25, Real ops = 8, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 34, Real ops = 8, Vars = 20) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 34, Real ops = 8, Vars = 20) (SOL-10)
+# Info: Optimizing partition '/markers/markers:core': (Total ops = 25, Real ops = 8, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 34, Real ops = 8, Vars = 20) (SOL-10)
+# Info: Optimizing partition '/markers/markers:core': (Total ops = 25, Real ops = 8, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 39, Real ops = 10, Vars = 37) (SOL-10)
+# Info: Optimizing partition '/markers/markers:core': (Total ops = 30, Real ops = 10, Vars = 29) (SOL-10)
+# Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Optimizing partition '/markers': (Total ops = 39, Real ops = 10, Vars = 37) (SOL-10)
+# Info: Optimizing partition '/markers/markers:core': (Total ops = 30, Real ops = 10, Vars = 29) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 30, Real ops = 8, Vars = 20) (SOL-10)
+# Info: Optimizing partition '/markers/markers:core': (Total ops = 21, Real ops = 8, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 30, Real ops = 8, Vars = 19) (SOL-10)
+# Info: Optimizing partition '/markers/markers:core': (Total ops = 21, Real ops = 8, Vars = 11) (SOL-10)
+# Info: Optimizing partition '/markers': (Total ops = 30, Real ops = 8, Vars = 19) (SOL-10)
+# Info: Optimizing partition '/markers/markers:core': (Total ops = 21, Real ops = 8, Vars = 11) (SOL-10)
+# Report written to file 'rtl.rpt'
+# Netlist written to file 'rtl.v' (NET-4)
+# generate concat
+# order file name is: rtl.v_order.txt
+# Add dependent file: ./rtl_mgc_ioport.v
+# Add dependent file: ./rtl_mgc_ioport_v2001.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated file: C:/EIE-1stYear-project-FPGA/fpga_files/catapult_proj/markers/Catapult/markers.v83/concat_rtl.v
+# Synthesis timing script written to file './rtl.v.psr_timing'
+# IO timing constraints written to synthesis script file
+# Synthesis script written to file 'rtl.v.psr'
+# Info: Completed transformation 'extract' on solution 'markers.v83': elapsed time 27.28 seconds, memory usage 464428kB, peak memory usage 527984kB (SOL-9)
 project save
 # Saving project file 'C:/EIE-1stYear-project-FPGA/fpga_files/catapult_proj/markers/Catapult.ccs'. (PRJ-5)
 quit -f

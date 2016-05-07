@@ -1043,9 +1043,9 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 1464 696 1696 840)
-	(text "markers" (rect 5 0 45 12)(font "Arial" ))
-	(text "inst12" (rect 8 128 37 140)(font "Arial" ))
+	(rect 1448 688 1680 832)
+	(text "gauss_blur" (rect 5 0 58 12)(font "Arial" ))
+	(text "inst19" (rect 8 128 37 140)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -1398,41 +1398,6 @@ applicable agreement for further details.
 	(pt 1568 8)
 )
 (connector
-	(pt 1288 792)
-	(pt 1288 776)
-)
-(connector
-	(pt 1288 776)
-	(pt 1464 776)
-)
-(connector
-	(text "KEY[0]" (rect 1426 776 1461 788)(font "Arial" ))
-	(pt 1416 792)
-	(pt 1464 792)
-)
-(connector
-	(text "VGA_CLK" (rect 1386 744 1435 756)(font "Arial" ))
-	(pt 1376 760)
-	(pt 1464 760)
-)
-(connector
-	(text "X[9..0],Y[9..0]" (rect 1282 728 1351 740)(font "Arial" ))
-	(pt 1288 744)
-	(pt 1464 744)
-	(bus)
-)
-(connector
-	(text "RGB_TAP[89..0]" (rect 1362 712 1443 724)(font "Arial" ))
-	(pt 1464 728)
-	(pt 1352 728)
-	(bus)
-)
-(connector
-	(pt 1696 728)
-	(pt 2088 728)
-	(bus)
-)
-(connector
 	(pt 408 -80)
 	(pt 408 -40)
 )
@@ -1500,9 +1465,54 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "volume[3..0]" (rect 1696 728 1758 740)(font "Arial" ))
-	(pt 1696 744)
-	(pt 1736 744)
+	(pt 1288 792)
+	(pt 1288 768)
+)
+(connector
+	(pt 1288 768)
+	(pt 1448 768)
+)
+(connector
+	(text "KEY[0]" (rect 1410 768 1445 780)(font "Arial" ))
+	(pt 1400 784)
+	(pt 1448 784)
+)
+(connector
+	(text "VGA_CLK" (rect 1370 736 1419 748)(font "Arial" ))
+	(pt 1360 752)
+	(pt 1448 752)
+)
+(connector
+	(text "X[9..0],Y[9..0]" (rect 1266 720 1335 732)(font "Arial" ))
+	(pt 1272 736)
+	(pt 1448 736)
+	(bus)
+)
+(connector
+	(text "RGB_TAP[89..0]" (rect 1346 704 1427 716)(font "Arial" ))
+	(pt 1448 720)
+	(pt 1336 720)
+	(bus)
+)
+(connector
+	(pt 2080 728)
+	(pt 2080 720)
+	(bus)
+)
+(connector
+	(pt 2088 728)
+	(pt 2080 728)
+	(bus)
+)
+(connector
+	(pt 2080 720)
+	(pt 1680 720)
+	(bus)
+)
+(connector
+	(text "volume[3..0]" (rect 1680 720 1742 732)(font "Arial" ))
+	(pt 1680 736)
+	(pt 1720 736)
 	(bus)
 )
 (junction (pt 736 -80))
