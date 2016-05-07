@@ -1,5 +1,5 @@
-# EIE-1stYear-project-FPGA
-EIE First year project at Imperial College London
+# EIE 1st Year Project - Body detection using markers
+EIE First year project at Imperial College London - Martin Ferianc, George Punter, Alex Luisi
 
 #Organisation of the github
 -hl_simulation
