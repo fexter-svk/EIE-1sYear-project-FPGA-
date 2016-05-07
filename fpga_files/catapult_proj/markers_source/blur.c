@@ -41,6 +41,7 @@
 
 #include <iostream>
 #include "stdio.h"
+
 #include "ac_int.h"
 #include "shift_class.h" 
 
@@ -50,7 +51,11 @@ static ac_int<4,false> acc[2];
 static ac_int<10, false> red_xy[2];
 static ac_int<10, false> blue_xy[2];
 
-
+const ac_int<8,false> gauss[3][3] = {
+    {1,2,1},
+    {2,4,2},
+    {1,2,1}
+};
 
 static ac_int<10, false> red_xy_previous[2] = {0,0};
 static ac_int<10, false> blue_xy_previous[2] = {0,0};
@@ -65,11 +70,36 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     // extract VGA pixel X-Y coordinates from input
     vga_x = (vga_xy).slc<COORD_WL>(0);
     vga_y = (vga_xy).slc<COORD_WL>(10);
+    
+    //
+    //blur/noise storage values
+    ac_int<30,false> gauss_store[KERNEL_WIDTH][KERNEL_WIDTH];
+    ac_int<2,false> i = 0;
+    ac_int<32,false> gauss_blur_val = 0;
+    //
+    ac_int<2,false> k = 0;
+    
+    //pass the colours through a Gaussian to eliminate noise:
+    ACC1: for(i = 0; i < KERNEL_WIDTH; i++){
+        k = 0;
+        gauss_store[i][k] = vin[i];
+        
+    }
+    
+    //Approximate Gaussian filter, requires only a single pass of the kernel
+    ACC2: for(i = 0; i < KERNEL_WIDTH; i++){
+        MAC1: for(k = 0; k < KERNEL_WIDTH; k++){
+            //take the value;
+            gauss_blur_val = gauss_store[i][k] * gauss[i][k];
+            //normalise the calculated blur values
+            gauss_blur_val = (gauss_blur_val/16);
+        }
+    }
 
     //Extract the colour from the input 
-    red = (vin[0].slc<COLOUR_WL>(2*COLOUR_WL));
-    green = vin[0].slc<COLOUR_WL>(1*COLOUR_WL);
-    blue = vin[0].slc<COLOUR_WL>(0*COLOUR_WL);
+    red = (gauss_blur_val.slc<COLOUR_WL>(2*COLOUR_WL));
+    green = gauss_blur_val.slc<COLOUR_WL>(1*COLOUR_WL);
+    blue = gauss_blur_val.slc<COLOUR_WL>(0*COLOUR_WL);
     
     // Reset of the valid accumulators acc[0] for RED acc[1] for BLUE reset every 15 pixels
     if ((vga_x % 15) == 0){
