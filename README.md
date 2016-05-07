@@ -2,9 +2,9 @@
 EIE First year project at Imperial College London - Martin Ferianc, George Punter, Alex Luisi
 
 #Organisation of the Git
--hl_files
+- hl_files
   Contains all higher level programming files in python on which we will base our final HLS design.
--fpga_files
+- fpga_files
   Contains all programming files regarding the FPGA. It contains two separate folders for Catapult C and Quartus Project.
 
 #Task
