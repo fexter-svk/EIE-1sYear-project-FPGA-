@@ -2,21 +2,11 @@
 EIE First year project at Imperial College London - Martin Ferianc, George Punter, Alex Luisi
 
 #Organisation of the Git
--hl_simulation
-  Contains all higher level programming files on which we will base our final HLS design.
--Prj1
-  Contains dot_product, addition and multiplication examples.
--Prj2
-  Contains sobel filter example.
--Student_files_2015_original
-  Contains the original versions of the files given to us.
+-hl_files
+  Contains all higher level programming files in python on which we will base our final HLS design.
+-fpga_files
+  Contains all programming files regarding the FPGA. It contains two separate folders for Catapult C and Quartus Project.
 
 #Task
 Use the FPGA and parallelism techniques to process a video stream input in real time.
 
-
-#
-
-
-
-#
