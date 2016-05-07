@@ -97,9 +97,9 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
 
     
     //Extract the colour from the input
-    red = (gauss_val.slc<COLOUR_WL>(2*COLOUR_WL));
-    green = gauss_val.slc<COLOUR_WL>(1*COLOUR_WL);
-    blue = gauss_val.slc<COLOUR_WL>(0*COLOUR_WL);
+    red = (gauss_blur_val.slc<COLOUR_WL>(2*COLOUR_WL));
+    green = gauss_blur_val.slc<COLOUR_WL>(1*COLOUR_WL);
+    blue = gauss_blur_val.slc<COLOUR_WL>(0*COLOUR_WL);
     
     
     

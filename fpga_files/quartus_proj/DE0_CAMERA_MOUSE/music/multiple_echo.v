@@ -53,7 +53,7 @@ module processor (sysclk, data_in, data_valid, data_out,volume);
 
 	//assign y = x - att_q; CORRECT
 	assign y = z - att_q;
-	//assign y = (x - att_q) * volume;
+	//assign y = (x  * volume) - att_q
 	
 
 	//  Now clock y output with system clock
