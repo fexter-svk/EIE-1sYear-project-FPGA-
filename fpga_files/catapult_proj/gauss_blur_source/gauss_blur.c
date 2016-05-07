@@ -145,13 +145,13 @@ void gauss_blur(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXE
         acc[1]++; //BLUE
     }
     //If 4 familiar pixels, probably the right point, assign it to corrent x,y coordinates 
-    if (acc[0] > 8){
+    if (acc[0] > 6){
         if ((red_xy[0]==0) && (red_xy[1]==0)) {
             red_xy[0] = vga_x;
             red_xy[1] = vga_y;
         }
     } 
-    if (acc[1] > 8){
+    if (acc[1] > 6){
         if ((blue_xy[0]==0) && (blue_xy[1]==0)) {
             blue_xy[0] = vga_x;
             blue_xy[1] = vga_y;
@@ -220,12 +220,17 @@ void gauss_blur(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXE
     
     //adjustment of the volume
     //ac_int<4, false> volume_current = ((-1*((red_xy_previous[1]+blue_xy_previous[1])-960))/240);
-    ac_int<4, false> volume_current = ((-1*((red_xy[1])-480))/120);
+    
+    ac_int<4, false> volume_current = ((-1*((red_xy_previous[1])-480))/90);
     if (((volume_current-volume_previous[0])>=-2)&&((volume_current-volume_previous[0])<=2)){
         volume_previous[0] = volume_current;
     }
+    if (red_xy_previous[1]==0) {
+        *volume = 0;
+    } else {
+        *volume = volume_previous[0];
+    }
 
-    *volume = volume_previous[0];
     
     //Lines for volume threshold
     if ((vga_y == 0) ||  (vga_y == 120) ||  (vga_y == 240) || (vga_y == 360) ||  (vga_y == 480)) {

@@ -89,15 +89,17 @@ void sobel_filter_comp(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_i
 	// init
 	greyx = 0;
 	greyy = 0;
-		
+	val = 0;
 		// shift input data in the filter fifo
 	regs << vin[0]; // advance the pointer address by the pixel number (testbench/simulation only)
 		
 	// loop to downscale image
-	ACC1: for(i = 0; i < KERNEL_WIDTH; i++) {
+	
 	//perform the sobel for every 8 pixels in the x and y direction
 	//this scales the image down to 80 x 60
 	   if(((vga_x % 8) == 0) && ((vga_y % 8 == 0))){
+		  
+		  ACC1: for(i = 0; i < KERNEL_WIDTH; i++) {
 		  k = 0;
 			// first line ...
 		  r[0] = (regs[i].slc<COLOUR_WL>(2*COLOUR_WL + 2*PIXEL_WL));
@@ -117,17 +119,20 @@ void sobel_filter_comp(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_i
 		  b[2] = (regs[i].slc<COLOUR_WL>(0));
 		  gr[i][k] = (r[2] + g[2] + b[2])/3;
 	   }
-	}
-	// dot product
+	   // dot product
 	ACC3: for(i = 0; i < KERNEL_WIDTH; i++) {
 	   MAC2: for(k = 0; k < KERNEL_WIDTH; k++){
 	       greyx += gr[i][k]*X_MASK[i][k];
 	       greyy += gr[i][k]*Y_MASK[i][k];
 	   }
 	}
-	
 	// sobel addition
 	val = abs(greyx) + abs(greyy);
+	
+	   
+	   
+	}
+	
 	
 	// black and white the sobel and turn into 1 and 0 for storage
 	ac_int<1,false> bit;

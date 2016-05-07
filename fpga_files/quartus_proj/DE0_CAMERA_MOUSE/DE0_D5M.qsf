@@ -595,12 +595,12 @@ set_global_assignment -name PARTITION_COLOR 16764057 -entity top -section_id Top
 set_global_assignment -name LL_ROOT_REGION ON -entity top -section_id "Root Region"
 set_global_assignment -name LL_MEMBER_STATE LOCKED -entity top -section_id "Root Region"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity top -section_id Top
-set_global_assignment -name VERILOG_FILE catapult_ip/sobel_filterv2/rtl.v
 set_global_assignment -name VERILOG_FILE catapult_ip/sobel_filter_compressed/rtl.v
+set_global_assignment -name VERILOG_FILE catapult_ip/marker/rtl.v
+set_global_assignment -name VERILOG_FILE catapult_ip/sobel_filterv2/rtl.v
 set_global_assignment -name VERILOG_FILE catapult_ip/sobel_filter_bw/rtl.v
 set_global_assignment -name VERILOG_FILE catapult_ip/marker/rtl_mgc_ioport_v2001.v
 set_global_assignment -name VERILOG_FILE catapult_ip/marker/rtl_mgc_ioport.v
-set_global_assignment -name VERILOG_FILE catapult_ip/marker/rtl.v
 set_global_assignment -name VERILOG_FILE music/top.v
 set_global_assignment -name VERILOG_FILE music/spi2dac.v
 set_global_assignment -name VERILOG_FILE music/spi2adc.v
