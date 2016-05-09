@@ -80,7 +80,7 @@ reg	[3:0]	mSetup_ST;
 input 		iEXPOSURE_ADJ;
 input		iEXPOSURE_DEC_p;	
 
-parameter 	default_exposure 			= 16'h03Cf; //16'h01ff
+parameter 	default_exposure 			= 16'h03Cf; //16'h03Cf
 parameter 	exposure_change_value	 	= 16'd300; //16'd200
 
 

@@ -1,5 +1,5 @@
 Flow report for DE0_D5M
-Mon May 09 09:28:02 2016
+Mon May 09 13:08:36 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -40,20 +40,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Flow Summary                                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Flow Status                        ; Successful - Mon May 09 09:27:58 2016            ;
+; Flow Status                        ; Successful - Mon May 09 13:08:32 2016            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; DE0_D5M                                          ;
 ; Top-level Entity Name              ; TOP_DE0_CAMERA_MOUSE                             ;
 ; Family                             ; Cyclone III                                      ;
 ; Device                             ; EP3C16F484C6                                     ;
 ; Timing Models                      ; Final                                            ;
-; Total logic elements               ; 3,654 / 15,408 ( 24 % )                          ;
-;     Total combinational functions  ; 3,329 / 15,408 ( 22 % )                          ;
-;     Dedicated logic registers      ; 1,454 / 15,408 ( 9 % )                           ;
-; Total registers                    ; 1454                                             ;
+; Total logic elements               ; 3,581 / 15,408 ( 23 % )                          ;
+;     Total combinational functions  ; 3,261 / 15,408 ( 21 % )                          ;
+;     Dedicated logic registers      ; 1,407 / 15,408 ( 9 % )                           ;
+; Total registers                    ; 1407                                             ;
 ; Total pins                         ; 117 / 347 ( 34 % )                               ;
 ; Total virtual pins                 ; 0                                                ;
-; Total memory bits                  ; 143,452 / 516,096 ( 28 % )                       ;
+; Total memory bits                  ; 134,236 / 516,096 ( 26 % )                       ;
 ; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                                  ;
 ; Total PLLs                         ; 1 / 4 ( 25 % )                                   ;
 +------------------------------------+--------------------------------------------------+
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/09/2016 09:24:27 ;
+; Start date & time ; 05/09/2016 13:05:05 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DE0_D5M             ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+----------------------+------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name          ; Section Id ;
 +-------------------------------------+---------------------------------------+---------------+----------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 260248564268246.146278226705892       ; --            ; --                   ; --         ;
+; COMPILER_SIGNATURE_ID               ; 260248564170200.146279550503280       ; --            ; --                   ; --         ;
 ; IP_TOOL_NAME                        ; LPM_MUX                               ; --            ; --                   ; --         ;
 ; IP_TOOL_NAME                        ; ALTPLL                                ; --            ; --                   ; --         ;
 ; IP_TOOL_NAME                        ; ALTPLL                                ; --            ; --                   ; --         ;
@@ -111,11 +111,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:03:10     ; 1.0                     ; 582 MB              ; 00:03:10                           ;
-; Fitter                    ; 00:00:17     ; 1.6                     ; 1155 MB             ; 00:00:21                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 439 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 2.0                     ; 538 MB              ; 00:00:03                           ;
-; Total                     ; 00:03:32     ; --                      ; --                  ; 00:03:35                           ;
+; Analysis & Synthesis      ; 00:03:07     ; 1.0                     ; 585 MB              ; 00:03:06                           ;
+; Fitter                    ; 00:00:16     ; 1.8                     ; 1157 MB             ; 00:00:20                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 434 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 534 MB              ; 00:00:03                           ;
+; Total                     ; 00:03:27     ; --                      ; --                  ; 00:03:30                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -124,10 +124,10 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; eews104a-015     ; Windows 7 ; 6.1        ; x86_64         ;
-; Fitter                    ; eews104a-015     ; Windows 7 ; 6.1        ; x86_64         ;
-; Assembler                 ; eews104a-015     ; Windows 7 ; 6.1        ; x86_64         ;
-; TimeQuest Timing Analyzer ; eews104a-015     ; Windows 7 ; 6.1        ; x86_64         ;
+; Analysis & Synthesis      ; eews104a-016     ; Windows 7 ; 6.1        ; x86_64         ;
+; Fitter                    ; eews104a-016     ; Windows 7 ; 6.1        ; x86_64         ;
+; Assembler                 ; eews104a-016     ; Windows 7 ; 6.1        ; x86_64         ;
+; TimeQuest Timing Analyzer ; eews104a-016     ; Windows 7 ; 6.1        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
