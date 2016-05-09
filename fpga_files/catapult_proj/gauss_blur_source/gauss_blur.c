@@ -233,7 +233,7 @@ void gauss_blur(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXE
 
     
     //Lines for volume threshold
-    if ((vga_y == 0) ||  (vga_y == 120) ||  (vga_y == 240) || (vga_y == 360) ||  (vga_y == 480)) {
+    if ((vga_y == 0) ||  (vga_y == 145) ||  (vga_y == 265) || (vga_y == 385) ||  (vga_y == 505)) {
         blue_out = 0;
         green_out = 0;
         red_out = 0;
