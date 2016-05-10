@@ -1240,7 +1240,7 @@ applicable agreement for further details.
 (symbol
 	(rect 1448 688 1680 832)
 	(text "gauss_blur" (rect 5 0 58 12)(font "Arial" ))
-	(text "inst4" (rect 8 128 31 140)(font "Arial" ))
+	(text "inst1" (rect 8 128 31 140)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)

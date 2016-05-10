@@ -141,7 +141,7 @@ void gauss_blur(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXE
         acc[0]++; //RED
     } 
     //BLUE marker (right hand)
-    if (((0<=red) && (red<=(4*80))) && ((0<=green) && (green<=(4*80))) && (((4*90)<=blue) && (blue<=(4*180)))){
+    if (((0<=red) && (red<=(4*100))) && ((0<=green) && (green<=(4*100))) && (((4*90)<=blue) && (blue<=(4*220)))){
         acc[1]++; //BLUE
     }
     //If 4 familiar pixels, probably the right point, assign it to corrent x,y coordinates 
