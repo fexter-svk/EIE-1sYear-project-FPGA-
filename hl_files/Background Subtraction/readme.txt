@@ -1,0 +1,1 @@
+This folder contains HL simulations for the background subtraction algorithm.
