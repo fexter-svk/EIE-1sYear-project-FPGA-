@@ -42,6 +42,7 @@
 #include "ac_int.h"
 #include <iostream>
 
+//x and y sobel kernal constants
 const ac_int<8,true> X_MASK[3][3] = {
     {-1, 0, 1},
     {-2, 0, 2},
@@ -93,29 +94,29 @@ void sobel_filter(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PI
 		// shift input data in the filter fifo
 	regs << vin[0];
 		
-	// greyscale
+	// turn to greyscale by averaging the individual colour intensities
 	ACC1: for(i = 0; i < KERNEL_WIDTH; i++) {
 		k = 0;
-		// first line ...
+		// first line of pixels
 		r[0] = (regs[i].slc<COLOUR_WL>(2*COLOUR_WL + 2*PIXEL_WL));
 		g[0] = (regs[i].slc<COLOUR_WL>(COLOUR_WL + 2*PIXEL_WL)) ;
 		b[0] = (regs[i].slc<COLOUR_WL>(0 + 2*PIXEL_WL));
 		gr[i][k] = (r[0] + g[0] + b[0])/3;
 		k++;
-		// second line ... 
+		// second line of pixels 
 		r[1] = (regs[i].slc<COLOUR_WL>(2*COLOUR_WL + PIXEL_WL));
 		g[1] = (regs[i].slc<COLOUR_WL>(COLOUR_WL + PIXEL_WL));
 		b[1] = (regs[i].slc<COLOUR_WL>(0 + PIXEL_WL));
 		gr[i][k]= (r[1] + g[1] + b[1])/3;
 		k++;
-		// current line
+		// current line of pixels
 		r[2] = (regs[i].slc<COLOUR_WL>(2*COLOUR_WL));
 		g[2] = (regs[i].slc<COLOUR_WL>(COLOUR_WL));
 		b[2] = (regs[i].slc<COLOUR_WL>(0));
 		gr[i][k] = (r[2] + g[2] + b[2])/3;
 	}
 	
-	// dot product
+	// find the dot product of the resulting pixel values
 	ACC3: for(i = 0; i < KERNEL_WIDTH; i++) {
 	   MAC2: for(k = 0; k < KERNEL_WIDTH; k++){
 	       greyx += gr[i][k]*X_MASK[i][k];
@@ -123,7 +124,7 @@ void sobel_filter(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PI
 	   }
 	}
 	
-	// sobel addition
+	// add the x and y values from the sobel operation to get the final value
 	val = abs(greyx) + abs(greyy);
 	
 	// if greater than white, set to white.
