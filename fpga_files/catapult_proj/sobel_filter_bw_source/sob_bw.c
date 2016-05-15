@@ -15,7 +15,7 @@
 // |______\___/|_| |_|\__,_|\___/|_| |_|
 //
 ////////////////////////////////////////////////////////////////////////////////
-//  File:           blur_sob.cpp
+//  File:           sob_bw.cpp
 //  Description:    video to sobel & bw filter - real-time processing
 //  By:             rad09, gsp14
 ////////////////////////////////////////////////////////////////////////////////
@@ -37,7 +37,7 @@
 
 
 #include <ac_fixed.h>
-#include "blur_sob.h"
+#include "sob_bw.h"
 #include "stdio.h"
 #include "ac_int.h"
 #include <iostream>

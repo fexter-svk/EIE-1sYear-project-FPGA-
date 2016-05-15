@@ -15,11 +15,11 @@
 // |______\___/|_| |_|\__,_|\___/|_| |_|
 //
 ////////////////////////////////////////////////////////////////////////////////
-//  File:           gauss_blur.h
-//  Description:    vga gaussian blur - real-time processing
-//  By:             rad09
+//  File:           sob_commp.h
+//  Description:    vga sobel filter - real-time processing
+//  By:             gsp14
 ////////////////////////////////////////////////////////////////////////////////
-// this hardware block receives the VGA stream and then produces a blured output
+// this hardware block receives the VGA stream and then produces a sobel_filtered output
 ////////////////////////////////////////////////////////////////////////////////
 
 
@@ -31,14 +31,15 @@
 
 // total number of pixels from screen frame/image read in testbench
 #define NUM_PIXELS 1
-#define NOISE 3
+
+#define KERNEL_WIDTH      3
+#define KERNEL_NUMEL      (KERNEL_WIDTH * KERNEL_WIDTH)
 #define COLOUR_WL         10
 #define PIXEL_WL          (3 * COLOUR_WL)
 
 #define  COORD_WL          10
 
-#define KERNEL_WIDTH 3
 
-void gauss_blur(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS], ac_int<(COORD_WL+COORD_WL), false> vga_xy, ac_int<4,false> * volume);
+void sobel_filter_comp(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS], ac_int<(COORD_WL+COORD_WL), false> * vga_xy);
 
 #endif

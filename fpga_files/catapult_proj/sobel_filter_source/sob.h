@@ -15,11 +15,11 @@
 // |______\___/|_| |_|\__,_|\___/|_| |_|
 //
 ////////////////////////////////////////////////////////////////////////////////
-//  File:           blur_sob.h
-//  Description:    vga sobel filter - real-time processing
+//  File:           sob.h
+//  Description:    vga sobel - real-time processing
 //  By:             gsp14
 ////////////////////////////////////////////////////////////////////////////////
-// this hardware block receives the VGA stream and then produces a sobel_filtered output
+// this hardware block receives the VGA stream and then produces a sobel filtered output
 ////////////////////////////////////////////////////////////////////////////////
 
 
@@ -40,6 +40,6 @@
 #define  COORD_WL          10
 
 
-void sobel_filter_bw(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS], ac_int<(COORD_WL+COORD_WL), false> * vga_xy);
+void sobel_filter(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS], ac_int<(COORD_WL+COORD_WL), false> * vga_xy);
 
 #endif

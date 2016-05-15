@@ -13,14 +13,7 @@
 // | |    / _ \| '_ \ / _` |/ _ \| '_ \
 // | |___| (_) | | | | (_| | (_) | | | |
 // |______\___/|_| |_|\__,_|\___/|_| |_|
-//
-////////////////////////////////////////////////////////////////////////////////
-//  File:           blur_sob.h
-//  Description:    vga sobel - real-time processing
-//  By:             gsp14
-////////////////////////////////////////////////////////////////////////////////
-// this hardware block receives the VGA stream and then produces a sobel filtered output
-////////////////////////////////////////////////////////////////////////////////
+
 
 
 #ifndef _BLUR
@@ -29,17 +22,16 @@
 #include <ac_int.h>
 #include <iostream>
 
-// total number of pixels from screen frame/image read in testbench
-#define NUM_PIXELS 1
 
-#define KERNEL_WIDTH      3
-#define KERNEL_NUMEL      (KERNEL_WIDTH * KERNEL_WIDTH)
+#define NUM_PIXELS        1
+#define NOISE             3
 #define COLOUR_WL         10
 #define PIXEL_WL          (3 * COLOUR_WL)
 
-#define  COORD_WL          10
+#define  COORD_WL         10
 
+#define KERNEL_WIDTH      3
 
-void sobel_filter(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS], ac_int<(COORD_WL+COORD_WL), false> * vga_xy);
+void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS], ac_int<(COORD_WL+COORD_WL), false> vga_xy, ac_int<4,false> * volume);
 
 #endif

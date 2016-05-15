@@ -13,31 +13,10 @@
 // | |    / _ \| '_ \ / _` |/ _ \| '_ \
 // | |___| (_) | | | | (_| | (_) | | | |
 // |______\___/|_| |_|\__,_|\___/|_| |_|
-//
-////////////////////////////////////////////////////////////////////////////////
-//  File:           gauss_blur.c
-//  Description:    video to vga blur filter - real-time processing
-//  By:             rad09, gsp14
-////////////////////////////////////////////////////////////////////////////////
-// this hardware block receives the VGA stream and then produces a blured output
-// based on the FIR design - page 230 of HLS Blue Book
-////////////////////////////////////////////////////////////////////////////////
-// Catapult Project options
-// Constraint Editor:
-//  Frequency: 50 MHz
-//  Top design: gauss_blur
-//  clk>reset sync: disable; reset async: enable; enable: enable
-// Architecture Constraints:
-//  interface>vin: wordlength = 90, streaming = 90
-//  interface>vout: wordlength = 30, streaming = 30
-//  core>main: pipeline + distributed + merged
-//  core>main>frame: merged
-//  core>main>frame>shift, mac1, mac2: unroll + merged
-////////////////////////////////////////////////////////////////////////////////
 
 
 #include <ac_fixed.h>
-#include "gauss_blur.h"
+#include "marker.h"
 
 #include <iostream>
 #include "stdio.h"
@@ -45,55 +24,62 @@
 #include "ac_int.h"
 #include "shift_class.h" 
 
-
+//Initialise the memory variables for volume, accumulators, red and blue markers
 static ac_int<4, false> volume_previous[1] = {0};
 static ac_int<4,false> acc[2];
 static ac_int<10, false> red_xy[2];
 static ac_int<10, false> blue_xy[2];
 
+// Gaussian blur - MATRIX
 const ac_int<8,true> gauss[3][3] = {
     {1, 2, 1},
     {2, 4, 2},
     {1, 2, 1}
 };
+
+//Initialise the memory variables for previous values of red and blue markers
 static ac_int<10, false> red_xy_previous[2] = {0,0};
 static ac_int<10, false> blue_xy_previous[2] = {0,0};
 
 #pragma hls_design top
-void gauss_blur(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS], ac_int<(COORD_WL+COORD_WL), false> vga_xy, ac_int<4,false> * volume)
+
+void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS], ac_int<(COORD_WL+COORD_WL), false> vga_xy, ac_int<4,false> * volume)
 {
     ac_int<16, false> r[KERNEL_WIDTH], g[KERNEL_WIDTH], b[KERNEL_WIDTH];
     ac_int<10, false> red_out, green_out, blue_out;
     ac_int<10, false> red, green, blue;
     ac_int<10, false> vga_x, vga_y; // screen coordinates
     
-    // extract VGA pixel X-Y coordinates from input
+    //Extract VGA pixel X-Y coordinates from input
     vga_x = (vga_xy).slc<COORD_WL>(0);
     vga_y = (vga_xy).slc<COORD_WL>(10);
     
     //
-    //blur/noise storage values
+    //Blur/noise storage values
     ac_int<10,false> gauss_store[KERNEL_WIDTH][KERNEL_WIDTH][3];
     ac_int<2,false> i = 0;
     ac_int<16,false> gauss_blur_val[3];
+    
     //
     ac_int<2,false> k = 0;
    
-    // initialize to 0
+    //Initialize to 0
     gauss_blur_val[0] = 0;
     gauss_blur_val[1] = 0;
     gauss_blur_val[2] = 0;
-    // shifts pixels from KERNEL_WIDTH rows and keeps KERNEL_WIDTH columns (KERNEL_WIDTHxKERNEL_WIDTH pixels stored)
+    
+    //Shifts pixels from KERNEL_WIDTH rows and keeps KERNEL_WIDTH columns (KERNEL_WIDTHxKERNEL_WIDTH pixels stored)
     static shift_class<ac_int<PIXEL_WL*KERNEL_WIDTH,false>, KERNEL_WIDTH> regs;
     regs << vin[0];
-    //pass the colours through a Gaussian to eliminate noise:
+    
+    //Pass the colours through a Gaussian to eliminate noise:
     ACC1: for(i = 0; i < KERNEL_WIDTH; i++){
         k = 0;
         gauss_store[i][k][0] = (regs[i].slc<COLOUR_WL>(2*COLOUR_WL + 2*PIXEL_WL));
 		gauss_store[i][k][1] = (regs[i].slc<COLOUR_WL>(COLOUR_WL + 2*PIXEL_WL)) ;
 		gauss_store[i][k][2] = (regs[i].slc<COLOUR_WL>(0 + 2*PIXEL_WL));
 		k++;
-		// second line ... 
+		// second line
 		gauss_store[i][k][0] = (regs[i].slc<COLOUR_WL>(2*COLOUR_WL + PIXEL_WL));
 		gauss_store[i][k][1] = (regs[i].slc<COLOUR_WL>(COLOUR_WL + PIXEL_WL));
 		gauss_store[i][k][2] = (regs[i].slc<COLOUR_WL>(0 + PIXEL_WL));
@@ -113,10 +99,12 @@ void gauss_blur(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXE
             gauss_blur_val[2] += gauss_store[i][k][2] * gauss[i][k];
         }
     }
-    //normalise the calculated blur values
+    
+    //Normalise the calculated blur values
     gauss_blur_val[0] = (gauss_blur_val[0]/16);
     gauss_blur_val[1] = (gauss_blur_val[1]/16);
     gauss_blur_val[2] = (gauss_blur_val[2]/16);
+    
     //Extract the colour from the input 
     red = gauss_blur_val[0];
     green = gauss_blur_val[1];
@@ -128,7 +116,7 @@ void gauss_blur(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXE
         acc[1] = 0;
     }
     
-    // Reset of the CURRENT x,y coordinates for BLUE and RED pixels
+    // Reset of the CURRENT x,y coordinates for BLUE and RED pixels at the very beginning of the stream x,y = 0,0
     if ((vga_y == 0) && (vga_x == 0)) {
         red_xy[0] = 0;
         red_xy[1] = 0;
@@ -136,7 +124,7 @@ void gauss_blur(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXE
         blue_xy[1] = 0;
     }
     
-    //RED marker (left hand)
+    //RED marker (left hand) - colours are 10 bit, in comparison shifted to right, therefore 4* (0-255)
     if ((((160*4)<=red) && (red<=4*255)) && ((0<=green) && (green<=(4*100))) && ((0<=blue) && (0<=(4*100)))){
         acc[0]++; //RED
     } 
@@ -144,13 +132,16 @@ void gauss_blur(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXE
     if (((0<=red) && (red<=(4*100))) && ((0<=green) && (green<=(4*100))) && (((4*90)<=blue) && (blue<=(4*220)))){
         acc[1]++; //BLUE
     }
-    //If 4 familiar pixels, probably the right point, assign it to corrent x,y coordinates 
+    
+    //If 4 familiar pixels, probably the right point, assign it to current x,y coordinates, only if not initalized
+    //acc[0] - RED
     if (acc[0] > 6){
         if ((red_xy[0]==0) && (red_xy[1]==0)) {
             red_xy[0] = vga_x;
             red_xy[1] = vga_y;
         }
-    } 
+    }
+    //acc[1] - BLUE
     if (acc[1] > 6){
         if ((blue_xy[0]==0) && (blue_xy[1]==0)) {
             blue_xy[0] = vga_x;
@@ -158,7 +149,11 @@ void gauss_blur(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXE
         }
     }
     
-    // RED marker previous value initialisation  - only during the SETUP phase
+    //////RED///////
+    
+    // RED marker previous value initialisation  - only during the SETUP phase - first run of algorithm
+    // red_xy[0] - x coordinate red_xy[1] - y coordinate
+    
     if ((red_xy_previous[0]==0) && (red_xy[0]!=0)) {
         red_xy_previous[0] = red_xy[0];
         red_xy_previous[1] = red_xy[1];
@@ -169,17 +164,20 @@ void gauss_blur(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXE
     int deltay_red = (red_xy[1] - red_xy_previous[1]);
     
     if (((deltay_red>-10) && (deltay_red<10))||((deltax_red<10) &&(deltax_red>-10))) {
-       // if (!(((deltay_red>-5) && (deltay_red<5))||((deltax_red<5) &&(deltax_red>-5)))){
         red_xy_previous[0] = red_xy[0];
         red_xy_previous[1] = red_xy[1];
-       // }
     }
+    
     //RED
-    //Calculate the coordinates for the square
+    //Calculate the range for the square
     int deltax_square_red = vga_x - red_xy_previous[0];
     int deltay_square_red = vga_y - red_xy_previous[1];
     
+    //////BLUE///////
+    
     //BLUE marker previous value initialisation - only during the SETUP phase
+    //blue_xy[0] - x coordinate blue_xy[1] - y coordinate
+    
     if ((blue_xy_previous[0]==0) && (blue_xy[0]!=0)) {
         blue_xy_previous[0] = blue_xy[0];
         blue_xy_previous[1] = blue_xy[1];
@@ -190,23 +188,21 @@ void gauss_blur(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXE
     int deltay_blue = (blue_xy[1] - blue_xy_previous[1]);
     
     //BLUE
-    //Calculate the coordinates for the square
+    //Calculate the range for the square
     if (((deltay_blue>-10) && (deltay_blue<10))||((deltax_blue<10) &&(deltax_blue>-10))){
-       // if (!(((deltay_blue>-5) && (deltay_blue<5))||((deltax_blue<5) &&(deltax_blue>-5)))){
-            blue_xy_previous[0] = blue_xy[0];
-            blue_xy_previous[1] = blue_xy[1];
-       // }
+        blue_xy_previous[0] = blue_xy[0];
+        blue_xy_previous[1] = blue_xy[1];
     }
     int deltax_square_blue = vga_x - blue_xy_previous[0];
     int deltay_square_blue = vga_y - blue_xy_previous[1];
     
-    // set the output values to the correct values
+    //Set the output values to the input values
     red_out = red;
     green_out = green;
     blue_out = blue;
     
     
-    //Draw both the RED and BLUE squares
+    //Draw both the RED and BLUE squares - 40 pixels
     if (((deltax_square_red >= 0)&&(deltax_square_red <= 40)) && ((deltay_square_red >= 0) &&(deltay_square_red <= 40))){
         green_out = 0;
         blue_out = 0;
@@ -218,8 +214,11 @@ void gauss_blur(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXE
         red_out = 0;
     } 
     
-    //adjustment of the volume
-    //ac_int<4, false> volume_current = ((-1*((red_xy_previous[1]+blue_xy_previous[1])-960))/240);
+    //Adjustment of the volume
+    //Calculate the volume through the y coordinate of the RED marker
+    //Timsed by -1 because it has to be inverted to enable the increase from the bottom of the screen
+    //Volume stored in memory to keed the same volume value even during an error
+    //Otherwise volume = 0
     
     ac_int<4, false> volume_current = ((-1*((red_xy_previous[1])-480))/90);
     if (((volume_current-volume_previous[0])>=-2)&&((volume_current-volume_previous[0])<=2)){
@@ -233,13 +232,14 @@ void gauss_blur(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXE
 
     
     //Lines for volume threshold
+    //Shifted, because of the monitor
     if ((vga_y == 0) ||  (vga_y == 145) ||  (vga_y == 265) || (vga_y == 385) ||  (vga_y == 505)) {
         blue_out = 0;
         green_out = 0;
         red_out = 0;
     }
 
-    // group the RGB components into a single signal
+    //Group the RGB components into a single signal
 	vout[0] = ((((ac_int<PIXEL_WL, false>)red_out) << (2*COLOUR_WL)) | (((ac_int<PIXEL_WL, false>)green_out) << COLOUR_WL) | (ac_int<PIXEL_WL, false>)blue_out);
 	    
 }

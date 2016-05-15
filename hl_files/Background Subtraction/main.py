@@ -51,6 +51,7 @@ def checkPixels(image, coordinates):
                 if(RGB[0]==0) and (RGB[1]==0) and (RGB[2]==0):
                     counter+=1
     return counter
+
 #Returns the topmost point black pixel of the picture
 def TopPoint(image):
     width, height = image.size
@@ -82,6 +83,7 @@ def RightArmPoint(image, top, distance):
                         y_max = y
                         x_max = x
     return (x_max, y_max)
+
 #Calculates the middle point of the body 0.236 - proportionality constant of golden ratio
 def MiddlePoint(image, top, height):
     x_top,y_top = top
@@ -176,26 +178,24 @@ def drawLine(image,coordinates1, coordinates2):
 
 def main():
     ref_image = Image.open("ref5.jpg")
-    #ref_image.save('r1.bmp')
     body_image = Image.open("body5.jpg")
-    #body_image.save('b1.bmp')
+
 
     ref_image = BW(ref_image)
     ref_image = Find_Edges(ref_image)
     ref_image = Invert(ref_image)
-   # ref_image.save('r2_edge.bmp')
+
 
 
     body_image = BW(body_image)
     body_image = Find_Edges(body_image)
     body_image = Invert(body_image)
-   # body_image.save('b2_edge.bmp')
+
 
 
     diff = ImageChops.difference(ref_image, body_image)
     diff = Invert(diff)
     diff = CleanImage(diff)
-    #diff.save('d1.bmp')
 
     x_top, y_top = TopPoint(diff)
     x_leftLeg, y_leftLeg = LeftLegPoint(diff, (x_top, y_top))
@@ -225,7 +225,6 @@ def main():
     drawCircle(diff, (x_leftArm, y_leftArm))
     drawCircle(diff, (x_middle, y_middle))
     drawCircle(diff, (x_waist, y_waist))
-   # diff.save('d2.bmp')
     diff.show()
 
 if __name__=="__main__":
