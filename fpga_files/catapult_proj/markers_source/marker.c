@@ -72,19 +72,20 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     static shift_class<ac_int<PIXEL_WL*KERNEL_WIDTH,false>, KERNEL_WIDTH> regs;
     regs << vin[0];
     
-    //Pass the colours through a Gaussian to eliminate noise:
+    //Pass the colours through a Gaussian blur to eliminate noise:
     ACC1: for(i = 0; i < KERNEL_WIDTH; i++){
         k = 0;
         gauss_store[i][k][0] = (regs[i].slc<COLOUR_WL>(2*COLOUR_WL + 2*PIXEL_WL));
+		// first line of pixel stream
 		gauss_store[i][k][1] = (regs[i].slc<COLOUR_WL>(COLOUR_WL + 2*PIXEL_WL)) ;
 		gauss_store[i][k][2] = (regs[i].slc<COLOUR_WL>(0 + 2*PIXEL_WL));
 		k++;
-		// second line
+		// second line of pixel stream
 		gauss_store[i][k][0] = (regs[i].slc<COLOUR_WL>(2*COLOUR_WL + PIXEL_WL));
 		gauss_store[i][k][1] = (regs[i].slc<COLOUR_WL>(COLOUR_WL + PIXEL_WL));
 		gauss_store[i][k][2] = (regs[i].slc<COLOUR_WL>(0 + PIXEL_WL));
 		k++;
-		// current line
+		// current line of pixel stream
 		gauss_store[i][k][0] = (regs[i].slc<COLOUR_WL>(2*COLOUR_WL));
 		gauss_store[i][k][1] = (regs[i].slc<COLOUR_WL>(COLOUR_WL));
 		gauss_store[i][k][2] = (regs[i].slc<COLOUR_WL>(0));
@@ -93,7 +94,7 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     //Approximate Gaussian filter, requires only a single pass of the kernel
     ACC2: for(i = 0; i < KERNEL_WIDTH; i++){
         MAC1: for(k = 0; k < KERNEL_WIDTH; k++){
-            //take the value;
+            //store the value;
             gauss_blur_val[0] += gauss_store[i][k][0] * gauss[i][k];
             gauss_blur_val[1] += gauss_store[i][k][1] * gauss[i][k];
             gauss_blur_val[2] += gauss_store[i][k][2] * gauss[i][k];
@@ -133,7 +134,7 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
         acc[1]++; //BLUE
     }
     
-    //If 4 familiar pixels, probably the right point, assign it to current x,y coordinates, only if not initalized
+    //If 4 familiar pixels, estimate as the right point, assign it to current x,y coordinates, only if not initalized
     //acc[0] - RED
     if (acc[0] > 6){
         if ((red_xy[0]==0) && (red_xy[1]==0)) {
@@ -202,7 +203,7 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
     blue_out = blue;
     
     
-    //Draw both the RED and BLUE squares - 40 pixels
+    //Draw both the RED and BLUE squares - 40x40 pixels
     if (((deltax_square_red >= 0)&&(deltax_square_red <= 40)) && ((deltay_square_red >= 0) &&(deltay_square_red <= 40))){
         green_out = 0;
         blue_out = 0;
@@ -214,11 +215,11 @@ void markers(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_W
         red_out = 0;
     } 
     
-    //Adjustment of the volume
+    //Volume Adjustment:
     //Calculate the volume through the y coordinate of the RED marker
-    //Timsed by -1 because it has to be inverted to enable the increase from the bottom of the screen
-    //Volume stored in memory to keed the same volume value even during an error
-    //Otherwise volume = 0
+    //Multiplied by -1 as must be inverted to enable the increase from bottom of the screen
+    //Volume stored in memory to keep the same volume value even during an error
+    //Otherwise volume set to 0
     
     ac_int<4, false> volume_current = ((-1*((red_xy_previous[1])-480))/90);
     if (((volume_current-volume_previous[0])>=-2)&&((volume_current-volume_previous[0])<=2)){
