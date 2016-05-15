@@ -42,6 +42,8 @@
 #include "ac_int.h"
 #include <iostream>
 
+// x and y sobel kernel constants
+
 const ac_int<8,true> X_MASK[3][3] = {
     {-1, 0, 1},
     {-2, 0, 2},
@@ -69,7 +71,8 @@ ac_int<16, false> abs(ac_int<16, true> din){
 #pragma hls_design top
 void sobel_filter_comp(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int<PIXEL_WL,false> vout[NUM_PIXELS], ac_int<(COORD_WL+COORD_WL), false> * vga_xy)
 {
-    ac_int<16, false> val, r[KERNEL_WIDTH], g[KERNEL_WIDTH], b[KERNEL_WIDTH];
+    // variables to hold RGB and greyscale components
+    ac_int<16, false> val, r[KERNEL_WIDTH], g[KERNEL_WIDTH], b[KERNEL_WIDTH]; 
     ac_int<16, true> greyx, greyy, gr[KERNEL_WIDTH][KERNEL_WIDTH];
     ac_int<10, false> vga_x, vga_y; // screen coordinates
     
@@ -86,17 +89,18 @@ void sobel_filter_comp(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_i
     ac_int<2,false> i;
     bool set_en;
     
-	// init
+	// initialisations
 	greyx = 0;
 	greyy = 0;
 	val = 0;
 		// shift input data in the filter fifo
-	regs << vin[0]; // advance the pointer address by the pixel number (testbench/simulation only)
+	regs << vin[0]; // advance the pointer address by the pixel number 
 		
 	// loop to downscale image
 	
 	//perform the sobel for every 8 pixels in the x and y direction
 	//this scales the image down to 80 x 60
+	//use the modulo (%) operation
 	   if(((vga_x % 8) == 0) && ((vga_y % 8 == 0))){
 		  
 		  ACC1: for(i = 0; i < KERNEL_WIDTH; i++) {
@@ -134,7 +138,7 @@ void sobel_filter_comp(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_i
 	}
 	
 	
-	// black and white the sobel and turn into 1 and 0 for storage
+	// black and white the sobel and turn into 1 and 0 for storage into memory
 	ac_int<1,false> bit;
 	if (val >= 512) { 
 	   val = 1023;
