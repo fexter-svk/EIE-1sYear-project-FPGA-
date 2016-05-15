@@ -42,6 +42,8 @@
 #include "ac_int.h"
 #include <iostream>
 
+// x and y sobel kernel constants
+
 const ac_int<8,true> X_MASK[3][3] = {
     {-1, 0, 1},
     {-2, 0, 2},
@@ -58,6 +60,7 @@ const ac_int<8,true> Y_MASK[3][3] = {
 // shift_class: page 119 HLS Blue Book
 #include "shift_class_sob.h" 
 
+// function to return the absolute value
 ac_int<16, false> abs(ac_int<16, true> din){
     if(din < 0){
         din = -din;
@@ -96,19 +99,19 @@ void sobel_filter_bw(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int
 	// greyscale
 	ACC1: for(i = 0; i < KERNEL_WIDTH; i++) {
 		k = 0;
-		// first line ...
+		// first line of pixels
 		r[0] = (regs[i].slc<COLOUR_WL>(2*COLOUR_WL + 2*PIXEL_WL));
 		g[0] = (regs[i].slc<COLOUR_WL>(COLOUR_WL + 2*PIXEL_WL)) ;
 		b[0] = (regs[i].slc<COLOUR_WL>(0 + 2*PIXEL_WL));
 		gr[i][k] = (r[0] + g[0] + b[0])/3;
 		k++;
-		// second line ... 
+		// second line of pixels
 		r[1] = (regs[i].slc<COLOUR_WL>(2*COLOUR_WL + PIXEL_WL));
 		g[1] = (regs[i].slc<COLOUR_WL>(COLOUR_WL + PIXEL_WL));
 		b[1] = (regs[i].slc<COLOUR_WL>(0 + PIXEL_WL));
 		gr[i][k]= (r[1] + g[1] + b[1])/3;
 		k++;
-		// current line
+		// current line of pixels
 		r[2] = (regs[i].slc<COLOUR_WL>(2*COLOUR_WL));
 		g[2] = (regs[i].slc<COLOUR_WL>(COLOUR_WL));
 		b[2] = (regs[i].slc<COLOUR_WL>(0));
@@ -123,17 +126,17 @@ void sobel_filter_bw(ac_int<PIXEL_WL*KERNEL_WIDTH,false> vin[NUM_PIXELS], ac_int
 	   }
 	}
 	
-	// sobel addition
+	// add the x and y values from the sobel operation to get the final value
 	val = abs(greyx) + abs(greyy);
 	
-	// black and white the sobel and turn into 1 and 0 for storage
+	// black and white the sobel and turn into 1 and 0 for storage into memory (binary image)
 	ac_int<1,false> bit;
 	if (val >= 512) { 
-	   val = 1023;
+	   val = 1023; //above the 512 threashold the pixel is set to white
 	   bit = 1;
 	}
 	if (val < 512) { 
-	   val = 0;
+	   val = 0; // below the 512 threashold the pixel is set to black
 	   bit = 0;
 	}
 	
