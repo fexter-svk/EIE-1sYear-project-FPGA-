@@ -1,0 +1,48 @@
+
+# Messages from "go new"
+
+Creating project directory '\\icnas2.cc.ic.ac.uk\al3515\Desktop\MemoryTestBench\catapult\MemoryTesterv2'. (PRJ-1)
+
+# Messages from "go analyze"
+
+Front End called with arguments: -- {\\icnas2.cc.ic.ac.uk\al3515\Desktop\MemoryTestBench\catapult\src2\NewMemory.h} {\\icnas2.cc.ic.ac.uk\al3515\Desktop\MemoryTestBench\catapult\src2\NewMemory.cpp} (CIN-69)
+Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
+Source file analysis completed (CIN-68)
+Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Completed transformation 'analyze' on solution 'solution.v1': elapsed time 1.50 seconds, memory usage 157764kB, peak memory usage 207096kB (SOL-9)
+$PROJECT_HOME/src2/NewMemory.cpp(19): last line of file ends without a newline (CRD-1)
+          detected during compilation of secondary translation unit "\\icnas2.cc.ic.ac.uk\al3515\Desktop\MemoryTestBench\catapult\src2\NewMemory.cpp"
+$PROJECT_HOME/src2/NewMemory.cpp(12): parameter "bits_out" was set but never used (CRD-550)
+          detected during compilation of secondary translation unit "\\icnas2.cc.ic.ac.uk\al3515\Desktop\MemoryTestBench\catapult\src2\NewMemory.cpp"
+
+# Messages from "go compile"
+
+Reading component library '$MGC_HOME\pkgs\siflibs\mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+Reading component library '$MGC_HOME\pkgs\siflibs\stdops.lib' [STDOPS]... (LIB-49)
+Reading component library '$MGC_HOME\pkgs\siflibs\mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME\pkgs\ccs_altera\Altera_accel_CycloneIII.lib' [Altera_accel_CycloneIII]... (LIB-49)
+Reading component library '$MGC_HOME\pkgs\siflibs\psr2010a_up2\mgc_Altera-Cyclone-III-6_beh_psr.lib' [mgc_Altera-Cyclone-III-6_beh_psr]... (LIB-49)
+Reading component library '$MGC_HOME\pkgs\siflibs\psr2010a_up2\ram_Altera-Cyclone-III-6_RAMSB.lib' [ram_Altera-Cyclone-III-6_RAMSB]... (LIB-49)
+Starting transformation 'compile' on solution 'solution.v1' (SOL-8)
+Generating synthesis internal form... (CIN-3)
+Found top design routine 'MemBlock' specified by directive (CIN-52)
+Synthesizing routine 'MemBlock' (CIN-13)
+Inlining routine 'MemBlock' (CIN-14)
+Optimizing block '/MemBlock' ... (CIN-4)
+Design 'MemBlock' was read (SOL-1)
+Optimizing partition '/MemBlock': (Total ops = 39, Real ops = 12, Vars = 17) (SOL-10)
+Optimizing partition '/MemBlock/core': (Total ops = 39, Real ops = 12, Vars = 12) (SOL-10)
+Optimizing partition '/MemBlock/core': (Total ops = 39, Real ops = 12, Vars = 12) (SOL-10)
+Optimizing partition '/MemBlock': (Total ops = 39, Real ops = 12, Vars = 17) (SOL-10)
+Optimizing partition '/MemBlock': (Total ops = 39, Real ops = 12, Vars = 17) (SOL-10)
+Optimizing partition '/MemBlock/core': (Total ops = 39, Real ops = 12, Vars = 12) (SOL-10)
+Optimizing partition '/MemBlock/core': (Total ops = 5, Real ops = 0, Vars = 5) (SOL-10)
+Optimizing partition '/MemBlock/core': (Total ops = 5, Real ops = 0, Vars = 5) (SOL-10)
+Optimizing partition '/MemBlock': (Total ops = 5, Real ops = 0, Vars = 10) (SOL-10)
+Optimizing partition '/MemBlock': (Total ops = 5, Real ops = 0, Vars = 10) (SOL-10)
+Optimizing partition '/MemBlock/core': (Total ops = 5, Real ops = 0, Vars = 5) (SOL-10)
+Optimizing partition '/MemBlock': (Total ops = 5, Real ops = 0, Vars = 10) (SOL-10)
+Optimizing partition '/MemBlock': (Total ops = 5, Real ops = 0, Vars = 10) (SOL-10)
+Optimizing partition '/MemBlock/core': (Total ops = 5, Real ops = 0, Vars = 5) (SOL-10)
+Completed transformation 'compile' on solution 'MemBlock.v1': elapsed time 0.33 seconds, memory usage 165704kB, peak memory usage 207096kB (SOL-9)
+Instantiating global variable 'data' which may be accessed outside this scope (CIN-18)

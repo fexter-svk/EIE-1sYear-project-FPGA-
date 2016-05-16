@@ -1,0 +1,5 @@
+./rtl_mgc_ioport.v
+./rtl_mgc_ioport_v2001.v
+C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_generic_reg_beh.v
+C:/PROGRA~1/CALYPT~1/CATAPU~1.126/Mgc_home/pkgs/siflibs/ram_singleport_be_fpga.v
+./rtl.v

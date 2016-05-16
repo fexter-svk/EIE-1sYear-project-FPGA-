@@ -1,0 +1,786 @@
+
+# Program: Catapult University Version
+# Version: 2011a.126
+#    File: Nlview netlist
+
+module new "MemoryTester:core:fsm" "orig"
+load port {clk} input -attr xrf 1384 -attr oid 1 -attr @path {/MemoryTester/MemoryTester:core/MemoryTester:core:fsm/clk}
+load port {rst} input -attr xrf 1385 -attr oid 2 -attr @path {/MemoryTester/MemoryTester:core/MemoryTester:core:fsm/rst}
+load portBus {fsm_output(4:0)} output 5 {fsm_output(4)} {fsm_output(3)} {fsm_output(2)} {fsm_output(1)} {fsm_output(0)} -attr xrf 1386 -attr oid 3 -attr @path {/MemoryTester/MemoryTester:core/MemoryTester:core:fsm/fsm_output}
+load port {st(if:for:for)#1_tr0} input -attr @path {/MemoryTester/MemoryTester:core/MemoryTester:core:fsm/st(if:for:for)#1_tr0}
+load port {st(if:for)_tr0} input -attr @path {/MemoryTester/MemoryTester:core/MemoryTester:core:fsm/st(if:for)_tr0}
+load net {clk} -attr xrf 1387 -attr oid 4
+load net {clk} -port {clk} -attr xrf 1388 -attr oid 5
+load net {rst} -attr xrf 1389 -attr oid 6
+load net {rst} -port {rst} -attr xrf 1390 -attr oid 7
+load net {fsm_output(0)} -attr vt d
+load net {fsm_output(1)} -attr vt d
+load net {fsm_output(2)} -attr vt d
+load net {fsm_output(3)} -attr vt d
+load net {fsm_output(4)} -attr vt d
+load netBundle {fsm_output} 5 {fsm_output(0)} {fsm_output(1)} {fsm_output(2)} {fsm_output(3)} {fsm_output(4)} -attr xrf 1391 -attr oid 8 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/MemoryTester:core:fsm/fsm_output}
+load net {fsm_output(0)} -port {fsm_output(0)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/MemoryTester:core:fsm/fsm_output}
+load net {fsm_output(1)} -port {fsm_output(1)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/MemoryTester:core:fsm/fsm_output}
+load net {fsm_output(2)} -port {fsm_output(2)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/MemoryTester:core:fsm/fsm_output}
+load net {fsm_output(3)} -port {fsm_output(3)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/MemoryTester:core:fsm/fsm_output}
+load net {fsm_output(4)} -port {fsm_output(4)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/MemoryTester:core:fsm/fsm_output}
+load net {st(if:for:for)#1_tr0} -attr vt d
+load net {st(if:for:for)#1_tr0} -port {st(if:for:for)#1_tr0}
+load net {st(if:for)_tr0} -attr vt d
+load net {st(if:for)_tr0} -port {st(if:for)_tr0}
+### END MODULE 
+
+module new "MemoryTester:core" "orig"
+load port {clk} input -attr xrf 1392 -attr oid 9 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/clk}
+load port {rst} input -attr xrf 1393 -attr oid 10 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/rst}
+load port {bit_out:rsc:mgc_out_stdreg.d} output -attr xrf 1394 -attr oid 11 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/bit_out:rsc:mgc_out_stdreg.d}
+load portBus {row:rsc:mgc_out_stdreg.d(5:0)} output 6 {row:rsc:mgc_out_stdreg.d(5)} {row:rsc:mgc_out_stdreg.d(4)} {row:rsc:mgc_out_stdreg.d(3)} {row:rsc:mgc_out_stdreg.d(2)} {row:rsc:mgc_out_stdreg.d(1)} {row:rsc:mgc_out_stdreg.d(0)} -attr xrf 1395 -attr oid 12 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/row:rsc:mgc_out_stdreg.d}
+load port {col:rsc:mgc_inout_stdreg_en.ldout} output -attr xrf 1396 -attr oid 13 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/col:rsc:mgc_inout_stdreg_en.ldout}
+load portBus {col:rsc:mgc_inout_stdreg_en.dout(6:0)} output 7 {col:rsc:mgc_inout_stdreg_en.dout(6)} {col:rsc:mgc_inout_stdreg_en.dout(5)} {col:rsc:mgc_inout_stdreg_en.dout(4)} {col:rsc:mgc_inout_stdreg_en.dout(3)} {col:rsc:mgc_inout_stdreg_en.dout(2)} {col:rsc:mgc_inout_stdreg_en.dout(1)} {col:rsc:mgc_inout_stdreg_en.dout(0)} -attr xrf 1397 -attr oid 14 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/col:rsc:mgc_inout_stdreg_en.dout}
+load symbol "MemoryTester:core:fsm" "orig" GEN \
+     port {clk#1} input \
+     port {rst#1} input \
+     portBus {fsm_output(4:0)} output 5 {fsm_output(4)} {fsm_output(3)} {fsm_output(2)} {fsm_output(1)} {fsm_output(0)} \
+     port {st(if:for:for)#1_tr0} input \
+     port {st(if:for)_tr0} input \
+
+load symbol "nor(2,1)" "INTERFACE" NOR boxcolor 0 \
+     portBus {A0(0:0)} input 1 {A0(0)} \
+     portBus {A1(0:0)} input 1 {A1(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load symbol "mux(2,6)" "INTERFACE" MUX boxcolor 0 \
+     portBus {A0(5:0)} input 6 {A0(5)} {A0(4)} {A0(3)} {A0(2)} {A0(1)} {A0(0)} \
+     portBus {A1(5:0)} input 6 {A1(5)} {A1(4)} {A1(3)} {A1(2)} {A1(1)} {A1(0)} \
+     portBus {S(0:0)} input.top 1 {S(0)} \
+     portBus {Z(5:0)} output 6 {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "not(1)" "INTERFACE" INV boxcolor 0 \
+     portBus {A(0:0)} input 1 {A(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load symbol "and(2,6)" "INTERFACE" AND boxcolor 0 \
+     portBus {A0(5:0)} input 6 {A0(5)} {A0(4)} {A0(3)} {A0(2)} {A0(1)} {A0(0)} \
+     portBus {A1(5:0)} input 6 {A1(5)} {A1(4)} {A1(3)} {A1(2)} {A1(1)} {A1(0)} \
+     portBus {Z(5:0)} output 6 {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "reg(6,1,0,0,1)" "INTERFACE" GEN boxcolor 1 \
+     portBus {D(5:0)} input 6 {D(5)} {D(4)} {D(3)} {D(2)} {D(1)} {D(0)} \
+     portBus {DRs(5:0)} input 6 {DRs(5)} {DRs(4)} {DRs(3)} {DRs(2)} {DRs(1)} {DRs(0)} \
+     port {clk} input.clk \
+     portBus {Rs(0:0)} input 1 {Rs(0)} \
+     portBus {Z(5:0)} output 6 {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "or(3,1)" "INTERFACE" OR boxcolor 0 \
+     portBus {A0(0:0)} input 1 {A0(0)} \
+     portBus {A1(0:0)} input 1 {A1(0)} \
+     portBus {A2(0:0)} input 1 {A2(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load symbol "mux(2,1)" "INTERFACE" MUX boxcolor 0 \
+     portBus {A0(0:0)} input 1 {A0(0)} \
+     portBus {A1(0:0)} input 1 {A1(0)} \
+     portBus {S(0:0)} input.top 1 {S(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load symbol "reg(1,1,0,0,1)" "INTERFACE" GEN boxcolor 1 \
+     portBus {D(0:0)} input 1 {D(0)} \
+     portBus {DRs(0:0)} input 1 {DRs(0)} \
+     port {clk} input.clk \
+     portBus {Rs(0:0)} input 1 {Rs(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load symbol "and(2,1)" "INTERFACE" AND boxcolor 0 \
+     portBus {A0(0:0)} input 1 {A0(0)} \
+     portBus {A1(0:0)} input 1 {A1(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load symbol "nor(3,1)" "INTERFACE" NOR boxcolor 0 \
+     portBus {A0(0:0)} input 1 {A0(0)} \
+     portBus {A1(0:0)} input 1 {A1(0)} \
+     portBus {A2(0:0)} input 1 {A2(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load symbol "mux1h(3,6)" "INTERFACE" GEN boxcolor 0 \
+     portBus {A0(5:0)} input 6 {A0(5)} {A0(4)} {A0(3)} {A0(2)} {A0(1)} {A0(0)} \
+     portBus {A1(5:0)} input 6 {A1(5)} {A1(4)} {A1(3)} {A1(2)} {A1(1)} {A1(0)} \
+     portBus {A2(5:0)} input 6 {A2(5)} {A2(4)} {A2(3)} {A2(2)} {A2(1)} {A2(0)} \
+     port {S0} input \
+     port {S1} input \
+     port {S2} input \
+     portBus {Z(5:0)} output 6 {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "and(2,7)" "INTERFACE" AND boxcolor 0 \
+     portBus {A0(6:0)} input 7 {A0(6)} {A0(5)} {A0(4)} {A0(3)} {A0(2)} {A0(1)} {A0(0)} \
+     portBus {A1(6:0)} input 7 {A1(6)} {A1(5)} {A1(4)} {A1(3)} {A1(2)} {A1(1)} {A1(0)} \
+     portBus {Z(6:0)} output 7 {Z(6)} {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "reg(7,1,0,0,1)" "INTERFACE" GEN boxcolor 1 \
+     portBus {D(6:0)} input 7 {D(6)} {D(5)} {D(4)} {D(3)} {D(2)} {D(1)} {D(0)} \
+     portBus {DRs(6:0)} input 7 {DRs(6)} {DRs(5)} {DRs(4)} {DRs(3)} {DRs(2)} {DRs(1)} {DRs(0)} \
+     port {clk} input.clk \
+     portBus {Rs(0:0)} input 1 {Rs(0)} \
+     portBus {Z(6:0)} output 7 {Z(6)} {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "add(3,0,4,-1,4)" "INTERFACE" RTL(+) boxcolor 0 \
+     portBus {A(2:0)} input 3 {A(2)} {A(1)} {A(0)} \
+     portBus {B(3:0)} input 4 {B(3)} {B(2)} {B(1)} {B(0)} \
+     portBus {Z(3:0)} output 4 {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "add(7,-1,1,0,7)" "INTERFACE" RTL(+) boxcolor 0 \
+     portBus {A(6:0)} input 7 {A(6)} {A(5)} {A(4)} {A(3)} {A(2)} {A(1)} {A(0)} \
+     portBus {B(0:0)} input 1 {B(0)} \
+     portBus {Z(6:0)} output 7 {Z(6)} {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "add(6,-1,1,0,6)" "INTERFACE" RTL(+) boxcolor 0 \
+     portBus {A(5:0)} input 6 {A(5)} {A(4)} {A(3)} {A(2)} {A(1)} {A(0)} \
+     portBus {B(0:0)} input 1 {B(0)} \
+     portBus {Z(5:0)} output 6 {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "add(5,-1,1,0,5)" "INTERFACE" RTL(+) boxcolor 0 \
+     portBus {A(4:0)} input 5 {A(4)} {A(3)} {A(2)} {A(1)} {A(0)} \
+     portBus {B(0:0)} input 1 {B(0)} \
+     portBus {Z(4:0)} output 5 {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load net {if:for:i#1.sva(0)} -attr vt d
+load net {if:for:i#1.sva(1)} -attr vt d
+load net {if:for:i#1.sva(2)} -attr vt d
+load net {if:for:i#1.sva(3)} -attr vt d
+load net {if:for:i#1.sva(4)} -attr vt d
+load net {if:for:i#1.sva(5)} -attr vt d
+load netBundle {if:for:i#1.sva} 6 {if:for:i#1.sva(0)} {if:for:i#1.sva(1)} {if:for:i#1.sva(2)} {if:for:i#1.sva(3)} {if:for:i#1.sva(4)} {if:for:i#1.sva(5)} -attr xrf 1398 -attr oid 15 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva}
+load net {if:for:for:j#1.sva(0)} -attr vt d
+load net {if:for:for:j#1.sva(1)} -attr vt d
+load net {if:for:for:j#1.sva(2)} -attr vt d
+load net {if:for:for:j#1.sva(3)} -attr vt d
+load net {if:for:for:j#1.sva(4)} -attr vt d
+load net {if:for:for:j#1.sva(5)} -attr vt d
+load net {if:for:for:j#1.sva(6)} -attr vt d
+load netBundle {if:for:for:j#1.sva} 7 {if:for:for:j#1.sva(0)} {if:for:for:j#1.sva(1)} {if:for:for:j#1.sva(2)} {if:for:for:j#1.sva(3)} {if:for:for:j#1.sva(4)} {if:for:for:j#1.sva(5)} {if:for:for:j#1.sva(6)} -attr xrf 1399 -attr oid 16 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva}
+load net {if:for:for:j#1.sva#1(0)} -attr vt d
+load net {if:for:for:j#1.sva#1(1)} -attr vt d
+load net {if:for:for:j#1.sva#1(2)} -attr vt d
+load net {if:for:for:j#1.sva#1(3)} -attr vt d
+load net {if:for:for:j#1.sva#1(4)} -attr vt d
+load net {if:for:for:j#1.sva#1(5)} -attr vt d
+load net {if:for:for:j#1.sva#1(6)} -attr vt d
+load netBundle {if:for:for:j#1.sva#1} 7 {if:for:for:j#1.sva#1(0)} {if:for:for:j#1.sva#1(1)} {if:for:for:j#1.sva#1(2)} {if:for:for:j#1.sva#1(3)} {if:for:for:j#1.sva#1(4)} {if:for:for:j#1.sva#1(5)} {if:for:for:j#1.sva#1(6)} -attr xrf 1400 -attr oid 17 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva#1}
+load net {if:for:for:j#1.sva#2(0)} -attr vt d
+load net {if:for:for:j#1.sva#2(1)} -attr vt d
+load net {if:for:for:j#1.sva#2(2)} -attr vt d
+load net {if:for:for:j#1.sva#2(3)} -attr vt d
+load net {if:for:for:j#1.sva#2(4)} -attr vt d
+load net {if:for:for:j#1.sva#2(5)} -attr vt d
+load net {if:for:for:j#1.sva#2(6)} -attr vt d
+load netBundle {if:for:for:j#1.sva#2} 7 {if:for:for:j#1.sva#2(0)} {if:for:for:j#1.sva#2(1)} {if:for:for:j#1.sva#2(2)} {if:for:for:j#1.sva#2(3)} {if:for:for:j#1.sva#2(4)} {if:for:for:j#1.sva#2(5)} {if:for:for:j#1.sva#2(6)} -attr xrf 1401 -attr oid 18 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva#2}
+load net {if:for:i#1.sva#1(0)} -attr vt d
+load net {if:for:i#1.sva#1(1)} -attr vt d
+load net {if:for:i#1.sva#1(2)} -attr vt d
+load net {if:for:i#1.sva#1(3)} -attr vt d
+load net {if:for:i#1.sva#1(4)} -attr vt d
+load net {if:for:i#1.sva#1(5)} -attr vt d
+load netBundle {if:for:i#1.sva#1} 6 {if:for:i#1.sva#1(0)} {if:for:i#1.sva#1(1)} {if:for:i#1.sva#1(2)} {if:for:i#1.sva#1(3)} {if:for:i#1.sva#1(4)} {if:for:i#1.sva#1(5)} -attr xrf 1402 -attr oid 19 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva#1}
+load net {and#10.itm(0)} -attr vt d
+load net {and#10.itm(1)} -attr vt d
+load net {and#10.itm(2)} -attr vt d
+load net {and#10.itm(3)} -attr vt d
+load net {and#10.itm(4)} -attr vt d
+load net {and#10.itm(5)} -attr vt d
+load netBundle {and#10.itm} 6 {and#10.itm(0)} {and#10.itm(1)} {and#10.itm(2)} {and#10.itm(3)} {and#10.itm(4)} {and#10.itm(5)} -attr xrf 1403 -attr oid 20 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/and#10.itm}
+load net {mux#3.itm(0)} -attr vt d
+load net {mux#3.itm(1)} -attr vt d
+load net {mux#3.itm(2)} -attr vt d
+load net {mux#3.itm(3)} -attr vt d
+load net {mux#3.itm(4)} -attr vt d
+load net {mux#3.itm(5)} -attr vt d
+load netBundle {mux#3.itm} 6 {mux#3.itm(0)} {mux#3.itm(1)} {mux#3.itm(2)} {mux#3.itm(3)} {mux#3.itm(4)} {mux#3.itm(5)} -attr xrf 1404 -attr oid 21 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/mux#3.itm}
+load net {exs#1.itm(0)} -attr vt d
+load net {exs#1.itm(1)} -attr vt d
+load net {exs#1.itm(2)} -attr vt d
+load net {exs#1.itm(3)} -attr vt d
+load net {exs#1.itm(4)} -attr vt d
+load net {exs#1.itm(5)} -attr vt d
+load netBundle {exs#1.itm} 6 {exs#1.itm(0)} {exs#1.itm(1)} {exs#1.itm(2)} {exs#1.itm(3)} {exs#1.itm(4)} {exs#1.itm(5)} -attr xrf 1405 -attr oid 22 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/exs#1.itm}
+load net {and#8.itm(0)} -attr vt d
+load net {and#8.itm(1)} -attr vt d
+load net {and#8.itm(2)} -attr vt d
+load net {and#8.itm(3)} -attr vt d
+load net {and#8.itm(4)} -attr vt d
+load net {and#8.itm(5)} -attr vt d
+load netBundle {and#8.itm} 6 {and#8.itm(0)} {and#8.itm(1)} {and#8.itm(2)} {and#8.itm(3)} {and#8.itm(4)} {and#8.itm(5)} -attr xrf 1406 -attr oid 23 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/and#8.itm}
+load net {mux1h#2.itm(0)} -attr vt d
+load net {mux1h#2.itm(1)} -attr vt d
+load net {mux1h#2.itm(2)} -attr vt d
+load net {mux1h#2.itm(3)} -attr vt d
+load net {mux1h#2.itm(4)} -attr vt d
+load net {mux1h#2.itm(5)} -attr vt d
+load netBundle {mux1h#2.itm} 6 {mux1h#2.itm(0)} {mux1h#2.itm(1)} {mux1h#2.itm(2)} {mux1h#2.itm(3)} {mux1h#2.itm(4)} {mux1h#2.itm(5)} -attr xrf 1407 -attr oid 24 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/mux1h#2.itm}
+load net {exs.itm(0)} -attr vt d
+load net {exs.itm(1)} -attr vt d
+load net {exs.itm(2)} -attr vt d
+load net {exs.itm(3)} -attr vt d
+load net {exs.itm(4)} -attr vt d
+load net {exs.itm(5)} -attr vt d
+load netBundle {exs.itm} 6 {exs.itm(0)} {exs.itm(1)} {exs.itm(2)} {exs.itm(3)} {exs.itm(4)} {exs.itm(5)} -attr xrf 1408 -attr oid 25 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/exs.itm}
+load net {and#12.itm(0)} -attr vt d
+load net {and#12.itm(1)} -attr vt d
+load net {and#12.itm(2)} -attr vt d
+load net {and#12.itm(3)} -attr vt d
+load net {and#12.itm(4)} -attr vt d
+load net {and#12.itm(5)} -attr vt d
+load net {and#12.itm(6)} -attr vt d
+load netBundle {and#12.itm} 7 {and#12.itm(0)} {and#12.itm(1)} {and#12.itm(2)} {and#12.itm(3)} {and#12.itm(4)} {and#12.itm(5)} {and#12.itm(6)} -attr xrf 1409 -attr oid 26 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/and#12.itm}
+load net {exs#3.itm(0)} -attr vt d
+load net {exs#3.itm(1)} -attr vt d
+load net {exs#3.itm(2)} -attr vt d
+load net {exs#3.itm(3)} -attr vt d
+load net {exs#3.itm(4)} -attr vt d
+load net {exs#3.itm(5)} -attr vt d
+load net {exs#3.itm(6)} -attr vt d
+load netBundle {exs#3.itm} 7 {exs#3.itm(0)} {exs#3.itm(1)} {exs#3.itm(2)} {exs#3.itm(3)} {exs#3.itm(4)} {exs#3.itm(5)} {exs#3.itm(6)} -attr xrf 1410 -attr oid 27 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/exs#3.itm}
+load net {slc(if:for:for:j#1.sva#2).itm(0)} -attr vt d
+load net {slc(if:for:for:j#1.sva#2).itm(1)} -attr vt d
+load net {slc(if:for:for:j#1.sva#2).itm(2)} -attr vt d
+load netBundle {slc(if:for:for:j#1.sva#2).itm} 3 {slc(if:for:for:j#1.sva#2).itm(0)} {slc(if:for:for:j#1.sva#2).itm(1)} {slc(if:for:for:j#1.sva#2).itm(2)} -attr xrf 1411 -attr oid 28 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/slc(if:for:for:j#1.sva#2).itm}
+load net {conc#7.itm(0)} -attr vt d
+load net {conc#7.itm(1)} -attr vt d
+load net {conc#7.itm(2)} -attr vt d
+load net {conc#7.itm(3)} -attr vt d
+load net {conc#7.itm(4)} -attr vt d
+load netBundle {conc#7.itm} 5 {conc#7.itm(0)} {conc#7.itm(1)} {conc#7.itm(2)} {conc#7.itm(3)} {conc#7.itm(4)} -attr xrf 1412 -attr oid 29 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/conc#7.itm}
+load net {slc(if:for:i#1.sva#2).itm(0)} -attr vt d
+load net {slc(if:for:i#1.sva#2).itm(1)} -attr vt d
+load net {slc(if:for:i#1.sva#2).itm(2)} -attr vt d
+load net {slc(if:for:i#1.sva#2).itm(3)} -attr vt d
+load netBundle {slc(if:for:i#1.sva#2).itm} 4 {slc(if:for:i#1.sva#2).itm(0)} {slc(if:for:i#1.sva#2).itm(1)} {slc(if:for:i#1.sva#2).itm(2)} {slc(if:for:i#1.sva#2).itm(3)} -attr xrf 1413 -attr oid 30 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/slc(if:for:i#1.sva#2).itm}
+load net {clk} -attr xrf 1414 -attr oid 31
+load net {clk} -port {clk} -attr xrf 1415 -attr oid 32
+load net {rst} -attr xrf 1416 -attr oid 33
+load net {rst} -port {rst} -attr xrf 1417 -attr oid 34
+load net {bit_out:rsc:mgc_out_stdreg.d} -attr xrf 1418 -attr oid 35 -attr vt d
+load net {bit_out:rsc:mgc_out_stdreg.d} -port {bit_out:rsc:mgc_out_stdreg.d} -attr xrf 1419 -attr oid 36 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/bit_out:rsc:mgc_out_stdreg.d}
+load net {row:rsc:mgc_out_stdreg.d(0)} -attr vt d
+load net {row:rsc:mgc_out_stdreg.d(1)} -attr vt d
+load net {row:rsc:mgc_out_stdreg.d(2)} -attr vt d
+load net {row:rsc:mgc_out_stdreg.d(3)} -attr vt d
+load net {row:rsc:mgc_out_stdreg.d(4)} -attr vt d
+load net {row:rsc:mgc_out_stdreg.d(5)} -attr vt d
+load netBundle {row:rsc:mgc_out_stdreg.d} 6 {row:rsc:mgc_out_stdreg.d(0)} {row:rsc:mgc_out_stdreg.d(1)} {row:rsc:mgc_out_stdreg.d(2)} {row:rsc:mgc_out_stdreg.d(3)} {row:rsc:mgc_out_stdreg.d(4)} {row:rsc:mgc_out_stdreg.d(5)} -attr xrf 1420 -attr oid 37 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/row:rsc:mgc_out_stdreg.d}
+load net {row:rsc:mgc_out_stdreg.d(0)} -port {row:rsc:mgc_out_stdreg.d(0)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/row:rsc:mgc_out_stdreg.d}
+load net {row:rsc:mgc_out_stdreg.d(1)} -port {row:rsc:mgc_out_stdreg.d(1)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/row:rsc:mgc_out_stdreg.d}
+load net {row:rsc:mgc_out_stdreg.d(2)} -port {row:rsc:mgc_out_stdreg.d(2)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/row:rsc:mgc_out_stdreg.d}
+load net {row:rsc:mgc_out_stdreg.d(3)} -port {row:rsc:mgc_out_stdreg.d(3)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/row:rsc:mgc_out_stdreg.d}
+load net {row:rsc:mgc_out_stdreg.d(4)} -port {row:rsc:mgc_out_stdreg.d(4)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/row:rsc:mgc_out_stdreg.d}
+load net {row:rsc:mgc_out_stdreg.d(5)} -port {row:rsc:mgc_out_stdreg.d(5)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/row:rsc:mgc_out_stdreg.d}
+load net {col:rsc:mgc_inout_stdreg_en.ldout} -attr xrf 1421 -attr oid 38 -attr vt d
+load net {col:rsc:mgc_inout_stdreg_en.ldout} -port {col:rsc:mgc_inout_stdreg_en.ldout} -attr xrf 1422 -attr oid 39 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/col:rsc:mgc_inout_stdreg_en.ldout}
+load net {col:rsc:mgc_inout_stdreg_en.dout(0)} -attr vt d
+load net {col:rsc:mgc_inout_stdreg_en.dout(1)} -attr vt d
+load net {col:rsc:mgc_inout_stdreg_en.dout(2)} -attr vt d
+load net {col:rsc:mgc_inout_stdreg_en.dout(3)} -attr vt d
+load net {col:rsc:mgc_inout_stdreg_en.dout(4)} -attr vt d
+load net {col:rsc:mgc_inout_stdreg_en.dout(5)} -attr vt d
+load net {col:rsc:mgc_inout_stdreg_en.dout(6)} -attr vt d
+load netBundle {col:rsc:mgc_inout_stdreg_en.dout} 7 {col:rsc:mgc_inout_stdreg_en.dout(0)} {col:rsc:mgc_inout_stdreg_en.dout(1)} {col:rsc:mgc_inout_stdreg_en.dout(2)} {col:rsc:mgc_inout_stdreg_en.dout(3)} {col:rsc:mgc_inout_stdreg_en.dout(4)} {col:rsc:mgc_inout_stdreg_en.dout(5)} {col:rsc:mgc_inout_stdreg_en.dout(6)} -attr xrf 1423 -attr oid 40 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/col:rsc:mgc_inout_stdreg_en.dout}
+load net {if:for:i#1.sva(0)} -port {col:rsc:mgc_inout_stdreg_en.dout(0)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/col:rsc:mgc_inout_stdreg_en.dout}
+load net {if:for:i#1.sva(1)} -port {col:rsc:mgc_inout_stdreg_en.dout(1)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/col:rsc:mgc_inout_stdreg_en.dout}
+load net {if:for:i#1.sva(2)} -port {col:rsc:mgc_inout_stdreg_en.dout(2)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/col:rsc:mgc_inout_stdreg_en.dout}
+load net {if:for:i#1.sva(3)} -port {col:rsc:mgc_inout_stdreg_en.dout(3)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/col:rsc:mgc_inout_stdreg_en.dout}
+load net {if:for:i#1.sva(4)} -port {col:rsc:mgc_inout_stdreg_en.dout(4)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/col:rsc:mgc_inout_stdreg_en.dout}
+load net {if:for:i#1.sva(5)} -port {col:rsc:mgc_inout_stdreg_en.dout(5)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/col:rsc:mgc_inout_stdreg_en.dout}
+load net {GND} -port {col:rsc:mgc_inout_stdreg_en.dout(6)} -attr @path {/MemoryTester/MemoryTester:core/col:rsc:mgc_inout_stdreg_en.dout}
+load inst "MemoryTester:core:fsm:inst" "MemoryTester:core:fsm" "orig" -attr xrf 1424 -attr oid 41 -attr @path {/MemoryTester/MemoryTester:core/MemoryTester:core:fsm:inst} -attr area 1.000000 -attr hier "/MemoryTester/MemoryTester:core/MemoryTester:core:fsm" -pg 1 -lvl 3
+load net {clk} -pin  "MemoryTester:core:fsm:inst" {clk#1} -attr xrf 1425 -attr oid 42 -attr @path {/MemoryTester/MemoryTester:core/clk}
+load net {rst} -pin  "MemoryTester:core:fsm:inst" {rst#1} -attr xrf 1426 -attr oid 43 -attr @path {/MemoryTester/MemoryTester:core/rst}
+load net {fsm_output#1(0)} -pin  "MemoryTester:core:fsm:inst" {fsm_output(0)} -attr @path {/MemoryTester/MemoryTester:core/fsm_output}
+load net {fsm_output#1(1)} -pin  "MemoryTester:core:fsm:inst" {fsm_output(1)} -attr @path {/MemoryTester/MemoryTester:core/fsm_output}
+load net {fsm_output#1(2)} -pin  "MemoryTester:core:fsm:inst" {fsm_output(2)} -attr @path {/MemoryTester/MemoryTester:core/fsm_output}
+load net {fsm_output#1(3)} -pin  "MemoryTester:core:fsm:inst" {fsm_output(3)} -attr @path {/MemoryTester/MemoryTester:core/fsm_output}
+load net {fsm_output#1(4)} -pin  "MemoryTester:core:fsm:inst" {fsm_output(4)} -attr @path {/MemoryTester/MemoryTester:core/fsm_output}
+load net {not#12.itm} -pin  "MemoryTester:core:fsm:inst" {st(if:for:for)#1_tr0} -attr @path {/MemoryTester/MemoryTester:core/not#12.itm}
+load net {not#1.itm} -pin  "MemoryTester:core:fsm:inst" {st(if:for)_tr0} -attr @path {/MemoryTester/MemoryTester:core/not#1.itm}
+load inst "nor" "nor(2,1)" "INTERFACE" -attr @path {/MemoryTester/MemoryTester:core/nor} -attr area 0.730832 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_nor(1,2)"
+load net {fsm_output#1(4)} -pin  "nor" {A0(0)} -attr @path {/MemoryTester/MemoryTester:core/slc(fsm_output)#19.itm}
+load net {fsm_output#1(1)} -pin  "nor" {A1(0)} -attr @path {/MemoryTester/MemoryTester:core/slc(fsm_output)#18.itm}
+load net {nor.cse} -pin  "nor" {Z(0)} -attr @path {/MemoryTester/MemoryTester:core/nor.cse}
+load inst "mux#3" "mux(2,6)" "INTERFACE" -attr xrf 1427 -attr oid 44 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/mux#3} -attr area 5.517538 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_mux(6,1,2)"
+load net {if:for:i#1.sva(0)} -pin  "mux#3" {A0(0)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva}
+load net {if:for:i#1.sva(1)} -pin  "mux#3" {A0(1)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva}
+load net {if:for:i#1.sva(2)} -pin  "mux#3" {A0(2)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva}
+load net {if:for:i#1.sva(3)} -pin  "mux#3" {A0(3)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva}
+load net {if:for:i#1.sva(4)} -pin  "mux#3" {A0(4)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva}
+load net {if:for:i#1.sva(5)} -pin  "mux#3" {A0(5)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva}
+load net {if:for:i#1.sva#1(0)} -pin  "mux#3" {A1(0)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva#1}
+load net {if:for:i#1.sva#1(1)} -pin  "mux#3" {A1(1)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva#1}
+load net {if:for:i#1.sva#1(2)} -pin  "mux#3" {A1(2)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva#1}
+load net {if:for:i#1.sva#1(3)} -pin  "mux#3" {A1(3)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva#1}
+load net {if:for:i#1.sva#1(4)} -pin  "mux#3" {A1(4)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva#1}
+load net {if:for:i#1.sva#1(5)} -pin  "mux#3" {A1(5)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva#1}
+load net {nor.cse} -pin  "mux#3" {S(0)} -attr @path {/MemoryTester/MemoryTester:core/nor.cse}
+load net {mux#3.itm(0)} -pin  "mux#3" {Z(0)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/mux#3.itm}
+load net {mux#3.itm(1)} -pin  "mux#3" {Z(1)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/mux#3.itm}
+load net {mux#3.itm(2)} -pin  "mux#3" {Z(2)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/mux#3.itm}
+load net {mux#3.itm(3)} -pin  "mux#3" {Z(3)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/mux#3.itm}
+load net {mux#3.itm(4)} -pin  "mux#3" {Z(4)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/mux#3.itm}
+load net {mux#3.itm(5)} -pin  "mux#3" {Z(5)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/mux#3.itm}
+load inst "not#10" "not(1)" "INTERFACE" -attr @path {/MemoryTester/MemoryTester:core/not#10} -attr area 0.001000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_not(1)"
+load net {fsm_output#1(1)} -pin  "not#10" {A(0)} -attr @path {/MemoryTester/MemoryTester:core/slc(fsm_output)#10.itm}
+load net {not#10.itm} -pin  "not#10" {Z(0)} -attr @path {/MemoryTester/MemoryTester:core/not#10.itm}
+load inst "and#10" "and(2,6)" "INTERFACE" -attr xrf 1428 -attr oid 45 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/and#10} -attr area 4.379994 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_and(6,2)"
+load net {mux#3.itm(0)} -pin  "and#10" {A0(0)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/mux#3.itm}
+load net {mux#3.itm(1)} -pin  "and#10" {A0(1)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/mux#3.itm}
+load net {mux#3.itm(2)} -pin  "and#10" {A0(2)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/mux#3.itm}
+load net {mux#3.itm(3)} -pin  "and#10" {A0(3)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/mux#3.itm}
+load net {mux#3.itm(4)} -pin  "and#10" {A0(4)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/mux#3.itm}
+load net {mux#3.itm(5)} -pin  "and#10" {A0(5)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/mux#3.itm}
+load net {not#10.itm} -pin  "and#10" {A1(0)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/exs#1.itm}
+load net {not#10.itm} -pin  "and#10" {A1(1)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/exs#1.itm}
+load net {not#10.itm} -pin  "and#10" {A1(2)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/exs#1.itm}
+load net {not#10.itm} -pin  "and#10" {A1(3)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/exs#1.itm}
+load net {not#10.itm} -pin  "and#10" {A1(4)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/exs#1.itm}
+load net {not#10.itm} -pin  "and#10" {A1(5)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/exs#1.itm}
+load net {and#10.itm(0)} -pin  "and#10" {Z(0)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/and#10.itm}
+load net {and#10.itm(1)} -pin  "and#10" {Z(1)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/and#10.itm}
+load net {and#10.itm(2)} -pin  "and#10" {Z(2)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/and#10.itm}
+load net {and#10.itm(3)} -pin  "and#10" {Z(3)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/and#10.itm}
+load net {and#10.itm(4)} -pin  "and#10" {Z(4)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/and#10.itm}
+load net {and#10.itm(5)} -pin  "and#10" {Z(5)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/and#10.itm}
+load inst "reg(if:for:i#1.sva)" "reg(6,1,0,0,1)" "INTERFACE" -attr xrf 1429 -attr oid 46 -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/reg(if:for:i#1.sva)}
+load net {and#10.itm(0)} -pin  "reg(if:for:i#1.sva)" {D(0)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/and#10.itm}
+load net {and#10.itm(1)} -pin  "reg(if:for:i#1.sva)" {D(1)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/and#10.itm}
+load net {and#10.itm(2)} -pin  "reg(if:for:i#1.sva)" {D(2)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/and#10.itm}
+load net {and#10.itm(3)} -pin  "reg(if:for:i#1.sva)" {D(3)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/and#10.itm}
+load net {and#10.itm(4)} -pin  "reg(if:for:i#1.sva)" {D(4)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/and#10.itm}
+load net {and#10.itm(5)} -pin  "reg(if:for:i#1.sva)" {D(5)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/and#10.itm}
+load net {GND} -pin  "reg(if:for:i#1.sva)" {DRs(0)} -attr @path {/MemoryTester/MemoryTester:core/C0_6}
+load net {GND} -pin  "reg(if:for:i#1.sva)" {DRs(1)} -attr @path {/MemoryTester/MemoryTester:core/C0_6}
+load net {GND} -pin  "reg(if:for:i#1.sva)" {DRs(2)} -attr @path {/MemoryTester/MemoryTester:core/C0_6}
+load net {GND} -pin  "reg(if:for:i#1.sva)" {DRs(3)} -attr @path {/MemoryTester/MemoryTester:core/C0_6}
+load net {GND} -pin  "reg(if:for:i#1.sva)" {DRs(4)} -attr @path {/MemoryTester/MemoryTester:core/C0_6}
+load net {GND} -pin  "reg(if:for:i#1.sva)" {DRs(5)} -attr @path {/MemoryTester/MemoryTester:core/C0_6}
+load net {clk} -pin  "reg(if:for:i#1.sva)" {clk} -attr xrf 1430 -attr oid 47 -attr @path {/MemoryTester/MemoryTester:core/clk}
+load net {rst} -pin  "reg(if:for:i#1.sva)" {Rs(0)} -attr @path {/MemoryTester/MemoryTester:core/rst}
+load net {if:for:i#1.sva(0)} -pin  "reg(if:for:i#1.sva)" {Z(0)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva}
+load net {if:for:i#1.sva(1)} -pin  "reg(if:for:i#1.sva)" {Z(1)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva}
+load net {if:for:i#1.sva(2)} -pin  "reg(if:for:i#1.sva)" {Z(2)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva}
+load net {if:for:i#1.sva(3)} -pin  "reg(if:for:i#1.sva)" {Z(3)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva}
+load net {if:for:i#1.sva(4)} -pin  "reg(if:for:i#1.sva)" {Z(4)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva}
+load net {if:for:i#1.sva(5)} -pin  "reg(if:for:i#1.sva)" {Z(5)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva}
+load inst "if:for:for:or" "or(3,1)" "INTERFACE" -attr xrf 1431 -attr oid 48 -attr @path {/MemoryTester/MemoryTester:core/if:for:for:or} -attr area 1.055476 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_or(1,3)"
+load net {if:for:i#1.sva(2)} -pin  "if:for:for:or" {A0(0)} -attr @path {/MemoryTester/MemoryTester:core/slc(if:for:i#1.sva).itm}
+load net {if:for:i#1.sva(1)} -pin  "if:for:for:or" {A1(0)} -attr @path {/MemoryTester/MemoryTester:core/slc(if:for:i#1.sva)#1.itm}
+load net {if:for:i#1.sva(0)} -pin  "if:for:for:or" {A2(0)} -attr @path {/MemoryTester/MemoryTester:core/slc(if:for:i#1.sva)#2.itm}
+load net {if:for:for:or.itm} -pin  "if:for:for:or" {Z(0)} -attr @path {/MemoryTester/MemoryTester:core/if:for:for:or.itm}
+load inst "mux" "mux(2,1)" "INTERFACE" -attr xrf 1432 -attr oid 49 -attr @path {/MemoryTester/MemoryTester:core/mux} -attr area 0.920423 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_mux(1,1,2)"
+load net {if:for:for:or.itm} -pin  "mux" {A0(0)} -attr @path {/MemoryTester/MemoryTester:core/if:for:for:or.itm}
+load net {bit_out:rsc:mgc_out_stdreg.d} -pin  "mux" {A1(0)} -attr @path {/MemoryTester/MemoryTester:core/bit_out:rsc:mgc_out_stdreg.d}
+load net {fsm_output#1(2)} -pin  "mux" {S(0)} -attr @path {/MemoryTester/MemoryTester:core/slc(fsm_output)#2.itm}
+load net {mux.itm} -pin  "mux" {Z(0)} -attr @path {/MemoryTester/MemoryTester:core/mux.itm}
+load inst "reg(bit_out:rsc:mgc_out_stdreg.d)" "reg(1,1,0,0,1)" "INTERFACE" -attr xrf 1433 -attr oid 50 -attr @path {/MemoryTester/MemoryTester:core/reg(bit_out:rsc:mgc_out_stdreg.d)}
+load net {mux.itm} -pin  "reg(bit_out:rsc:mgc_out_stdreg.d)" {D(0)} -attr @path {/MemoryTester/MemoryTester:core/mux.itm}
+load net {GND} -pin  "reg(bit_out:rsc:mgc_out_stdreg.d)" {DRs(0)} -attr @path {/MemoryTester/MemoryTester:core/C0_1#1}
+load net {clk} -pin  "reg(bit_out:rsc:mgc_out_stdreg.d)" {clk} -attr xrf 1434 -attr oid 51 -attr @path {/MemoryTester/MemoryTester:core/clk}
+load net {rst} -pin  "reg(bit_out:rsc:mgc_out_stdreg.d)" {Rs(0)} -attr @path {/MemoryTester/MemoryTester:core/rst}
+load net {bit_out:rsc:mgc_out_stdreg.d} -pin  "reg(bit_out:rsc:mgc_out_stdreg.d)" {Z(0)} -attr @path {/MemoryTester/MemoryTester:core/bit_out:rsc:mgc_out_stdreg.d}
+load inst "or#4" "or(3,1)" "INTERFACE" -attr @path {/MemoryTester/MemoryTester:core/or#4} -attr area 1.055476 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_or(1,3)"
+load net {and.cse} -pin  "or#4" {A0(0)} -attr @path {/MemoryTester/MemoryTester:core/and.cse}
+load net {and#9.cse} -pin  "or#4" {A1(0)} -attr @path {/MemoryTester/MemoryTester:core/and#9.cse}
+load net {fsm_output#1(1)} -pin  "or#4" {A2(0)} -attr @path {/MemoryTester/MemoryTester:core/slc(fsm_output)#8.itm}
+load net {or#4.itm} -pin  "or#4" {Z(0)} -attr @path {/MemoryTester/MemoryTester:core/or#4.itm}
+load inst "reg(col:rsc:mgc_inout_stdreg_en.ldout)" "reg(1,1,0,0,1)" "INTERFACE" -attr xrf 1435 -attr oid 52 -attr @path {/MemoryTester/MemoryTester:core/reg(col:rsc:mgc_inout_stdreg_en.ldout)}
+load net {or#4.itm} -pin  "reg(col:rsc:mgc_inout_stdreg_en.ldout)" {D(0)} -attr @path {/MemoryTester/MemoryTester:core/or#4.itm}
+load net {GND} -pin  "reg(col:rsc:mgc_inout_stdreg_en.ldout)" {DRs(0)} -attr @path {/MemoryTester/MemoryTester:core/C0_1}
+load net {clk} -pin  "reg(col:rsc:mgc_inout_stdreg_en.ldout)" {clk} -attr xrf 1436 -attr oid 53 -attr @path {/MemoryTester/MemoryTester:core/clk}
+load net {rst} -pin  "reg(col:rsc:mgc_inout_stdreg_en.ldout)" {Rs(0)} -attr @path {/MemoryTester/MemoryTester:core/rst}
+load net {col:rsc:mgc_inout_stdreg_en.ldout} -pin  "reg(col:rsc:mgc_inout_stdreg_en.ldout)" {Z(0)} -attr @path {/MemoryTester/MemoryTester:core/col:rsc:mgc_inout_stdreg_en.ldout}
+load inst "and#9" "and(2,1)" "INTERFACE" -attr vt c -attr @path {/MemoryTester/MemoryTester:core/and#9} -attr area 0.730832 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_and(1,2)"
+load net {if:for:acc.itm(4)} -pin  "and#9" {A0(0)} -attr vt c -attr @path {/MemoryTester/MemoryTester:core/if:for:slc.itm}
+load net {fsm_output#1(4)} -pin  "and#9" {A1(0)} -attr @path {/MemoryTester/MemoryTester:core/slc(fsm_output)#14.itm}
+load net {and#9.cse} -pin  "and#9" {Z(0)} -attr vt c -attr @path {/MemoryTester/MemoryTester:core/and#9.cse}
+load inst "and" "and(2,1)" "INTERFACE" -attr @path {/MemoryTester/MemoryTester:core/and} -attr area 0.730832 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_and(1,2)"
+load net {if:for:for:slc.itm} -pin  "and" {A0(0)} -attr @path {/MemoryTester/MemoryTester:core/if:for:for:slc.itm}
+load net {fsm_output#1(3)} -pin  "and" {A1(0)} -attr @path {/MemoryTester/MemoryTester:core/slc(fsm_output)#3.itm}
+load net {and.cse} -pin  "and" {Z(0)} -attr @path {/MemoryTester/MemoryTester:core/and.cse}
+load inst "nor#1" "nor(3,1)" "INTERFACE" -attr vt c -attr @path {/MemoryTester/MemoryTester:core/nor#1} -attr area 1.055476 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_nor(1,3)"
+load net {and.cse} -pin  "nor#1" {A0(0)} -attr @path {/MemoryTester/MemoryTester:core/and.cse}
+load net {and#9.cse} -pin  "nor#1" {A1(0)} -attr vt c -attr @path {/MemoryTester/MemoryTester:core/and#9.cse}
+load net {fsm_output#1(1)} -pin  "nor#1" {A2(0)} -attr @path {/MemoryTester/MemoryTester:core/slc(fsm_output)#7.itm}
+load net {nor#1.itm} -pin  "nor#1" {Z(0)} -attr vt c -attr @path {/MemoryTester/MemoryTester:core/nor#1.itm}
+load inst "mux1h#2" "mux1h(3,6)" "INTERFACE" -attr xrf 1437 -attr oid 54 -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/mux1h#2} -attr area 13.138744 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_mux1hot(6,3)"
+load net {if:for:i#1.sva(0)} -pin  "mux1h#2" {A0(0)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva}
+load net {if:for:i#1.sva(1)} -pin  "mux1h#2" {A0(1)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva}
+load net {if:for:i#1.sva(2)} -pin  "mux1h#2" {A0(2)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva}
+load net {if:for:i#1.sva(3)} -pin  "mux1h#2" {A0(3)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva}
+load net {if:for:i#1.sva(4)} -pin  "mux1h#2" {A0(4)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva}
+load net {if:for:i#1.sva(5)} -pin  "mux1h#2" {A0(5)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva}
+load net {if:for:i#1.sva#1(0)} -pin  "mux1h#2" {A1(0)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva#1}
+load net {if:for:i#1.sva#1(1)} -pin  "mux1h#2" {A1(1)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva#1}
+load net {if:for:i#1.sva#1(2)} -pin  "mux1h#2" {A1(2)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva#1}
+load net {if:for:i#1.sva#1(3)} -pin  "mux1h#2" {A1(3)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva#1}
+load net {if:for:i#1.sva#1(4)} -pin  "mux1h#2" {A1(4)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva#1}
+load net {if:for:i#1.sva#1(5)} -pin  "mux1h#2" {A1(5)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva#1}
+load net {row:rsc:mgc_out_stdreg.d(0)} -pin  "mux1h#2" {A2(0)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/row:rsc:mgc_out_stdreg.d}
+load net {row:rsc:mgc_out_stdreg.d(1)} -pin  "mux1h#2" {A2(1)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/row:rsc:mgc_out_stdreg.d}
+load net {row:rsc:mgc_out_stdreg.d(2)} -pin  "mux1h#2" {A2(2)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/row:rsc:mgc_out_stdreg.d}
+load net {row:rsc:mgc_out_stdreg.d(3)} -pin  "mux1h#2" {A2(3)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/row:rsc:mgc_out_stdreg.d}
+load net {row:rsc:mgc_out_stdreg.d(4)} -pin  "mux1h#2" {A2(4)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/row:rsc:mgc_out_stdreg.d}
+load net {row:rsc:mgc_out_stdreg.d(5)} -pin  "mux1h#2" {A2(5)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/row:rsc:mgc_out_stdreg.d}
+load net {and.cse} -pin  "mux1h#2" {S0} -attr @path {/MemoryTester/MemoryTester:core/and.cse}
+load net {and#9.cse} -pin  "mux1h#2" {S1} -attr vt c -attr @path {/MemoryTester/MemoryTester:core/and#9.cse}
+load net {nor#1.itm} -pin  "mux1h#2" {S2} -attr vt c -attr @path {/MemoryTester/MemoryTester:core/nor#1.itm}
+load net {mux1h#2.itm(0)} -pin  "mux1h#2" {Z(0)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/mux1h#2.itm}
+load net {mux1h#2.itm(1)} -pin  "mux1h#2" {Z(1)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/mux1h#2.itm}
+load net {mux1h#2.itm(2)} -pin  "mux1h#2" {Z(2)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/mux1h#2.itm}
+load net {mux1h#2.itm(3)} -pin  "mux1h#2" {Z(3)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/mux1h#2.itm}
+load net {mux1h#2.itm(4)} -pin  "mux1h#2" {Z(4)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/mux1h#2.itm}
+load net {mux1h#2.itm(5)} -pin  "mux1h#2" {Z(5)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/mux1h#2.itm}
+load inst "not" "not(1)" "INTERFACE" -attr xrf 1438 -attr oid 55 -attr @path {/MemoryTester/MemoryTester:core/not} -attr area 0.001000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_not(1)"
+load net {fsm_output#1(1)} -pin  "not" {A(0)} -attr @path {/MemoryTester/MemoryTester:core/slc(fsm_output)#1.itm}
+load net {not.itm} -pin  "not" {Z(0)} -attr @path {/MemoryTester/MemoryTester:core/not.itm}
+load inst "and#8" "and(2,6)" "INTERFACE" -attr xrf 1439 -attr oid 56 -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/and#8} -attr area 4.379994 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_and(6,2)"
+load net {mux1h#2.itm(0)} -pin  "and#8" {A0(0)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/mux1h#2.itm}
+load net {mux1h#2.itm(1)} -pin  "and#8" {A0(1)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/mux1h#2.itm}
+load net {mux1h#2.itm(2)} -pin  "and#8" {A0(2)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/mux1h#2.itm}
+load net {mux1h#2.itm(3)} -pin  "and#8" {A0(3)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/mux1h#2.itm}
+load net {mux1h#2.itm(4)} -pin  "and#8" {A0(4)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/mux1h#2.itm}
+load net {mux1h#2.itm(5)} -pin  "and#8" {A0(5)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/mux1h#2.itm}
+load net {not.itm} -pin  "and#8" {A1(0)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/exs.itm}
+load net {not.itm} -pin  "and#8" {A1(1)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/exs.itm}
+load net {not.itm} -pin  "and#8" {A1(2)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/exs.itm}
+load net {not.itm} -pin  "and#8" {A1(3)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/exs.itm}
+load net {not.itm} -pin  "and#8" {A1(4)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/exs.itm}
+load net {not.itm} -pin  "and#8" {A1(5)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/exs.itm}
+load net {and#8.itm(0)} -pin  "and#8" {Z(0)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/and#8.itm}
+load net {and#8.itm(1)} -pin  "and#8" {Z(1)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/and#8.itm}
+load net {and#8.itm(2)} -pin  "and#8" {Z(2)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/and#8.itm}
+load net {and#8.itm(3)} -pin  "and#8" {Z(3)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/and#8.itm}
+load net {and#8.itm(4)} -pin  "and#8" {Z(4)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/and#8.itm}
+load net {and#8.itm(5)} -pin  "and#8" {Z(5)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/and#8.itm}
+load inst "reg(row:rsc:mgc_out_stdreg.d)" "reg(6,1,0,0,1)" "INTERFACE" -attr xrf 1440 -attr oid 57 -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/reg(row:rsc:mgc_out_stdreg.d)}
+load net {and#8.itm(0)} -pin  "reg(row:rsc:mgc_out_stdreg.d)" {D(0)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/and#8.itm}
+load net {and#8.itm(1)} -pin  "reg(row:rsc:mgc_out_stdreg.d)" {D(1)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/and#8.itm}
+load net {and#8.itm(2)} -pin  "reg(row:rsc:mgc_out_stdreg.d)" {D(2)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/and#8.itm}
+load net {and#8.itm(3)} -pin  "reg(row:rsc:mgc_out_stdreg.d)" {D(3)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/and#8.itm}
+load net {and#8.itm(4)} -pin  "reg(row:rsc:mgc_out_stdreg.d)" {D(4)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/and#8.itm}
+load net {and#8.itm(5)} -pin  "reg(row:rsc:mgc_out_stdreg.d)" {D(5)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/and#8.itm}
+load net {GND} -pin  "reg(row:rsc:mgc_out_stdreg.d)" {DRs(0)} -attr @path {/MemoryTester/MemoryTester:core/C0_6}
+load net {GND} -pin  "reg(row:rsc:mgc_out_stdreg.d)" {DRs(1)} -attr @path {/MemoryTester/MemoryTester:core/C0_6}
+load net {GND} -pin  "reg(row:rsc:mgc_out_stdreg.d)" {DRs(2)} -attr @path {/MemoryTester/MemoryTester:core/C0_6}
+load net {GND} -pin  "reg(row:rsc:mgc_out_stdreg.d)" {DRs(3)} -attr @path {/MemoryTester/MemoryTester:core/C0_6}
+load net {GND} -pin  "reg(row:rsc:mgc_out_stdreg.d)" {DRs(4)} -attr @path {/MemoryTester/MemoryTester:core/C0_6}
+load net {GND} -pin  "reg(row:rsc:mgc_out_stdreg.d)" {DRs(5)} -attr @path {/MemoryTester/MemoryTester:core/C0_6}
+load net {clk} -pin  "reg(row:rsc:mgc_out_stdreg.d)" {clk} -attr xrf 1441 -attr oid 58 -attr @path {/MemoryTester/MemoryTester:core/clk}
+load net {rst} -pin  "reg(row:rsc:mgc_out_stdreg.d)" {Rs(0)} -attr @path {/MemoryTester/MemoryTester:core/rst}
+load net {row:rsc:mgc_out_stdreg.d(0)} -pin  "reg(row:rsc:mgc_out_stdreg.d)" {Z(0)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/row:rsc:mgc_out_stdreg.d}
+load net {row:rsc:mgc_out_stdreg.d(1)} -pin  "reg(row:rsc:mgc_out_stdreg.d)" {Z(1)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/row:rsc:mgc_out_stdreg.d}
+load net {row:rsc:mgc_out_stdreg.d(2)} -pin  "reg(row:rsc:mgc_out_stdreg.d)" {Z(2)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/row:rsc:mgc_out_stdreg.d}
+load net {row:rsc:mgc_out_stdreg.d(3)} -pin  "reg(row:rsc:mgc_out_stdreg.d)" {Z(3)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/row:rsc:mgc_out_stdreg.d}
+load net {row:rsc:mgc_out_stdreg.d(4)} -pin  "reg(row:rsc:mgc_out_stdreg.d)" {Z(4)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/row:rsc:mgc_out_stdreg.d}
+load net {row:rsc:mgc_out_stdreg.d(5)} -pin  "reg(row:rsc:mgc_out_stdreg.d)" {Z(5)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/row:rsc:mgc_out_stdreg.d}
+load inst "and#12" "and(2,7)" "INTERFACE" -attr xrf 1442 -attr oid 59 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/and#12} -attr area 5.109827 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_and(7,2)"
+load net {if:for:for:j#1.sva#1(0)} -pin  "and#12" {A0(0)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva#1}
+load net {if:for:for:j#1.sva#1(1)} -pin  "and#12" {A0(1)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva#1}
+load net {if:for:for:j#1.sva#1(2)} -pin  "and#12" {A0(2)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva#1}
+load net {if:for:for:j#1.sva#1(3)} -pin  "and#12" {A0(3)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva#1}
+load net {if:for:for:j#1.sva#1(4)} -pin  "and#12" {A0(4)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva#1}
+load net {if:for:for:j#1.sva#1(5)} -pin  "and#12" {A0(5)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva#1}
+load net {if:for:for:j#1.sva#1(6)} -pin  "and#12" {A0(6)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva#1}
+load net {nor.cse} -pin  "and#12" {A1(0)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/exs#3.itm}
+load net {nor.cse} -pin  "and#12" {A1(1)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/exs#3.itm}
+load net {nor.cse} -pin  "and#12" {A1(2)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/exs#3.itm}
+load net {nor.cse} -pin  "and#12" {A1(3)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/exs#3.itm}
+load net {nor.cse} -pin  "and#12" {A1(4)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/exs#3.itm}
+load net {nor.cse} -pin  "and#12" {A1(5)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/exs#3.itm}
+load net {nor.cse} -pin  "and#12" {A1(6)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/exs#3.itm}
+load net {and#12.itm(0)} -pin  "and#12" {Z(0)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/and#12.itm}
+load net {and#12.itm(1)} -pin  "and#12" {Z(1)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/and#12.itm}
+load net {and#12.itm(2)} -pin  "and#12" {Z(2)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/and#12.itm}
+load net {and#12.itm(3)} -pin  "and#12" {Z(3)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/and#12.itm}
+load net {and#12.itm(4)} -pin  "and#12" {Z(4)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/and#12.itm}
+load net {and#12.itm(5)} -pin  "and#12" {Z(5)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/and#12.itm}
+load net {and#12.itm(6)} -pin  "and#12" {Z(6)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/and#12.itm}
+load inst "reg(if:for:for:j#1.sva)" "reg(7,1,0,0,1)" "INTERFACE" -attr xrf 1443 -attr oid 60 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/reg(if:for:for:j#1.sva)}
+load net {and#12.itm(0)} -pin  "reg(if:for:for:j#1.sva)" {D(0)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/and#12.itm}
+load net {and#12.itm(1)} -pin  "reg(if:for:for:j#1.sva)" {D(1)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/and#12.itm}
+load net {and#12.itm(2)} -pin  "reg(if:for:for:j#1.sva)" {D(2)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/and#12.itm}
+load net {and#12.itm(3)} -pin  "reg(if:for:for:j#1.sva)" {D(3)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/and#12.itm}
+load net {and#12.itm(4)} -pin  "reg(if:for:for:j#1.sva)" {D(4)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/and#12.itm}
+load net {and#12.itm(5)} -pin  "reg(if:for:for:j#1.sva)" {D(5)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/and#12.itm}
+load net {and#12.itm(6)} -pin  "reg(if:for:for:j#1.sva)" {D(6)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/and#12.itm}
+load net {GND} -pin  "reg(if:for:for:j#1.sva)" {DRs(0)} -attr @path {/MemoryTester/MemoryTester:core/C0_7}
+load net {GND} -pin  "reg(if:for:for:j#1.sva)" {DRs(1)} -attr @path {/MemoryTester/MemoryTester:core/C0_7}
+load net {GND} -pin  "reg(if:for:for:j#1.sva)" {DRs(2)} -attr @path {/MemoryTester/MemoryTester:core/C0_7}
+load net {GND} -pin  "reg(if:for:for:j#1.sva)" {DRs(3)} -attr @path {/MemoryTester/MemoryTester:core/C0_7}
+load net {GND} -pin  "reg(if:for:for:j#1.sva)" {DRs(4)} -attr @path {/MemoryTester/MemoryTester:core/C0_7}
+load net {GND} -pin  "reg(if:for:for:j#1.sva)" {DRs(5)} -attr @path {/MemoryTester/MemoryTester:core/C0_7}
+load net {GND} -pin  "reg(if:for:for:j#1.sva)" {DRs(6)} -attr @path {/MemoryTester/MemoryTester:core/C0_7}
+load net {clk} -pin  "reg(if:for:for:j#1.sva)" {clk} -attr xrf 1444 -attr oid 61 -attr @path {/MemoryTester/MemoryTester:core/clk}
+load net {rst} -pin  "reg(if:for:for:j#1.sva)" {Rs(0)} -attr @path {/MemoryTester/MemoryTester:core/rst}
+load net {if:for:for:j#1.sva(0)} -pin  "reg(if:for:for:j#1.sva)" {Z(0)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva}
+load net {if:for:for:j#1.sva(1)} -pin  "reg(if:for:for:j#1.sva)" {Z(1)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva}
+load net {if:for:for:j#1.sva(2)} -pin  "reg(if:for:for:j#1.sva)" {Z(2)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva}
+load net {if:for:for:j#1.sva(3)} -pin  "reg(if:for:for:j#1.sva)" {Z(3)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva}
+load net {if:for:for:j#1.sva(4)} -pin  "reg(if:for:for:j#1.sva)" {Z(4)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva}
+load net {if:for:for:j#1.sva(5)} -pin  "reg(if:for:for:j#1.sva)" {Z(5)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva}
+load net {if:for:for:j#1.sva(6)} -pin  "reg(if:for:for:j#1.sva)" {Z(6)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva}
+load inst "if:for:for:acc" "add(3,0,4,-1,4)" "INTERFACE" -attr xrf 1445 -attr oid 62 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:acc} -attr area 5.297136 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(4,0,3,0,4)"
+load net {if:for:for:j#1.sva#2(4)} -pin  "if:for:for:acc" {A(0)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/slc(if:for:for:j#1.sva#2).itm}
+load net {if:for:for:j#1.sva#2(5)} -pin  "if:for:for:acc" {A(1)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/slc(if:for:for:j#1.sva#2).itm}
+load net {if:for:for:j#1.sva#2(6)} -pin  "if:for:for:acc" {A(2)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/slc(if:for:for:j#1.sva#2).itm}
+load net {PWR} -pin  "if:for:for:acc" {B(0)} -attr @path {/MemoryTester/MemoryTester:core/Cn5_4}
+load net {PWR} -pin  "if:for:for:acc" {B(1)} -attr @path {/MemoryTester/MemoryTester:core/Cn5_4}
+load net {GND} -pin  "if:for:for:acc" {B(2)} -attr @path {/MemoryTester/MemoryTester:core/Cn5_4}
+load net {PWR} -pin  "if:for:for:acc" {B(3)} -attr @path {/MemoryTester/MemoryTester:core/Cn5_4}
+load net {if:for:for:acc.itm(0)} -pin  "if:for:for:acc" {Z(0)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:acc.itm}
+load net {if:for:for:acc.itm(1)} -pin  "if:for:for:acc" {Z(1)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:acc.itm}
+load net {if:for:for:acc.itm(2)} -pin  "if:for:for:acc" {Z(2)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:acc.itm}
+load net {if:for:for:acc.itm(3)} -pin  "if:for:for:acc" {Z(3)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:acc.itm}
+load inst "reg(if:for:for:slc.itm)" "reg(1,1,0,0,1)" "INTERFACE" -attr xrf 1446 -attr oid 63 -attr @path {/MemoryTester/MemoryTester:core/reg(if:for:for:slc.itm)}
+load net {if:for:for:acc.itm(3)} -pin  "reg(if:for:for:slc.itm)" {D(0)} -attr @path {/MemoryTester/MemoryTester:core/if:for:for:slc.itm#1}
+load net {GND} -pin  "reg(if:for:for:slc.itm)" {DRs(0)} -attr @path {/MemoryTester/MemoryTester:core/C0_1#1}
+load net {clk} -pin  "reg(if:for:for:slc.itm)" {clk} -attr xrf 1447 -attr oid 64 -attr @path {/MemoryTester/MemoryTester:core/clk}
+load net {rst} -pin  "reg(if:for:for:slc.itm)" {Rs(0)} -attr @path {/MemoryTester/MemoryTester:core/rst}
+load net {if:for:for:slc.itm} -pin  "reg(if:for:for:slc.itm)" {Z(0)} -attr @path {/MemoryTester/MemoryTester:core/if:for:for:slc.itm}
+load inst "reg(if:for:for:j#1.sva#1)" "reg(7,1,0,0,1)" "INTERFACE" -attr xrf 1448 -attr oid 65 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/reg(if:for:for:j#1.sva#1)}
+load net {if:for:for:j#1.sva#2(0)} -pin  "reg(if:for:for:j#1.sva#1)" {D(0)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva#2}
+load net {if:for:for:j#1.sva#2(1)} -pin  "reg(if:for:for:j#1.sva#1)" {D(1)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva#2}
+load net {if:for:for:j#1.sva#2(2)} -pin  "reg(if:for:for:j#1.sva#1)" {D(2)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva#2}
+load net {if:for:for:j#1.sva#2(3)} -pin  "reg(if:for:for:j#1.sva#1)" {D(3)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva#2}
+load net {if:for:for:j#1.sva#2(4)} -pin  "reg(if:for:for:j#1.sva#1)" {D(4)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva#2}
+load net {if:for:for:j#1.sva#2(5)} -pin  "reg(if:for:for:j#1.sva#1)" {D(5)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva#2}
+load net {if:for:for:j#1.sva#2(6)} -pin  "reg(if:for:for:j#1.sva#1)" {D(6)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva#2}
+load net {GND} -pin  "reg(if:for:for:j#1.sva#1)" {DRs(0)} -attr @path {/MemoryTester/MemoryTester:core/C0_7}
+load net {GND} -pin  "reg(if:for:for:j#1.sva#1)" {DRs(1)} -attr @path {/MemoryTester/MemoryTester:core/C0_7}
+load net {GND} -pin  "reg(if:for:for:j#1.sva#1)" {DRs(2)} -attr @path {/MemoryTester/MemoryTester:core/C0_7}
+load net {GND} -pin  "reg(if:for:for:j#1.sva#1)" {DRs(3)} -attr @path {/MemoryTester/MemoryTester:core/C0_7}
+load net {GND} -pin  "reg(if:for:for:j#1.sva#1)" {DRs(4)} -attr @path {/MemoryTester/MemoryTester:core/C0_7}
+load net {GND} -pin  "reg(if:for:for:j#1.sva#1)" {DRs(5)} -attr @path {/MemoryTester/MemoryTester:core/C0_7}
+load net {GND} -pin  "reg(if:for:for:j#1.sva#1)" {DRs(6)} -attr @path {/MemoryTester/MemoryTester:core/C0_7}
+load net {clk} -pin  "reg(if:for:for:j#1.sva#1)" {clk} -attr xrf 1449 -attr oid 66 -attr @path {/MemoryTester/MemoryTester:core/clk}
+load net {rst} -pin  "reg(if:for:for:j#1.sva#1)" {Rs(0)} -attr @path {/MemoryTester/MemoryTester:core/rst}
+load net {if:for:for:j#1.sva#1(0)} -pin  "reg(if:for:for:j#1.sva#1)" {Z(0)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva#1}
+load net {if:for:for:j#1.sva#1(1)} -pin  "reg(if:for:for:j#1.sva#1)" {Z(1)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva#1}
+load net {if:for:for:j#1.sva#1(2)} -pin  "reg(if:for:for:j#1.sva#1)" {Z(2)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva#1}
+load net {if:for:for:j#1.sva#1(3)} -pin  "reg(if:for:for:j#1.sva#1)" {Z(3)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva#1}
+load net {if:for:for:j#1.sva#1(4)} -pin  "reg(if:for:for:j#1.sva#1)" {Z(4)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva#1}
+load net {if:for:for:j#1.sva#1(5)} -pin  "reg(if:for:for:j#1.sva#1)" {Z(5)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva#1}
+load net {if:for:for:j#1.sva#1(6)} -pin  "reg(if:for:for:j#1.sva#1)" {Z(6)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva#1}
+load inst "if:for:for:acc#2" "add(7,-1,1,0,7)" "INTERFACE" -attr xrf 1450 -attr oid 67 -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:acc#2} -attr area 8.000000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(7,0,2,1,7)"
+load net {if:for:for:j#1.sva(0)} -pin  "if:for:for:acc#2" {A(0)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva}
+load net {if:for:for:j#1.sva(1)} -pin  "if:for:for:acc#2" {A(1)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva}
+load net {if:for:for:j#1.sva(2)} -pin  "if:for:for:acc#2" {A(2)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva}
+load net {if:for:for:j#1.sva(3)} -pin  "if:for:for:acc#2" {A(3)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva}
+load net {if:for:for:j#1.sva(4)} -pin  "if:for:for:acc#2" {A(4)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva}
+load net {if:for:for:j#1.sva(5)} -pin  "if:for:for:acc#2" {A(5)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva}
+load net {if:for:for:j#1.sva(6)} -pin  "if:for:for:acc#2" {A(6)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva}
+load net {PWR} -pin  "if:for:for:acc#2" {B(0)} -attr @path {/MemoryTester/MemoryTester:core/C1_1#3}
+load net {if:for:for:j#1.sva#2(0)} -pin  "if:for:for:acc#2" {Z(0)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva#2}
+load net {if:for:for:j#1.sva#2(1)} -pin  "if:for:for:acc#2" {Z(1)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva#2}
+load net {if:for:for:j#1.sva#2(2)} -pin  "if:for:for:acc#2" {Z(2)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva#2}
+load net {if:for:for:j#1.sva#2(3)} -pin  "if:for:for:acc#2" {Z(3)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva#2}
+load net {if:for:for:j#1.sva#2(4)} -pin  "if:for:for:acc#2" {Z(4)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva#2}
+load net {if:for:for:j#1.sva#2(5)} -pin  "if:for:for:acc#2" {Z(5)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva#2}
+load net {if:for:for:j#1.sva#2(6)} -pin  "if:for:for:acc#2" {Z(6)} -attr vt d -attr @path {/MemoryTester/MemoryTester:core/if:for:for:j#1.sva#2}
+load inst "if:for:acc#1" "add(6,-1,1,0,6)" "INTERFACE" -attr xrf 1451 -attr oid 68 -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:acc#1} -attr area 7.000000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(6,0,2,1,6)"
+load net {if:for:i#1.sva(0)} -pin  "if:for:acc#1" {A(0)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva}
+load net {if:for:i#1.sva(1)} -pin  "if:for:acc#1" {A(1)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva}
+load net {if:for:i#1.sva(2)} -pin  "if:for:acc#1" {A(2)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva}
+load net {if:for:i#1.sva(3)} -pin  "if:for:acc#1" {A(3)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva}
+load net {if:for:i#1.sva(4)} -pin  "if:for:acc#1" {A(4)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva}
+load net {if:for:i#1.sva(5)} -pin  "if:for:acc#1" {A(5)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva}
+load net {PWR} -pin  "if:for:acc#1" {B(0)} -attr @path {/MemoryTester/MemoryTester:core/C1_1#3}
+load net {if:for:i#1.sva#1(0)} -pin  "if:for:acc#1" {Z(0)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva#1}
+load net {if:for:i#1.sva#1(1)} -pin  "if:for:acc#1" {Z(1)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva#1}
+load net {if:for:i#1.sva#1(2)} -pin  "if:for:acc#1" {Z(2)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva#1}
+load net {if:for:i#1.sva#1(3)} -pin  "if:for:acc#1" {Z(3)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva#1}
+load net {if:for:i#1.sva#1(4)} -pin  "if:for:acc#1" {Z(4)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva#1}
+load net {if:for:i#1.sva#1(5)} -pin  "if:for:acc#1" {Z(5)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:i#1.sva#1}
+load inst "if:for:acc" "add(5,-1,1,0,5)" "INTERFACE" -attr xrf 1452 -attr oid 69 -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:acc} -attr area 6.284690 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(5,0,5,0,5)"
+load net {if:for:i#1.sva#1(2)} -pin  "if:for:acc" {A(0)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/conc#7.itm}
+load net {if:for:i#1.sva#1(3)} -pin  "if:for:acc" {A(1)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/conc#7.itm}
+load net {if:for:i#1.sva#1(4)} -pin  "if:for:acc" {A(2)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/conc#7.itm}
+load net {if:for:i#1.sva#1(5)} -pin  "if:for:acc" {A(3)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/conc#7.itm}
+load net {PWR} -pin  "if:for:acc" {A(4)} -attr @path {/MemoryTester/MemoryTester:core/conc#7.itm}
+load net {PWR} -pin  "if:for:acc" {B(0)} -attr @path {/MemoryTester/MemoryTester:core/C1_1#3}
+load net {if:for:acc.itm(0)} -pin  "if:for:acc" {Z(0)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:acc.itm}
+load net {if:for:acc.itm(1)} -pin  "if:for:acc" {Z(1)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:acc.itm}
+load net {if:for:acc.itm(2)} -pin  "if:for:acc" {Z(2)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:acc.itm}
+load net {if:for:acc.itm(3)} -pin  "if:for:acc" {Z(3)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:acc.itm}
+load net {if:for:acc.itm(4)} -pin  "if:for:acc" {Z(4)} -attr vt dc -attr @path {/MemoryTester/MemoryTester:core/if:for:acc.itm}
+load inst "not#12" "not(1)" "INTERFACE" -attr @path {/MemoryTester/MemoryTester:core/not#12} -attr area 0.001000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_not(1)"
+load net {if:for:for:slc.itm} -pin  "not#12" {A(0)} -attr @path {/MemoryTester/MemoryTester:core/if:for:for:slc.itm}
+load net {not#12.itm} -pin  "not#12" {Z(0)} -attr @path {/MemoryTester/MemoryTester:core/not#12.itm}
+load inst "not#1" "not(1)" "INTERFACE" -attr @path {/MemoryTester/MemoryTester:core/not#1} -attr area 0.001000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_not(1)"
+load net {if:for:acc.itm(4)} -pin  "not#1" {A(0)} -attr @path {/MemoryTester/MemoryTester:core/if:for:slc#2.itm}
+load net {not#1.itm} -pin  "not#1" {Z(0)} -attr @path {/MemoryTester/MemoryTester:core/not#1.itm}
+### END MODULE 
+
+module new "MemoryTester" "orig"
+load port {bit_out:rsc.z} output -attr xrf 1453 -attr oid 70 -attr vt d -attr @path {/MemoryTester/bit_out:rsc.z}
+load port {enabled:rsc.z} output -attr xrf 1454 -attr oid 71 -attr vt d -attr @path {/MemoryTester/enabled:rsc.z}
+load portBus {row:rsc.z(5:0)} output 6 {row:rsc.z(5)} {row:rsc.z(4)} {row:rsc.z(3)} {row:rsc.z(2)} {row:rsc.z(1)} {row:rsc.z(0)} -attr xrf 1455 -attr oid 72 -attr vt d -attr @path {/MemoryTester/row:rsc.z}
+load portBus {col:rsc.z(6:0)} inout 7 {col:rsc.z(6)} {col:rsc.z(5)} {col:rsc.z(4)} {col:rsc.z(3)} {col:rsc.z(2)} {col:rsc.z(1)} {col:rsc.z(0)} -attr xrf 1456 -attr oid 73 -attr vt d -attr @path {/MemoryTester/col:rsc.z}
+load port {col:rsc.lzout} output -attr xrf 1457 -attr oid 74 -attr vt d -attr @path {/MemoryTester/col:rsc.lzout}
+load port {col:rsc.lzin} output -attr xrf 1458 -attr oid 75 -attr vt d -attr @path {/MemoryTester/col:rsc.lzin}
+load port {clk} input -attr xrf 1459 -attr oid 76 -attr vt d -attr @path {/MemoryTester/clk}
+load port {rst} input -attr xrf 1460 -attr oid 77 -attr vt d -attr @path {/MemoryTester/rst}
+load symbol "mgc_ioport.mgc_out_stdreg(1,1)" "INTERFACE" GEN boxcolor 0 \
+     portBus {d(0:0)} input 1 {d(0)} \
+     portBus {z(0:0)} output 1 {z(0)} \
+
+load symbol "mgc_ioport.mgc_out_stdreg(2,1)" "INTERFACE" GEN boxcolor 0 \
+     portBus {d(0:0)} input 1 {d(0)} \
+     portBus {z(0:0)} output 1 {z(0)} \
+
+load symbol "mgc_ioport.mgc_out_stdreg(3,6)" "INTERFACE" GEN boxcolor 0 \
+     portBus {d(5:0)} input 6 {d(5)} {d(4)} {d(3)} {d(2)} {d(1)} {d(0)} \
+     portBus {z(5:0)} output 6 {z(5)} {z(4)} {z(3)} {z(2)} {z(1)} {z(0)} \
+
+load symbol "mgc_ioport.mgc_inout_stdreg_en(4,7)" "INTERFACE" GEN boxcolor 0 \
+     port {ldin} input \
+     portBus {din(6:0)} output 7 {din(6)} {din(5)} {din(4)} {din(3)} {din(2)} {din(1)} {din(0)} \
+     port {ldout} input \
+     portBus {dout(6:0)} input 7 {dout(6)} {dout(5)} {dout(4)} {dout(3)} {dout(2)} {dout(1)} {dout(0)} \
+     port {lzin} output \
+     port {lzout} output \
+     portBus {z(6:0)} inout 7 {z(6)} {z(5)} {z(4)} {z(3)} {z(2)} {z(1)} {z(0)} \
+
+load symbol "MemoryTester:core" "orig" GEN \
+     port {clk#1} input \
+     port {rst#1} input \
+     port {bit_out:rsc:mgc_out_stdreg.d} output \
+     portBus {row:rsc:mgc_out_stdreg.d(5:0)} output 6 {row:rsc:mgc_out_stdreg.d(5)} {row:rsc:mgc_out_stdreg.d(4)} {row:rsc:mgc_out_stdreg.d(3)} {row:rsc:mgc_out_stdreg.d(2)} {row:rsc:mgc_out_stdreg.d(1)} {row:rsc:mgc_out_stdreg.d(0)} \
+     port {col:rsc:mgc_inout_stdreg_en.ldout} output \
+     portBus {col:rsc:mgc_inout_stdreg_en.dout(6:0)} output 7 {col:rsc:mgc_inout_stdreg_en.dout(6)} {col:rsc:mgc_inout_stdreg_en.dout(5)} {col:rsc:mgc_inout_stdreg_en.dout(4)} {col:rsc:mgc_inout_stdreg_en.dout(3)} {col:rsc:mgc_inout_stdreg_en.dout(2)} {col:rsc:mgc_inout_stdreg_en.dout(1)} {col:rsc:mgc_inout_stdreg_en.dout(0)} \
+
+load net {bit_out:rsc:mgc_out_stdreg.d#1} -attr xrf 1461 -attr oid 78 -attr vt d
+load net {row:rsc:mgc_out_stdreg.d#1(0)} -attr vt d
+load net {row:rsc:mgc_out_stdreg.d#1(1)} -attr vt d
+load net {row:rsc:mgc_out_stdreg.d#1(2)} -attr vt d
+load net {row:rsc:mgc_out_stdreg.d#1(3)} -attr vt d
+load net {row:rsc:mgc_out_stdreg.d#1(4)} -attr vt d
+load net {row:rsc:mgc_out_stdreg.d#1(5)} -attr vt d
+load netBundle {row:rsc:mgc_out_stdreg.d#1} 6 {row:rsc:mgc_out_stdreg.d#1(0)} {row:rsc:mgc_out_stdreg.d#1(1)} {row:rsc:mgc_out_stdreg.d#1(2)} {row:rsc:mgc_out_stdreg.d#1(3)} {row:rsc:mgc_out_stdreg.d#1(4)} {row:rsc:mgc_out_stdreg.d#1(5)} -attr xrf 1462 -attr oid 79 -attr vt d -attr @path {/MemoryTester/row:rsc:mgc_out_stdreg.d}
+load net {col:rsc:mgc_inout_stdreg_en.din(0)}
+load net {col:rsc:mgc_inout_stdreg_en.din(1)}
+load net {col:rsc:mgc_inout_stdreg_en.din(2)}
+load net {col:rsc:mgc_inout_stdreg_en.din(3)}
+load net {col:rsc:mgc_inout_stdreg_en.din(4)}
+load net {col:rsc:mgc_inout_stdreg_en.din(5)}
+load net {col:rsc:mgc_inout_stdreg_en.din(6)}
+load netBundle {col:rsc:mgc_inout_stdreg_en.din} 7 {col:rsc:mgc_inout_stdreg_en.din(0)} {col:rsc:mgc_inout_stdreg_en.din(1)} {col:rsc:mgc_inout_stdreg_en.din(2)} {col:rsc:mgc_inout_stdreg_en.din(3)} {col:rsc:mgc_inout_stdreg_en.din(4)} {col:rsc:mgc_inout_stdreg_en.din(5)} {col:rsc:mgc_inout_stdreg_en.din(6)} -attr xrf 1463 -attr oid 80 -attr @path {/MemoryTester/col:rsc:mgc_inout_stdreg_en.din}
+load net {col:rsc:mgc_inout_stdreg_en.ldout#1} -attr xrf 1464 -attr oid 81 -attr vt d
+load net {col:rsc:mgc_inout_stdreg_en.dout#1(0)} -attr vt d
+load net {col:rsc:mgc_inout_stdreg_en.dout#1(1)} -attr vt d
+load net {col:rsc:mgc_inout_stdreg_en.dout#1(2)} -attr vt d
+load net {col:rsc:mgc_inout_stdreg_en.dout#1(3)} -attr vt d
+load net {col:rsc:mgc_inout_stdreg_en.dout#1(4)} -attr vt d
+load net {col:rsc:mgc_inout_stdreg_en.dout#1(5)} -attr vt d
+load net {col:rsc:mgc_inout_stdreg_en.dout#1(6)} -attr vt d
+load netBundle {col:rsc:mgc_inout_stdreg_en.dout#1} 7 {col:rsc:mgc_inout_stdreg_en.dout#1(0)} {col:rsc:mgc_inout_stdreg_en.dout#1(1)} {col:rsc:mgc_inout_stdreg_en.dout#1(2)} {col:rsc:mgc_inout_stdreg_en.dout#1(3)} {col:rsc:mgc_inout_stdreg_en.dout#1(4)} {col:rsc:mgc_inout_stdreg_en.dout#1(5)} {col:rsc:mgc_inout_stdreg_en.dout#1(6)} -attr xrf 1465 -attr oid 82 -attr vt d -attr @path {/MemoryTester/col:rsc:mgc_inout_stdreg_en.dout}
+load net {bit_out:rsc.z} -attr xrf 1466 -attr oid 83 -attr vt d
+load net {bit_out:rsc.z} -port {bit_out:rsc.z} -attr xrf 1467 -attr oid 84 -attr vt d -attr @path {/MemoryTester/bit_out:rsc.z}
+load net {enabled:rsc.z} -attr xrf 1468 -attr oid 85 -attr vt d
+load net {enabled:rsc.z} -port {enabled:rsc.z} -attr xrf 1469 -attr oid 86 -attr vt d -attr @path {/MemoryTester/enabled:rsc.z}
+load net {row:rsc.z(0)} -attr vt d
+load net {row:rsc.z(1)} -attr vt d
+load net {row:rsc.z(2)} -attr vt d
+load net {row:rsc.z(3)} -attr vt d
+load net {row:rsc.z(4)} -attr vt d
+load net {row:rsc.z(5)} -attr vt d
+load netBundle {row:rsc.z} 6 {row:rsc.z(0)} {row:rsc.z(1)} {row:rsc.z(2)} {row:rsc.z(3)} {row:rsc.z(4)} {row:rsc.z(5)} -attr xrf 1470 -attr oid 87 -attr vt d -attr @path {/MemoryTester/row:rsc.z}
+load net {row:rsc.z(0)} -port {row:rsc.z(0)} -attr vt d -attr @path {/MemoryTester/row:rsc.z}
+load net {row:rsc.z(1)} -port {row:rsc.z(1)} -attr vt d -attr @path {/MemoryTester/row:rsc.z}
+load net {row:rsc.z(2)} -port {row:rsc.z(2)} -attr vt d -attr @path {/MemoryTester/row:rsc.z}
+load net {row:rsc.z(3)} -port {row:rsc.z(3)} -attr vt d -attr @path {/MemoryTester/row:rsc.z}
+load net {row:rsc.z(4)} -port {row:rsc.z(4)} -attr vt d -attr @path {/MemoryTester/row:rsc.z}
+load net {row:rsc.z(5)} -port {row:rsc.z(5)} -attr vt d -attr @path {/MemoryTester/row:rsc.z}
+load net {col:rsc.z(0)} -attr vt d
+load net {col:rsc.z(1)} -attr vt d
+load net {col:rsc.z(2)} -attr vt d
+load net {col:rsc.z(3)} -attr vt d
+load net {col:rsc.z(4)} -attr vt d
+load net {col:rsc.z(5)} -attr vt d
+load net {col:rsc.z(6)} -attr vt d
+load netBundle {col:rsc.z} 7 {col:rsc.z(0)} {col:rsc.z(1)} {col:rsc.z(2)} {col:rsc.z(3)} {col:rsc.z(4)} {col:rsc.z(5)} {col:rsc.z(6)} -attr xrf 1471 -attr oid 88 -attr vt d -attr @path {/MemoryTester/col:rsc.z}
+load net {col:rsc.z(0)} -port {col:rsc.z(0)} -attr vt d
+load net {col:rsc.z(1)} -port {col:rsc.z(1)} -attr vt d
+load net {col:rsc.z(2)} -port {col:rsc.z(2)} -attr vt d
+load net {col:rsc.z(3)} -port {col:rsc.z(3)} -attr vt d
+load net {col:rsc.z(4)} -port {col:rsc.z(4)} -attr vt d
+load net {col:rsc.z(5)} -port {col:rsc.z(5)} -attr vt d
+load net {col:rsc.z(6)} -port {col:rsc.z(6)} -attr vt d
+load netBundle {col:rsc.z} 7 {col:rsc.z(0)} {col:rsc.z(1)} {col:rsc.z(2)} {col:rsc.z(3)} {col:rsc.z(4)} {col:rsc.z(5)} {col:rsc.z(6)} -attr xrf 1472 -attr oid 89 -attr vt d -attr @path {/MemoryTester/col:rsc.z}
+load net {col:rsc.lzout} -attr xrf 1473 -attr oid 90 -attr vt d
+load net {col:rsc.lzout} -port {col:rsc.lzout} -attr xrf 1474 -attr oid 91 -attr vt d -attr @path {/MemoryTester/col:rsc.lzout}
+load net {col:rsc.lzin} -attr xrf 1475 -attr oid 92 -attr vt d
+load net {col:rsc.lzin} -port {col:rsc.lzin} -attr xrf 1476 -attr oid 93 -attr vt d -attr @path {/MemoryTester/col:rsc.lzin}
+load net {clk} -attr xrf 1477 -attr oid 94
+load net {clk} -port {clk} -attr xrf 1478 -attr oid 95
+load net {rst} -attr xrf 1479 -attr oid 96
+load net {rst} -port {rst} -attr xrf 1480 -attr oid 97
+load inst "MemoryTester:core:inst" "MemoryTester:core" "orig" -attr xrf 1481 -attr oid 98 -attr vt dc -attr @path {/MemoryTester/MemoryTester:core:inst} -attr area 66.391273 -attr delay 3.679041 -attr hier "/MemoryTester/MemoryTester:core" -pg 1 -lvl 5
+load net {clk} -pin  "MemoryTester:core:inst" {clk#1} -attr xrf 1482 -attr oid 99 -attr @path {/MemoryTester/clk}
+load net {rst} -pin  "MemoryTester:core:inst" {rst#1} -attr xrf 1483 -attr oid 100 -attr @path {/MemoryTester/rst}
+load net {bit_out:rsc:mgc_out_stdreg.d#1} -pin  "MemoryTester:core:inst" {bit_out:rsc:mgc_out_stdreg.d} -attr xrf 1484 -attr oid 101 -attr vt dc -attr @path {/MemoryTester/bit_out:rsc:mgc_out_stdreg.d}
+load net {row:rsc:mgc_out_stdreg.d#1(0)} -pin  "MemoryTester:core:inst" {row:rsc:mgc_out_stdreg.d(0)} -attr vt dc -attr @path {/MemoryTester/row:rsc:mgc_out_stdreg.d}
+load net {row:rsc:mgc_out_stdreg.d#1(1)} -pin  "MemoryTester:core:inst" {row:rsc:mgc_out_stdreg.d(1)} -attr vt dc -attr @path {/MemoryTester/row:rsc:mgc_out_stdreg.d}
+load net {row:rsc:mgc_out_stdreg.d#1(2)} -pin  "MemoryTester:core:inst" {row:rsc:mgc_out_stdreg.d(2)} -attr vt dc -attr @path {/MemoryTester/row:rsc:mgc_out_stdreg.d}
+load net {row:rsc:mgc_out_stdreg.d#1(3)} -pin  "MemoryTester:core:inst" {row:rsc:mgc_out_stdreg.d(3)} -attr vt dc -attr @path {/MemoryTester/row:rsc:mgc_out_stdreg.d}
+load net {row:rsc:mgc_out_stdreg.d#1(4)} -pin  "MemoryTester:core:inst" {row:rsc:mgc_out_stdreg.d(4)} -attr vt dc -attr @path {/MemoryTester/row:rsc:mgc_out_stdreg.d}
+load net {row:rsc:mgc_out_stdreg.d#1(5)} -pin  "MemoryTester:core:inst" {row:rsc:mgc_out_stdreg.d(5)} -attr vt dc -attr @path {/MemoryTester/row:rsc:mgc_out_stdreg.d}
+load net {col:rsc:mgc_inout_stdreg_en.ldout#1} -pin  "MemoryTester:core:inst" {col:rsc:mgc_inout_stdreg_en.ldout} -attr xrf 1485 -attr oid 102 -attr vt dc -attr @path {/MemoryTester/col:rsc:mgc_inout_stdreg_en.ldout}
+load net {col:rsc:mgc_inout_stdreg_en.dout#1(0)} -pin  "MemoryTester:core:inst" {col:rsc:mgc_inout_stdreg_en.dout(0)} -attr vt dc -attr @path {/MemoryTester/col:rsc:mgc_inout_stdreg_en.dout}
+load net {col:rsc:mgc_inout_stdreg_en.dout#1(1)} -pin  "MemoryTester:core:inst" {col:rsc:mgc_inout_stdreg_en.dout(1)} -attr vt dc -attr @path {/MemoryTester/col:rsc:mgc_inout_stdreg_en.dout}
+load net {col:rsc:mgc_inout_stdreg_en.dout#1(2)} -pin  "MemoryTester:core:inst" {col:rsc:mgc_inout_stdreg_en.dout(2)} -attr vt dc -attr @path {/MemoryTester/col:rsc:mgc_inout_stdreg_en.dout}
+load net {col:rsc:mgc_inout_stdreg_en.dout#1(3)} -pin  "MemoryTester:core:inst" {col:rsc:mgc_inout_stdreg_en.dout(3)} -attr vt dc -attr @path {/MemoryTester/col:rsc:mgc_inout_stdreg_en.dout}
+load net {col:rsc:mgc_inout_stdreg_en.dout#1(4)} -pin  "MemoryTester:core:inst" {col:rsc:mgc_inout_stdreg_en.dout(4)} -attr vt dc -attr @path {/MemoryTester/col:rsc:mgc_inout_stdreg_en.dout}
+load net {col:rsc:mgc_inout_stdreg_en.dout#1(5)} -pin  "MemoryTester:core:inst" {col:rsc:mgc_inout_stdreg_en.dout(5)} -attr vt dc -attr @path {/MemoryTester/col:rsc:mgc_inout_stdreg_en.dout}
+load net {col:rsc:mgc_inout_stdreg_en.dout#1(6)} -pin  "MemoryTester:core:inst" {col:rsc:mgc_inout_stdreg_en.dout(6)} -attr vt dc -attr @path {/MemoryTester/col:rsc:mgc_inout_stdreg_en.dout}
+load inst "bit_out:rsc:mgc_out_stdreg" "mgc_ioport.mgc_out_stdreg(1,1)" "INTERFACE" -attr xrf 1486 -attr oid 103 -attr vt d -attr @path {/MemoryTester/bit_out:rsc:mgc_out_stdreg} -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_ioport.mgc_out_stdreg(1,1)" -pg 1 -lvl 1002
+load net {bit_out:rsc:mgc_out_stdreg.d#1} -pin  "bit_out:rsc:mgc_out_stdreg" {d(0)} -attr vt d -attr @path {/MemoryTester/bit_out:rsc:mgc_out_stdreg.d}
+load net {bit_out:rsc.z} -pin  "bit_out:rsc:mgc_out_stdreg" {z(0)} -attr vt d -attr @path {/MemoryTester/bit_out:rsc.z}
+load inst "enabled:rsc:mgc_out_stdreg" "mgc_ioport.mgc_out_stdreg(2,1)" "INTERFACE" -attr xrf 1487 -attr oid 104 -attr vt d -attr @path {/MemoryTester/enabled:rsc:mgc_out_stdreg} -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_ioport.mgc_out_stdreg(2,1)" -pg 1 -lvl 1002
+load net {PWR} -pin  "enabled:rsc:mgc_out_stdreg" {d(0)} -attr @path {/MemoryTester/C1_1#4}
+load net {enabled:rsc.z} -pin  "enabled:rsc:mgc_out_stdreg" {z(0)} -attr vt d -attr @path {/MemoryTester/enabled:rsc.z}
+load inst "row:rsc:mgc_out_stdreg" "mgc_ioport.mgc_out_stdreg(3,6)" "INTERFACE" -attr xrf 1488 -attr oid 105 -attr vt d -attr @path {/MemoryTester/row:rsc:mgc_out_stdreg} -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_ioport.mgc_out_stdreg(3,6)" -pg 1 -lvl 1002
+load net {row:rsc:mgc_out_stdreg.d#1(0)} -pin  "row:rsc:mgc_out_stdreg" {d(0)} -attr vt d -attr @path {/MemoryTester/row:rsc:mgc_out_stdreg.d}
+load net {row:rsc:mgc_out_stdreg.d#1(1)} -pin  "row:rsc:mgc_out_stdreg" {d(1)} -attr vt d -attr @path {/MemoryTester/row:rsc:mgc_out_stdreg.d}
+load net {row:rsc:mgc_out_stdreg.d#1(2)} -pin  "row:rsc:mgc_out_stdreg" {d(2)} -attr vt d -attr @path {/MemoryTester/row:rsc:mgc_out_stdreg.d}
+load net {row:rsc:mgc_out_stdreg.d#1(3)} -pin  "row:rsc:mgc_out_stdreg" {d(3)} -attr vt d -attr @path {/MemoryTester/row:rsc:mgc_out_stdreg.d}
+load net {row:rsc:mgc_out_stdreg.d#1(4)} -pin  "row:rsc:mgc_out_stdreg" {d(4)} -attr vt d -attr @path {/MemoryTester/row:rsc:mgc_out_stdreg.d}
+load net {row:rsc:mgc_out_stdreg.d#1(5)} -pin  "row:rsc:mgc_out_stdreg" {d(5)} -attr vt d -attr @path {/MemoryTester/row:rsc:mgc_out_stdreg.d}
+load net {row:rsc.z(0)} -pin  "row:rsc:mgc_out_stdreg" {z(0)} -attr vt d -attr @path {/MemoryTester/row:rsc.z}
+load net {row:rsc.z(1)} -pin  "row:rsc:mgc_out_stdreg" {z(1)} -attr vt d -attr @path {/MemoryTester/row:rsc.z}
+load net {row:rsc.z(2)} -pin  "row:rsc:mgc_out_stdreg" {z(2)} -attr vt d -attr @path {/MemoryTester/row:rsc.z}
+load net {row:rsc.z(3)} -pin  "row:rsc:mgc_out_stdreg" {z(3)} -attr vt d -attr @path {/MemoryTester/row:rsc.z}
+load net {row:rsc.z(4)} -pin  "row:rsc:mgc_out_stdreg" {z(4)} -attr vt d -attr @path {/MemoryTester/row:rsc.z}
+load net {row:rsc.z(5)} -pin  "row:rsc:mgc_out_stdreg" {z(5)} -attr vt d -attr @path {/MemoryTester/row:rsc.z}
+load inst "col:rsc:mgc_inout_stdreg_en" "mgc_ioport.mgc_inout_stdreg_en(4,7)" "INTERFACE" -attr xrf 1489 -attr oid 106 -attr vt d -attr @path {/MemoryTester/col:rsc:mgc_inout_stdreg_en} -attr qmod "mgc_ioport.mgc_inout_stdreg_en(4,7)" -pg 1 -lvl 6
+load net {GND} -pin  "col:rsc:mgc_inout_stdreg_en" {ldin} -attr @path {/MemoryTester/C0_1}
+load net {col:rsc:mgc_inout_stdreg_en.din(0)} -pin  "col:rsc:mgc_inout_stdreg_en" {din(0)} -attr vt d -attr @path {/MemoryTester/col:rsc:mgc_inout_stdreg_en.din}
+load net {col:rsc:mgc_inout_stdreg_en.din(1)} -pin  "col:rsc:mgc_inout_stdreg_en" {din(1)} -attr vt d -attr @path {/MemoryTester/col:rsc:mgc_inout_stdreg_en.din}
+load net {col:rsc:mgc_inout_stdreg_en.din(2)} -pin  "col:rsc:mgc_inout_stdreg_en" {din(2)} -attr vt d -attr @path {/MemoryTester/col:rsc:mgc_inout_stdreg_en.din}
+load net {col:rsc:mgc_inout_stdreg_en.din(3)} -pin  "col:rsc:mgc_inout_stdreg_en" {din(3)} -attr vt d -attr @path {/MemoryTester/col:rsc:mgc_inout_stdreg_en.din}
+load net {col:rsc:mgc_inout_stdreg_en.din(4)} -pin  "col:rsc:mgc_inout_stdreg_en" {din(4)} -attr vt d -attr @path {/MemoryTester/col:rsc:mgc_inout_stdreg_en.din}
+load net {col:rsc:mgc_inout_stdreg_en.din(5)} -pin  "col:rsc:mgc_inout_stdreg_en" {din(5)} -attr vt d -attr @path {/MemoryTester/col:rsc:mgc_inout_stdreg_en.din}
+load net {col:rsc:mgc_inout_stdreg_en.din(6)} -pin  "col:rsc:mgc_inout_stdreg_en" {din(6)} -attr vt d -attr @path {/MemoryTester/col:rsc:mgc_inout_stdreg_en.din}
+load net {col:rsc:mgc_inout_stdreg_en.ldout#1} -pin  "col:rsc:mgc_inout_stdreg_en" {ldout} -attr xrf 1490 -attr oid 107 -attr vt d -attr @path {/MemoryTester/col:rsc:mgc_inout_stdreg_en.ldout}
+load net {col:rsc:mgc_inout_stdreg_en.dout#1(0)} -pin  "col:rsc:mgc_inout_stdreg_en" {dout(0)} -attr vt d -attr @path {/MemoryTester/col:rsc:mgc_inout_stdreg_en.dout}
+load net {col:rsc:mgc_inout_stdreg_en.dout#1(1)} -pin  "col:rsc:mgc_inout_stdreg_en" {dout(1)} -attr vt d -attr @path {/MemoryTester/col:rsc:mgc_inout_stdreg_en.dout}
+load net {col:rsc:mgc_inout_stdreg_en.dout#1(2)} -pin  "col:rsc:mgc_inout_stdreg_en" {dout(2)} -attr vt d -attr @path {/MemoryTester/col:rsc:mgc_inout_stdreg_en.dout}
+load net {col:rsc:mgc_inout_stdreg_en.dout#1(3)} -pin  "col:rsc:mgc_inout_stdreg_en" {dout(3)} -attr vt d -attr @path {/MemoryTester/col:rsc:mgc_inout_stdreg_en.dout}
+load net {col:rsc:mgc_inout_stdreg_en.dout#1(4)} -pin  "col:rsc:mgc_inout_stdreg_en" {dout(4)} -attr vt d -attr @path {/MemoryTester/col:rsc:mgc_inout_stdreg_en.dout}
+load net {col:rsc:mgc_inout_stdreg_en.dout#1(5)} -pin  "col:rsc:mgc_inout_stdreg_en" {dout(5)} -attr vt d -attr @path {/MemoryTester/col:rsc:mgc_inout_stdreg_en.dout}
+load net {col:rsc:mgc_inout_stdreg_en.dout#1(6)} -pin  "col:rsc:mgc_inout_stdreg_en" {dout(6)} -attr vt d -attr @path {/MemoryTester/col:rsc:mgc_inout_stdreg_en.dout}
+load net {col:rsc.lzin} -pin  "col:rsc:mgc_inout_stdreg_en" {lzin} -attr xrf 1491 -attr oid 108 -attr vt d -attr @path {/MemoryTester/col:rsc.lzin}
+load net {col:rsc.lzout} -pin  "col:rsc:mgc_inout_stdreg_en" {lzout} -attr xrf 1492 -attr oid 109 -attr vt d -attr @path {/MemoryTester/col:rsc.lzout}
+load net {col:rsc.z(0)} -pin  "col:rsc:mgc_inout_stdreg_en" {z(0)} -attr vt d -attr @path {/MemoryTester/col:rsc.z}
+load net {col:rsc.z(1)} -pin  "col:rsc:mgc_inout_stdreg_en" {z(1)} -attr vt d -attr @path {/MemoryTester/col:rsc.z}
+load net {col:rsc.z(2)} -pin  "col:rsc:mgc_inout_stdreg_en" {z(2)} -attr vt d -attr @path {/MemoryTester/col:rsc.z}
+load net {col:rsc.z(3)} -pin  "col:rsc:mgc_inout_stdreg_en" {z(3)} -attr vt d -attr @path {/MemoryTester/col:rsc.z}
+load net {col:rsc.z(4)} -pin  "col:rsc:mgc_inout_stdreg_en" {z(4)} -attr vt d -attr @path {/MemoryTester/col:rsc.z}
+load net {col:rsc.z(5)} -pin  "col:rsc:mgc_inout_stdreg_en" {z(5)} -attr vt d -attr @path {/MemoryTester/col:rsc.z}
+load net {col:rsc.z(6)} -pin  "col:rsc:mgc_inout_stdreg_en" {z(6)} -attr vt d -attr @path {/MemoryTester/col:rsc.z}
+### END MODULE 
+

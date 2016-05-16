@@ -1,0 +1,1378 @@
+
+# Program: Catapult University Version
+# Version: 2011a.126
+#    File: Nlview netlist
+
+module new "MemBlock:core:fsm" "orig"
+load port {clk} input -attr xrf 975 -attr oid 1 -attr @path {/MemBlock/MemBlock:core/MemBlock:core:fsm/clk}
+load port {rst} input -attr xrf 976 -attr oid 2 -attr @path {/MemBlock/MemBlock:core/MemBlock:core:fsm/rst}
+load portBus {fsm_output(5:0)} output 6 {fsm_output(5)} {fsm_output(4)} {fsm_output(3)} {fsm_output(2)} {fsm_output(1)} {fsm_output(0)} -attr xrf 977 -attr oid 3 -attr @path {/MemBlock/MemBlock:core/MemBlock:core:fsm/fsm_output}
+load port {st(data:vinit)#1_tr0} input -attr @path {/MemBlock/MemBlock:core/MemBlock:core:fsm/st(data:vinit)#1_tr0}
+load net {clk} -attr xrf 978 -attr oid 4
+load net {clk} -port {clk} -attr xrf 979 -attr oid 5
+load net {rst} -attr xrf 980 -attr oid 6
+load net {rst} -port {rst} -attr xrf 981 -attr oid 7
+load net {fsm_output(0)} -attr vt d
+load net {fsm_output(1)} -attr vt d
+load net {fsm_output(2)} -attr vt d
+load net {fsm_output(3)} -attr vt d
+load net {fsm_output(4)} -attr vt d
+load net {fsm_output(5)} -attr vt d
+load netBundle {fsm_output} 6 {fsm_output(0)} {fsm_output(1)} {fsm_output(2)} {fsm_output(3)} {fsm_output(4)} {fsm_output(5)} -attr xrf 982 -attr oid 8 -attr vt d -attr @path {/MemBlock/MemBlock:core/MemBlock:core:fsm/fsm_output}
+load net {fsm_output(0)} -port {fsm_output(0)} -attr vt d -attr @path {/MemBlock/MemBlock:core/MemBlock:core:fsm/fsm_output}
+load net {fsm_output(1)} -port {fsm_output(1)} -attr vt d -attr @path {/MemBlock/MemBlock:core/MemBlock:core:fsm/fsm_output}
+load net {fsm_output(2)} -port {fsm_output(2)} -attr vt d -attr @path {/MemBlock/MemBlock:core/MemBlock:core:fsm/fsm_output}
+load net {fsm_output(3)} -port {fsm_output(3)} -attr vt d -attr @path {/MemBlock/MemBlock:core/MemBlock:core:fsm/fsm_output}
+load net {fsm_output(4)} -port {fsm_output(4)} -attr vt d -attr @path {/MemBlock/MemBlock:core/MemBlock:core:fsm/fsm_output}
+load net {fsm_output(5)} -port {fsm_output(5)} -attr vt d -attr @path {/MemBlock/MemBlock:core/MemBlock:core:fsm/fsm_output}
+load net {st(data:vinit)#1_tr0} -attr vt d
+load net {st(data:vinit)#1_tr0} -port {st(data:vinit)#1_tr0}
+### END MODULE 
+
+module new "MemBlock:core" "orig"
+load port {clk} input -attr xrf 983 -attr oid 9 -attr vt d -attr @path {/MemBlock/MemBlock:core/clk}
+load port {rst} input -attr xrf 984 -attr oid 10 -attr vt d -attr @path {/MemBlock/MemBlock:core/rst}
+load portBus {row:rsc:mgc_in_wire.d(5:0)} input 6 {row:rsc:mgc_in_wire.d(5)} {row:rsc:mgc_in_wire.d(4)} {row:rsc:mgc_in_wire.d(3)} {row:rsc:mgc_in_wire.d(2)} {row:rsc:mgc_in_wire.d(1)} {row:rsc:mgc_in_wire.d(0)} -attr xrf 985 -attr oid 11 -attr vt d -attr @path {/MemBlock/MemBlock:core/row:rsc:mgc_in_wire.d}
+load portBus {col:rsc:mgc_in_wire.d(6:0)} input 7 {col:rsc:mgc_in_wire.d(6)} {col:rsc:mgc_in_wire.d(5)} {col:rsc:mgc_in_wire.d(4)} {col:rsc:mgc_in_wire.d(3)} {col:rsc:mgc_in_wire.d(2)} {col:rsc:mgc_in_wire.d(1)} {col:rsc:mgc_in_wire.d(0)} -attr xrf 986 -attr oid 12 -attr vt d -attr @path {/MemBlock/MemBlock:core/col:rsc:mgc_in_wire.d}
+load port {bit_in:rsc:mgc_in_wire.d} input -attr xrf 987 -attr oid 13 -attr vt d -attr @path {/MemBlock/MemBlock:core/bit_in:rsc:mgc_in_wire.d}
+load port {write_enable:rsc:mgc_in_wire.d} input -attr xrf 988 -attr oid 14 -attr vt d -attr @path {/MemBlock/MemBlock:core/write_enable:rsc:mgc_in_wire.d}
+load portBus {bits_out:rsc:mgc_out_stdreg.d(29:0)} output 30 {bits_out:rsc:mgc_out_stdreg.d(29)} {bits_out:rsc:mgc_out_stdreg.d(28)} {bits_out:rsc:mgc_out_stdreg.d(27)} {bits_out:rsc:mgc_out_stdreg.d(26)} {bits_out:rsc:mgc_out_stdreg.d(25)} {bits_out:rsc:mgc_out_stdreg.d(24)} {bits_out:rsc:mgc_out_stdreg.d(23)} {bits_out:rsc:mgc_out_stdreg.d(22)} {bits_out:rsc:mgc_out_stdreg.d(21)} {bits_out:rsc:mgc_out_stdreg.d(20)} {bits_out:rsc:mgc_out_stdreg.d(19)} {bits_out:rsc:mgc_out_stdreg.d(18)} {bits_out:rsc:mgc_out_stdreg.d(17)} {bits_out:rsc:mgc_out_stdreg.d(16)} {bits_out:rsc:mgc_out_stdreg.d(15)} {bits_out:rsc:mgc_out_stdreg.d(14)} {bits_out:rsc:mgc_out_stdreg.d(13)} {bits_out:rsc:mgc_out_stdreg.d(12)} {bits_out:rsc:mgc_out_stdreg.d(11)} {bits_out:rsc:mgc_out_stdreg.d(10)} {bits_out:rsc:mgc_out_stdreg.d(9)} {bits_out:rsc:mgc_out_stdreg.d(8)} {bits_out:rsc:mgc_out_stdreg.d(7)} {bits_out:rsc:mgc_out_stdreg.d(6)} {bits_out:rsc:mgc_out_stdreg.d(5)} {bits_out:rsc:mgc_out_stdreg.d(4)} {bits_out:rsc:mgc_out_stdreg.d(3)} {bits_out:rsc:mgc_out_stdreg.d(2)} {bits_out:rsc:mgc_out_stdreg.d(1)} {bits_out:rsc:mgc_out_stdreg.d(0)} -attr xrf 989 -attr oid 15 -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load port {data:rsc:singleport.data_in} output -attr xrf 990 -attr oid 16 -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.data_in}
+load portBus {data:rsc:singleport.addr(12:0)} output 13 {data:rsc:singleport.addr(12)} {data:rsc:singleport.addr(11)} {data:rsc:singleport.addr(10)} {data:rsc:singleport.addr(9)} {data:rsc:singleport.addr(8)} {data:rsc:singleport.addr(7)} {data:rsc:singleport.addr(6)} {data:rsc:singleport.addr(5)} {data:rsc:singleport.addr(4)} {data:rsc:singleport.addr(3)} {data:rsc:singleport.addr(2)} {data:rsc:singleport.addr(1)} {data:rsc:singleport.addr(0)} -attr xrf 991 -attr oid 17 -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.addr}
+load port {data:rsc:singleport.re} output -attr xrf 992 -attr oid 18 -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.re}
+load port {data:rsc:singleport.we} output -attr xrf 993 -attr oid 19 -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.we}
+load port {data:rsc:singleport.data_out} input -attr xrf 994 -attr oid 20 -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.data_out}
+load symbol "MemBlock:core:fsm" "orig" GEN \
+     port {clk#1} input \
+     port {rst#1} input \
+     portBus {fsm_output(5:0)} output 6 {fsm_output(5)} {fsm_output(4)} {fsm_output(3)} {fsm_output(2)} {fsm_output(1)} {fsm_output(0)} \
+     port {st(data:vinit)#1_tr0} input \
+
+load symbol "and(2,1)" "INTERFACE" AND boxcolor 0 \
+     portBus {A0(0:0)} input 1 {A0(0)} \
+     portBus {A1(0:0)} input 1 {A1(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load symbol "reg(1,1,0,0,1)" "INTERFACE" GEN boxcolor 1 \
+     portBus {D(0:0)} input 1 {D(0)} \
+     portBus {DRs(0:0)} input 1 {DRs(0)} \
+     port {clk} input.clk \
+     portBus {Rs(0:0)} input 1 {Rs(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load symbol "mux(2,1)" "INTERFACE" MUX boxcolor 0 \
+     portBus {A0(0:0)} input 1 {A0(0)} \
+     portBus {A1(0:0)} input 1 {A1(0)} \
+     portBus {S(0:0)} input.top 1 {S(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load symbol "mux(2,30)" "INTERFACE" MUX boxcolor 0 \
+     portBus {A0(29:0)} input 30 {A0(29)} {A0(28)} {A0(27)} {A0(26)} {A0(25)} {A0(24)} {A0(23)} {A0(22)} {A0(21)} {A0(20)} {A0(19)} {A0(18)} {A0(17)} {A0(16)} {A0(15)} {A0(14)} {A0(13)} {A0(12)} {A0(11)} {A0(10)} {A0(9)} {A0(8)} {A0(7)} {A0(6)} {A0(5)} {A0(4)} {A0(3)} {A0(2)} {A0(1)} {A0(0)} \
+     portBus {A1(29:0)} input 30 {A1(29)} {A1(28)} {A1(27)} {A1(26)} {A1(25)} {A1(24)} {A1(23)} {A1(22)} {A1(21)} {A1(20)} {A1(19)} {A1(18)} {A1(17)} {A1(16)} {A1(15)} {A1(14)} {A1(13)} {A1(12)} {A1(11)} {A1(10)} {A1(9)} {A1(8)} {A1(7)} {A1(6)} {A1(5)} {A1(4)} {A1(3)} {A1(2)} {A1(1)} {A1(0)} \
+     portBus {S(0:0)} input.top 1 {S(0)} \
+     portBus {Z(29:0)} output 30 {Z(29)} {Z(28)} {Z(27)} {Z(26)} {Z(25)} {Z(24)} {Z(23)} {Z(22)} {Z(21)} {Z(20)} {Z(19)} {Z(18)} {Z(17)} {Z(16)} {Z(15)} {Z(14)} {Z(13)} {Z(12)} {Z(11)} {Z(10)} {Z(9)} {Z(8)} {Z(7)} {Z(6)} {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "reg(30,1,0,0,1)" "INTERFACE" GEN boxcolor 1 \
+     portBus {D(29:0)} input 30 {D(29)} {D(28)} {D(27)} {D(26)} {D(25)} {D(24)} {D(23)} {D(22)} {D(21)} {D(20)} {D(19)} {D(18)} {D(17)} {D(16)} {D(15)} {D(14)} {D(13)} {D(12)} {D(11)} {D(10)} {D(9)} {D(8)} {D(7)} {D(6)} {D(5)} {D(4)} {D(3)} {D(2)} {D(1)} {D(0)} \
+     portBus {DRs(29:0)} input 30 {DRs(29)} {DRs(28)} {DRs(27)} {DRs(26)} {DRs(25)} {DRs(24)} {DRs(23)} {DRs(22)} {DRs(21)} {DRs(20)} {DRs(19)} {DRs(18)} {DRs(17)} {DRs(16)} {DRs(15)} {DRs(14)} {DRs(13)} {DRs(12)} {DRs(11)} {DRs(10)} {DRs(9)} {DRs(8)} {DRs(7)} {DRs(6)} {DRs(5)} {DRs(4)} {DRs(3)} {DRs(2)} {DRs(1)} {DRs(0)} \
+     port {clk} input.clk \
+     portBus {Rs(0:0)} input 1 {Rs(0)} \
+     portBus {Z(29:0)} output 30 {Z(29)} {Z(28)} {Z(27)} {Z(26)} {Z(25)} {Z(24)} {Z(23)} {Z(22)} {Z(21)} {Z(20)} {Z(19)} {Z(18)} {Z(17)} {Z(16)} {Z(15)} {Z(14)} {Z(13)} {Z(12)} {Z(11)} {Z(10)} {Z(9)} {Z(8)} {Z(7)} {Z(6)} {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "mux(2,13)" "INTERFACE" MUX boxcolor 0 \
+     portBus {A0(12:0)} input 13 {A0(12)} {A0(11)} {A0(10)} {A0(9)} {A0(8)} {A0(7)} {A0(6)} {A0(5)} {A0(4)} {A0(3)} {A0(2)} {A0(1)} {A0(0)} \
+     portBus {A1(12:0)} input 13 {A1(12)} {A1(11)} {A1(10)} {A1(9)} {A1(8)} {A1(7)} {A1(6)} {A1(5)} {A1(4)} {A1(3)} {A1(2)} {A1(1)} {A1(0)} \
+     portBus {S(0:0)} input.top 1 {S(0)} \
+     portBus {Z(12:0)} output 13 {Z(12)} {Z(11)} {Z(10)} {Z(9)} {Z(8)} {Z(7)} {Z(6)} {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "reg(13,1,0,0,1)" "INTERFACE" GEN boxcolor 1 \
+     portBus {D(12:0)} input 13 {D(12)} {D(11)} {D(10)} {D(9)} {D(8)} {D(7)} {D(6)} {D(5)} {D(4)} {D(3)} {D(2)} {D(1)} {D(0)} \
+     portBus {DRs(12:0)} input 13 {DRs(12)} {DRs(11)} {DRs(10)} {DRs(9)} {DRs(8)} {DRs(7)} {DRs(6)} {DRs(5)} {DRs(4)} {DRs(3)} {DRs(2)} {DRs(1)} {DRs(0)} \
+     port {clk} input.clk \
+     portBus {Rs(0:0)} input 1 {Rs(0)} \
+     portBus {Z(12:0)} output 13 {Z(12)} {Z(11)} {Z(10)} {Z(9)} {Z(8)} {Z(7)} {Z(6)} {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "nor(13,1)" "INTERFACE" NOR boxcolor 0 \
+     portBus {A0(0:0)} input 1 {A0(0)} \
+     portBus {A1(0:0)} input 1 {A1(0)} \
+     portBus {A2(0:0)} input 1 {A2(0)} \
+     portBus {A3(0:0)} input 1 {A3(0)} \
+     portBus {A4(0:0)} input 1 {A4(0)} \
+     portBus {A5(0:0)} input 1 {A5(0)} \
+     portBus {A6(0:0)} input 1 {A6(0)} \
+     portBus {A7(0:0)} input 1 {A7(0)} \
+     portBus {A8(0:0)} input 1 {A8(0)} \
+     portBus {A9(0:0)} input 1 {A9(0)} \
+     portBus {A10(0:0)} input 1 {A10(0)} \
+     portBus {A11(0:0)} input 1 {A11(0)} \
+     portBus {A12(0:0)} input 1 {A12(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load symbol "add(13,-1,1,1,13)" "INTERFACE" RTL(+) boxcolor 0 \
+     portBus {A(12:0)} input 13 {A(12)} {A(11)} {A(10)} {A(9)} {A(8)} {A(7)} {A(6)} {A(5)} {A(4)} {A(3)} {A(2)} {A(1)} {A(0)} \
+     portBus {B(0:0)} input 1 {B(0)} \
+     portBus {Z(12:0)} output 13 {Z(12)} {Z(11)} {Z(10)} {Z(9)} {Z(8)} {Z(7)} {Z(6)} {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "not(6)" "INTERFACE" INV boxcolor 0 \
+     portBus {A(5:0)} input 6 {A(5)} {A(4)} {A(3)} {A(2)} {A(1)} {A(0)} \
+     portBus {Z(5:0)} output 6 {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "add(7,-1,6,0,7)" "INTERFACE" RTL(+) boxcolor 0 \
+     portBus {A(6:0)} input 7 {A(6)} {A(5)} {A(4)} {A(3)} {A(2)} {A(1)} {A(0)} \
+     portBus {B(5:0)} input 6 {B(5)} {B(4)} {B(3)} {B(2)} {B(1)} {B(0)} \
+     portBus {Z(6:0)} output 7 {Z(6)} {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "add(7,1,10,-1,10)" "INTERFACE" RTL(+) boxcolor 0 \
+     portBus {A(6:0)} input 7 {A(6)} {A(5)} {A(4)} {A(3)} {A(2)} {A(1)} {A(0)} \
+     portBus {B(9:0)} input 10 {B(9)} {B(8)} {B(7)} {B(6)} {B(5)} {B(4)} {B(3)} {B(2)} {B(1)} {B(0)} \
+     portBus {Z(9:0)} output 10 {Z(9)} {Z(8)} {Z(7)} {Z(6)} {Z(5)} {Z(4)} {Z(3)} {Z(2)} {Z(1)} {Z(0)} \
+
+load symbol "not(1)" "INTERFACE" INV boxcolor 0 \
+     portBus {A(0:0)} input 1 {A(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load symbol "nand(2,1)" "INTERFACE" NAND boxcolor 0 \
+     portBus {A0(0:0)} input 1 {A0(0)} \
+     portBus {A1(0:0)} input 1 {A1(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load symbol "nor(2,1)" "INTERFACE" NOR boxcolor 0 \
+     portBus {A0(0:0)} input 1 {A0(0)} \
+     portBus {A1(0:0)} input 1 {A1(0)} \
+     portBus {Z(0:0)} output 1 {Z(0)} \
+
+load net {data:vinit.ndx.sva(0)} -attr vt d
+load net {data:vinit.ndx.sva(1)} -attr vt d
+load net {data:vinit.ndx.sva(2)} -attr vt d
+load net {data:vinit.ndx.sva(3)} -attr vt d
+load net {data:vinit.ndx.sva(4)} -attr vt d
+load net {data:vinit.ndx.sva(5)} -attr vt d
+load net {data:vinit.ndx.sva(6)} -attr vt d
+load net {data:vinit.ndx.sva(7)} -attr vt d
+load net {data:vinit.ndx.sva(8)} -attr vt d
+load net {data:vinit.ndx.sva(9)} -attr vt d
+load net {data:vinit.ndx.sva(10)} -attr vt d
+load net {data:vinit.ndx.sva(11)} -attr vt d
+load net {data:vinit.ndx.sva(12)} -attr vt d
+load netBundle {data:vinit.ndx.sva} 13 {data:vinit.ndx.sva(0)} {data:vinit.ndx.sva(1)} {data:vinit.ndx.sva(2)} {data:vinit.ndx.sva(3)} {data:vinit.ndx.sva(4)} {data:vinit.ndx.sva(5)} {data:vinit.ndx.sva(6)} {data:vinit.ndx.sva(7)} {data:vinit.ndx.sva(8)} {data:vinit.ndx.sva(9)} {data:vinit.ndx.sva(10)} {data:vinit.ndx.sva(11)} {data:vinit.ndx.sva(12)} -attr xrf 995 -attr oid 21 -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {if:acc#1.itm(0)} -attr vt d
+load net {if:acc#1.itm(1)} -attr vt d
+load net {if:acc#1.itm(2)} -attr vt d
+load net {if:acc#1.itm(3)} -attr vt d
+load net {if:acc#1.itm(4)} -attr vt d
+load net {if:acc#1.itm(5)} -attr vt d
+load net {if:acc#1.itm(6)} -attr vt d
+load net {if:acc#1.itm(7)} -attr vt d
+load net {if:acc#1.itm(8)} -attr vt d
+load net {if:acc#1.itm(9)} -attr vt d
+load net {if:acc#1.itm(10)} -attr vt d
+load net {if:acc#1.itm(11)} -attr vt d
+load net {if:acc#1.itm(12)} -attr vt d
+load netBundle {if:acc#1.itm} 13 {if:acc#1.itm(0)} {if:acc#1.itm(1)} {if:acc#1.itm(2)} {if:acc#1.itm(3)} {if:acc#1.itm(4)} {if:acc#1.itm(5)} {if:acc#1.itm(6)} {if:acc#1.itm(7)} {if:acc#1.itm(8)} {if:acc#1.itm(9)} {if:acc#1.itm(10)} {if:acc#1.itm(11)} {if:acc#1.itm(12)} -attr xrf 996 -attr oid 22 -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm}
+load net {mux#4.itm(0)} -attr vt d
+load net {mux#4.itm(1)} -attr vt d
+load net {mux#4.itm(2)} -attr vt d
+load net {mux#4.itm(3)} -attr vt d
+load net {mux#4.itm(4)} -attr vt d
+load net {mux#4.itm(5)} -attr vt d
+load net {mux#4.itm(6)} -attr vt d
+load net {mux#4.itm(7)} -attr vt d
+load net {mux#4.itm(8)} -attr vt d
+load net {mux#4.itm(9)} -attr vt d
+load net {mux#4.itm(10)} -attr vt d
+load net {mux#4.itm(11)} -attr vt d
+load net {mux#4.itm(12)} -attr vt d
+load net {mux#4.itm(13)} -attr vt d
+load net {mux#4.itm(14)} -attr vt d
+load net {mux#4.itm(15)} -attr vt d
+load net {mux#4.itm(16)} -attr vt d
+load net {mux#4.itm(17)} -attr vt d
+load net {mux#4.itm(18)} -attr vt d
+load net {mux#4.itm(19)} -attr vt d
+load net {mux#4.itm(20)} -attr vt d
+load net {mux#4.itm(21)} -attr vt d
+load net {mux#4.itm(22)} -attr vt d
+load net {mux#4.itm(23)} -attr vt d
+load net {mux#4.itm(24)} -attr vt d
+load net {mux#4.itm(25)} -attr vt d
+load net {mux#4.itm(26)} -attr vt d
+load net {mux#4.itm(27)} -attr vt d
+load net {mux#4.itm(28)} -attr vt d
+load net {mux#4.itm(29)} -attr vt d
+load netBundle {mux#4.itm} 30 {mux#4.itm(0)} {mux#4.itm(1)} {mux#4.itm(2)} {mux#4.itm(3)} {mux#4.itm(4)} {mux#4.itm(5)} {mux#4.itm(6)} {mux#4.itm(7)} {mux#4.itm(8)} {mux#4.itm(9)} {mux#4.itm(10)} {mux#4.itm(11)} {mux#4.itm(12)} {mux#4.itm(13)} {mux#4.itm(14)} {mux#4.itm(15)} {mux#4.itm(16)} {mux#4.itm(17)} {mux#4.itm(18)} {mux#4.itm(19)} {mux#4.itm(20)} {mux#4.itm(21)} {mux#4.itm(22)} {mux#4.itm(23)} {mux#4.itm(24)} {mux#4.itm(25)} {mux#4.itm(26)} {mux#4.itm(27)} {mux#4.itm(28)} {mux#4.itm(29)} -attr xrf 997 -attr oid 23 -attr vt d -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {conc.itm(0)} -attr vt d
+load net {conc.itm(1)} -attr vt d
+load net {conc.itm(2)} -attr vt d
+load net {conc.itm(3)} -attr vt d
+load net {conc.itm(4)} -attr vt d
+load net {conc.itm(5)} -attr vt d
+load net {conc.itm(6)} -attr vt d
+load net {conc.itm(7)} -attr vt d
+load net {conc.itm(8)} -attr vt d
+load net {conc.itm(9)} -attr vt d
+load net {conc.itm(10)} -attr vt d
+load net {conc.itm(11)} -attr vt d
+load net {conc.itm(12)} -attr vt d
+load net {conc.itm(13)} -attr vt d
+load net {conc.itm(14)} -attr vt d
+load net {conc.itm(15)} -attr vt d
+load net {conc.itm(16)} -attr vt d
+load net {conc.itm(17)} -attr vt d
+load net {conc.itm(18)} -attr vt d
+load net {conc.itm(19)} -attr vt d
+load net {conc.itm(20)} -attr vt d
+load net {conc.itm(21)} -attr vt d
+load net {conc.itm(22)} -attr vt d
+load net {conc.itm(23)} -attr vt d
+load net {conc.itm(24)} -attr vt d
+load net {conc.itm(25)} -attr vt d
+load net {conc.itm(26)} -attr vt d
+load net {conc.itm(27)} -attr vt d
+load net {conc.itm(28)} -attr vt d
+load net {conc.itm(29)} -attr vt d
+load netBundle {conc.itm} 30 {conc.itm(0)} {conc.itm(1)} {conc.itm(2)} {conc.itm(3)} {conc.itm(4)} {conc.itm(5)} {conc.itm(6)} {conc.itm(7)} {conc.itm(8)} {conc.itm(9)} {conc.itm(10)} {conc.itm(11)} {conc.itm(12)} {conc.itm(13)} {conc.itm(14)} {conc.itm(15)} {conc.itm(16)} {conc.itm(17)} {conc.itm(18)} {conc.itm(19)} {conc.itm(20)} {conc.itm(21)} {conc.itm(22)} {conc.itm(23)} {conc.itm(24)} {conc.itm(25)} {conc.itm(26)} {conc.itm(27)} {conc.itm(28)} {conc.itm(29)} -attr xrf 998 -attr oid 24 -attr vt d -attr @path {/MemBlock/MemBlock:core/conc.itm}
+load net {mux#5.itm(0)} -attr vt d
+load net {mux#5.itm(1)} -attr vt d
+load net {mux#5.itm(2)} -attr vt d
+load net {mux#5.itm(3)} -attr vt d
+load net {mux#5.itm(4)} -attr vt d
+load net {mux#5.itm(5)} -attr vt d
+load net {mux#5.itm(6)} -attr vt d
+load net {mux#5.itm(7)} -attr vt d
+load net {mux#5.itm(8)} -attr vt d
+load net {mux#5.itm(9)} -attr vt d
+load net {mux#5.itm(10)} -attr vt d
+load net {mux#5.itm(11)} -attr vt d
+load net {mux#5.itm(12)} -attr vt d
+load netBundle {mux#5.itm} 13 {mux#5.itm(0)} {mux#5.itm(1)} {mux#5.itm(2)} {mux#5.itm(3)} {mux#5.itm(4)} {mux#5.itm(5)} {mux#5.itm(6)} {mux#5.itm(7)} {mux#5.itm(8)} {mux#5.itm(9)} {mux#5.itm(10)} {mux#5.itm(11)} {mux#5.itm(12)} -attr xrf 999 -attr oid 25 -attr vt d -attr @path {/MemBlock/MemBlock:core/mux#5.itm}
+load net {if:acc#1.itm#2(0)} -attr vt d
+load net {if:acc#1.itm#2(1)} -attr vt d
+load net {if:acc#1.itm#2(2)} -attr vt d
+load net {if:acc#1.itm#2(3)} -attr vt d
+load net {if:acc#1.itm#2(4)} -attr vt d
+load net {if:acc#1.itm#2(5)} -attr vt d
+load net {if:acc#1.itm#2(6)} -attr vt d
+load net {if:acc#1.itm#2(7)} -attr vt d
+load net {if:acc#1.itm#2(8)} -attr vt d
+load net {if:acc#1.itm#2(9)} -attr vt d
+load net {if:acc#1.itm#2(10)} -attr vt d
+load net {if:acc#1.itm#2(11)} -attr vt d
+load net {if:acc#1.itm#2(12)} -attr vt d
+load netBundle {if:acc#1.itm#2} 13 {if:acc#1.itm#2(0)} {if:acc#1.itm#2(1)} {if:acc#1.itm#2(2)} {if:acc#1.itm#2(3)} {if:acc#1.itm#2(4)} {if:acc#1.itm#2(5)} {if:acc#1.itm#2(6)} {if:acc#1.itm#2(7)} {if:acc#1.itm#2(8)} {if:acc#1.itm#2(9)} {if:acc#1.itm#2(10)} {if:acc#1.itm#2(11)} {if:acc#1.itm#2(12)} -attr xrf 1000 -attr oid 26 -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm#2}
+load net {conc#19.itm(0)} -attr vt d
+load net {conc#19.itm(1)} -attr vt d
+load net {conc#19.itm(2)} -attr vt d
+load net {conc#19.itm(3)} -attr vt d
+load net {conc#19.itm(4)} -attr vt d
+load net {conc#19.itm(5)} -attr vt d
+load net {conc#19.itm(6)} -attr vt d
+load net {conc#19.itm(7)} -attr vt d
+load net {conc#19.itm(8)} -attr vt d
+load net {conc#19.itm(9)} -attr vt d
+load net {conc#19.itm(10)} -attr vt d
+load net {conc#19.itm(11)} -attr vt d
+load net {conc#19.itm(12)} -attr vt d
+load netBundle {conc#19.itm} 13 {conc#19.itm(0)} {conc#19.itm(1)} {conc#19.itm(2)} {conc#19.itm(3)} {conc#19.itm(4)} {conc#19.itm(5)} {conc#19.itm(6)} {conc#19.itm(7)} {conc#19.itm(8)} {conc#19.itm(9)} {conc#19.itm(10)} {conc#19.itm(11)} {conc#19.itm(12)} -attr xrf 1001 -attr oid 27 -attr vt d -attr @path {/MemBlock/MemBlock:core/conc#19.itm}
+load net {if:acc#5.itm(0)} -attr vt d
+load net {if:acc#5.itm(1)} -attr vt d
+load net {if:acc#5.itm(2)} -attr vt d
+load net {if:acc#5.itm(3)} -attr vt d
+load net {if:acc#5.itm(4)} -attr vt d
+load net {if:acc#5.itm(5)} -attr vt d
+load net {if:acc#5.itm(6)} -attr vt d
+load net {if:acc#5.itm(7)} -attr vt d
+load net {if:acc#5.itm(8)} -attr vt d
+load net {if:acc#5.itm(9)} -attr vt d
+load netBundle {if:acc#5.itm} 10 {if:acc#5.itm(0)} {if:acc#5.itm(1)} {if:acc#5.itm(2)} {if:acc#5.itm(3)} {if:acc#5.itm(4)} {if:acc#5.itm(5)} {if:acc#5.itm(6)} {if:acc#5.itm(7)} {if:acc#5.itm(8)} {if:acc#5.itm(9)} -attr xrf 1002 -attr oid 28 -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#5.itm}
+load net {if:acc#3.itm(0)} -attr vt d
+load net {if:acc#3.itm(1)} -attr vt d
+load net {if:acc#3.itm(2)} -attr vt d
+load net {if:acc#3.itm(3)} -attr vt d
+load net {if:acc#3.itm(4)} -attr vt d
+load net {if:acc#3.itm(5)} -attr vt d
+load net {if:acc#3.itm(6)} -attr vt d
+load netBundle {if:acc#3.itm} 7 {if:acc#3.itm(0)} {if:acc#3.itm(1)} {if:acc#3.itm(2)} {if:acc#3.itm(3)} {if:acc#3.itm(4)} {if:acc#3.itm(5)} {if:acc#3.itm(6)} -attr xrf 1003 -attr oid 29 -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#3.itm}
+load net {conc#20.itm(0)} -attr vt d
+load net {conc#20.itm(1)} -attr vt d
+load net {conc#20.itm(2)} -attr vt d
+load net {conc#20.itm(3)} -attr vt d
+load net {conc#20.itm(4)} -attr vt d
+load net {conc#20.itm(5)} -attr vt d
+load net {conc#20.itm(6)} -attr vt d
+load netBundle {conc#20.itm} 7 {conc#20.itm(0)} {conc#20.itm(1)} {conc#20.itm(2)} {conc#20.itm(3)} {conc#20.itm(4)} {conc#20.itm(5)} {conc#20.itm(6)} -attr xrf 1004 -attr oid 30 -attr vt d -attr @path {/MemBlock/MemBlock:core/conc#20.itm}
+load net {slc(col:rsc:mgc_in_wire.d).itm(0)} -attr vt d
+load net {slc(col:rsc:mgc_in_wire.d).itm(1)} -attr vt d
+load net {slc(col:rsc:mgc_in_wire.d).itm(2)} -attr vt d
+load net {slc(col:rsc:mgc_in_wire.d).itm(3)} -attr vt d
+load net {slc(col:rsc:mgc_in_wire.d).itm(4)} -attr vt d
+load netBundle {slc(col:rsc:mgc_in_wire.d).itm} 5 {slc(col:rsc:mgc_in_wire.d).itm(0)} {slc(col:rsc:mgc_in_wire.d).itm(1)} {slc(col:rsc:mgc_in_wire.d).itm(2)} {slc(col:rsc:mgc_in_wire.d).itm(3)} {slc(col:rsc:mgc_in_wire.d).itm(4)} -attr xrf 1005 -attr oid 31 -attr vt d -attr @path {/MemBlock/MemBlock:core/slc(col:rsc:mgc_in_wire.d).itm}
+load net {row:not#2.itm(0)} -attr vt d
+load net {row:not#2.itm(1)} -attr vt d
+load net {row:not#2.itm(2)} -attr vt d
+load net {row:not#2.itm(3)} -attr vt d
+load net {row:not#2.itm(4)} -attr vt d
+load net {row:not#2.itm(5)} -attr vt d
+load netBundle {row:not#2.itm} 6 {row:not#2.itm(0)} {row:not#2.itm(1)} {row:not#2.itm(2)} {row:not#2.itm(3)} {row:not#2.itm(4)} {row:not#2.itm(5)} -attr xrf 1006 -attr oid 32 -attr vt d -attr @path {/MemBlock/MemBlock:core/row:not#2.itm}
+load net {conc#21.itm(0)} -attr vt d
+load net {conc#21.itm(1)} -attr vt d
+load net {conc#21.itm(2)} -attr vt d
+load net {conc#21.itm(3)} -attr vt d
+load net {conc#21.itm(4)} -attr vt d
+load net {conc#21.itm(5)} -attr vt d
+load net {conc#21.itm(6)} -attr vt d
+load net {conc#21.itm(7)} -attr vt d
+load net {conc#21.itm(8)} -attr vt d
+load net {conc#21.itm(9)} -attr vt d
+load netBundle {conc#21.itm} 10 {conc#21.itm(0)} {conc#21.itm(1)} {conc#21.itm(2)} {conc#21.itm(3)} {conc#21.itm(4)} {conc#21.itm(5)} {conc#21.itm(6)} {conc#21.itm(7)} {conc#21.itm(8)} {conc#21.itm(9)} -attr xrf 1007 -attr oid 33 -attr vt d -attr @path {/MemBlock/MemBlock:core/conc#21.itm}
+load net {slc(col:rsc:mgc_in_wire.d)#1.itm(0)} -attr vt d
+load net {slc(col:rsc:mgc_in_wire.d)#1.itm(1)} -attr vt d
+load netBundle {slc(col:rsc:mgc_in_wire.d)#1.itm} 2 {slc(col:rsc:mgc_in_wire.d)#1.itm(0)} {slc(col:rsc:mgc_in_wire.d)#1.itm(1)} -attr xrf 1008 -attr oid 34 -attr vt d -attr @path {/MemBlock/MemBlock:core/slc(col:rsc:mgc_in_wire.d)#1.itm}
+load net {clk} -attr xrf 1009 -attr oid 35
+load net {clk} -port {clk} -attr xrf 1010 -attr oid 36
+load net {rst} -attr xrf 1011 -attr oid 37
+load net {rst} -port {rst} -attr xrf 1012 -attr oid 38
+load net {row:rsc:mgc_in_wire.d(0)} -attr vt d
+load net {row:rsc:mgc_in_wire.d(1)} -attr vt d
+load net {row:rsc:mgc_in_wire.d(2)} -attr vt d
+load net {row:rsc:mgc_in_wire.d(3)} -attr vt d
+load net {row:rsc:mgc_in_wire.d(4)} -attr vt d
+load net {row:rsc:mgc_in_wire.d(5)} -attr vt d
+load netBundle {row:rsc:mgc_in_wire.d} 6 {row:rsc:mgc_in_wire.d(0)} {row:rsc:mgc_in_wire.d(1)} {row:rsc:mgc_in_wire.d(2)} {row:rsc:mgc_in_wire.d(3)} {row:rsc:mgc_in_wire.d(4)} {row:rsc:mgc_in_wire.d(5)} -attr xrf 1013 -attr oid 39 -attr vt d -attr @path {/MemBlock/MemBlock:core/row:rsc:mgc_in_wire.d}
+load net {row:rsc:mgc_in_wire.d(0)} -port {row:rsc:mgc_in_wire.d(0)} -attr vt d
+load net {row:rsc:mgc_in_wire.d(1)} -port {row:rsc:mgc_in_wire.d(1)} -attr vt d
+load net {row:rsc:mgc_in_wire.d(2)} -port {row:rsc:mgc_in_wire.d(2)} -attr vt d
+load net {row:rsc:mgc_in_wire.d(3)} -port {row:rsc:mgc_in_wire.d(3)} -attr vt d
+load net {row:rsc:mgc_in_wire.d(4)} -port {row:rsc:mgc_in_wire.d(4)} -attr vt d
+load net {row:rsc:mgc_in_wire.d(5)} -port {row:rsc:mgc_in_wire.d(5)} -attr vt d
+load netBundle {row:rsc:mgc_in_wire.d} 6 {row:rsc:mgc_in_wire.d(0)} {row:rsc:mgc_in_wire.d(1)} {row:rsc:mgc_in_wire.d(2)} {row:rsc:mgc_in_wire.d(3)} {row:rsc:mgc_in_wire.d(4)} {row:rsc:mgc_in_wire.d(5)} -attr xrf 1014 -attr oid 40 -attr vt d -attr @path {/MemBlock/MemBlock:core/row:rsc:mgc_in_wire.d}
+load net {col:rsc:mgc_in_wire.d(0)} -attr vt d
+load net {col:rsc:mgc_in_wire.d(1)} -attr vt d
+load net {col:rsc:mgc_in_wire.d(2)} -attr vt d
+load net {col:rsc:mgc_in_wire.d(3)} -attr vt d
+load net {col:rsc:mgc_in_wire.d(4)} -attr vt d
+load net {col:rsc:mgc_in_wire.d(5)} -attr vt d
+load net {col:rsc:mgc_in_wire.d(6)} -attr vt d
+load netBundle {col:rsc:mgc_in_wire.d} 7 {col:rsc:mgc_in_wire.d(0)} {col:rsc:mgc_in_wire.d(1)} {col:rsc:mgc_in_wire.d(2)} {col:rsc:mgc_in_wire.d(3)} {col:rsc:mgc_in_wire.d(4)} {col:rsc:mgc_in_wire.d(5)} {col:rsc:mgc_in_wire.d(6)} -attr xrf 1015 -attr oid 41 -attr vt d -attr @path {/MemBlock/MemBlock:core/col:rsc:mgc_in_wire.d}
+load net {col:rsc:mgc_in_wire.d(0)} -port {col:rsc:mgc_in_wire.d(0)} -attr vt d
+load net {col:rsc:mgc_in_wire.d(1)} -port {col:rsc:mgc_in_wire.d(1)} -attr vt d
+load net {col:rsc:mgc_in_wire.d(2)} -port {col:rsc:mgc_in_wire.d(2)} -attr vt d
+load net {col:rsc:mgc_in_wire.d(3)} -port {col:rsc:mgc_in_wire.d(3)} -attr vt d
+load net {col:rsc:mgc_in_wire.d(4)} -port {col:rsc:mgc_in_wire.d(4)} -attr vt d
+load net {col:rsc:mgc_in_wire.d(5)} -port {col:rsc:mgc_in_wire.d(5)} -attr vt d
+load net {col:rsc:mgc_in_wire.d(6)} -port {col:rsc:mgc_in_wire.d(6)} -attr vt d
+load netBundle {col:rsc:mgc_in_wire.d} 7 {col:rsc:mgc_in_wire.d(0)} {col:rsc:mgc_in_wire.d(1)} {col:rsc:mgc_in_wire.d(2)} {col:rsc:mgc_in_wire.d(3)} {col:rsc:mgc_in_wire.d(4)} {col:rsc:mgc_in_wire.d(5)} {col:rsc:mgc_in_wire.d(6)} -attr xrf 1016 -attr oid 42 -attr vt d -attr @path {/MemBlock/MemBlock:core/col:rsc:mgc_in_wire.d}
+load net {bit_in:rsc:mgc_in_wire.d} -attr xrf 1017 -attr oid 43 -attr vt d
+load net {bit_in:rsc:mgc_in_wire.d} -port {bit_in:rsc:mgc_in_wire.d} -attr xrf 1018 -attr oid 44 -attr vt d
+load net {write_enable:rsc:mgc_in_wire.d} -attr xrf 1019 -attr oid 45 -attr vt d
+load net {write_enable:rsc:mgc_in_wire.d} -port {write_enable:rsc:mgc_in_wire.d} -attr xrf 1020 -attr oid 46 -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d(0)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d(1)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d(2)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d(3)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d(4)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d(5)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d(6)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d(7)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d(8)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d(9)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d(10)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d(11)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d(12)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d(13)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d(14)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d(15)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d(16)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d(17)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d(18)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d(19)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d(20)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d(21)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d(22)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d(23)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d(24)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d(25)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d(26)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d(27)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d(28)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d(29)} -attr vt d
+load netBundle {bits_out:rsc:mgc_out_stdreg.d} 30 {bits_out:rsc:mgc_out_stdreg.d(0)} {bits_out:rsc:mgc_out_stdreg.d(1)} {bits_out:rsc:mgc_out_stdreg.d(2)} {bits_out:rsc:mgc_out_stdreg.d(3)} {bits_out:rsc:mgc_out_stdreg.d(4)} {bits_out:rsc:mgc_out_stdreg.d(5)} {bits_out:rsc:mgc_out_stdreg.d(6)} {bits_out:rsc:mgc_out_stdreg.d(7)} {bits_out:rsc:mgc_out_stdreg.d(8)} {bits_out:rsc:mgc_out_stdreg.d(9)} {bits_out:rsc:mgc_out_stdreg.d(10)} {bits_out:rsc:mgc_out_stdreg.d(11)} {bits_out:rsc:mgc_out_stdreg.d(12)} {bits_out:rsc:mgc_out_stdreg.d(13)} {bits_out:rsc:mgc_out_stdreg.d(14)} {bits_out:rsc:mgc_out_stdreg.d(15)} {bits_out:rsc:mgc_out_stdreg.d(16)} {bits_out:rsc:mgc_out_stdreg.d(17)} {bits_out:rsc:mgc_out_stdreg.d(18)} {bits_out:rsc:mgc_out_stdreg.d(19)} {bits_out:rsc:mgc_out_stdreg.d(20)} {bits_out:rsc:mgc_out_stdreg.d(21)} {bits_out:rsc:mgc_out_stdreg.d(22)} {bits_out:rsc:mgc_out_stdreg.d(23)} {bits_out:rsc:mgc_out_stdreg.d(24)} {bits_out:rsc:mgc_out_stdreg.d(25)} {bits_out:rsc:mgc_out_stdreg.d(26)} {bits_out:rsc:mgc_out_stdreg.d(27)} {bits_out:rsc:mgc_out_stdreg.d(28)} {bits_out:rsc:mgc_out_stdreg.d(29)} -attr xrf 1021 -attr oid 47 -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(0)} -port {bits_out:rsc:mgc_out_stdreg.d(0)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(1)} -port {bits_out:rsc:mgc_out_stdreg.d(1)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(2)} -port {bits_out:rsc:mgc_out_stdreg.d(2)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(3)} -port {bits_out:rsc:mgc_out_stdreg.d(3)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(4)} -port {bits_out:rsc:mgc_out_stdreg.d(4)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(5)} -port {bits_out:rsc:mgc_out_stdreg.d(5)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(6)} -port {bits_out:rsc:mgc_out_stdreg.d(6)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(7)} -port {bits_out:rsc:mgc_out_stdreg.d(7)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(8)} -port {bits_out:rsc:mgc_out_stdreg.d(8)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(9)} -port {bits_out:rsc:mgc_out_stdreg.d(9)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(10)} -port {bits_out:rsc:mgc_out_stdreg.d(10)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(11)} -port {bits_out:rsc:mgc_out_stdreg.d(11)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(12)} -port {bits_out:rsc:mgc_out_stdreg.d(12)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(13)} -port {bits_out:rsc:mgc_out_stdreg.d(13)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(14)} -port {bits_out:rsc:mgc_out_stdreg.d(14)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(15)} -port {bits_out:rsc:mgc_out_stdreg.d(15)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(16)} -port {bits_out:rsc:mgc_out_stdreg.d(16)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(17)} -port {bits_out:rsc:mgc_out_stdreg.d(17)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(18)} -port {bits_out:rsc:mgc_out_stdreg.d(18)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(19)} -port {bits_out:rsc:mgc_out_stdreg.d(19)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(20)} -port {bits_out:rsc:mgc_out_stdreg.d(20)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(21)} -port {bits_out:rsc:mgc_out_stdreg.d(21)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(22)} -port {bits_out:rsc:mgc_out_stdreg.d(22)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(23)} -port {bits_out:rsc:mgc_out_stdreg.d(23)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(24)} -port {bits_out:rsc:mgc_out_stdreg.d(24)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(25)} -port {bits_out:rsc:mgc_out_stdreg.d(25)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(26)} -port {bits_out:rsc:mgc_out_stdreg.d(26)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(27)} -port {bits_out:rsc:mgc_out_stdreg.d(27)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(28)} -port {bits_out:rsc:mgc_out_stdreg.d(28)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(29)} -port {bits_out:rsc:mgc_out_stdreg.d(29)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {data:rsc:singleport.data_in} -attr xrf 1022 -attr oid 48 -attr vt d
+load net {and#4.rmff} -port {data:rsc:singleport.data_in} -attr xrf 1023 -attr oid 49 -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.data_in}
+load net {data:rsc:singleport.addr(0)} -attr vt d
+load net {data:rsc:singleport.addr(1)} -attr vt d
+load net {data:rsc:singleport.addr(2)} -attr vt d
+load net {data:rsc:singleport.addr(3)} -attr vt d
+load net {data:rsc:singleport.addr(4)} -attr vt d
+load net {data:rsc:singleport.addr(5)} -attr vt d
+load net {data:rsc:singleport.addr(6)} -attr vt d
+load net {data:rsc:singleport.addr(7)} -attr vt d
+load net {data:rsc:singleport.addr(8)} -attr vt d
+load net {data:rsc:singleport.addr(9)} -attr vt d
+load net {data:rsc:singleport.addr(10)} -attr vt d
+load net {data:rsc:singleport.addr(11)} -attr vt d
+load net {data:rsc:singleport.addr(12)} -attr vt d
+load netBundle {data:rsc:singleport.addr} 13 {data:rsc:singleport.addr(0)} {data:rsc:singleport.addr(1)} {data:rsc:singleport.addr(2)} {data:rsc:singleport.addr(3)} {data:rsc:singleport.addr(4)} {data:rsc:singleport.addr(5)} {data:rsc:singleport.addr(6)} {data:rsc:singleport.addr(7)} {data:rsc:singleport.addr(8)} {data:rsc:singleport.addr(9)} {data:rsc:singleport.addr(10)} {data:rsc:singleport.addr(11)} {data:rsc:singleport.addr(12)} -attr xrf 1024 -attr oid 50 -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr(0)} -port {data:rsc:singleport.addr(0)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr(1)} -port {data:rsc:singleport.addr(1)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr(2)} -port {data:rsc:singleport.addr(2)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr(3)} -port {data:rsc:singleport.addr(3)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr(4)} -port {data:rsc:singleport.addr(4)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr(5)} -port {data:rsc:singleport.addr(5)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr(6)} -port {data:rsc:singleport.addr(6)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr(7)} -port {data:rsc:singleport.addr(7)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr(8)} -port {data:rsc:singleport.addr(8)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr(9)} -port {data:rsc:singleport.addr(9)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr(10)} -port {data:rsc:singleport.addr(10)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr(11)} -port {data:rsc:singleport.addr(11)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr(12)} -port {data:rsc:singleport.addr(12)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.addr}
+load net {data:rsc:singleport.re} -attr xrf 1025 -attr oid 51 -attr vt d
+load net {data:rsc:singleport.re} -port {data:rsc:singleport.re} -attr xrf 1026 -attr oid 52 -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.re}
+load net {data:rsc:singleport.we} -attr xrf 1027 -attr oid 53 -attr vt d
+load net {data:rsc:singleport.we} -port {data:rsc:singleport.we} -attr xrf 1028 -attr oid 54 -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.we}
+load net {data:rsc:singleport.data_out} -attr xrf 1029 -attr oid 55 -attr vt d
+load net {data:rsc:singleport.data_out} -port {data:rsc:singleport.data_out} -attr xrf 1030 -attr oid 56 -attr vt d
+load inst "MemBlock:core:fsm:inst" "MemBlock:core:fsm" "orig" -attr xrf 1031 -attr oid 57 -attr @path {/MemBlock/MemBlock:core/MemBlock:core:fsm:inst} -attr hier "/MemBlock/MemBlock:core/MemBlock:core:fsm" -pg 1 -lvl 3
+load net {clk} -pin  "MemBlock:core:fsm:inst" {clk#1} -attr xrf 1032 -attr oid 58 -attr @path {/MemBlock/MemBlock:core/clk}
+load net {rst} -pin  "MemBlock:core:fsm:inst" {rst#1} -attr xrf 1033 -attr oid 59 -attr @path {/MemBlock/MemBlock:core/rst}
+load net {fsm_output#1(0)} -pin  "MemBlock:core:fsm:inst" {fsm_output(0)} -attr @path {/MemBlock/MemBlock:core/fsm_output}
+load net {fsm_output#1(1)} -pin  "MemBlock:core:fsm:inst" {fsm_output(1)} -attr @path {/MemBlock/MemBlock:core/fsm_output}
+load net {fsm_output#1(2)} -pin  "MemBlock:core:fsm:inst" {fsm_output(2)} -attr @path {/MemBlock/MemBlock:core/fsm_output}
+load net {fsm_output#1(3)} -pin  "MemBlock:core:fsm:inst" {fsm_output(3)} -attr @path {/MemBlock/MemBlock:core/fsm_output}
+load net {fsm_output#1(4)} -pin  "MemBlock:core:fsm:inst" {fsm_output(4)} -attr @path {/MemBlock/MemBlock:core/fsm_output}
+load net {fsm_output#1(5)} -pin  "MemBlock:core:fsm:inst" {fsm_output(5)} -attr @path {/MemBlock/MemBlock:core/fsm_output}
+load net {not#2.itm} -pin  "MemBlock:core:fsm:inst" {st(data:vinit)#1_tr0} -attr @path {/MemBlock/MemBlock:core/not#2.itm}
+load inst "and#4" "and(2,1)" "INTERFACE" -attr xrf 1034 -attr oid 60 -attr @path {/MemBlock/MemBlock:core/and#4} -attr area 0.730832 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_and(1,2)"
+load net {bit_in:rsc:mgc_in_wire.d} -pin  "and#4" {A0(0)} -attr @path {/MemBlock/MemBlock:core/bit_in:rsc:mgc_in_wire.d}
+load net {fsm_output#1(3)} -pin  "and#4" {A1(0)} -attr @path {/MemBlock/MemBlock:core/slc(fsm_output)#3.itm}
+load net {and#4.rmff} -pin  "and#4" {Z(0)} -attr @path {/MemBlock/MemBlock:core/and#4.rmff}
+load inst "reg(data:rsc:singleport.data_in)" "reg(1,1,0,0,1)" "INTERFACE" -attr xrf 1035 -attr oid 61 -attr @path {/MemBlock/MemBlock:core/reg(data:rsc:singleport.data_in)}
+load net {and#4.rmff} -pin  "reg(data:rsc:singleport.data_in)" {D(0)} -attr @path {/MemBlock/MemBlock:core/and#4.rmff}
+load net {GND} -pin  "reg(data:rsc:singleport.data_in)" {DRs(0)} -attr @path {/MemBlock/MemBlock:core/C0_1}
+load net {clk} -pin  "reg(data:rsc:singleport.data_in)" {clk} -attr xrf 1036 -attr oid 62 -attr @path {/MemBlock/MemBlock:core/clk}
+load net {rst} -pin  "reg(data:rsc:singleport.data_in)" {Rs(0)} -attr @path {/MemBlock/MemBlock:core/rst}
+load net {data:rsc:singleport.data_in.reg} -pin  "reg(data:rsc:singleport.data_in)" {Z(0)} -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.data_in.reg}
+load inst "mux#6" "mux(2,1)" "INTERFACE" -attr xrf 1037 -attr oid 63 -attr vt c -attr @path {/MemBlock/MemBlock:core/mux#6} -attr area 0.920423 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_mux(1,1,2)"
+load net {data:rsc:singleport.data_in.reg} -pin  "mux#6" {A0(0)} -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.data_in.reg}
+load net {data:rsc:singleport.data_out} -pin  "mux#6" {A1(0)} -attr vt c -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.data_out}
+load net {io_read(write_enable:rsc.d).svs.st} -pin  "mux#6" {S(0)} -attr @path {/MemBlock/MemBlock:core/io_read(write_enable:rsc.d).svs.st}
+load net {mux#6.itm} -pin  "mux#6" {Z(0)} -attr vt c -attr @path {/MemBlock/MemBlock:core/mux#6.itm}
+load inst "mux#4" "mux(2,30)" "INTERFACE" -attr xrf 1038 -attr oid 64 -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4} -attr area 27.583690 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_mux(30,1,2)"
+load net {GND} -pin  "mux#4" {A0(0)} -attr @path {/MemBlock/MemBlock:core/conc.itm}
+load net {GND} -pin  "mux#4" {A0(1)} -attr @path {/MemBlock/MemBlock:core/conc.itm}
+load net {GND} -pin  "mux#4" {A0(2)} -attr @path {/MemBlock/MemBlock:core/conc.itm}
+load net {GND} -pin  "mux#4" {A0(3)} -attr @path {/MemBlock/MemBlock:core/conc.itm}
+load net {GND} -pin  "mux#4" {A0(4)} -attr @path {/MemBlock/MemBlock:core/conc.itm}
+load net {GND} -pin  "mux#4" {A0(5)} -attr @path {/MemBlock/MemBlock:core/conc.itm}
+load net {GND} -pin  "mux#4" {A0(6)} -attr @path {/MemBlock/MemBlock:core/conc.itm}
+load net {GND} -pin  "mux#4" {A0(7)} -attr @path {/MemBlock/MemBlock:core/conc.itm}
+load net {GND} -pin  "mux#4" {A0(8)} -attr @path {/MemBlock/MemBlock:core/conc.itm}
+load net {GND} -pin  "mux#4" {A0(9)} -attr @path {/MemBlock/MemBlock:core/conc.itm}
+load net {GND} -pin  "mux#4" {A0(10)} -attr @path {/MemBlock/MemBlock:core/conc.itm}
+load net {GND} -pin  "mux#4" {A0(11)} -attr @path {/MemBlock/MemBlock:core/conc.itm}
+load net {GND} -pin  "mux#4" {A0(12)} -attr @path {/MemBlock/MemBlock:core/conc.itm}
+load net {GND} -pin  "mux#4" {A0(13)} -attr @path {/MemBlock/MemBlock:core/conc.itm}
+load net {GND} -pin  "mux#4" {A0(14)} -attr @path {/MemBlock/MemBlock:core/conc.itm}
+load net {GND} -pin  "mux#4" {A0(15)} -attr @path {/MemBlock/MemBlock:core/conc.itm}
+load net {GND} -pin  "mux#4" {A0(16)} -attr @path {/MemBlock/MemBlock:core/conc.itm}
+load net {GND} -pin  "mux#4" {A0(17)} -attr @path {/MemBlock/MemBlock:core/conc.itm}
+load net {GND} -pin  "mux#4" {A0(18)} -attr @path {/MemBlock/MemBlock:core/conc.itm}
+load net {GND} -pin  "mux#4" {A0(19)} -attr @path {/MemBlock/MemBlock:core/conc.itm}
+load net {mux#6.itm} -pin  "mux#4" {A0(20)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/conc.itm}
+load net {GND} -pin  "mux#4" {A0(21)} -attr @path {/MemBlock/MemBlock:core/conc.itm}
+load net {GND} -pin  "mux#4" {A0(22)} -attr @path {/MemBlock/MemBlock:core/conc.itm}
+load net {GND} -pin  "mux#4" {A0(23)} -attr @path {/MemBlock/MemBlock:core/conc.itm}
+load net {GND} -pin  "mux#4" {A0(24)} -attr @path {/MemBlock/MemBlock:core/conc.itm}
+load net {GND} -pin  "mux#4" {A0(25)} -attr @path {/MemBlock/MemBlock:core/conc.itm}
+load net {GND} -pin  "mux#4" {A0(26)} -attr @path {/MemBlock/MemBlock:core/conc.itm}
+load net {GND} -pin  "mux#4" {A0(27)} -attr @path {/MemBlock/MemBlock:core/conc.itm}
+load net {GND} -pin  "mux#4" {A0(28)} -attr @path {/MemBlock/MemBlock:core/conc.itm}
+load net {GND} -pin  "mux#4" {A0(29)} -attr @path {/MemBlock/MemBlock:core/conc.itm}
+load net {bits_out:rsc:mgc_out_stdreg.d(0)} -pin  "mux#4" {A1(0)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(1)} -pin  "mux#4" {A1(1)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(2)} -pin  "mux#4" {A1(2)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(3)} -pin  "mux#4" {A1(3)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(4)} -pin  "mux#4" {A1(4)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(5)} -pin  "mux#4" {A1(5)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(6)} -pin  "mux#4" {A1(6)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(7)} -pin  "mux#4" {A1(7)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(8)} -pin  "mux#4" {A1(8)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(9)} -pin  "mux#4" {A1(9)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(10)} -pin  "mux#4" {A1(10)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(11)} -pin  "mux#4" {A1(11)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(12)} -pin  "mux#4" {A1(12)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(13)} -pin  "mux#4" {A1(13)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(14)} -pin  "mux#4" {A1(14)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(15)} -pin  "mux#4" {A1(15)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(16)} -pin  "mux#4" {A1(16)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(17)} -pin  "mux#4" {A1(17)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(18)} -pin  "mux#4" {A1(18)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(19)} -pin  "mux#4" {A1(19)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(20)} -pin  "mux#4" {A1(20)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(21)} -pin  "mux#4" {A1(21)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(22)} -pin  "mux#4" {A1(22)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(23)} -pin  "mux#4" {A1(23)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(24)} -pin  "mux#4" {A1(24)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(25)} -pin  "mux#4" {A1(25)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(26)} -pin  "mux#4" {A1(26)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(27)} -pin  "mux#4" {A1(27)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(28)} -pin  "mux#4" {A1(28)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(29)} -pin  "mux#4" {A1(29)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {fsm_output#1(4)} -pin  "mux#4" {S(0)} -attr @path {/MemBlock/MemBlock:core/slc(fsm_output)#4.itm}
+load net {mux#4.itm(0)} -pin  "mux#4" {Z(0)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(1)} -pin  "mux#4" {Z(1)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(2)} -pin  "mux#4" {Z(2)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(3)} -pin  "mux#4" {Z(3)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(4)} -pin  "mux#4" {Z(4)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(5)} -pin  "mux#4" {Z(5)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(6)} -pin  "mux#4" {Z(6)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(7)} -pin  "mux#4" {Z(7)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(8)} -pin  "mux#4" {Z(8)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(9)} -pin  "mux#4" {Z(9)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(10)} -pin  "mux#4" {Z(10)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(11)} -pin  "mux#4" {Z(11)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(12)} -pin  "mux#4" {Z(12)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(13)} -pin  "mux#4" {Z(13)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(14)} -pin  "mux#4" {Z(14)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(15)} -pin  "mux#4" {Z(15)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(16)} -pin  "mux#4" {Z(16)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(17)} -pin  "mux#4" {Z(17)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(18)} -pin  "mux#4" {Z(18)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(19)} -pin  "mux#4" {Z(19)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(20)} -pin  "mux#4" {Z(20)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(21)} -pin  "mux#4" {Z(21)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(22)} -pin  "mux#4" {Z(22)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(23)} -pin  "mux#4" {Z(23)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(24)} -pin  "mux#4" {Z(24)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(25)} -pin  "mux#4" {Z(25)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(26)} -pin  "mux#4" {Z(26)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(27)} -pin  "mux#4" {Z(27)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(28)} -pin  "mux#4" {Z(28)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(29)} -pin  "mux#4" {Z(29)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load inst "reg(bits_out:rsc:mgc_out_stdreg.d)" "reg(30,1,0,0,1)" "INTERFACE" -attr xrf 1039 -attr oid 65 -attr vt dc -attr @path {/MemBlock/MemBlock:core/reg(bits_out:rsc:mgc_out_stdreg.d)}
+load net {mux#4.itm(0)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {D(0)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(1)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {D(1)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(2)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {D(2)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(3)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {D(3)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(4)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {D(4)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(5)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {D(5)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(6)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {D(6)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(7)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {D(7)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(8)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {D(8)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(9)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {D(9)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(10)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {D(10)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(11)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {D(11)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(12)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {D(12)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(13)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {D(13)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(14)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {D(14)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(15)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {D(15)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(16)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {D(16)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(17)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {D(17)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(18)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {D(18)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(19)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {D(19)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(20)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {D(20)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(21)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {D(21)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(22)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {D(22)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(23)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {D(23)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(24)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {D(24)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(25)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {D(25)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(26)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {D(26)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(27)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {D(27)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(28)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {D(28)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {mux#4.itm(29)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {D(29)} -attr vt dc -attr @path {/MemBlock/MemBlock:core/mux#4.itm}
+load net {GND} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {DRs(0)} -attr @path {/MemBlock/MemBlock:core/C0_30}
+load net {GND} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {DRs(1)} -attr @path {/MemBlock/MemBlock:core/C0_30}
+load net {GND} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {DRs(2)} -attr @path {/MemBlock/MemBlock:core/C0_30}
+load net {GND} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {DRs(3)} -attr @path {/MemBlock/MemBlock:core/C0_30}
+load net {GND} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {DRs(4)} -attr @path {/MemBlock/MemBlock:core/C0_30}
+load net {GND} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {DRs(5)} -attr @path {/MemBlock/MemBlock:core/C0_30}
+load net {GND} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {DRs(6)} -attr @path {/MemBlock/MemBlock:core/C0_30}
+load net {GND} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {DRs(7)} -attr @path {/MemBlock/MemBlock:core/C0_30}
+load net {GND} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {DRs(8)} -attr @path {/MemBlock/MemBlock:core/C0_30}
+load net {GND} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {DRs(9)} -attr @path {/MemBlock/MemBlock:core/C0_30}
+load net {GND} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {DRs(10)} -attr @path {/MemBlock/MemBlock:core/C0_30}
+load net {GND} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {DRs(11)} -attr @path {/MemBlock/MemBlock:core/C0_30}
+load net {GND} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {DRs(12)} -attr @path {/MemBlock/MemBlock:core/C0_30}
+load net {GND} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {DRs(13)} -attr @path {/MemBlock/MemBlock:core/C0_30}
+load net {GND} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {DRs(14)} -attr @path {/MemBlock/MemBlock:core/C0_30}
+load net {GND} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {DRs(15)} -attr @path {/MemBlock/MemBlock:core/C0_30}
+load net {GND} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {DRs(16)} -attr @path {/MemBlock/MemBlock:core/C0_30}
+load net {GND} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {DRs(17)} -attr @path {/MemBlock/MemBlock:core/C0_30}
+load net {GND} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {DRs(18)} -attr @path {/MemBlock/MemBlock:core/C0_30}
+load net {GND} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {DRs(19)} -attr @path {/MemBlock/MemBlock:core/C0_30}
+load net {GND} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {DRs(20)} -attr @path {/MemBlock/MemBlock:core/C0_30}
+load net {GND} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {DRs(21)} -attr @path {/MemBlock/MemBlock:core/C0_30}
+load net {GND} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {DRs(22)} -attr @path {/MemBlock/MemBlock:core/C0_30}
+load net {GND} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {DRs(23)} -attr @path {/MemBlock/MemBlock:core/C0_30}
+load net {GND} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {DRs(24)} -attr @path {/MemBlock/MemBlock:core/C0_30}
+load net {GND} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {DRs(25)} -attr @path {/MemBlock/MemBlock:core/C0_30}
+load net {GND} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {DRs(26)} -attr @path {/MemBlock/MemBlock:core/C0_30}
+load net {GND} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {DRs(27)} -attr @path {/MemBlock/MemBlock:core/C0_30}
+load net {GND} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {DRs(28)} -attr @path {/MemBlock/MemBlock:core/C0_30}
+load net {GND} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {DRs(29)} -attr @path {/MemBlock/MemBlock:core/C0_30}
+load net {clk} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {clk} -attr xrf 1040 -attr oid 66 -attr @path {/MemBlock/MemBlock:core/clk}
+load net {rst} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {Rs(0)} -attr @path {/MemBlock/MemBlock:core/rst}
+load net {bits_out:rsc:mgc_out_stdreg.d(0)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {Z(0)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(1)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {Z(1)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(2)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {Z(2)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(3)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {Z(3)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(4)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {Z(4)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(5)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {Z(5)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(6)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {Z(6)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(7)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {Z(7)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(8)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {Z(8)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(9)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {Z(9)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(10)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {Z(10)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(11)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {Z(11)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(12)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {Z(12)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(13)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {Z(13)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(14)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {Z(14)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(15)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {Z(15)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(16)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {Z(16)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(17)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {Z(17)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(18)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {Z(18)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(19)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {Z(19)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(20)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {Z(20)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(21)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {Z(21)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(22)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {Z(22)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(23)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {Z(23)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(24)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {Z(24)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(25)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {Z(25)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(26)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {Z(26)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(27)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {Z(27)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(28)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {Z(28)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d(29)} -pin  "reg(bits_out:rsc:mgc_out_stdreg.d)" {Z(29)} -attr vt d -attr @path {/MemBlock/MemBlock:core/bits_out:rsc:mgc_out_stdreg.d}
+load inst "mux#5" "mux(2,13)" "INTERFACE" -attr xrf 1041 -attr oid 67 -attr vt d -attr @path {/MemBlock/MemBlock:core/mux#5} -attr area 11.953499 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_mux(13,1,2)"
+load net {if:acc#1.itm(0)} -pin  "mux#5" {A0(0)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm}
+load net {if:acc#1.itm(1)} -pin  "mux#5" {A0(1)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm}
+load net {if:acc#1.itm(2)} -pin  "mux#5" {A0(2)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm}
+load net {if:acc#1.itm(3)} -pin  "mux#5" {A0(3)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm}
+load net {if:acc#1.itm(4)} -pin  "mux#5" {A0(4)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm}
+load net {if:acc#1.itm(5)} -pin  "mux#5" {A0(5)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm}
+load net {if:acc#1.itm(6)} -pin  "mux#5" {A0(6)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm}
+load net {if:acc#1.itm(7)} -pin  "mux#5" {A0(7)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm}
+load net {if:acc#1.itm(8)} -pin  "mux#5" {A0(8)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm}
+load net {if:acc#1.itm(9)} -pin  "mux#5" {A0(9)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm}
+load net {if:acc#1.itm(10)} -pin  "mux#5" {A0(10)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm}
+load net {if:acc#1.itm(11)} -pin  "mux#5" {A0(11)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm}
+load net {if:acc#1.itm(12)} -pin  "mux#5" {A0(12)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm}
+load net {data:vinit.ndx.sva(0)} -pin  "mux#5" {A1(0)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(1)} -pin  "mux#5" {A1(1)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(2)} -pin  "mux#5" {A1(2)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(3)} -pin  "mux#5" {A1(3)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(4)} -pin  "mux#5" {A1(4)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(5)} -pin  "mux#5" {A1(5)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(6)} -pin  "mux#5" {A1(6)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(7)} -pin  "mux#5" {A1(7)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(8)} -pin  "mux#5" {A1(8)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(9)} -pin  "mux#5" {A1(9)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(10)} -pin  "mux#5" {A1(10)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(11)} -pin  "mux#5" {A1(11)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(12)} -pin  "mux#5" {A1(12)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {fsm_output#1(2)} -pin  "mux#5" {S(0)} -attr @path {/MemBlock/MemBlock:core/slc(fsm_output)#2.itm}
+load net {mux#5.itm(0)} -pin  "mux#5" {Z(0)} -attr vt d -attr @path {/MemBlock/MemBlock:core/mux#5.itm}
+load net {mux#5.itm(1)} -pin  "mux#5" {Z(1)} -attr vt d -attr @path {/MemBlock/MemBlock:core/mux#5.itm}
+load net {mux#5.itm(2)} -pin  "mux#5" {Z(2)} -attr vt d -attr @path {/MemBlock/MemBlock:core/mux#5.itm}
+load net {mux#5.itm(3)} -pin  "mux#5" {Z(3)} -attr vt d -attr @path {/MemBlock/MemBlock:core/mux#5.itm}
+load net {mux#5.itm(4)} -pin  "mux#5" {Z(4)} -attr vt d -attr @path {/MemBlock/MemBlock:core/mux#5.itm}
+load net {mux#5.itm(5)} -pin  "mux#5" {Z(5)} -attr vt d -attr @path {/MemBlock/MemBlock:core/mux#5.itm}
+load net {mux#5.itm(6)} -pin  "mux#5" {Z(6)} -attr vt d -attr @path {/MemBlock/MemBlock:core/mux#5.itm}
+load net {mux#5.itm(7)} -pin  "mux#5" {Z(7)} -attr vt d -attr @path {/MemBlock/MemBlock:core/mux#5.itm}
+load net {mux#5.itm(8)} -pin  "mux#5" {Z(8)} -attr vt d -attr @path {/MemBlock/MemBlock:core/mux#5.itm}
+load net {mux#5.itm(9)} -pin  "mux#5" {Z(9)} -attr vt d -attr @path {/MemBlock/MemBlock:core/mux#5.itm}
+load net {mux#5.itm(10)} -pin  "mux#5" {Z(10)} -attr vt d -attr @path {/MemBlock/MemBlock:core/mux#5.itm}
+load net {mux#5.itm(11)} -pin  "mux#5" {Z(11)} -attr vt d -attr @path {/MemBlock/MemBlock:core/mux#5.itm}
+load net {mux#5.itm(12)} -pin  "mux#5" {Z(12)} -attr vt d -attr @path {/MemBlock/MemBlock:core/mux#5.itm}
+load inst "reg(data:vinit.ndx.sva)" "reg(13,1,0,0,1)" "INTERFACE" -attr xrf 1042 -attr oid 68 -attr vt d -attr @path {/MemBlock/MemBlock:core/reg(data:vinit.ndx.sva)}
+load net {mux#5.itm(0)} -pin  "reg(data:vinit.ndx.sva)" {D(0)} -attr vt d -attr @path {/MemBlock/MemBlock:core/mux#5.itm}
+load net {mux#5.itm(1)} -pin  "reg(data:vinit.ndx.sva)" {D(1)} -attr vt d -attr @path {/MemBlock/MemBlock:core/mux#5.itm}
+load net {mux#5.itm(2)} -pin  "reg(data:vinit.ndx.sva)" {D(2)} -attr vt d -attr @path {/MemBlock/MemBlock:core/mux#5.itm}
+load net {mux#5.itm(3)} -pin  "reg(data:vinit.ndx.sva)" {D(3)} -attr vt d -attr @path {/MemBlock/MemBlock:core/mux#5.itm}
+load net {mux#5.itm(4)} -pin  "reg(data:vinit.ndx.sva)" {D(4)} -attr vt d -attr @path {/MemBlock/MemBlock:core/mux#5.itm}
+load net {mux#5.itm(5)} -pin  "reg(data:vinit.ndx.sva)" {D(5)} -attr vt d -attr @path {/MemBlock/MemBlock:core/mux#5.itm}
+load net {mux#5.itm(6)} -pin  "reg(data:vinit.ndx.sva)" {D(6)} -attr vt d -attr @path {/MemBlock/MemBlock:core/mux#5.itm}
+load net {mux#5.itm(7)} -pin  "reg(data:vinit.ndx.sva)" {D(7)} -attr vt d -attr @path {/MemBlock/MemBlock:core/mux#5.itm}
+load net {mux#5.itm(8)} -pin  "reg(data:vinit.ndx.sva)" {D(8)} -attr vt d -attr @path {/MemBlock/MemBlock:core/mux#5.itm}
+load net {mux#5.itm(9)} -pin  "reg(data:vinit.ndx.sva)" {D(9)} -attr vt d -attr @path {/MemBlock/MemBlock:core/mux#5.itm}
+load net {mux#5.itm(10)} -pin  "reg(data:vinit.ndx.sva)" {D(10)} -attr vt d -attr @path {/MemBlock/MemBlock:core/mux#5.itm}
+load net {mux#5.itm(11)} -pin  "reg(data:vinit.ndx.sva)" {D(11)} -attr vt d -attr @path {/MemBlock/MemBlock:core/mux#5.itm}
+load net {mux#5.itm(12)} -pin  "reg(data:vinit.ndx.sva)" {D(12)} -attr vt d -attr @path {/MemBlock/MemBlock:core/mux#5.itm}
+load net {PWR} -pin  "reg(data:vinit.ndx.sva)" {DRs(0)} -attr @path {/MemBlock/MemBlock:core/C4799_13#1}
+load net {PWR} -pin  "reg(data:vinit.ndx.sva)" {DRs(1)} -attr @path {/MemBlock/MemBlock:core/C4799_13#1}
+load net {PWR} -pin  "reg(data:vinit.ndx.sva)" {DRs(2)} -attr @path {/MemBlock/MemBlock:core/C4799_13#1}
+load net {PWR} -pin  "reg(data:vinit.ndx.sva)" {DRs(3)} -attr @path {/MemBlock/MemBlock:core/C4799_13#1}
+load net {PWR} -pin  "reg(data:vinit.ndx.sva)" {DRs(4)} -attr @path {/MemBlock/MemBlock:core/C4799_13#1}
+load net {PWR} -pin  "reg(data:vinit.ndx.sva)" {DRs(5)} -attr @path {/MemBlock/MemBlock:core/C4799_13#1}
+load net {GND} -pin  "reg(data:vinit.ndx.sva)" {DRs(6)} -attr @path {/MemBlock/MemBlock:core/C4799_13#1}
+load net {PWR} -pin  "reg(data:vinit.ndx.sva)" {DRs(7)} -attr @path {/MemBlock/MemBlock:core/C4799_13#1}
+load net {GND} -pin  "reg(data:vinit.ndx.sva)" {DRs(8)} -attr @path {/MemBlock/MemBlock:core/C4799_13#1}
+load net {PWR} -pin  "reg(data:vinit.ndx.sva)" {DRs(9)} -attr @path {/MemBlock/MemBlock:core/C4799_13#1}
+load net {GND} -pin  "reg(data:vinit.ndx.sva)" {DRs(10)} -attr @path {/MemBlock/MemBlock:core/C4799_13#1}
+load net {GND} -pin  "reg(data:vinit.ndx.sva)" {DRs(11)} -attr @path {/MemBlock/MemBlock:core/C4799_13#1}
+load net {PWR} -pin  "reg(data:vinit.ndx.sva)" {DRs(12)} -attr @path {/MemBlock/MemBlock:core/C4799_13#1}
+load net {clk} -pin  "reg(data:vinit.ndx.sva)" {clk} -attr xrf 1043 -attr oid 69 -attr @path {/MemBlock/MemBlock:core/clk}
+load net {rst} -pin  "reg(data:vinit.ndx.sva)" {Rs(0)} -attr @path {/MemBlock/MemBlock:core/rst}
+load net {data:vinit.ndx.sva(0)} -pin  "reg(data:vinit.ndx.sva)" {Z(0)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(1)} -pin  "reg(data:vinit.ndx.sva)" {Z(1)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(2)} -pin  "reg(data:vinit.ndx.sva)" {Z(2)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(3)} -pin  "reg(data:vinit.ndx.sva)" {Z(3)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(4)} -pin  "reg(data:vinit.ndx.sva)" {Z(4)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(5)} -pin  "reg(data:vinit.ndx.sva)" {Z(5)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(6)} -pin  "reg(data:vinit.ndx.sva)" {Z(6)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(7)} -pin  "reg(data:vinit.ndx.sva)" {Z(7)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(8)} -pin  "reg(data:vinit.ndx.sva)" {Z(8)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(9)} -pin  "reg(data:vinit.ndx.sva)" {Z(9)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(10)} -pin  "reg(data:vinit.ndx.sva)" {Z(10)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(11)} -pin  "reg(data:vinit.ndx.sva)" {Z(11)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(12)} -pin  "reg(data:vinit.ndx.sva)" {Z(12)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load inst "if:nor" "nor(13,1)" "INTERFACE" -attr xrf 1044 -attr oid 70 -attr @path {/MemBlock/MemBlock:core/if:nor} -attr area 4.301916 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_nor(1,13)"
+load net {data:vinit.ndx.sva(12)} -pin  "if:nor" {A0(0)} -attr @path {/MemBlock/MemBlock:core/slc(data:vinit.ndx.sva).itm}
+load net {data:vinit.ndx.sva(11)} -pin  "if:nor" {A1(0)} -attr @path {/MemBlock/MemBlock:core/slc(data:vinit.ndx.sva)#1.itm}
+load net {data:vinit.ndx.sva(10)} -pin  "if:nor" {A2(0)} -attr @path {/MemBlock/MemBlock:core/slc(data:vinit.ndx.sva)#2.itm}
+load net {data:vinit.ndx.sva(9)} -pin  "if:nor" {A3(0)} -attr @path {/MemBlock/MemBlock:core/slc(data:vinit.ndx.sva)#3.itm}
+load net {data:vinit.ndx.sva(8)} -pin  "if:nor" {A4(0)} -attr @path {/MemBlock/MemBlock:core/slc(data:vinit.ndx.sva)#4.itm}
+load net {data:vinit.ndx.sva(7)} -pin  "if:nor" {A5(0)} -attr @path {/MemBlock/MemBlock:core/slc(data:vinit.ndx.sva)#5.itm}
+load net {data:vinit.ndx.sva(6)} -pin  "if:nor" {A6(0)} -attr @path {/MemBlock/MemBlock:core/slc(data:vinit.ndx.sva)#6.itm}
+load net {data:vinit.ndx.sva(5)} -pin  "if:nor" {A7(0)} -attr @path {/MemBlock/MemBlock:core/slc(data:vinit.ndx.sva)#7.itm}
+load net {data:vinit.ndx.sva(4)} -pin  "if:nor" {A8(0)} -attr @path {/MemBlock/MemBlock:core/slc(data:vinit.ndx.sva)#8.itm}
+load net {data:vinit.ndx.sva(3)} -pin  "if:nor" {A9(0)} -attr @path {/MemBlock/MemBlock:core/slc(data:vinit.ndx.sva)#9.itm}
+load net {data:vinit.ndx.sva(2)} -pin  "if:nor" {A10(0)} -attr @path {/MemBlock/MemBlock:core/slc(data:vinit.ndx.sva)#10.itm}
+load net {data:vinit.ndx.sva(1)} -pin  "if:nor" {A11(0)} -attr @path {/MemBlock/MemBlock:core/slc(data:vinit.ndx.sva)#11.itm}
+load net {data:vinit.ndx.sva(0)} -pin  "if:nor" {A12(0)} -attr @path {/MemBlock/MemBlock:core/slc(data:vinit.ndx.sva)#12.itm}
+load net {if:nor.itm#1} -pin  "if:nor" {Z(0)} -attr @path {/MemBlock/MemBlock:core/if:nor.itm#1}
+load inst "reg(if:nor.itm)" "reg(1,1,0,0,1)" "INTERFACE" -attr xrf 1045 -attr oid 71 -attr @path {/MemBlock/MemBlock:core/reg(if:nor.itm)}
+load net {if:nor.itm#1} -pin  "reg(if:nor.itm)" {D(0)} -attr @path {/MemBlock/MemBlock:core/if:nor.itm#1}
+load net {GND} -pin  "reg(if:nor.itm)" {DRs(0)} -attr @path {/MemBlock/MemBlock:core/C0_1}
+load net {clk} -pin  "reg(if:nor.itm)" {clk} -attr xrf 1046 -attr oid 72 -attr @path {/MemBlock/MemBlock:core/clk}
+load net {rst} -pin  "reg(if:nor.itm)" {Rs(0)} -attr @path {/MemBlock/MemBlock:core/rst}
+load net {if:nor.itm} -pin  "reg(if:nor.itm)" {Z(0)} -attr @path {/MemBlock/MemBlock:core/if:nor.itm}
+load inst "if:acc#1" "add(13,-1,1,1,13)" "INTERFACE" -attr xrf 1047 -attr oid 73 -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1} -attr area 14.000000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(13,0,1,1,13)"
+load net {data:vinit.ndx.sva(0)} -pin  "if:acc#1" {A(0)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(1)} -pin  "if:acc#1" {A(1)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(2)} -pin  "if:acc#1" {A(2)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(3)} -pin  "if:acc#1" {A(3)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(4)} -pin  "if:acc#1" {A(4)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(5)} -pin  "if:acc#1" {A(5)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(6)} -pin  "if:acc#1" {A(6)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(7)} -pin  "if:acc#1" {A(7)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(8)} -pin  "if:acc#1" {A(8)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(9)} -pin  "if:acc#1" {A(9)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(10)} -pin  "if:acc#1" {A(10)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(11)} -pin  "if:acc#1" {A(11)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(12)} -pin  "if:acc#1" {A(12)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {PWR} -pin  "if:acc#1" {B(0)} -attr @path {/MemBlock/MemBlock:core/Cn1_1}
+load net {if:acc#1.itm#2(0)} -pin  "if:acc#1" {Z(0)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm#2}
+load net {if:acc#1.itm#2(1)} -pin  "if:acc#1" {Z(1)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm#2}
+load net {if:acc#1.itm#2(2)} -pin  "if:acc#1" {Z(2)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm#2}
+load net {if:acc#1.itm#2(3)} -pin  "if:acc#1" {Z(3)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm#2}
+load net {if:acc#1.itm#2(4)} -pin  "if:acc#1" {Z(4)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm#2}
+load net {if:acc#1.itm#2(5)} -pin  "if:acc#1" {Z(5)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm#2}
+load net {if:acc#1.itm#2(6)} -pin  "if:acc#1" {Z(6)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm#2}
+load net {if:acc#1.itm#2(7)} -pin  "if:acc#1" {Z(7)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm#2}
+load net {if:acc#1.itm#2(8)} -pin  "if:acc#1" {Z(8)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm#2}
+load net {if:acc#1.itm#2(9)} -pin  "if:acc#1" {Z(9)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm#2}
+load net {if:acc#1.itm#2(10)} -pin  "if:acc#1" {Z(10)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm#2}
+load net {if:acc#1.itm#2(11)} -pin  "if:acc#1" {Z(11)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm#2}
+load net {if:acc#1.itm#2(12)} -pin  "if:acc#1" {Z(12)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm#2}
+load inst "reg(if:acc#1.itm)" "reg(13,1,0,0,1)" "INTERFACE" -attr xrf 1048 -attr oid 74 -attr vt d -attr @path {/MemBlock/MemBlock:core/reg(if:acc#1.itm)}
+load net {if:acc#1.itm#2(0)} -pin  "reg(if:acc#1.itm)" {D(0)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm#2}
+load net {if:acc#1.itm#2(1)} -pin  "reg(if:acc#1.itm)" {D(1)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm#2}
+load net {if:acc#1.itm#2(2)} -pin  "reg(if:acc#1.itm)" {D(2)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm#2}
+load net {if:acc#1.itm#2(3)} -pin  "reg(if:acc#1.itm)" {D(3)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm#2}
+load net {if:acc#1.itm#2(4)} -pin  "reg(if:acc#1.itm)" {D(4)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm#2}
+load net {if:acc#1.itm#2(5)} -pin  "reg(if:acc#1.itm)" {D(5)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm#2}
+load net {if:acc#1.itm#2(6)} -pin  "reg(if:acc#1.itm)" {D(6)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm#2}
+load net {if:acc#1.itm#2(7)} -pin  "reg(if:acc#1.itm)" {D(7)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm#2}
+load net {if:acc#1.itm#2(8)} -pin  "reg(if:acc#1.itm)" {D(8)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm#2}
+load net {if:acc#1.itm#2(9)} -pin  "reg(if:acc#1.itm)" {D(9)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm#2}
+load net {if:acc#1.itm#2(10)} -pin  "reg(if:acc#1.itm)" {D(10)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm#2}
+load net {if:acc#1.itm#2(11)} -pin  "reg(if:acc#1.itm)" {D(11)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm#2}
+load net {if:acc#1.itm#2(12)} -pin  "reg(if:acc#1.itm)" {D(12)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm#2}
+load net {GND} -pin  "reg(if:acc#1.itm)" {DRs(0)} -attr @path {/MemBlock/MemBlock:core/C0_13}
+load net {GND} -pin  "reg(if:acc#1.itm)" {DRs(1)} -attr @path {/MemBlock/MemBlock:core/C0_13}
+load net {GND} -pin  "reg(if:acc#1.itm)" {DRs(2)} -attr @path {/MemBlock/MemBlock:core/C0_13}
+load net {GND} -pin  "reg(if:acc#1.itm)" {DRs(3)} -attr @path {/MemBlock/MemBlock:core/C0_13}
+load net {GND} -pin  "reg(if:acc#1.itm)" {DRs(4)} -attr @path {/MemBlock/MemBlock:core/C0_13}
+load net {GND} -pin  "reg(if:acc#1.itm)" {DRs(5)} -attr @path {/MemBlock/MemBlock:core/C0_13}
+load net {GND} -pin  "reg(if:acc#1.itm)" {DRs(6)} -attr @path {/MemBlock/MemBlock:core/C0_13}
+load net {GND} -pin  "reg(if:acc#1.itm)" {DRs(7)} -attr @path {/MemBlock/MemBlock:core/C0_13}
+load net {GND} -pin  "reg(if:acc#1.itm)" {DRs(8)} -attr @path {/MemBlock/MemBlock:core/C0_13}
+load net {GND} -pin  "reg(if:acc#1.itm)" {DRs(9)} -attr @path {/MemBlock/MemBlock:core/C0_13}
+load net {GND} -pin  "reg(if:acc#1.itm)" {DRs(10)} -attr @path {/MemBlock/MemBlock:core/C0_13}
+load net {GND} -pin  "reg(if:acc#1.itm)" {DRs(11)} -attr @path {/MemBlock/MemBlock:core/C0_13}
+load net {GND} -pin  "reg(if:acc#1.itm)" {DRs(12)} -attr @path {/MemBlock/MemBlock:core/C0_13}
+load net {clk} -pin  "reg(if:acc#1.itm)" {clk} -attr xrf 1049 -attr oid 75 -attr @path {/MemBlock/MemBlock:core/clk}
+load net {rst} -pin  "reg(if:acc#1.itm)" {Rs(0)} -attr @path {/MemBlock/MemBlock:core/rst}
+load net {if:acc#1.itm(0)} -pin  "reg(if:acc#1.itm)" {Z(0)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm}
+load net {if:acc#1.itm(1)} -pin  "reg(if:acc#1.itm)" {Z(1)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm}
+load net {if:acc#1.itm(2)} -pin  "reg(if:acc#1.itm)" {Z(2)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm}
+load net {if:acc#1.itm(3)} -pin  "reg(if:acc#1.itm)" {Z(3)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm}
+load net {if:acc#1.itm(4)} -pin  "reg(if:acc#1.itm)" {Z(4)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm}
+load net {if:acc#1.itm(5)} -pin  "reg(if:acc#1.itm)" {Z(5)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm}
+load net {if:acc#1.itm(6)} -pin  "reg(if:acc#1.itm)" {Z(6)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm}
+load net {if:acc#1.itm(7)} -pin  "reg(if:acc#1.itm)" {Z(7)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm}
+load net {if:acc#1.itm(8)} -pin  "reg(if:acc#1.itm)" {Z(8)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm}
+load net {if:acc#1.itm(9)} -pin  "reg(if:acc#1.itm)" {Z(9)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm}
+load net {if:acc#1.itm(10)} -pin  "reg(if:acc#1.itm)" {Z(10)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm}
+load net {if:acc#1.itm(11)} -pin  "reg(if:acc#1.itm)" {Z(11)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm}
+load net {if:acc#1.itm(12)} -pin  "reg(if:acc#1.itm)" {Z(12)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#1.itm}
+load inst "reg(io_read(write_enable:rsc.d).svs.st)" "reg(1,1,0,0,1)" "INTERFACE" -attr xrf 1050 -attr oid 76 -attr @path {/MemBlock/MemBlock:core/reg(io_read(write_enable:rsc.d).svs.st)}
+load net {write_enable:rsc:mgc_in_wire.d} -pin  "reg(io_read(write_enable:rsc.d).svs.st)" {D(0)} -attr @path {/MemBlock/MemBlock:core/write_enable:rsc:mgc_in_wire.d}
+load net {GND} -pin  "reg(io_read(write_enable:rsc.d).svs.st)" {DRs(0)} -attr @path {/MemBlock/MemBlock:core/C0_1}
+load net {clk} -pin  "reg(io_read(write_enable:rsc.d).svs.st)" {clk} -attr xrf 1051 -attr oid 77 -attr @path {/MemBlock/MemBlock:core/clk}
+load net {rst} -pin  "reg(io_read(write_enable:rsc.d).svs.st)" {Rs(0)} -attr @path {/MemBlock/MemBlock:core/rst}
+load net {io_read(write_enable:rsc.d).svs.st} -pin  "reg(io_read(write_enable:rsc.d).svs.st)" {Z(0)} -attr @path {/MemBlock/MemBlock:core/io_read(write_enable:rsc.d).svs.st}
+load inst "row:not#2" "not(6)" "INTERFACE" -attr xrf 1052 -attr oid 78 -attr vt d -attr @path {/MemBlock/MemBlock:core/row:not#2} -attr area 0.001000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_not(6)"
+load net {row:rsc:mgc_in_wire.d(0)} -pin  "row:not#2" {A(0)} -attr vt d -attr @path {/MemBlock/MemBlock:core/row:rsc:mgc_in_wire.d}
+load net {row:rsc:mgc_in_wire.d(1)} -pin  "row:not#2" {A(1)} -attr vt d -attr @path {/MemBlock/MemBlock:core/row:rsc:mgc_in_wire.d}
+load net {row:rsc:mgc_in_wire.d(2)} -pin  "row:not#2" {A(2)} -attr vt d -attr @path {/MemBlock/MemBlock:core/row:rsc:mgc_in_wire.d}
+load net {row:rsc:mgc_in_wire.d(3)} -pin  "row:not#2" {A(3)} -attr vt d -attr @path {/MemBlock/MemBlock:core/row:rsc:mgc_in_wire.d}
+load net {row:rsc:mgc_in_wire.d(4)} -pin  "row:not#2" {A(4)} -attr vt d -attr @path {/MemBlock/MemBlock:core/row:rsc:mgc_in_wire.d}
+load net {row:rsc:mgc_in_wire.d(5)} -pin  "row:not#2" {A(5)} -attr vt d -attr @path {/MemBlock/MemBlock:core/row:rsc:mgc_in_wire.d}
+load net {row:not#2.itm(0)} -pin  "row:not#2" {Z(0)} -attr vt d -attr @path {/MemBlock/MemBlock:core/row:not#2.itm}
+load net {row:not#2.itm(1)} -pin  "row:not#2" {Z(1)} -attr vt d -attr @path {/MemBlock/MemBlock:core/row:not#2.itm}
+load net {row:not#2.itm(2)} -pin  "row:not#2" {Z(2)} -attr vt d -attr @path {/MemBlock/MemBlock:core/row:not#2.itm}
+load net {row:not#2.itm(3)} -pin  "row:not#2" {Z(3)} -attr vt d -attr @path {/MemBlock/MemBlock:core/row:not#2.itm}
+load net {row:not#2.itm(4)} -pin  "row:not#2" {Z(4)} -attr vt d -attr @path {/MemBlock/MemBlock:core/row:not#2.itm}
+load net {row:not#2.itm(5)} -pin  "row:not#2" {Z(5)} -attr vt d -attr @path {/MemBlock/MemBlock:core/row:not#2.itm}
+load inst "if:acc#3" "add(7,-1,6,0,7)" "INTERFACE" -attr xrf 1053 -attr oid 79 -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#3} -attr area 8.271060 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(7,0,6,0,7)"
+load net {col:rsc:mgc_in_wire.d(2)} -pin  "if:acc#3" {A(0)} -attr vt d -attr @path {/MemBlock/MemBlock:core/conc#20.itm}
+load net {col:rsc:mgc_in_wire.d(3)} -pin  "if:acc#3" {A(1)} -attr vt d -attr @path {/MemBlock/MemBlock:core/conc#20.itm}
+load net {col:rsc:mgc_in_wire.d(4)} -pin  "if:acc#3" {A(2)} -attr vt d -attr @path {/MemBlock/MemBlock:core/conc#20.itm}
+load net {col:rsc:mgc_in_wire.d(5)} -pin  "if:acc#3" {A(3)} -attr vt d -attr @path {/MemBlock/MemBlock:core/conc#20.itm}
+load net {col:rsc:mgc_in_wire.d(6)} -pin  "if:acc#3" {A(4)} -attr vt d -attr @path {/MemBlock/MemBlock:core/conc#20.itm}
+load net {GND} -pin  "if:acc#3" {A(5)} -attr @path {/MemBlock/MemBlock:core/conc#20.itm}
+load net {PWR} -pin  "if:acc#3" {A(6)} -attr @path {/MemBlock/MemBlock:core/conc#20.itm}
+load net {row:not#2.itm(0)} -pin  "if:acc#3" {B(0)} -attr vt d -attr @path {/MemBlock/MemBlock:core/row:not#2.itm}
+load net {row:not#2.itm(1)} -pin  "if:acc#3" {B(1)} -attr vt d -attr @path {/MemBlock/MemBlock:core/row:not#2.itm}
+load net {row:not#2.itm(2)} -pin  "if:acc#3" {B(2)} -attr vt d -attr @path {/MemBlock/MemBlock:core/row:not#2.itm}
+load net {row:not#2.itm(3)} -pin  "if:acc#3" {B(3)} -attr vt d -attr @path {/MemBlock/MemBlock:core/row:not#2.itm}
+load net {row:not#2.itm(4)} -pin  "if:acc#3" {B(4)} -attr vt d -attr @path {/MemBlock/MemBlock:core/row:not#2.itm}
+load net {row:not#2.itm(5)} -pin  "if:acc#3" {B(5)} -attr vt d -attr @path {/MemBlock/MemBlock:core/row:not#2.itm}
+load net {if:acc#3.itm(0)} -pin  "if:acc#3" {Z(0)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#3.itm}
+load net {if:acc#3.itm(1)} -pin  "if:acc#3" {Z(1)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#3.itm}
+load net {if:acc#3.itm(2)} -pin  "if:acc#3" {Z(2)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#3.itm}
+load net {if:acc#3.itm(3)} -pin  "if:acc#3" {Z(3)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#3.itm}
+load net {if:acc#3.itm(4)} -pin  "if:acc#3" {Z(4)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#3.itm}
+load net {if:acc#3.itm(5)} -pin  "if:acc#3" {Z(5)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#3.itm}
+load net {if:acc#3.itm(6)} -pin  "if:acc#3" {Z(6)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#3.itm}
+load inst "if:acc#5" "add(7,1,10,-1,10)" "INTERFACE" -attr xrf 1054 -attr oid 80 -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#5} -attr area 11.000000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_add(10,0,7,1,10)"
+load net {if:acc#3.itm(0)} -pin  "if:acc#5" {A(0)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#3.itm}
+load net {if:acc#3.itm(1)} -pin  "if:acc#5" {A(1)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#3.itm}
+load net {if:acc#3.itm(2)} -pin  "if:acc#5" {A(2)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#3.itm}
+load net {if:acc#3.itm(3)} -pin  "if:acc#5" {A(3)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#3.itm}
+load net {if:acc#3.itm(4)} -pin  "if:acc#5" {A(4)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#3.itm}
+load net {if:acc#3.itm(5)} -pin  "if:acc#5" {A(5)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#3.itm}
+load net {if:acc#3.itm(6)} -pin  "if:acc#5" {A(6)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#3.itm}
+load net {PWR} -pin  "if:acc#5" {B(0)} -attr @path {/MemBlock/MemBlock:core/conc#21.itm}
+load net {GND} -pin  "if:acc#5" {B(1)} -attr @path {/MemBlock/MemBlock:core/conc#21.itm}
+load net {GND} -pin  "if:acc#5" {B(2)} -attr @path {/MemBlock/MemBlock:core/conc#21.itm}
+load net {GND} -pin  "if:acc#5" {B(3)} -attr @path {/MemBlock/MemBlock:core/conc#21.itm}
+load net {row:rsc:mgc_in_wire.d(0)} -pin  "if:acc#5" {B(4)} -attr vt d -attr @path {/MemBlock/MemBlock:core/conc#21.itm}
+load net {row:rsc:mgc_in_wire.d(1)} -pin  "if:acc#5" {B(5)} -attr vt d -attr @path {/MemBlock/MemBlock:core/conc#21.itm}
+load net {row:rsc:mgc_in_wire.d(2)} -pin  "if:acc#5" {B(6)} -attr vt d -attr @path {/MemBlock/MemBlock:core/conc#21.itm}
+load net {row:rsc:mgc_in_wire.d(3)} -pin  "if:acc#5" {B(7)} -attr vt d -attr @path {/MemBlock/MemBlock:core/conc#21.itm}
+load net {row:rsc:mgc_in_wire.d(4)} -pin  "if:acc#5" {B(8)} -attr vt d -attr @path {/MemBlock/MemBlock:core/conc#21.itm}
+load net {row:rsc:mgc_in_wire.d(5)} -pin  "if:acc#5" {B(9)} -attr vt d -attr @path {/MemBlock/MemBlock:core/conc#21.itm}
+load net {if:acc#5.itm(0)} -pin  "if:acc#5" {Z(0)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#5.itm}
+load net {if:acc#5.itm(1)} -pin  "if:acc#5" {Z(1)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#5.itm}
+load net {if:acc#5.itm(2)} -pin  "if:acc#5" {Z(2)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#5.itm}
+load net {if:acc#5.itm(3)} -pin  "if:acc#5" {Z(3)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#5.itm}
+load net {if:acc#5.itm(4)} -pin  "if:acc#5" {Z(4)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#5.itm}
+load net {if:acc#5.itm(5)} -pin  "if:acc#5" {Z(5)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#5.itm}
+load net {if:acc#5.itm(6)} -pin  "if:acc#5" {Z(6)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#5.itm}
+load net {if:acc#5.itm(7)} -pin  "if:acc#5" {Z(7)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#5.itm}
+load net {if:acc#5.itm(8)} -pin  "if:acc#5" {Z(8)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#5.itm}
+load net {if:acc#5.itm(9)} -pin  "if:acc#5" {Z(9)} -attr vt d -attr @path {/MemBlock/MemBlock:core/if:acc#5.itm}
+load inst "mux#2" "mux(2,13)" "INTERFACE" -attr xrf 1055 -attr oid 81 -attr vt d -attr @path {/MemBlock/MemBlock:core/mux#2} -attr area 11.953499 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_mux(13,1,2)"
+load net {col:rsc:mgc_in_wire.d(0)} -pin  "mux#2" {A0(0)} -attr vt d -attr @path {/MemBlock/MemBlock:core/conc#19.itm}
+load net {col:rsc:mgc_in_wire.d(1)} -pin  "mux#2" {A0(1)} -attr vt d -attr @path {/MemBlock/MemBlock:core/conc#19.itm}
+load net {if:acc#5.itm(0)} -pin  "mux#2" {A0(2)} -attr vt d -attr @path {/MemBlock/MemBlock:core/conc#19.itm}
+load net {if:acc#5.itm(1)} -pin  "mux#2" {A0(3)} -attr vt d -attr @path {/MemBlock/MemBlock:core/conc#19.itm}
+load net {if:acc#5.itm(2)} -pin  "mux#2" {A0(4)} -attr vt d -attr @path {/MemBlock/MemBlock:core/conc#19.itm}
+load net {if:acc#5.itm(3)} -pin  "mux#2" {A0(5)} -attr vt d -attr @path {/MemBlock/MemBlock:core/conc#19.itm}
+load net {if:acc#5.itm(4)} -pin  "mux#2" {A0(6)} -attr vt d -attr @path {/MemBlock/MemBlock:core/conc#19.itm}
+load net {if:acc#5.itm(5)} -pin  "mux#2" {A0(7)} -attr vt d -attr @path {/MemBlock/MemBlock:core/conc#19.itm}
+load net {if:acc#5.itm(6)} -pin  "mux#2" {A0(8)} -attr vt d -attr @path {/MemBlock/MemBlock:core/conc#19.itm}
+load net {if:acc#5.itm(7)} -pin  "mux#2" {A0(9)} -attr vt d -attr @path {/MemBlock/MemBlock:core/conc#19.itm}
+load net {if:acc#5.itm(8)} -pin  "mux#2" {A0(10)} -attr vt d -attr @path {/MemBlock/MemBlock:core/conc#19.itm}
+load net {if:acc#5.itm(9)} -pin  "mux#2" {A0(11)} -attr vt d -attr @path {/MemBlock/MemBlock:core/conc#19.itm}
+load net {GND} -pin  "mux#2" {A0(12)} -attr @path {/MemBlock/MemBlock:core/conc#19.itm}
+load net {data:vinit.ndx.sva(0)} -pin  "mux#2" {A1(0)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(1)} -pin  "mux#2" {A1(1)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(2)} -pin  "mux#2" {A1(2)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(3)} -pin  "mux#2" {A1(3)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(4)} -pin  "mux#2" {A1(4)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(5)} -pin  "mux#2" {A1(5)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(6)} -pin  "mux#2" {A1(6)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(7)} -pin  "mux#2" {A1(7)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(8)} -pin  "mux#2" {A1(8)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(9)} -pin  "mux#2" {A1(9)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(10)} -pin  "mux#2" {A1(10)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(11)} -pin  "mux#2" {A1(11)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {data:vinit.ndx.sva(12)} -pin  "mux#2" {A1(12)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:vinit.ndx.sva}
+load net {fsm_output#1(3)} -pin  "mux#2" {S(0)} -attr @path {/MemBlock/MemBlock:core/slc(fsm_output)#8.itm}
+load net {data:rsc:singleport.addr(0)} -pin  "mux#2" {Z(0)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr(1)} -pin  "mux#2" {Z(1)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr(2)} -pin  "mux#2" {Z(2)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr(3)} -pin  "mux#2" {Z(3)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr(4)} -pin  "mux#2" {Z(4)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr(5)} -pin  "mux#2" {Z(5)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr(6)} -pin  "mux#2" {Z(6)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr(7)} -pin  "mux#2" {Z(7)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr(8)} -pin  "mux#2" {Z(8)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr(9)} -pin  "mux#2" {Z(9)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr(10)} -pin  "mux#2" {Z(10)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr(11)} -pin  "mux#2" {Z(11)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr(12)} -pin  "mux#2" {Z(12)} -attr vt d -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.addr}
+load inst "not#3" "not(1)" "INTERFACE" -attr @path {/MemBlock/MemBlock:core/not#3} -attr area 0.001000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_not(1)"
+load net {write_enable:rsc:mgc_in_wire.d} -pin  "not#3" {A(0)} -attr @path {/MemBlock/MemBlock:core/write_enable:rsc:mgc_in_wire.d}
+load net {not#3.itm} -pin  "not#3" {Z(0)} -attr @path {/MemBlock/MemBlock:core/not#3.itm}
+load inst "nand" "nand(2,1)" "INTERFACE" -attr @path {/MemBlock/MemBlock:core/nand} -attr area 0.730832 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_nand(1,2)"
+load net {fsm_output#1(3)} -pin  "nand" {A0(0)} -attr @path {/MemBlock/MemBlock:core/slc(fsm_output)#7.itm}
+load net {not#3.itm} -pin  "nand" {A1(0)} -attr @path {/MemBlock/MemBlock:core/not#3.itm}
+load net {data:rsc:singleport.re} -pin  "nand" {Z(0)} -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.re}
+load inst "and" "and(2,1)" "INTERFACE" -attr @path {/MemBlock/MemBlock:core/and} -attr area 0.730832 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_and(1,2)"
+load net {fsm_output#1(3)} -pin  "and" {A0(0)} -attr @path {/MemBlock/MemBlock:core/slc(fsm_output)#6.itm}
+load net {write_enable:rsc:mgc_in_wire.d} -pin  "and" {A1(0)} -attr @path {/MemBlock/MemBlock:core/write_enable:rsc:mgc_in_wire.d}
+load net {and.itm} -pin  "and" {Z(0)} -attr @path {/MemBlock/MemBlock:core/and.itm}
+load inst "nor" "nor(2,1)" "INTERFACE" -attr @path {/MemBlock/MemBlock:core/nor} -attr area 0.730832 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_nor(1,2)"
+load net {and.itm} -pin  "nor" {A0(0)} -attr @path {/MemBlock/MemBlock:core/and.itm}
+load net {fsm_output#1(1)} -pin  "nor" {A1(0)} -attr @path {/MemBlock/MemBlock:core/slc(fsm_output)#1.itm}
+load net {data:rsc:singleport.we} -pin  "nor" {Z(0)} -attr @path {/MemBlock/MemBlock:core/data:rsc:singleport.we}
+load inst "not#2" "not(1)" "INTERFACE" -attr @path {/MemBlock/MemBlock:core/not#2} -attr area 0.001000 -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_Altera-Cyclone-III-6_beh_psr.mgc_not(1)"
+load net {if:nor.itm} -pin  "not#2" {A(0)} -attr @path {/MemBlock/MemBlock:core/if:nor.itm}
+load net {not#2.itm} -pin  "not#2" {Z(0)} -attr @path {/MemBlock/MemBlock:core/not#2.itm}
+### END MODULE 
+
+module new "MemBlock" "orig"
+load portBus {row:rsc.z(5:0)} input 6 {row:rsc.z(5)} {row:rsc.z(4)} {row:rsc.z(3)} {row:rsc.z(2)} {row:rsc.z(1)} {row:rsc.z(0)} -attr xrf 1056 -attr oid 82 -attr vt d -attr @path {/MemBlock/row:rsc.z}
+load portBus {col:rsc.z(6:0)} input 7 {col:rsc.z(6)} {col:rsc.z(5)} {col:rsc.z(4)} {col:rsc.z(3)} {col:rsc.z(2)} {col:rsc.z(1)} {col:rsc.z(0)} -attr xrf 1057 -attr oid 83 -attr vt d -attr @path {/MemBlock/col:rsc.z}
+load port {bit_in:rsc.z} input -attr xrf 1058 -attr oid 84 -attr vt d -attr @path {/MemBlock/bit_in:rsc.z}
+load port {write_enable:rsc.z} input -attr xrf 1059 -attr oid 85 -attr vt d -attr @path {/MemBlock/write_enable:rsc.z}
+load portBus {bits_out:rsc.z(29:0)} output 30 {bits_out:rsc.z(29)} {bits_out:rsc.z(28)} {bits_out:rsc.z(27)} {bits_out:rsc.z(26)} {bits_out:rsc.z(25)} {bits_out:rsc.z(24)} {bits_out:rsc.z(23)} {bits_out:rsc.z(22)} {bits_out:rsc.z(21)} {bits_out:rsc.z(20)} {bits_out:rsc.z(19)} {bits_out:rsc.z(18)} {bits_out:rsc.z(17)} {bits_out:rsc.z(16)} {bits_out:rsc.z(15)} {bits_out:rsc.z(14)} {bits_out:rsc.z(13)} {bits_out:rsc.z(12)} {bits_out:rsc.z(11)} {bits_out:rsc.z(10)} {bits_out:rsc.z(9)} {bits_out:rsc.z(8)} {bits_out:rsc.z(7)} {bits_out:rsc.z(6)} {bits_out:rsc.z(5)} {bits_out:rsc.z(4)} {bits_out:rsc.z(3)} {bits_out:rsc.z(2)} {bits_out:rsc.z(1)} {bits_out:rsc.z(0)} -attr xrf 1060 -attr oid 86 -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load port {clk} input -attr xrf 1061 -attr oid 87 -attr vt d -attr @path {/MemBlock/clk}
+load port {rst} input -attr xrf 1062 -attr oid 88 -attr vt d -attr @path {/MemBlock/rst}
+load symbol "mgc_ioport.mgc_in_wire(1,6)" "INTERFACE" GEN boxcolor 0 \
+     portBus {d(5:0)} output 6 {d(5)} {d(4)} {d(3)} {d(2)} {d(1)} {d(0)} \
+     portBus {z(5:0)} input 6 {z(5)} {z(4)} {z(3)} {z(2)} {z(1)} {z(0)} \
+
+load symbol "mgc_ioport.mgc_in_wire(2,7)" "INTERFACE" GEN boxcolor 0 \
+     portBus {d(6:0)} output 7 {d(6)} {d(5)} {d(4)} {d(3)} {d(2)} {d(1)} {d(0)} \
+     portBus {z(6:0)} input 7 {z(6)} {z(5)} {z(4)} {z(3)} {z(2)} {z(1)} {z(0)} \
+
+load symbol "mgc_ioport.mgc_in_wire(3,1)" "INTERFACE" GEN boxcolor 0 \
+     portBus {d(0:0)} output 1 {d(0)} \
+     portBus {z(0:0)} input 1 {z(0)} \
+
+load symbol "mgc_ioport.mgc_in_wire(4,1)" "INTERFACE" GEN boxcolor 0 \
+     portBus {d(0:0)} output 1 {d(0)} \
+     portBus {z(0:0)} input 1 {z(0)} \
+
+load symbol "mgc_ioport.mgc_out_stdreg(5,30)" "INTERFACE" GEN boxcolor 0 \
+     portBus {d(29:0)} input 30 {d(29)} {d(28)} {d(27)} {d(26)} {d(25)} {d(24)} {d(23)} {d(22)} {d(21)} {d(20)} {d(19)} {d(18)} {d(17)} {d(16)} {d(15)} {d(14)} {d(13)} {d(12)} {d(11)} {d(10)} {d(9)} {d(8)} {d(7)} {d(6)} {d(5)} {d(4)} {d(3)} {d(2)} {d(1)} {d(0)} \
+     portBus {z(29:0)} output 30 {z(29)} {z(28)} {z(27)} {z(26)} {z(25)} {z(24)} {z(23)} {z(22)} {z(21)} {z(20)} {z(19)} {z(18)} {z(17)} {z(16)} {z(15)} {z(14)} {z(13)} {z(12)} {z(11)} {z(10)} {z(9)} {z(8)} {z(7)} {z(6)} {z(5)} {z(4)} {z(3)} {z(2)} {z(1)} {z(0)} \
+
+load symbol "ram_Altera-Cyclone-III-6_RAMSB.singleport(6,4800,1,13,0,1,0,0,0,1,1,1,0,4800,1,1)" "INTERFACE" GEN boxcolor 0 \
+     portBus {data_in(0:0)} input 1 {data_in(0)} \
+     portBus {addr(12:0)} input 13 {addr(12)} {addr(11)} {addr(10)} {addr(9)} {addr(8)} {addr(7)} {addr(6)} {addr(5)} {addr(4)} {addr(3)} {addr(2)} {addr(1)} {addr(0)} \
+     portBus {re(0:0)} input 1 {re(0)} \
+     portBus {we(0:0)} input 1 {we(0)} \
+     portBus {data_out(0:0)} output 1 {data_out(0)} \
+     port {clk} input.clk \
+     port {a_rst} input \
+     port {s_rst} input \
+     port {en} input \
+
+load symbol "MemBlock:core" "orig" GEN \
+     port {clk#1} input \
+     port {rst#1} input \
+     portBus {row:rsc:mgc_in_wire.d(5:0)} input 6 {row:rsc:mgc_in_wire.d(5)} {row:rsc:mgc_in_wire.d(4)} {row:rsc:mgc_in_wire.d(3)} {row:rsc:mgc_in_wire.d(2)} {row:rsc:mgc_in_wire.d(1)} {row:rsc:mgc_in_wire.d(0)} \
+     portBus {col:rsc:mgc_in_wire.d(6:0)} input 7 {col:rsc:mgc_in_wire.d(6)} {col:rsc:mgc_in_wire.d(5)} {col:rsc:mgc_in_wire.d(4)} {col:rsc:mgc_in_wire.d(3)} {col:rsc:mgc_in_wire.d(2)} {col:rsc:mgc_in_wire.d(1)} {col:rsc:mgc_in_wire.d(0)} \
+     port {bit_in:rsc:mgc_in_wire.d} input \
+     port {write_enable:rsc:mgc_in_wire.d} input \
+     portBus {bits_out:rsc:mgc_out_stdreg.d(29:0)} output 30 {bits_out:rsc:mgc_out_stdreg.d(29)} {bits_out:rsc:mgc_out_stdreg.d(28)} {bits_out:rsc:mgc_out_stdreg.d(27)} {bits_out:rsc:mgc_out_stdreg.d(26)} {bits_out:rsc:mgc_out_stdreg.d(25)} {bits_out:rsc:mgc_out_stdreg.d(24)} {bits_out:rsc:mgc_out_stdreg.d(23)} {bits_out:rsc:mgc_out_stdreg.d(22)} {bits_out:rsc:mgc_out_stdreg.d(21)} {bits_out:rsc:mgc_out_stdreg.d(20)} {bits_out:rsc:mgc_out_stdreg.d(19)} {bits_out:rsc:mgc_out_stdreg.d(18)} {bits_out:rsc:mgc_out_stdreg.d(17)} {bits_out:rsc:mgc_out_stdreg.d(16)} {bits_out:rsc:mgc_out_stdreg.d(15)} {bits_out:rsc:mgc_out_stdreg.d(14)} {bits_out:rsc:mgc_out_stdreg.d(13)} {bits_out:rsc:mgc_out_stdreg.d(12)} {bits_out:rsc:mgc_out_stdreg.d(11)} {bits_out:rsc:mgc_out_stdreg.d(10)} {bits_out:rsc:mgc_out_stdreg.d(9)} {bits_out:rsc:mgc_out_stdreg.d(8)} {bits_out:rsc:mgc_out_stdreg.d(7)} {bits_out:rsc:mgc_out_stdreg.d(6)} {bits_out:rsc:mgc_out_stdreg.d(5)} {bits_out:rsc:mgc_out_stdreg.d(4)} {bits_out:rsc:mgc_out_stdreg.d(3)} {bits_out:rsc:mgc_out_stdreg.d(2)} {bits_out:rsc:mgc_out_stdreg.d(1)} {bits_out:rsc:mgc_out_stdreg.d(0)} \
+     port {data:rsc:singleport.data_in} output \
+     portBus {data:rsc:singleport.addr(12:0)} output 13 {data:rsc:singleport.addr(12)} {data:rsc:singleport.addr(11)} {data:rsc:singleport.addr(10)} {data:rsc:singleport.addr(9)} {data:rsc:singleport.addr(8)} {data:rsc:singleport.addr(7)} {data:rsc:singleport.addr(6)} {data:rsc:singleport.addr(5)} {data:rsc:singleport.addr(4)} {data:rsc:singleport.addr(3)} {data:rsc:singleport.addr(2)} {data:rsc:singleport.addr(1)} {data:rsc:singleport.addr(0)} \
+     port {data:rsc:singleport.re} output \
+     port {data:rsc:singleport.we} output \
+     port {data:rsc:singleport.data_out} input \
+
+load net {row:rsc:mgc_in_wire.d#1(0)} -attr vt d
+load net {row:rsc:mgc_in_wire.d#1(1)} -attr vt d
+load net {row:rsc:mgc_in_wire.d#1(2)} -attr vt d
+load net {row:rsc:mgc_in_wire.d#1(3)} -attr vt d
+load net {row:rsc:mgc_in_wire.d#1(4)} -attr vt d
+load net {row:rsc:mgc_in_wire.d#1(5)} -attr vt d
+load netBundle {row:rsc:mgc_in_wire.d#1} 6 {row:rsc:mgc_in_wire.d#1(0)} {row:rsc:mgc_in_wire.d#1(1)} {row:rsc:mgc_in_wire.d#1(2)} {row:rsc:mgc_in_wire.d#1(3)} {row:rsc:mgc_in_wire.d#1(4)} {row:rsc:mgc_in_wire.d#1(5)} -attr xrf 1063 -attr oid 89 -attr vt d -attr @path {/MemBlock/row:rsc:mgc_in_wire.d}
+load net {col:rsc:mgc_in_wire.d#1(0)} -attr vt d
+load net {col:rsc:mgc_in_wire.d#1(1)} -attr vt d
+load net {col:rsc:mgc_in_wire.d#1(2)} -attr vt d
+load net {col:rsc:mgc_in_wire.d#1(3)} -attr vt d
+load net {col:rsc:mgc_in_wire.d#1(4)} -attr vt d
+load net {col:rsc:mgc_in_wire.d#1(5)} -attr vt d
+load net {col:rsc:mgc_in_wire.d#1(6)} -attr vt d
+load netBundle {col:rsc:mgc_in_wire.d#1} 7 {col:rsc:mgc_in_wire.d#1(0)} {col:rsc:mgc_in_wire.d#1(1)} {col:rsc:mgc_in_wire.d#1(2)} {col:rsc:mgc_in_wire.d#1(3)} {col:rsc:mgc_in_wire.d#1(4)} {col:rsc:mgc_in_wire.d#1(5)} {col:rsc:mgc_in_wire.d#1(6)} -attr xrf 1064 -attr oid 90 -attr vt d -attr @path {/MemBlock/col:rsc:mgc_in_wire.d}
+load net {bit_in:rsc:mgc_in_wire.d#1} -attr xrf 1065 -attr oid 91 -attr vt d
+load net {write_enable:rsc:mgc_in_wire.d#1} -attr xrf 1066 -attr oid 92 -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d#1(0)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d#1(1)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d#1(2)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d#1(3)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d#1(4)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d#1(5)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d#1(6)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d#1(7)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d#1(8)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d#1(9)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d#1(10)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d#1(11)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d#1(12)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d#1(13)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d#1(14)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d#1(15)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d#1(16)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d#1(17)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d#1(18)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d#1(19)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d#1(20)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d#1(21)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d#1(22)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d#1(23)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d#1(24)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d#1(25)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d#1(26)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d#1(27)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d#1(28)} -attr vt d
+load net {bits_out:rsc:mgc_out_stdreg.d#1(29)} -attr vt d
+load netBundle {bits_out:rsc:mgc_out_stdreg.d#1} 30 {bits_out:rsc:mgc_out_stdreg.d#1(0)} {bits_out:rsc:mgc_out_stdreg.d#1(1)} {bits_out:rsc:mgc_out_stdreg.d#1(2)} {bits_out:rsc:mgc_out_stdreg.d#1(3)} {bits_out:rsc:mgc_out_stdreg.d#1(4)} {bits_out:rsc:mgc_out_stdreg.d#1(5)} {bits_out:rsc:mgc_out_stdreg.d#1(6)} {bits_out:rsc:mgc_out_stdreg.d#1(7)} {bits_out:rsc:mgc_out_stdreg.d#1(8)} {bits_out:rsc:mgc_out_stdreg.d#1(9)} {bits_out:rsc:mgc_out_stdreg.d#1(10)} {bits_out:rsc:mgc_out_stdreg.d#1(11)} {bits_out:rsc:mgc_out_stdreg.d#1(12)} {bits_out:rsc:mgc_out_stdreg.d#1(13)} {bits_out:rsc:mgc_out_stdreg.d#1(14)} {bits_out:rsc:mgc_out_stdreg.d#1(15)} {bits_out:rsc:mgc_out_stdreg.d#1(16)} {bits_out:rsc:mgc_out_stdreg.d#1(17)} {bits_out:rsc:mgc_out_stdreg.d#1(18)} {bits_out:rsc:mgc_out_stdreg.d#1(19)} {bits_out:rsc:mgc_out_stdreg.d#1(20)} {bits_out:rsc:mgc_out_stdreg.d#1(21)} {bits_out:rsc:mgc_out_stdreg.d#1(22)} {bits_out:rsc:mgc_out_stdreg.d#1(23)} {bits_out:rsc:mgc_out_stdreg.d#1(24)} {bits_out:rsc:mgc_out_stdreg.d#1(25)} {bits_out:rsc:mgc_out_stdreg.d#1(26)} {bits_out:rsc:mgc_out_stdreg.d#1(27)} {bits_out:rsc:mgc_out_stdreg.d#1(28)} {bits_out:rsc:mgc_out_stdreg.d#1(29)} -attr xrf 1067 -attr oid 93 -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {data:rsc:singleport.data_in#1} -attr xrf 1068 -attr oid 94 -attr vt d
+load net {data:rsc:singleport.addr#1(0)} -attr vt d
+load net {data:rsc:singleport.addr#1(1)} -attr vt d
+load net {data:rsc:singleport.addr#1(2)} -attr vt d
+load net {data:rsc:singleport.addr#1(3)} -attr vt d
+load net {data:rsc:singleport.addr#1(4)} -attr vt d
+load net {data:rsc:singleport.addr#1(5)} -attr vt d
+load net {data:rsc:singleport.addr#1(6)} -attr vt d
+load net {data:rsc:singleport.addr#1(7)} -attr vt d
+load net {data:rsc:singleport.addr#1(8)} -attr vt d
+load net {data:rsc:singleport.addr#1(9)} -attr vt d
+load net {data:rsc:singleport.addr#1(10)} -attr vt d
+load net {data:rsc:singleport.addr#1(11)} -attr vt d
+load net {data:rsc:singleport.addr#1(12)} -attr vt d
+load netBundle {data:rsc:singleport.addr#1} 13 {data:rsc:singleport.addr#1(0)} {data:rsc:singleport.addr#1(1)} {data:rsc:singleport.addr#1(2)} {data:rsc:singleport.addr#1(3)} {data:rsc:singleport.addr#1(4)} {data:rsc:singleport.addr#1(5)} {data:rsc:singleport.addr#1(6)} {data:rsc:singleport.addr#1(7)} {data:rsc:singleport.addr#1(8)} {data:rsc:singleport.addr#1(9)} {data:rsc:singleport.addr#1(10)} {data:rsc:singleport.addr#1(11)} {data:rsc:singleport.addr#1(12)} -attr xrf 1069 -attr oid 95 -attr vt d -attr @path {/MemBlock/data:rsc:singleport.addr}
+load net {data:rsc:singleport.re#1} -attr xrf 1070 -attr oid 96 -attr vt d
+load net {data:rsc:singleport.we#1} -attr xrf 1071 -attr oid 97 -attr vt d
+load net {data:rsc:singleport.data_out#1} -attr xrf 1072 -attr oid 98 -attr vt d
+load net {row:rsc.z(0)} -attr vt d
+load net {row:rsc.z(1)} -attr vt d
+load net {row:rsc.z(2)} -attr vt d
+load net {row:rsc.z(3)} -attr vt d
+load net {row:rsc.z(4)} -attr vt d
+load net {row:rsc.z(5)} -attr vt d
+load netBundle {row:rsc.z} 6 {row:rsc.z(0)} {row:rsc.z(1)} {row:rsc.z(2)} {row:rsc.z(3)} {row:rsc.z(4)} {row:rsc.z(5)} -attr xrf 1073 -attr oid 99 -attr vt d -attr @path {/MemBlock/row:rsc.z}
+load net {row:rsc.z(0)} -port {row:rsc.z(0)} -attr vt d
+load net {row:rsc.z(1)} -port {row:rsc.z(1)} -attr vt d
+load net {row:rsc.z(2)} -port {row:rsc.z(2)} -attr vt d
+load net {row:rsc.z(3)} -port {row:rsc.z(3)} -attr vt d
+load net {row:rsc.z(4)} -port {row:rsc.z(4)} -attr vt d
+load net {row:rsc.z(5)} -port {row:rsc.z(5)} -attr vt d
+load netBundle {row:rsc.z} 6 {row:rsc.z(0)} {row:rsc.z(1)} {row:rsc.z(2)} {row:rsc.z(3)} {row:rsc.z(4)} {row:rsc.z(5)} -attr xrf 1074 -attr oid 100 -attr vt d -attr @path {/MemBlock/row:rsc.z}
+load net {col:rsc.z(0)} -attr vt d
+load net {col:rsc.z(1)} -attr vt d
+load net {col:rsc.z(2)} -attr vt d
+load net {col:rsc.z(3)} -attr vt d
+load net {col:rsc.z(4)} -attr vt d
+load net {col:rsc.z(5)} -attr vt d
+load net {col:rsc.z(6)} -attr vt d
+load netBundle {col:rsc.z} 7 {col:rsc.z(0)} {col:rsc.z(1)} {col:rsc.z(2)} {col:rsc.z(3)} {col:rsc.z(4)} {col:rsc.z(5)} {col:rsc.z(6)} -attr xrf 1075 -attr oid 101 -attr vt d -attr @path {/MemBlock/col:rsc.z}
+load net {col:rsc.z(0)} -port {col:rsc.z(0)} -attr vt d
+load net {col:rsc.z(1)} -port {col:rsc.z(1)} -attr vt d
+load net {col:rsc.z(2)} -port {col:rsc.z(2)} -attr vt d
+load net {col:rsc.z(3)} -port {col:rsc.z(3)} -attr vt d
+load net {col:rsc.z(4)} -port {col:rsc.z(4)} -attr vt d
+load net {col:rsc.z(5)} -port {col:rsc.z(5)} -attr vt d
+load net {col:rsc.z(6)} -port {col:rsc.z(6)} -attr vt d
+load netBundle {col:rsc.z} 7 {col:rsc.z(0)} {col:rsc.z(1)} {col:rsc.z(2)} {col:rsc.z(3)} {col:rsc.z(4)} {col:rsc.z(5)} {col:rsc.z(6)} -attr xrf 1076 -attr oid 102 -attr vt d -attr @path {/MemBlock/col:rsc.z}
+load net {bit_in:rsc.z} -attr xrf 1077 -attr oid 103 -attr vt d
+load net {bit_in:rsc.z} -port {bit_in:rsc.z} -attr xrf 1078 -attr oid 104 -attr vt d
+load net {write_enable:rsc.z} -attr xrf 1079 -attr oid 105 -attr vt d
+load net {write_enable:rsc.z} -port {write_enable:rsc.z} -attr xrf 1080 -attr oid 106 -attr vt d
+load net {bits_out:rsc.z(0)} -attr vt d
+load net {bits_out:rsc.z(1)} -attr vt d
+load net {bits_out:rsc.z(2)} -attr vt d
+load net {bits_out:rsc.z(3)} -attr vt d
+load net {bits_out:rsc.z(4)} -attr vt d
+load net {bits_out:rsc.z(5)} -attr vt d
+load net {bits_out:rsc.z(6)} -attr vt d
+load net {bits_out:rsc.z(7)} -attr vt d
+load net {bits_out:rsc.z(8)} -attr vt d
+load net {bits_out:rsc.z(9)} -attr vt d
+load net {bits_out:rsc.z(10)} -attr vt d
+load net {bits_out:rsc.z(11)} -attr vt d
+load net {bits_out:rsc.z(12)} -attr vt d
+load net {bits_out:rsc.z(13)} -attr vt d
+load net {bits_out:rsc.z(14)} -attr vt d
+load net {bits_out:rsc.z(15)} -attr vt d
+load net {bits_out:rsc.z(16)} -attr vt d
+load net {bits_out:rsc.z(17)} -attr vt d
+load net {bits_out:rsc.z(18)} -attr vt d
+load net {bits_out:rsc.z(19)} -attr vt d
+load net {bits_out:rsc.z(20)} -attr vt d
+load net {bits_out:rsc.z(21)} -attr vt d
+load net {bits_out:rsc.z(22)} -attr vt d
+load net {bits_out:rsc.z(23)} -attr vt d
+load net {bits_out:rsc.z(24)} -attr vt d
+load net {bits_out:rsc.z(25)} -attr vt d
+load net {bits_out:rsc.z(26)} -attr vt d
+load net {bits_out:rsc.z(27)} -attr vt d
+load net {bits_out:rsc.z(28)} -attr vt d
+load net {bits_out:rsc.z(29)} -attr vt d
+load netBundle {bits_out:rsc.z} 30 {bits_out:rsc.z(0)} {bits_out:rsc.z(1)} {bits_out:rsc.z(2)} {bits_out:rsc.z(3)} {bits_out:rsc.z(4)} {bits_out:rsc.z(5)} {bits_out:rsc.z(6)} {bits_out:rsc.z(7)} {bits_out:rsc.z(8)} {bits_out:rsc.z(9)} {bits_out:rsc.z(10)} {bits_out:rsc.z(11)} {bits_out:rsc.z(12)} {bits_out:rsc.z(13)} {bits_out:rsc.z(14)} {bits_out:rsc.z(15)} {bits_out:rsc.z(16)} {bits_out:rsc.z(17)} {bits_out:rsc.z(18)} {bits_out:rsc.z(19)} {bits_out:rsc.z(20)} {bits_out:rsc.z(21)} {bits_out:rsc.z(22)} {bits_out:rsc.z(23)} {bits_out:rsc.z(24)} {bits_out:rsc.z(25)} {bits_out:rsc.z(26)} {bits_out:rsc.z(27)} {bits_out:rsc.z(28)} {bits_out:rsc.z(29)} -attr xrf 1081 -attr oid 107 -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(0)} -port {bits_out:rsc.z(0)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(1)} -port {bits_out:rsc.z(1)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(2)} -port {bits_out:rsc.z(2)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(3)} -port {bits_out:rsc.z(3)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(4)} -port {bits_out:rsc.z(4)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(5)} -port {bits_out:rsc.z(5)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(6)} -port {bits_out:rsc.z(6)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(7)} -port {bits_out:rsc.z(7)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(8)} -port {bits_out:rsc.z(8)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(9)} -port {bits_out:rsc.z(9)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(10)} -port {bits_out:rsc.z(10)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(11)} -port {bits_out:rsc.z(11)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(12)} -port {bits_out:rsc.z(12)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(13)} -port {bits_out:rsc.z(13)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(14)} -port {bits_out:rsc.z(14)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(15)} -port {bits_out:rsc.z(15)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(16)} -port {bits_out:rsc.z(16)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(17)} -port {bits_out:rsc.z(17)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(18)} -port {bits_out:rsc.z(18)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(19)} -port {bits_out:rsc.z(19)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(20)} -port {bits_out:rsc.z(20)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(21)} -port {bits_out:rsc.z(21)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(22)} -port {bits_out:rsc.z(22)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(23)} -port {bits_out:rsc.z(23)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(24)} -port {bits_out:rsc.z(24)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(25)} -port {bits_out:rsc.z(25)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(26)} -port {bits_out:rsc.z(26)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(27)} -port {bits_out:rsc.z(27)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(28)} -port {bits_out:rsc.z(28)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(29)} -port {bits_out:rsc.z(29)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {clk} -attr xrf 1082 -attr oid 108
+load net {clk} -port {clk} -attr xrf 1083 -attr oid 109
+load net {rst} -attr xrf 1084 -attr oid 110
+load net {rst} -port {rst} -attr xrf 1085 -attr oid 111
+load inst "MemBlock:core:inst" "MemBlock:core" "orig" -attr xrf 1086 -attr oid 112 -attr vt dc -attr @path {/MemBlock/MemBlock:core:inst} -attr area 92.910417 -attr delay 1.527985 -attr hier "/MemBlock/MemBlock:core" -pg 1 -lvl 5
+load net {clk} -pin  "MemBlock:core:inst" {clk#1} -attr xrf 1087 -attr oid 113 -attr @path {/MemBlock/clk}
+load net {rst} -pin  "MemBlock:core:inst" {rst#1} -attr xrf 1088 -attr oid 114 -attr @path {/MemBlock/rst}
+load net {row:rsc:mgc_in_wire.d#1(0)} -pin  "MemBlock:core:inst" {row:rsc:mgc_in_wire.d(0)} -attr vt dc -attr @path {/MemBlock/row:rsc:mgc_in_wire.d}
+load net {row:rsc:mgc_in_wire.d#1(1)} -pin  "MemBlock:core:inst" {row:rsc:mgc_in_wire.d(1)} -attr vt dc -attr @path {/MemBlock/row:rsc:mgc_in_wire.d}
+load net {row:rsc:mgc_in_wire.d#1(2)} -pin  "MemBlock:core:inst" {row:rsc:mgc_in_wire.d(2)} -attr vt dc -attr @path {/MemBlock/row:rsc:mgc_in_wire.d}
+load net {row:rsc:mgc_in_wire.d#1(3)} -pin  "MemBlock:core:inst" {row:rsc:mgc_in_wire.d(3)} -attr vt dc -attr @path {/MemBlock/row:rsc:mgc_in_wire.d}
+load net {row:rsc:mgc_in_wire.d#1(4)} -pin  "MemBlock:core:inst" {row:rsc:mgc_in_wire.d(4)} -attr vt dc -attr @path {/MemBlock/row:rsc:mgc_in_wire.d}
+load net {row:rsc:mgc_in_wire.d#1(5)} -pin  "MemBlock:core:inst" {row:rsc:mgc_in_wire.d(5)} -attr vt dc -attr @path {/MemBlock/row:rsc:mgc_in_wire.d}
+load net {col:rsc:mgc_in_wire.d#1(0)} -pin  "MemBlock:core:inst" {col:rsc:mgc_in_wire.d(0)} -attr vt dc -attr @path {/MemBlock/col:rsc:mgc_in_wire.d}
+load net {col:rsc:mgc_in_wire.d#1(1)} -pin  "MemBlock:core:inst" {col:rsc:mgc_in_wire.d(1)} -attr vt dc -attr @path {/MemBlock/col:rsc:mgc_in_wire.d}
+load net {col:rsc:mgc_in_wire.d#1(2)} -pin  "MemBlock:core:inst" {col:rsc:mgc_in_wire.d(2)} -attr vt dc -attr @path {/MemBlock/col:rsc:mgc_in_wire.d}
+load net {col:rsc:mgc_in_wire.d#1(3)} -pin  "MemBlock:core:inst" {col:rsc:mgc_in_wire.d(3)} -attr vt dc -attr @path {/MemBlock/col:rsc:mgc_in_wire.d}
+load net {col:rsc:mgc_in_wire.d#1(4)} -pin  "MemBlock:core:inst" {col:rsc:mgc_in_wire.d(4)} -attr vt dc -attr @path {/MemBlock/col:rsc:mgc_in_wire.d}
+load net {col:rsc:mgc_in_wire.d#1(5)} -pin  "MemBlock:core:inst" {col:rsc:mgc_in_wire.d(5)} -attr vt dc -attr @path {/MemBlock/col:rsc:mgc_in_wire.d}
+load net {col:rsc:mgc_in_wire.d#1(6)} -pin  "MemBlock:core:inst" {col:rsc:mgc_in_wire.d(6)} -attr vt dc -attr @path {/MemBlock/col:rsc:mgc_in_wire.d}
+load net {bit_in:rsc:mgc_in_wire.d#1} -pin  "MemBlock:core:inst" {bit_in:rsc:mgc_in_wire.d} -attr xrf 1089 -attr oid 115 -attr vt dc -attr @path {/MemBlock/bit_in:rsc:mgc_in_wire.d}
+load net {write_enable:rsc:mgc_in_wire.d#1} -pin  "MemBlock:core:inst" {write_enable:rsc:mgc_in_wire.d} -attr xrf 1090 -attr oid 116 -attr vt dc -attr @path {/MemBlock/write_enable:rsc:mgc_in_wire.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(0)} -pin  "MemBlock:core:inst" {bits_out:rsc:mgc_out_stdreg.d(0)} -attr vt dc -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(1)} -pin  "MemBlock:core:inst" {bits_out:rsc:mgc_out_stdreg.d(1)} -attr vt dc -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(2)} -pin  "MemBlock:core:inst" {bits_out:rsc:mgc_out_stdreg.d(2)} -attr vt dc -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(3)} -pin  "MemBlock:core:inst" {bits_out:rsc:mgc_out_stdreg.d(3)} -attr vt dc -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(4)} -pin  "MemBlock:core:inst" {bits_out:rsc:mgc_out_stdreg.d(4)} -attr vt dc -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(5)} -pin  "MemBlock:core:inst" {bits_out:rsc:mgc_out_stdreg.d(5)} -attr vt dc -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(6)} -pin  "MemBlock:core:inst" {bits_out:rsc:mgc_out_stdreg.d(6)} -attr vt dc -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(7)} -pin  "MemBlock:core:inst" {bits_out:rsc:mgc_out_stdreg.d(7)} -attr vt dc -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(8)} -pin  "MemBlock:core:inst" {bits_out:rsc:mgc_out_stdreg.d(8)} -attr vt dc -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(9)} -pin  "MemBlock:core:inst" {bits_out:rsc:mgc_out_stdreg.d(9)} -attr vt dc -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(10)} -pin  "MemBlock:core:inst" {bits_out:rsc:mgc_out_stdreg.d(10)} -attr vt dc -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(11)} -pin  "MemBlock:core:inst" {bits_out:rsc:mgc_out_stdreg.d(11)} -attr vt dc -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(12)} -pin  "MemBlock:core:inst" {bits_out:rsc:mgc_out_stdreg.d(12)} -attr vt dc -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(13)} -pin  "MemBlock:core:inst" {bits_out:rsc:mgc_out_stdreg.d(13)} -attr vt dc -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(14)} -pin  "MemBlock:core:inst" {bits_out:rsc:mgc_out_stdreg.d(14)} -attr vt dc -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(15)} -pin  "MemBlock:core:inst" {bits_out:rsc:mgc_out_stdreg.d(15)} -attr vt dc -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(16)} -pin  "MemBlock:core:inst" {bits_out:rsc:mgc_out_stdreg.d(16)} -attr vt dc -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(17)} -pin  "MemBlock:core:inst" {bits_out:rsc:mgc_out_stdreg.d(17)} -attr vt dc -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(18)} -pin  "MemBlock:core:inst" {bits_out:rsc:mgc_out_stdreg.d(18)} -attr vt dc -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(19)} -pin  "MemBlock:core:inst" {bits_out:rsc:mgc_out_stdreg.d(19)} -attr vt dc -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(20)} -pin  "MemBlock:core:inst" {bits_out:rsc:mgc_out_stdreg.d(20)} -attr vt dc -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(21)} -pin  "MemBlock:core:inst" {bits_out:rsc:mgc_out_stdreg.d(21)} -attr vt dc -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(22)} -pin  "MemBlock:core:inst" {bits_out:rsc:mgc_out_stdreg.d(22)} -attr vt dc -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(23)} -pin  "MemBlock:core:inst" {bits_out:rsc:mgc_out_stdreg.d(23)} -attr vt dc -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(24)} -pin  "MemBlock:core:inst" {bits_out:rsc:mgc_out_stdreg.d(24)} -attr vt dc -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(25)} -pin  "MemBlock:core:inst" {bits_out:rsc:mgc_out_stdreg.d(25)} -attr vt dc -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(26)} -pin  "MemBlock:core:inst" {bits_out:rsc:mgc_out_stdreg.d(26)} -attr vt dc -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(27)} -pin  "MemBlock:core:inst" {bits_out:rsc:mgc_out_stdreg.d(27)} -attr vt dc -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(28)} -pin  "MemBlock:core:inst" {bits_out:rsc:mgc_out_stdreg.d(28)} -attr vt dc -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(29)} -pin  "MemBlock:core:inst" {bits_out:rsc:mgc_out_stdreg.d(29)} -attr vt dc -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {data:rsc:singleport.data_in#1} -pin  "MemBlock:core:inst" {data:rsc:singleport.data_in} -attr xrf 1091 -attr oid 117 -attr vt dc -attr @path {/MemBlock/data:rsc:singleport.data_in}
+load net {data:rsc:singleport.addr#1(0)} -pin  "MemBlock:core:inst" {data:rsc:singleport.addr(0)} -attr vt dc -attr @path {/MemBlock/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr#1(1)} -pin  "MemBlock:core:inst" {data:rsc:singleport.addr(1)} -attr vt dc -attr @path {/MemBlock/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr#1(2)} -pin  "MemBlock:core:inst" {data:rsc:singleport.addr(2)} -attr vt dc -attr @path {/MemBlock/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr#1(3)} -pin  "MemBlock:core:inst" {data:rsc:singleport.addr(3)} -attr vt dc -attr @path {/MemBlock/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr#1(4)} -pin  "MemBlock:core:inst" {data:rsc:singleport.addr(4)} -attr vt dc -attr @path {/MemBlock/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr#1(5)} -pin  "MemBlock:core:inst" {data:rsc:singleport.addr(5)} -attr vt dc -attr @path {/MemBlock/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr#1(6)} -pin  "MemBlock:core:inst" {data:rsc:singleport.addr(6)} -attr vt dc -attr @path {/MemBlock/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr#1(7)} -pin  "MemBlock:core:inst" {data:rsc:singleport.addr(7)} -attr vt dc -attr @path {/MemBlock/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr#1(8)} -pin  "MemBlock:core:inst" {data:rsc:singleport.addr(8)} -attr vt dc -attr @path {/MemBlock/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr#1(9)} -pin  "MemBlock:core:inst" {data:rsc:singleport.addr(9)} -attr vt dc -attr @path {/MemBlock/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr#1(10)} -pin  "MemBlock:core:inst" {data:rsc:singleport.addr(10)} -attr vt dc -attr @path {/MemBlock/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr#1(11)} -pin  "MemBlock:core:inst" {data:rsc:singleport.addr(11)} -attr vt dc -attr @path {/MemBlock/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr#1(12)} -pin  "MemBlock:core:inst" {data:rsc:singleport.addr(12)} -attr vt dc -attr @path {/MemBlock/data:rsc:singleport.addr}
+load net {data:rsc:singleport.re#1} -pin  "MemBlock:core:inst" {data:rsc:singleport.re} -attr xrf 1092 -attr oid 118 -attr vt dc -attr @path {/MemBlock/data:rsc:singleport.re}
+load net {data:rsc:singleport.we#1} -pin  "MemBlock:core:inst" {data:rsc:singleport.we} -attr xrf 1093 -attr oid 119 -attr vt dc -attr @path {/MemBlock/data:rsc:singleport.we}
+load net {data:rsc:singleport.data_out#1} -pin  "MemBlock:core:inst" {data:rsc:singleport.data_out} -attr xrf 1094 -attr oid 120 -attr vt dc -attr @path {/MemBlock/data:rsc:singleport.data_out}
+load inst "row:rsc:mgc_in_wire" "mgc_ioport.mgc_in_wire(1,6)" "INTERFACE" -attr xrf 1095 -attr oid 121 -attr vt d -attr @path {/MemBlock/row:rsc:mgc_in_wire} -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_ioport.mgc_in_wire(1,6)" -pg 1 -lvl 1
+load net {row:rsc:mgc_in_wire.d#1(0)} -pin  "row:rsc:mgc_in_wire" {d(0)} -attr vt d -attr @path {/MemBlock/row:rsc:mgc_in_wire.d}
+load net {row:rsc:mgc_in_wire.d#1(1)} -pin  "row:rsc:mgc_in_wire" {d(1)} -attr vt d -attr @path {/MemBlock/row:rsc:mgc_in_wire.d}
+load net {row:rsc:mgc_in_wire.d#1(2)} -pin  "row:rsc:mgc_in_wire" {d(2)} -attr vt d -attr @path {/MemBlock/row:rsc:mgc_in_wire.d}
+load net {row:rsc:mgc_in_wire.d#1(3)} -pin  "row:rsc:mgc_in_wire" {d(3)} -attr vt d -attr @path {/MemBlock/row:rsc:mgc_in_wire.d}
+load net {row:rsc:mgc_in_wire.d#1(4)} -pin  "row:rsc:mgc_in_wire" {d(4)} -attr vt d -attr @path {/MemBlock/row:rsc:mgc_in_wire.d}
+load net {row:rsc:mgc_in_wire.d#1(5)} -pin  "row:rsc:mgc_in_wire" {d(5)} -attr vt d -attr @path {/MemBlock/row:rsc:mgc_in_wire.d}
+load net {row:rsc.z(0)} -pin  "row:rsc:mgc_in_wire" {z(0)} -attr vt d -attr @path {/MemBlock/row:rsc.z}
+load net {row:rsc.z(1)} -pin  "row:rsc:mgc_in_wire" {z(1)} -attr vt d -attr @path {/MemBlock/row:rsc.z}
+load net {row:rsc.z(2)} -pin  "row:rsc:mgc_in_wire" {z(2)} -attr vt d -attr @path {/MemBlock/row:rsc.z}
+load net {row:rsc.z(3)} -pin  "row:rsc:mgc_in_wire" {z(3)} -attr vt d -attr @path {/MemBlock/row:rsc.z}
+load net {row:rsc.z(4)} -pin  "row:rsc:mgc_in_wire" {z(4)} -attr vt d -attr @path {/MemBlock/row:rsc.z}
+load net {row:rsc.z(5)} -pin  "row:rsc:mgc_in_wire" {z(5)} -attr vt d -attr @path {/MemBlock/row:rsc.z}
+load inst "col:rsc:mgc_in_wire" "mgc_ioport.mgc_in_wire(2,7)" "INTERFACE" -attr xrf 1096 -attr oid 122 -attr vt d -attr @path {/MemBlock/col:rsc:mgc_in_wire} -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_ioport.mgc_in_wire(2,7)" -pg 1 -lvl 1
+load net {col:rsc:mgc_in_wire.d#1(0)} -pin  "col:rsc:mgc_in_wire" {d(0)} -attr vt d -attr @path {/MemBlock/col:rsc:mgc_in_wire.d}
+load net {col:rsc:mgc_in_wire.d#1(1)} -pin  "col:rsc:mgc_in_wire" {d(1)} -attr vt d -attr @path {/MemBlock/col:rsc:mgc_in_wire.d}
+load net {col:rsc:mgc_in_wire.d#1(2)} -pin  "col:rsc:mgc_in_wire" {d(2)} -attr vt d -attr @path {/MemBlock/col:rsc:mgc_in_wire.d}
+load net {col:rsc:mgc_in_wire.d#1(3)} -pin  "col:rsc:mgc_in_wire" {d(3)} -attr vt d -attr @path {/MemBlock/col:rsc:mgc_in_wire.d}
+load net {col:rsc:mgc_in_wire.d#1(4)} -pin  "col:rsc:mgc_in_wire" {d(4)} -attr vt d -attr @path {/MemBlock/col:rsc:mgc_in_wire.d}
+load net {col:rsc:mgc_in_wire.d#1(5)} -pin  "col:rsc:mgc_in_wire" {d(5)} -attr vt d -attr @path {/MemBlock/col:rsc:mgc_in_wire.d}
+load net {col:rsc:mgc_in_wire.d#1(6)} -pin  "col:rsc:mgc_in_wire" {d(6)} -attr vt d -attr @path {/MemBlock/col:rsc:mgc_in_wire.d}
+load net {col:rsc.z(0)} -pin  "col:rsc:mgc_in_wire" {z(0)} -attr vt d -attr @path {/MemBlock/col:rsc.z}
+load net {col:rsc.z(1)} -pin  "col:rsc:mgc_in_wire" {z(1)} -attr vt d -attr @path {/MemBlock/col:rsc.z}
+load net {col:rsc.z(2)} -pin  "col:rsc:mgc_in_wire" {z(2)} -attr vt d -attr @path {/MemBlock/col:rsc.z}
+load net {col:rsc.z(3)} -pin  "col:rsc:mgc_in_wire" {z(3)} -attr vt d -attr @path {/MemBlock/col:rsc.z}
+load net {col:rsc.z(4)} -pin  "col:rsc:mgc_in_wire" {z(4)} -attr vt d -attr @path {/MemBlock/col:rsc.z}
+load net {col:rsc.z(5)} -pin  "col:rsc:mgc_in_wire" {z(5)} -attr vt d -attr @path {/MemBlock/col:rsc.z}
+load net {col:rsc.z(6)} -pin  "col:rsc:mgc_in_wire" {z(6)} -attr vt d -attr @path {/MemBlock/col:rsc.z}
+load inst "bit_in:rsc:mgc_in_wire" "mgc_ioport.mgc_in_wire(3,1)" "INTERFACE" -attr xrf 1097 -attr oid 123 -attr vt d -attr @path {/MemBlock/bit_in:rsc:mgc_in_wire} -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_ioport.mgc_in_wire(3,1)" -pg 1 -lvl 1
+load net {bit_in:rsc:mgc_in_wire.d#1} -pin  "bit_in:rsc:mgc_in_wire" {d(0)} -attr vt d -attr @path {/MemBlock/bit_in:rsc:mgc_in_wire.d}
+load net {bit_in:rsc.z} -pin  "bit_in:rsc:mgc_in_wire" {z(0)} -attr vt d -attr @path {/MemBlock/bit_in:rsc.z}
+load inst "write_enable:rsc:mgc_in_wire" "mgc_ioport.mgc_in_wire(4,1)" "INTERFACE" -attr xrf 1098 -attr oid 124 -attr vt d -attr @path {/MemBlock/write_enable:rsc:mgc_in_wire} -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_ioport.mgc_in_wire(4,1)" -pg 1 -lvl 1
+load net {write_enable:rsc:mgc_in_wire.d#1} -pin  "write_enable:rsc:mgc_in_wire" {d(0)} -attr vt d -attr @path {/MemBlock/write_enable:rsc:mgc_in_wire.d}
+load net {write_enable:rsc.z} -pin  "write_enable:rsc:mgc_in_wire" {z(0)} -attr vt d -attr @path {/MemBlock/write_enable:rsc.z}
+load inst "bits_out:rsc:mgc_out_stdreg" "mgc_ioport.mgc_out_stdreg(5,30)" "INTERFACE" -attr xrf 1099 -attr oid 125 -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg} -attr delay -1000000000000000000000000000000.000000 -attr qmod "mgc_ioport.mgc_out_stdreg(5,30)" -pg 1 -lvl 1002
+load net {bits_out:rsc:mgc_out_stdreg.d#1(0)} -pin  "bits_out:rsc:mgc_out_stdreg" {d(0)} -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(1)} -pin  "bits_out:rsc:mgc_out_stdreg" {d(1)} -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(2)} -pin  "bits_out:rsc:mgc_out_stdreg" {d(2)} -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(3)} -pin  "bits_out:rsc:mgc_out_stdreg" {d(3)} -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(4)} -pin  "bits_out:rsc:mgc_out_stdreg" {d(4)} -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(5)} -pin  "bits_out:rsc:mgc_out_stdreg" {d(5)} -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(6)} -pin  "bits_out:rsc:mgc_out_stdreg" {d(6)} -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(7)} -pin  "bits_out:rsc:mgc_out_stdreg" {d(7)} -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(8)} -pin  "bits_out:rsc:mgc_out_stdreg" {d(8)} -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(9)} -pin  "bits_out:rsc:mgc_out_stdreg" {d(9)} -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(10)} -pin  "bits_out:rsc:mgc_out_stdreg" {d(10)} -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(11)} -pin  "bits_out:rsc:mgc_out_stdreg" {d(11)} -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(12)} -pin  "bits_out:rsc:mgc_out_stdreg" {d(12)} -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(13)} -pin  "bits_out:rsc:mgc_out_stdreg" {d(13)} -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(14)} -pin  "bits_out:rsc:mgc_out_stdreg" {d(14)} -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(15)} -pin  "bits_out:rsc:mgc_out_stdreg" {d(15)} -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(16)} -pin  "bits_out:rsc:mgc_out_stdreg" {d(16)} -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(17)} -pin  "bits_out:rsc:mgc_out_stdreg" {d(17)} -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(18)} -pin  "bits_out:rsc:mgc_out_stdreg" {d(18)} -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(19)} -pin  "bits_out:rsc:mgc_out_stdreg" {d(19)} -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(20)} -pin  "bits_out:rsc:mgc_out_stdreg" {d(20)} -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(21)} -pin  "bits_out:rsc:mgc_out_stdreg" {d(21)} -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(22)} -pin  "bits_out:rsc:mgc_out_stdreg" {d(22)} -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(23)} -pin  "bits_out:rsc:mgc_out_stdreg" {d(23)} -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(24)} -pin  "bits_out:rsc:mgc_out_stdreg" {d(24)} -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(25)} -pin  "bits_out:rsc:mgc_out_stdreg" {d(25)} -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(26)} -pin  "bits_out:rsc:mgc_out_stdreg" {d(26)} -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(27)} -pin  "bits_out:rsc:mgc_out_stdreg" {d(27)} -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(28)} -pin  "bits_out:rsc:mgc_out_stdreg" {d(28)} -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc:mgc_out_stdreg.d#1(29)} -pin  "bits_out:rsc:mgc_out_stdreg" {d(29)} -attr vt d -attr @path {/MemBlock/bits_out:rsc:mgc_out_stdreg.d}
+load net {bits_out:rsc.z(0)} -pin  "bits_out:rsc:mgc_out_stdreg" {z(0)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(1)} -pin  "bits_out:rsc:mgc_out_stdreg" {z(1)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(2)} -pin  "bits_out:rsc:mgc_out_stdreg" {z(2)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(3)} -pin  "bits_out:rsc:mgc_out_stdreg" {z(3)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(4)} -pin  "bits_out:rsc:mgc_out_stdreg" {z(4)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(5)} -pin  "bits_out:rsc:mgc_out_stdreg" {z(5)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(6)} -pin  "bits_out:rsc:mgc_out_stdreg" {z(6)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(7)} -pin  "bits_out:rsc:mgc_out_stdreg" {z(7)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(8)} -pin  "bits_out:rsc:mgc_out_stdreg" {z(8)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(9)} -pin  "bits_out:rsc:mgc_out_stdreg" {z(9)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(10)} -pin  "bits_out:rsc:mgc_out_stdreg" {z(10)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(11)} -pin  "bits_out:rsc:mgc_out_stdreg" {z(11)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(12)} -pin  "bits_out:rsc:mgc_out_stdreg" {z(12)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(13)} -pin  "bits_out:rsc:mgc_out_stdreg" {z(13)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(14)} -pin  "bits_out:rsc:mgc_out_stdreg" {z(14)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(15)} -pin  "bits_out:rsc:mgc_out_stdreg" {z(15)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(16)} -pin  "bits_out:rsc:mgc_out_stdreg" {z(16)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(17)} -pin  "bits_out:rsc:mgc_out_stdreg" {z(17)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(18)} -pin  "bits_out:rsc:mgc_out_stdreg" {z(18)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(19)} -pin  "bits_out:rsc:mgc_out_stdreg" {z(19)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(20)} -pin  "bits_out:rsc:mgc_out_stdreg" {z(20)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(21)} -pin  "bits_out:rsc:mgc_out_stdreg" {z(21)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(22)} -pin  "bits_out:rsc:mgc_out_stdreg" {z(22)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(23)} -pin  "bits_out:rsc:mgc_out_stdreg" {z(23)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(24)} -pin  "bits_out:rsc:mgc_out_stdreg" {z(24)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(25)} -pin  "bits_out:rsc:mgc_out_stdreg" {z(25)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(26)} -pin  "bits_out:rsc:mgc_out_stdreg" {z(26)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(27)} -pin  "bits_out:rsc:mgc_out_stdreg" {z(27)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(28)} -pin  "bits_out:rsc:mgc_out_stdreg" {z(28)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load net {bits_out:rsc.z(29)} -pin  "bits_out:rsc:mgc_out_stdreg" {z(29)} -attr vt d -attr @path {/MemBlock/bits_out:rsc.z}
+load inst "data:rsc:singleport" "ram_Altera-Cyclone-III-6_RAMSB.singleport(6,4800,1,13,0,1,0,0,0,1,1,1,0,4800,1,1)" "INTERFACE" -attr xrf 1100 -attr oid 126 -attr vt d -attr @path {/MemBlock/data:rsc:singleport} -attr delay 3.850000 -attr qmod "ram_Altera-Cyclone-III-6_RAMSB.singleport(6,4800,1,13,0,1,0,0,0,1,1,1,0,4800,1,1)" -pg 1 -lvl 6
+load net {data:rsc:singleport.data_in#1} -pin  "data:rsc:singleport" {data_in(0)} -attr vt d -attr @path {/MemBlock/data:rsc:singleport.data_in}
+load net {data:rsc:singleport.addr#1(0)} -pin  "data:rsc:singleport" {addr(0)} -attr vt d -attr @path {/MemBlock/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr#1(1)} -pin  "data:rsc:singleport" {addr(1)} -attr vt d -attr @path {/MemBlock/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr#1(2)} -pin  "data:rsc:singleport" {addr(2)} -attr vt d -attr @path {/MemBlock/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr#1(3)} -pin  "data:rsc:singleport" {addr(3)} -attr vt d -attr @path {/MemBlock/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr#1(4)} -pin  "data:rsc:singleport" {addr(4)} -attr vt d -attr @path {/MemBlock/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr#1(5)} -pin  "data:rsc:singleport" {addr(5)} -attr vt d -attr @path {/MemBlock/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr#1(6)} -pin  "data:rsc:singleport" {addr(6)} -attr vt d -attr @path {/MemBlock/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr#1(7)} -pin  "data:rsc:singleport" {addr(7)} -attr vt d -attr @path {/MemBlock/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr#1(8)} -pin  "data:rsc:singleport" {addr(8)} -attr vt d -attr @path {/MemBlock/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr#1(9)} -pin  "data:rsc:singleport" {addr(9)} -attr vt d -attr @path {/MemBlock/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr#1(10)} -pin  "data:rsc:singleport" {addr(10)} -attr vt d -attr @path {/MemBlock/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr#1(11)} -pin  "data:rsc:singleport" {addr(11)} -attr vt d -attr @path {/MemBlock/data:rsc:singleport.addr}
+load net {data:rsc:singleport.addr#1(12)} -pin  "data:rsc:singleport" {addr(12)} -attr vt d -attr @path {/MemBlock/data:rsc:singleport.addr}
+load net {data:rsc:singleport.re#1} -pin  "data:rsc:singleport" {re(0)} -attr vt d -attr @path {/MemBlock/data:rsc:singleport.re}
+load net {data:rsc:singleport.we#1} -pin  "data:rsc:singleport" {we(0)} -attr vt d -attr @path {/MemBlock/data:rsc:singleport.we}
+load net {data:rsc:singleport.data_out#1} -pin  "data:rsc:singleport" {data_out(0)} -attr vt d -attr @path {/MemBlock/data:rsc:singleport.data_out}
+load net {clk} -pin  "data:rsc:singleport" {clk} -attr xrf 1101 -attr oid 127 -attr @path {/MemBlock/clk}
+load net {PWR} -pin  "data:rsc:singleport" {a_rst} -attr xrf 1102 -attr oid 128 -attr @path {/MemBlock/C1_1}
+load net {rst} -pin  "data:rsc:singleport" {s_rst} -attr xrf 1103 -attr oid 129 -attr @path {/MemBlock/rst}
+load net {GND} -pin  "data:rsc:singleport" {en} -attr xrf 1104 -attr oid 130 -attr @path {/MemBlock/C0_1#2}
+### END MODULE 
+

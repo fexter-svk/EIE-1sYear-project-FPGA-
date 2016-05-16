@@ -1,0 +1,16 @@
+
+# Messages from "go new"
+
+Creating project directory 'H:\Desktop\MemoryTestBench\catapult\MemoryTester'. (PRJ-1)
+Branching solution 'solution.v1' at state 'new' (PRJ-2)
+Branching solution 'solution.v1' at state 'new' (PRJ-2)
+Branching solution 'solution.v1' at state 'new' (PRJ-2)
+
+# Messages from "go analyze"
+
+Front End called with arguments: -- {H:\Desktop\MemoryTestBench\catapult\src\MemoryTester.cpp} (CIN-69)
+Edison Design Group C++/C Front End - Version 3.10.1 (CIN-1)
+Source file analysis completed (CIN-68)
+Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Completed transformation 'analyze' on solution 'solution.v1': elapsed time 0.77 seconds, memory usage 165536kB, peak memory usage 187352kB (SOL-9)
+$PROJECT_HOME/src/MemoryTester.cpp(29): last line of file ends without a newline (CRD-1)
