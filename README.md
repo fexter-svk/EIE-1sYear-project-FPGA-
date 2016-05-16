@@ -12,6 +12,6 @@ Motion and body detection and tracking is becoming an increasingly important way
 - fpga_files
   Contains all programming files regarding the FPGA. It contains two separate folders for Catapult C and Quartus Project.
 
-EIE First year project at Imperial College London - Martin Ferianc, Alexander Luisi, George Punter, 2016.
+EIE First Year Project at Imperial College London - Martin Ferianc, Alexander Luisi, George Punter. 2016.
 
 
