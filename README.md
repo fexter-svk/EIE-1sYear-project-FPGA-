@@ -6,13 +6,14 @@ Motion and body detection and tracking is becoming an increasingly important way
 ## Demonstration
 [![Project Demonstration](http://i67.tinypic.com/a0jdbl.png)](https://www.youtube.com/watch?v=s658Wr9nM0o "Project Demonstration")
 
-## Git Organisation
-- hl_files
-  Contains all high level programming files in python on which we will base our final HLS design.
-- fpga_files
-  Contains all programming files regarding the FPGA. It contains two separate folders for Catapult C and Quartus Project.
+## Structure
+'''
+.
+├── hl_files   # Contains all high level programming files in python on which we based our final HLS design
+└── fpga_files # Contains all files regarding the FPGA. It contains two separate folders for Catapult C and Quartus
 
-## Authors
+''' 
+## Credits
 Martin Ferianc, Alexander Luisi, George Punter. 2016.
 
 
